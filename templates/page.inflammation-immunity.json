@@ -1,0 +1,224 @@
+{
+  "sections": {
+    "main-page": {
+      "type": "main-page",
+      "settings": {
+        "seo_heading": "h2",
+        "banner_height_desktop": "auto",
+        "banner_height_mobile": "auto",
+        "bgcolor": "#26286e",
+        "textcolor": "#ffffff"
+      }
+    },
+    "rich_text_XQNnHf": {
+      "type": "rich-text",
+      "blocks": {
+        "richtext_x7nytV": {
+          "type": "richtext",
+          "settings": {
+            "heading": "Calprotectin",
+            "seo_heading": "h2",
+            "content": "<p>The gut contains about 70% of the immune system, so it’s important. Inflammation is the immune system responding to something it does not like. Inflammation can often lead to redness and swelling that you can see but there are also immune reactions you can’t see that can cause damage. Many chronic conditions that are common in dogs and cats are often related to intestinal inflammation.<\/p><p>Calprotectin is a sensitive marker of inflammation of the gut lining. Elevated levels can be responsive to an anti-inflammatory diet, anti-inflammatory supplements, or other treatments. If calprotectin stays high, it can identify more serious conditions. Levels can also be used to monitor treatments. Conditions such as obesity or diabetes can also be associated with higher levels.<\/p><p><strong>Dogs:<\/strong><\/p><ul><li><strong>Normal:<\/strong> &lt;10 ug\/g – No intestinal inflammation was noted.<\/li><li><strong>Borderline:<\/strong> 10-100 – ug\/g may benefit from testing again in 3-6 months.<\/li><li><strong>High:<\/strong> &gt;100 ug\/g – Inflammation has been noted.  If associated with symptoms, seek veterinary evaluation.  Retest in 3 months<\/li><\/ul><p><\/p><p><strong>Cats:<\/strong><\/p><ul><li><strong>Normal:<\/strong> &lt;90 ug\/g – No inflammation was noted.<\/li><li><strong>Borderline:<\/strong> 90-125 ug\/g – May benefit from testing again in 3-6 months.<\/li><li><strong>High:<\/strong> &gt;125 ug\/g – Inflammation has been noted.  If associated with symptoms, seek veterinary evaluation.  Retest in 3 months<\/li><\/ul>"
+          }
+        }
+      },
+      "block_order": [
+        "richtext_x7nytV"
+      ],
+      "settings": {
+        "content_width": "container sm-container",
+        "content_alignment": "left",
+        "bgcolor": "primary",
+        "section_visibility": "always",
+        "top_space_desktop": 50,
+        "bottom_space_desktop": 0,
+        "top_space_mobile": 30,
+        "bottom_space_mobile": 30
+      }
+    },
+    "faq_section_HMG79L": {
+      "type": "faq-section",
+      "blocks": {
+        "faq_NHJNBF": {
+          "type": "faq",
+          "settings": {
+            "heading": "If your results are normal...",
+            "answer": "<p>Continue with current diet and lifestyle. Retest in 1 year for optimal health.<\/p>"
+          }
+        },
+        "faq_ejWUtk": {
+          "type": "faq",
+          "settings": {
+            "heading": "If your results are high...",
+            "answer": "<ul><li>Possible causes of increased inflammation include poor levels of healthy gut bacteria, toxin exposure, and reactions to diet or lifestyle. In very high levels it may be advisable to contact your veterinary care provider<\/li><li>Consider an anti-inflammatory or prescription food. Some research has noted that changing the type of protein in a pet’s diet, for example switching from chicken to salmon, or trying a pet food with hydrolyzed protein may help to reduce inflammation<\/li><li>Consider anti-inflammatory snacks (blueberries, alfalfa, apples (no seeds), carrots, pumpkin, red pepper), or anti-inflammatory targeted supplements such as fish oil.<\/li><li>Consider probiotics to support healthy gut bacteria. Look for probiotics with a variety of healthy gut bacteria, referred to as multi-strain<\/li><li>Reduce stress, evaluate circadian rhythms of eating, sleeping and exercise<\/li><li>Set and maintain a regular schedule<\/li><li>Avoid toxins such as pollutants, pesticides sprays in the house or on lawns<\/li><li>Consult a veterinarian professional if associated with significant symptoms<\/li><li>Retest in 3  months to see if your pet has responded to changes<\/li><\/ul>"
+          }
+        }
+      },
+      "block_order": [
+        "faq_NHJNBF",
+        "faq_ejWUtk"
+      ],
+      "settings": {
+        "heading": "Inflammation Marker",
+        "seo_heading": "h2",
+        "bgcolor": "primary",
+        "row_bgcolor": "secondary",
+        "section_visibility": "always",
+        "top_space_desktop": 30,
+        "bottom_space_desktop": 30,
+        "top_space_mobile": 30,
+        "bottom_space_mobile": 30
+      }
+    },
+    "rich_text_zkyqMb": {
+      "type": "rich-text",
+      "blocks": {
+        "richtext_JxHMwe": {
+          "type": "richtext",
+          "settings": {
+            "heading": "Secretory IgA",
+            "seo_heading": "h2",
+            "content": "<p>Secretory IgA is the first line of immune defense at the gut lining. It is a marker of intestinal maturity in young dogs and cats, and an indicator of intestinal immune protection. Elevated levels may show an immune reaction to inflammation, parasites, or food sensitivities. Low levels of secretory IgA may identify an inability to have an immune response and high levels show that your pet is reacting to something. High levels will return to normal if what they are responding to goes away. Low levels of IgA have been associated with autoimmunity, allergies, and skin conditions.<\/p><p><strong>Dogs:<\/strong><\/p><ul><li><strong>Normal:<\/strong> 10-300 ug\/g – No excess or impaired immune response<\/li><li><strong>Low:<\/strong> &lt;10 ug\/g – May have an impaired response, treat and retest in 3 months<\/li><li><strong>Borderline:<\/strong> 301- 350 ug\/g – Continue to monitor, consider treatment options and retest in 3-6 months<\/li><li><strong>High:<\/strong> &gt;350 ug\/g – Identifies a significant reaction.  Support, treat and retest in 3 months<\/li><\/ul><p><\/p><p><strong>Cats:<\/strong><\/p><ul><li><strong>Normal:<\/strong> 10-350 ug\/g – No excess or impaired immune response<\/li><li><strong>Low:<\/strong> &lt;10 ug\/g – May have an impaired response, treat and retest in 3 months<\/li><li><strong>Borderline:<\/strong> 350- 450 ug\/g – Continue to monitor, consider treatment options and retest in 3-6 months<\/li><li><strong>High:<\/strong> &gt;450 ug\/g – Identifies a significant reaction.  Support, treat and retest in 3 months<\/li><\/ul>"
+          }
+        }
+      },
+      "block_order": [
+        "richtext_JxHMwe"
+      ],
+      "settings": {
+        "content_width": "container sm-container",
+        "content_alignment": "left",
+        "bgcolor": "primary",
+        "section_visibility": "always",
+        "top_space_desktop": 50,
+        "bottom_space_desktop": 0,
+        "top_space_mobile": 30,
+        "bottom_space_mobile": 30
+      }
+    },
+    "faq_section_YjtfiY": {
+      "type": "faq-section",
+      "blocks": {
+        "faq_DcDQma": {
+          "type": "faq",
+          "settings": {
+            "heading": "If your results are normal...",
+            "answer": "<p>Continue with current diet and lifestyle. Retest in 1 year for optimal health.<\/p>"
+          }
+        },
+        "faq_CatHbF": {
+          "type": "faq",
+          "settings": {
+            "heading": "If your results are low...",
+            "answer": "<ul><li>Consider a grain-free or hypoallergenic dog food.<\/li><li>Consider a probiotic or prebiotic supplement to build good gut bacteria and support IgA response.<\/li><li>Consider immune-supporting supplements such as Thorne Myco-Immune or Standard Process Canine Immune System Support.<\/li><li>Minimize anxiety and stress, and encourage activity.<\/li><li>Retest in 3 months.<\/li><\/ul>"
+          }
+        },
+        "faq_iTAX7M": {
+          "type": "faq",
+          "settings": {
+            "heading": "If your results are high...",
+            "answer": "<ul><li>Consider a grain-free or hypoallergenic dog food.<\/li><li>Support with probiotics.<\/li><li>Consider testing for parasites, gluten sensitivity, and Leaky Gut Syndrome with our Leaky Gut test.<\/li><li>Retest in 3 months.<\/li><\/ul>"
+          }
+        }
+      },
+      "block_order": [
+        "faq_DcDQma",
+        "faq_CatHbF",
+        "faq_iTAX7M"
+      ],
+      "settings": {
+        "heading": "Immune Response",
+        "seo_heading": "h2",
+        "bgcolor": "primary",
+        "row_bgcolor": "secondary",
+        "section_visibility": "always",
+        "top_space_desktop": 30,
+        "bottom_space_desktop": 30,
+        "top_space_mobile": 30,
+        "bottom_space_mobile": 30
+      }
+    },
+    "rich_text_yDCTDY": {
+      "type": "rich-text",
+      "blocks": {
+        "richtext_AYLydw": {
+          "type": "richtext",
+          "settings": {
+            "heading": "References",
+            "seo_heading": "h2",
+            "content": "<ul><li>Otoni, C.C., et al., <em>Serologic and fecal markers to predict response to induction therapy in dogs with idiopathic inflammatory bowel disease<\/em>. J Vet Intern Med, 2018. <strong>32<\/strong>(3): p. 999-1008.<\/li><li>Hang, I., et al., <em>Impact of diets with a high content of greaves-meal protein or carbohydrates on faecal characteristics, volatile fatty acids and faecal calprotectin concentrations in healthy dogs<\/em>. BMC Vet Res, 2013. <strong>9<\/strong>: p. 201.<\/li><li>Sutherland, A.D., R.B. Gearry, and F.A. Frizelle, <em>Review of fecal biomarkers in inflammatory bowel disease<\/em>. Dis Colon Rectum, 2008. <strong>51<\/strong>(8): p. 1283-91.<\/li><li>Heilmann, R.M., et al., <em>Association of fecal calprotectin concentrations with disease severity, response to treatment, and other biomarkers in dogs with chronic inflammatory enteropathies<\/em>. J Vet Intern Med, 2018. <strong>32<\/strong>(2): p. 679-692.<\/li><li>Collins, M.T. <em>Canine Inflammatory Bowel Disease: Current and Prospective Biomarkers for Diagnosis and Management.<\/em> Compendium: Continuing Education for Veterinarians 2013  [cited 2020 9.1.2020]; <a href=\"http:\/\/assets.prod.vetlearn.com.s3.amazonaws.com\/43\/5fa310872f11e2935e005056ad4734\/file\/PV0313_Collins.pdf\" target=\"_blank\">Available here<\/a>.<\/li><li>Ohlsson, B., et al., <em>Calprotectin in serum and zonulin in serum and feces are elevated after introduction of a diet with lower carbohydrate content and higher fiber, fat and protein contents<\/em>. Biomed Rep, 2017. <strong>6<\/strong>(4): p. 411-422.<\/li><li>Grellet, A., et al., <em>Influence of Breed Size, Age, Fecal Quality, and Enteropathogen Shedding on Fecal Calprotectin and Immunoglobulin A Concentrations in Puppies During the Weaning Period<\/em>. J Vet Intern Med, 2016. <strong>30<\/strong>(4): p. 1056-64.<\/li><li>Grzeskowiak, L., et al., <em>Microbiota and probiotics in canine and feline welfare<\/em>. Anaerobe, 2015. <strong>34<\/strong>: p. 14-23.<\/li><li> Zaine, L., et al., <em>Faecal IgA concentration is influenced by age in dogs<\/em>. Br J Nutr, 2011. <strong>106 Suppl 1<\/strong>: p. S183-6.<\/li><li>Xu, H., et al., <em>Oral Administration of Compound Probiotics Improved Canine Feed Intake, Weight Gain, Immunity and Intestinal Microbiota<\/em>. Front Immunol, 2019. <strong>10<\/strong>: p. 666.<\/li><li>Gaspardo, A., et al., <em>Influence of Lactobacillus kefiri on Intestinal Microbiota and Fecal IgA Content of Healthy Dogs<\/em>. Front Vet Sci, 2020. <strong>7<\/strong>: p. 146.<\/li><li>Sacoor C, Barros LM, Montezinho L. What are the potential biomarkers that should be considered in diagnosing and managing canine chronic inflammatory enteropathies?. <em>Open Vet J<\/em>. 2021;10(4):412-430. <a href=\"https:\/\/www.ncbi.nlm.nih.gov\/pmc\/articles\/PMC7830176\/\" target=\"_blank\">www.ncbi.nlm.nih.gov\/pmc\/articles\/PMC7830176\/<\/a><\/li><li>Celi, P. et. al. Biomarkers of gastrointestinal functionality in animal nutrition and health. <a href=\"https:\/\/www.sciencedirect.com\/journal\/animal-feed-science-and-technology\" target=\"_blank\" title=\"Animal Feed Science and Technology\">Animal Feed Science and Technology<\/a> Volume 250, April 2019, Pages 9-31. <a href=\"https:\/\/www.sciencedirect.com\/science\/article\/pii\/S0377840118302438\" target=\"_blank\">www.sciencedirect.com\/science\/article\/pii\/S0377840118302438<\/a><\/li><li>PetMed. <em>Natural Ways to Improve Your Dog’s Immune System<\/em>. March 2011. <a href=\"https:\/\/www.petmd.com\/dog\/general-health\/natural-ways-improve-your-dogs-immune-system\" target=\"_blank\">www.petmd.com\/dog\/general-health\/natural-ways-improve-your-dogs-immune-system<\/a><\/li><li>Ellis JA. Canine IgA and IgA deficiency: Implications for immunization against respiratory pathogens. <em>Can Vet J<\/em>. 2019;60(12):1305-1311.<\/li><li>Grützner N, Heilmann RM, Tress U, Peters IR, Suchodolski JS, Steiner JM. Genomic association and further characterisation of faecal immunoglobulin A deficiency in German Shepherd dogs.<em> Vet Med Sci<\/em>. 2021;7(6):2144-2155. doi:10.1002\/vms3.603.<\/li><li>Kim R, Islam MS, Yoo YJ, Shin HY, Lee JH, Cho JH, Park YG, Choi J, Tae HJ, Park BY. Anti-inflammatory effects of the Aralia elata and Cirsium japonicum in Raw264.7 cells and in vivo colitis model in mice and dogs. Biomed Pharmacother. 2022 Jul;151:113186. https:\/\/pubmed.ncbi.nlm.nih.gov\/35643063\/<\/li><li>Pinna C, Vecchiato CG, Grandi M, Stefanelli C, Zannoni A, Biagi G. Seaweed Supplementation Failed to Affect Fecal Microbiota and Metabolome as Well as Fecal IgA and Apparent Nutrient Digestibility in Adult Dogs. Animals (Basel). 2021 Jul 29;11(8):2234. https:\/\/www.ncbi.nlm.nih.gov\/pmc\/articles\/PMC8388444\/<\/li><li>D’Angelo S, Fracassi F, Bresciani F, Galuppi R, Diana A, Linta N, Bettini G, Morini M, Pietra M. Effect of Saccharomyces boulardii in dog with chronic enteropathies: double-blinded, placebo-controlled study. Vet Rec. 2018 Mar 3;182(9):258. doi: 10.1136\/vr.104241. https:\/\/pubmed.ncbi.nlm.nih.gov\/29212912\/<\/li><li>Gaspardo A, Zannoni A, Turroni S, Barone M, Sabetti MC, Zanoni RG, Forni M, Brigidi P, Pietra M. Influence of Lactobacillus kefiri on Intestinal Microbiota and Fecal IgA Content of Healthy Dogs. Front Vet Sci. 2020 Apr 2;7:146. https:\/\/www.ncbi.nlm.nih.gov\/pmc\/articles\/PMC7142251\/<\/li><li>Delucchi L, Fraga M, Perelmuter K, Cella CD, Zunino P. Effect of native Lactobacillus murinus LbP2 administration on total fecal IgA in healthy dogs. Can J Vet Res. 2014 Apr;78(2):153-5. https:\/\/pubmed.ncbi.nlm.nih.gov\/24688179\/<\/li><\/ul>"
+          }
+        }
+      },
+      "block_order": [
+        "richtext_AYLydw"
+      ],
+      "settings": {
+        "content_width": "container sm-container",
+        "content_alignment": "left",
+        "bgcolor": "primary",
+        "section_visibility": "always",
+        "top_space_desktop": 50,
+        "bottom_space_desktop": 50,
+        "top_space_mobile": 30,
+        "bottom_space_mobile": 30
+      }
+    },
+    "gallery_carousel_W8B7we": {
+      "type": "gallery-carousel",
+      "blocks": {
+        "image_nrMhPJ": {
+          "type": "image",
+          "settings": {
+            "heading": "Download",
+            "subheading": "Support Guides",
+            "image": "shopify:\/\/shop_images\/Dog_Cat_Circle_copy_2.jpg",
+            "link": "shopify:\/\/pages\/support-guides"
+          }
+        },
+        "image_QyXCqg": {
+          "type": "image",
+          "settings": {
+            "heading": "Check Out",
+            "subheading": "Partners We Love",
+            "image": "shopify:\/\/shop_images\/Dog_Food_copy.jpg",
+            "link": "shopify:\/\/pages\/affiliates"
+          }
+        }
+      },
+      "block_order": [
+        "image_nrMhPJ",
+        "image_QyXCqg"
+      ],
+      "settings": {
+        "enable_fullwidth": true,
+        "heading": "Support",
+        "seo_heading": "h2",
+        "heading_size": "h2",
+        "gallery_style": "stacked",
+        "slide_direction": "right",
+        "image_style": "square",
+        "image_size": "medium",
+        "text_alignment": "center",
+        "enable_image_animation": true,
+        "image_crop": false,
+        "image_background": false,
+        "bgcolor": "primary",
+        "section_visibility": "always",
+        "top_space_desktop": 45,
+        "bottom_space_desktop": 45,
+        "top_space_mobile": 35,
+        "bottom_space_mobile": 0
+      }
+    }
+  },
+  "order": [
+    "main-page",
+    "rich_text_XQNnHf",
+    "faq_section_HMG79L",
+    "rich_text_zkyqMb",
+    "faq_section_YjtfiY",
+    "rich_text_yDCTDY",
+    "gallery_carousel_W8B7we"
+  ]
+}

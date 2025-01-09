@@ -1,0 +1,120 @@
+{
+  "sections": {
+    "main-page": {
+      "type": "main-page",
+      "settings": {
+        "seo_heading": "h2",
+        "banner_height_desktop": "auto",
+        "banner_height_mobile": "auto",
+        "bgcolor": "#26286e",
+        "textcolor": "#ffffff"
+      }
+    },
+    "rich_text_JViGw4": {
+      "type": "rich-text",
+      "blocks": {
+        "richtext_PyCV6q": {
+          "type": "richtext",
+          "settings": {
+            "heading": "",
+            "seo_heading": "h2",
+            "content": "<p>In partnership with Spoonful Pet Care and Dr. Sarah Wallace, DVM, this offering is designed specifically to help pet people who have purchased an Innovative Pet Lab test kit understand their pet’s test results, and the next steps in their pet’s health and healing journey.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "richtext_PyCV6q"
+      ],
+      "settings": {
+        "content_width": "container sm-container",
+        "content_alignment": "center",
+        "bgcolor": "primary",
+        "section_visibility": "always",
+        "top_space_desktop": 50,
+        "bottom_space_desktop": 0,
+        "top_space_mobile": 30,
+        "bottom_space_mobile": 30
+      }
+    },
+    "image_with_text_pReaty": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_tVUeNH": {
+          "type": "heading",
+          "settings": {
+            "heading": "We know next steps at times can be difficult to navigate so this consultation is designed to help:",
+            "seo_heading": "h5"
+          }
+        },
+        "text_yxVVqQ": {
+          "type": "text",
+          "settings": {
+            "content": "<ul><li>Understand your pet’s results<\/li><li>Review and discuss support guides<\/li><li>Advise on treatment options<\/li><\/ul><p><\/p>"
+          }
+        },
+        "button_YNJPWb": {
+          "type": "button",
+          "settings": {
+            "btn_text": "CONSULTATION SIGN UP",
+            "btn_link": "https:\/\/www.spoonfulpetcare.com\/innovativepetlab",
+            "button_size": "med",
+            "mobile_button_size": "m-med"
+          }
+        }
+      },
+      "block_order": [
+        "heading_tVUeNH",
+        "text_yxVVqQ",
+        "button_YNJPWb"
+      ],
+      "settings": {
+        "enable_fullwidth": false,
+        "image": "shopify:\/\/shop_images\/Square_2_copy.jpg",
+        "image_shadow": false,
+        "enable_image_animation": false,
+        "image_alignment": "left",
+        "image_height": "aspect",
+        "content_position": "center",
+        "bgcolor": "secondary",
+        "image_shadow_color": "#dddddd",
+        "section_visibility": "always",
+        "top_space_desktop": 60,
+        "bottom_space_desktop": 30,
+        "top_space_mobile": 30,
+        "bottom_space_mobile": 30
+      }
+    },
+    "rich_text_JkakQk": {
+      "type": "rich-text",
+      "blocks": {
+        "richtext_kdBgJ9": {
+          "type": "richtext",
+          "settings": {
+            "heading": "Sarah Wallace, DVM",
+            "seo_heading": "h2",
+            "content": "<p>Dr. Wallace (goes by Dr. Sarah) has been a veterinarian for 8 years and has worked in virtual veterinary care for the past 6 years. She believes:<\/p><ul><li>Using one school of medical thought (western medicine, eastern medicine etc) doesn’t work for all patients<\/li><li>Evidence-based medicine is best, but sometimes the evidence doesn’t exist yet<\/li><li>Each pet family has their own individual preferences, needs and truths that need to be taken into consideration<\/li><li>Some veterinary care is better than no care<\/li><\/ul><p><\/p><p>When Dr. Wallace is just being a human, you can find her lindy-hop dancing, hiking in the mountains of Colorado, knitting, attempting to cook dinner, and finishing up her MBA. She has two dogs, Rocco and Birdie and got married recently to her husband, Neil.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "richtext_kdBgJ9"
+      ],
+      "settings": {
+        "content_width": "container sm-container",
+        "content_alignment": "left",
+        "bgcolor": "primary",
+        "section_visibility": "always",
+        "top_space_desktop": 50,
+        "bottom_space_desktop": 50,
+        "top_space_mobile": 30,
+        "bottom_space_mobile": 30
+      }
+    }
+  },
+  "order": [
+    "main-page",
+    "rich_text_JViGw4",
+    "image_with_text_pReaty",
+    "rich_text_JkakQk"
+  ]
+}

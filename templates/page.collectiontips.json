@@ -1,0 +1,206 @@
+{
+  "sections": {
+    "main-page": {
+      "type": "main-page",
+      "settings": {
+        "seo_heading": "h2",
+        "banner_height_desktop": "auto",
+        "banner_height_mobile": "auto",
+        "bgcolor": "#26286e",
+        "textcolor": "#ffffff"
+      }
+    },
+    "rich_text_wiKpHK": {
+      "type": "rich-text",
+      "blocks": {
+        "richtext_aajPVM": {
+          "type": "richtext",
+          "settings": {
+            "heading": "Collecting a Sample for Your Test is Easy",
+            "seo_heading": "h2",
+            "content": "<p>We have a few step to make this process easy. We've added a few tips for you!<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "richtext_aajPVM"
+      ],
+      "settings": {
+        "content_width": "container sm-container",
+        "content_alignment": "center",
+        "bgcolor": "primary",
+        "section_visibility": "always",
+        "top_space_desktop": 50,
+        "bottom_space_desktop": 0,
+        "top_space_mobile": 30,
+        "bottom_space_mobile": 30
+      }
+    },
+    "rich_text_CGjxWH": {
+      "type": "rich-text",
+      "blocks": {
+        "richtext_RtUHTp": {
+          "type": "richtext",
+          "settings": {
+            "heading": "STEP 1:",
+            "seo_heading": "h2",
+            "content": "<p>Collect a fresh stool sample. A “poop bag” and glove are included for your convenience.<\/p><p><\/p><p><em><strong>Tip:<\/strong><\/em><em> Take your dog for a walk and quickly scoop the poop. Try to keep the sample free from grass and debris if possible.<\/em><\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "richtext_RtUHTp"
+      ],
+      "settings": {
+        "content_width": "container sm-container",
+        "content_alignment": "left",
+        "bgcolor": "primary",
+        "section_visibility": "always",
+        "top_space_desktop": 50,
+        "bottom_space_desktop": 0,
+        "top_space_mobile": 30,
+        "bottom_space_mobile": 30
+      }
+    },
+    "rich_text_bFb6ig": {
+      "type": "rich-text",
+      "blocks": {
+        "richtext_AyeADE": {
+          "type": "richtext",
+          "settings": {
+            "heading": "STEP 2:",
+            "seo_heading": "h2",
+            "content": "<p>Write your pet’s name and date on the collection tube where it says “patient name” and “date”.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "richtext_AyeADE"
+      ],
+      "settings": {
+        "content_width": "container sm-container",
+        "content_alignment": "left",
+        "bgcolor": "primary",
+        "section_visibility": "always",
+        "top_space_desktop": 50,
+        "bottom_space_desktop": 0,
+        "top_space_mobile": 30,
+        "bottom_space_mobile": 30
+      }
+    },
+    "rich_text_K7gtKM": {
+      "type": "rich-text",
+      "blocks": {
+        "richtext_k49NKM": {
+          "type": "richtext",
+          "settings": {
+            "heading": "STEP 3:",
+            "seo_heading": "h2",
+            "content": "<p>Open the collection tube and use the spork attached to the top of the tube to collect the sample. (If you prefer, you can also use the wooden stick for collection).<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "richtext_k49NKM"
+      ],
+      "settings": {
+        "content_width": "container sm-container",
+        "content_alignment": "left",
+        "bgcolor": "primary",
+        "section_visibility": "always",
+        "top_space_desktop": 50,
+        "bottom_space_desktop": 0,
+        "top_space_mobile": 30,
+        "bottom_space_mobile": 30
+      }
+    },
+    "rich_text_JfDtDy": {
+      "type": "rich-text",
+      "blocks": {
+        "richtext_dycECV": {
+          "type": "richtext",
+          "settings": {
+            "heading": "STEP 4:",
+            "seo_heading": "h2",
+            "content": "<p>Fill the collection tube to the red fill line with your pet’s poop sample.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "richtext_dycECV"
+      ],
+      "settings": {
+        "content_width": "container sm-container",
+        "content_alignment": "left",
+        "bgcolor": "primary",
+        "section_visibility": "always",
+        "top_space_desktop": 50,
+        "bottom_space_desktop": 0,
+        "top_space_mobile": 30,
+        "bottom_space_mobile": 30
+      }
+    },
+    "rich_text_GVHaGa": {
+      "type": "rich-text",
+      "blocks": {
+        "richtext_gttz4g": {
+          "type": "richtext",
+          "settings": {
+            "heading": "STEP 5:",
+            "seo_heading": "h2",
+            "content": "<p>Tightly twist the cap on the collection tube; then put it inside the biohazard bag and seal.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "richtext_gttz4g"
+      ],
+      "settings": {
+        "content_width": "container sm-container",
+        "content_alignment": "left",
+        "bgcolor": "primary",
+        "section_visibility": "always",
+        "top_space_desktop": 50,
+        "bottom_space_desktop": 0,
+        "top_space_mobile": 30,
+        "bottom_space_mobile": 30
+      }
+    },
+    "rich_text_aRQfa4": {
+      "type": "rich-text",
+      "blocks": {
+        "richtext_AhJxLU": {
+          "type": "richtext",
+          "settings": {
+            "heading": "Please Note",
+            "seo_heading": "h2",
+            "content": "<p>The sample can sit at room temperature for up to 24 hours prior to mailing. If you are unable to mail within 24 hours, keep the sample in the freezer until you are ready to send.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "richtext_AhJxLU"
+      ],
+      "settings": {
+        "content_width": "container sm-container",
+        "content_alignment": "center",
+        "bgcolor": "primary",
+        "section_visibility": "always",
+        "top_space_desktop": 50,
+        "bottom_space_desktop": 0,
+        "top_space_mobile": 30,
+        "bottom_space_mobile": 30
+      }
+    }
+  },
+  "order": [
+    "main-page",
+    "rich_text_wiKpHK",
+    "rich_text_CGjxWH",
+    "rich_text_bFb6ig",
+    "rich_text_K7gtKM",
+    "rich_text_JfDtDy",
+    "rich_text_GVHaGa",
+    "rich_text_aRQfa4"
+  ]
+}

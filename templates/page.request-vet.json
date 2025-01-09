@@ -1,0 +1,70 @@
+{
+  "sections": {
+    "main-page": {
+      "type": "main-page",
+      "settings": {
+        "seo_heading": "h2",
+        "banner_height_desktop": "auto",
+        "banner_height_mobile": "auto",
+        "bgcolor": "#03b0a7",
+        "textcolor": "#ffffff"
+      }
+    },
+    "main": {
+      "type": "request-vet-page-template",
+      "settings": {
+        "contact_heading": "Support",
+        "seo_heading_service": "h3",
+        "phone_heading": "",
+        "phone_number": "",
+        "email_heading": "Email",
+        "email": "info@innovativepetlab.com",
+        "address_heading": "Address",
+        "address": "3885 Crestwood Pkwy Suite 365 Duluth, GA 30096",
+        "form_heading": "Request a vet account",
+        "seo_heading": "h3",
+        "form_button": "SEND MESSAGE"
+      }
+    },
+    "d4990aa8-00b1-4fd3-bf9d-3832c1bd440a": {
+      "type": "map",
+      "settings": {
+        "full_width": true,
+        "mapaddress": "",
+        "map_style": "roadmap",
+        "image": "shopify:\/\/shop_images\/Contact_Page_Image.jpg",
+        "content_position": "middle-left",
+        "desktop_height": "500px",
+        "m_content_position": "overlay",
+        "mobile_height": "500px",
+        "bgcolor": "primary",
+        "section_visibility": "always"
+      }
+    },
+    "ffdeadde-5060-4cc0-bf3c-1351ff984a59": {
+      "type": "spacer",
+      "settings": {
+        "height_desktop": 2,
+        "height_mobile": 2,
+        "bgcolor": "primary",
+        "custom_color": ""
+      }
+    },
+    "spacer_fDFx8m": {
+      "type": "spacer",
+      "settings": {
+        "height_desktop": 60,
+        "height_mobile": 1,
+        "bgcolor": "primary",
+        "custom_color": ""
+      }
+    }
+  },
+  "order": [
+    "main-page",
+    "main",
+    "d4990aa8-00b1-4fd3-bf9d-3832c1bd440a",
+    "ffdeadde-5060-4cc0-bf3c-1351ff984a59",
+    "spacer_fDFx8m"
+  ]
+}

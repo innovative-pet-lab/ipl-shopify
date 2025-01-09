@@ -1,0 +1,452 @@
+<div class="yv-contact-detail-outer">
+  <div class="container sm-container">
+    <div class="yv-contact-form">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="yv-get-in-touch">
+            {%- if section.settings.form_heading != blank -%}
+              <{{ section.settings.seo_heading }} class="yv-form-heading h3">{{ section.settings.form_heading }}</{{ section.settings.seo_heading }}>
+            {%- endif -%}
+
+            <p style="margin: 20px 0;">
+              Complete this form to register for an Innovative Pet Lab Vet account. You will receive an email from a team member once your account is reviewed.
+            </p>
+
+            {%- form 'contact', id: 'ContactForm' -%}
+            
+            {%- if form.posted_successfully? -%}
+            <span class="form-status form-status-list form__message success-text" tabindex="-1" >{{ 'templates.contact.form.post_success' | t }}</span>
+            {%- endif -%}
+              
+            <div class="row">
+              <div class="col-md-12 col-lg-6">
+                <div class="form-group">
+                  <label for="ContactForm-firstname">{{ 'sections.requestVet.firstName' | t }}</label>
+                  <input type="text" class="form-control" id="ContactForm-firstname" name="contact[FirstName]" placeholder="{{ 'sections.requestVet.firstName' | t }}" required>
+                </div>
+              </div>
+              <div class="col-md-12 col-lg-6">
+                <div class="form-group">
+                  <label for="ContactForm-lastname">{{ 'sections.requestVet.lastName' | t }}</label>
+                  <input type="text" class="form-control" id="ContactForm-lastname" name="contact[LastName]" placeholder="{{ 'sections.requestVet.lastName' | t }}" required>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="ContactForm-officeName">{{ 'sections.requestVet.officeName' | t }}</label>
+              <input type="text" class="form-control" id="ContactForm-officeName" name="contact[OfficeName]" placeholder="{{ 'sections.requestVet.officeName' | t }}" required>
+            </div>
+
+            <div class="form-group">
+              <label for="">{{ 'sections.requestVet.degrees' | t }}</label>
+
+              <div>
+                <div class="custom-checkbox">
+                  <input
+                    type="checkbox"
+                    name="degrees"
+                    value="DVM"
+                  >
+                  <span class="checkmark"></span>
+                  <label for="">
+                    DVM
+                  </label>
+                </div>
+              </div>
+            
+              <div>
+                <div class="custom-checkbox">
+                  <input
+                    type="checkbox"
+                    name="degrees"
+                    value="VDM"
+                  >
+                  <span class="checkmark"></span>
+                  <label for="">
+                    VDM
+                  </label>
+                </div>
+              </div>
+
+              <div>
+                <div class="custom-checkbox">
+                  <input
+                    type="checkbox"
+                    name="degrees"
+                    value="PhD"
+                  >
+                  <span class="checkmark"></span>
+                  <label for="">
+                    PhD
+                  </label>
+                </div>
+              </div>
+            </div>
+            
+            <div class="row">
+              <div class="col-md-12 col-lg-6">
+                <div class="form-group">
+                  <label class="field__label" for="ContactForm-email">{{ 'templates.contact.form.email' | t }} <span aria-hidden="true">*</span></label>
+                  <input
+                         autocomplete="email"
+                         type="email"
+                         id="ContactForm-email"
+                         class="form-control"
+                         name="contact[email]"
+                         spellcheck="false"
+                         autocapitalize="off"
+                         value="{% if form.email %}{{ form.email }}{% elsif customer %}{{ customer.email }}{% endif %}"
+                         aria-required="true"
+                         {% if form.errors contains 'email' %}
+                         aria-invalid="true"
+                         aria-describedby="ContactForm-email-error"
+                         {% endif %}
+                         placeholder="{{ 'sections.contact.email' | t }}"
+                         required
+                         >
+                  {% if form.errors contains 'email' %}
+                  <span class="error-text">
+                    {{ form.errors.translated_fields['email'] | capitalize }} {{ form.errors.messages['email'] }}
+                  </span>
+                  {%- endif -%}
+                </div>
+              </div>
+              <div class="col-md-12 col-lg-6">
+                <div class="form-group">
+                  <label for="ContactForm-phone">{{ 'sections.requestVet.phone' | t }}</label>
+                  <input type="text" class="form-control" id="ContactForm-phone" name="contact[Phone]" placeholder="{{ 'sections.requestVet.phone' | t }}" required>
+                </div>
+              </div>
+            </div>
+            
+            <div class="row">
+              <div class="col-md-12 col-lg-6">
+                <div class="form-group">
+                  <label for="ContactForm-address1">Street Address</label>
+                  <input type="text" class="form-control" id="ContactForm-address1" name="contact[Address1]" placeholder="Street Address" required>
+                </div>
+              </div>
+
+              <div class="col-md-12 col-lg-6">
+                <div class="form-group">
+                  <label for="ContactForm-address2">Address Line 2</label>
+                  <input type="text" class="form-control" id="ContactForm-address2" name="contact[Address2]" placeholder="Address Line 2">
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-12 col-lg-4">
+                <div class="form-group">
+                  <label for="ContactForm-city">City</label>
+                  <input type="text" class="form-control" id="ContactForm-city" name="contact[City]" placeholder="City" required>
+                </div>
+              </div>
+
+              <div class="col-md-12 col-lg-4">
+                <div class="form-group">
+                  <label for="ContactForm-state">State</label>
+                  <input type="text" class="form-control" id="ContactForm-state" name="contact[State]" placeholder="State" required>
+                </div>
+              </div>
+
+              <div class="col-md-12 col-lg-4">
+                <div class="form-group">
+                  <label for="ContactForm-zipCode">Zip Code</label>
+                  <input type="text" class="form-control" id="ContactForm-zipCode" name="contact[ZipCode]" placeholder="Zip Code" required>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="">How did you learn about Innovative Pet Lab</label>
+
+              <div>
+                <div class="custom-checkbox">
+                  <input
+                    type="checkbox"
+                    name="HowLearnAbout"
+                    value="Facebook"
+                  >
+                  <span class="checkmark"></span>
+                  <label for="">
+                    Facebook
+                  </label>
+                </div>
+              </div>
+            
+              <div>
+                <div class="custom-checkbox">
+                  <input
+                    type="checkbox"
+                    name="HowLearnAbout"
+                    value="Instagram"
+                  >
+                  <span class="checkmark"></span>
+                  <label for="">
+                    Instagram
+                  </label>
+                </div>
+              </div>
+
+              <div>
+                <div class="custom-checkbox">
+                  <input
+                    type="checkbox"
+                    name="HowLearnAbout"
+                    value="Google Search"
+                  >
+                  <span class="checkmark"></span>
+                  <label for="">
+                    Google Search
+                  </label>
+                </div>
+              </div>
+
+              <div>
+                <div class="custom-checkbox">
+                  <input
+                    type="checkbox"
+                    name="HowLearnAbout"
+                    value="Friend"
+                  >
+                  <span class="checkmark"></span>
+                  <label for="">
+                    Friend
+                  </label>
+                </div>
+              </div>
+
+              <div>
+                <div class="custom-checkbox">
+                  <input
+                    type="checkbox"
+                    name="HowLearnAbout"
+                    value="Colleague"
+                  >
+                  <span class="checkmark"></span>
+                  <label for="">
+                    Colleague
+                  </label>
+                </div>
+              </div>
+
+              <div>
+                <div class="custom-checkbox">
+                  <input
+                    type="checkbox"
+                    name="HowLearnAbout"
+                    value="Veterinarian"
+                  >
+                  <span class="checkmark"></span>
+                  <label for="">
+                    Veterinarian
+                  </label>
+                </div>
+              </div>
+
+              <div>
+                <div class="custom-checkbox">
+                  <input
+                    type="checkbox"
+                    name="HowLearnAbout"
+                    value="AHVMA"
+                  >
+                  <span class="checkmark"></span>
+                  <label for="">
+                    AHVMA
+                  </label>
+                </div>
+              </div>
+
+              <div>
+                <div class="custom-checkbox">
+                  <input
+                    type="checkbox"
+                    name="HowLearnAbout"
+                    value="Other"
+                  >
+                  <span class="checkmark"></span>
+                  <label for="">
+                    Other
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="">Terms & Conditions</label>
+              <div class="custom-checkbox">
+                <input
+                  type="checkbox"
+                  name="terms"
+                  value="accepted"
+                  required
+                >
+                <span class="checkmark"></span>
+                <label for="" style="text-transform: none; font-size: 16px">
+                  I agree to Innovative Pet Labs
+                </label>
+              </div>
+              <p style="display: inline-block; font-size: 16px;"> 
+                <a href="/pages/terms-conditions" target="_blank">Terms & Conditions</a> and <a href="/pages/privacy-policy" target="_blank">Privacy Policy</a>
+              </p>
+              
+            </div>
+
+            <p style="margin: 20px 0;">
+              By becoming an Innovative Pet Lab provider, I agree to periodic email communication
+            </p>
+            
+            <div class="form-group">
+              <button type="submit" class="button btn-primary">
+                Submit
+              </button>
+            </div>
+            {%- endform -%}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% schema %}
+{
+  "name": "t:sections.contact-page-template.name",
+  "templates": [
+    "page"
+  ],
+  "tag": "section",
+  "class": "contact-section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "t:sections.contact-page-template.settings.header1.content"
+    },
+    {
+      "type": "text",
+      "id": "contact_heading",
+      "default": "Customer Service",
+      "label": "t:sections.contact-page-template.settings.contact_heading.label"
+    },
+    {
+      "type": "select",
+      "id": "seo_heading_service",
+      "label": "t:common.header.heading_tag.label",
+      "info": "t:common.header.heading_tag.info",
+      "default": "h3",
+      "options": [
+        {
+          "value": "h1",
+          "label": "t:common.header.heading_tag.options.h1.label"
+        },
+        {
+          "value": "h2",
+          "label": "t:common.header.heading_tag.options.h2.label"
+        },
+        {
+          "value": "h3",
+          "label": "t:common.header.heading_tag.options.h3.label"
+        },
+        {
+          "value": "h4",
+          "label": "t:common.header.heading_tag.options.h4.label"
+        },
+        {
+          "value": "h5",
+          "label": "t:common.header.heading_tag.options.h5.label"
+        },
+        {
+          "value": "h6",
+          "label": "t:common.header.heading_tag.options.h6.label"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "id": "phone_heading",
+      "default": "PHONE US",
+      "label": "t:sections.contact-page-template.settings.phone_heading.label"
+    },
+    {
+      "type": "text",
+      "id": "phone_number",
+      "default": "+1234567890",
+      "label": "t:sections.contact-page-template.settings.phone_number.label"
+    },
+    {
+      "type": "text",
+      "id": "email_heading",
+      "default": "EMAIL",
+      "label": "t:sections.contact-page-template.settings.email_heading.label"
+    },
+    {
+      "type": "text",
+      "id": "email",
+      "default": "info@email.com",
+      "label": "t:sections.contact-page-template.settings.email.label"
+    },
+    {
+      "type": "text",
+      "id": "address_heading",
+      "default": "ADDRESS",
+      "label": "t:sections.contact-page-template.settings.address_heading.label"
+    },
+    {
+      "type": "text",
+      "id": "address",
+      "default": "#123 abc main city",
+      "label": "t:sections.contact-page-template.settings.address.label"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.contact-page-template.settings.header2.content"
+    },
+    {
+      "type": "text",
+      "id": "form_heading",
+      "default": "Get In Touch",
+      "label": "t:sections.contact-page-template.settings.form_heading.label"
+    },
+    {
+      "type": "select",
+      "id": "seo_heading",
+      "label": "t:common.header.heading_tag.label",
+      "info": "t:common.header.heading_tag.info",
+      "default": "h3",
+      "options": [
+        {
+          "value": "h1",
+          "label": "t:common.header.heading_tag.options.h1.label"
+        },
+        {
+          "value": "h2",
+          "label": "t:common.header.heading_tag.options.h2.label"
+        },
+        {
+          "value": "h3",
+          "label": "t:common.header.heading_tag.options.h3.label"
+        },
+        {
+          "value": "h4",
+          "label": "t:common.header.heading_tag.options.h4.label"
+        },
+        {
+          "value": "h5",
+          "label": "t:common.header.heading_tag.options.h5.label"
+        },
+        {
+          "value": "h6",
+          "label": "t:common.header.heading_tag.options.h6.label"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "id": "form_button",
+      "default": "SEND MESSAGE",
+      "label": "t:sections.contact-page-template.settings.form_button.label"
+    }
+  ]
+}
+{% endschema %}

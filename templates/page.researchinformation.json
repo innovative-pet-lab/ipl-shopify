@@ -1,0 +1,303 @@
+{
+  "sections": {
+    "main-page": {
+      "type": "main-page",
+      "settings": {
+        "seo_heading": "h2",
+        "banner_height_desktop": "auto",
+        "banner_height_mobile": "auto",
+        "bgcolor": "#26286e",
+        "textcolor": "#ffffff"
+      }
+    },
+    "rich_text_nVzYnU": {
+      "type": "rich-text",
+      "blocks": {
+        "richtext_6k9VCU": {
+          "type": "richtext",
+          "settings": {
+            "heading": "What is the Gut",
+            "seo_heading": "h2",
+            "content": "<p>What are we looking at and why?<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "richtext_6k9VCU"
+      ],
+      "settings": {
+        "content_width": "container sm-container",
+        "content_alignment": "center",
+        "bgcolor": "primary",
+        "section_visibility": "always",
+        "top_space_desktop": 50,
+        "bottom_space_desktop": 0,
+        "top_space_mobile": 30,
+        "bottom_space_mobile": 30
+      }
+    },
+    "image_with_text_wpKHjp": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_cDiKTX": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "heading": "Image with text",
+            "seo_heading": "h2"
+          }
+        },
+        "text_B8pyrW": {
+          "type": "text",
+          "settings": {
+            "content": "<p><strong>Gut Lumen:<br\/><\/strong>The lumen is the tube that goes from mouth to anus. The intestinal lumen includes the small and large intestines. The process of digestion and absorption starts with food and ends with poop. Food gets broken down or digested and then absorbed. Gut bacteria also survive off of food. Poop is essentially digested food and gut bacteria. The gut lumen is home to  the microbiome which includes bacteria, yeasts and virus’.<\/p><p><strong>Mucus Layer:<br\/><\/strong>The mucus layer is a viscous, gel-like substance that lines the lumen. It helps move digesting food, supports microbes and functions as a protective barrier. Secretory IgA (sIgA) is the first line of defense at the gut lining. <\/p><p><strong>Gut Epithelium:<\/strong><br\/>The gut epithelium makes up the lining of the gut. It is made up of individual intestinal cells also called epithelial cells. A healthy epithelial layer helps to absorb nutrients and prevents passage of harmful substances. Epithelial cells are held together with Tight Junctions (TJ). Zonulin, triggered by gluten or gut bacteria, can remove the TJ’s and lead to a leaky gut or increased permeability of the epithelium. <\/p><p><strong>Gut Lamina Propria:<\/strong><br\/>The gut lamina propria lies beneath the epithelial lining. It’s rich in blood vessels and immune cells. It helps to transports nutrients into circulation. The area is also rich in immune cells that help to monitor and respond to threats such as pathogens and antigens.<\/p><ul><li>Gut dysbiosis causes inappropriate production of increased amount of zonulin with subsequent functional loss of gut barrier function<\/li><li>Fecal Calprotectin plays a major role during inflammation and is considered to be a positive acute phase protein. It is a component of neutrophils, a type of white blood cells.<\/li><\/ul>"
+          }
+        },
+        "text_VaMex9": {
+          "type": "text",
+          "settings": {
+            "content": "<p>To provide clients insight into your brand, pair words with any image. Here you can tell a narrative, explain a product feature, or introduce a new campaign.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_cDiKTX",
+        "text_B8pyrW",
+        "text_VaMex9"
+      ],
+      "settings": {
+        "enable_fullwidth": false,
+        "image": "shopify:\/\/shop_images\/image001-1.png",
+        "image_shadow": false,
+        "enable_image_animation": false,
+        "image_alignment": "left",
+        "image_height": "aspect",
+        "content_position": "start",
+        "bgcolor": "primary",
+        "image_shadow_color": "#dddddd",
+        "section_visibility": "always",
+        "top_space_desktop": 60,
+        "bottom_space_desktop": 60,
+        "top_space_mobile": 30,
+        "bottom_space_mobile": 30
+      }
+    },
+    "rich_text_Xr9MRQ": {
+      "type": "rich-text",
+      "blocks": {
+        "richtext_Tgkjjh": {
+          "type": "richtext",
+          "settings": {
+            "heading": "",
+            "seo_heading": "h2",
+            "content": "<p><strong>Copyright<\/strong> © 2013 Campos-Rodríguez, Godínez-Victoria, Abarca-Rojano, Pacheco-Yépez, Reyna-Garfias, Barbosa-Cabrera, Drago-Serrano. This is an open-access article distributed under the terms of the <a href=\"https:\/\/url.us.m.mimecastprotect.com\/s\/CjIUCo2PZWC67R6CzhPTL?domain=creativecommons.org\" target=\"_blank\">Creative Commons Attribution License (CC BY)<\/a>. The use, distribution orreproduction in other forums is permitted, provided the original author(s) or licensor are credited and that the original publication in this journal is cited, in accordance with accepted academic practice. No use, distribution or reproduction is permitted which does not comply with these terms<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "richtext_Tgkjjh"
+      ],
+      "settings": {
+        "content_width": "container sm-container",
+        "content_alignment": "center",
+        "bgcolor": "primary",
+        "section_visibility": "always",
+        "top_space_desktop": 0,
+        "bottom_space_desktop": 0,
+        "top_space_mobile": 30,
+        "bottom_space_mobile": 30
+      }
+    },
+    "rich_text_EGtk9y": {
+      "type": "rich-text",
+      "blocks": {
+        "richtext_GrW6AT": {
+          "type": "richtext",
+          "settings": {
+            "heading": "What do we mean when we talk about Gut Inflammation?",
+            "seo_heading": "h2",
+            "content": ""
+          }
+        }
+      },
+      "block_order": [
+        "richtext_GrW6AT"
+      ],
+      "settings": {
+        "content_width": "container sm-container",
+        "content_alignment": "center",
+        "bgcolor": "secondary",
+        "section_visibility": "always",
+        "top_space_desktop": 50,
+        "bottom_space_desktop": 45,
+        "top_space_mobile": 30,
+        "bottom_space_mobile": 30
+      }
+    },
+    "image_with_text_cnDpCL": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_cCM8yc": {
+          "type": "heading",
+          "settings": {
+            "heading": "Intestinal Inflammation",
+            "seo_heading": "h2"
+          }
+        },
+        "text_aT6ze8": {
+          "type": "text",
+          "settings": {
+            "content": "<ul><li>Intestinal inflammation can also be triggered by gut dysbiosis<\/li><li>A healthy and stable microbiome can balance inflammation while still being able to promptly respond to infections <\/li><li>Calprotectin is a non-invasive marker of intestinal immune reactions<\/li><\/ul>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_cCM8yc",
+        "text_aT6ze8"
+      ],
+      "settings": {
+        "enable_fullwidth": false,
+        "image": "shopify:\/\/shop_images\/website-2.png",
+        "image_shadow": false,
+        "enable_image_animation": false,
+        "image_alignment": "right",
+        "image_height": "aspect",
+        "content_position": "center",
+        "bgcolor": "primary",
+        "image_shadow_color": "#dddddd",
+        "section_visibility": "always",
+        "top_space_desktop": 60,
+        "bottom_space_desktop": 30,
+        "top_space_mobile": 30,
+        "bottom_space_mobile": 30
+      }
+    },
+    "rich_text_CmbBqX": {
+      "type": "rich-text",
+      "blocks": {
+        "richtext_6UV9W9": {
+          "type": "richtext",
+          "settings": {
+            "heading": "What is Leaky Gut?",
+            "seo_heading": "h2",
+            "content": ""
+          }
+        }
+      },
+      "block_order": [
+        "richtext_6UV9W9"
+      ],
+      "settings": {
+        "content_width": "container sm-container",
+        "content_alignment": "center",
+        "bgcolor": "secondary",
+        "section_visibility": "always",
+        "top_space_desktop": 50,
+        "bottom_space_desktop": 50,
+        "top_space_mobile": 30,
+        "bottom_space_mobile": 30
+      }
+    },
+    "image_with_text_Mwmgdf": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_49ViMD": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "heading": "Image with text",
+            "seo_heading": "h2"
+          }
+        },
+        "text_YiXHWT": {
+          "type": "text",
+          "settings": {
+            "content": "<p>Leaky gut, also known as increased intestinal permeability, is a condition in which the lining of the digestive tract (the gut) becomes more porous or “leaky” than it should be. Normally, the lining of the gut acts like a protective barrier, allowing essential nutrients from food to pass into the body while keeping harmful substances out.<\/p><p>When there is a leaky gut, this protective barrier becomes compromised, and it allows things to pass through that shouldn’t, such as toxins, bacteria, and undigested food particles. This can lead to various health problems because these unwanted substances can enter the bloodstream and trigger the immune system, causing inflammation and potentially contributing to issues like digestive problems, food sensitivities, and other health concerns.<\/p><p>In simple terms, a “leaky gut” means that the lining of the stomach and intestines isn’t doing its job properly, and things that should stay in your gut can escape into your body, potentially causing health issues.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_49ViMD",
+        "text_YiXHWT"
+      ],
+      "settings": {
+        "enable_fullwidth": false,
+        "image": "shopify:\/\/shop_images\/thumbnail_image002.png",
+        "image_shadow": false,
+        "enable_image_animation": false,
+        "image_alignment": "left",
+        "image_height": "aspect",
+        "content_position": "center",
+        "bgcolor": "primary",
+        "image_shadow_color": "#dddddd",
+        "section_visibility": "always",
+        "top_space_desktop": 60,
+        "bottom_space_desktop": 30,
+        "top_space_mobile": 30,
+        "bottom_space_mobile": 30
+      }
+    },
+    "spacer_piPGFN": {
+      "type": "spacer",
+      "settings": {
+        "height_desktop": 49,
+        "height_mobile": 1,
+        "bgcolor": "secondary",
+        "custom_color": "#26286e"
+      }
+    },
+    "featured_articles_8Vjedj": {
+      "type": "featured-articles",
+      "blocks": {
+        "article_4XMBUz": {
+          "type": "article",
+          "settings": {
+            "article": "research\/fecal-calprotectin-concentrations-in-cats-with-chronic-enteropathies"
+          }
+        },
+        "article_PVtwPf": {
+          "type": "article",
+          "settings": {
+            "article": "research\/serologic-and-fecal-markers-to-predict-response-to-induction-therapy-in-dogs-with-idiopathic-inflammatory-bowel-disease"
+          }
+        },
+        "article_9ThRnC": {
+          "type": "article",
+          "settings": {
+            "article": "research\/nonpharmacological-treatment-strategies-for-the-management-of-canine-chronic-inflammatory-enteropathy-a-narrative-review"
+          }
+        }
+      },
+      "block_order": [
+        "article_4XMBUz",
+        "article_PVtwPf",
+        "article_9ThRnC"
+      ],
+      "settings": {
+        "overlay_content": false,
+        "heading": "Research",
+        "seo_heading": "h2",
+        "button": "View all",
+        "link": "shopify:\/\/blogs\/research\/fecal-calprotectin-concentrations-in-cats-with-chronic-enteropathies",
+        "bgcolor": "primary",
+        "section_visibility": "always",
+        "top_space_desktop": 70,
+        "bottom_space_desktop": 70,
+        "top_space_mobile": 40,
+        "bottom_space_mobile": 40
+      }
+    }
+  },
+  "order": [
+    "main-page",
+    "rich_text_nVzYnU",
+    "image_with_text_wpKHjp",
+    "rich_text_Xr9MRQ",
+    "rich_text_EGtk9y",
+    "image_with_text_cnDpCL",
+    "rich_text_CmbBqX",
+    "image_with_text_Mwmgdf",
+    "spacer_piPGFN",
+    "featured_articles_8Vjedj"
+  ]
+}

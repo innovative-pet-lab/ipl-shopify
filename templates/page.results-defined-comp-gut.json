@@ -1,0 +1,411 @@
+{
+  "sections": {
+    "main-page": {
+      "type": "main-page",
+      "settings": {
+        "seo_heading": "h2",
+        "banner_height_desktop": "auto",
+        "banner_height_mobile": "auto",
+        "bgcolor": "#26286e",
+        "textcolor": "#ffffff"
+      }
+    },
+    "rich_text_9CF7VT": {
+      "type": "rich-text",
+      "blocks": {
+        "richtext_BKm3DJ": {
+          "type": "richtext",
+          "settings": {
+            "heading": "Zonulin",
+            "seo_heading": "h2",
+            "content": "<p>Zonulin is a protein that acts like a glue to keep intestinal cells bound together. Intestinal cells are supposed to be lined up and connected to each other. When Zonulin is high it means the cells aren’t tightly together. Leaky gut happens gradually over time. Zonulin can help identify the level of leaky gut. Leaky Gut has been associated with inflammation, an imbalance of healthy gut bacteria, and is a risk factor for food allergies and food sensitivities, such as a reaction to gluten. <\/p><p>Possible related symptoms of a Leaky Gut include:<\/p><ul><li>Digestive issues such diarrhea, bloating, constipation, weight loss, changes in appetite, gas<\/li><li>Skin issues such as dry skin, hair loss, redness, rashes, scratching<\/li><li>Chewing, licking, or gnawing paws and paw pad<\/li><\/ul><p><\/p><ul><li><strong>Normal:<\/strong> &lt;2.0 ug\/g <\/li><li><strong>Borderline:<\/strong> 2.0-6.0 ug\/g – May benefit from testing again in 3-6 months<\/li><li><strong>High:<\/strong> &gt;6.0 ug\/g – Associated with Leaky Gut.  Treat and retest in 3 months<\/li><\/ul>"
+          }
+        }
+      },
+      "block_order": [
+        "richtext_BKm3DJ"
+      ],
+      "settings": {
+        "content_width": "container sm-container",
+        "content_alignment": "left",
+        "bgcolor": "primary",
+        "section_visibility": "always",
+        "top_space_desktop": 50,
+        "bottom_space_desktop": 50,
+        "top_space_mobile": 30,
+        "bottom_space_mobile": 30
+      }
+    },
+    "faq_section_H8c46r": {
+      "type": "faq-section",
+      "blocks": {
+        "faq_P8FEfW": {
+          "type": "faq",
+          "settings": {
+            "heading": "If your results are normal...",
+            "answer": "<p>Continue with current diet and lifestyle. Retest in 1 year for optimal health.<\/p>"
+          }
+        },
+        "faq_dHAUGD": {
+          "type": "faq",
+          "settings": {
+            "heading": "If your results are low...",
+            "answer": "<ul><li>Probiotics have been shown to improve good gut bacteria and may improve Zonulin levels<\/li><li>Consider multi-strain probiotics, spore-forming probiotics or Saccharomyces boulardii<\/li><li>Consider a less processed food, such as a prescription or human grade food. If the antigliadin IgA is also high, consider a gluten free pet food<\/li><\/ul><p><em>Note: wheat, rye and barley all contain gluten<\/em><\/p><p><\/p><ul><li>Minimize anxiety and stress<\/li><li>Avoid unnecessary medications such as antibiotics or exposure to toxins<\/li><li>Check inflammation. Consider anti-inflammatory supporting snacks such as blueberries, alfalfa, apples (no seeds), carrots, pumpkin, red pepper), or anti-inflammatory supplements. Reducing inflammation may decrease Zonulin.<\/li><\/ul><p><em>Test level of fecal inflammation with IPL inflammation test<\/em><\/p><ul><li>Check overall health as obesity and type 2 diabetes may lead to increased inflammation<\/li><li>Retest in 3 months.<\/li><\/ul>"
+          }
+        }
+      },
+      "block_order": [
+        "faq_P8FEfW",
+        "faq_dHAUGD"
+      ],
+      "settings": {
+        "heading": "Treatment Options",
+        "seo_heading": "h2",
+        "bgcolor": "primary",
+        "row_bgcolor": "secondary",
+        "section_visibility": "always",
+        "top_space_desktop": 30,
+        "bottom_space_desktop": 30,
+        "top_space_mobile": 30,
+        "bottom_space_mobile": 30
+      }
+    },
+    "rich_text_PkqKgr": {
+      "type": "rich-text",
+      "blocks": {
+        "richtext_yp7xrR": {
+          "type": "richtext",
+          "settings": {
+            "heading": "Antigliadin IgA",
+            "seo_heading": "h2",
+            "content": "<p>Antigliadin IgA identifies an immune response to gluten and can let you know if your pet is eating gluten. Gliadin is a component of gluten. Your pet can only have a reaction to gluten if they are eating gluten. A reaction to gluten may be a contributing factor to Leaky Gut, skin conditions, or other symptoms. Removing gluten can reduce Antigliadin IgA and Zonulin levels. Antigliadin IgA reactions are based on the level of gluten eaten. Fecal Antigliadin IgA testing is not used to diagnose gluten or wheat allergy, or celiac disease. <\/p><ul><li><strong>Normal: <\/strong> &lt;600 ug\/g<\/li><li><strong>Borderline:<\/strong>  600-1000 ug\/g – Indicates a moderate reaction<\/li><li><strong>High:<\/strong> &gt;1000 ug\/g – Highly reactive to gluten<\/li><\/ul>"
+          }
+        }
+      },
+      "block_order": [
+        "richtext_yp7xrR"
+      ],
+      "settings": {
+        "content_width": "container sm-container",
+        "content_alignment": "left",
+        "bgcolor": "primary",
+        "section_visibility": "always",
+        "top_space_desktop": 50,
+        "bottom_space_desktop": 50,
+        "top_space_mobile": 30,
+        "bottom_space_mobile": 30
+      }
+    },
+    "faq_section_xxJRNH": {
+      "type": "faq-section",
+      "blocks": {
+        "faq_hYCK4D": {
+          "type": "faq",
+          "settings": {
+            "heading": "If your results are normal...",
+            "answer": "<p>Continue with current diet and lifestyle. Retest in 1 year for optimal health.<\/p>"
+          }
+        },
+        "faq_W3X9Xy": {
+          "type": "faq",
+          "settings": {
+            "heading": "If your results are high...",
+            "answer": "<ul><li>Try a gluten-free food and note a change in symptoms. (wheat, rye, and barley all contain gluten)<\/li><li>Research recommends that test diets be fed for at least 10 weeks<\/li><li>Monitor for intestinal permeability and increased Zonulin levels<\/li><li>Retest in 3 months<\/li><\/ul>"
+          }
+        }
+      },
+      "block_order": [
+        "faq_hYCK4D",
+        "faq_W3X9Xy"
+      ],
+      "settings": {
+        "heading": "Treatment Options",
+        "seo_heading": "h2",
+        "bgcolor": "primary",
+        "row_bgcolor": "secondary",
+        "section_visibility": "always",
+        "top_space_desktop": 30,
+        "bottom_space_desktop": 30,
+        "top_space_mobile": 30,
+        "bottom_space_mobile": 30
+      }
+    },
+    "rich_text_PMF97w": {
+      "type": "rich-text",
+      "blocks": {
+        "richtext_JKUWQy": {
+          "type": "richtext",
+          "settings": {
+            "heading": "Calprotectin",
+            "seo_heading": "h2",
+            "content": "<p>The gut contains about 70% of the immune system, so it’s important. Inflammation is the immune system responding to something it does not like. Inflammation can often lead to redness and swelling that you can see but there are also immune reactions you can’t see that can cause damage. Many chronic conditions that are common in cats are often related to intestinal inflammation.<\/p><p>Calprotectin is a sensitive marker of inflammation of the gut lining. Elevated levels can be responsive to an anti-inflammatory diet, anti-inflammatory supplements, or other treatments. If calprotectin stays high, it can identify more serious conditions. Levels can also be used to monitor treatments. Conditions such as obesity or diabetes can also be associated with higher levels.<\/p><ul><li><strong>Normal:<\/strong> &lt;90 ug\/g – No inflammation was noted.<\/li><li><strong>Borderline:<\/strong> 90-125 ug\/g – May benefit from testing again in 3-6 months<\/li><li><strong>High:<\/strong> &gt;125 ug\/g – Inflammation has been noted.  If associated with symptoms, seek veterinary evaluation.  Retest in 3 months<\/li><\/ul>"
+          }
+        }
+      },
+      "block_order": [
+        "richtext_JKUWQy"
+      ],
+      "settings": {
+        "content_width": "container sm-container",
+        "content_alignment": "left",
+        "bgcolor": "primary",
+        "section_visibility": "always",
+        "top_space_desktop": 50,
+        "bottom_space_desktop": 50,
+        "top_space_mobile": 30,
+        "bottom_space_mobile": 30
+      }
+    },
+    "faq_section_akpbh8": {
+      "type": "faq-section",
+      "blocks": {
+        "faq_yX8ccd": {
+          "type": "faq",
+          "settings": {
+            "heading": "If your results are normal...",
+            "answer": "<p>Continue with current diet and lifestyle. Retest in 1 year for optimal health.<\/p>"
+          }
+        },
+        "faq_P8AdGK": {
+          "type": "faq",
+          "settings": {
+            "heading": "If your results are high...",
+            "answer": "<ul><li>Possible causes of increased inflammation include poor levels of healthy gut bacteria, toxin exposure, and reactions to diet or lifestyle. In very high levels it may be advisable to contact your veterinary care provider<\/li><li>Consider an anti-inflammatory or prescription food. Some research has noted that changing the type of protein in a pet’s diet, for example switching from chicken to salmon, or trying a pet food with hydrolyzed protein may help to reduce inflammation<\/li><li>Consider anti-inflammatory snacks (blueberries, alfalfa, apples (no seeds), carrots, pumpkin, red pepper), or anti-inflammatory targeted supplements such as fish oil.<\/li><li>Consider probiotics to support healthy gut bacteria. Look for probiotics with a variety of healthy gut bacteria, referred to as multi-strain<\/li><li>Reduce stress, evaluate circadian rhythms of eating, sleeping and exercise<\/li><li>Set and maintain a regular schedule<\/li><li>Avoid toxins such as pollutants, pesticides sprays in the house or on lawns<\/li><li>Consult a veterinarian professional if associated with significant symptoms<\/li><li>Retest in 3  months to see if your pet has responded to changes<\/li><\/ul>"
+          }
+        }
+      },
+      "block_order": [
+        "faq_yX8ccd",
+        "faq_P8AdGK"
+      ],
+      "settings": {
+        "heading": "Treatment Options",
+        "seo_heading": "h2",
+        "bgcolor": "primary",
+        "row_bgcolor": "secondary",
+        "section_visibility": "always",
+        "top_space_desktop": 30,
+        "bottom_space_desktop": 30,
+        "top_space_mobile": 30,
+        "bottom_space_mobile": 30
+      }
+    },
+    "rich_text_xdz3B8": {
+      "type": "rich-text",
+      "blocks": {
+        "richtext_KPxQNm": {
+          "type": "richtext",
+          "settings": {
+            "heading": "Secretory IgA",
+            "seo_heading": "h2",
+            "content": "<p>Secretory IgA is the first line of immune defense at the gut lining. It is a marker of intestinal maturity in young cats, and an indicator of intestinal immune protection. Elevated levels may show an immune reaction to inflammation, parasites, or food sensitivities. Low levels of secretory IgA may identify an inability to have an immune response and high levels show that your pet is reacting to something. High levels will return to normal if what they are responding to goes away. Low levels of IgA have been associated with autoimmunity, allergies, and skin conditions.<\/p><ul><li><strong>Normal:<\/strong> 10-350 ug\/g – No excess or impaired immune response.<\/li><li><strong>Low: <\/strong>&lt;10 ug\/g – May have an impaired response, treat and retest in 3 months<\/li><li><strong>Borderline:<\/strong> 350- 450 ug\/g – Continue to monitor, consider treatment options and retest in 3-6 months<\/li><li><strong>High:<\/strong> &gt;450 ug\/g – Identifies a significant reaction.  Support, treat and retest in 3 months<\/li><\/ul>"
+          }
+        }
+      },
+      "block_order": [
+        "richtext_KPxQNm"
+      ],
+      "settings": {
+        "content_width": "container sm-container",
+        "content_alignment": "left",
+        "bgcolor": "primary",
+        "section_visibility": "always",
+        "top_space_desktop": 50,
+        "bottom_space_desktop": 50,
+        "top_space_mobile": 30,
+        "bottom_space_mobile": 30
+      }
+    },
+    "faq_section_7VbWBg": {
+      "type": "faq-section",
+      "blocks": {
+        "faq_6GHjfA": {
+          "type": "faq",
+          "settings": {
+            "heading": "If your results are normal...",
+            "answer": "<p>Continue with current diet and lifestyle, retest in one year<\/p>"
+          }
+        },
+        "faq_Qcid6L": {
+          "type": "faq",
+          "settings": {
+            "heading": "If your results are high...",
+            "answer": "<ul><li>Possible causes of increased inflammation include poor levels of healthy gut bacteria, toxin exposure, and reactions to diet or lifestyle. In very high levels it may be advisable to contact your veterinary care provider<\/li><li>Consider an anti-inflammatory or prescription food. Some research has noted that changing the type of protein in a pet’s diet, for example switching from chicken to salmon, or trying a pet food with hydrolyzed protein may help to reduce inflammation<\/li><li>Consider anti-inflammatory snacks (blueberries, alfalfa, apples (no seeds), carrots, pumpkin, red pepper), or anti-inflammatory targeted supplements such as fish oil.<\/li><li>Consider probiotics to support healthy gut bacteria. Look for probiotics with a variety of healthy gut bacteria, referred to as multi-strain<\/li><li>Reduce stress, evaluate circadian rhythms of eating, sleeping and exercise<\/li><li>Set and maintain a regular schedule<\/li><li>Avoid toxins such as pollutants, pesticides sprays in the house or on lawns<\/li><li>Consult a veterinarian professional if associated with significant symptoms<\/li><li>Retest in 3  months to see if your pet has responded to changes<\/li><\/ul>"
+          }
+        }
+      },
+      "block_order": [
+        "faq_6GHjfA",
+        "faq_Qcid6L"
+      ],
+      "settings": {
+        "heading": "Treatment Options",
+        "seo_heading": "h2",
+        "bgcolor": "primary",
+        "row_bgcolor": "secondary",
+        "section_visibility": "always",
+        "top_space_desktop": 30,
+        "bottom_space_desktop": 30,
+        "top_space_mobile": 30,
+        "bottom_space_mobile": 30
+      }
+    },
+    "rich_text_6rFGPU": {
+      "type": "rich-text",
+      "blocks": {
+        "richtext_rUe8tE": {
+          "type": "richtext",
+          "settings": {
+            "heading": "Immune Response",
+            "seo_heading": "h2",
+            "content": ""
+          }
+        }
+      },
+      "block_order": [
+        "richtext_rUe8tE"
+      ],
+      "settings": {
+        "content_width": "container sm-container",
+        "content_alignment": "left",
+        "bgcolor": "primary",
+        "section_visibility": "always",
+        "top_space_desktop": 50,
+        "bottom_space_desktop": 50,
+        "top_space_mobile": 30,
+        "bottom_space_mobile": 30
+      }
+    },
+    "faq_section_9Lpyrf": {
+      "type": "faq-section",
+      "blocks": {
+        "faq_xRhKfW": {
+          "type": "faq",
+          "settings": {
+            "heading": "If your results are normal...",
+            "answer": "<p>Continue with current diet and lifestyle. Retest in 1 year for optimal health.<\/p>"
+          }
+        },
+        "faq_LgGyED": {
+          "type": "faq",
+          "settings": {
+            "heading": "If your results are high...",
+            "answer": "<ul><li>Consider a grain-free or hypoallergenic pet food<\/li><li>Support with probiotics<\/li><li>Consider testing for parasites, gluten sensitivity and leaky gut<\/li><li>Retest in 3 months.<\/li><\/ul>"
+          }
+        },
+        "faq_y3biKJ": {
+          "type": "faq",
+          "settings": {
+            "heading": "If your results are high...",
+            "answer": "<ul><li>Consider a grain-free or hypoallergenic food<\/li><li>Consider a probiotic or prebiotic supplement to build good gut bacteria which is related to secretory IgA levels. Look for probiotics with a variety of healthy gut bacteria, referred to as multi-strain (ex. Visbiome Pet), spore-forming probiotics or Saccharomyces boulardii<\/li><li>Consider immune-supporting supplements such as FeraPet Fera Mushroom Immune Support<\/li><li>Provide overall support of a healthy lifestyle including exercise, reducing stress and treatment of gut inflammation. Some research suggests adding time in nature and with other pets to lower overall stress levels<\/li><li>Retest in 3 months<\/li><\/ul>"
+          }
+        }
+      },
+      "block_order": [
+        "faq_xRhKfW",
+        "faq_LgGyED",
+        "faq_y3biKJ"
+      ],
+      "settings": {
+        "heading": "Treatment Options",
+        "seo_heading": "h2",
+        "bgcolor": "primary",
+        "row_bgcolor": "secondary",
+        "section_visibility": "always",
+        "top_space_desktop": 30,
+        "bottom_space_desktop": 30,
+        "top_space_mobile": 30,
+        "bottom_space_mobile": 30
+      }
+    },
+    "rich_text_XQNnHf": {
+      "type": "rich-text",
+      "blocks": {
+        "richtext_x7nytV": {
+          "type": "richtext",
+          "settings": {
+            "heading": " References",
+            "seo_heading": "h2",
+            "content": "<ul><li>Burrows, C.F., A.M. Merritt, and A.M. Chiapella, <em>Determination of fecal fat and trypsin output in the evaluation of chronic canine diarrhea<\/em>.J Am Vet Med Assoc, 1979. <strong>174<\/strong>(1): p. 62-6.<\/li><li>Spillmann, T., E. Eigenbrodt, and A. Sziegoleit, <em>[Determination and clinical relevance of fecal pancreatic elastase in dogs]<\/em>. Tierarztl Prax Ausg K Kleintiere Heimtiere, 1998. <strong>26<\/strong>(5): p. 364-8.<\/li><li>Piccione, G., et al., <em>Blood lipids, fecal fat and chymotrypsin excretion in the dog: influence of age, body weight and sex<\/em>. J Vet Med Sci, 2004. <strong>66<\/strong>(1): p. 59-62.<\/li><li>Singh, A.K., <em>Exocrine pancreatic insufficiency in canines: An update<\/em>. JOURNAL OF ENTOMOLOGY AND ZOOLOGY STUDIES 2018. <strong>6<\/strong>(5): p. 854-858.<\/li><li>Watson, P.J., <em>Exocrine pancreatic insufficiency as an end stage of pancreatitis in four dogs<\/em>. J Small Anim Pract, 2003. <strong>44<\/strong>(7): p. 306-12.<\/li><li>DVM360. <em>A quick review of canine exocrine pancreatic insufficiency<\/em>. 2009; <a href=\"https:\/\/www.dvm360.com\/view\/veterinary-practice-management-software-options\" target=\"_blank\">Available here<\/a>.<\/li><li>Grutzner, N., et al., <em>Genomic association and further characterisation of faecal immunoglobulin A deficiency in German Shepherd dogs<\/em>.Vet Med Sci, 2021. <strong>7<\/strong>(6): p. 2144-2155.<\/li><li>Martineau, B. and D.P. Laflamme, <em>Effect of diet on markers of intestinal health in dogs<\/em>. Res Vet Sci, 2002. <strong>72<\/strong>(3): p. 223-7.<\/li><li>Kubasova, I., et al., <em>Evaluation of enterococci for potential probiotic utilization in dogs<\/em>. Folia Microbiol (Praha), 2019. <strong>64<\/strong>(2): p. 177-187.<\/li><li>Kubasova, I., et al., Evaluation of enterococci for potential probiotic utilization in dogs. Folia Microbiol (Praha), 2019. 64(2): p. 177-187.<\/li><\/ul>"
+          }
+        }
+      },
+      "block_order": [
+        "richtext_x7nytV"
+      ],
+      "disabled": true,
+      "settings": {
+        "content_width": "container sm-container",
+        "content_alignment": "left",
+        "bgcolor": "primary",
+        "section_visibility": "always",
+        "top_space_desktop": 50,
+        "bottom_space_desktop": 50,
+        "top_space_mobile": 30,
+        "bottom_space_mobile": 30
+      }
+    },
+    "gallery_carousel_FMtr3g": {
+      "type": "gallery-carousel",
+      "blocks": {
+        "image_TtfxFp": {
+          "type": "image",
+          "settings": {
+            "heading": "Download",
+            "subheading": "Support Guides",
+            "image": "shopify:\/\/shop_images\/Dog_Cat_Circle_copy_2.jpg",
+            "link": "shopify:\/\/pages\/support-guides"
+          }
+        },
+        "image_FCGd6h": {
+          "type": "image",
+          "settings": {
+            "heading": "Check Out",
+            "subheading": "Partners We Love",
+            "image": "shopify:\/\/shop_images\/Dog_Food_copy.jpg",
+            "link": "shopify:\/\/pages\/affiliates"
+          }
+        }
+      },
+      "block_order": [
+        "image_TtfxFp",
+        "image_FCGd6h"
+      ],
+      "settings": {
+        "enable_fullwidth": true,
+        "heading": "Support",
+        "seo_heading": "h2",
+        "heading_size": "h2",
+        "gallery_style": "stacked",
+        "slide_direction": "right",
+        "image_style": "square",
+        "image_size": "medium",
+        "text_alignment": "center",
+        "enable_image_animation": true,
+        "image_crop": false,
+        "image_background": false,
+        "bgcolor": "primary",
+        "section_visibility": "always",
+        "top_space_desktop": 45,
+        "bottom_space_desktop": 45,
+        "top_space_mobile": 35,
+        "bottom_space_mobile": 0
+      }
+    }
+  },
+  "order": [
+    "main-page",
+    "rich_text_9CF7VT",
+    "faq_section_H8c46r",
+    "rich_text_PkqKgr",
+    "faq_section_xxJRNH",
+    "rich_text_PMF97w",
+    "faq_section_akpbh8",
+    "rich_text_xdz3B8",
+    "faq_section_7VbWBg",
+    "rich_text_6rFGPU",
+    "faq_section_9Lpyrf",
+    "rich_text_XQNnHf",
+    "gallery_carousel_FMtr3g"
+  ]
+}

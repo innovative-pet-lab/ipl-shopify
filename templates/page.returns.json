@@ -1,0 +1,44 @@
+{
+  "sections": {
+    "main-page": {
+      "type": "main-page",
+      "settings": {
+        "seo_heading": "h2",
+        "banner_height_desktop": "auto",
+        "banner_height_mobile": "auto",
+        "bgcolor": "#26286e",
+        "textcolor": "#ffffff"
+      }
+    },
+    "rich_text_z8qcGE": {
+      "type": "rich-text",
+      "blocks": {
+        "richtext_pcpLit": {
+          "type": "richtext",
+          "settings": {
+            "heading": "",
+            "seo_heading": "h2",
+            "content": "<p>This only applies to tests purchased on the IPL website. If you purchased your test through one of our partners, please contact them directly. <\/p><p><strong>Refunds:<\/strong><\/p><p>If you ordered a test, and it has not shipped, you are eligible for a 100% refund.<\/p><p>If you have received your kit and it has been within 30 days of purchase, you are eligible for a full refund, minus a $10 handling fee.<\/p><p>If it has been more than 30 days since your purchase, you are not eligible for a refund.<\/p><p>For any question on the policy, please <a href=\"\/pages\/contact-1\" title=\"Contact\">contact us<\/a>.<\/p><p><strong>Returns:<\/strong><\/p><p>We do not accept a returned kit. Please recycle any unused or unwanted kits.<\/p><p><strong>Cancellations:<\/strong><\/p><p>You can cancel an order prior to shipment. Once a kit is shipped, it cannot be cancelled. Please see the refund policy for any questions or <a href=\"https:\/\/innovativepetlab.com\/contact\/\">contact us<\/a>.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "richtext_pcpLit"
+      ],
+      "settings": {
+        "content_width": "container sm-container",
+        "content_alignment": "left",
+        "bgcolor": "quaternary",
+        "section_visibility": "always",
+        "top_space_desktop": 0,
+        "bottom_space_desktop": 0,
+        "top_space_mobile": 30,
+        "bottom_space_mobile": 30
+      }
+    }
+  },
+  "order": [
+    "main-page",
+    "rich_text_z8qcGE"
+  ]
+}

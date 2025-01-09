@@ -1,0 +1,222 @@
+{
+  "sections": {
+    "main-page": {
+      "type": "main-page",
+      "settings": {
+        "seo_heading": "h2",
+        "banner_height_desktop": "auto",
+        "banner_height_mobile": "auto",
+        "bgcolor": "#26286e",
+        "textcolor": "#ffffff"
+      }
+    },
+    "gallery_carousel_99Gxi3": {
+      "type": "gallery-carousel",
+      "blocks": {
+        "image_kamrRf": {
+          "type": "image",
+          "settings": {
+            "heading": "",
+            "subheading": "Register",
+            "image": "shopify:\/\/shop_images\/Symptomsv2-25_11e43499-4454-49e5-8d45-c68e10f4dfcb.jpg",
+            "link": ""
+          }
+        },
+        "image_kUitFM": {
+          "type": "image",
+          "settings": {
+            "heading": "",
+            "subheading": "Collect",
+            "image": "shopify:\/\/shop_images\/Symptomsv2-26_45637c79-7b82-42f0-b645-5aadd749d90d.jpg",
+            "link": ""
+          }
+        },
+        "image_TTQyXE": {
+          "type": "image",
+          "settings": {
+            "heading": "",
+            "subheading": "Mail",
+            "image": "shopify:\/\/shop_images\/Symptomsv2-27_e3daabaf-4a59-4f98-922f-3f027437a4c7.jpg",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_kamrRf",
+        "image_kUitFM",
+        "image_TTQyXE"
+      ],
+      "settings": {
+        "enable_fullwidth": false,
+        "heading": "How It Works",
+        "seo_heading": "h2",
+        "heading_size": "h2",
+        "gallery_style": "swipe",
+        "slide_direction": "right",
+        "image_style": "circle",
+        "image_size": "medium",
+        "text_alignment": "center",
+        "enable_image_animation": false,
+        "image_crop": false,
+        "image_background": false,
+        "bgcolor": "primary",
+        "section_visibility": "always",
+        "top_space_desktop": 45,
+        "bottom_space_desktop": 45,
+        "top_space_mobile": 35,
+        "bottom_space_mobile": 0
+      }
+    },
+    "image_with_text_9NKaGR": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_gAKR7F": {
+          "type": "heading",
+          "settings": {
+            "heading": "Register Your Kit Online",
+            "seo_heading": "h2"
+          }
+        },
+        "text_yBYiGA": {
+          "type": "text",
+          "settings": {
+            "content": "<h6><\/h6><p><\/p><p>Click ‘Log In\/Register’ and follow the instructions<\/p><p>Each test kit includes:<\/p><ul><li>A unique kit ID label <\/li><li>Collection materials including: latex glove, poop bag, collection tube, wooden stick, and biohazard bag<\/li><li>Mailing supplies including: white box, USPS shipping label, and mailer<\/li><\/ul><p><\/p><p><em><strong>Tip:<\/strong><\/em><em> Don’t discard the box. You will need it to return your pet’s sample.<\/em><\/p>"
+          }
+        },
+        "icon_with_text_FCU6RA": {
+          "type": "icon-with-text",
+          "disabled": true,
+          "settings": {
+            "icon": "user",
+            "heading": "Click ‘Log In\/Register’ and follow the instructions",
+            "content": "<p>Each test kit includes:<\/p><ul><li>A unique kit ID label <\/li><li>Collection materials including: latex glove, poop bag, collection tube, wooden stick, and biohazard bag<\/li><li>Mailing supplies including: white box, USPS shipping label, and mailer<\/li><\/ul><p><\/p><p><em><strong>Tip:<\/strong><\/em><em> Don’t discard the box. You will need it to return your pet’s sample.<\/em><\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_gAKR7F",
+        "text_yBYiGA",
+        "icon_with_text_FCU6RA"
+      ],
+      "settings": {
+        "enable_fullwidth": false,
+        "image": "shopify:\/\/shop_images\/Step1.jpg",
+        "image_shadow": false,
+        "enable_image_animation": false,
+        "image_alignment": "left",
+        "image_height": "aspect",
+        "content_position": "center",
+        "bgcolor": "secondary",
+        "image_shadow_color": "#dddddd",
+        "section_visibility": "always",
+        "top_space_desktop": 60,
+        "bottom_space_desktop": 30,
+        "top_space_mobile": 30,
+        "bottom_space_mobile": 30
+      }
+    },
+    "image_with_text_jFrcNB": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_9Ap7pB": {
+          "type": "heading",
+          "settings": {
+            "heading": "Collect Your Pet’s Sample",
+            "seo_heading": "h2"
+          }
+        },
+        "text_cXBkct": {
+          "type": "text",
+          "settings": {
+            "content": "<p><\/p><p>Collect a fresh stool sample. If you are unable to mail within 24 hours, keep the sample in the freezer until you are ready to send.<\/p><ul><li>Record sample collection date and pet’s name on the tube.<\/li><li>Use the spork attached(or a stick from outside) to collect the sample.<\/li><li>Fill the tube to the red fill line on the collection tube.<\/li><li>Tightly twist the cap on the collection tube; then put it inside the biohazard bag and seal.<\/li><\/ul><p><\/p><p><em><strong>Tip for Dog Collections:<\/strong><\/em><em> Take your dog for a walk and quickly scoop the poop. Try to keep the sample free from grass and debris if possible.<\/em><\/p><p><em><strong>Tip for Cat Collections:<\/strong><\/em> <em>Litter is not a problem when testing.<\/em><\/p>"
+          }
+        },
+        "icon_with_text_iiJj8H": {
+          "type": "icon-with-text",
+          "disabled": true,
+          "settings": {
+            "icon": "gift",
+            "heading": "Collect a Fresh Stool Sample",
+            "content": "<p>A “poop bag” and glove are included for your convenience<\/p><p><\/p><p><em><strong>Tip for Dogs:<\/strong><\/em><em> Take your dog for a walk and quickly scoop the poop. Try to keep the sample free from grass and debris if possible.<\/em><\/p><p><\/p><p><em><strong>Tip for Cats:<\/strong><\/em><em> Litter is not a problem when testing.<\/em><\/p>"
+          }
+        },
+        "icon_with_text_38CjLX": {
+          "type": "icon-with-text",
+          "disabled": true,
+          "settings": {
+            "icon": "shipping",
+            "heading": "Icon with text",
+            "content": "<p>To provide clients insight into your brand, pair words with any image to introduce a new campaign.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_9Ap7pB",
+        "text_cXBkct",
+        "icon_with_text_iiJj8H",
+        "icon_with_text_38CjLX"
+      ],
+      "settings": {
+        "enable_fullwidth": false,
+        "image": "shopify:\/\/shop_images\/Step2.jpg",
+        "image_shadow": false,
+        "enable_image_animation": false,
+        "image_alignment": "right",
+        "image_height": "aspect",
+        "content_position": "center",
+        "bgcolor": "tertiary",
+        "image_shadow_color": "#dddddd",
+        "section_visibility": "always",
+        "top_space_desktop": 60,
+        "bottom_space_desktop": 30,
+        "top_space_mobile": 30,
+        "bottom_space_mobile": 30
+      }
+    },
+    "image_with_text_hxUa86": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_BFCTEX": {
+          "type": "heading",
+          "settings": {
+            "heading": "Mail to the Lab",
+            "seo_heading": "h2"
+          }
+        },
+        "text_FAXkmC": {
+          "type": "text",
+          "settings": {
+            "content": "<p>Put the biohazard bag with the collection tube into the white box<\/p><p><\/p><ul><li>Place box in the mailer and affix the USPS mailing label to the outside<\/li><li>Place the mailer in your mailbox or at a United States Postal Service Office<\/li><li>You will be notified via email when your results are ready typically within 10-14 days<\/li><\/ul><p><\/p><p><em><strong>Remember:<\/strong><\/em><em> Mail within 24 hours of collecting or keep in the freezer prior to sending.<\/em><\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_BFCTEX",
+        "text_FAXkmC"
+      ],
+      "settings": {
+        "enable_fullwidth": false,
+        "image": "shopify:\/\/shop_images\/Step3_copy_4092c49a-e5bc-444d-8a46-ebc6aff2ecbe.jpg",
+        "image_shadow": false,
+        "enable_image_animation": false,
+        "image_alignment": "left",
+        "image_height": "aspect",
+        "content_position": "center",
+        "bgcolor": "primary",
+        "image_shadow_color": "#dddddd",
+        "section_visibility": "always",
+        "top_space_desktop": 60,
+        "bottom_space_desktop": 50,
+        "top_space_mobile": 30,
+        "bottom_space_mobile": 30
+      }
+    }
+  },
+  "order": [
+    "main-page",
+    "gallery_carousel_99Gxi3",
+    "image_with_text_9NKaGR",
+    "image_with_text_jFrcNB",
+    "image_with_text_hxUa86"
+  ]
+}

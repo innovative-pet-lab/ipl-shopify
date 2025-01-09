@@ -1,0 +1,232 @@
+{
+  "sections": {
+    "main-page": {
+      "type": "main-page",
+      "settings": {
+        "seo_heading": "h2",
+        "banner_height_desktop": "auto",
+        "banner_height_mobile": "auto",
+        "bgcolor": "#26286e",
+        "textcolor": "#ffffff"
+      }
+    },
+    "image_with_text_3dyRtE": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_nEUdCE": {
+          "type": "heading",
+          "settings": {
+            "heading": "Jamie Smith, CEO & CoFounder",
+            "seo_heading": "h6"
+          }
+        },
+        "text_BVYMmU": {
+          "type": "text",
+          "settings": {
+            "content": "<p>Jamie Smith is an executive business leader with over 15 years of experience in the diagnostic industry, both domestically and internationally.  Her background includes consumer diagnostics, functional & integrative medicine, commercial operations, digital health, and scaling emerging businesses.  Prior to being a co-founder and CEO at Innovative Pet Laboratory, Jamie served as VP of Diagnostic Solutions at Everly Health and a commercial sales leader at Genova Diagnostics.  She is passionate about animal health and finding ways to improve the quality of our animal companions’ lives.  In her free time, she enjoys spending time with her husband, three kids, and English Golden Retriever, June. <\/p>"
+          }
+        },
+        "button_eTMAWM": {
+          "type": "button",
+          "settings": {
+            "btn_text": "Jamie's LinkedIn",
+            "btn_link": "https:\/\/www.linkedin.com\/in\/jamie-smith-959a3453\/",
+            "button_size": "large",
+            "mobile_button_size": "m-med"
+          }
+        }
+      },
+      "block_order": [
+        "heading_nEUdCE",
+        "text_BVYMmU",
+        "button_eTMAWM"
+      ],
+      "settings": {
+        "enable_fullwidth": false,
+        "image": "shopify:\/\/shop_images\/J.SmithHeadshot10.22.226113-600x600.jpg",
+        "image_shadow": true,
+        "enable_image_animation": false,
+        "image_alignment": "left",
+        "image_height": "aspect",
+        "content_position": "start",
+        "bgcolor": "primary",
+        "image_shadow_color": "#03b0a7",
+        "section_visibility": "always",
+        "top_space_desktop": 60,
+        "bottom_space_desktop": 30,
+        "top_space_mobile": 30,
+        "bottom_space_mobile": 30
+      }
+    },
+    "image_with_text_68UYWV": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_dhgLHn": {
+          "type": "heading",
+          "settings": {
+            "heading": "Dr. Betsy Redmond, Chief Science Officer & CoFounder",
+            "seo_heading": "h2"
+          }
+        },
+        "text_Xb7kbi": {
+          "type": "text",
+          "settings": {
+            "content": "<p>Dr. Redmond has worked in clinical laboratory education and research for almost 20 years. She holds a Masters of Medical Science (MMSc) from Emory University, a Ph.D. in Nutrition from the University of Georgia. Her research has included evaluating the impact of diet on colon health, how to target education to make changes that improve laboratory values, and in translational science finding the best ways to move new research into applied clinical care. In her professional work, she was a member of the team that brought the first available gut microbiome PCR test to market and has researched how to apply metabolomics (the study of metabolites) in clinical practice and the differences across species. As a co-founder of Innovative Pet Lab Betsy’s goal is to provide easy-to-use testing that gives pet owners a deeper understanding of their pet’s overall health and actionable steps.  Dr. Redmond lives in Atlanta and enjoys spending time with her husband, three kids, and two dogs Ollie and Linda. She also enjoys running and can never get enough of researching the right answer.<\/p>"
+          }
+        },
+        "button_cUiW4e": {
+          "type": "button",
+          "settings": {
+            "btn_text": "Betsy's Linkedin",
+            "btn_link": "https:\/\/www.linkedin.com\/in\/redmondnutrition\/",
+            "button_size": "large",
+            "mobile_button_size": "m-med"
+          }
+        }
+      },
+      "block_order": [
+        "heading_dhgLHn",
+        "text_Xb7kbi",
+        "button_cUiW4e"
+      ],
+      "settings": {
+        "enable_fullwidth": false,
+        "image": "shopify:\/\/shop_images\/Betsy-Redmond-1.jpg",
+        "image_shadow": true,
+        "enable_image_animation": false,
+        "image_alignment": "left",
+        "image_height": "aspect",
+        "content_position": "start",
+        "bgcolor": "primary",
+        "image_shadow_color": "#99d5e0",
+        "section_visibility": "always",
+        "top_space_desktop": 60,
+        "bottom_space_desktop": 30,
+        "top_space_mobile": 30,
+        "bottom_space_mobile": 30
+      }
+    },
+    "image_with_text_86tGTC": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_kRD4y8": {
+          "type": "heading",
+          "settings": {
+            "heading": "Dr. Bob David, Advisor",
+            "seo_heading": "h2"
+          }
+        },
+        "text_C4yEDF": {
+          "type": "text",
+          "settings": {
+            "content": "<p>As one of Innovative Pet Lab’s Co-Founders and Clinical Advisor, “Dr. Bob” brings his over 30-years of medical lab experience to the pet laboratory testing marketplace. He also serves as Lab Director of Genova Diagnostics in Atlanta, Georgia, and has managed labs across the U.S. throughout his career. Dr. David holds degrees in chemistry and biochemistry from Bellarmine College, Mississippi State University and Creighton Medical Center (where he studied scorpion venom!). He conducted post-doctoral work in clinical chemistry at Wake Forest University where he met his wife of 30 years, Martha. Together, they have four children, one granddaughter, and a Basset Hound named Mia. When he’s not in the lab, he enjoys spending time with his family, grilling and reading.<\/p>"
+          }
+        },
+        "button_xiHLBR": {
+          "type": "button",
+          "settings": {
+            "btn_text": "Bob's Linkedin",
+            "btn_link": "https:\/\/www.linkedin.com\/in\/bob-david-048092ab\/",
+            "button_size": "large",
+            "mobile_button_size": "m-med"
+          }
+        }
+      },
+      "block_order": [
+        "heading_kRD4y8",
+        "text_C4yEDF",
+        "button_xiHLBR"
+      ],
+      "settings": {
+        "enable_fullwidth": false,
+        "image": "shopify:\/\/shop_images\/Bob-David.jpg",
+        "image_shadow": true,
+        "enable_image_animation": true,
+        "image_alignment": "left",
+        "image_height": "aspect",
+        "content_position": "start",
+        "bgcolor": "primary",
+        "image_shadow_color": "#73c7ad",
+        "section_visibility": "always",
+        "top_space_desktop": 60,
+        "bottom_space_desktop": 30,
+        "top_space_mobile": 30,
+        "bottom_space_mobile": 30
+      }
+    },
+    "gallery_carousel_KFY6R8": {
+      "type": "gallery-carousel",
+      "blocks": {
+        "image_rM8B6G": {
+          "type": "image",
+          "settings": {
+            "heading": "",
+            "subheading": "Katie Phillippi, Sales",
+            "image": "shopify:\/\/shop_images\/Square_3_f0c8a5f4-8848-4756-99f3-778f43903482.jpg",
+            "link": "https:\/\/www.linkedin.com\/in\/katie-phillippi-3537221\/"
+          }
+        },
+        "image_EQNT9r": {
+          "type": "image",
+          "settings": {
+            "heading": "",
+            "subheading": "Laci Brown, Partnerships",
+            "image": "shopify:\/\/shop_images\/1691584422267.jpg",
+            "link": "https:\/\/www.linkedin.com\/in\/laci-brown-80669b104\/"
+          }
+        },
+        "image_47UMcV": {
+          "type": "image",
+          "settings": {
+            "heading": "",
+            "subheading": "Jennifer Gillen, Marketing",
+            "image": "shopify:\/\/shop_images\/1560978841677.jpg",
+            "link": "https:\/\/www.linkedin.com\/in\/jenniferholmesgillen\/"
+          }
+        },
+        "image_G4CERx": {
+          "type": "image",
+          "settings": {
+            "heading": "",
+            "subheading": "Ward Watkins, Advisor",
+            "image": "shopify:\/\/shop_images\/Square_2_6e47db04-9346-4eb5-a9a9-4866427db1f8.jpg",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_rM8B6G",
+        "image_EQNT9r",
+        "image_47UMcV",
+        "image_G4CERx"
+      ],
+      "settings": {
+        "enable_fullwidth": true,
+        "heading": "The IPL Team",
+        "seo_heading": "h2",
+        "heading_size": "h2",
+        "gallery_style": "stacked",
+        "slide_direction": "right",
+        "image_style": "circle",
+        "image_size": "large",
+        "text_alignment": "center",
+        "enable_image_animation": true,
+        "image_crop": false,
+        "image_background": false,
+        "bgcolor": "primary",
+        "section_visibility": "always",
+        "top_space_desktop": 45,
+        "bottom_space_desktop": 45,
+        "top_space_mobile": 35,
+        "bottom_space_mobile": 0
+      }
+    }
+  },
+  "order": [
+    "main-page",
+    "image_with_text_3dyRtE",
+    "image_with_text_68UYWV",
+    "image_with_text_86tGTC",
+    "gallery_carousel_KFY6R8"
+  ]
+}

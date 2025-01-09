@@ -1,0 +1,400 @@
+{
+  "sections": {
+    "main-page": {
+      "type": "main-page",
+      "settings": {
+        "seo_heading": "h2",
+        "banner_height_desktop": "auto",
+        "banner_height_mobile": "auto",
+        "bgcolor": "#26286e",
+        "textcolor": "#ffffff"
+      }
+    },
+    "gallery_carousel_nndVwh": {
+      "type": "gallery-carousel",
+      "blocks": {
+        "image_AW4Car": {
+          "type": "image",
+          "settings": {
+            "heading": "",
+            "subheading": "Comprehensive Review",
+            "image": "shopify:\/\/shop_images\/FlatBoxesComp_a5acc6fb-6e90-4eb0-bea8-d67fa7db1b02.jpg",
+            "link": "shopify:\/\/pages\/results-defined-comprehensive-review"
+          }
+        },
+        "image_9dPYaB": {
+          "type": "image",
+          "settings": {
+            "heading": "",
+            "subheading": "Comprehensive Gut Check",
+            "image": "shopify:\/\/shop_images\/FlatBoxesCatComp_19145c25-30b4-4bc4-9c2c-240826c7bb8e.jpg",
+            "link": "shopify:\/\/pages\/results-comp-gut"
+          }
+        },
+        "image_yFUHqN": {
+          "type": "image",
+          "settings": {
+            "heading": "",
+            "subheading": "Basic Gut Check",
+            "image": "shopify:\/\/shop_images\/FlatBoxesBasic_aa05c790-3f73-4d8a-b491-efa21a71a5e9.jpg",
+            "link": "shopify:\/\/pages\/results-defined-basic-gut-check"
+          }
+        },
+        "image_PFAP9z": {
+          "type": "image",
+          "settings": {
+            "heading": "",
+            "subheading": "Leaky Gut",
+            "image": "shopify:\/\/shop_images\/FlatBoxesLeaky-Gut.jpg",
+            "link": "shopify:\/\/pages\/copy-of-copy-of-results-defined-leaky-gut"
+          }
+        },
+        "image_E4rQXj": {
+          "type": "image",
+          "settings": {
+            "heading": "",
+            "subheading": "Inflammation & Immunity",
+            "image": "shopify:\/\/shop_images\/FlatBoxesInflammation_00cfc20d-0b65-4179-8104-7c3d782b096f.jpg",
+            "link": "shopify:\/\/pages\/results-defined-inflammation-and-immunity"
+          }
+        },
+        "image_4DdyFh": {
+          "type": "image",
+          "settings": {
+            "heading": "",
+            "subheading": "Digestion & Detox",
+            "image": "shopify:\/\/shop_images\/FlatBoxesdetox_0c18f09a-7d24-4174-a63e-8683f7f66a7e.jpg",
+            "link": "shopify:\/\/pages\/copy-of-results-defined-digestion-and-detox"
+          }
+        }
+      },
+      "block_order": [
+        "image_AW4Car",
+        "image_9dPYaB",
+        "image_yFUHqN",
+        "image_PFAP9z",
+        "image_E4rQXj",
+        "image_4DdyFh"
+      ],
+      "disabled": true,
+      "settings": {
+        "enable_fullwidth": true,
+        "heading": "Select Your Test for More Information",
+        "seo_heading": "h2",
+        "heading_size": "h2",
+        "gallery_style": "stacked",
+        "slide_direction": "right",
+        "image_style": "square",
+        "image_size": "small",
+        "text_alignment": "center",
+        "enable_image_animation": true,
+        "image_crop": false,
+        "image_background": false,
+        "bgcolor": "primary",
+        "section_visibility": "always",
+        "top_space_desktop": 45,
+        "bottom_space_desktop": 45,
+        "top_space_mobile": 35,
+        "bottom_space_mobile": 0
+      }
+    },
+    "image_with_text_fA3bXj": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_EYJzfF": {
+          "type": "heading",
+          "settings": {
+            "heading": "Comprehensive Review",
+            "seo_heading": "h2"
+          }
+        },
+        "text_WxLm6g": {
+          "type": "text",
+          "settings": {
+            "content": "<ul><li>Calprotectin<\/li><li>Secretory IgA<\/li><li>Zonulin<\/li><li> Antigliadin-IgA<\/li><li>Pancreatic Elastase 1<\/li><li>Beta-glucuronidase<\/li><\/ul><p><\/p><p><\/p>"
+          }
+        },
+        "button_78tLi7": {
+          "type": "button",
+          "settings": {
+            "btn_text": "Learn More",
+            "btn_link": "shopify:\/\/pages\/results-defined-comprehensive-review",
+            "button_size": "med",
+            "mobile_button_size": "m-med"
+          }
+        }
+      },
+      "block_order": [
+        "heading_EYJzfF",
+        "text_WxLm6g",
+        "button_78tLi7"
+      ],
+      "settings": {
+        "enable_fullwidth": false,
+        "image": "shopify:\/\/shop_images\/FlatBoxesComp_a5acc6fb-6e90-4eb0-bea8-d67fa7db1b02.jpg",
+        "image_shadow": true,
+        "enable_image_animation": true,
+        "image_alignment": "left",
+        "image_height": "aspect",
+        "content_position": "center",
+        "bgcolor": "primary",
+        "image_shadow_color": "#26286e",
+        "section_visibility": "always",
+        "top_space_desktop": 60,
+        "bottom_space_desktop": 30,
+        "top_space_mobile": 30,
+        "bottom_space_mobile": 30
+      }
+    },
+    "image_with_text_xzMrnE": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_AAhf3j": {
+          "type": "heading",
+          "settings": {
+            "heading": "Comprehensive Gut Check",
+            "seo_heading": "h2"
+          }
+        },
+        "text_MmrBgH": {
+          "type": "text",
+          "settings": {
+            "content": "<ul><li>Calprotectin<\/li><li>Secretory IgA<\/li><li>Zonulin<\/li><li>Antigliadin-IgA<\/li><\/ul><p><\/p><p><\/p>"
+          }
+        },
+        "button_zanLD4": {
+          "type": "button",
+          "settings": {
+            "btn_text": "Learn More",
+            "btn_link": "shopify:\/\/pages\/results-comp-gut",
+            "button_size": "med",
+            "mobile_button_size": "m-med"
+          }
+        }
+      },
+      "block_order": [
+        "heading_AAhf3j",
+        "text_MmrBgH",
+        "button_zanLD4"
+      ],
+      "settings": {
+        "enable_fullwidth": false,
+        "image": "shopify:\/\/shop_images\/FlatBoxesCatComp_19145c25-30b4-4bc4-9c2c-240826c7bb8e.jpg",
+        "image_shadow": true,
+        "enable_image_animation": false,
+        "image_alignment": "right",
+        "image_height": "aspect",
+        "content_position": "center",
+        "bgcolor": "primary",
+        "image_shadow_color": "#03b0a7",
+        "section_visibility": "always",
+        "top_space_desktop": 60,
+        "bottom_space_desktop": 30,
+        "top_space_mobile": 30,
+        "bottom_space_mobile": 30
+      }
+    },
+    "image_with_text_PWUyrA": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_hAVekP": {
+          "type": "heading",
+          "settings": {
+            "heading": "Basic Gut Check",
+            "seo_heading": "h2"
+          }
+        },
+        "text_6YTYjq": {
+          "type": "text",
+          "settings": {
+            "content": "<ul><li>Calprotectin<\/li><li>Zonulin<\/li><\/ul><p><\/p><p><\/p>"
+          }
+        },
+        "button_7UB9aM": {
+          "type": "button",
+          "settings": {
+            "btn_text": "Learn More",
+            "btn_link": "shopify:\/\/pages\/results-defined-basic-gut-check",
+            "button_size": "med",
+            "mobile_button_size": "m-med"
+          }
+        }
+      },
+      "block_order": [
+        "heading_hAVekP",
+        "text_6YTYjq",
+        "button_7UB9aM"
+      ],
+      "settings": {
+        "enable_fullwidth": false,
+        "image": "shopify:\/\/shop_images\/FlatBoxesBasic_aa05c790-3f73-4d8a-b491-efa21a71a5e9.jpg",
+        "image_shadow": true,
+        "enable_image_animation": true,
+        "image_alignment": "left",
+        "image_height": "aspect",
+        "content_position": "center",
+        "bgcolor": "primary",
+        "image_shadow_color": "#99d5e0",
+        "section_visibility": "always",
+        "top_space_desktop": 60,
+        "bottom_space_desktop": 30,
+        "top_space_mobile": 30,
+        "bottom_space_mobile": 30
+      }
+    },
+    "image_with_text_AXYmxx": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_fHPPVm": {
+          "type": "heading",
+          "settings": {
+            "heading": "Leaky Gut",
+            "seo_heading": "h2"
+          }
+        },
+        "text_jQAiEX": {
+          "type": "text",
+          "settings": {
+            "content": "<ul><li>Zonulin<\/li><li>Antigliadin-IgA<\/li><\/ul><p><\/p><p><\/p>"
+          }
+        },
+        "button_W9Hnwh": {
+          "type": "button",
+          "settings": {
+            "btn_text": "Learn More",
+            "btn_link": "shopify:\/\/pages\/copy-of-copy-of-results-defined-leaky-gut",
+            "button_size": "med",
+            "mobile_button_size": "m-med"
+          }
+        }
+      },
+      "block_order": [
+        "heading_fHPPVm",
+        "text_jQAiEX",
+        "button_W9Hnwh"
+      ],
+      "settings": {
+        "enable_fullwidth": false,
+        "image": "shopify:\/\/shop_images\/FlatBoxesLeaky-Gut.jpg",
+        "image_shadow": true,
+        "enable_image_animation": true,
+        "image_alignment": "right",
+        "image_height": "aspect",
+        "content_position": "center",
+        "bgcolor": "primary",
+        "image_shadow_color": "#73c7ad",
+        "section_visibility": "always",
+        "top_space_desktop": 60,
+        "bottom_space_desktop": 30,
+        "top_space_mobile": 30,
+        "bottom_space_mobile": 30
+      }
+    },
+    "image_with_text_zaqdcp": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_P8p48G": {
+          "type": "heading",
+          "settings": {
+            "heading": "Inflammation & Immunity",
+            "seo_heading": "h2"
+          }
+        },
+        "text_kgJ8iz": {
+          "type": "text",
+          "settings": {
+            "content": "<ul><li>Calprotectin<\/li><li>Secretory IgA<\/li><\/ul><p><\/p><p><\/p>"
+          }
+        },
+        "button_y498Yf": {
+          "type": "button",
+          "settings": {
+            "btn_text": "Learn More",
+            "btn_link": "shopify:\/\/pages\/results-defined-inflammation-and-immunity",
+            "button_size": "med",
+            "mobile_button_size": "m-med"
+          }
+        }
+      },
+      "block_order": [
+        "heading_P8p48G",
+        "text_kgJ8iz",
+        "button_y498Yf"
+      ],
+      "settings": {
+        "enable_fullwidth": false,
+        "image": "shopify:\/\/shop_images\/FlatBoxesInflammation_00cfc20d-0b65-4179-8104-7c3d782b096f.jpg",
+        "image_shadow": true,
+        "enable_image_animation": true,
+        "image_alignment": "left",
+        "image_height": "aspect",
+        "content_position": "center",
+        "bgcolor": "primary",
+        "image_shadow_color": "#26286e",
+        "section_visibility": "always",
+        "top_space_desktop": 60,
+        "bottom_space_desktop": 30,
+        "top_space_mobile": 30,
+        "bottom_space_mobile": 30
+      }
+    },
+    "image_with_text_TYncba": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_MKpFrQ": {
+          "type": "heading",
+          "settings": {
+            "heading": "Digestion & Detox",
+            "seo_heading": "h2"
+          }
+        },
+        "text_kcTx7F": {
+          "type": "text",
+          "settings": {
+            "content": "<ul><li> Pancreatic Elastase 1<\/li><li>Beta-glucuronidase<\/li><\/ul><p><\/p><p><\/p>"
+          }
+        },
+        "button_ECkqxG": {
+          "type": "button",
+          "settings": {
+            "btn_text": "Learn More",
+            "btn_link": "shopify:\/\/pages\/copy-of-results-defined-digestion-and-detox",
+            "button_size": "med",
+            "mobile_button_size": "m-med"
+          }
+        }
+      },
+      "block_order": [
+        "heading_MKpFrQ",
+        "text_kcTx7F",
+        "button_ECkqxG"
+      ],
+      "settings": {
+        "enable_fullwidth": false,
+        "image": "shopify:\/\/shop_images\/FlatBoxesdetox_0c18f09a-7d24-4174-a63e-8683f7f66a7e.jpg",
+        "image_shadow": true,
+        "enable_image_animation": true,
+        "image_alignment": "right",
+        "image_height": "aspect",
+        "content_position": "center",
+        "bgcolor": "primary",
+        "image_shadow_color": "#03b0a7",
+        "section_visibility": "always",
+        "top_space_desktop": 60,
+        "bottom_space_desktop": 30,
+        "top_space_mobile": 30,
+        "bottom_space_mobile": 30
+      }
+    }
+  },
+  "order": [
+    "main-page",
+    "gallery_carousel_nndVwh",
+    "image_with_text_fA3bXj",
+    "image_with_text_xzMrnE",
+    "image_with_text_PWUyrA",
+    "image_with_text_AXYmxx",
+    "image_with_text_zaqdcp",
+    "image_with_text_TYncba"
+  ]
+}

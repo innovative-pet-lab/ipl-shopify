@@ -1,0 +1,132 @@
+{
+  "sections": {
+    "main-page": {
+      "type": "main-page",
+      "settings": {
+        "seo_heading": "h2",
+        "banner_height_desktop": "auto",
+        "banner_height_mobile": "auto",
+        "bgcolor": "#26286e",
+        "textcolor": "#ffffff"
+      }
+    },
+    "gallery_carousel_iVrtY9": {
+      "type": "gallery-carousel",
+      "blocks": {
+        "image_9377QA": {
+          "type": "image",
+          "settings": {
+            "heading": "REGISTER",
+            "subheading": "Create an account and register your kit.",
+            "image": "shopify:\/\/shop_images\/Symptomsv2-25_11e43499-4454-49e5-8d45-c68e10f4dfcb.jpg",
+            "link": ""
+          }
+        },
+        "image_ABXnkx": {
+          "type": "image",
+          "settings": {
+            "heading": "COLLECT",
+            "subheading": "Collect a stool sample.",
+            "image": "shopify:\/\/shop_images\/Symptomsv2-26_45637c79-7b82-42f0-b645-5aadd749d90d.jpg",
+            "link": ""
+          }
+        },
+        "image_CMhUGD": {
+          "type": "image",
+          "settings": {
+            "heading": "MAIL",
+            "subheading": "Send your sample to the lab and get your results within 10-14 days.",
+            "image": "shopify:\/\/shop_images\/Symptomsv2-27_e3daabaf-4a59-4f98-922f-3f027437a4c7.jpg",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_9377QA",
+        "image_ABXnkx",
+        "image_CMhUGD"
+      ],
+      "settings": {
+        "enable_fullwidth": true,
+        "heading": "Our Process",
+        "seo_heading": "h2",
+        "heading_size": "h2",
+        "gallery_style": "stacked",
+        "slide_direction": "right",
+        "image_style": "circle",
+        "image_size": "medium",
+        "text_alignment": "center",
+        "enable_image_animation": false,
+        "image_crop": false,
+        "image_background": false,
+        "bgcolor": "secondary",
+        "section_visibility": "always",
+        "top_space_desktop": 45,
+        "bottom_space_desktop": 45,
+        "top_space_mobile": 35,
+        "bottom_space_mobile": 0
+      }
+    },
+    "image_banner_3TBdDy": {
+      "type": "image-banner",
+      "disabled": true,
+      "settings": {
+        "enable_parallax": false,
+        "section_visibility": "always",
+        "image": "shopify:\/\/shop_images\/OUR_PROCESS_983719a2-8adf-4d1b-8f2b-b85cc2481263.jpg",
+        "desktop_height": "350px",
+        "mobile_height": "500px",
+        "banner_title": "",
+        "seo_heading": "h2",
+        "desktop_title_size": 70,
+        "mobile_title_size": 36,
+        "banner_desc": "",
+        "button_text": "",
+        "button_link": "shopify:\/\/collections\/all",
+        "button_size": "small",
+        "mobile_button_size": "m-small",
+        "content_position": "center-center",
+        "title_color": "#000000",
+        "desc_color": "#000000",
+        "btn_bg": "#000000",
+        "btn_text": "#ffffff",
+        "btn_border": "#000000",
+        "overlay_color": "",
+        "overlay_opacity": 50
+      }
+    },
+    "image_banner_aPbjA3": {
+      "type": "image-banner",
+      "settings": {
+        "enable_parallax": false,
+        "section_visibility": "always",
+        "image": "shopify:\/\/shop_images\/How_it_works_page_image.jpg",
+        "desktop_height": "750px",
+        "mobile_height": "500px",
+        "banner_title": "",
+        "seo_heading": "h2",
+        "desktop_title_size": 70,
+        "mobile_title_size": 36,
+        "banner_desc": "",
+        "button_text": "",
+        "button_link": "shopify:\/\/collections\/all",
+        "button_size": "small",
+        "mobile_button_size": "m-small",
+        "content_position": "center-center",
+        "title_color": "#000000",
+        "desc_color": "#000000",
+        "btn_bg": "#000000",
+        "btn_text": "#ffffff",
+        "btn_border": "#000000",
+        "overlay_color": "",
+        "overlay_opacity": 50
+      }
+    }
+  },
+  "order": [
+    "main-page",
+    "gallery_carousel_iVrtY9",
+    "image_banner_3TBdDy",
+    "image_banner_aPbjA3"
+  ]
+}

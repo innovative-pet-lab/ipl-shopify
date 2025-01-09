@@ -1,0 +1,216 @@
+{
+  "sections": {
+    "main-page": {
+      "type": "main-page",
+      "settings": {
+        "seo_heading": "h2",
+        "banner_height_desktop": "auto",
+        "banner_height_mobile": "auto",
+        "bgcolor": "#26286e",
+        "textcolor": "#ffffff"
+      }
+    },
+    "rich_text_9CF7VT": {
+      "type": "rich-text",
+      "blocks": {
+        "richtext_BKm3DJ": {
+          "type": "richtext",
+          "settings": {
+            "heading": "Pancreatic Elastase 1",
+            "seo_heading": "h2",
+            "content": "<p>Only low results are of concern. Pancreatic Elastase 1 is an enzyme, and low levels can identify impaired digestion. Your dog’s digestion depends on enzymes secreted by the pancreas to digest food. Dogs who don’t secrete enough digestive enzymes may not fully digest food. If your dog’s digestion is impaired they may not be getting all the nutrients from food, which can lead to deficiencies. The symptoms of poor digestion are varied but can include, diarrhea, weight loss, gas, or other symptoms related to nutrient deficiencies. Some dogs have no symptoms. The main treatment for low pancreatic elastase 1 is supplementing with digestive enzymes and vitamin B12. If low follow-up testing is recommended.<\/p><ul><li><strong>Normal:<\/strong> &gt;30 ug\/g <\/li><li><strong>Borderline:<\/strong> 10-30 ug\/g Retest in 3-6 months<\/li><li><strong>Low:<\/strong> &lt;10 ug\/g – Indicates digestive issues and should be seen by a veterinary professional<\/li><\/ul>"
+          }
+        }
+      },
+      "block_order": [
+        "richtext_BKm3DJ"
+      ],
+      "settings": {
+        "content_width": "container sm-container",
+        "content_alignment": "left",
+        "bgcolor": "primary",
+        "section_visibility": "always",
+        "top_space_desktop": 50,
+        "bottom_space_desktop": 50,
+        "top_space_mobile": 30,
+        "bottom_space_mobile": 30
+      }
+    },
+    "faq_section_H8c46r": {
+      "type": "faq-section",
+      "blocks": {
+        "faq_P8FEfW": {
+          "type": "faq",
+          "settings": {
+            "heading": "If your results are normal...",
+            "answer": "<p>Continue with current diet and lifestyle, retest in one year<\/p>"
+          }
+        },
+        "faq_dHAUGD": {
+          "type": "faq",
+          "settings": {
+            "heading": "If your results are low...",
+            "answer": "<ul><li>Consult a veterinary professional for further testing if elastase 1 levels are low and symptoms such as weight loss and diarrhea are present. Low elastase 1 can be related to autoimmune conditions, and some healthy dogs may have low levels. Digestive enzymes may be recommended.<\/li><li>Impaired digestion can be supported with additional fiber, such as 1-2 tablespoons of canned pumpkin a day, or other high fiber foods such as greens or carrots.<\/li><li>Consider supplementing with basic A vitamin and mineral supplements.<\/li><li>Retest in 3 months.<\/li><\/ul>"
+          }
+        }
+      },
+      "block_order": [
+        "faq_P8FEfW",
+        "faq_dHAUGD"
+      ],
+      "settings": {
+        "heading": "Treatment Options",
+        "seo_heading": "h2",
+        "bgcolor": "primary",
+        "row_bgcolor": "secondary",
+        "section_visibility": "always",
+        "top_space_desktop": 30,
+        "bottom_space_desktop": 30,
+        "top_space_mobile": 30,
+        "bottom_space_mobile": 30
+      }
+    },
+    "rich_text_PkqKgr": {
+      "type": "rich-text",
+      "blocks": {
+        "richtext_yp7xrR": {
+          "type": "richtext",
+          "settings": {
+            "heading": "Beta-glucuronidase",
+            "seo_heading": "h2",
+            "content": "<p>Beta-glucuronidase is an enzyme that your dog makes. It is also made by their gut bacteria. High levels can be due to an imbalance of healthy gut bacteria, which is also called dysbiosis. Dysbiosis means the bacteria in the gut is out of balance. Another problem with high levels of beta-glucuronidase is that it is known to free toxins that have already gone through detoxification. Meaning toxins can become free within the gut and lead to negative health effects. Consistently elevated levels of beta-glucuronidase have been associated with intestinal disease. <\/p><ul><li><strong>Normal: <\/strong>4 ug\/g <\/li><li><strong>Borderline:<\/strong>  4 – 6 ug\/g – Retest in 3-6 months<\/li><li><strong>High:<\/strong> &gt;6 ug\/g –  Indicative of issues with gut bacteria or increased levels of toxins.  Provide treatment and retest in 3 months<\/li><\/ul>"
+          }
+        }
+      },
+      "block_order": [
+        "richtext_yp7xrR"
+      ],
+      "settings": {
+        "content_width": "container sm-container",
+        "content_alignment": "left",
+        "bgcolor": "primary",
+        "section_visibility": "always",
+        "top_space_desktop": 50,
+        "bottom_space_desktop": 50,
+        "top_space_mobile": 30,
+        "bottom_space_mobile": 30
+      }
+    },
+    "faq_section_xxJRNH": {
+      "type": "faq-section",
+      "blocks": {
+        "faq_hYCK4D": {
+          "type": "faq",
+          "settings": {
+            "heading": "If your results are normal...",
+            "answer": "<p>Continue with current diet and lifestyle, retest in one year<\/p>"
+          }
+        },
+        "faq_W3X9Xy": {
+          "type": "faq",
+          "settings": {
+            "heading": "If your results are high...",
+            "answer": "<ul><li>Elevated levels may be seen in dogs with an imbalance of healthy gut bacteria  – consider a probiotic supplement or adding snacks higher in fibers to support healthy gut bacteria. These can include apricots (no pit), broccoli, cantaloupe, carrots red bell peppers, squash, and sweet potato (cooked).<\/li><li>Reduce exposure to toxins.<\/li><li>Consider a higher quality dog food. Research has noted a reduction of fecal beta-glucuronidase in dogs fed dry dog food, and believe it is due to an increase in healthy gut bacteria.<\/li><li>Retest in 3 months<\/li><\/ul>"
+          }
+        }
+      },
+      "block_order": [
+        "faq_hYCK4D",
+        "faq_W3X9Xy"
+      ],
+      "settings": {
+        "heading": "Treatment Options",
+        "seo_heading": "h2",
+        "bgcolor": "primary",
+        "row_bgcolor": "secondary",
+        "section_visibility": "always",
+        "top_space_desktop": 30,
+        "bottom_space_desktop": 30,
+        "top_space_mobile": 30,
+        "bottom_space_mobile": 30
+      }
+    },
+    "rich_text_XQNnHf": {
+      "type": "rich-text",
+      "blocks": {
+        "richtext_x7nytV": {
+          "type": "richtext",
+          "settings": {
+            "heading": " References",
+            "seo_heading": "h2",
+            "content": "<ul><li>Burrows, C.F., A.M. Merritt, and A.M. Chiapella, <em>Determination of fecal fat and trypsin output in the evaluation of chronic canine diarrhea<\/em>.J Am Vet Med Assoc, 1979. <strong>174<\/strong>(1): p. 62-6.<\/li><li>Spillmann, T., E. Eigenbrodt, and A. Sziegoleit, <em>[Determination and clinical relevance of fecal pancreatic elastase in dogs]<\/em>. Tierarztl Prax Ausg K Kleintiere Heimtiere, 1998. <strong>26<\/strong>(5): p. 364-8.<\/li><li>Piccione, G., et al., <em>Blood lipids, fecal fat and chymotrypsin excretion in the dog: influence of age, body weight and sex<\/em>. J Vet Med Sci, 2004. <strong>66<\/strong>(1): p. 59-62.<\/li><li>Singh, A.K., <em>Exocrine pancreatic insufficiency in canines: An update<\/em>. JOURNAL OF ENTOMOLOGY AND ZOOLOGY STUDIES 2018. <strong>6<\/strong>(5): p. 854-858.<\/li><li>Watson, P.J., <em>Exocrine pancreatic insufficiency as an end stage of pancreatitis in four dogs<\/em>. J Small Anim Pract, 2003. <strong>44<\/strong>(7): p. 306-12.<\/li><li>DVM360. <em>A quick review of canine exocrine pancreatic insufficiency<\/em>. 2009; <a href=\"https:\/\/www.dvm360.com\/view\/veterinary-practice-management-software-options\" target=\"_blank\">Available here<\/a>.<\/li><li>Grutzner, N., et al., <em>Genomic association and further characterisation of faecal immunoglobulin A deficiency in German Shepherd dogs<\/em>.Vet Med Sci, 2021. <strong>7<\/strong>(6): p. 2144-2155.<\/li><li>Martineau, B. and D.P. Laflamme, <em>Effect of diet on markers of intestinal health in dogs<\/em>. Res Vet Sci, 2002. <strong>72<\/strong>(3): p. 223-7.<\/li><li>Kubasova, I., et al., <em>Evaluation of enterococci for potential probiotic utilization in dogs<\/em>. Folia Microbiol (Praha), 2019. <strong>64<\/strong>(2): p. 177-187.<\/li><li>Kubasova, I., et al., Evaluation of enterococci for potential probiotic utilization in dogs. Folia Microbiol (Praha), 2019. 64(2): p. 177-187.<\/li><\/ul>"
+          }
+        }
+      },
+      "block_order": [
+        "richtext_x7nytV"
+      ],
+      "settings": {
+        "content_width": "container sm-container",
+        "content_alignment": "left",
+        "bgcolor": "primary",
+        "section_visibility": "always",
+        "top_space_desktop": 50,
+        "bottom_space_desktop": 50,
+        "top_space_mobile": 30,
+        "bottom_space_mobile": 30
+      }
+    },
+    "gallery_carousel_pfXgCp": {
+      "type": "gallery-carousel",
+      "blocks": {
+        "image_mrJYtw": {
+          "type": "image",
+          "settings": {
+            "heading": "Download",
+            "subheading": "Support Guides",
+            "image": "shopify:\/\/shop_images\/Dog_Cat_Circle_copy_2.jpg",
+            "link": "shopify:\/\/pages\/support-guides"
+          }
+        },
+        "image_nN7iDK": {
+          "type": "image",
+          "settings": {
+            "heading": "Check Out",
+            "subheading": "Partners We Love",
+            "image": "shopify:\/\/shop_images\/Dog_Food_copy.jpg",
+            "link": "shopify:\/\/pages\/affiliates"
+          }
+        }
+      },
+      "block_order": [
+        "image_mrJYtw",
+        "image_nN7iDK"
+      ],
+      "settings": {
+        "enable_fullwidth": true,
+        "heading": "Support",
+        "seo_heading": "h2",
+        "heading_size": "h2",
+        "gallery_style": "stacked",
+        "slide_direction": "right",
+        "image_style": "square",
+        "image_size": "medium",
+        "text_alignment": "center",
+        "enable_image_animation": true,
+        "image_crop": false,
+        "image_background": false,
+        "bgcolor": "primary",
+        "section_visibility": "always",
+        "top_space_desktop": 45,
+        "bottom_space_desktop": 45,
+        "top_space_mobile": 35,
+        "bottom_space_mobile": 0
+      }
+    }
+  },
+  "order": [
+    "main-page",
+    "rich_text_9CF7VT",
+    "faq_section_H8c46r",
+    "rich_text_PkqKgr",
+    "faq_section_xxJRNH",
+    "rich_text_XQNnHf",
+    "gallery_carousel_pfXgCp"
+  ]
+}

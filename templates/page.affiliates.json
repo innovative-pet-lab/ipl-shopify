@@ -1,0 +1,559 @@
+{
+  "sections": {
+    "main-page": {
+      "type": "main-page",
+      "settings": {
+        "seo_heading": "h2",
+        "banner_height_desktop": "auto",
+        "banner_height_mobile": "auto",
+        "bgcolor": "#26286e",
+        "textcolor": "#ffffff"
+      }
+    },
+    "rich_text_hNBWwP": {
+      "type": "rich-text",
+      "blocks": {
+        "richtext_ACBHNT": {
+          "type": "richtext",
+          "settings": {
+            "heading": "",
+            "seo_heading": "h2",
+            "content": "<p>Together with our partners, we stay on the cutting edge of industry trends and technologies, guaranteeing that your furry family members receive the most advanced solutions available.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "richtext_ACBHNT"
+      ],
+      "settings": {
+        "content_width": "container sm-container",
+        "content_alignment": "center",
+        "bgcolor": "primary",
+        "section_visibility": "always",
+        "top_space_desktop": 10,
+        "bottom_space_desktop": 0,
+        "top_space_mobile": 30,
+        "bottom_space_mobile": 30
+      }
+    },
+    "rich_text_BzQrrK": {
+      "type": "rich-text",
+      "blocks": {
+        "richtext_XCmFdH": {
+          "type": "richtext",
+          "settings": {
+            "heading": "Veterinarians",
+            "seo_heading": "h2",
+            "content": ""
+          }
+        }
+      },
+      "block_order": [
+        "richtext_XCmFdH"
+      ],
+      "settings": {
+        "content_width": "container sm-container",
+        "content_alignment": "center",
+        "bgcolor": "secondary",
+        "section_visibility": "always",
+        "top_space_desktop": 15,
+        "bottom_space_desktop": 0,
+        "top_space_mobile": 30,
+        "bottom_space_mobile": 30
+      }
+    },
+    "gallery_carousel_WhPmCw": {
+      "type": "gallery-carousel",
+      "blocks": {
+        "image_DEdjt6": {
+          "type": "image",
+          "settings": {
+            "heading": "Fera Pet Organics",
+            "subheading": "Learn More",
+            "image": "shopify:\/\/shop_images\/logo_fera.png",
+            "link": "https:\/\/www.ferapetorganics.com\/?sscid=21k8_b40wb&utm_source=ShareASale&utm_medium=Affiliate&utm_campaign=3886871&utm_term=1850620"
+          }
+        },
+        "image_UYzhMH": {
+          "type": "image",
+          "settings": {
+            "heading": "Dr. Ruth Roberts",
+            "subheading": "Learn More",
+            "image": "shopify:\/\/shop_images\/smalls-5.png",
+            "link": "https:\/\/drruthroberts.com\/?ref=INNOPET"
+          }
+        },
+        "image_RJVCMr": {
+          "type": "image",
+          "settings": {
+            "heading": "Naturally Healthy Pets",
+            "subheading": "Learn More",
+            "image": "shopify:\/\/shop_images\/smalls-4.png",
+            "link": "https:\/\/drjudymorgan.com\/"
+          }
+        },
+        "image_xPkthH": {
+          "type": "image",
+          "settings": {
+            "heading": "Tula",
+            "subheading": "Learn More",
+            "image": "shopify:\/\/shop_images\/smalls-3.png",
+            "link": "https:\/\/www.tulavetnutrition.com\/"
+          }
+        },
+        "image_9RJtTU": {
+          "type": "image",
+          "settings": {
+            "heading": "Wellnergy Pets",
+            "subheading": "Learn More",
+            "image": "shopify:\/\/shop_images\/smalls-1.png",
+            "link": "https:\/\/www.wellnergypets.com\/pages\/about-us"
+          }
+        },
+        "image_YhwCEB": {
+          "type": "image",
+          "settings": {
+            "heading": "The Natural Pet Doctor",
+            "subheading": "Learn More",
+            "image": "shopify:\/\/shop_images\/natural-pet-doctor.png",
+            "link": "https:\/\/thenaturalpetdoctor.com\/about-us\/"
+          }
+        }
+      },
+      "block_order": [
+        "image_DEdjt6",
+        "image_UYzhMH",
+        "image_RJVCMr",
+        "image_xPkthH",
+        "image_9RJtTU",
+        "image_YhwCEB"
+      ],
+      "settings": {
+        "enable_fullwidth": true,
+        "heading": "",
+        "seo_heading": "h2",
+        "heading_size": "h2",
+        "gallery_style": "stacked",
+        "slide_direction": "right",
+        "image_style": "square",
+        "image_size": "medium",
+        "text_alignment": "center",
+        "enable_image_animation": true,
+        "image_crop": false,
+        "image_background": false,
+        "bgcolor": "primary",
+        "section_visibility": "always",
+        "top_space_desktop": 25,
+        "bottom_space_desktop": 45,
+        "top_space_mobile": 35,
+        "bottom_space_mobile": 0
+      }
+    },
+    "rich_text_9rYKyQ": {
+      "type": "rich-text",
+      "blocks": {
+        "richtext_WcFKMU": {
+          "type": "richtext",
+          "settings": {
+            "heading": "Foods",
+            "seo_heading": "h2",
+            "content": ""
+          }
+        }
+      },
+      "block_order": [
+        "richtext_WcFKMU"
+      ],
+      "settings": {
+        "content_width": "container sm-container",
+        "content_alignment": "center",
+        "bgcolor": "secondary",
+        "section_visibility": "always",
+        "top_space_desktop": 25,
+        "bottom_space_desktop": 0,
+        "top_space_mobile": 30,
+        "bottom_space_mobile": 30
+      }
+    },
+    "gallery_carousel_t4kgii": {
+      "type": "gallery-carousel",
+      "blocks": {
+        "image_bYfbHW": {
+          "type": "image",
+          "settings": {
+            "heading": "Bundle x Joy",
+            "subheading": "Learn More",
+            "image": "shopify:\/\/shop_images\/logo_bundle_joy-1024x1024.png",
+            "link": "https:\/\/bundlexjoy.com\/?sscid=21k8_b4c8k&"
+          }
+        },
+        "image_NLx9EQ": {
+          "type": "image",
+          "settings": {
+            "heading": "Chi Dog",
+            "subheading": "Learn More",
+            "image": "shopify:\/\/shop_images\/logo_chi_dog-1024x1024.png",
+            "link": "https:\/\/chidog.com\/?rfsn=7593402.41cc61"
+          }
+        },
+        "image_YRpazW": {
+          "type": "image",
+          "settings": {
+            "heading": "Smalls",
+            "subheading": "Learn More",
+            "image": "shopify:\/\/shop_images\/smalls.png",
+            "link": "https:\/\/www.smalls.com\/?clickid=w4eU0XRUMxyNUoCzvBV7-T8FUkHwe4xJyy6PR80&irgwc=1&utm_source=affiliate&utm_medium=impact&utm_term=Innovative%20Pet%20Lab_4755041_mediapartner&utm_content=Online%20Tracking%20Link_511473_ONLINE_TRACKING_LINK&utm_campaign=8746"
+          }
+        },
+        "image_zfUYR3": {
+          "type": "image",
+          "settings": {
+            "heading": "Green Juju",
+            "subheading": "Learn More",
+            "image": "shopify:\/\/shop_images\/logo_green_juju-1024x1024.png",
+            "link": "https:\/\/greenjuju.com\/"
+          }
+        },
+        "image_NQVtVx": {
+          "type": "image",
+          "settings": {
+            "heading": "BK Pets",
+            "subheading": "Learn More",
+            "image": "shopify:\/\/shop_images\/Untitled-design-44-1024x1024.png",
+            "link": "https:\/\/innovativepetlab.com\/partners\/"
+          }
+        }
+      },
+      "block_order": [
+        "image_bYfbHW",
+        "image_NLx9EQ",
+        "image_YRpazW",
+        "image_zfUYR3",
+        "image_NQVtVx"
+      ],
+      "settings": {
+        "enable_fullwidth": true,
+        "heading": "",
+        "seo_heading": "h2",
+        "heading_size": "h2",
+        "gallery_style": "stacked",
+        "slide_direction": "right",
+        "image_style": "square",
+        "image_size": "medium",
+        "text_alignment": "center",
+        "enable_image_animation": true,
+        "image_crop": false,
+        "image_background": false,
+        "bgcolor": "primary",
+        "section_visibility": "always",
+        "top_space_desktop": 25,
+        "bottom_space_desktop": 45,
+        "top_space_mobile": 35,
+        "bottom_space_mobile": 0
+      }
+    },
+    "rich_text_WzggiA": {
+      "type": "rich-text",
+      "blocks": {
+        "richtext_9NmYrn": {
+          "type": "richtext",
+          "settings": {
+            "heading": "Treats & Snacks",
+            "seo_heading": "h2",
+            "content": ""
+          }
+        }
+      },
+      "block_order": [
+        "richtext_9NmYrn"
+      ],
+      "settings": {
+        "content_width": "container sm-container",
+        "content_alignment": "center",
+        "bgcolor": "secondary",
+        "section_visibility": "always",
+        "top_space_desktop": 25,
+        "bottom_space_desktop": 0,
+        "top_space_mobile": 30,
+        "bottom_space_mobile": 30
+      }
+    },
+    "gallery_carousel_z6HddG": {
+      "type": "gallery-carousel",
+      "blocks": {
+        "image_KcA97X": {
+          "type": "image",
+          "settings": {
+            "heading": "Coco Therapy",
+            "subheading": "Learn More",
+            "image": "shopify:\/\/shop_images\/Untitled-design-9-1024x1024.png",
+            "link": "https:\/\/www.cocotherapy.com\/"
+          }
+        },
+        "image_Kmacry": {
+          "type": "image",
+          "settings": {
+            "heading": "Einstein Pets",
+            "subheading": "Learn More",
+            "image": "shopify:\/\/shop_images\/logo_einstein_pets-1024x1024.png",
+            "link": "https:\/\/www.einsteinpets.com\/"
+          }
+        },
+        "image_bMiekC": {
+          "type": "image",
+          "settings": {
+            "heading": "Icelandic",
+            "subheading": "Learn More",
+            "image": "shopify:\/\/shop_images\/logo_icelandic.png",
+            "link": "https:\/\/store.icelandicplus.com\/collections\/icelandic-lamb-treats?sscid=21k8_b4hbh&"
+          }
+        }
+      },
+      "block_order": [
+        "image_KcA97X",
+        "image_Kmacry",
+        "image_bMiekC"
+      ],
+      "settings": {
+        "enable_fullwidth": true,
+        "heading": "",
+        "seo_heading": "h2",
+        "heading_size": "h2",
+        "gallery_style": "stacked",
+        "slide_direction": "right",
+        "image_style": "square",
+        "image_size": "medium",
+        "text_alignment": "center",
+        "enable_image_animation": true,
+        "image_crop": false,
+        "image_background": false,
+        "bgcolor": "primary",
+        "section_visibility": "always",
+        "top_space_desktop": 25,
+        "bottom_space_desktop": 45,
+        "top_space_mobile": 35,
+        "bottom_space_mobile": 0
+      }
+    },
+    "rich_text_MYMwez": {
+      "type": "rich-text",
+      "blocks": {
+        "richtext_Aban43": {
+          "type": "richtext",
+          "settings": {
+            "heading": "Supplements",
+            "seo_heading": "h2",
+            "content": ""
+          }
+        }
+      },
+      "block_order": [
+        "richtext_Aban43"
+      ],
+      "settings": {
+        "content_width": "container sm-container",
+        "content_alignment": "center",
+        "bgcolor": "secondary",
+        "section_visibility": "always",
+        "top_space_desktop": 25,
+        "bottom_space_desktop": 0,
+        "top_space_mobile": 30,
+        "bottom_space_mobile": 30
+      }
+    },
+    "gallery_carousel_C8iHmn": {
+      "type": "gallery-carousel",
+      "blocks": {
+        "image_yFiDGd": {
+          "type": "image",
+          "settings": {
+            "heading": "Earth Buddy",
+            "subheading": "Learn More",
+            "image": "shopify:\/\/shop_images\/logo_earth_buddy-1024x1024.png",
+            "link": "https:\/\/www.earthbuddypet.com\/"
+          }
+        },
+        "image_A677qR": {
+          "type": "image",
+          "settings": {
+            "heading": "Feline Essential",
+            "subheading": "Learn More",
+            "image": "shopify:\/\/shop_images\/smalls-2.png",
+            "link": "https:\/\/twocrazycatladies.com\/ref\/Innovativepetlab\/"
+          }
+        },
+        "image_Cwd4jV": {
+          "type": "image",
+          "settings": {
+            "heading": "Fera Pet Organics",
+            "subheading": "Learn More",
+            "image": "shopify:\/\/shop_images\/logo_fera_1.png",
+            "link": "https:\/\/www.ferapetorganics.com\/?sscid=21k8_b4jis&utm_source=ShareASale&utm_medium=Affiliate&utm_campaign=3886871&utm_term=1850620"
+          }
+        },
+        "image_U3YAYK": {
+          "type": "image",
+          "settings": {
+            "heading": "Gussy's Guts",
+            "subheading": "Learn More",
+            "image": "shopify:\/\/shop_images\/logo_gussys_gut-1024x1024.png",
+            "link": "https:\/\/gussysgut.com\/?irclickid=2x01Px276xyNWr-WSkQQ6zQ1UkHwe9Xpyy6PR80&irgwc=1"
+          }
+        },
+        "image_U9eVtQ": {
+          "type": "image",
+          "settings": {
+            "heading": "Legacy Biome",
+            "subheading": "Learn More",
+            "image": "shopify:\/\/shop_images\/Untitled-design-39-1024x1024.png",
+            "link": "https:\/\/www.legacybiome.com\/"
+          }
+        },
+        "image_DC6yJY": {
+          "type": "image",
+          "settings": {
+            "heading": "The Organic Dog Shop",
+            "subheading": "Learn More",
+            "image": "shopify:\/\/shop_images\/Untitled-design-42-1024x1024.png",
+            "link": "https:\/\/theorganicdogshop.com\/"
+          }
+        }
+      },
+      "block_order": [
+        "image_yFiDGd",
+        "image_A677qR",
+        "image_Cwd4jV",
+        "image_U3YAYK",
+        "image_U9eVtQ",
+        "image_DC6yJY"
+      ],
+      "settings": {
+        "enable_fullwidth": true,
+        "heading": "",
+        "seo_heading": "h2",
+        "heading_size": "h2",
+        "gallery_style": "stacked",
+        "slide_direction": "right",
+        "image_style": "square",
+        "image_size": "medium",
+        "text_alignment": "center",
+        "enable_image_animation": true,
+        "image_crop": false,
+        "image_background": false,
+        "bgcolor": "primary",
+        "section_visibility": "always",
+        "top_space_desktop": 25,
+        "bottom_space_desktop": 45,
+        "top_space_mobile": 35,
+        "bottom_space_mobile": 0
+      }
+    },
+    "rich_text_463pKD": {
+      "type": "rich-text",
+      "blocks": {
+        "richtext_hAWp3Y": {
+          "type": "richtext",
+          "settings": {
+            "heading": "Enrichment & Personal Care",
+            "seo_heading": "h2",
+            "content": ""
+          }
+        }
+      },
+      "block_order": [
+        "richtext_hAWp3Y"
+      ],
+      "settings": {
+        "content_width": "container sm-container",
+        "content_alignment": "center",
+        "bgcolor": "secondary",
+        "section_visibility": "always",
+        "top_space_desktop": 25,
+        "bottom_space_desktop": 0,
+        "top_space_mobile": 30,
+        "bottom_space_mobile": 30
+      }
+    },
+    "gallery_carousel_6MLLcj": {
+      "type": "gallery-carousel",
+      "blocks": {
+        "image_qLWyAQ": {
+          "type": "image",
+          "settings": {
+            "heading": "Better Bone",
+            "subheading": "Learn More",
+            "image": "shopify:\/\/shop_images\/Untitled-design-21-1024x1024.png",
+            "link": "https:\/\/thebetterbone.com\/"
+          }
+        },
+        "image_b8L4iE": {
+          "type": "image",
+          "settings": {
+            "heading": "Kitty Poo Club",
+            "subheading": "Learn More",
+            "image": "shopify:\/\/shop_images\/kitty-poo.png",
+            "link": "https:\/\/kittypooclub.com\/?irclickid=2x01Px276xyNWr-WSkQQ6zQ1UkHwe-3hyy6PR80&utm_source=impact&utm_medium=affiliate&utm_campaign=Innovative%20Pet%20Lab&irgwc=1"
+          }
+        },
+        "image_xqy8b8": {
+          "type": "image",
+          "settings": {
+            "heading": "Mine",
+            "subheading": "Learn More",
+            "image": "shopify:\/\/shop_images\/mine.png",
+            "link": ""
+          }
+        },
+        "image_jbErzk": {
+          "type": "image",
+          "settings": {
+            "heading": "Project Sudz",
+            "subheading": "Learn More",
+            "image": "shopify:\/\/shop_images\/235474891_558965141958135_8850265135904511345_n.jpg",
+            "link": "https:\/\/www.projectsudz.com\/"
+          }
+        }
+      },
+      "block_order": [
+        "image_qLWyAQ",
+        "image_b8L4iE",
+        "image_xqy8b8",
+        "image_jbErzk"
+      ],
+      "settings": {
+        "enable_fullwidth": true,
+        "heading": "",
+        "seo_heading": "h2",
+        "heading_size": "h2",
+        "gallery_style": "stacked",
+        "slide_direction": "right",
+        "image_style": "square",
+        "image_size": "medium",
+        "text_alignment": "center",
+        "enable_image_animation": true,
+        "image_crop": false,
+        "image_background": false,
+        "bgcolor": "primary",
+        "section_visibility": "always",
+        "top_space_desktop": 25,
+        "bottom_space_desktop": 45,
+        "top_space_mobile": 35,
+        "bottom_space_mobile": 0
+      }
+    }
+  },
+  "order": [
+    "main-page",
+    "rich_text_hNBWwP",
+    "rich_text_BzQrrK",
+    "gallery_carousel_WhPmCw",
+    "rich_text_9rYKyQ",
+    "gallery_carousel_t4kgii",
+    "rich_text_WzggiA",
+    "gallery_carousel_z6HddG",
+    "rich_text_MYMwez",
+    "gallery_carousel_C8iHmn",
+    "rich_text_463pKD",
+    "gallery_carousel_6MLLcj"
+  ]
+}

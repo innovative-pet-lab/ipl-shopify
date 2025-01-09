@@ -1,0 +1,65 @@
+{
+  "sections": {
+    "main-page": {
+      "type": "main-page",
+      "settings": {
+        "seo_heading": "h2",
+        "banner_height_desktop": "auto",
+        "banner_height_mobile": "auto",
+        "bgcolor": "#26286e",
+        "textcolor": "#ffffff"
+      }
+    },
+    "gallery_carousel_TGKcb7": {
+      "type": "gallery-carousel",
+      "blocks": {
+        "image_CfzB6t": {
+          "type": "image",
+          "settings": {
+            "heading": "Support Guides",
+            "subheading": "For Dogs",
+            "image": "shopify:\/\/shop_images\/Square_1_193bf09b-e3ef-4bcb-a0db-899173ac242f.jpg",
+            "link": "https:\/\/cdn.shopify.com\/s\/files\/1\/0685\/6497\/5842\/files\/Dog_Support_Guide.pdf?v=1708979328"
+          }
+        },
+        "image_9gmkJd": {
+          "type": "image",
+          "settings": {
+            "heading": "Support Guides",
+            "subheading": "For Cats",
+            "image": "shopify:\/\/shop_images\/Square_4_5c21ec95-a5a3-45ec-925f-f9cfd6149d6e.jpg",
+            "link": "https:\/\/cdn.shopify.com\/s\/files\/1\/0685\/6497\/5842\/files\/Cat_Support_Guide.pdf?v=1708979328"
+          }
+        }
+      },
+      "block_order": [
+        "image_CfzB6t",
+        "image_9gmkJd"
+      ],
+      "settings": {
+        "enable_fullwidth": true,
+        "heading": "",
+        "seo_heading": "h2",
+        "heading_size": "h2",
+        "gallery_style": "stacked",
+        "slide_direction": "right",
+        "image_style": "circle",
+        "image_size": "large",
+        "text_alignment": "center",
+        "enable_image_animation": true,
+        "image_crop": false,
+        "image_background": false,
+        "bgcolor": "primary",
+        "section_visibility": "always",
+        "top_space_desktop": 45,
+        "bottom_space_desktop": 45,
+        "top_space_mobile": 35,
+        "bottom_space_mobile": 0
+      }
+    }
+  },
+  "order": [
+    "main-page",
+    "gallery_carousel_TGKcb7"
+  ]
+}

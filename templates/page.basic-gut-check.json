@@ -1,0 +1,189 @@
+{
+  "sections": {
+    "main-page": {
+      "type": "main-page",
+      "settings": {
+        "seo_heading": "h2",
+        "banner_height_desktop": "auto",
+        "banner_height_mobile": "auto",
+        "bgcolor": "#26286e",
+        "textcolor": "#ffffff"
+      }
+    },
+    "rich_text_9CF7VT": {
+      "type": "rich-text",
+      "blocks": {
+        "richtext_BKm3DJ": {
+          "type": "richtext",
+          "settings": {
+            "heading": "Calprotectin",
+            "seo_heading": "h2",
+            "content": "<p>The gut contains about 70% of the immune system, so it’s important. Inflammation is the immune system responding to something it does not like. Inflammation can often lead to redness and swelling that you can see but there are also immune reactions you can’t see that can cause damage. Many chronic conditions that are common in dogs and cats are often related to intestinal inflammation.<\/p><p>Calprotectin is a sensitive marker of inflammation of the gut lining. Elevated levels can be responsive to an anti-inflammatory diet, anti-inflammatory supplements, or other treatments. If calprotectin stays high, it can identify more serious conditions. Levels can also be used to monitor treatments. Conditions such as obesity or diabetes can also be associated with higher levels.<\/p><p><strong>Dogs:<\/strong><\/p><ul><li><strong>Normal:<\/strong> &lt;10 ug\/g – No intestinal inflammation was noted.<\/li><li><strong>Borderline:<\/strong> 10-100 – ug\/g may benefit from testing again in 3-6 months.<\/li><li><strong>High:<\/strong> &gt;100 ug\/g – Inflammation has been noted.  If associated with symptoms, seek veterinary evaluation.  Retest in 3 months<\/li><\/ul><p><strong>Cats:<\/strong><\/p><ul><li><strong>Normal:<\/strong> &lt;90 ug\/g – No inflammation was noted.<\/li><li><strong>Borderline:<\/strong> 90-125 ug\/g – May benefit from testing again in 3-6 months.<\/li><li><strong>High:<\/strong> &gt;125 ug\/g – Inflammation has been noted.  If associated with symptoms, seek veterinary evaluation.  Retest in 3 months<\/li><\/ul>"
+          }
+        }
+      },
+      "block_order": [
+        "richtext_BKm3DJ"
+      ],
+      "settings": {
+        "content_width": "container sm-container",
+        "content_alignment": "left",
+        "bgcolor": "primary",
+        "section_visibility": "always",
+        "top_space_desktop": 50,
+        "bottom_space_desktop": 50,
+        "top_space_mobile": 30,
+        "bottom_space_mobile": 30
+      }
+    },
+    "faq_section_H8c46r": {
+      "type": "faq-section",
+      "blocks": {
+        "faq_P8FEfW": {
+          "type": "faq",
+          "settings": {
+            "heading": "If your results are normal...",
+            "answer": "<p>Continue with current diet and lifestyle. Retest in 1 year for optimal health.<\/p>"
+          }
+        },
+        "faq_dHAUGD": {
+          "type": "faq",
+          "settings": {
+            "heading": "If your results are high...",
+            "answer": "<ul><li>Possible causes of increased inflammation include poor levels of healthy gut bacteria, toxin exposure, and reactions to diet or lifestyle. In very high levels it may be advisable to contact your veterinary care provider<\/li><li>Consider an anti-inflammatory or prescription food. Some research has noted that changing the type of protein in a pet’s diet, for example switching from chicken to salmon, or trying a pet food with hydrolyzed protein may help to reduce inflammation<\/li><li>Consider anti-inflammatory snacks (blueberries, alfalfa, apples (no seeds), carrots, pumpkin, red pepper), or anti-inflammatory targeted supplements such as fish oil.<\/li><li>Consider probiotics to support healthy gut bacteria. Look for probiotics with a variety of healthy gut bacteria, referred to as multi-strain<\/li><li>Reduce stress, evaluate circadian rhythms of eating, sleeping and exercise<\/li><li>Set and maintain a regular schedule<\/li><li>Avoid toxins such as pollutants, pesticides sprays in the house or on lawns<\/li><li>Consult a veterinarian professional if associated with significant symptoms<\/li><li>Retest in 3  months to see if your pet has responded to changes<\/li><\/ul>"
+          }
+        }
+      },
+      "block_order": [
+        "faq_P8FEfW",
+        "faq_dHAUGD"
+      ],
+      "settings": {
+        "heading": "Inflammation Marker",
+        "seo_heading": "h2",
+        "bgcolor": "primary",
+        "row_bgcolor": "secondary",
+        "section_visibility": "always",
+        "top_space_desktop": 30,
+        "bottom_space_desktop": 30,
+        "top_space_mobile": 30,
+        "bottom_space_mobile": 30
+      }
+    },
+    "rich_text_PkqKgr": {
+      "type": "rich-text",
+      "blocks": {
+        "richtext_yp7xrR": {
+          "type": "richtext",
+          "settings": {
+            "heading": "Zonulin",
+            "seo_heading": "h2",
+            "content": "<p>Zonulin is a protein that acts like a glue to keep intestinal cells bound together. Intestinal cells are supposed to be lined up and connected to each other. When Zonulin is high it means the cells aren’t tightly together. Leaky gut happens gradually over time. Zonulin can help identify the level of leaky gut. Leaky Gut has been associated with inflammation, an imbalance of healthy gut bacteria, and is a risk factor for food allergies and food sensitivities, such as a reaction to gluten. <\/p><p><strong>Possible related symptoms of a Leaky Gut include:<\/strong><\/p><ul><li>Digestive issues such diarrhea, bloating, constipation, weight loss, changes in appetite, gas<\/li><li>Skin issues such as dry skin, hair loss, redness, rashes, scratching<\/li><li>Chewing, licking, or gnawing paws and paw pads<\/li><\/ul><p><strong>Levels of Zonulin<\/strong><\/p><p><strong>Dogs: <\/strong><\/p><ul><li><strong>Normal:<\/strong> &lt;6.6 ug\/g<\/li><li><strong>Borderline:<\/strong> 6.5- 11 ug\/g – May benefit from testing again in 3-6 months<\/li><li><strong>High:<\/strong> &gt;11 ug\/g – Associated with Leaky Gut.  Treat and retest in 3 months<\/li><\/ul><p><strong>Cats: <\/strong><\/p><ul><li><strong>Normal:<\/strong> &lt;2.0 ug\/g <\/li><li><strong>Borderline:<\/strong> 2.0-6.0 ug\/g – May benefit from testing again in 3-6 months<\/li><li><strong>High:<\/strong> &gt;6.0 ug\/g – Associated with Leaky Gut.  Treat and retest in 3 months<\/li><\/ul>"
+          }
+        }
+      },
+      "block_order": [
+        "richtext_yp7xrR"
+      ],
+      "settings": {
+        "content_width": "container sm-container",
+        "content_alignment": "left",
+        "bgcolor": "primary",
+        "section_visibility": "always",
+        "top_space_desktop": 50,
+        "bottom_space_desktop": 50,
+        "top_space_mobile": 30,
+        "bottom_space_mobile": 30
+      }
+    },
+    "faq_section_xxJRNH": {
+      "type": "faq-section",
+      "blocks": {
+        "faq_hYCK4D": {
+          "type": "faq",
+          "settings": {
+            "heading": "If your results are normal...",
+            "answer": "<p>Continue with current diet and lifestyle. Retest in 1 year for optimal health.<\/p>"
+          }
+        },
+        "faq_W3X9Xy": {
+          "type": "faq",
+          "settings": {
+            "heading": "If your results are high...",
+            "answer": "<ul><li>Probiotics have been shown to improve good gut bacteria and may improve Zonulin levels<\/li><li>Consider a less processed food, such as a prescription or human grade food. If the antigliadin IgA is also high, consider a gluten free pet food<\/li><li>Minimize anxiety and stress<\/li><li>Avoid unnecessary medications such as antibiotics or exposure to toxins<\/li><li>Check inflammation. Consider anti-inflammatory supporting snacks such as blueberries, alfalfa, apples (no seeds), carrots, pumpkin, red pepper), or anti-inflammatory supplements. Reducing inflammation may decrease Zonulin.<\/li><li>Check overall health as obesity and type 2 diabetes may lead to increased inflammation<\/li><li>Retest in 3 months.<\/li><\/ul>"
+          }
+        }
+      },
+      "block_order": [
+        "faq_hYCK4D",
+        "faq_W3X9Xy"
+      ],
+      "settings": {
+        "heading": "Treatment Options",
+        "seo_heading": "h2",
+        "bgcolor": "primary",
+        "row_bgcolor": "secondary",
+        "section_visibility": "always",
+        "top_space_desktop": 30,
+        "bottom_space_desktop": 30,
+        "top_space_mobile": 30,
+        "bottom_space_mobile": 30
+      }
+    },
+    "gallery_carousel_dmpEie": {
+      "type": "gallery-carousel",
+      "blocks": {
+        "image_hNNLVm": {
+          "type": "image",
+          "settings": {
+            "heading": "Download",
+            "subheading": "Support Guides",
+            "image": "shopify:\/\/shop_images\/Dog_Cat_Circle_copy_2.jpg",
+            "link": "shopify:\/\/pages\/support-guides"
+          }
+        },
+        "image_LhjpLg": {
+          "type": "image",
+          "settings": {
+            "heading": "Check Out",
+            "subheading": "Partners We Love",
+            "image": "shopify:\/\/shop_images\/Dog_Food_copy.jpg",
+            "link": "shopify:\/\/pages\/affiliates"
+          }
+        }
+      },
+      "block_order": [
+        "image_hNNLVm",
+        "image_LhjpLg"
+      ],
+      "settings": {
+        "enable_fullwidth": true,
+        "heading": "Support",
+        "seo_heading": "h2",
+        "heading_size": "h2",
+        "gallery_style": "stacked",
+        "slide_direction": "right",
+        "image_style": "square",
+        "image_size": "medium",
+        "text_alignment": "center",
+        "enable_image_animation": true,
+        "image_crop": false,
+        "image_background": false,
+        "bgcolor": "primary",
+        "section_visibility": "always",
+        "top_space_desktop": 45,
+        "bottom_space_desktop": 45,
+        "top_space_mobile": 35,
+        "bottom_space_mobile": 0
+      }
+    }
+  },
+  "order": [
+    "main-page",
+    "rich_text_9CF7VT",
+    "faq_section_H8c46r",
+    "rich_text_PkqKgr",
+    "faq_section_xxJRNH",
+    "gallery_carousel_dmpEie"
+  ]
+}

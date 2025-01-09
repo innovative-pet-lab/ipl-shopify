@@ -1,0 +1,112 @@
+{
+  "sections": {
+    "main-page": {
+      "type": "main-page",
+      "settings": {
+        "seo_heading": "h2",
+        "banner_height_desktop": "auto",
+        "banner_height_mobile": "auto",
+        "bgcolor": "#26286e",
+        "textcolor": "#ffffff"
+      }
+    },
+    "gallery_carousel_UEA6Dr": {
+      "type": "gallery-carousel",
+      "blocks": {
+        "image_DGxjMr": {
+          "type": "image",
+          "settings": {
+            "heading": "",
+            "subheading": "",
+            "image": "shopify:\/\/shop_images\/AWARD_4.jpg",
+            "link": ""
+          }
+        },
+        "image_yeMp9R": {
+          "type": "image",
+          "settings": {
+            "heading": "",
+            "subheading": "",
+            "image": "shopify:\/\/shop_images\/AWARD_3.jpg",
+            "link": ""
+          }
+        },
+        "image_x4jVWH": {
+          "type": "image",
+          "settings": {
+            "heading": "",
+            "subheading": "",
+            "image": "shopify:\/\/shop_images\/AWARD_2.jpg",
+            "link": ""
+          }
+        },
+        "image_mxPhLB": {
+          "type": "image",
+          "settings": {
+            "heading": "",
+            "subheading": "",
+            "image": "shopify:\/\/shop_images\/AWARD_1.jpg",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_DGxjMr",
+        "image_yeMp9R",
+        "image_x4jVWH",
+        "image_mxPhLB"
+      ],
+      "settings": {
+        "enable_fullwidth": true,
+        "heading": "",
+        "seo_heading": "h2",
+        "heading_size": "h2",
+        "gallery_style": "swipe",
+        "slide_direction": "right",
+        "image_style": "square",
+        "image_size": "medium",
+        "text_alignment": "center",
+        "enable_image_animation": false,
+        "image_crop": false,
+        "image_background": false,
+        "bgcolor": "primary",
+        "section_visibility": "always",
+        "top_space_desktop": 45,
+        "bottom_space_desktop": 45,
+        "top_space_mobile": 35,
+        "bottom_space_mobile": 0
+      }
+    },
+    "rich_text_MkiDPp": {
+      "type": "rich-text",
+      "blocks": {
+        "richtext_NYhGGc": {
+          "type": "richtext",
+          "settings": {
+            "heading": "",
+            "seo_heading": "h2",
+            "content": "<p>We support Military & Veteran Groups as well as Local Shelters & Rescues.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "richtext_NYhGGc"
+      ],
+      "settings": {
+        "content_width": "container sm-container",
+        "content_alignment": "center",
+        "bgcolor": "primary",
+        "section_visibility": "always",
+        "top_space_desktop": 50,
+        "bottom_space_desktop": 0,
+        "top_space_mobile": 30,
+        "bottom_space_mobile": 30
+      }
+    }
+  },
+  "order": [
+    "main-page",
+    "gallery_carousel_UEA6Dr",
+    "rich_text_MkiDPp"
+  ]
+}

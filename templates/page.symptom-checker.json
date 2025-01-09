@@ -1,0 +1,289 @@
+{
+  "sections": {
+    "main-page": {
+      "type": "main-page",
+      "settings": {
+        "seo_heading": "h2",
+        "banner_height_desktop": "auto",
+        "banner_height_mobile": "auto",
+        "bgcolor": "#26286e",
+        "textcolor": "#ffffff"
+      }
+    },
+    "rich_text_TrrhzW": {
+      "type": "rich-text",
+      "blocks": {
+        "richtext_tPnffw": {
+          "type": "richtext",
+          "settings": {
+            "heading": "You Know Your Pet Best",
+            "seo_heading": "h2",
+            "content": "<p>We know that every pet has their own personality and is unique in their own way, which can make some symptoms hard to spot.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "richtext_tPnffw"
+      ],
+      "settings": {
+        "content_width": "container sm-container",
+        "content_alignment": "center",
+        "bgcolor": "primary",
+        "section_visibility": "always",
+        "top_space_desktop": 60,
+        "bottom_space_desktop": 0,
+        "top_space_mobile": 30,
+        "bottom_space_mobile": 30
+      }
+    },
+    "spotlight_H4a7eV": {
+      "type": "spotlight",
+      "blocks": {
+        "spot_dxNUhd": {
+          "type": "spot",
+          "disabled": true,
+          "settings": {
+            "product": "comprehensive-review",
+            "product_layout": "horizontal",
+            "horizontal": 26,
+            "vertical": 10,
+            "spot_color": "#73c7ad"
+          }
+        },
+        "spot_dgerzC": {
+          "type": "spot",
+          "disabled": true,
+          "settings": {
+            "product": "comprehensive-gut-check",
+            "product_layout": "horizontal",
+            "horizontal": 40,
+            "vertical": 10,
+            "spot_color": "#73c7ad"
+          }
+        },
+        "spot_Rf8Y3x": {
+          "type": "spot",
+          "disabled": true,
+          "settings": {
+            "product": "basic-gut-check",
+            "product_layout": "horizontal",
+            "horizontal": 55,
+            "vertical": 10,
+            "spot_color": "#73c7ad"
+          }
+        },
+        "spot_PL4ttt": {
+          "type": "spot",
+          "disabled": true,
+          "settings": {
+            "product": "leaky-gut",
+            "product_layout": "horizontal",
+            "horizontal": 69,
+            "vertical": 10,
+            "spot_color": "#73c7ad"
+          }
+        },
+        "spot_r388bz": {
+          "type": "spot",
+          "disabled": true,
+          "settings": {
+            "product": "inflammation-immunity",
+            "product_layout": "horizontal",
+            "horizontal": 84,
+            "vertical": 10,
+            "spot_color": "#73c7ad"
+          }
+        }
+      },
+      "block_order": [
+        "spot_dxNUhd",
+        "spot_dgerzC",
+        "spot_Rf8Y3x",
+        "spot_PL4ttt",
+        "spot_r388bz"
+      ],
+      "settings": {
+        "enable_fullwidth": false,
+        "image": "shopify:\/\/shop_images\/Chart-Final.jpg",
+        "bgcolor": "primary",
+        "section_visibility": "always",
+        "top_space_desktop": 0,
+        "bottom_space_desktop": 35,
+        "top_space_mobile": 0,
+        "bottom_space_mobile": 0
+      }
+    },
+    "gallery_carousel_PgwRRP": {
+      "type": "gallery-carousel",
+      "blocks": {
+        "image_QiDf8n": {
+          "type": "image",
+          "settings": {
+            "heading": "Diarrhea or Constipation",
+            "subheading": "",
+            "image": "shopify:\/\/shop_images\/Symptomsv2-17.jpg",
+            "link": "shopify:\/\/collections\/symptom-diarrhea-or-constipation"
+          }
+        },
+        "image_RanWhJ": {
+          "type": "image",
+          "settings": {
+            "heading": "Vomiting",
+            "subheading": "",
+            "image": "shopify:\/\/shop_images\/Symptomsv2-18.jpg",
+            "link": "shopify:\/\/collections\/vomiting"
+          }
+        },
+        "image_g48ybN": {
+          "type": "image",
+          "settings": {
+            "heading": "Parasites",
+            "subheading": "",
+            "image": "shopify:\/\/shop_images\/Cats_Symptoms-22.jpg",
+            "link": ""
+          }
+        },
+        "image_EWCJti": {
+          "type": "image",
+          "settings": {
+            "heading": "Weight Fluctuations",
+            "subheading": "",
+            "image": "shopify:\/\/shop_images\/Symptomsv2-20.jpg",
+            "link": "shopify:\/\/collections\/weight-fluctuations"
+          }
+        },
+        "image_QhJHaw": {
+          "type": "image",
+          "settings": {
+            "heading": "Skin\/Coat Issues\/Itching",
+            "subheading": "",
+            "image": "shopify:\/\/shop_images\/Cats_Symptoms-21_4c461c55-ccf3-4cb2-a3d9-829c260630e9.jpg",
+            "link": "shopify:\/\/collections\/skin-coat-itching"
+          }
+        },
+        "image_WVJHbD": {
+          "type": "image",
+          "settings": {
+            "heading": "Mood\/Behavior",
+            "subheading": "",
+            "image": "shopify:\/\/shop_images\/Symptomsv2-22.jpg",
+            "link": "shopify:\/\/collections\/mood-behavior"
+          }
+        },
+        "image_XTmbat": {
+          "type": "image",
+          "settings": {
+            "heading": "Bad Breath",
+            "subheading": "",
+            "image": "shopify:\/\/shop_images\/Symptomsv2-23.jpg",
+            "link": "shopify:\/\/collections\/bad-breath"
+          }
+        },
+        "image_rAUR8b": {
+          "type": "image",
+          "settings": {
+            "heading": "Gas \/ Bloating",
+            "subheading": "",
+            "image": "shopify:\/\/shop_images\/Symptomsv2-24.jpg",
+            "link": "shopify:\/\/collections\/gas-bloating"
+          }
+        },
+        "image_ETChp9": {
+          "type": "image",
+          "settings": {
+            "heading": "Fatigue",
+            "subheading": "",
+            "image": "shopify:\/\/shop_images\/Cats_Symptoms-20_76c8e418-2b53-489a-b55a-8aeb4d492c1e.jpg",
+            "link": "shopify:\/\/collections\/fatigue"
+          }
+        },
+        "image_X3wPtr": {
+          "type": "image",
+          "settings": {
+            "heading": "GI DiscomfortGI Discomfort",
+            "subheading": "",
+            "image": "shopify:\/\/shop_images\/Symptomsv2-26.jpg",
+            "link": "shopify:\/\/collections\/gi-discomfort"
+          }
+        },
+        "image_LNaqKx": {
+          "type": "image",
+          "settings": {
+            "heading": "Food Reactions",
+            "subheading": "",
+            "image": "shopify:\/\/shop_images\/Symptomsv2-27.jpg",
+            "link": "shopify:\/\/collections\/food-reactions"
+          }
+        }
+      },
+      "block_order": [
+        "image_QiDf8n",
+        "image_RanWhJ",
+        "image_g48ybN",
+        "image_EWCJti",
+        "image_QhJHaw",
+        "image_WVJHbD",
+        "image_XTmbat",
+        "image_rAUR8b",
+        "image_ETChp9",
+        "image_X3wPtr",
+        "image_LNaqKx"
+      ],
+      "settings": {
+        "enable_fullwidth": true,
+        "heading": "",
+        "seo_heading": "h2",
+        "heading_size": "h2",
+        "gallery_style": "stacked",
+        "slide_direction": "right",
+        "image_style": "circle",
+        "image_size": "xsmall",
+        "text_alignment": "center",
+        "enable_image_animation": false,
+        "image_crop": false,
+        "image_background": false,
+        "bgcolor": "primary",
+        "section_visibility": "always",
+        "top_space_desktop": 0,
+        "bottom_space_desktop": 45,
+        "top_space_mobile": 35,
+        "bottom_space_mobile": 0
+      }
+    },
+    "image_banner_9qz6Pr": {
+      "type": "image-banner",
+      "disabled": true,
+      "settings": {
+        "enable_parallax": false,
+        "section_visibility": "always",
+        "image": "shopify:\/\/shop_images\/Chart-Final_dc862020-6a32-41ab-a765-09593c0fa19f.jpg",
+        "desktop_height": "100vh",
+        "mobile_height": "500px",
+        "banner_title": "",
+        "seo_heading": "h2",
+        "desktop_title_size": 70,
+        "mobile_title_size": 36,
+        "banner_desc": "",
+        "button_text": "",
+        "button_link": "shopify:\/\/collections\/all",
+        "button_size": "large",
+        "mobile_button_size": "m-small",
+        "content_position": "center-center",
+        "title_color": "#000000",
+        "desc_color": "#000000",
+        "btn_bg": "#000000",
+        "btn_text": "#ffffff",
+        "btn_border": "#000000",
+        "overlay_color": "",
+        "overlay_opacity": 50
+      }
+    }
+  },
+  "order": [
+    "main-page",
+    "rich_text_TrrhzW",
+    "spotlight_H4a7eV",
+    "gallery_carousel_PgwRRP",
+    "image_banner_9qz6Pr"
+  ]
+}

@@ -1,0 +1,685 @@
+{
+  "sections": {
+    "main-product": {
+      "type": "main-product",
+      "blocks": {
+        "fe3c09d6-15d2-4555-a0f5-c87ab0cf370f": {
+          "type": "title",
+          "settings": {
+            "seo_heading": "h2"
+          }
+        },
+        "c069e4ad-5908-400d-a0ad-e071aa04cf33": {
+          "type": "review-star",
+          "settings": {}
+        },
+        "5540566c-63cd-4a90-b9b6-7707e45d7066": {
+          "type": "price",
+          "settings": {}
+        },
+        "9db1533f-9baf-4eb6-869d-dd2b494b6990": {
+          "type": "sku",
+          "disabled": true,
+          "settings": {}
+        },
+        "8658b9a0-c9c5-4055-a2e1-56a8f49d0b68": {
+          "type": "variant",
+          "settings": {
+            "size_chart": ""
+          }
+        },
+        "811e6d87-a5e5-4457-9124-d3c2ed070ba9": {
+          "type": "quantity",
+          "settings": {}
+        },
+        "icons_mb4DVr": {
+          "type": "icons",
+          "disabled": true,
+          "settings": {
+            "icon1": "paw-colored",
+            "image1": "shopify:\/\/shop_images\/IPL-cat-icon-150x150.png",
+            "heading1": "For Cats",
+            "icon2": "shipping",
+            "image2": "shopify:\/\/shop_images\/IPL-dog-icon-150x150.png",
+            "heading2": "For Cats",
+            "icon3": "shipping",
+            "heading3": ""
+          }
+        },
+        "16819786-9d1e-449d-966d-08d21e1c91af": {
+          "type": "button",
+          "settings": {
+            "dynamic_checkout_btn": false,
+            "enable_fullwidth": true,
+            "show_subscriptions_plan": true,
+            "show_recipient_form": false,
+            "sticky_add_to_cart": true,
+            "sticky_add_to_cart_position": "bottom"
+          }
+        }
+      },
+      "block_order": [
+        "fe3c09d6-15d2-4555-a0f5-c87ab0cf370f",
+        "c069e4ad-5908-400d-a0ad-e071aa04cf33",
+        "5540566c-63cd-4a90-b9b6-7707e45d7066",
+        "9db1533f-9baf-4eb6-869d-dd2b494b6990",
+        "8658b9a0-c9c5-4055-a2e1-56a8f49d0b68",
+        "811e6d87-a5e5-4457-9124-d3c2ed070ba9",
+        "icons_mb4DVr",
+        "16819786-9d1e-449d-966d-08d21e1c91af"
+      ],
+      "settings": {
+        "gallery_style": "gallery",
+        "show_description": true,
+        "open_description_accordion": true,
+        "show_variant-media": false,
+        "enable_shipping_policy": true,
+        "enable_zoom_icon": false,
+        "enable_thumb": false,
+        "content_divider_mobile": "none",
+        "carousel_thumbnail_position": "center",
+        "carousel_height_desktop": "adapt",
+        "carousel_height_mobile": "adapt",
+        "width": "half",
+        "style": "tabs",
+        "accordion_content_alignment": "left",
+        "content_heading": "",
+        "content": "",
+        "content_heading2": "How It Works",
+        "content2": "Our at-home kit makes it easy. You collect a stool sample, send it back, and we’ll give you the results online with some personalized tips for your pet. So why wait for issues to show up? Be one step ahead with your pet’s health. Get our Basic Gut Health test today and unlock the secrets to a healthier, happier life for your fur-ever friend!",
+        "content_heading3": "",
+        "content3": ""
+      }
+    },
+    "image_banner_cTgRTr": {
+      "type": "image-banner",
+      "disabled": true,
+      "settings": {
+        "enable_parallax": false,
+        "section_visibility": "always",
+        "image": "shopify:\/\/shop_images\/InflammationHeader.jpg",
+        "desktop_height": "350px",
+        "mobile_height": "500px",
+        "banner_title": "",
+        "seo_heading": "h2",
+        "desktop_title_size": 70,
+        "mobile_title_size": 36,
+        "banner_desc": "",
+        "button_text": "",
+        "button_link": "shopify:\/\/collections\/all",
+        "button_size": "small",
+        "mobile_button_size": "m-small",
+        "content_position": "center-center",
+        "title_color": "#000000",
+        "desc_color": "#000000",
+        "btn_bg": "#000000",
+        "btn_text": "#ffffff",
+        "btn_border": "#000000",
+        "overlay_color": "",
+        "overlay_opacity": 50
+      }
+    },
+    "rich_text_kyPDqn": {
+      "type": "rich-text",
+      "blocks": {
+        "richtext_rHNwhV": {
+          "type": "richtext",
+          "settings": {
+            "heading": "Make sure your pet is living their healthiest & best life!",
+            "seo_heading": "h2",
+            "content": "<p>If your dog or cat has symptoms like diarrhea, constipation, GI discomfort, weight fluctations, or a change in their mood or behavior, this is the test for you. We’ll evaluate inflammation and immunity\u0003markers and give you the recommendations you need to make dietary adjustments, introduce supplements or share with your vet to get a treatment plan.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "richtext_rHNwhV"
+      ],
+      "settings": {
+        "content_width": "container sm-container",
+        "content_alignment": "center",
+        "bgcolor": "primary",
+        "section_visibility": "always",
+        "top_space_desktop": 50,
+        "bottom_space_desktop": 0,
+        "top_space_mobile": 30,
+        "bottom_space_mobile": 0
+      }
+    },
+    "gallery_carousel_6Cd86W": {
+      "type": "gallery-carousel",
+      "blocks": {
+        "image_PhgtYe": {
+          "type": "image",
+          "settings": {
+            "heading": "GI Discomfort",
+            "subheading": "",
+            "image": "shopify:\/\/shop_images\/Symptomsv2-26.jpg",
+            "link": ""
+          }
+        },
+        "image_PqNGzR": {
+          "type": "image",
+          "settings": {
+            "heading": "Mood\/Behavior",
+            "subheading": "",
+            "image": "shopify:\/\/shop_images\/Symptomsv2-22.jpg",
+            "link": ""
+          }
+        },
+        "image_tDAAw8": {
+          "type": "image",
+          "settings": {
+            "heading": "Diarrhea or Constipation",
+            "subheading": "",
+            "image": "shopify:\/\/shop_images\/Symptomsv2-17.jpg",
+            "link": ""
+          }
+        },
+        "image_JqhMiG": {
+          "type": "image",
+          "settings": {
+            "heading": "Weight Fluctuations",
+            "subheading": "",
+            "image": "shopify:\/\/shop_images\/Symptomsv2-20.jpg",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_PhgtYe",
+        "image_PqNGzR",
+        "image_tDAAw8",
+        "image_JqhMiG"
+      ],
+      "settings": {
+        "enable_fullwidth": false,
+        "heading": "",
+        "seo_heading": "h2",
+        "heading_size": "h2",
+        "gallery_style": "swipe",
+        "slide_direction": "right",
+        "image_style": "circle",
+        "image_size": "medium",
+        "text_alignment": "center",
+        "enable_image_animation": false,
+        "image_crop": false,
+        "image_background": false,
+        "bgcolor": "primary",
+        "section_visibility": "always",
+        "top_space_desktop": 0,
+        "bottom_space_desktop": 45,
+        "top_space_mobile": 0,
+        "bottom_space_mobile": 0
+      }
+    },
+    "collage_yxgwQ8": {
+      "type": "collage",
+      "blocks": {
+        "image_fmtA4t": {
+          "type": "image",
+          "settings": {
+            "image_width": "col-md-4",
+            "image": "shopify:\/\/shop_images\/D_or_C_c835ded5-2673-4aae-aa71-df3b37570dde.png",
+            "heading": "Heading",
+            "seo_heading": "h2",
+            "enable_text_shadow": false,
+            "subheading": "Sub heading",
+            "link": "",
+            "btn_text": "",
+            "outline_button": false,
+            "heading_size": "h2",
+            "button_size": "xsmall",
+            "content_width": "medium",
+            "heading_size_m": "h2",
+            "button_size_m": "m-xsmall",
+            "content_width_m": "medium",
+            "overlayopacity": 0,
+            "desktop_content_position": "d-center",
+            "mobile_content_position": "m-center",
+            "overlaycolor": "#000000",
+            "textcolor": "#000000",
+            "text_shadow_color": "#000000",
+            "button_text_color": "#ffffff",
+            "button_bg_color": "#000000",
+            "button_border_color": "#000000"
+          }
+        },
+        "image_yUQ9pP": {
+          "type": "image",
+          "settings": {
+            "image_width": "col-md-4",
+            "heading": "Heading",
+            "seo_heading": "h2",
+            "enable_text_shadow": false,
+            "subheading": "Sub heading",
+            "link": "",
+            "btn_text": "",
+            "outline_button": false,
+            "heading_size": "h2",
+            "button_size": "xsmall",
+            "content_width": "medium",
+            "heading_size_m": "h2",
+            "button_size_m": "m-xsmall",
+            "content_width_m": "medium",
+            "overlayopacity": 0,
+            "desktop_content_position": "d-center",
+            "mobile_content_position": "m-center",
+            "overlaycolor": "#000000",
+            "textcolor": "#000000",
+            "text_shadow_color": "#000000",
+            "button_text_color": "#ffffff",
+            "button_bg_color": "#000000",
+            "button_border_color": "#000000"
+          }
+        },
+        "image_mbWz96": {
+          "type": "image",
+          "settings": {
+            "image_width": "col-md-4",
+            "heading": "Heading",
+            "seo_heading": "h2",
+            "enable_text_shadow": false,
+            "subheading": "Sub heading",
+            "link": "",
+            "btn_text": "",
+            "outline_button": false,
+            "heading_size": "h2",
+            "button_size": "xsmall",
+            "content_width": "medium",
+            "heading_size_m": "h2",
+            "button_size_m": "m-xsmall",
+            "content_width_m": "medium",
+            "overlayopacity": 0,
+            "desktop_content_position": "d-center",
+            "mobile_content_position": "m-center",
+            "overlaycolor": "#000000",
+            "textcolor": "#000000",
+            "text_shadow_color": "#000000",
+            "button_text_color": "#ffffff",
+            "button_bg_color": "#000000",
+            "button_border_color": "#000000"
+          }
+        }
+      },
+      "block_order": [
+        "image_fmtA4t",
+        "image_yUQ9pP",
+        "image_mbWz96"
+      ],
+      "disabled": true,
+      "settings": {
+        "enable_fullwidth": false,
+        "image_layout": "rounded",
+        "enable_image_animation": false,
+        "enable_hover_effect": false,
+        "image_radius_desktop": 4,
+        "image_radius_mobile": 10,
+        "heading_size": "h3",
+        "button_size": "xsmall",
+        "space_in_images": true,
+        "image_spacing_desktop": 2,
+        "image_spacing_mobile": 10,
+        "bgcolor": "primary",
+        "section_visibility": "always",
+        "top_space_desktop": 50,
+        "bottom_space_desktop": 50,
+        "top_space_mobile": 20,
+        "bottom_space_mobile": 20
+      }
+    },
+    "rich_text_NjkkyM": {
+      "type": "rich-text",
+      "blocks": {
+        "richtext_WXnq34": {
+          "type": "richtext",
+          "settings": {
+            "heading": "Benefits of Understanding & Treating Symptoms",
+            "seo_heading": "h2",
+            "content": ""
+          }
+        }
+      },
+      "block_order": [
+        "richtext_WXnq34"
+      ],
+      "settings": {
+        "content_width": "container sm-container",
+        "content_alignment": "center",
+        "bgcolor": "secondary",
+        "section_visibility": "always",
+        "top_space_desktop": 40,
+        "bottom_space_desktop": 20,
+        "top_space_mobile": 30,
+        "bottom_space_mobile": 30
+      }
+    },
+    "gallery_carousel_CtReTH": {
+      "type": "gallery-carousel",
+      "blocks": {
+        "image_NXBb8H": {
+          "type": "image",
+          "settings": {
+            "heading": "Reduced Inflammation",
+            "subheading": "",
+            "image": "shopify:\/\/shop_images\/Symptomsv2-12.jpg",
+            "link": ""
+          }
+        },
+        "image_LGHQWi": {
+          "type": "image",
+          "settings": {
+            "heading": "Personalized Food\/Supplement Recommendations",
+            "subheading": "",
+            "image": "shopify:\/\/shop_images\/Custom_Health_Plan.jpg",
+            "link": ""
+          }
+        },
+        "image_4EQdBk": {
+          "type": "image",
+          "settings": {
+            "heading": "Healthier Gut",
+            "subheading": "",
+            "image": "shopify:\/\/shop_images\/Symptomsv2-24_668b87da-afcf-43a8-b0ea-5d02fd601f62.jpg",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_NXBb8H",
+        "image_LGHQWi",
+        "image_4EQdBk"
+      ],
+      "settings": {
+        "enable_fullwidth": true,
+        "heading": "",
+        "seo_heading": "h2",
+        "heading_size": "h2",
+        "gallery_style": "swipe",
+        "slide_direction": "right",
+        "image_style": "circle",
+        "image_size": "medium",
+        "text_alignment": "center",
+        "enable_image_animation": false,
+        "image_crop": false,
+        "image_background": false,
+        "bgcolor": "secondary",
+        "section_visibility": "always",
+        "top_space_desktop": 45,
+        "bottom_space_desktop": 45,
+        "top_space_mobile": 35,
+        "bottom_space_mobile": 0
+      }
+    },
+    "spacer_Ydq4Eq": {
+      "type": "spacer",
+      "settings": {
+        "height_desktop": 100,
+        "height_mobile": 1,
+        "bgcolor": "primary",
+        "custom_color": ""
+      }
+    },
+    "6cf7bc97-dd54-475a-9bff-20c3912ab04b": {
+      "type": "multi-image-with-text",
+      "blocks": {
+        "template--16809124299045__6cf7bc97-dd54-475a-9bff-20c3912ab04b-166781832969539b4d-1": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "first_image": "shopify:\/\/shop_images\/pexels-vlada-karpovich-6802899.jpg",
+            "second_image": "shopify:\/\/shop_images\/tran-mau-tri-tam-pfRES3CjcUM-unsplash.jpg",
+            "image_shadow": true,
+            "bgcolor": "secondary",
+            "image_shadow_color": "#d1c9c4"
+          }
+        },
+        "text_EegppK": {
+          "type": "text",
+          "settings": {
+            "content": "<h5>Do you want to make sure they live the healthiest, happiest life possible?<\/h5><p><\/p><p><\/p><p>Then you’re gonna love our Basic Gut Health test. Here’s why:<\/p><ul><li>Peace of Mind: Imagine knowing you’re doing everything you can for your pet’s health. Now that’s priceless.<\/li><li>Stronger Immune System: A large part of your pet’s immune system lives in their gut. A healthy gut equals a stronger, healthier pet.<\/li><li>Fewer Tummy Troubles: A balanced gut means fewer upset tummies, bloating, and allergies for your pet.<\/li><li>Custom Health Plan: Every pet is unique. This test helps you cater to their diet and care, based on their gut health.<\/li><li>Early Problem Detection: It’s always better to catch issues early. With this test, you can take action before minor issues become big problems.<\/li><\/ul>"
+          }
+        }
+      },
+      "block_order": [
+        "template--16809124299045__6cf7bc97-dd54-475a-9bff-20c3912ab04b-166781832969539b4d-1",
+        "text_EegppK"
+      ],
+      "disabled": true,
+      "settings": {
+        "text_alignment": "left",
+        "section_visibility": "always",
+        "bgcolor": "primary",
+        "top_space_desktop": 30,
+        "bottom_space_desktop": 30,
+        "top_space_mobile": 30,
+        "bottom_space_mobile": 30
+      }
+    },
+    "product_recommendations": {
+      "type": "product_recommendations",
+      "disabled": true,
+      "settings": {
+        "heading": "Recommended Products",
+        "seo_heading": "h2",
+        "products_count": 2,
+        "product_grid_radius_desktop": 10,
+        "product_grid_radius_mobile": 10,
+        "product_grid_spacing_desktop": 10,
+        "product_grid_spacing_mobile": 10,
+        "bgcolor": "primary",
+        "top_space_desktop": 60,
+        "bottom_space_desktop": 60,
+        "top_space_mobile": 30,
+        "bottom_space_mobile": 30
+      }
+    },
+    "8c17cb82-109c-4b83-968b-5a4214762d42": {
+      "type": "collage",
+      "blocks": {
+        "d96de0bb-5c3d-4d9d-9ede-c02f96e0f65c": {
+          "type": "image",
+          "settings": {
+            "image_width": "col-md-4",
+            "image": "shopify:\/\/shop_images\/box_innovative_pet_lab_inflamation_immunity-1024x768_23d18b47-683c-4062-9cc5-a8e0e6ffa561.png",
+            "heading": "Digestion & Detox",
+            "seo_heading": "h3",
+            "enable_text_shadow": false,
+            "subheading": "$149.00",
+            "link": "",
+            "btn_text": "",
+            "outline_button": false,
+            "heading_size": "h5",
+            "button_size": "xsmall",
+            "content_width": "small",
+            "heading_size_m": "h3",
+            "button_size_m": "xsmall",
+            "content_width_m": "medium",
+            "overlayopacity": 50,
+            "desktop_content_position": "d-bottom-center",
+            "mobile_content_position": "m-bottom-center",
+            "overlaycolor": "rgba(0,0,0,0)",
+            "textcolor": "#26286e",
+            "text_shadow_color": "#03b0a7",
+            "button_text_color": "#26286e",
+            "button_bg_color": "#26286e",
+            "button_border_color": "#26286e"
+          }
+        },
+        "image_iQeiBe": {
+          "type": "image",
+          "settings": {
+            "image_width": "col-md-4",
+            "heading": "Heading",
+            "seo_heading": "h2",
+            "enable_text_shadow": false,
+            "subheading": "Sub heading",
+            "link": "",
+            "btn_text": "",
+            "outline_button": false,
+            "heading_size": "h2",
+            "button_size": "xsmall",
+            "content_width": "medium",
+            "heading_size_m": "h2",
+            "button_size_m": "m-xsmall",
+            "content_width_m": "medium",
+            "overlayopacity": 0,
+            "desktop_content_position": "d-center",
+            "mobile_content_position": "m-center",
+            "overlaycolor": "#000000",
+            "textcolor": "#000000",
+            "text_shadow_color": "#000000",
+            "button_text_color": "#ffffff",
+            "button_bg_color": "#000000",
+            "button_border_color": "#000000"
+          }
+        },
+        "image_X9fVHn": {
+          "type": "image",
+          "settings": {
+            "image_width": "col-md-3",
+            "heading": "Heading",
+            "seo_heading": "h2",
+            "enable_text_shadow": false,
+            "subheading": "Sub heading",
+            "link": "",
+            "btn_text": "",
+            "outline_button": false,
+            "heading_size": "h2",
+            "button_size": "xsmall",
+            "content_width": "medium",
+            "heading_size_m": "h2",
+            "button_size_m": "m-xsmall",
+            "content_width_m": "medium",
+            "overlayopacity": 0,
+            "desktop_content_position": "d-center",
+            "mobile_content_position": "m-center",
+            "overlaycolor": "#000000",
+            "textcolor": "#000000",
+            "text_shadow_color": "#000000",
+            "button_text_color": "#ffffff",
+            "button_bg_color": "#000000",
+            "button_border_color": "#000000"
+          }
+        }
+      },
+      "block_order": [
+        "d96de0bb-5c3d-4d9d-9ede-c02f96e0f65c",
+        "image_iQeiBe",
+        "image_X9fVHn"
+      ],
+      "disabled": true,
+      "settings": {
+        "enable_fullwidth": false,
+        "image_layout": "rounded",
+        "enable_image_animation": true,
+        "enable_hover_effect": false,
+        "image_radius_desktop": 10,
+        "image_radius_mobile": 10,
+        "heading_size": "h2",
+        "button_size": "xsmall",
+        "space_in_images": true,
+        "image_spacing_desktop": 10,
+        "image_spacing_mobile": 10,
+        "bgcolor": "primary",
+        "section_visibility": "always",
+        "top_space_desktop": 0,
+        "bottom_space_desktop": 45,
+        "top_space_mobile": 35,
+        "bottom_space_mobile": 0
+      }
+    },
+    "recently_viewed_product_LhzVe4": {
+      "type": "recently-viewed-product",
+      "settings": {
+        "heading": "Recently Viewed",
+        "seo_heading": "h2",
+        "product_grid_radius_desktop": 10,
+        "product_grid_radius_mobile": 10,
+        "product_grid_spacing_desktop": 10,
+        "product_grid_spacing_mobile": 10,
+        "bgcolor": "primary",
+        "section_visibility": "always",
+        "top_space_desktop": 60,
+        "bottom_space_desktop": 60,
+        "top_space_mobile": 30,
+        "bottom_space_mobile": 30
+      }
+    },
+    "166133727946ffaeaa": {
+      "type": "text-with-icons",
+      "blocks": {
+        "5f2a17c3-6834-4f30-ac33-dd871134b6c4": {
+          "type": "column",
+          "settings": {
+            "icon": "shipping",
+            "heading": "Quick Results",
+            "seo_heading": "h2",
+            "subtext": ""
+          }
+        },
+        "1619ab47-2031-4339-961b-21ca08f7f33e": {
+          "type": "column",
+          "settings": {
+            "icon": "smile",
+            "heading": "Satisfaction Guaranteed",
+            "seo_heading": "h2",
+            "subtext": ""
+          }
+        },
+        "f37730b5-14aa-462c-bbfe-db24fa287e5b": {
+          "type": "column",
+          "settings": {
+            "icon": "thumb",
+            "heading": "Vet Reccomended",
+            "seo_heading": "h2",
+            "subtext": ""
+          }
+        },
+        "d192928f-441f-42d2-852c-5e1864672797": {
+          "type": "column",
+          "settings": {
+            "icon": "heart",
+            "heading": "Give Your Pet the Care they Need",
+            "seo_heading": "h2",
+            "subtext": ""
+          }
+        }
+      },
+      "block_order": [
+        "5f2a17c3-6834-4f30-ac33-dd871134b6c4",
+        "1619ab47-2031-4339-961b-21ca08f7f33e",
+        "f37730b5-14aa-462c-bbfe-db24fa287e5b",
+        "d192928f-441f-42d2-852c-5e1864672797"
+      ],
+      "settings": {
+        "column_background": false,
+        "mobile_column_count": "1",
+        "icon_background": false,
+        "icon_position": "top",
+        "bgcolor": "secondary",
+        "column_background_color": "",
+        "icon_background_color": "",
+        "section_visibility": "always",
+        "top_space_desktop": 25,
+        "bottom_space_desktop": 25,
+        "top_space_mobile": 30,
+        "bottom_space_mobile": 30
+      }
+    }
+  },
+  "order": [
+    "main-product",
+    "image_banner_cTgRTr",
+    "rich_text_kyPDqn",
+    "gallery_carousel_6Cd86W",
+    "collage_yxgwQ8",
+    "rich_text_NjkkyM",
+    "gallery_carousel_CtReTH",
+    "spacer_Ydq4Eq",
+    "6cf7bc97-dd54-475a-9bff-20c3912ab04b",
+    "product_recommendations",
+    "8c17cb82-109c-4b83-968b-5a4214762d42",
+    "recently_viewed_product_LhzVe4",
+    "166133727946ffaeaa"
+  ]
+}
