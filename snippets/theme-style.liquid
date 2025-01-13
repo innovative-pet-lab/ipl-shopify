@@ -49,6 +49,8 @@
   <link rel="preload" as="style" href="{{ 'aos.css' | asset_url }}">
 {% endif %}
 
+{{ 'custom.css' | asset_url | stylesheet_tag }}
+
 {{ 'flickity.min.css' | asset_url | stylesheet_tag }}
 
 {{ 'fancybox.min.css' | asset_url | stylesheet_tag }}
