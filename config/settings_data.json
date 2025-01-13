@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "current": {
     "color_base": "#26286e",
@@ -68,11 +77,11 @@
     "product_hover_auto_slide": false,
     "product_grid_content_alignment": "text-center",
     "newsletter_pop_enable": false,
-    "newsletter_description": "<p>Join our Newsletter<\/p>",
+    "newsletter_description": "<p>Join our Newsletter</p>",
     "show_scrollToTop_text": true,
     "custom_scrollToTop_svg": "",
     "googlemapapi": "",
-    "favicon": "shopify:\/\/shop_images\/IPL_LOGO_0f4b4daa-c9bb-4151-93f9-88486b45a75f.png",
+    "favicon": "shopify://shop_images/IPL_LOGO_0f4b4daa-c9bb-4151-93f9-88486b45a75f.png",
     "buttonType": "custom",
     "custom_radius": 6,
     "color_button_hover": "#ffffff",
@@ -160,7 +169,7 @@
       "product_hover_auto_slide": false,
       "product_grid_content_alignment": "text-left",
       "newsletter_pop_enable": false,
-      "newsletter_description": "<p>Join our Newsletter<\/p>",
+      "newsletter_description": "<p>Join our Newsletter</p>",
       "show_scrollToTop_text": true,
       "custom_scrollToTop_svg": "",
       "googlemapapi": "",
@@ -379,7 +388,7 @@
       "product_hover_auto_slide": false,
       "product_grid_content_alignment": "text-left",
       "newsletter_pop_enable": false,
-      "newsletter_description": "<p>Join our Newsletter<\/p>",
+      "newsletter_description": "<p>Join our Newsletter</p>",
       "show_scrollToTop_text": true,
       "custom_scrollToTop_svg": "",
       "googlemapapi": "",
@@ -469,7 +478,7 @@
       "product_hover_auto_slide": false,
       "product_grid_content_alignment": "text-left",
       "newsletter_pop_enable": false,
-      "newsletter_description": "<p>Join our Newsletter<\/p>",
+      "newsletter_description": "<p>Join our Newsletter</p>",
       "show_scrollToTop_text": true,
       "custom_scrollToTop_svg": "",
       "googlemapapi": "",
@@ -686,7 +695,7 @@
       "product_hover_auto_slide": false,
       "product_grid_content_alignment": "text-left",
       "newsletter_pop_enable": false,
-      "newsletter_description": "<p>Join our Newsletter<\/p>",
+      "newsletter_description": "<p>Join our Newsletter</p>",
       "show_scrollToTop_text": true,
       "custom_scrollToTop_svg": "",
       "googlemapapi": "",
@@ -904,7 +913,7 @@
       "product_hover_auto_slide": false,
       "product_grid_content_alignment": "text-left",
       "newsletter_pop_enable": false,
-      "newsletter_description": "<p>Join our Newsletter<\/p>",
+      "newsletter_description": "<p>Join our Newsletter</p>",
       "show_scrollToTop_text": true,
       "custom_scrollToTop_svg": "",
       "googlemapapi": "",
