@@ -1,3 +1,8 @@
 .navbar-nav {
   justify-content: left!important;
 }
+
+.header__icons {
+    min-width: 26em;
+    justify-content: right;
+}
