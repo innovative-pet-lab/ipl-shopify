@@ -2,7 +2,35 @@
   justify-content: left!important;
 }
 
-.header__icons {
-    min-width: 26em;
+.right-menu {
+  display: none;
+}
+
+
+@media (min-width: 750px) {
+  .header__icons {
+    min-width: 35em;
     justify-content: right;
+  }
+
+  .right-menu {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+  }
+  
+  .right-menu .nav-item {
+    display: flex;
+    align-items: center;
+  }
+  
+  .right-menu ul li {
+    list-style: none;
+  }
+  
+  .right-menu .nav-item svg {
+    width: 10px;
+    height: 10px;
+  }
+  
 }
