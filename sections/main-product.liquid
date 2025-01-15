@@ -57,7 +57,7 @@
         <a class="skip-to-content-link button yv-visually-hidden focus-inside" href="#ProductData-{{ section.id }}">
           {{ 'accessibility.skip_to_product_info' | t }}
         </a>
-        {%- liquid
+        {% comment %} {%- liquid
           if section.settings.gallery_style == 'slider'
             render 'product-page-images-slider', section: section, product: product
           elsif section.settings.gallery_style == 'stacked'
@@ -65,7 +65,8 @@
           elsif section.settings.gallery_style == 'gallery'
             render 'product-page-images-gallery', section: section, product: product
           endif
-        -%}
+        -%} {% endcomment %}
+          {% render 'product-page-images-thumbs', section: section, product: product %}
       </div>
       <div class="col-12 col-sm-12 col-md-6{% if section.settings.gallery_style == 'slider' %} col-lg-4{% else %} col-lg-5{% endif %}">
         <div id="ProductData-{{ section.id }}" class="sticky-item content-divider-mobile-{{ section.settings.content_divider_mobile}}">
