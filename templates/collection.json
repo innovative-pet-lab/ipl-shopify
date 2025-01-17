@@ -54,7 +54,7 @@
         "bgcolor": "#f8f8f8",
         "promotional_banner_size": "large",
         "promo_banner_image": "shopify://shop_images/0125_NewYear_PIP__1.webp",
-        "promo_banner_link": "",
+        "promo_banner_link": "shopify://pages/cat-guide-page",
         "textcolor": "#000000"
       }
     },
