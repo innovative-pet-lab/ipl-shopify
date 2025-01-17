@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "rich_text_4r9BmG": {
@@ -8,7 +17,7 @@
           "settings": {
             "heading": "Shop Tests",
             "seo_heading": "h2",
-            "content": "<p>Need copy for here<\/p>"
+            "content": "<p>Need copy for here</p>"
           }
         }
       },
@@ -43,6 +52,9 @@
         "banner_height_desktop": "auto",
         "banner_height_mobile": "auto",
         "bgcolor": "#f8f8f8",
+        "promotional_banner_size": "large",
+        "promo_banner_image": "shopify://shop_images/0125_NewYear_PIP__1.webp",
+        "promo_banner_link": "",
         "textcolor": "#000000"
       }
     },
