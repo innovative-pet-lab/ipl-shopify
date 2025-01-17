@@ -267,16 +267,32 @@
                       render 'product-grid', product: product, animationAttr: animationAttr
                     -%}
                   </div>
+                  {%- liquid
+                     assign banner_image = section.settings.promo_banner_image
+                     assign banner_size = section.settings.promotional_banner_size
+                     assign banner_link = section.settings.promo_banner_link
+                     if banner_size == 'medium'
+                        assign mg_size = '8'
+                        assign lg_size = '6'
+                     else
+                        assign mg_size = '12'
+                        assign lg_size = '9'
+                     endif
+                  -%}
                   {% if forloop.index == 4 or forloop.index == 8 or forloop.index == 12 %}
                     {% comment %} 2 grids equivalent {% endcomment %}
                     {% comment %} <div class="col-12 col-sm-12 col-md-8 col-lg-6 col-xl-6" data-banner-grid> {% endcomment %}
                     
                     {% comment %} 3 grids equivalent {% endcomment %}
-                      <div class="col-12 col-sm-12 col-md-12 col-lg-9 col-xl-9" ddata-banner-grid>
+                      <div class="col-12 col-sm-12 col-md-{{ mg_size }} col-lg-{{ lg_size }} col-xl-{{ lg_size }}" data-banner-grid>
                       <div class="promotional-banner animated-grid aos-init aos-animate">
-                        <a href="#">
+                        <a href="{{ banner_link }}">
                           <div class="img-wrap">
-                            <img class="no-js-hidden product-first-img lazyautosizes ls-is-cached lazyloaded" src="https://images.ctfassets.net/ydyvnem5zkxh/32rmydEV18qBLG5osI5ivn/052bccc8becb7aff9c1db9a4716de07f/0125_NewYear_PIP__1_.png?w=3027&h=1315&q=100&fm=webp" alt="" width="" height="">
+                            <img class="no-js-hidden product-first-img lazyautosizes ls-is-cached lazyloaded" 
+                              src="{{ banner_image | image_url}}" 
+                              alt="" 
+                              width="" 
+                              height="">
                           </div>
                         </a>
                       </div>
@@ -520,6 +536,36 @@
       "id": "bgcolor",
       "default": "#F8F3EB",
       "label": "t:sections.main-collection.settings.bgcolor.label"
+    },
+    {
+      "type": "header",
+      "content": "Promotional Banner"
+    },
+    {
+      "type": "select",
+      "id": "promotional_banner_size",
+      "label": "Promotional Banner size",
+      "default": "large",
+      "options": [
+        {
+          "value": "large",
+          "label": "large"
+        },
+        {
+          "value": "medium",
+          "label": "medium"
+        }
+      ]
+    },
+    {
+      "type": "image_picker",
+      "id": "promo_banner_image",
+      "label": "Banner Image"
+    },
+    {
+      "type": "url",
+      "id": "promo_banner_link",
+      "label": "Banner Link"
     },
     {
       "type": "color",
