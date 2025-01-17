@@ -8,7 +8,7 @@
 
 @media (min-width: 750px) {
   .header__icons {
-      min-width: 35em;
+      min-width: 30em;
       justify-content: right;
   }
 
@@ -137,4 +137,25 @@
         flex-wrap: wrap;
     }
 
+}
+
+/* Shop page styling **/
+.promotional-banner {
+    height: 29vw;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.promotional-banner .img-wrap {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.promotional-banner .img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(60%);
 }

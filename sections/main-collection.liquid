@@ -267,6 +267,21 @@
                       render 'product-grid', product: product, animationAttr: animationAttr
                     -%}
                   </div>
+                  {% if forloop.index == 4 or forloop.index == 8 or forloop.index == 12 %}
+                    {% comment %} 2 grids equivalent {% endcomment %}
+                    {% comment %} <div class="col-12 col-sm-12 col-md-8 col-lg-6 col-xl-6" data-banner-grid> {% endcomment %}
+                    
+                    {% comment %} 3 grids equivalent {% endcomment %}
+                      <div class="col-12 col-sm-12 col-md-12 col-lg-9 col-xl-9" ddata-banner-grid>
+                      <div class="promotional-banner animated-grid aos-init aos-animate">
+                        <a href="#">
+                          <div class="img-wrap">
+                            <img class="no-js-hidden product-first-img lazyautosizes ls-is-cached lazyloaded" src="https://images.ctfassets.net/ydyvnem5zkxh/32rmydEV18qBLG5osI5ivn/052bccc8becb7aff9c1db9a4716de07f/0125_NewYear_PIP__1_.png?w=3027&h=1315&q=100&fm=webp" alt="" width="" height="">
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                  {% endif %}
                 {% endfor %}
                 {%- if section.settings.pagination_type == 'infinite' -%}
                   {% if paginate.next %}
