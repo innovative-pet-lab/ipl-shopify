@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "image_banner_CHrfUk": {
@@ -5,7 +14,7 @@
       "settings": {
         "enable_parallax": false,
         "section_visibility": "always",
-        "image": "shopify:\/\/shop_images\/banner_5_0aceae3a-214b-441f-9b4b-c966263f7906_copy-taller.jpg",
+        "image": "shopify://shop_images/banner_5_0aceae3a-214b-441f-9b4b-c966263f7906_copy-taller.jpg",
         "desktop_height": "100vh",
         "mobile_height": "700px",
         "banner_title": "Welcome to Innovative Pet Lab, a Science Driven Pet Wellness Company",
@@ -14,7 +23,7 @@
         "mobile_title_size": 26,
         "banner_desc": "We are on a mission to empower the pet community with at-home testing and personalized solutions to enhance the lives and well being of pets",
         "button_text": "Shop All Tests",
-        "button_link": "shopify:\/\/collections\/all",
+        "button_link": "shopify://collections/all",
         "button_size": "small",
         "mobile_button_size": "m-small",
         "content_position": "center-center",
@@ -35,7 +44,7 @@
           "settings": {
             "heading": "Our Most Comprehensive Tests",
             "seo_heading": "h2",
-            "content": "<p>Our comprehensive tests are the most thorough options available and the perfect place to start if you’re new to at-home testing. You’ll get a full picture of your pet’s gut health and a much better understanding of any health issues your pet may be dealing with. You’ll also get  great recommendations on how to help them thrive.<\/p>"
+            "content": "<p>Our comprehensive tests are the most thorough options available and the perfect place to start if you’re new to at-home testing. You’ll get a full picture of your pet’s gut health and a much better understanding of any health issues your pet may be dealing with. You’ll also get  great recommendations on how to help them thrive.</p>"
           }
         }
       },
@@ -61,8 +70,8 @@
           "settings": {
             "heading": "Comprehensive Review for Dogs",
             "subheading": "$299",
-            "image": "shopify:\/\/shop_images\/Product_Template_for_Size_copy.jpg",
-            "link": "shopify:\/\/products\/comprehensive-review"
+            "image": "shopify://shop_images/Product_Template_for_Size_copy.jpg",
+            "link": "shopify://products/comprehensive-review"
           }
         },
         "image_nMeA9y": {
@@ -70,8 +79,8 @@
           "settings": {
             "heading": "Comprehensive Review for Cats",
             "subheading": "$249",
-            "image": "shopify:\/\/shop_images\/Product_Template_for_Size_CCcat.jpg",
-            "link": "shopify:\/\/products\/comprehensive-gut-check"
+            "image": "shopify://shop_images/Product_Template_for_Size_CCcat.jpg",
+            "link": "shopify://products/comprehensive-gut-check"
           }
         }
       },
@@ -109,8 +118,8 @@
             "collection": "",
             "heading": "Backed By Science",
             "description": "All of our tests are designed from clinical research to provide the insights you need to not only care for your pets, but help them live their happiest and healthiest lives.",
-            "image": "shopify:\/\/shop_images\/Inflamation_Collection_Page_copy_9eaf59fd-2fc6-4882-9c61-849134704b9b.jpg",
-            "video": "shopify:\/\/files\/videos\/video (720p).mp4"
+            "image": "shopify://shop_images/Inflamation_Collection_Page_copy_9eaf59fd-2fc6-4882-9c61-849134704b9b.jpg",
+            "video": "shopify://files/videos/video (720p).mp4"
           }
         },
         "collection_6MwLnz": {
@@ -119,7 +128,7 @@
             "collection": "",
             "heading": "Clinical Diagnostics Experts",
             "description": "We’re bringing over 100 years of combined industry experience in human diagnostic testing to pet care.",
-            "video": "shopify:\/\/files\/videos\/production_id_4039192 (2160p).mp4"
+            "video": "shopify://files/videos/production_id_4039192 (2160p).mp4"
           }
         },
         "collection_ciwxnp": {
@@ -128,7 +137,7 @@
             "collection": "",
             "heading": "High Standards of Healthcare",
             "description": "We're 100% dedicated to providing only the  highest quality at-home tests for your pets, so they can live their happiest lives.",
-            "video": "shopify:\/\/files\/videos\/production_id_4057303 (720p).mp4"
+            "video": "shopify://files/videos/production_id_4057303 (720p).mp4"
           }
         },
         "collection_ppVFqp": {
@@ -137,7 +146,7 @@
             "collection": "",
             "heading": "Comprehensive Results",
             "description": "We provide in-depth data for every test. Our mission is to help you better understand your pet and their health needs. We provide in-depth data for every test.",
-            "video": "shopify:\/\/files\/videos\/production_id_3969596 (720p).mp4"
+            "video": "shopify://files/videos/production_id_3969596 (720p).mp4"
           }
         },
         "collection_feMMCD": {
@@ -146,7 +155,7 @@
             "collection": "",
             "heading": "Don't Guess,Test!",
             "description": "If our pet’s could talk, we’d know how they were feeling, but until now we’ve just been guessing. With a simple at-home test, you get answers and recommendations on how to solve any issues that get identified.",
-            "video": "shopify:\/\/files\/videos\/production_id_5126333 (720p).mp4"
+            "video": "shopify://files/videos/production_id_5126333 (720p).mp4"
           }
         }
       },
@@ -183,7 +192,7 @@
           "settings": {
             "icon": "shipping",
             "heading": "Icon with text",
-            "content": "<p>To provide clients insight into your brand, pair words with any image to introduce a new campaign.<\/p>"
+            "content": "<p>To provide clients insight into your brand, pair words with any image to introduce a new campaign.</p>"
           }
         },
         "icon_with_text_xDBCCy": {
@@ -192,20 +201,20 @@
           "settings": {
             "icon": "shipping",
             "heading": "Icon with text",
-            "content": "<p>To provide clients insight into your brand, pair words with any image to introduce a new campaign.<\/p>"
+            "content": "<p>To provide clients insight into your brand, pair words with any image to introduce a new campaign.</p>"
           }
         },
         "text_Kkf34c": {
           "type": "text",
           "settings": {
-            "content": "<p>At IPL, we know that your pets are family. But they can’t tell you when they aren’t feeling well. You don’t have to wait until your pet is sick to improve their quality of life. We’ve built a team of experienced vets, clinical lab experts and pet lovers who are devoted to helping you get the information you need to keep your pets living their happiest and healthiest lives. <\/p>"
+            "content": "<p>At IPL, we know that your pets are family. But they can’t tell you when they aren’t feeling well. You don’t have to wait until your pet is sick to improve their quality of life. We’ve built a team of experienced vets, clinical lab experts and pet lovers who are devoted to helping you get the information you need to keep your pets living their happiest and healthiest lives. </p>"
           }
         },
         "button_74Px4F": {
           "type": "button",
           "settings": {
             "btn_text": "Learn More",
-            "btn_link": "shopify:\/\/pages\/symptom-checker",
+            "btn_link": "shopify://pages/symptom-checker",
             "button_size": "med",
             "mobile_button_size": "m-med"
           }
@@ -220,7 +229,7 @@
       ],
       "settings": {
         "enable_fullwidth": true,
-        "image": "shopify:\/\/shop_images\/Basic_Gut_a9c4593c-2dd9-4810-abe8-bc1620da16e8.jpg",
+        "image": "shopify://shop_images/Basic_Gut_a9c4593c-2dd9-4810-abe8-bc1620da16e8.jpg",
         "image_shadow": false,
         "enable_image_animation": false,
         "image_alignment": "left",
@@ -243,7 +252,7 @@
           "settings": {
             "heading": "REGISTER",
             "subheading": "Create an account and register your kit.",
-            "image": "shopify:\/\/shop_images\/Symptomsv2-25_11e43499-4454-49e5-8d45-c68e10f4dfcb.jpg",
+            "image": "shopify://shop_images/Symptomsv2-25_11e43499-4454-49e5-8d45-c68e10f4dfcb.jpg",
             "link": ""
           }
         },
@@ -252,7 +261,7 @@
           "settings": {
             "heading": "COLLECT",
             "subheading": "Collect a stool sample.",
-            "image": "shopify:\/\/shop_images\/Symptomsv2-26_45637c79-7b82-42f0-b645-5aadd749d90d.jpg",
+            "image": "shopify://shop_images/Symptomsv2-26_45637c79-7b82-42f0-b645-5aadd749d90d.jpg",
             "link": ""
           }
         },
@@ -261,7 +270,7 @@
           "settings": {
             "heading": "MAIL",
             "subheading": "Send your sample to the lab and get your results within 10-14 days.",
-            "image": "shopify:\/\/shop_images\/Symptomsv2-27_e3daabaf-4a59-4f98-922f-3f027437a4c7.jpg",
+            "image": "shopify://shop_images/Symptomsv2-27_e3daabaf-4a59-4f98-922f-3f027437a4c7.jpg",
             "link": ""
           }
         }
@@ -298,7 +307,7 @@
       "settings": {
         "enable_parallax": false,
         "section_visibility": "large",
-        "image": "shopify:\/\/shop_images\/OUR_PROCESS_983719a2-8adf-4d1b-8f2b-b85cc2481263.jpg",
+        "image": "shopify://shop_images/OUR_PROCESS_983719a2-8adf-4d1b-8f2b-b85cc2481263.jpg",
         "desktop_height": "350px",
         "mobile_height": "500px",
         "banner_title": "",
@@ -307,7 +316,7 @@
         "mobile_title_size": 36,
         "banner_desc": "",
         "button_text": "",
-        "button_link": "shopify:\/\/collections\/all",
+        "button_link": "shopify://collections/all",
         "button_size": "small",
         "mobile_button_size": "m-small",
         "content_position": "center-center",
@@ -328,7 +337,7 @@
           "settings": {
             "heading": "Which IPL Test is Right For Your Pet?",
             "seo_heading": "h2",
-            "content": "<p>The Comprehensive Review is a great place to start by broadly evaluating your pet’s gut health. After lifestyle changes and adjustments, we suggest testing again with a more specific test to confirm your pet's health is improving.<\/p>"
+            "content": "<p>The Comprehensive Review is a great place to start by broadly evaluating your pet’s gut health. After lifestyle changes and adjustments, we suggest testing again with a more specific test to confirm your pet's health is improving.</p>"
           }
         }
       },
@@ -412,15 +421,42 @@
         "spot_hY4dJq",
         "spot_xxMVXM"
       ],
+      "disabled": true,
       "settings": {
         "enable_fullwidth": false,
-        "image": "shopify:\/\/shop_images\/Chart-Final-NoParasite.jpg",
+        "image": "shopify://shop_images/Chart-Final-NoParasite.jpg",
         "bgcolor": "primary",
         "section_visibility": "always",
         "top_space_desktop": 0,
         "bottom_space_desktop": 35,
         "top_space_mobile": 0,
         "bottom_space_mobile": 0
+      }
+    },
+    "1737447265e68644fb": {
+      "type": "apps",
+      "blocks": {
+        "lantern_quiz_rMHnUw": {
+          "type": "shopify://apps/lantern/blocks/quiz/619ce3d2-0211-4d3a-9bb0-e881b10b00ad",
+          "settings": {
+            "quiz-ppf": "tools/perfect-product-finder/ipl-test-quize",
+            "top-margin-ppf": "20px",
+            "bottom-margin-ppf": "20px",
+            "width-ppf": "100%",
+            "min-height-ppf": "500px",
+            "max-height-ppf": "",
+            "no-scroll-ppf": true
+          }
+        }
+      },
+      "block_order": [
+        "lantern_quiz_rMHnUw"
+      ],
+      "settings": {
+        "top_space_desktop": 30,
+        "bottom_space_desktop": 30,
+        "top_space_mobile": 30,
+        "bottom_space_mobile": 30
       }
     },
     "image_with_text_4iEm8t": {
@@ -436,14 +472,14 @@
         "text_MG4qFp": {
           "type": "text",
           "settings": {
-            "content": "<p>My name is Jamie Smith, CEO, and Co-Founder of Innovative Pet Lab, and proud dog mom to June. After many years in human diagnostic testing we saw a real need with pets. Our pet’s can’t tell us when they aren’t feeling well. They struggle in silence so we needed to give them a voice. We’re so grateful that you trust us with your pet’s health journey.<\/p>"
+            "content": "<p>My name is Jamie Smith, CEO, and Co-Founder of Innovative Pet Lab, and proud dog mom to June. After many years in human diagnostic testing we saw a real need with pets. Our pet’s can’t tell us when they aren’t feeling well. They struggle in silence so we needed to give them a voice. We’re so grateful that you trust us with your pet’s health journey.</p>"
           }
         },
         "button_A6daYb": {
           "type": "button",
           "settings": {
             "btn_text": "MEET THE TEAM",
-            "btn_link": "shopify:\/\/pages\/meet-the-team",
+            "btn_link": "shopify://pages/meet-the-team",
             "button_size": "med",
             "mobile_button_size": "m-med"
           }
@@ -456,7 +492,7 @@
       ],
       "settings": {
         "enable_fullwidth": false,
-        "image": "shopify:\/\/shop_images\/J.SmithHeadshot10.22.226113-600x600.jpg",
+        "image": "shopify://shop_images/J.SmithHeadshot10.22.226113-600x600.jpg",
         "image_shadow": false,
         "enable_image_animation": false,
         "image_alignment": "right",
@@ -479,8 +515,8 @@
           "settings": {
             "heading": "",
             "subheading": "Jett",
-            "image": "shopify:\/\/shop_images\/Comprehensive.webp",
-            "link": "shopify:\/\/blogs\/case-studies\/case-study-jett"
+            "image": "shopify://shop_images/Comprehensive.webp",
+            "link": "shopify://blogs/case-studies/case-study-jett"
           }
         },
         "image_qb8BDt": {
@@ -488,8 +524,8 @@
           "settings": {
             "heading": "",
             "subheading": "Boris",
-            "image": "shopify:\/\/shop_images\/Cat_Circle_copy.jpg",
-            "link": "shopify:\/\/blogs\/case-studies\/case-study-boris"
+            "image": "shopify://shop_images/Cat_Circle_copy.jpg",
+            "link": "shopify://blogs/case-studies/case-study-boris"
           }
         },
         "image_rbUBT4": {
@@ -498,8 +534,8 @@
           "settings": {
             "heading": "",
             "subheading": "Max & Kevin",
-            "image": "shopify:\/\/shop_images\/Dog_Cat_Circle_copy.jpg",
-            "link": "shopify:\/\/pages\/pet-stories-max-kevin"
+            "image": "shopify://shop_images/Dog_Cat_Circle_copy.jpg",
+            "link": "shopify://pages/pet-stories-max-kevin"
           }
         },
         "image_XgR4KN": {
@@ -507,8 +543,8 @@
           "settings": {
             "heading": "",
             "subheading": "Gigi",
-            "image": "shopify:\/\/shop_images\/Dog_Circle.png",
-            "link": "shopify:\/\/blogs\/case-studies\/case-study-gigi"
+            "image": "shopify://shop_images/Dog_Circle.png",
+            "link": "shopify://blogs/case-studies/case-study-gigi"
           }
         }
       },
@@ -546,8 +582,8 @@
         "title": "The IPL Difference",
         "seo_heading": "h2",
         "description": "We are a team of clinical lab experts and loving pet parents. Our goal is to give you health information about your pets and recommendations so you can give them the happiest and healthiest life possible!",
-        "before_image": "shopify:\/\/shop_images\/Before_dc3378d0-fcae-44b3-8563-d01d660d8a49.jpg",
-        "after_image": "shopify:\/\/shop_images\/after_3.jpg",
+        "before_image": "shopify://shop_images/Before_dc3378d0-fcae-44b3-8563-d01d660d8a49.jpg",
+        "after_image": "shopify://shop_images/after_3.jpg",
         "before_text": "Before",
         "after_text": "After",
         "text_alignment": "bottom",
@@ -569,7 +605,7 @@
     "rotating_text_9t7fp9": {
       "type": "rotating-text",
       "settings": {
-        "text1": "<p>Innovative Pet Lab<\/p>",
+        "text1": "<p>Innovative Pet Lab</p>",
         "text2": "",
         "row1_font_family": "--heading-font-family",
         "row2_font_family": "--font-family",
@@ -616,7 +652,7 @@
             "message": "\"A Game-Changer in Pet-Health: Innovative Pet Lab! As a holistic veterinarian with a focus on gut health, I can't recommend Innovative Pet Lab's stool tests enough...\"",
             "author": "Dr. Katie Woodley, DVM",
             "author_city": "",
-            "image": "shopify:\/\/shop_images\/Untitled-design-32-e1697560377662-150x150.png"
+            "image": "shopify://shop_images/Untitled-design-32-e1697560377662-150x150.png"
           }
         },
         "template--16809124069669__08a794cb-be09-40d3-9dae-24ba5188a73d-1667806302f1e7ea42-1": {
@@ -626,7 +662,7 @@
             "message": "\"My dog Nash struggled with skin allergies since I got him and it took forever to figure out something that worked for him...\"",
             "author": "Jinx and Nash",
             "author_city": "",
-            "image": "shopify:\/\/shop_images\/Untitled-design-36-e1697560666987-150x150.png"
+            "image": "shopify://shop_images/Untitled-design-36-e1697560666987-150x150.png"
           }
         },
         "template--16809124069669__08a794cb-be09-40d3-9dae-24ba5188a73d-1667806302f1e7ea42-2": {
@@ -636,7 +672,7 @@
             "message": "\"Lou Lou is so much happier after we figured out that she had lots of inflammation. After starting her treatment we noticed a difference in her skin and scratching issues...\"",
             "author": "Debbie Depree",
             "author_city": "",
-            "image": "shopify:\/\/shop_images\/Untitled-design-35-e1697560215411-150x150.png"
+            "image": "shopify://shop_images/Untitled-design-35-e1697560215411-150x150.png"
           }
         },
         "template--16809124069669__08a794cb-be09-40d3-9dae-24ba5188a73d-1667806302f1e7ea42-3": {
@@ -646,7 +682,7 @@
             "message": "\"We are so excited that IPL is available to pups like us! Our mom is obsessed with our gut health and now we have a way to know the reason...\"",
             "author": "Axel, Zeppelin, and Aspen",
             "author_city": "",
-            "image": "shopify:\/\/shop_images\/Untitled-design-34-e1697560274929-150x150.png"
+            "image": "shopify://shop_images/Untitled-design-34-e1697560274929-150x150.png"
           }
         }
       },
@@ -754,6 +790,7 @@
     "image_banner_96V3yA",
     "rich_text_Qt98rJ",
     "spotlight_TbQ8yU",
+    "1737447265e68644fb",
     "image_with_text_4iEm8t",
     "gallery_carousel_t8AGJU",
     "before_after_image_x76JTN",
