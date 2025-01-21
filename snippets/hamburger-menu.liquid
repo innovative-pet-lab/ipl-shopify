@@ -125,6 +125,9 @@
     <div class="hamburger-lower-menu">
       <div class="lower-nav">
         <div class="menu-login-btn">
+          <a class="drawer-login-btn" href="{{ routes.account_login_url }}">
+            Register Kit
+          </a>
           {%- if customer -%}
             <a class="drawer-login-btn" href="{{ routes.account_logout_url }}">
               {{- 'customer.log_out' | t   -}}

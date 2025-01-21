@@ -299,6 +299,9 @@
       </div>
       <div class="lower-nav">
         <div class="menu-login-btn">
+          <a class="drawer-login-btn" href="{{ routes.account_login_url }}">
+            Register Kit
+          </a><br><br>
           {%- if customer -%}
             <a class="drawer-login-btn" href="{{ routes.account_logout_url }}">{{ 'customer.log_out' | t }}</a>
           {%- else -%}
@@ -403,6 +406,9 @@
       </ul>
       <div class="lower-nav">
         <div class="menu-login-btn">
+          <a class="drawer-login-btn" href="{{ routes.account_login_url }}">
+            Register Kit
+          </a><br><br>
           {%- if customer -%}
             <a class="drawer-login-btn" href="{{ routes.account_logout_url }}">{{ 'customer.log_out' | t }}</a>
           {%- else -%}

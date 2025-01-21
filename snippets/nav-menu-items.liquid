@@ -5,13 +5,13 @@
         if link.links.size == 1
           assign chillinksClasses = 'col-12 col-sm-12 col-md-12'
         elsif link.links.size == 2
-          assign chillinksClasses = 'col-12 col-sm-12 col-md-6'
+          assign chillinksClasses = 'col-12 col-sm-12 col-md-12 mega-menu-2'
         elsif link.links.size == 3
-          assign chillinksClasses = 'col-12 col-sm-12 col-md-4'
+          assign chillinksClasses = 'col-12 col-sm-12 col-md-4 mega-menu-3'
         elsif link.links.size == 4
-          assign chillinksClasses = 'col-12 col-sm-12 col-md-3'
+          assign chillinksClasses = 'col-12 col-sm-12 col-md-3 mega-menu-4'
         else
-          assign chillinksClasses = 'col-12 col-sm-12 col-md-4 col-lg-3 col-xl-2'
+          assign chillinksClasses = 'col-12 col-sm-6 col-md-4 col-lg-6 col-xl-6 mega-menu-2'
         endif
       -%}
       {%- for childlink in link.links -%}
@@ -33,7 +33,7 @@
     {%- else -%}
       <div class="col-12 col-sm-12 col-md-12">
         <div class="dropdown-inner-menu-item">
-          <ul class="list-unstyled">
+          <ul class="list-unstyled nooo">
             {%- for childlink in link.links -%}
               <li>
                 <a class="yv-dropdown-item-link" href="{{ childlink.url }}"
@@ -47,3 +47,30 @@
     {%- endif -%}
   </div>
 {%- endif -%}
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const menus = document.querySelectorAll('.mega-menu-2'); // Select all .mega-menu-2 elements
+
+    if (menus.length > 0) {
+      menus.forEach((menu) => {
+        const submenu = menu.querySelector('ul'); // Find the ul inside this specific .mega-menu-2
+        if (submenu) {
+          // Attach hover effects to this specific menu and its ul
+          menu.addEventListener('mouseenter', () => {
+            submenu.classList.add('show'); // Show the submenu
+            submenu.classList.remove('hidden'); // Ensure 'hidden' is removed
+          });
+
+          menu.addEventListener('mouseleave', () => {
+            submenu.classList.add('hidden'); // Hide the submenu
+            submenu.classList.remove('show'); // Ensure 'show' is removed
+          });
+        } else {
+          console.warn('Submenu (ul) not found for this menu element:', menu);
+        }
+      });
+    } else {
+      console.warn('No .mega-menu-2 elements found.');
+    }
+  });
+</script>

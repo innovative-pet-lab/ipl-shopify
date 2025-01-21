@@ -24,7 +24,7 @@
         {%- for i in (1..6) -%}
         {%- assign productIndex = 'product' | append: i -%}
         {%- if blockData.settings[productIndex] != blank -%}
-        <div class="col-12 col-sm-12 col-md-4 col-lg-3 col-xl-2">
+        <div class="col-12 col-sm-4 col-md-4 col-lg-3 col-xl-2">
           <div class="dropdown-inner-menu-item product-menu-item">
             {%- render 'product-grid' product: blockData.settings[productIndex], productClasses: 'xsmall-product-card', hideRelated: true, hide_options: true , hideHoverImage: true -%}
           </div>
@@ -218,7 +218,7 @@
 {%- liquid 
   assign fullwidthMenu = false
   if link.levels > 1 and link.links.size > 4 or menuDropdown != '' 
-    assign fullwidthMenu = true
+    assign fullwidthMenu = false
   elsif menuDropdown  != ''
     assign fullwidthMenu = true
   endif 
@@ -252,7 +252,7 @@
     </svg>
   </a>                        
   <div class="yv-dropdown-menus-outer {% if fullwidthMenu %}fullwidth-megamenus{% endif %}">
-    <div class="yv-dropdown-menus">
+    <div class="yv-dropdown-menus 44">
       <div class="container">
         {%- if menuDropdown != '' -%}
         {{- menuDropdown -}}
@@ -261,7 +261,7 @@
         {%- endif -%}
       </div>
     </div>
-  </div> 
+  </div>
   </div>
     {% else %}
     <details class="yv-dropdown-detail">
@@ -275,7 +275,7 @@
     </svg>
   </summary>                        
   <div class="yv-dropdown-menus-outer {% if fullwidthMenu %}fullwidth-megamenus{% endif %}">
-    <div class="yv-dropdown-menus">
+    <div class="yv-dropdown-menus mega-menu">
       <div class="container">
         {%- if menuDropdown != '' -%}
         {{- menuDropdown -}}
