@@ -53,7 +53,7 @@
     style="--layoutRadius:{% if settings.layout_style == 'rounded' %}10px{% else %}0px{% endif %}"
   >
     <div class="row no-gutters">
-      <div class="col-12 col-sm-12 col-md-6{% if section.settings.gallery_style == 'slider' %} col-lg-8 yv-product-slider-wrapper{% else %} col-lg-7{% endif %}">
+      <div class="col-12 col-sm-12 col-md-6{% if section.settings.gallery_style == 'slider' %} col-lg-8 yv-product-slider-wrapper{% else %} col-lg-6{% endif %}">
         <a class="skip-to-content-link button yv-visually-hidden focus-inside" href="#ProductData-{{ section.id }}">
           {{ 'accessibility.skip_to_product_info' | t }}
         </a>
@@ -68,7 +68,7 @@
         -%} {% endcomment %}
           {% render 'product-page-images-thumbs', section: section, product: product %}
       </div>
-      <div class="col-12 col-sm-12 col-md-6{% if section.settings.gallery_style == 'slider' %} col-lg-4{% else %} col-lg-5{% endif %}">
+      <div class="col-12 col-sm-12 col-md-6{% if section.settings.gallery_style == 'slider' %} col-lg-4{% else %} col-lg-6{% endif %}">
         <div id="ProductData-{{ section.id }}" class="sticky-item content-divider-mobile-{{ section.settings.content_divider_mobile}}">
           {%- render 'product-form',
             product: product,
