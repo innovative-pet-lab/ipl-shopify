@@ -2,24 +2,32 @@
   <div class="product-gallery">
     <div class="product-gallery__wrapper">
       <!-- Thumbnail Navigation -->
-      {%- if product.media.size > 1 -%}
-        <div class="product-gallery__thumbnails">
+      <div 
+        class="product-gallery__thumbnails{% if product.media.size > 5 %} is-slider{% endif %}">
+        <div class="swiper-wrapper">
           {%- for media in product.media -%}
-            <button 
-              class="product-gallery__thumbnail{% if forloop.first %} is-active{% endif %}" 
-              data-media-id="{{ media.id }}"
-              aria-label="Show image {{ forloop.index }} of {{ product.media.size }}"
-            >
-              <img 
-                width="" 
-                height="" 
-                src="{{ media | image_url: width: 100, crop: 'center' }}" 
-                alt="{{ media.alt | escape }}" 
-                loading="lazy">
-            </button>
+            <div class="swiper-slide">
+              <button 
+                class="product-gallery__thumbnail{% if forloop.first %} is-active{% endif %}" 
+                data-media-id="{{ media.id }}"
+                aria-label="Show image {{ forloop.index }} of {{ product.media.size }}"
+              >
+                <img 
+                  width="" 
+                  height="" 
+                  src="{{ media | image_url: width: 100, crop: 'center' }}" 
+                  alt="{{ media.alt | escape }}" 
+                  loading="lazy">
+              </button>
+            </div>
           {%- endfor -%}
         </div>
-      {%- endif -%}
+
+        {%- if product.media.size > 5 -%}
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        {%- endif -%}
+      </div>
 
       <!-- Main Image Viewer -->
       <div class="product-gallery__viewer">
@@ -28,13 +36,13 @@
             class="product-gallery__image-wrapper{% if forloop.first %} is-active{% endif %}" 
             data-media-id="{{ media.id }}"
           >
-            <div class="product-gallery__image loader-bar">
+            <div class="product-gallery__image">
               <img 
                 width="" 
                 height="" 
                 src="{{ media | image_url: width: 800 }}" 
                 alt="{{ media.alt | escape }}" 
-                loading="lazy">
+                loading="eager">
             </div>
           </div>
         {%- endfor -%}
@@ -44,36 +52,39 @@
 
   <script>
     document.addEventListener('DOMContentLoaded', () => {
+      // Initialize Swiper for thumbnails if there are more than 5 media items
+      if (document.querySelector('.is-slider')) {
+        const thumbnailSwiper = new Swiper('.product-gallery__thumbnails', {
+          spaceBetween: 5, // Space between slides
+          slidesPerView: 5, // Allows dynamic slide widths
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          },
+          breakpoints: {
+            1024: { // Desktop view
+              slidesPerView: 6,
+              slideWidth: 150, // Set custom width in pixels
+            },
+            768: { // Tablet view
+              slidesPerView: 4,
+            },
+            480: { // Mobile view
+              slidesPerView: 4,
+            },
+          },
+        });
+      }
+
+      // Main viewer functionality
       const thumbnails = document.querySelectorAll('.product-gallery__thumbnail');
       const imageWrappers = document.querySelectorAll('.product-gallery__image-wrapper');
-      const viewer = document.querySelector('.product-gallery__viewer');
-
       let activeIndex = 0;
-      let startX = 0;
-      let currentX = 0;
 
       thumbnails.forEach((thumbnail, index) => {
         thumbnail.addEventListener('click', () => {
           updateActiveSlide(index);
         });
-      });
-
-      viewer.addEventListener('touchstart', (e) => {
-        startX = e.touches[0].clientX;
-      });
-
-      viewer.addEventListener('touchmove', (e) => {
-        currentX = e.touches[0].clientX;
-      });
-
-      viewer.addEventListener('touchend', () => {
-        const diff = currentX - startX;
-
-        if (diff > 50 && activeIndex > 0) {
-          updateActiveSlide(activeIndex - 1);
-        } else if (diff < -50 && activeIndex < imageWrappers.length - 1) {
-          updateActiveSlide(activeIndex + 1);
-        }
       });
 
       function updateActiveSlide(index) {
