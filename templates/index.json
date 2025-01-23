@@ -375,7 +375,7 @@
           "type": "button",
           "settings": {
             "btn_text": "Take the quiz",
-            "btn_link": "#",
+            "btn_link": "#open-quiz-tools/perfect-product-finder/ipl-test-quize",
             "button_size": "med",
             "mobile_button_size": "m-med"
           }
