@@ -395,7 +395,7 @@
         "image_alignment": "right",
         "image_height": "aspect",
         "content_position": "center",
-        "bgcolor": "gradient",
+        "bgcolor": "secondary",
         "image_shadow_color": "#dddddd",
         "section_visibility": "always",
         "top_space_desktop": 60,
