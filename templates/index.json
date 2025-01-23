@@ -344,6 +344,7 @@
       "block_order": [
         "richtext_4nLhHW"
       ],
+      "disabled": true,
       "settings": {
         "content_width": "container sm-container",
         "content_alignment": "center",
@@ -500,6 +501,7 @@
       "block_order": [
         "lantern_quiz_rMHnUw"
       ],
+      "disabled": true,
       "settings": {
         "top_space_desktop": 30,
         "bottom_space_desktop": 30,
