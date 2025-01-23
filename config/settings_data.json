@@ -118,7 +118,31 @@
         }
       }
     },
-    "content_for_index": []
+    "content_for_index": [],
+    "blocks": {
+      "9962162814386890965": {
+        "type": "shopify://apps/lantern/blocks/core/619ce3d2-0211-4d3a-9bb0-e881b10b00ad",
+        "disabled": false,
+        "settings": {}
+      },
+      "17587734367913825621": {
+        "type": "shopify://apps/lantern/blocks/popup/619ce3d2-0211-4d3a-9bb0-e881b10b00ad",
+        "disabled": false,
+        "settings": {
+          "ppf-popup-width": "80%",
+          "ppf-popup-height": "80%",
+          "ppf-popup-width-mobile": "100%",
+          "ppf-popup-height-mobile": "100%",
+          "auto-trigger-on-exit-intent": false,
+          "auto-trigger-on-scroll": false,
+          "auto-trigger-scroll-value": 250,
+          "auto-trigger-after-x-seconds": false,
+          "auto-trigger-time-value": 10,
+          "show-popup-how-many-times": "once",
+          "auto-trigger-quiz": "#open-quiz-tools/perfect-product-finder/ipl-test-quize"
+        }
+      }
+    }
   },
   "presets": {
     "Amaze": {
