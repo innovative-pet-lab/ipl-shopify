@@ -355,6 +355,54 @@
         "bottom_space_mobile": 30
       }
     },
+    "image_with_text_FDMkW3": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_tAkpJn": {
+          "type": "heading",
+          "settings": {
+            "heading": "Which test is right you?",
+            "seo_heading": "h2"
+          }
+        },
+        "text_E8yNHf": {
+          "type": "text",
+          "settings": {
+            "content": "<p>Answer a few questions to help us recommend the best test for you.</p>"
+          }
+        },
+        "button_E4HQHL": {
+          "type": "button",
+          "settings": {
+            "btn_text": "Take the quiz",
+            "btn_link": "#",
+            "button_size": "med",
+            "mobile_button_size": "m-med"
+          }
+        }
+      },
+      "block_order": [
+        "heading_tAkpJn",
+        "text_E8yNHf",
+        "button_E4HQHL"
+      ],
+      "settings": {
+        "enable_fullwidth": false,
+        "image": "shopify://shop_images/Comp_Gut.jpg",
+        "image_shadow": true,
+        "enable_image_animation": true,
+        "image_alignment": "right",
+        "image_height": "aspect",
+        "content_position": "center",
+        "bgcolor": "gradient",
+        "image_shadow_color": "#dddddd",
+        "section_visibility": "always",
+        "top_space_desktop": 60,
+        "bottom_space_desktop": 30,
+        "top_space_mobile": 30,
+        "bottom_space_mobile": 30
+      }
+    },
     "spotlight_TbQ8yU": {
       "type": "spotlight",
       "blocks": {
@@ -778,54 +826,6 @@
         "top_space_mobile": 30,
         "bottom_space_mobile": 30
       }
-    },
-    "image_with_text_FDMkW3": {
-      "type": "image-with-text",
-      "blocks": {
-        "heading_tAkpJn": {
-          "type": "heading",
-          "settings": {
-            "heading": "Which test is right you?",
-            "seo_heading": "h2"
-          }
-        },
-        "text_E8yNHf": {
-          "type": "text",
-          "settings": {
-            "content": "<p>Answer a few questions to help us recommend the best test for you.</p>"
-          }
-        },
-        "button_E4HQHL": {
-          "type": "button",
-          "settings": {
-            "btn_text": "Take the quiz",
-            "btn_link": "#",
-            "button_size": "med",
-            "mobile_button_size": "m-med"
-          }
-        }
-      },
-      "block_order": [
-        "heading_tAkpJn",
-        "text_E8yNHf",
-        "button_E4HQHL"
-      ],
-      "settings": {
-        "enable_fullwidth": false,
-        "image": "shopify://shop_images/Comp_Gut.jpg",
-        "image_shadow": true,
-        "enable_image_animation": true,
-        "image_alignment": "right",
-        "image_height": "aspect",
-        "content_position": "center",
-        "bgcolor": "gradient",
-        "image_shadow_color": "#dddddd",
-        "section_visibility": "always",
-        "top_space_desktop": 60,
-        "bottom_space_desktop": 30,
-        "top_space_mobile": 30,
-        "bottom_space_mobile": 30
-      }
     }
   },
   "order": [
@@ -837,6 +837,7 @@
     "gallery_carousel_h6CU9b",
     "image_banner_96V3yA",
     "rich_text_Qt98rJ",
+    "image_with_text_FDMkW3",
     "spotlight_TbQ8yU",
     "1737447265e68644fb",
     "image_with_text_4iEm8t",
@@ -846,7 +847,6 @@
     "spacer_dgYDWA",
     "08a794cb-be09-40d3-9dae-24ba5188a73d",
     "241580ea-bd0e-4db7-b075-509b6cb71c9c",
-    "9a1fe066-2f93-4cd9-9406-69df7c56cc79",
-    "image_with_text_FDMkW3"
+    "9a1fe066-2f93-4cd9-9406-69df7c56cc79"
   ]
 }
