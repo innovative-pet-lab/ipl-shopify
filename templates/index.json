@@ -785,15 +785,21 @@
         "heading_tAkpJn": {
           "type": "heading",
           "settings": {
-            "heading": "Image with text",
+            "heading": "Which test is right you?",
             "seo_heading": "h2"
+          }
+        },
+        "text_E8yNHf": {
+          "type": "text",
+          "settings": {
+            "content": "<p>Answer a few questions to help us recommend the best test for you.</p>"
           }
         },
         "button_E4HQHL": {
           "type": "button",
           "settings": {
-            "btn_text": "Button text",
-            "btn_link": "",
+            "btn_text": "Take the quiz",
+            "btn_link": "#",
             "button_size": "med",
             "mobile_button_size": "m-med"
           }
@@ -801,6 +807,7 @@
       },
       "block_order": [
         "heading_tAkpJn",
+        "text_E8yNHf",
         "button_E4HQHL"
       ],
       "settings": {
@@ -811,7 +818,7 @@
         "image_alignment": "right",
         "image_height": "aspect",
         "content_position": "center",
-        "bgcolor": "primary",
+        "bgcolor": "gradient",
         "image_shadow_color": "#dddddd",
         "section_visibility": "always",
         "top_space_desktop": 60,
