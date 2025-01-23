@@ -136,7 +136,7 @@
           "auto-trigger-on-exit-intent": false,
           "auto-trigger-on-scroll": false,
           "auto-trigger-scroll-value": 250,
-          "auto-trigger-after-x-seconds": false,
+          "auto-trigger-after-x-seconds": true,
           "auto-trigger-time-value": 10,
           "show-popup-how-many-times": "once",
           "auto-trigger-quiz": "#open-quiz-tools/perfect-product-finder/ipl-test-quize"
