@@ -254,10 +254,11 @@
                 {{ activeFilters }}
               </ul>
             {%- endif -%}
+
             <div class="row" data-collection-products>
               {% if collection.products_count > 0 %}
                 {% for product in collection.products %}
-                  <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4" data-product-grid>
+                  <div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-4" data-product-grid>
                     {%- liquid
                       if settings.enable_animation
                         assign animationAttr = 'data-aos="fade-up"'
