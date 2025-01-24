@@ -356,54 +356,6 @@
         "bottom_space_mobile": 30
       }
     },
-    "image_with_text_FDMkW3": {
-      "type": "image-with-text",
-      "blocks": {
-        "heading_tAkpJn": {
-          "type": "heading",
-          "settings": {
-            "heading": "Which test is right you?",
-            "seo_heading": "h2"
-          }
-        },
-        "text_E8yNHf": {
-          "type": "text",
-          "settings": {
-            "content": "<p>Answer a few questions to help us recommend the best test for you.</p>"
-          }
-        },
-        "button_E4HQHL": {
-          "type": "button",
-          "settings": {
-            "btn_text": "Take the quiz",
-            "btn_link": "#open-quiz-tools/perfect-product-finder/ipl-test-quize",
-            "button_size": "med",
-            "mobile_button_size": "m-med"
-          }
-        }
-      },
-      "block_order": [
-        "heading_tAkpJn",
-        "text_E8yNHf",
-        "button_E4HQHL"
-      ],
-      "settings": {
-        "enable_fullwidth": false,
-        "image": "shopify://shop_images/image_22.png",
-        "image_shadow": true,
-        "enable_image_animation": true,
-        "image_alignment": "left",
-        "image_height": "aspect",
-        "content_position": "center",
-        "bgcolor": "secondary",
-        "image_shadow_color": "#dddddd",
-        "section_visibility": "always",
-        "top_space_desktop": 60,
-        "bottom_space_desktop": 30,
-        "top_space_mobile": 30,
-        "bottom_space_mobile": 30
-      }
-    },
     "spotlight_TbQ8yU": {
       "type": "spotlight",
       "blocks": {
@@ -501,7 +453,6 @@
       "block_order": [
         "lantern_quiz_rMHnUw"
       ],
-      "disabled": true,
       "settings": {
         "top_space_desktop": 30,
         "bottom_space_desktop": 30,
@@ -839,7 +790,6 @@
     "gallery_carousel_h6CU9b",
     "image_banner_96V3yA",
     "rich_text_Qt98rJ",
-    "image_with_text_FDMkW3",
     "spotlight_TbQ8yU",
     "1737447265e68644fb",
     "image_with_text_4iEm8t",
