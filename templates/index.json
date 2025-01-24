@@ -444,7 +444,7 @@
             "top-margin-ppf": "20px",
             "bottom-margin-ppf": "20px",
             "width-ppf": "100%",
-            "min-height-ppf": "300px",
+            "min-height-ppf": "500px",
             "max-height-ppf": "",
             "no-scroll-ppf": true
           }
@@ -457,7 +457,7 @@
         "top_space_desktop": 30,
         "bottom_space_desktop": 30,
         "top_space_mobile": 30,
-        "bottom_space_mobile": 10
+        "bottom_space_mobile": 30
       }
     },
     "image_with_text_4iEm8t": {
