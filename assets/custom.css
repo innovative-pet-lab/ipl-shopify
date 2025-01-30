@@ -110,7 +110,7 @@
 
 .product-gallery__wrapper .swiper-button-wrap {
     position: absolute;
-    bottom: 1.9em;
+    bottom: 1.3em;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -223,6 +223,13 @@
     cursor: pointer;
 }
 
+@media (max-width: 767px) {
+    .product-gallery__thumbnails {
+        overflow: hidden;
+        width: 100%;
+        padding: 0.5rem;
+    }
+}
 
 @media (min-width: 768px) {
     .swiper-button-next-ipl, .swiper-button-prev-ipl {
