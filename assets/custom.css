@@ -94,6 +94,18 @@
 
 
 /* Product page styling **/
+.shopify-section-main-header.sticky-header-main {
+    min-height: 130px;
+}
+
+.shopify-section-main-header.sticky-header-main header {
+    height: 97px;
+}
+
+.shopify-section-main-header.sticky-header-main header .header__heading-link img {
+    width: 77px!important;
+}
+
 .product-gallery {
     display: flex;
     gap: 1rem;
@@ -274,6 +286,10 @@
 }
 
 /* Shop page styling **/
+.blog-filter-box h6 {
+    display: none;
+}
+
 .image-wrapper {
     background-color: #f9f9f9;
 }
@@ -310,4 +326,36 @@
     height: 100%;
     object-fit: cover;
     filter: grayscale(60%);
+}
+
+/* Research page */
+.filter-tags li a {
+    padding: 1rem!important;
+    border-radius: 6px!important;
+    font-size: 14px!important;
+    text-transform: capitalize;
+    background-color: var(--colorTextBody)!important;
+    color: #fff!important;
+    transition: background-color 0.5s ease-in-out;
+}
+
+.filter-tags li a:hover {
+   background-color: #26286e!important;
+   color:#fff!important;
+}
+
+.yv-blog-title {
+    text-transform: uppercase!important;
+}
+
+.yv-blog-date-small {
+    color: grey!important;
+    font-size: 12px;
+}
+
+.yv-blog-tags li a {
+    font-size: 13px!important;
+    text-transform: capitalize;
+    background-color: #26286e!important;
+    color: #fff!important;
 }

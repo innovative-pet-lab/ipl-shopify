@@ -48,16 +48,19 @@
                       </div>
                     {%- endif -%}                    
                   {%- endif -%}
-                  {%- if section.settings.show_date -%}
-                  <span class="yv-blog-date">{{ article.published_at | date: "%B %d, %Y" }}</span>
-                  {%- endif -%}
+           
                 </a>
                 {%- if article.comments_count > 0 and blog.comments_enabled? and section.settings.show_comment_count -%}
                   <p class="post-date">
                     {{ 'blogs.article.comments' | t: count: article.comments_count }}
                   </p>
                   {%- endif -%}
-                <h6 class="yv-blog-title">{{ article.title }}</h6> 
+                  <a href="{{- article.url -}}">
+                    <h6 class="yv-blog-title">{{ article.title }}</h6> 
+                  </a>
+                  {%- if section.settings.show_date -%}
+                    <span class="yv-blog-date-small">{{ article.published_at | date: "%B %d, %Y" }}</span>
+                    {%- endif -%}
                 <div class="yv-blog-card-text">
                   {%- if section.settings.show_excerpt -%}
                   <p class="yv-blog-desc">{{ article.excerpt_or_content | strip_html | truncatewords: 20 }}</p>
@@ -69,7 +72,7 @@
                       {%- endfor -%}
                     </ul>
                     {%- endif -%}    
-                  <a href="{{- article.url -}}" class="button xsmall-btn secondary-button">{{ 'blogs.article.read_more' | t }}</a>
+                  {% comment %} <a href="{{- article.url -}}" class="button xsmall-btn secondary-button">{{ 'blogs.article.read_more' | t }}</a> {% endcomment %}
                 </div>
               </div>
         </div>
