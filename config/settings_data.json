@@ -55,7 +55,7 @@
     "layout_style": "rounded",
     "layout_width": "fullwidth",
     "enable_animation": true,
-    "button_radius": 6,
+    "button_radius": 50,
     "product_image_style": "square",
     "product_image_size": "cover",
     "pass_through_product_images": true,
