@@ -48,7 +48,7 @@
     "type_base_spacing": "0",
     "type_base_size": 125,
     "type_base_line_height": 1.6,
-    "navigation_font_family": "--font-family",
+    "navigation_font_family": "--heading-font-family",
     "buttons_font_family": "--font-family",
     "tab_heading_font_family": "--font-family",
     "filters_heading_font_family": "--font-family",
