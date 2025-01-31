@@ -10,6 +10,32 @@
     max-width: 50%;
 }
 
+.yv-image-banner-heading {
+    font-size: 48px!important;
+    color: #000011!important;
+    font-weight: 700;
+    text-align: left!important;
+    line-height: 65.57px;
+}
+
+.yv-image-banner-desc p {
+    color:#000011!important;
+    text-align: left!important;
+}
+
+.yv-image-banner-button {
+    text-align: left;
+}
+
+.yv-image-banner-button .button {
+    text-transform: capitalize;
+    font-weight: 600;
+}
+
+.shopify-section-main-header header[header-transparent=true]:not(:hover) .nav-item .nav-link {
+    color: #1C1D31!important;
+}
+
 @media (min-width: 750px) {
 
     .sticky-header .header__heading-link img {
