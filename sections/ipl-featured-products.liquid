@@ -1,0 +1,270 @@
+<style>
+    .ipl-featured-products {
+        background-color: #F0F6F4;
+    }
+    .container {
+        max-width: 1440px;
+        margin: 0 auto;
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+    
+    .flex {
+        display: flex;
+    }
+    
+    .hero {
+        text-align: left;
+        margin-bottom: 3rem;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        color: #1a1a1a;
+        font-weight: 600;
+    }
+
+    .hero p {
+        font-size: 1.2rem;
+        color: #666;
+        max-width: 800px;
+        line-height: 1.5;
+    }
+
+    .swiper {
+        width: 100%;
+        padding: 1rem;
+        margin-bottom: 3rem;
+        position: relative;
+    }
+
+    .product-card {
+        background: white;
+        border-radius: 12px;
+        {% comment %} box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); {% endcomment %}
+        transition: transform 0.2s ease;
+        height: 100%;
+        border: 1px solid #73C7AD;
+    }
+
+    .product-card .product-info {
+        padding: 1rem;
+        text-align: center;
+    }
+
+    .product-card .product-info h2 {
+        font-size: 18px;
+        font-weight: 700;
+    }
+
+    .product-card:hover {
+        transform: translateY(-5px);
+        background-color: ;
+    }
+
+    .product-image {
+        width: 100%;
+        height: auto;
+        margin-bottom: 1.5rem;
+    }
+
+    .product-title {
+        font-size: 1.25rem;
+        color: #1a1a1a;
+        margin-bottom: 1rem;
+    }
+
+    .view-product {
+        display: inline-block;
+        color: #2bb7a4;
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.2s ease;
+    }
+
+    .view-product:hover {
+        color: #1a8f80;
+    }
+
+    .view-all-button {
+        display: block;
+        width: fit-content;
+        margin: 0 auto;
+        padding: 1rem 2rem;
+        background-color: #2e2b6e;
+        color: white;
+        text-decoration: none;
+        border-radius: 50px;
+        font-weight: 500;
+        transition: background-color 0.2s ease;
+    }
+
+    .view-all-button:hover {
+        background-color: #1f1c4d;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        color: #2e2b6e;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    .swiper-pagination-bullet-active {
+        background: #2e2b6e;
+    }
+
+    .swiper:hover .swiper-button-next,
+    .swiper:hover .swiper-button-prev {
+        opacity: 1;
+    }
+
+    @media (max-width: 768px) {
+        .hero h1 {
+            font-size: 2rem;
+        }
+
+        .hero p {
+            font-size: 1rem;
+        }
+    }
+</style>
+<div class="ipl-featured-products">
+    <div class="container">
+        <section class="hero flex">
+            <h1>What is your pet's poop telling you?</h1>
+            <p>Gut health drives 70% of immunity. Our tests check inflammation, immune response, and gut permeability to guide pet care.</p>
+        </section>
+
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="product-card">
+                        <img src="https://4135dc-4.myshopify.com/cdn/shop/files/inflammation_immunity.png?v=1738058110&width=800" alt="Comprehensive Gut Check for Dogs" class="product-image">
+                        <div class="product-info">
+                            <h2 class="product-title">Comprehensive Gut Check for Dogs</h2>
+                            <a href="#" class="view-product">View product</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="product-card">
+                        <img src="https://4135dc-4.myshopify.com/cdn/shop/files/inflammation_immunity.png?v=1738058110&width=800" alt="Comprehensive Gut Check for Dogs" class="product-image">
+                        <div class="product-info">
+                            <h2 class="product-title">Comprehensive Gut Check for Dogs</h2>
+                            <a href="#" class="view-product">View product</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="product-card">
+                        <img src="https://4135dc-4.myshopify.com/cdn/shop/files/inflammation_immunity.png?v=1738058110&width=800" alt="Comprehensive Gut Check for Dogs" class="product-image">
+                        <div class="product-info">
+                            <h2 class="product-title">Comprehensive Gut Check for Dogs</h2>
+                            <a href="#" class="view-product">View product</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="product-card">
+                        <img src="https://4135dc-4.myshopify.com/cdn/shop/files/inflammation_immunity.png?v=1738058110&width=800" alt="Comprehensive Gut Check for Dogs" class="product-image">
+                        <div class="product-info">
+                            <h2 class="product-title">Comprehensive Gut Check for Dogs</h2>
+                            <a href="#" class="view-product">View product</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="product-card">
+                        <img src="https://4135dc-4.myshopify.com/cdn/shop/files/inflammation_immunity.png?v=1738058110&width=800" alt="Comprehensive Gut Check for Dogs" class="product-image">
+                        <div class="product-info">
+                            <h2 class="product-title">Comprehensive Gut Check for Dogs</h2>
+                            <a href="#" class="view-product">View product</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="product-card">
+                        <img src="https://4135dc-4.myshopify.com/cdn/shop/files/inflammation_immunity.png?v=1738058110&width=800" alt="Comprehensive Gut Check for Dogs" class="product-image">
+                        <div class="product-info">
+                            <h2 class="product-title">Comprehensive Gut Check for Dogs</h2>
+                            <a href="#" class="view-product">View product</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="product-card">
+                        <img src="https://4135dc-4.myshopify.com/cdn/shop/files/inflammation_immunity.png?v=1738058110&width=800" alt="Comprehensive Gut Check for Dogs" class="product-image">
+                        <div class="product-info">
+                            <h2 class="product-title">Comprehensive Gut Check for Dogs</h2>
+                            <a href="#" class="view-product">View product</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            {% comment %} <div class="swiper-pagination"></div> {% endcomment %}
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+
+        <a href="#" class="view-all-button">View all products</a>
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.2.0/swiper-bundle.min.js"></script>
+<script>
+    const swiper = new Swiper('.swiper', {
+        slidesPerView: 1,
+        spaceBetween: 20,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        breakpoints: {
+            640: {
+                slidesPerView: 2,
+            },
+            1024: {
+                slidesPerView: 3.2
+            }
+        }
+    });
+</script>
+
+{% schema %}
+{
+  "name": "IPL featured products",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading_text",
+      "label": "Heading Text",
+      "default": "Welcome to Our Store!"
+    },
+    {
+      "type": "textarea",
+      "id": "body_text",
+      "label": "Body Text",
+      "default": "This is a customizable page for displaying your content."
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background Color",
+      "default": "#ffffff"
+    }
+  ],
+  "presets": [
+    {
+      "name": "IPL featured products",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}
