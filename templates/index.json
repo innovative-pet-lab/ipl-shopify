@@ -36,77 +36,12 @@
         "overlay_opacity": 50
       }
     },
-    "rich_text_dkFqM9": {
-      "type": "rich-text",
-      "blocks": {
-        "richtext_AyeT6e": {
-          "type": "richtext",
-          "settings": {
-            "heading": "Our Most Comprehensive Tests",
-            "seo_heading": "h2",
-            "content": "<p>Our comprehensive tests are the most thorough options available and the perfect place to start if you’re new to at-home testing. You’ll get a full picture of your pet’s gut health and a much better understanding of any health issues your pet may be dealing with. You’ll also get  great recommendations on how to help them thrive.</p>"
-          }
-        }
-      },
-      "block_order": [
-        "richtext_AyeT6e"
-      ],
+    "ipl_featured_products_bRYQWM": {
+      "type": "ipl-featured-products",
       "settings": {
-        "content_width": "container sm-container",
-        "content_alignment": "center",
-        "bgcolor": "primary",
-        "section_visibility": "always",
-        "top_space_desktop": 50,
-        "bottom_space_desktop": 0,
-        "top_space_mobile": 30,
-        "bottom_space_mobile": 30
-      }
-    },
-    "gallery_carousel_yAarLK": {
-      "type": "gallery-carousel",
-      "blocks": {
-        "image_HYA9aT": {
-          "type": "image",
-          "settings": {
-            "heading": "Comprehensive Review for Dogs",
-            "subheading": "$299",
-            "image": "shopify://shop_images/Product_Template_for_Size_copy.jpg",
-            "link": "shopify://products/comprehensive-review"
-          }
-        },
-        "image_nMeA9y": {
-          "type": "image",
-          "settings": {
-            "heading": "Comprehensive Review for Cats",
-            "subheading": "$249",
-            "image": "shopify://shop_images/Product_Template_for_Size_CCcat.jpg",
-            "link": "shopify://products/comprehensive-gut-check"
-          }
-        }
-      },
-      "block_order": [
-        "image_HYA9aT",
-        "image_nMeA9y"
-      ],
-      "settings": {
-        "enable_fullwidth": false,
-        "heading": "",
-        "seo_heading": "h2",
-        "heading_size": "h2",
-        "gallery_style": "stacked",
-        "slide_direction": "right",
-        "image_style": "square",
-        "image_size": "large",
-        "text_alignment": "center",
-        "enable_image_animation": true,
-        "image_crop": false,
-        "image_background": false,
-        "bgcolor": "primary",
-        "section_visibility": "always",
-        "top_space_desktop": 0,
-        "bottom_space_desktop": 45,
-        "top_space_mobile": 35,
-        "bottom_space_mobile": 35
+        "heading_text": "Welcome to Our Store!",
+        "body_text": "This is a customizable page for displaying your content.",
+        "background_color": "#ffffff"
       }
     },
     "featured_collections_banner_GmLUyx": {
@@ -783,15 +718,14 @@
   },
   "order": [
     "image_banner_CHrfUk",
-    "rich_text_dkFqM9",
-    "gallery_carousel_yAarLK",
+    "ipl_featured_products_bRYQWM",
+    "1737447265e68644fb",
     "featured_collections_banner_GmLUyx",
     "image_with_text_nNtNpb",
     "gallery_carousel_h6CU9b",
     "image_banner_96V3yA",
     "rich_text_Qt98rJ",
     "spotlight_TbQ8yU",
-    "1737447265e68644fb",
     "image_with_text_4iEm8t",
     "gallery_carousel_t8AGJU",
     "before_after_image_x76JTN",
