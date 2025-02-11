@@ -28,6 +28,7 @@
       "block_order": [
         "fec792eb-1815-4f3f-a124-64bc23d77ae3"
       ],
+      "disabled": true,
       "settings": {
         "show_bar": true,
         "desktop_height": "adapt_image",
