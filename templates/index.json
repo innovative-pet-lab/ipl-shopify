@@ -64,14 +64,22 @@
         "lantern_quiz_rMHnUw"
       ],
       "settings": {
-        "top_space_desktop": 30,
+        "top_space_desktop": 0,
         "bottom_space_desktop": 30,
         "top_space_mobile": 30,
-        "bottom_space_mobile": 30
+        "bottom_space_mobile": 0
       }
     },
     "ipl_meet_the_team_VBtzLK": {
       "type": "ipl-meet-the-team",
+      "settings": {
+        "heading_text": "Welcome to Our Store!",
+        "body_text": "This is a customizable page for displaying your content.",
+        "background_color": "#ffffff"
+      }
+    },
+    "ipl_our_process_qFY3kb": {
+      "type": "ipl-our-process",
       "settings": {
         "heading_text": "Welcome to Our Store!",
         "body_text": "This is a customizable page for displaying your content.",
@@ -213,14 +221,6 @@
         "bottom_space_desktop": 30,
         "top_space_mobile": 30,
         "bottom_space_mobile": 30
-      }
-    },
-    "ipl_our_process_qFY3kb": {
-      "type": "ipl-our-process",
-      "settings": {
-        "heading_text": "Welcome to Our Store!",
-        "body_text": "This is a customizable page for displaying your content.",
-        "background_color": "#ffffff"
       }
     }
   },
