@@ -42,7 +42,6 @@
     .product-card {
         background: white;
         border-radius: 12px;
-        {% comment %} box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); {% endcomment %}
         transition: transform 0.2s ease;
         height: 100%;
         border: 1px solid #73C7AD;
@@ -136,6 +135,7 @@
         }
     }
 </style>
+
 <div class="ipl-featured-products">
     <div class="container">
         <section class="hero flex">
@@ -143,79 +143,32 @@
             <p>Gut health drives 70% of immunity. Our tests check inflammation, immune response, and gut permeability to guide pet care.</p>
         </section>
 
+        {% assign featured_collection = collections['all'] %}
+        
+        {% if featured_collection and featured_collection.products.size > 0 %}
         <div class="swiper">
             <div class="swiper-wrapper">
+                {% for product in featured_collection.products %}
                 <div class="swiper-slide">
                     <div class="product-card">
-                        <img src="https://4135dc-4.myshopify.com/cdn/shop/files/inflammation_immunity.png?v=1738058110&width=800" alt="Comprehensive Gut Check for Dogs" class="product-image">
+                        <img src="{{ product.featured_image | img_url: '800x' }}" alt="{{ product.title }}" class="product-image">
                         <div class="product-info">
-                            <h2 class="product-title">Comprehensive Gut Check for Dogs</h2>
-                            <a href="#" class="view-product">View product</a>
+                            <h2 class="product-title">{{ product.title }}</h2>
+                            <a href="{{ product.url }}" class="view-product">View product</a>
                         </div>
                     </div>
                 </div>
-                <div class="swiper-slide">
-                    <div class="product-card">
-                        <img src="https://4135dc-4.myshopify.com/cdn/shop/files/inflammation_immunity.png?v=1738058110&width=800" alt="Comprehensive Gut Check for Dogs" class="product-image">
-                        <div class="product-info">
-                            <h2 class="product-title">Comprehensive Gut Check for Dogs</h2>
-                            <a href="#" class="view-product">View product</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="product-card">
-                        <img src="https://4135dc-4.myshopify.com/cdn/shop/files/inflammation_immunity.png?v=1738058110&width=800" alt="Comprehensive Gut Check for Dogs" class="product-image">
-                        <div class="product-info">
-                            <h2 class="product-title">Comprehensive Gut Check for Dogs</h2>
-                            <a href="#" class="view-product">View product</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="product-card">
-                        <img src="https://4135dc-4.myshopify.com/cdn/shop/files/inflammation_immunity.png?v=1738058110&width=800" alt="Comprehensive Gut Check for Dogs" class="product-image">
-                        <div class="product-info">
-                            <h2 class="product-title">Comprehensive Gut Check for Dogs</h2>
-                            <a href="#" class="view-product">View product</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="product-card">
-                        <img src="https://4135dc-4.myshopify.com/cdn/shop/files/inflammation_immunity.png?v=1738058110&width=800" alt="Comprehensive Gut Check for Dogs" class="product-image">
-                        <div class="product-info">
-                            <h2 class="product-title">Comprehensive Gut Check for Dogs</h2>
-                            <a href="#" class="view-product">View product</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="product-card">
-                        <img src="https://4135dc-4.myshopify.com/cdn/shop/files/inflammation_immunity.png?v=1738058110&width=800" alt="Comprehensive Gut Check for Dogs" class="product-image">
-                        <div class="product-info">
-                            <h2 class="product-title">Comprehensive Gut Check for Dogs</h2>
-                            <a href="#" class="view-product">View product</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="product-card">
-                        <img src="https://4135dc-4.myshopify.com/cdn/shop/files/inflammation_immunity.png?v=1738058110&width=800" alt="Comprehensive Gut Check for Dogs" class="product-image">
-                        <div class="product-info">
-                            <h2 class="product-title">Comprehensive Gut Check for Dogs</h2>
-                            <a href="#" class="view-product">View product</a>
-                        </div>
-                    </div>
-                </div>
-
+                {% endfor %}
             </div>
-            {% comment %} <div class="swiper-pagination"></div> {% endcomment %}
+
             <div class="swiper-button-prev"></div>
             <div class="swiper-button-next"></div>
         </div>
+        {% else %}
+            <p>No featured products available.</p>
+        {% endif %}
 
-        <a href="#" class="view-all-button">View all products</a>
+        <a href="/collections/featured-products" class="view-all-button">View all products</a>
     </div>
 </div>
 

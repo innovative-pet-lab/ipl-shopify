@@ -1,0 +1,181 @@
+
+<style>
+    .ipl-meet-the-team-container {
+        max-width: 100%;
+        margin: 2rem auto;
+        padding: 4rem 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 2rem;
+        min-height: 62vh;
+        background-image: url(https://cdn.shopify.com/s/files/1/0685/6497/5842/files/image_27.png?v=1739271141);
+        background-size: 60%;
+        background-position: right;
+        background-repeat: no-repeat;
+    }
+
+    .ipl-meet-the-team-container img {
+        width: 59%;
+        position: absolute;
+        right: 0;
+    }
+    
+    .content {
+        flex: 1;
+        max-width: 800px;
+        background: transparent;
+        padding: 1rem;
+        border-radius: 1rem;
+        position: absolute;
+        padding-left: 7rem;
+    }
+
+    .title {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: #1a1f36;
+        line-height: 1.2;
+        margin-bottom: 1.5rem;
+    }
+
+    .description {
+        font-size: 1.125rem;
+        color: #4a5568;
+        line-height: 1.6;
+        margin-bottom: 2rem;
+    }
+
+    .cta-button {
+        display: inline-block;
+        padding: 0.875rem 2rem;
+        background-color: #2b2f6c;
+        color: white;
+        text-decoration: none;
+        border-radius: 9999px;
+        font-weight: 600;
+        transition: background-color 0.3s ease;
+    }
+
+    .cta-button:hover {
+        background-color: #1e2252;
+    }
+
+    .image-section {
+        flex: 1;
+        max-width: 600px;
+    }
+
+    .image-section img {
+        width: 100%;
+        height: auto;
+        border-radius: 1rem;
+        object-fit: cover;
+    }
+
+    @media (max-width: 768px) {
+        .container {
+            flex-direction: column;
+            text-align: center;
+            padding: 2rem 1rem;
+        }
+
+        .title {
+            font-size: 2rem;
+        }
+
+        .description {
+            font-size: 1rem;
+        }
+
+        .image-section {
+            order: -1;
+        }
+    }
+
+    .ipl-meet-the-team-usp-bar {
+        padding: 1.5rem;
+        background-color: #EBF7F9;
+        margin-top: 4rem;
+        margin-bottom: 4rem;
+    }
+
+    .ipl-meet-the-team-usp-bar .container {
+        max-width: 1080px;
+        margin: auto;
+        display: block;
+        padding: 0;
+    }
+
+    .ipl-meet-the-team-usp-bar .container .flex {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .ipl-meet-the-team-usp-bar .container .flex .col_ {
+        color: #26286E;
+        font-size: 32px;
+
+    }
+</style>
+
+<div class="ipl-meet-the-team-container">
+    <img src="https://cdn.shopify.com/s/files/1/0685/6497/5842/files/image_26.png?v=1739271839" alt="Team members with their pets">
+    <div class="content">
+        <h1 class="title">A science-driven pet wellness company with a collective 100+ years of clinical laboratory experience.</h1>
+        <p class="description">Innovation Pet Lab founders bring their extensive experience in human diagnostic medicine to our mission of revolutionizing pet wellness care.</p>
+        <a href="#" class="cta-button">Meet the team</a>
+    </div>
+    <div class="image-section">
+    </div>
+</div>
+<div class="ipl-meet-the-team-usp-bar">
+    <div class="container">
+        <div class="flex">
+            <div class="col_">Woman-founded
+            </div>
+            <svg width="2" height="32" viewBox="0 0 2 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.96513 -1.90735e-06V32H0.045125V-1.90735e-06H1.96513Z" fill="#26286E"/>
+            </svg>
+            <div class="col_">Woman-owned
+            </div>
+            <svg width="2" height="32" viewBox="0 0 2 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.96513 -1.90735e-06V32H0.045125V-1.90735e-06H1.96513Z" fill="#26286E"/>
+            </svg>
+            <div class="col_">Woman-led</div>
+        </div>
+    </div>
+</div>
+
+{% schema %}
+{
+  "name": "IPL Meet the Team",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading_text",
+      "label": "Heading Text",
+      "default": "Welcome to Our Store!"
+    },
+    {
+      "type": "textarea",
+      "id": "body_text",
+      "label": "Body Text",
+      "default": "This is a customizable page for displaying your content."
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background Color",
+      "default": "#ffffff"
+    }
+  ],
+  "presets": [
+    {
+      "name": "IPL Meet the Team",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}
