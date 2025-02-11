@@ -171,57 +171,6 @@
         "top_space_mobile": 30,
         "bottom_space_mobile": 30
       }
-    },
-    "9a1fe066-2f93-4cd9-9406-69df7c56cc79": {
-      "type": "text-with-icons",
-      "blocks": {
-        "template--16809124069669__9a1fe066-2f93-4cd9-9406-69df7c56cc79-16678017855c9a4f01-0": {
-          "type": "column",
-          "settings": {
-            "icon": "paw-colored",
-            "heading": "BACKED BY SCIENCE",
-            "seo_heading": "h2",
-            "subtext": ""
-          }
-        },
-        "template--16809124069669__9a1fe066-2f93-4cd9-9406-69df7c56cc79-16678017855c9a4f01-1": {
-          "type": "column",
-          "settings": {
-            "icon": "shipping",
-            "heading": "STANDARD SHIPPING INCLUDED",
-            "seo_heading": "h2",
-            "subtext": ""
-          }
-        },
-        "template--16809124069669__9a1fe066-2f93-4cd9-9406-69df7c56cc79-16678017855c9a4f01-2": {
-          "type": "column",
-          "settings": {
-            "icon": "thumb",
-            "heading": "SUBSCRIBE FOR UPDATES",
-            "seo_heading": "h2",
-            "subtext": ""
-          }
-        }
-      },
-      "block_order": [
-        "template--16809124069669__9a1fe066-2f93-4cd9-9406-69df7c56cc79-16678017855c9a4f01-0",
-        "template--16809124069669__9a1fe066-2f93-4cd9-9406-69df7c56cc79-16678017855c9a4f01-1",
-        "template--16809124069669__9a1fe066-2f93-4cd9-9406-69df7c56cc79-16678017855c9a4f01-2"
-      ],
-      "settings": {
-        "column_background": false,
-        "mobile_column_count": "1",
-        "icon_background": false,
-        "icon_position": "top",
-        "bgcolor": "primary",
-        "column_background_color": "",
-        "icon_background_color": "",
-        "section_visibility": "always",
-        "top_space_desktop": 30,
-        "bottom_space_desktop": 30,
-        "top_space_mobile": 30,
-        "bottom_space_mobile": 30
-      }
     }
   },
   "order": [
@@ -231,7 +180,6 @@
     "ipl_meet_the_team_VBtzLK",
     "ipl_our_process_qFY3kb",
     "08a794cb-be09-40d3-9dae-24ba5188a73d",
-    "241580ea-bd0e-4db7-b075-509b6cb71c9c",
-    "9a1fe066-2f93-4cd9-9406-69df7c56cc79"
+    "241580ea-bd0e-4db7-b075-509b6cb71c9c"
   ]
 }
