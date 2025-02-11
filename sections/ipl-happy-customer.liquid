@@ -1,0 +1,193 @@
+
+<style>
+    .section-wrapper {
+        background-color: #F0F6F4;
+    }
+    .testimonials-section {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 40px 20px;
+    }
+
+    .testimonials-section h1 {
+        text-align: center;
+        font-size: 48px;
+        font-weight: bold;
+        color: #000;
+    }
+
+    h1 {
+        text-align: center;
+        font-size: 2.5rem;
+        margin-bottom: 40px;
+        color: #333;
+    }
+
+    .swiper {
+        width: 100%;
+        padding: 40px 0;
+    }
+
+    .testimonial-slide {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+        padding: 0 20px;
+    }
+
+    .testimonial-content {
+        flex: 1;
+        max-width: 600px;
+    }
+
+    .quote {
+        font-size: 1.5rem;
+        line-height: 1.6;
+        color: #333;
+        margin-bottom: 20px;
+        position: relative;
+    }
+
+    .quote::before {
+        content: '"';
+        font-size: 6rem;
+        color: #e5e5e5;
+        position: absolute;
+        left: -40px;
+        top: -40px;
+        z-index: -1;
+    }
+
+    .author {
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: #666;
+    }
+
+    .rating {
+        color: #ffd700;
+        font-size: 1.2rem;
+        margin: 10px 0;
+    }
+
+    .testimonial-image {
+        flex: 1;
+        max-width: 500px;
+    }
+
+    .testimonial-image img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+    }
+
+    .swiper-pagination {
+        position: relative;
+        margin-top: 20px;
+    }
+
+    .swiper-pagination-bullet {
+        width: 12px;
+        height: 12px;
+        background: #ddd;
+        opacity: 1;
+    }
+
+    .swiper-pagination-bullet-active {
+        background: #4CAF50;
+    }
+</style>
+<div class="section-wrapper">
+    <section class="testimonials-section">
+        <h1>Happy Customers</h1>
+        <div class="swiper-testi">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="testimonial-slide">
+                        <div class="testimonial-content">
+                            <div class="quote">A Game-Changer in Pet-Health: Innovative Pet Lab! As a holistic veterinarian with a focus on gut health, I can't recommend Innovative Pet Lab's stool tests enough...</div>
+                            <div class="author">Dr. Katie Woodley, DVM</div>
+                            <div class="rating">★★★★★</div>
+                        </div>
+                        <div class="testimonial-image">
+                            <img src="https://cdn.shopify.com/s/files/1/0685/6497/5842/files/image_17.png?v=1739277886">
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="testimonial-slide">
+                        <div class="testimonial-content">
+                            <div class="quote">The comprehensive gut health analysis provided by Innovative Pet Lab has revolutionized how I approach pet wellness. Their detailed reports give me exactly what I need...</div>
+                            <div class="author">Dr. Sarah Martinez, DVM</div>
+                            <div class="rating">★★★★★</div>
+                        </div>
+                        <div class="testimonial-image">
+                            <img src="https://cdn.shopify.com/s/files/1/0685/6497/5842/files/image_17.png?v=1739277886">
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="testimonial-slide">
+                        <div class="testimonial-content">
+                            <div class="quote">Finally, a lab that understands the importance of gut health in overall pet wellness! The test results are easy to interpret and the customer service is outstanding...</div>
+                            <div class="author">Dr. Michael Chen, DVM</div>
+                            <div class="rating">★★★★★</div>
+                        </div>
+                        <div class="testimonial-image">
+                            <img src="https://cdn.shopify.com/s/files/1/0685/6497/5842/files/image_17.png?v=1739277886">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+</div>
+<script>
+    new Swiper('.swiper-testi', {
+        loop: true,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true
+        },
+        autoplay: {
+            delay: 5000,
+            disableOnInteraction: false
+        },
+        effect: 'fade',
+        fadeEffect: {
+            crossFade: true
+        }
+    });
+</script>
+{% schema %}
+{
+  "name": "IPL happy customer",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading_text",
+      "label": "Heading Text",
+      "default": "Welcome to Our Store!"
+    },
+    {
+      "type": "textarea",
+      "id": "body_text",
+      "label": "Body Text",
+      "default": "This is a customizable page for displaying your content."
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background Color",
+      "default": "#ffffff"
+    }
+  ],
+  "presets": [
+    {
+      "name": "IPL happy customer",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}

@@ -2,6 +2,11 @@
     .ipl-featured-products {
         background-color: #F0F6F4;
     }
+
+    .ipl-featured-products h1 {
+        text-align: left;
+    }
+
     .container {
         max-width: 1440px;
         margin: 0 auto;
@@ -42,7 +47,7 @@
     .product-card {
         background: white;
         border-radius: 12px;
-        transition: transform 0.2s ease;
+        transition: transform 0.3s ease;
         height: 100%;
         border: 1px solid #73C7AD;
     }
@@ -58,14 +63,19 @@
     }
 
     .product-card:hover {
-        transform: translateY(-5px);
-        background-color: #73C7AD;
+        background-color: #EBEBEB;
+    }
+
+    .product-card:hover img {
+        transform: rotate(-10deg) scale(1.1);
+        transition: transform 0.3s ease;
     }
 
     .product-image {
-        width: 100%;
+        width: 85%;
         height: auto;
-        margin-bottom: 1.5rem;
+        margin: auto;
+        display: block;
     }
 
     .product-title {
