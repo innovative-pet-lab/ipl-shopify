@@ -327,6 +327,7 @@ header {
 .dropdown-menu-item svg {
     width: 8px;
     vertical-align: middle;
+    color: #1C1D31;
 }
 
 .header__icons {
@@ -461,7 +462,7 @@ header {
     margin-right: 10px;
     margin-left: 0;
     padding: 17px 30px 17px 0;
-    font-size: 16px;
+    font-size: 18px;
     line-height: 24px;
 }
 
@@ -696,7 +697,7 @@ body:not(.sticky-header, .header2) .shopify-section-main-header header[header-tr
     align-content: center;
     display: flex;
     align-items: center;
-    font-size: 16px;
+    font-size: 18px;
     background: 0 0;
 }
 

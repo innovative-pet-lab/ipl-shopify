@@ -243,7 +243,7 @@
   {% if section.settings.menu_navigations == 'hover' %}
   <div class="yv-dropdown-detail">
   <a href="{{ link.url }}" class="nav-link dropdown-menu-item">
-    {{ link.title | escape }}
+    <span>{{ link.title | escape }}</span>
     {% if menubadge != blank %}
       {{ menubadge }}
     {% endif  %}
@@ -266,7 +266,7 @@
     {% else %}
     <details class="yv-dropdown-detail">
   <summary class="nav-link dropdown-menu-item">
-    {{ link.title | escape }}
+    <span>{{ link.title | escape }}</span>
     {% if menubadge != blank %}
       {{ menubadge }}
     {% endif  %}
