@@ -1,0 +1,87 @@
+<style>
+    .ipl-trust-your-gut {
+        padding: 20px;
+        background-color: #f9f9f9;
+        text-align: center;
+    }
+    
+    .ipl-trust-your-gut h2 {
+        font-size: 2em;
+        margin-bottom: 20px;
+    }
+    
+    /* Grid container */
+    .product-grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+    
+    
+    /* Responsive adjustments */
+    @media (max-width: 992px) {
+        .product-card {
+        width: calc(50% - 40px);
+        }
+    }
+    
+    @media (max-width: 600px) {
+        .product-card {
+        width: 100%;
+        }
+    }
+</style>    
+
+<section class="ipl-trust-your-gut">
+    <h2>Trust your gut, check theirs</h2>
+    <div class="wrapper-grid">
+      <div class="trust-card">
+        <svg width="36" height="33" viewBox="0 0 36 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M14.0399 32.2707C21.5391 32.2707 27.6183 26.1914 27.6183 18.6922C27.6183 11.1931 21.5391 5.11377 14.0399 5.11377C6.54071 5.11377 0.461426 11.1931 0.461426 18.6922C0.461426 26.1914 6.54071 32.2707 14.0399 32.2707Z" fill="#CEE4DE"/>
+          <path d="M14.1934 29.1874L14.0212 28.8939C11.3904 24.4116 4.39949 14.8995 4.32887 14.8039L4.22803 14.6669L6.6098 12.3131L14.1492 17.5776C18.8962 11.4177 23.3248 7.18679 26.2136 4.71609C29.3736 2.0134 31.4306 0.769171 31.4514 0.757248L31.4982 0.729248H35.5383L35.1524 1.07294C25.2271 9.9134 14.4691 28.7029 14.362 28.8917L14.1934 29.1874Z" fill="#03958D"/>
+        </svg>
+        <p>A brief description of the product goes here.</p>
+      </div>
+      <div class="trust-card">
+        <img src="https://via.placeholder.com/300x200" alt="Product 2">
+        <p>A brief description of the product goes here.</p>
+      </div>
+      <div class="trust-card">
+        <img src="https://via.placeholder.com/300x200" alt="Product 3">
+        <p>A brief description of the product goes here.</p>
+      </div>
+    </div>
+  </section>
+
+{% schema %}
+{
+  "name": "IPL trust your gut",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading_text",
+      "label": "Heading Text",
+      "default": "Welcome to Our Store!"
+    },
+    {
+      "type": "textarea",
+      "id": "body_text",
+      "label": "Body Text",
+      "default": "This is a customizable page for displaying your content."
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background Color",
+      "default": "#ffffff"
+    }
+  ],
+  "presets": [
+    {
+      "name": "IPL trust your gut",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}
