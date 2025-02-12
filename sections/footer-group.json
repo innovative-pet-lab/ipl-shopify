@@ -62,10 +62,10 @@
       "settings": {
         "image_width": 110,
         "subtext": "",
-        "enable_language_selector": true,
+        "enable_language_selector": false,
         "show_language_background": true,
-        "enable_currency_selector": true,
-        "show_currency_background": true,
+        "enable_currency_selector": false,
+        "show_currency_background": false,
         "payment_enable": false,
         "hide_copyright_content": true,
         "custom_copyright_content": "",
