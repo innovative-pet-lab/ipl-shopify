@@ -86,71 +86,12 @@
         "background_color": "#ffffff"
       }
     },
-    "08a794cb-be09-40d3-9dae-24ba5188a73d": {
-      "type": "testimonials",
-      "blocks": {
-        "template--16809124069669__08a794cb-be09-40d3-9dae-24ba5188a73d-1667806302f1e7ea42-0": {
-          "type": "quote",
-          "settings": {
-            "rating": 5,
-            "message": "\"A Game-Changer in Pet-Health: Innovative Pet Lab! As a holistic veterinarian with a focus on gut health, I can't recommend Innovative Pet Lab's stool tests enough...\"",
-            "author": "Dr. Katie Woodley, DVM",
-            "author_city": "",
-            "image": "shopify://shop_images/Untitled-design-32-e1697560377662-150x150.png"
-          }
-        },
-        "template--16809124069669__08a794cb-be09-40d3-9dae-24ba5188a73d-1667806302f1e7ea42-1": {
-          "type": "quote",
-          "settings": {
-            "rating": 5,
-            "message": "\"My dog Nash struggled with skin allergies since I got him and it took forever to figure out something that worked for him...\"",
-            "author": "Jinx and Nash",
-            "author_city": "",
-            "image": "shopify://shop_images/Untitled-design-36-e1697560666987-150x150.png"
-          }
-        },
-        "template--16809124069669__08a794cb-be09-40d3-9dae-24ba5188a73d-1667806302f1e7ea42-2": {
-          "type": "quote",
-          "settings": {
-            "rating": 5,
-            "message": "\"Lou Lou is so much happier after we figured out that she had lots of inflammation. After starting her treatment we noticed a difference in her skin and scratching issues...\"",
-            "author": "Debbie Depree",
-            "author_city": "",
-            "image": "shopify://shop_images/Untitled-design-35-e1697560215411-150x150.png"
-          }
-        },
-        "template--16809124069669__08a794cb-be09-40d3-9dae-24ba5188a73d-1667806302f1e7ea42-3": {
-          "type": "quote",
-          "settings": {
-            "rating": 5,
-            "message": "\"We are so excited that IPL is available to pups like us! Our mom is obsessed with our gut health and now we have a way to know the reason...\"",
-            "author": "Axel, Zeppelin, and Aspen",
-            "author_city": "",
-            "image": "shopify://shop_images/Untitled-design-34-e1697560274929-150x150.png"
-          }
-        }
-      },
-      "block_order": [
-        "template--16809124069669__08a794cb-be09-40d3-9dae-24ba5188a73d-1667806302f1e7ea42-0",
-        "template--16809124069669__08a794cb-be09-40d3-9dae-24ba5188a73d-1667806302f1e7ea42-1",
-        "template--16809124069669__08a794cb-be09-40d3-9dae-24ba5188a73d-1667806302f1e7ea42-2",
-        "template--16809124069669__08a794cb-be09-40d3-9dae-24ba5188a73d-1667806302f1e7ea42-3"
-      ],
+    "ipl_happy_customer_CMWRRC": {
+      "type": "ipl-happy-customer",
       "settings": {
-        "heading": "Happy Customers",
-        "seo_heading": "h2",
-        "heading_size": "h2",
-        "slider_style": "style2",
-        "column_count": "column1",
-        "nav_style": "arrow",
-        "divider_top": false,
-        "divider_bottom": false,
-        "bgcolor": "secondary",
-        "section_visibility": "always",
-        "top_space_desktop": 60,
-        "bottom_space_desktop": 60,
-        "top_space_mobile": 45,
-        "bottom_space_mobile": 30
+        "heading_text": "Welcome to Our Store!",
+        "body_text": "This is a customizable page for displaying your content.",
+        "background_color": "#ffffff"
       }
     },
     "241580ea-bd0e-4db7-b075-509b6cb71c9c": {
@@ -171,6 +112,14 @@
         "top_space_mobile": 30,
         "bottom_space_mobile": 30
       }
+    },
+    "ipl_trust_your_gut_mr4iJR": {
+      "type": "ipl-trust-your-gut",
+      "settings": {
+        "heading_text": "Welcome to Our Store!",
+        "body_text": "This is a customizable page for displaying your content.",
+        "background_color": "#ffffff"
+      }
     }
   },
   "order": [
@@ -179,7 +128,8 @@
     "1737447265e68644fb",
     "ipl_meet_the_team_VBtzLK",
     "ipl_our_process_qFY3kb",
-    "08a794cb-be09-40d3-9dae-24ba5188a73d",
+    "ipl_happy_customer_CMWRRC",
+    "ipl_trust_your_gut_mr4iJR",
     "241580ea-bd0e-4db7-b075-509b6cb71c9c"
   ]
 }
