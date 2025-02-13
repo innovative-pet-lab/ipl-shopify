@@ -1,3 +1,14 @@
+@font-face {
+    font-family: 'AvenirNext';
+    src: url('https://cdn.shopify.com/s/files/1/0685/6497/5842/files/Avenir_Next.ttc?v=1739443798') format('ttc');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.template_index {
+    background: #fafafa;
+}
+
 .navbar-nav {
     justify-content: left!important;
 }
@@ -16,6 +27,7 @@
     font-weight: 700;
     text-align: left!important;
     line-height: 65.57px;
+    margin-bottom: 0;
 }
 
 .yv-image-banner-desc p {
@@ -28,8 +40,7 @@
 }
 
 .yv-image-banner-button .button {
-    text-transform: capitalize;
-    font-weight: 600;
+    text-transform: unset;
 }
 
 .nav-item .nav-link span {

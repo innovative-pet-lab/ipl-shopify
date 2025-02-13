@@ -263,9 +263,9 @@
     .yv-footer-top-box{
       border-color:{{ section.settings.footer_text | color_modify : 'alpha' ,0.1 }};
     }
-  #shopify-section-{{ section.id }} .yv-footer-bottom-box{
-    border-top:1px solid {{ section.settings.footer_text | color_modify : 'alpha' ,0.1 }};
-  }  
+    {% comment %} #shopify-section-{{ section.id }} .yv-footer-bottom-box{
+      border-top:1px solid {{ section.settings.footer_text | color_modify : 'alpha' ,0.1 }};
+    }   {% endcomment %}
     {% liquid
       assign backgroundColor = 'transparent'
       if section.settings.show_language_background

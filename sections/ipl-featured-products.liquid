@@ -50,6 +50,7 @@
         transition: transform 0.3s ease;
         height: 100%;
         border: 1px solid #73C7AD;
+        overflow: hidden;
     }
 
     .product-card .product-info {
@@ -71,6 +72,14 @@
         transition: transform 0.3s ease;
     }
 
+    .product-card:hover .product-info .view-product {
+        padding: 5px 28px;
+        border: 2px solid #03B0A7;
+        border-radius: 80px;
+        background-color: #e6f7f6;
+        color: #03b0a7;
+    }
+
     .product-image {
         padding: 2.4rem 1rem;
     }
@@ -83,7 +92,6 @@
 
     .product-card:hover .view-product {
         color: white;
-        
     }
     
     .view-product {
@@ -93,6 +101,8 @@
         font-weight: 500;
         transition: color 0.2s ease;
         margin-bottom: 1.5rem;
+        padding: 5px 28px;
+        border: 2px solid transparent;
     }
 
     .view-product:hover {
