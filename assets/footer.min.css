@@ -38,7 +38,9 @@ footer {
     display: inline-block;
     margin-bottom: 10px;
     transition: padding .3s;
-    position: relative
+    position: relative;
+    color: #99D5E0!important;
+    font-size: 20px!important;
 }
 
 .yv-newsletter-text {

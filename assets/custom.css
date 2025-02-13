@@ -11,6 +11,7 @@
 
 .navbar-nav {
     justify-content: left!important;
+    padding-left: 2rem;
 }
 
 .right-menu {
@@ -45,7 +46,7 @@
 
 .nav-item .nav-link span {
    font-size: 18px;
-   font-weight: 500;
+   font-weight: 600;
 }
 
 @media (min-width: 750px) {
@@ -413,6 +414,7 @@
 /* Homepage Newsletter section */
 .newsletter-section {
     padding: 2rem 0 8rem 0!important;
+    background-color: #FAFAFA!important;
 }
 
 .newsletter-section h2 {
@@ -420,4 +422,14 @@
     font-size: 48px;
     font-weight: bold;
     color: #000;
+}
+
+.newsletter-section .yv-newsletter-input .form-control {
+    border-radius: 80px;
+    border-width: 2px;
+    border-color: #99D5E0;
+}
+
+.newsletter-section .center-heading p {
+    font-size: 24px;
 }
