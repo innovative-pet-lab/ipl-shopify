@@ -14,8 +14,14 @@
         padding-bottom: 6rem;
     }
     
-    .flex {
+    .hero.flex {
         display: flex;
+    }
+
+    @media (max-width: 768px) {
+        .hero.flex {
+            flex-wrap: wrap;
+        }
     }
     
     .hero {
@@ -144,11 +150,18 @@
 
     @media (max-width: 768px) {
         .hero h1 {
-            font-size: 2rem;
+            font-size: 24px;
+            text-align: center;
         }
-
         .hero p {
-            font-size: 1rem;
+            font-size: 14px;
+            text-align: center;
+        }
+        .ipl-featured-products .container {
+            padding: 2rem 1rem 1rem 1rem;
+        }
+        .swiper {
+            padding: 0!important;
         }
     }
 </style>
@@ -192,7 +205,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.2.0/swiper-bundle.min.js"></script>
 <script>
     const swiper = new Swiper('.swiper', {
-        slidesPerView: 1,
+        slidesPerView: 1.5,
         spaceBetween: 20,
         pagination: {
             el: '.swiper-pagination',
@@ -203,8 +216,8 @@
             prevEl: '.swiper-button-prev',
         },
         breakpoints: {
-            640: {
-                slidesPerView: 2,
+            768: {
+                slidesPerView: 1.5,
             },
             1024: {
                 slidesPerView: 3.2
@@ -238,8 +251,7 @@
   ],
   "presets": [
     {
-      "name": "IPL featured products",
-      "category": "Custom"
+      "name": "IPL featured products"    
     }
   ]
 }

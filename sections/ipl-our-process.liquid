@@ -15,9 +15,14 @@
             .process-grid {
                 margin-top: 2rem;
                 margin-bottom: 2rem;
-                display: grid;
-                grid-template-columns: repeat(3, 1fr);
+                display: flex;
+                flex-wrap: wrap;
                 gap: 48px;
+                justify-content: space-between;
+            }
+            
+            .process-grid > * {
+                flex: 1 1 calc(33.33% - 32px); /* Adjust width for 3 columns with gap */
             }
     
             .process-item {

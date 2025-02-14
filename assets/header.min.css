@@ -2623,7 +2623,7 @@ header #registerForm {
         display: none;
     }
     .header__heading-link img {
-        max-width: 150px;
+        max-width: 50%;
     }
     .navigation__header {
         padding: 18px 0;
