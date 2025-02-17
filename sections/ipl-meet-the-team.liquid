@@ -25,7 +25,7 @@
         right: 0;
     }
     
-    .content {
+    .ipl-meet-the-team-container .content {
         flex: 1;
         max-width: 800px;
         background: transparent;
@@ -34,7 +34,15 @@
         position: absolute;
         padding-left: 7rem;
     }
-
+    @media (max-width: 768px) {
+        .ipl-meet-the-team-container .content {
+            padding-left: 0;
+        }
+        .ipl-meet-the-team-container img {
+            display: none;
+        }
+    }
+    
     .title {
         font-size: 2.5rem;
         font-weight: 700;
@@ -103,7 +111,13 @@
         margin-top: 6rem;
         margin-bottom: 4rem;
     }
-
+    @media (max-width: 768px) {
+        .ipl-meet-the-team-usp-bar {
+            margin-bottom: 0;
+            padding: 0;
+        }
+    }
+    
     .ipl-meet-the-team-usp-bar .container {
         max-width: 1080px;
         margin: auto;
@@ -120,6 +134,19 @@
     .ipl-meet-the-team-usp-bar .container .flex .col_ {
         color: #26286E;
         font-size: 32px;
+    }
+    @media (max-width: 768px) {
+        .ipl-meet-the-team-usp-bar {
+            margin-top: 0;
+            padding: 0 1rem;
+        }
+        .ipl-meet-the-team-usp-bar .container .flex .col_ {
+            font-size: 16px;
+            padding: 0.5rem;
+        }
+        .ipl-meet-the-team-usp-bar .container .flex svg {
+            height: 16px;
+        }
     }
 </style>
 
