@@ -38,6 +38,26 @@
         gap: 40px;
         padding: 0 20px;
     }
+    @media (max-width: 768px) {
+        .testimonial-slide {
+            flex-direction: column;
+        }
+        .testimonials-section h1 {
+            font-size: 24px;
+        }
+        .testimonials-section {
+            padding: 1rem;
+        }
+        .quote, .author {
+            font-size: 20px!important;
+        }
+        .testimonial-content {
+            text-align: center;
+        }
+        .quote::before {
+            left: -13px!important;
+        }
+    }
 
     .testimonial-content {
         flex: 1;

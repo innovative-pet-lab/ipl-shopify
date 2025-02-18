@@ -1559,6 +1559,8 @@ ul.yv-product-meta,.yv-content-body ul.yv-product-meta {
     }
     .container-fluid {
         max-width: 95%;
+        padding-bottom: 1rem;
+        margin-top: 1rem;
     }
     .container {
         max-width: 950px;

@@ -422,13 +422,12 @@ header {
 .wrapper-top-cart a {
     display: flex;
     align-items: center;
-    width: 44px;
-    height: 44px;
+    width: 50px;
+    height: 50px;
     justify-content: center;
 }
 
 .top-header .nav__header {
-    /*   border-top: 1px solid rgb(100 100 100 / 9%); */
     box-shadow: -1px 0px 2px #0000004d;
 }
 
@@ -2379,7 +2378,7 @@ header #registerForm {
         max-width: 90%;
     }
     .nav-item .nav-link {
-        margin: 0 5px;
+        margin: 0 15px;
     }
     .yv-megamenu-product-img {
         min-width: 70px;

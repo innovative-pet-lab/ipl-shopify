@@ -1,7 +1,21 @@
 @font-face {
-    font-family: 'AvenirNext';
-    src: url('https://cdn.shopify.com/s/files/1/0685/6497/5842/files/Avenir_Next.ttc?v=1739443798') format('ttc');
-    font-weight: normal;
+    font-family: 'Avenir Light';
+    src: url('https://cdn.shopify.com/s/files/1/0685/6497/5842/files/Avenir-Light.ttf?v=1739885918') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Avenir Medium';
+    src: url('https://cdn.shopify.com/s/files/1/0685/6497/5842/files/Avenir-Medium.ttf?v=1739885918') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Avenir Next';
+    src: url('https://cdn.shopify.com/s/files/1/0685/6497/5842/files/AvenirNext-Regular.ttf?v=1739885918') format('truetype');
+    font-weight: 400;
     font-style: normal;
 }
 
@@ -96,13 +110,13 @@
 
 .nav-item .nav-link span {
    font-size: 18px;
-   font-weight: 600;
+   font-family: 'Avenir Medium';
 }
 
 @media (min-width: 750px) {
 
     .sticky-header .header__heading-link img {
-        max-width: 100%;
+        max-width: 60px;
     }
 
     .header__icons {
@@ -126,6 +140,7 @@
         border-radius: 80px;
         background-color: #E6F7F6;
         color: #03B0A7!important;
+        font-family: 'Avenir Medium';
     }
     
     .right-menu .nav-item {
@@ -472,6 +487,23 @@
     font-size: 48px;
     font-weight: bold;
     color: #000;
+}
+@media (max-width: 768px) {
+    .newsletter-section {
+        padding: 1rem!important;
+    }
+    .newsletter-section h2 {
+        font-size: 24px;
+    }
+    .newsletter-section .center-heading p {
+        font-size: 14px!important;
+    }
+    .eulYcF {
+        margin-bottom: 0;
+    }
+    #shopify-section-template--18823305560290__1737447265e68644fb .container {
+        padding: 0;
+    }
 }
 
 .newsletter-section .yv-newsletter-input .form-control {
