@@ -97,6 +97,8 @@
 .yv-image-banner-desc p {
     color:#000011!important;
     text-align: left;
+    font-size: 24px;
+    line-height: 32.78px;
 }
 
 .yv-image-banner-button {
@@ -511,7 +513,12 @@
     border-width: 2px;
     border-color: #99D5E0;
 }
-
+.newsletter-section .yv-newsletter-input {
+    max-width: 480px;
+    margin: auto;
+}
 .newsletter-section .center-heading p {
     font-size: 24px;
+    margin: 1.5rem 0;
 }
+

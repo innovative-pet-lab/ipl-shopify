@@ -599,7 +599,8 @@
     .button.large-btn {
         min-width: 220px;
         min-height: 62px;
-        font-size: 20px;
+        font-size: 18px;
+        font-family: 'Avenir medium';
     }
     .yv-collection-wrapper.fullwidth .yv-collection-slider .flickity-prev-next-button.previous {
         left: -50px;
