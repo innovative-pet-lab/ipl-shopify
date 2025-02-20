@@ -143,7 +143,8 @@
     }
     @media screen and (max-width:767px){
       #shopify-section-{{ section.id }}{
-        --bannerHeight:{{ section.settings.mobile_height }};
+        {% comment %} --bannerHeight:{{ section.settings.mobile_height }}; {% endcomment %}
+        --bannerHeight: 82vw;
       }
     }
     {% if section.settings.section_visibility == 'large' %}

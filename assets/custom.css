@@ -62,10 +62,16 @@
     }
     .yv-image-banner-desc p {
         text-align: center!important;
+        font-size: 14px!important;
+        line-height: 19.12px!important;
     }
     .yv-image-banner-content-inner {
         max-width: 100%!important;
-        padding: 0!important;
+    }
+    @media (max-width: 768px) {
+        .yv-image-banner-content-inner {
+            padding: 86px 10px!important;
+        }
     }
     body:not(.sticky-header, .header2) .shopify-section-main-header header[header-transparent=true]:not(:hover) .navbar-toggler-icon:before, body:not(.sticky-header, .header2) .shopify-section-main-header header[header-transparent=true]:not(:hover) .navbar-toggler-icon:after, body:not(.sticky-header, .header2) .shopify-section-main-header header[header-transparent=true]:not(:hover) .hamburger-line {
         background-color: red!important;
@@ -415,13 +421,17 @@
 .image-wrapper img {
     transition: transform 0.3s ease;
 }
-
+@media (max-width: 768px) {
+    .image-wrapper img {
+        object-fit: contain!important;
+        top: 16vw!important;
+    }
+}
 .image-wrapper:hover {
     background-color: #99d5e0;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2)!important;
 
 }
-
 .image-wrapper:hover img {
     transform: scale(1.1) rotate(3deg);
 }
@@ -506,6 +516,11 @@
     #shopify-section-template--18823305560290__1737447265e68644fb .container {
         padding: 0;
     }
+    #shopify-section-template--18823305560290__1737447265e68644fb.shopify-section {
+        padding-top: 0!important;
+        margin-top: 0;
+    }
+    
 }
 
 .newsletter-section .yv-newsletter-input .form-control {
@@ -521,4 +536,3 @@
     font-size: 24px;
     margin: 1.5rem 0;
 }
-

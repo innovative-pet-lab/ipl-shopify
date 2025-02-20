@@ -9026,7 +9026,12 @@ body.account-popup-open .yv-login-popup {
     text-align: center;
     justify-content: center;
 }
-
+@media (max-width: 768px) {
+    .yv-image-banner-content.text-align-center {
+        position: relative;
+        top: -4rem;
+    }
+}
 .yv-image-banner-content.text-align-center .yv-image-banner-heading,
 .yv-image-banner-content.text-align-center .yv-image-banner-desc {
     text-align: center;
