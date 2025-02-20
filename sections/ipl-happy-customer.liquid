@@ -41,10 +41,11 @@
             font-size: 24px;
         }
         .testimonials-section {
-            padding: 1rem;
+            padding: 0 1rem;
         }
         .quote, .author {
             font-size: 20px!important;
+            font-family: 'Avenir medium';
         }
         .testimonial-content {
             text-align: center;
@@ -54,7 +55,7 @@
             left: -13px!important;
         }
         .quote {
-            line-height: 27.32px;
+            line-height: normal!important;
         }
     }
 
@@ -108,14 +109,21 @@
         height: auto;
         border-radius: 10px;
         position: relative;
-        top: 12px;
+        top: -28px;
     }
     @media (max-width: 768px) {
-        .testimonial-image img {
-
-        }
         .quote::before {
             width: 4rem;
+            top: -23px;
+        }
+        .testimonial-image img {
+            width: 80%;
+            margin: auto;
+            display: block;
+            margin-bottom: 1rem;
+        }
+        .swiper-pagination {
+            margin-bottom: 0!important;
         }
     }
     .swiper-pagination {

@@ -182,13 +182,11 @@
     .yv-dropdown-menus.mega-menu .container .mega-menu-2 .dropdown-inner-menu-item {
         padding: 0;
     }
-
     .yv-dropdown-detail[open] .yv-dropdown-menus {
         min-height: 60vh;
         max-width: 42%;
         top: 75%;
     }
-
     .yv-dropdown-menus.mega-menu .container .mega-menu-2 ul {
         position: absolute;
         z-index: 5;
@@ -201,19 +199,18 @@
         left: 3rem;
         display: none;
     }
-
     .yv-dropdown-menus.mega-menu .container .mega-menu-2 ul.show:empty {
         visibility: hidden;
     }
-
     .right-menu .yv-dropdown-detail[open] .yv-dropdown-menus {
         min-height: auto;
     }
-
+    #shopify-section-template--18714887389410__1737447265e68644fb.shopify-section .container {
+        padding: 0!important;
+    }
     .mega-menu-2 ul.show {
         display: block!important;
     }
-
 }
 
 

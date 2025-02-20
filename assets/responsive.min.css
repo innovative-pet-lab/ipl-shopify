@@ -3395,7 +3395,7 @@
         width: 105px;
     }
     .newsletter-section .section-heading {
-        margin-bottom: 30px;
+        margin-bottom: 0;
     }
     .newsletter-content {
         max-width: 450px;
@@ -3534,14 +3534,13 @@
         min-height: 100px;
     }
     .yv-newsletter-input .newsletter-btn {
-        position: unset!important;
-        width: 100%;
-        margin-top: 15px;
-        min-height: 44px;
+        width: 27%;
+        font-size: 18px;
+        text-transform: capitalize;
     }
     .yv-newsletter-input .form-control {
         padding: 9px 9px 9px 22px;
-        min-height: 48px;
+        min-height: 56px;
     }
 }
 
