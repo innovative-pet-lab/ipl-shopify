@@ -46,7 +46,7 @@
             {%- case block.type -%}
               {%- when 'link_list' -%}
                 <div class="col-sm-12 col-md-3 col-lg-2 col-xl-2" {{ block.shopify_attributes }}>
-                  <div class="footer-menu-accordion">
+                  <div class="footer-menu-accordion item-{{ forloop.index | minus: 1 }}">
                     {%- if block.settings.heading != blank -%}
                       <h6 class="footer-menu-head footer-menu-accordion-head text">
                         {{ block.settings.heading }}
@@ -194,6 +194,16 @@
         </div>
       </div>
     </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        setTimeout(function () {
+            const item = document.querySelector(".item-1 .footer-menu-accordion-head");
+            if (item) {
+                item.dispatchEvent(new Event("click", { bubbles: true }));
+            }
+        }, 1000);
+    });
+    </script>
   {%- endif -%}
 </div>
 <div

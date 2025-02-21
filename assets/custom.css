@@ -35,7 +35,6 @@
 .sticky-header .header__heading-link img {
     max-width: 50%;
 }
-
 .yv-image-banner-heading {
     font-size: 48px!important;
     color: #000011!important;
@@ -80,7 +79,7 @@
         background-color: red!important;
     }
     .product-card .product-info h2 {
-        font-size: 16px!important;
+        font-size: 14px!important;
     }
     .product-card .product-info {
         padding: 0.5rem!important;
@@ -99,49 +98,40 @@
         margin-top: 0!important;
     }
 }
-
 .yv-image-banner-desc p {
     color:#000011!important;
     text-align: left;
     font-size: 24px;
     line-height: 32.78px;
 }
-
 .yv-image-banner-button {
     text-align: left;
 }
-
 .yv-image-banner-button .button {
     text-transform: unset;
     margin-top: 3rem;
 }
-
 .nav-item .nav-link span {
    font-size: 18px;
    font-family: 'Avenir Medium';
 }
 
 @media (min-width: 750px) {
-
     .sticky-header .header__heading-link img {
         max-width: 60px;
     }
-
     .header__icons {
         min-width: 30em;
         justify-content: right;
     }
-
     .header__icons a {
         color: #333333!important;
     }
-
     .right-menu {
         display: flex;
         justify-content: left;
         align-items: center;
     }
-
     .right-menu .nav-item .nav-link {
         padding: 5px 28px;
         border: 2px solid #03B0A7;
@@ -150,27 +140,22 @@
         color: #03B0A7!important;
         font-family: 'Avenir Medium';
     }
-    
     .right-menu .nav-item {
         display: flex;
         align-items: center;
     }
-    
     .right-menu ul li {
         list-style: none;
     }
-    
     .right-menu .nav-item svg {
         width: 10px;
         height: 10px;
     }
-    
     .yv-dropdown-menus.mega-menu {
         background-color: transparent!important;
         box-shadow: none;
         width: 100%;
     }
-
     .yv-dropdown-menus.mega-menu .container {
         background-color: #fff;
         padding: 1rem;
@@ -178,7 +163,6 @@
         max-width: max-content;
         margin: 0;
     }
-
     .yv-dropdown-menus.mega-menu .container .mega-menu-2 .dropdown-inner-menu-item {
         padding: 0;
     }

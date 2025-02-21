@@ -3535,7 +3535,7 @@
     }
     .yv-newsletter-input .newsletter-btn {
         width: 27%;
-        font-size: 18px;
+        font-size: 15px;
         text-transform: capitalize;
     }
     .yv-newsletter-input .form-control {
@@ -3544,7 +3544,10 @@
     }
 }
 
-@media (max-width:380px) {
+@media (max-width:376px) {
+    .yv-newsletter-input .newsletter-btn {
+        font-size: 12px;
+    }
     .yv-banner-title.split-banner-title {
         font-size: 26px;
     }

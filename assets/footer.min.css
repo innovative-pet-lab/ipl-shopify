@@ -42,7 +42,14 @@ footer {
     color: #99D5E0!important;
     font-size: 20px!important;
 }
-
+@media (max-width: 768px) {
+    .footer-menu-list ul li a {
+        font-size: 18px!important;
+    }
+    .footer-text-item.d-block p {
+        text-align: left!important;
+    }
+}
 .yv-newsletter-text {
     max-width: 33%;
     flex: 0 0 33%
