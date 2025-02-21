@@ -2,15 +2,15 @@
 <style>
     .ipl-meet-the-team-container {
         max-width: 100%;
-        margin: 2rem auto;
+        margin: 1rem auto;
         padding: 4rem 2rem;
         display: flex;
         align-items: center;
         justify-content: space-between;
         gap: 2rem;
-        min-height: 62vh;
+        min-height: 35vw;
         background-image: url(https://cdn.shopify.com/s/files/1/0685/6497/5842/files/image_27.png?v=1739271141);
-        background-size: 60%;
+        background-size: contain;
         background-position: right;
         background-repeat: no-repeat;
     }
@@ -18,7 +18,7 @@
         text-align: left;
     }
     .ipl-meet-the-team-container img {
-        width: 59%;
+        width: 50%;
         position: absolute;
         right: 0;
     }
@@ -29,7 +29,6 @@
         padding: 1rem;
         border-radius: 1rem;
         position: absolute;
-        padding-left: 4rem;
         padding-right: 7rem;
     }
     @media (max-width: 376px) {
@@ -38,10 +37,6 @@
         }
     }
     @media (max-width: 768px) {
-        .ipl-meet-the-team-container {
-            min-height: 32vh;
-            max-height: 54vh;
-        }
         .ipl-meet-the-team-container .content {
             margin-left: -2rem;
             padding: 0 1rem;
@@ -52,12 +47,13 @@
     }
     @media (min-width: 1441px) {
         .ipl-meet-the-team-container {
-            max-width: 1280px;
+            max-width: 100%;
+            padding: 0 8%;
         }
-        .ipl-meet-the-team-container img {
+        {% comment %} .ipl-meet-the-team-container img {
             width: 45%;
             right: 14%;
-        }
+        } {% endcomment %}
     }
     .title {
         font-size: 32px;
@@ -69,7 +65,7 @@
     .description {
         font-size: 24px;
         color: #4a5568;
-        line-height: 1.6;
+        line-height: normal;
         margin-bottom: 2rem;
     }
     .cta-button {
@@ -136,7 +132,7 @@
         }
     }
     .ipl-meet-the-team-usp-bar {
-        padding: 1.5rem 15rem;
+        padding: 1.5rem 5rem;
         background-color: #EBF7F9;
         margin-top: 6rem;
         margin-bottom: 4rem;

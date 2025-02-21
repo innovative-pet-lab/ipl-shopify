@@ -1458,7 +1458,7 @@ html.no-js .sub-inner-hamburger-outer .hamburger-menu-item .item {
     box-shadow: 0 1px 2px #9f9f9f;
     max-height: 70vh;
     overflow: auto;
-    padding: 20px;
+    padding: 20px 0;
 }
 
 .yv-dropdown-detail[open] .yv-dropdown-menus {
@@ -1492,11 +1492,16 @@ html.no-js .sub-inner-hamburger-outer .hamburger-menu-item .item {
 
 .menu-category-title {
     padding-bottom: 18px;
-    display: inline-block;
+    display: flex;
     font-size: var(--text);
     font-family: var(--navigationFontFamily);
     font-style: var(--navigationFontStyle);
     font-weight: var(--navigationFontWeight);
+    background-color: #f9f9f9;
+    min-width: 124px;
+    min-height: 44px;
+    padding: 0.5rem;
+    align-items: center;
 }
 
 .fullwidth-megamenus .yv-dropdown-item-link {
