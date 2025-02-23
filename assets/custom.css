@@ -36,11 +36,12 @@
     max-width: 50%;
 }
 .yv-image-banner-heading {
-    font-size: 48px!important;
+    font-size: clamp(2rem, 5vw, 4rem);
+    text-wrap: balance;
     color: #000011!important;
     font-weight: 700;
     text-align: left!important;
-    line-height: 65.57px;
+    line-height: 1.2;
     margin-bottom: 0;
 }
 
@@ -55,7 +56,7 @@
         position: relative!important;
     }
     .yv-image-banner-heading {
-        font-size: 24px!important;
+        font-size: 1.5rem!important;
         line-height: normal;
         text-align: center!important;
     }
@@ -69,7 +70,7 @@
     }
     @media (max-width: 768px) {
         .yv-image-banner-content-inner {
-            padding: 86px 10px!important;
+            padding:1rem!important;
         }
     }
     body:not(.sticky-header, .header2) .shopify-section-main-header header[header-transparent=true]:not(:hover) .navbar-toggler-icon:before, body:not(.sticky-header, .header2) .shopify-section-main-header header[header-transparent=true]:not(:hover) .navbar-toggler-icon:after, body:not(.sticky-header, .header2) .shopify-section-main-header header[header-transparent=true]:not(:hover) .hamburger-line {
@@ -121,16 +122,11 @@
         max-width: 60px;
     }
     .header__icons {
-        min-width: 30em;
+        min-width: 28em;
         justify-content: right;
     }
     .header__icons a {
         color: #333333!important;
-    }
-    .right-menu {
-        display: flex;
-        justify-content: left;
-        align-items: center;
     }
     .right-menu .nav-item .nav-link {
         padding: 5px 28px;
@@ -197,7 +193,18 @@
         display: block!important;
     }
 }
-
+@media screen and (min-width: 768px) {
+    .fsVVgj img {
+        max-height: 400px;
+    }
+}
+@media (min-width: 991px) {
+    .right-menu {
+        display: flex;
+        justify-content: left;
+        align-items: center;
+    }
+}
 
 /* Product page styling **/
 .shopify-section-main-header.sticky-header-main {
@@ -403,7 +410,7 @@
 .image-wrapper img {
     transition: transform 0.3s ease;
 }
-@media (max-width: 768px) {
+@media (max-width: 1020px) {
     .image-wrapper img {
         object-fit: contain!important;
         top: 16vw!important;

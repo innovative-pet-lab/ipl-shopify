@@ -1452,6 +1452,11 @@ ul.yv-product-meta,.yv-content-body ul.yv-product-meta {
         padding-right: 15px;
         padding-left: 15px;
     }
+    .sticky-header .container-fluid {
+        padding-bottom: 0;
+        padding-top: 0;
+        margin-top: 0;
+    }
 }
 
 @media (min-width: 768px) {
@@ -1561,6 +1566,7 @@ ul.yv-product-meta,.yv-content-body ul.yv-product-meta {
         max-width: 95%;
         padding-bottom: 1rem;
         margin-top: 1rem;
+        transition: all 0.3s ease-in-out;
     }
     .container {
         max-width: 950px;

@@ -9029,7 +9029,7 @@ body.account-popup-open .yv-login-popup {
 @media (max-width: 768px) {
     .yv-image-banner-content.text-align-center {
         position: relative;
-        top: -4rem;
+        top: -2rem;
     }
 }
 .yv-image-banner-content.text-align-center .yv-image-banner-heading,

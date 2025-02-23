@@ -8,7 +8,7 @@
         align-items: center;
         justify-content: space-between;
         gap: 2rem;
-        min-height: 35vw;
+        min-height: 48vw;
         background-image: url(https://cdn.shopify.com/s/files/1/0685/6497/5842/files/image_27.png?v=1739271141);
         background-size: contain;
         background-position: right;
@@ -18,28 +18,38 @@
         text-align: left;
     }
     .ipl-meet-the-team-container img {
-        width: 50%;
+        width: 70%;
         position: absolute;
         right: 0;
     }
     .ipl-meet-the-team-container .content {
         flex: 1;
-        max-width: 800px;
+        max-width: 50%;
         background: transparent;
         padding: 1rem;
         border-radius: 1rem;
         position: absolute;
-        padding-right: 7rem;
+    }
+    @media (min-width: 1080px) {
+        .ipl-meet-the-team-container .content {
+            padding-right: 8rem;
+        }
     }
     @media (max-width: 376px) {
         .ipl-meet-the-team-container {
-            min-height: 48vh!important;
+            min-height: 20vh!important;
+        }
+    } 
+    @media (max-width: 430px) {
+        .ipl-meet-the-team-container {
+            min-height: 40vh!important;
         }
     }
     @media (max-width: 768px) {
         .ipl-meet-the-team-container .content {
             margin-left: -2rem;
             padding: 0 1rem;
+            max-width: 100%;
         }
         .ipl-meet-the-team-container img {
             display: none;

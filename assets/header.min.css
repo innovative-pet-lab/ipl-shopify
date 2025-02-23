@@ -2380,7 +2380,7 @@ header #registerForm {
 
 @media screen and (max-width: 1440px) {
     .navbar-nav {
-        max-width: 90%;
+        max-width: 48vw;
     }
     .nav-item .nav-link {
         margin: 0 15px;

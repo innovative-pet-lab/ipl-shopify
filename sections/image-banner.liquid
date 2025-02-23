@@ -107,7 +107,7 @@
 </div>
 <style>
     #shopify-section-{{ section.id }}{
-      --bannerHeight: 850px;
+      --bannerHeight: 55vw;
       --colorBtnPrimaryText:{{ section.settings.btn_text }};
       --colorBtnPrimary:{{ section.settings.btn_bg }};
       --colorBtnPrimaryBorder:{{ section.settings.btn_border }};
@@ -126,7 +126,7 @@
     #shopify-section-{{ section.id }} .yv-image-banner-desc p{
       color:{{ section.settings.desc_color }};
     }
-    @media screen and (min-width:768px){
+    {% comment %} @media screen and (min-width:768px){
       #shopify-section-{{ section.id }} .yv-image-banner-heading{
         font-size: calc({{ section.settings.desktop_title_size }}px * 0.65);
       }
@@ -135,13 +135,13 @@
       #shopify-section-{{ section.id }} .yv-image-banner-heading{
         font-size: calc({{ section.settings.desktop_title_size }}px * 0.85);
       }
-    }
+    } {% endcomment %}
     @media screen and (min-width:1441px){
       #shopify-section-{{ section.id }} .yv-image-banner-heading{
         font-size: {{ section.settings.desktop_title_size }}px;
       }
     }
-    @media screen and (max-width:767px){
+    @media screen and (max-width:1020px){
       #shopify-section-{{ section.id }}{
         {% comment %} --bannerHeight:{{ section.settings.mobile_height }}; {% endcomment %}
         --bannerHeight: 82vw;
