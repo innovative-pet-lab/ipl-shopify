@@ -26,7 +26,7 @@
         -%}
         <div class="{{ chillinksClasses }}">
           <div class="dropdown-inner-menu-item">
-            <a class="menu-category-title {% if has_3rd_lvl %}has_3rd{% endif %}" href="{{ childlink.url }}">{{ childlink.title | escape }}</a>
+            <a class="menu-category-title {% if has_3rd_lvl %}has_3rd{% else %}nosub{% endif %}" href="{{ childlink.url }}">{{ childlink.title | escape }}</a>
             <ul class="list-unstyled">
               {%- for grandchildlink in childlink.links -%}
                 <li>
