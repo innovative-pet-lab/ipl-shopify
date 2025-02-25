@@ -590,6 +590,7 @@ header {
 .yv-listing-megamenu-title,
 .product-menu-item {
     color: var(--colorTextBody) !important;
+    background-color: #fff;
 }
 
 .yv-megamenu-product-detail a:hover,
@@ -1472,17 +1473,18 @@ html.no-js .sub-inner-hamburger-outer .hamburger-menu-item .item {
 
 .dropdown-inner-menu-item {
     padding: 0;
+    background-color: #fff;
 }
 
 .yv-dropdown-item-link {
     display: block;
-    margin-bottom: 12px;
-    padding: 0.6rem 0.5rem;
+    padding: 1rem;
     font-weight: 600;
 }
 
 .yv-dropdown-item-link:hover {
     color: var(--theme-color);
+    background-color: #99D5E04D;
 }
 
 .fullwidth-megamenus .yv-dropdown-menus {

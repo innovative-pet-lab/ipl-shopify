@@ -154,7 +154,7 @@
         width: 100%;
     }
     .yv-dropdown-menus.mega-menu .container {
-        background-color: #fff;
+        background-color: transparent;
         padding: 0;
         width: auto;
         max-width: max-content;
@@ -163,6 +163,8 @@
     }
     .yv-dropdown-menus.mega-menu .container .mega-menu-2 .dropdown-inner-menu-item {
         padding: 0;
+        max-width: 8rem;
+        background-color: #fff;
     }
     .yv-dropdown-detail[open] .yv-dropdown-menus {
         min-height: 60vh;
@@ -175,18 +177,33 @@
     .yv-dropdown-menus.mega-menu .container .mega-menu-2 ul {
         position: absolute;
         z-index: 5;
+        background: #fff;
+        width: auto;
+        min-width: 100%;
+        height: auto;
+        min-height: 30%;
+        left: 7rem;
+        display: none;
+        top: 27px;
+    }
+    .yv-dropdown-menus.mega-menu .container .mega-menu-2 ul.show:empty {
+        visibility: hidden;
+    }
+    .yv-dropdown-menus.mega-menu .container .mega-menu-5 ul {
+        position: absolute;
+        z-index: 5;
         padding: 2rem 1rem 1rem 1rem;
         background: #ffffff;
         width: auto;
         min-width: 100%;
         height: auto;
         min-height: 30%;
-        left: 7.5rem;
+        left: 14rem;
         display: none;
         margin-left: 10px;
         top: 0;
     }
-    .yv-dropdown-menus.mega-menu .container .mega-menu-2 ul.show:empty {
+    .yv-dropdown-menus.mega-menu .container .mega-menu-5 ul.show:empty {
         visibility: hidden;
     }
     .right-menu .yv-dropdown-detail[open] .yv-dropdown-menus {
@@ -196,6 +213,9 @@
         padding: 0!important;
     }
     .mega-menu-2 ul.show {
+        display: block!important;
+    }
+    .mega-menu-5 ul.show {
         display: block!important;
     }
     .mega-menu .no-sub li a {
@@ -545,6 +565,8 @@
 } */
 .mega-menu .col-12 {
     position: unset;
+    padding: 0!important;
+    margin: 0;
 }
 .shopify-section-main-header header:hover .top-header {
     box-shadow: none;
@@ -565,5 +587,5 @@
     background-repeat: no-repeat;
     background-position: center;
     position: absolute;
-    right: 3rem;
+    right: 1rem;
   }

@@ -11,7 +11,7 @@
         elsif link.links.size == 4
           assign chillinksClasses = 'col-12 col-sm-12 col-md-3 mega-menu-4'
         else
-          assign chillinksClasses = 'col-12 col-sm-6 col-md-4 col-lg-6 col-xl-6 mega-menu-2'
+          assign chillinksClasses = 'col-12 col-sm-6 mega-menu-5'
         endif
       -%}
       {%- for childlink in link.links -%}
@@ -58,28 +58,23 @@
 {%- endif -%}
 <script>
   document.addEventListener('DOMContentLoaded', () => {
-    const menus = document.querySelectorAll('.mega-menu-2'); // Select all .mega-menu-2 elements
-
-    if (menus.length > 0) {
-      menus.forEach((menu) => {
-        const submenu = menu.querySelector('ul'); // Find the ul inside this specific .mega-menu-2
+    ['.mega-menu-2', '.mega-menu-5'].forEach(selector => {
+      document.querySelectorAll(selector).forEach(menu => {
+        const submenu = menu.querySelector('ul');
         if (submenu) {
-          // Attach hover effects to this specific menu and its ul
           menu.addEventListener('mouseenter', () => {
-            submenu.classList.add('show'); // Show the submenu
-            submenu.classList.remove('hidden'); // Ensure 'hidden' is removed
+            submenu.classList.add('show');
+            submenu.classList.remove('hidden');
           });
 
           menu.addEventListener('mouseleave', () => {
-            submenu.classList.add('hidden'); // Hide the submenu
-            submenu.classList.remove('show'); // Ensure 'show' is removed
+            submenu.classList.add('hidden');
+            submenu.classList.remove('show');
           });
         } else {
-          console.warn('Submenu (ul) not found for this menu element:', menu);
+          console.warn(`Submenu (ul) not found for ${selector} element:`, menu);
         }
       });
-    } else {
-      console.warn('No .mega-menu-2 elements found.');
-    }
+    });
   });
 </script>
