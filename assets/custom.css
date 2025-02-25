@@ -537,9 +537,6 @@
 }
 
 /* mega menu */
-/* .sticky-header .mega-menu-2 {
-    margin-top: 7px;
-} */
 .mega-menu .col-12 {
     position: unset;
     padding: 0!important;
@@ -565,4 +562,7 @@
     background-position: center;
     position: absolute;
     right: 1rem;
+  }
+  .menu-category-title.has_3rd.hover-active {
+    background-color: #99D5E04D;
   }
