@@ -742,7 +742,7 @@ body:not(.sticky-header, .header2) .shopify-section-main-header header[header-tr
     font-family: var(--navigationFontFamily);
     font-style: var(--navigationFontStyle);
     font-weight: var(--navigationFontWeight);
-    color: #fff;
+    color: #010101;
 }
 
 .side-menu .inner-side ul li.dropdown>.list-menu__item::after,
@@ -1471,17 +1471,18 @@ html.no-js .sub-inner-hamburger-outer .hamburger-menu-item .item {
 }
 
 .dropdown-inner-menu-item {
-    padding: 10px 0;
+    padding: 0;
 }
 
 .yv-dropdown-item-link {
     display: block;
     margin-bottom: 12px;
+    padding: 0.6rem 0.5rem;
+    font-weight: 600;
 }
 
 .yv-dropdown-item-link:hover {
     color: var(--theme-color);
-    text-decoration: underline;
 }
 
 .fullwidth-megamenus .yv-dropdown-menus {
@@ -1496,12 +1497,15 @@ html.no-js .sub-inner-hamburger-outer .hamburger-menu-item .item {
     font-size: var(--text);
     font-family: var(--navigationFontFamily);
     font-style: var(--navigationFontStyle);
-    font-weight: var(--navigationFontWeight);
-    background-color: #f9f9f9;
-    min-width: 124px;
+    font-weight: 600;
     min-height: 44px;
-    padding: 0.5rem;
+    padding: 1rem 1.5rem;
     align-items: center;
+    color: #1C1D31!important;
+}
+
+.menu-category-title:hover {
+    background-color: #99D5E04D;
 }
 
 .fullwidth-megamenus .yv-dropdown-item-link {

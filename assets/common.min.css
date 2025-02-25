@@ -1564,8 +1564,8 @@ ul.yv-product-meta,.yv-content-body ul.yv-product-meta {
     }
     .container-fluid {
         max-width: 95%;
-        padding-bottom: 1rem;
-        margin-top: 1rem;
+        padding-bottom: 0.5rem;
+        margin-top: 0.5rem;
         transition: all 0.3s ease-in-out;
     }
     .container {

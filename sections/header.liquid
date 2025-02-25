@@ -40,8 +40,7 @@
           justify-content: {{ section.settings.menu_position }};
         }
         .nav-item .nav-link {
-           font-size: {{ section.settings.type_font_size }}px;
-           font-family: 'Avenir Medium';
+           font-size: 16px;
         }
         .side-menu .inner-side ul li .list-menu__item,
         .side-menu .inner-side ul li .toggle-level,
@@ -148,7 +147,7 @@
            header .yv-dropdown-menus .yv-product-title:hover,
            header .yv-listing-megamenu-title:hover,
            header .yv-megamenu-item-link:hover {
-              color: {{ section.settings.catologtext_hover}} !important;
+              color: #1C1D31!important;
             }
          }
 
@@ -167,7 +166,9 @@
         }
         header .side-menu .inner-side ul li .list-menu__item,
         header .side-menu .inner-side .lang-dropdown{
-          color: {{ section.settings.mobile_menu_text_color }};
+          color: #26286E;
+          font-size: 20px;
+          font-weight: 600;
         }
 
         header .navbar-nav-sidebar > .nav-item {
@@ -179,7 +180,9 @@
         header .side-menu .yv-product-information .yv-prizebox .yv-product-price,
         header .side-menu .yv-product-information .yv-product-title,
         header .side-menu .yv-product-information .yv-prizebox .yv-product-compare-price {
-          color: {{ section.settings.sub-menu_text_color }} !important;
+          color: #26286E !important;
+          font-size: 20px;
+          font-weight: 600;
         }
         .drawer-login-btn,
         #shopify-section-{{ section.id }} .side-menu .country-select-box .detail-summary span,

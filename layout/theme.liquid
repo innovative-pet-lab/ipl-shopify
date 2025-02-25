@@ -148,17 +148,20 @@
     <script>
       document.addEventListener('DOMContentLoaded', () => {
         const navItems = document.querySelectorAll('.nav-item.dropdown-menu-list');
-      
+        const menuItem = document.querySelector('.mega-menu-2:nth-child(1) .dropdown-inner-menu-item a');
+
         navItems.forEach((navItem) => {
           const details = navItem.querySelector('details');
       
           if (details) {
             navItem.addEventListener('mouseenter', () => {
               details.setAttribute('open', 'true');
+              console.log('hover in');
             });
       
             navItem.addEventListener('mouseleave', () => {
               details.removeAttribute('open');
+              console.log('hover out');
             });
           }
         });

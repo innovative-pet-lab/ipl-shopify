@@ -3,7 +3,7 @@
     {%- if link.levels > 1 -%}
       {%- liquid
         if link.links.size == 1
-          assign chillinksClasses = 'col-12 col-sm-12 col-md-12'
+          assign chillinksClasses = 'col-12 col-sm-12 col-md-12 mega-menu-1'
         elsif link.links.size == 2
           assign chillinksClasses = 'col-12 col-sm-12 col-md-12 mega-menu-2'
         elsif link.links.size == 3
@@ -15,9 +15,18 @@
         endif
       -%}
       {%- for childlink in link.links -%}
+        {%- liquid
+          for grandchildlink in childlink.links
+            if grandchildlink
+              assign has_3rd_lvl = true
+            else
+              assign has_3rd_lvl = false
+            endif
+          endfor
+        -%}
         <div class="{{ chillinksClasses }}">
           <div class="dropdown-inner-menu-item">
-            <a class="menu-category-title" href="{{ childlink.url }}">{{ childlink.title | escape }}</a>
+            <a class="menu-category-title {% if has_3rd_lvl %}has_3rd{% endif %}" href="{{ childlink.url }}">{{ childlink.title | escape }}</a>
             <ul class="list-unstyled">
               {%- for grandchildlink in childlink.links -%}
                 <li>
@@ -33,7 +42,7 @@
     {%- else -%}
       <div class="col-12 col-sm-12 col-md-12">
         <div class="dropdown-inner-menu-item">
-          <ul class="list-unstyled nooo">
+          <ul class="list-unstyled no-sub">
             {%- for childlink in link.links -%}
               <li>
                 <a class="yv-dropdown-item-link" href="{{ childlink.url }}"

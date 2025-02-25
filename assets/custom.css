@@ -47,7 +47,8 @@
 
 @media (max-width: 768px) {
     .side-menu {
-        background-color: #26286E;
+        background-color: #ffffff;
+        color: #010101;
     }
     .side-menu .inner-side .navbar-nav {
         padding-left: 0;
@@ -114,7 +115,7 @@
 }
 .nav-item .nav-link span {
    font-size: 18px;
-   font-family: 'Avenir Medium';
+   font-weight: 600;
 }
 
 @media (min-width: 750px) {
@@ -154,10 +155,11 @@
     }
     .yv-dropdown-menus.mega-menu .container {
         background-color: #fff;
-        padding: 1rem;
+        padding: 0;
         width: auto;
         max-width: max-content;
-        margin: 0;
+        margin: 7px 0 0 0;
+        overflow: hidden;
     }
     .yv-dropdown-menus.mega-menu .container .mega-menu-2 .dropdown-inner-menu-item {
         padding: 0;
@@ -165,20 +167,24 @@
     .yv-dropdown-detail[open] .yv-dropdown-menus {
         min-height: 60vh;
         max-width: 42%;
-        top: 75%;
+        top: 72%;
+    }
+    .sticky-header .yv-dropdown-detail[open] .yv-dropdown-menus {
+        top: 65%;
     }
     .yv-dropdown-menus.mega-menu .container .mega-menu-2 ul {
         position: absolute;
         z-index: 5;
-        padding: 1rem;
-        background: #f9f9f9;
+        padding: 2rem 1rem 1rem 1rem;
+        background: #ffffff;
         width: auto;
-        min-width: 16em;
+        min-width: 100%;
         height: auto;
         min-height: 30%;
-        left: 5rem;
+        left: 7.5rem;
         display: none;
-        top: 27px;
+        margin-left: 10px;
+        top: 0;
     }
     .yv-dropdown-menus.mega-menu .container .mega-menu-2 ul.show:empty {
         visibility: hidden;
@@ -192,12 +198,19 @@
     .mega-menu-2 ul.show {
         display: block!important;
     }
+    .mega-menu .no-sub li a {
+        color: #26286e!important;
+        padding: 1rem;
+    }
+    .mega-menu .no-sub li a:hover {
+        background-color: #99D5E04D;
+    }
 }
-@media screen and (min-width: 768px) {
+/* @media screen and (min-width: 768px) {
     .fsVVgj img {
         max-height: 400px;
     }
-}
+} */
 @media (min-width: 991px) {
     .right-menu {
         display: flex;
@@ -527,6 +540,9 @@
 }
 
 /* mega menu */
+/* .sticky-header .mega-menu-2 {
+    margin-top: 7px;
+} */
 .mega-menu .col-12 {
     position: unset;
 }
@@ -536,3 +552,18 @@
 .nav-item .nav-link span:hover {
     color: #03B0A7;
 }
+.menu-category-title.has_3rd {
+    position: relative;
+}
+.menu-category-title.has_3rd::after {
+    content: "";
+    display: inline-block;
+    width: 16px;
+    height: 14px;
+    background-image: url("data:image/svg+xml,%3Csvg width='5' height='10' viewBox='0 0 5 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M4.80911 4.45975C4.93134 4.6006 5 4.79161 5 4.99077C5 5.18993 4.93134 5.38094 4.80911 5.52179L1.12092 9.7707C1.06078 9.84244 0.98884 9.89966 0.909297 9.93902C0.829754 9.97839 0.744202 9.99911 0.657634 9.99997C0.571066 10.0008 0.485216 9.98183 0.405091 9.94407C0.324966 9.9063 0.252172 9.85053 0.190957 9.78001C0.129742 9.70949 0.0813313 9.62563 0.0485497 9.53332C0.0157682 9.44102 -0.000727636 9.34211 2.46164e-05 9.24238C0.000776869 9.14266 0.0187623 9.0441 0.0529313 8.95246C0.0871004 8.86083 0.136769 8.77795 0.199038 8.70866L3.42629 4.99077L0.199038 1.27288C0.0802769 1.13122 0.0145621 0.941495 0.0160475 0.744562C0.017533 0.547629 0.0860998 0.359247 0.20698 0.219989C0.327861 0.0807308 0.491383 0.00173969 0.662327 2.83931e-05C0.833271 -0.0016829 0.99796 0.0740226 1.12092 0.21084L4.80911 4.45975Z' fill='%2326286E'/%3E%3C/svg%3E");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    right: 3rem;
+  }
