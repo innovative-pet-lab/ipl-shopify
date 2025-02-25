@@ -141,6 +141,20 @@
           "show-popup-how-many-times": "once",
           "auto-trigger-quiz": "#open-quiz-tools/perfect-product-finder/ipl-test-quize"
         }
+      },
+      "14033927738893891564": {
+        "type": "shopify://apps/miniorange-single-sign-on-sso/blocks/new-customer-account/48152e16-8060-4bf5-8478-83efdf88901f",
+        "disabled": false,
+        "settings": {}
+      },
+      "14138263979377034098": {
+        "type": "shopify://apps/miniorange-single-sign-on-sso/blocks/sso-widget/48152e16-8060-4bf5-8478-83efdf88901f",
+        "disabled": false,
+        "settings": {
+          "css_selector": "#customer_login",
+          "css_button_class": "mo_button",
+          "css_selector_password": "#password-modal-heading"
+        }
       }
     }
   },
