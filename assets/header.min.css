@@ -1478,12 +1478,12 @@ html.no-js .sub-inner-hamburger-outer .hamburger-menu-item .item {
 
 .yv-dropdown-item-link {
     display: block;
-    padding: 1rem;
+    padding: 1rem 1.8rem;
     font-weight: 600;
 }
-.yv-dropdown-item-link span {
+/* .yv-dropdown-item-link span {
     padding-right: 0.5rem;
-}
+} */
 .yv-dropdown-item-link:hover {
     color: var(--theme-color);
     background-color: #99D5E04D;

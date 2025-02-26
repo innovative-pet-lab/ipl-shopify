@@ -16,6 +16,7 @@
       -%}
       {%- for childlink in link.links -%}
         {%- liquid
+          assign has_3rd_lvl = false
           for grandchildlink in childlink.links
             if grandchildlink
               assign has_3rd_lvl = true
