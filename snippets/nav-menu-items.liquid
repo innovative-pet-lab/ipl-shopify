@@ -3,11 +3,11 @@
     {%- if link.levels > 1 -%}
       {%- liquid
         if link.links.size == 1
-          assign child_link_classes = 'col-12 col-sm-12 col-md-12 mega-menu-1'
+          assign child_link_classes = 'col-12 col-md-12 mega-menu-1'
         elsif link.links.size == 2
-          assign child_link_classes = 'col-12 col-sm-12 col-md-12 mega-menu-2'
+          assign child_link_classes = 'col-12 col-md-12 mega-menu-2'
         elsif link.links.size == 3
-          assign child_link_classes = 'col-12 col-sm-12 col-md-4 mega-menu-3'
+          assign child_link_classes = 'col-12 col-md-4 mega-menu-3'
         elsif link.links.size == 4
           assign child_link_classes = 'col-12 col-sm-12 col-md-3 mega-menu-4'
         else
