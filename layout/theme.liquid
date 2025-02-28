@@ -145,28 +145,6 @@
     class="template_{{ template | handle }} page-loading breadcrumb-{{ settings.enable_breadcrumb }} theme-layout-{{ settings.layout_style }}"
     style="--layoutRadius:{% if settings.layout_style == 'rounded' %}10px{% else %}0px{% endif %};"
   >
-    <script>
-      document.addEventListener('DOMContentLoaded', () => {
-        const navItems = document.querySelectorAll('.nav-item.dropdown-menu-list');
-        const menuItem = document.querySelector('.mega-menu-2:nth-child(1) .dropdown-inner-menu-item a');
-
-        navItems.forEach((navItem) => {
-          const details = navItem.querySelector('details');
-      
-          if (details) {
-            navItem.addEventListener('mouseenter', () => {
-              details.setAttribute('open', 'true');
-              console.log('hover in');
-            });
-      
-            navItem.addEventListener('mouseleave', () => {
-              details.removeAttribute('open');
-              console.log('hover out');
-            });
-          }
-        });
-      });
-    </script>
     <a class="skip-to-content-link button yv-visually-hidden focus-inside" href="#MainContent">
       {{ 'accessibility.skip_to_text' | t }}
     </a>

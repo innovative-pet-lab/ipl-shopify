@@ -677,32 +677,39 @@ body:not(.sticky-header, .header2) .shopify-section-main-header header[header-tr
 
 .side-menu .inner-side {
     padding: 0 30px 40px;
-    height: calc(100% - 120px);
+    height: calc(90% - 120px);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     overflow-y: auto;
 }
-
 .side-menu-header {
     position: sticky;
     top: 0;
-    padding: 10px 10px 10px;
+    padding: 1rem;
     z-index: 1;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
+}
+.side-menu .drawer-login-btn.register {
+    padding: 10.5px 46px;
+    border: 2px solid #03B0A7;
+    border-radius: 80px;
+    background-color: #E6F7F6;
+    color: #03B0A7 !important;
+    text-decoration: none;
 }
 
 .side-menu .close-btn {
     align-content: center;
     display: flex;
-    align-items: center;
+    align-items: start;
     font-size: 18px;
     background: 0 0;
 }
 
 .side-menu .close-btn svg {
-    fill: currentcolor;
+    fill: #333333;
     width: 14px;
     margin-right: 8px;
 }
@@ -717,6 +724,30 @@ body:not(.sticky-header, .header2) .shopify-section-main-header header[header-tr
 .side-menu .inner-side .navbar-nav>.nav-item {
     width: 100%;
     border-bottom: 1px solid var(--mobile-menu-border);
+}
+
+.side-menu .inner-footer {
+    height: 100vh;
+    padding: 0 2rem;
+}
+
+.side-menu .inner-footer .flex{
+    padding-top: 1.7rem;
+    border-top: 1px solid #2222;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.side-menu .inner-footer .flex .my-account {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.side-menu .inner-footer .flex .my-account a {
+    font-size: 20px;
+    font-weight: 600;
 }
 
 .inner.child,
@@ -812,7 +843,6 @@ body:not(.sticky-header, .header2) .shopify-section-main-header header[header-tr
 
 .side-menu .nav-item.dropdown .inner.child li .toggle-level,
 .side-menu .nav-item.dropdown .inner.child li a:not(.yv-megamenu-collection) {
-    font-size: 15px;
     padding: 13px 0;
     padding-right: 20px;
 }
@@ -839,7 +869,6 @@ body:not(.sticky-header, .header2) .shopify-section-main-header header[header-tr
 }
 
 .side-menu .nav-item.dropdown .inner.grandchild li a {
-    font-size: 14px !important;
     padding: 0 !important;
     margin: 0;
     display: block;
@@ -2686,7 +2715,7 @@ header #registerForm {
         top: 6px;
     }
     .side-menu {
-        max-width: 90%;
+        max-width: 95%;
     }
     .back-to-menu span {
         position: unset;
