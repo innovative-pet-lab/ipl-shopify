@@ -111,14 +111,14 @@
   <div class="yv-collection-container {% if section.settings.enable_filtering == false or collection.filters.size == 0  %}filters-hide{% endif %} ">
     {% paginate collection.products by section.settings.products_per_page %}
       {%- liquid
-        assign filterVisibility = true
+        assign filter_visibility = true
         if section.settings.enable_filtering == false or collection.filters.size == 0
           if section.settings.enable_sorting == false
-            assign filterVisibility = false
+            assign filter_visibility = false
           endif
         endif
       -%}
-      <div class="yv-collections-topbar{% if filterVisibility %} yv-collections-topbar-sticky{% endif %}{% if collection.all_products_count == 0 %} d-none{% endif %}">
+      <div class="yv-collections-topbar{% if filter_visibility %} yv-collections-topbar-sticky{% endif %}{% if collection.all_products_count == 0 %} d-none{% endif %}">
         {%- if section.settings.enable_filtering and collection.filters.size > 0 -%}
           <div class="yv-left-sidebar">
           <div class="filter-heading-wrapper">
@@ -232,7 +232,7 @@
           </div>
         </div>
       </div>
-      {%- assign clearAll = '?sort_by=' | append: sort_by -%}
+      {%- assign clear_all = '?sort_by=' | append: sort_by -%}
       <div
         class="yv-collection-products {{ sort_by }} {% if collection.products_count == 0 %}no-result{% endif %} {% if section.settings.filters_layout == 'drawer' %}filters-toggle{% endif %} "
         id="CollectionProductsContainer"
@@ -241,7 +241,7 @@
       >
         {% if section.settings.enable_filtering and collection.filters.size > 0 %}
           <aside id="filterSideBar" class="yv-filter-sidebar">
-            {% render 'collection-sidebar', section: section, results: collection, clearAll: clearAll %}
+            {% render 'collection-sidebar', section: section, results: collection, clear_all: clear_all %}
           </aside>
         {% else %}
           <form id="FiltersForm" class="collectionFilters__form"></form>
@@ -289,7 +289,7 @@
                       <div class="promotional-banner animated-grid aos-init aos-animate">
                         <a href="{{ banner_link }}">
                           <div class="img-wrap">
-                            <img class="no-js-hidden product-first-img lazyautosizes ls-is-cached lazyloaded" 
+                            <img class="no-js-hidden lazyautosizes ls-is-cached lazyloaded" 
                               src="{{ banner_image | image_url}}" 
                               alt="" 
                               width="" 

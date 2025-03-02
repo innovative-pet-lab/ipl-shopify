@@ -54,7 +54,7 @@
             data-product-grid-main-image
           >
             {% if product.featured_media.media_type == 'video' %}              
-              <deferred-media class="product-first-img">
+              <deferred-media class="">
                 <template style="display:none">
                   {{ product.featured_media | video_tag:  image_size: '600x',
                     class: 'videoBackgroundFile', 
@@ -76,7 +76,6 @@
               {% else %}
               {%- render 'lazy-image',
                 image: product.featured_media.preview_image,
-                class: 'product-first-img',
                 width: productImageSize,
                 sizes:'[100,200,300,400,500,600,700,800]' 
               -%}
@@ -588,32 +587,31 @@
       {% if settings.enable_color_swatches %}
         {%- for option in product.options_with_values -%}
           {%- liquid
-            assign colorOptions = settings.color_name | downcase
-            assign downOption = option.name | downcase
+            assign color_options = settings.color_name | downcase
+            assign down_option = option.name | downcase
             assign optionIndex = forloop.index
-            assign varOptionIndex = 'option' | append: forloop.index
+            assign var_option_index = 'option' | append: forloop.index
           -%}
-          {% if colorOptions contains downOption %}
+          {% if color_options contains down_option %}
             <div class="select-color product-option-selector color-variants-wrapper">
               <ul class="list-unstyled product-loop-variants circle">
                 {%- for value in option.values limit: 5 -%}
                   {% liquid
-                    assign variantOption = 'option' | append: option.position
-                    assign colorVariant = product.variants | where: variantOption, value | first
-                    assign variantValue = product.variants | where: variantOption, value | compact: 'featured_media' | first
+                    assign variant_option = 'option' | append: option.position
+                    assign variant_value = product.variants | where: variant_option, value | compact: 'featured_media' | first
                     assign min = 1
                     assign max = 1000000
                     assign diff = max | minus: min
-                    assign randomNumber = "now" | date: "%N" | modulo: diff | plus: min
+                    assign random_number = "now" | date: "%N" | modulo: diff | plus: min
                   -%}
                   <li class="color_option variant_option" data-color-wrapper>
                    {%- liquid
-                      assign variantImage = ''
+                      assign variant_image = ''
                       if settings.variant_image
-                      assign variantsList = product.variants | where: varOptionIndex, value
-                      for variant in variantsList
+                      assign variants_list = product.variants | where: var_option_index, value
+                      for variant in variants_list
                       if variant.featured_image != blank
-                      assign variantImage = variant.featured_image
+                      assign variant_image = variant.featured_image
                       break
                       endif
                       endfor
@@ -621,39 +619,39 @@
                   -%}
                     <label
                       class="visually-hidden"
-                      for="product-{{ product.id }}_option-{{ forloop.index }}-{{ section.id }}{{ randomNumber }}-{{ index }}-{{ block.id }}-{{  value | handle }}"
+                      for="product-{{ product.id }}_option-{{ forloop.index }}-{{ section.id }}{{ random_number }}-{{ index }}-{{ block.id }}-{{  value | handle }}"
                     >
                       {{- value | escape -}}
                     </label>
                     <input
                       class="productOption"
-                      id="product-{{ product.id }}_option-{{ forloop.index }}-{{ section.id }}{{ randomNumber }}-{{ index }}-{{ block.id }}-{{  value | handle }}"
+                      id="product-{{ product.id }}_option-{{ forloop.index }}-{{ section.id }}{{ random_number }}-{{ index }}-{{ block.id }}-{{  value | handle }}"
                       type="radio"
                       name="product-{{ product.id }}_option-{{ section.id }}-{{ index }}-{{ block.id }}"
                       value="{{ value | escape }}"
                       title="{{ value | escape }}"
                       tabindex="-1"
-                      {% if variantValue.featured_media != blank %}
+                      {% if variant_value.featured_media != blank %}
                         onClick="switchSwatchMedia(event)"
                       {% endif %}
                     >
-                     {%- assign variantColorImage = value | handleize | append : '.png' -%}
+                     {%- assign variant_color_image = value | handleize | append : '.png' -%}
                     <span
-                      class="option {% unless settings.variant_image %}variantColorOption{% else %}variantImageOption{% endunless %}"
+                      class="option {% unless settings.variant_image %}variantColorOption{% else %}variant_imageOption{% endunless %}"
                       data-color="{{ value }}"
-                       {% unless settings.variant_image and variantImage !=blank %}
-                      style="background-color:{{ value }};background-image:url('{{ variantColorImage | asset_img_url : 100 }}');"
+                       {% unless settings.variant_image and variant_image !=blank %}
+                      style="background-color:{{ value }};background-image:url('{{ variant_color_image | asset_img_url : 100 }}');"
                       {% endunless %}>
                      {%- if settings.variant_image -%}
-                      {%- if variantImage != blank -%}
-                      <img src="{{ variantImage | image_url: width: 34 }}" width="34" height="34"
-                        alt="{{ variantImage.alt | strip_html | escape }}" loading="lazy">
+                      {%- if variant_image != blank -%}
+                      <img src="{{ variant_image | image_url: width: 34 }}" width="34" height="34"
+                        alt="{{ variant_image.alt | strip_html | escape }}" loading="lazy">
                       {%- endif -%}
                       {%- endif -%}</span>
-                    {% if variantValue.featured_media != blank %}
+                    {% if variant_value.featured_media != blank %}
                       {% capture selectedColorImage %}
                       <div class="media-content">
-                      {%- render 'lazy-image' image: variantValue.featured_media, class: 'product-first-img', width: productImageSize -%}
+                      {%- render 'lazy-image' image: variant_value.featured_media, class: 'product-first-img', width: productImageSize -%}
                       </div>
                     {% endcapture %}
                       <script>

@@ -7993,11 +7993,11 @@ deferred-media.product-img {
     background: var(--primaryColorBody)!important;
 }
 
-.pass-through-color img,
+/* .pass-through-color img,
 .pass-through-color svg {
     mix-blend-mode: multiply;
 }
-
+ */
 
 /* timeline section css start */
 

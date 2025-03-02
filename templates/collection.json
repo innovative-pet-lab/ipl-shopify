@@ -36,7 +36,7 @@
       }
     },
     "main-collection": {
-      "type": "main-collection",
+      "type": "main-collection-2",
       "settings": {
         "collection_title": false,
         "seo_heading": "h2",

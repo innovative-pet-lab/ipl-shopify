@@ -135,7 +135,7 @@
                                     {% if variantValue.featured_media != blank %}
                                       {% capture selectedColorImage %}
                                       <div class="media-content">
-                                      {%- render 'lazy-image' image: variantValue.featured_media, class: 'product-first-img', width: productImageSize -%}
+                                      {%- render 'lazy-image' image: variantValue.featured_media, width: productImageSize -%}
                                       </div>
                                     {% endcapture %}
                                       <script>

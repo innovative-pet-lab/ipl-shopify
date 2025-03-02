@@ -224,7 +224,7 @@
         width: 73%;
     }
     .yv-dropdown-menus.mega-menu .container .mega-menu-5 ul {
-        left: 71%;
+        left: 72%;
     }
 }
 
@@ -602,4 +602,7 @@ header .side-menu .inner-side ul li .list-menu__item {
 }
 .side-menu .inner-side ul li.dropdown>.toggle-level.open-menu-drop svg {
     transform: rotate(90deg);
+}
+.slider-button {
+    display: none;
 }

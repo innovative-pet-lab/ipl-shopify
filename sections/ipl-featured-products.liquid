@@ -206,7 +206,7 @@
                 {% for product in featured_collection.products %}
                 <div class="swiper-slide">
                     <div class="product-card">
-                        <img src="{{ product.featured_image | img_url: '800x' }}" alt="{{ product.title }}" class="product-image">
+                        <img alt="" width="" height="" src="{{ product.featured_image | img_url: '800x' }}" alt="{{ product.title }}" class="product-image">
                         <div class="product-info">
                             <h2 class="product-title">{{ product.title }}</h2>
                             <a href="{{ product.url }}" class="view-product">View product</a>
@@ -215,7 +215,6 @@
                 </div>
                 {% endfor %}
             </div>
-
             <div class="swiper-button-prev"></div>
             <div class="swiper-button-next"></div>
         </div>
@@ -223,7 +222,7 @@
             <p>No featured products available.</p>
         {% endif %}
 
-        <a href="/collections/featured-products" class="view-all-button">View all products</a>
+        <a href="/collections/all" class="view-all-button">View all products</a>
     </div>
 </div>
 
