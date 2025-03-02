@@ -38,24 +38,9 @@
     "main-collection": {
       "type": "main-collection-2",
       "settings": {
-        "collection_title": false,
-        "seo_heading": "h2",
-        "collection_description": false,
-        "pagination_type": "paged",
-        "products_per_page": 16,
-        "product_count": false,
-        "enable_filtering": false,
-        "filters_layout": "sidebar",
-        "enable_sorting": false,
-        "enable_display_options": false,
-        "collection_image": false,
-        "banner_height_desktop": "auto",
-        "banner_height_mobile": "auto",
-        "bgcolor": "#f8f8f8",
         "promotional_banner_size": "medium",
-        "promo_banner_image": "shopify://shop_images/0125_NewYear_PIP__1.webp",
-        "promo_banner_link": "shopify://pages/cat-guide-page",
-        "textcolor": "#000000"
+        "promo_banner_image": "shopify://shop_images/Frame_67.jpg",
+        "promo_banner_link": "shopify://pages/cat-guide-page"
       }
     },
     "8231b1f4-8107-414d-9432-3a48f23e000d": {
