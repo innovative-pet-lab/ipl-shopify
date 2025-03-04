@@ -40,6 +40,8 @@
       "settings": {
         "promotional_banner_size": "medium",
         "promo_banner_image": "shopify://shop_images/Frame_67.jpg",
+        "promo_banner_text": "Do you want to make sure they live the healthiest, happiest life possible?",
+        "promo_banner_button_label": "Learn more",
         "promo_banner_link": "shopify://pages/cat-guide-page"
       }
     },
