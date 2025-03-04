@@ -317,6 +317,12 @@ h6,
     font-size: 24px;
 }
 
+@media (max-width: 540px) {
+    .text-medium {
+        font-weight: 500;
+    }
+}
+
 .text-large {
     font-size: var(--largeText)!important;
 }

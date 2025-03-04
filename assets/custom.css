@@ -172,7 +172,7 @@
     .yv-dropdown-menus.mega-menu .container .mega-menu-5 ul {
         position: absolute;
         z-index: 5;
-        background-color: #fff;
+        background-color: transparent;
         width: auto;
         min-width: 25%;
         height: auto;
@@ -180,7 +180,7 @@
         left: 44%;
         display: none;
         margin-left: 10px;
-        top: 1rem;
+        top: 14px;
         padding-top: 13px;
     }
     .yv-dropdown-menus.mega-menu .container .mega-menu-5 ul.show:empty {

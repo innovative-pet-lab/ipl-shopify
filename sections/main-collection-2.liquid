@@ -1,8 +1,53 @@
 
 <style>
+    .shopify-section-main-header header{
+          background: transparent;
+      }
+    .shopify-section-main-header.sticky-header-main header {
+      background: #ffffff;
+    }
+    .shopify-section-main-header.sticky-header-main header .top-header {
+      box-shadow: 0 2px 2px #0000000d;
+    }
+    .shopify-section-main-header.sticky-header-main header .top-header .header__heading-link img {
+      max-width: 60px;
+    }
+    .shopify-section-main-header.sticky-header-main header {
+      height: auto;
+    }
+    .template_collection .top-header {
+      box-shadow: none;
+      transition: transform 0.3s ease;
+    }
+    .template_collection .top-header:hover {
+      background: white;
+    }
+    .yv-dropdown-menus.mega-menu .container {
+      margin: 8px 0 0;
+    }
+    .shopify-section-main-header.sticky-header-main header .yv-dropdown-menus.mega-menu .container {
+      margin: 2px 0 0;
+    }
+    .yv-dropdown-menus.mega-menu .container .mega-menu-5 ul {
+      top: 15px;
+    }
+    @media (min-width: 750px) {
+      .yv-dropdown-menus.mega-menu .container .mega-menu-2 ul {
+          top: 22px;
+      }
+      .shopify-section-main-header.sticky-header-main header .yv-dropdown-menus.mega-menu .container .mega-menu-5 ul {
+        top: 9px;
+      }
+    }
+
     .container {
       padding: 1rem 5%;
       margin-bottom: 2rem;
+    }
+    @media (min-width: 1600px) {
+      .container {
+        padding: 1rem 12%;
+      }
     }
     .filter-container {
         display: flex;
@@ -145,13 +190,22 @@
         padding: 1rem 0;
         align-items: center;
     }
+    @media (max-width: 540px) {
+      .banner .content {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      .banner .content .btn {
+        margin-top: 1rem;
+      }
+    }
     .banner .content .btn {
         background-color: #99D5E0;
         border: none;
         color: #26286E;
         padding: 0.6rem 1.1vw;
         border-radius: 50px;
-        font-size: min(1.1rem, 1.1vw);
+        font-size: 18px;
         font-weight: 600;
         min-width: 140px;
         text-align: center;
@@ -202,16 +256,13 @@
     /* Responsive */
     @media (max-width: 768px) {
         .products-grid {
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: repeat(1, 1fr);
         }
         .banner {
           grid-column: span 1;
         }
     }
     @media (max-width: 576px) {
-        .products-grid {
-            grid-template-columns: 1fr;
-        }
         .banner {
             flex-direction: column;
             text-align: center;
@@ -239,7 +290,7 @@
 
     <div class="products-grid">
       {% for product in collection.products %}
-        <div class="product-card-collection" data-category="{% if product.tags contains 'Cats' %}cats{% elsif product.tags contains 'Dogs'%}dogs{% else %}All{% endif %}">
+        <div class="product-card-collection" data-category="{% if product.tags contains 'Cats' %}cats{% elsif product.tags contains 'Dogs'%}dogs{% else %}all{% endif %}">
           <a href="{{ product.url }}">
             <div class="best-seller">Best Seller</div>
             <div class="product-image">
@@ -252,54 +303,85 @@
               {% endif %}
             </p>
             <p class="product-price">{{ product.price | money }}</p>
-      
             <button class="add-to-cart" data-id="{{ product.selected_or_first_available_variant.id }}">
               <span class="cart-icon">
-              <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M10.5 8H12.5V5H15.5V3H12.5V0H10.5V3H7.5V5H10.5M6.5 17C5.4 17 4.5 17.9 4.5 19C4.5 20.1 5.4 21 6.5 21C7.6 21 8.5 20.1 8.5 19C8.5 17.9 7.6 17 6.5 17ZM16.5 17C15.4 17 14.5 17.9 14.5 19C14.5 20.1 15.4 21 16.5 21C17.6 21 18.5 20.1 18.5 19C18.5 17.9 17.6 17 16.5 17ZM6.7 13.8V13.7L7.6 12H15C15.7 12 16.4 11.6 16.7 11L20.6 4L18.9 3L15 10H8L3.8 1H0.5V3H2.5L6.1 10.6L4.7 13C4.6 13.3 4.5 13.6 4.5 14C4.5 15.1 5.4 16 6.5 16H18.5V14H6.9C6.8 14 6.7 13.9 6.7 13.8Z" fill="#03B0A7"/>
-              </svg>
+                <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M10.5 8H12.5V5H15.5V3H12.5V0H10.5V3H7.5V5H10.5M6.5 17C5.4 17 4.5 17.9 4.5 19C4.5 20.1 5.4 21 6.5 21C7.6 21 8.5 20.1 8.5 19C8.5 17.9 7.6 17 6.5 17ZM16.5 17C15.4 17 14.5 17.9 14.5 19C14.5 20.1 15.4 21 16.5 21C17.6 21 18.5 20.1 18.5 19C18.5 17.9 17.6 17 16.5 17ZM6.7 13.8V13.7L7.6 12H15C15.7 12 16.4 11.6 16.7 11L20.6 4L18.9 3L15 10H8L3.8 1H0.5V3H2.5L6.1 10.6L4.7 13C4.6 13.3 4.5 13.6 4.5 14C4.5 15.1 5.4 16 6.5 16H18.5V14H6.9C6.8 14 6.7 13.9 6.7 13.8Z" fill="#03B0A7"/>
+                </svg>
               </span>{{ 'products.product.add_to_cart' | t }}
             </button>
           </a>
         </div>
-        {% if forloop.index == 3 %}
-          <div class="banner">
-            <a href="{{ banner_link }}">
-              <img width="" height="" class="no-js-hidden lazyautosizes lazyloaded" src="{{ banner_image | image_url }}" alt="">
-            </a>
-            <div class="content">
-              <p>{{ section.settings.promo_banner_text }}</p>
-              <a href="" class="btn">{{ section.settings.promo_banner_button_label }}</a>
-            </div>
-          </div>
-        {% endif %}
       {% endfor %}
     </div>
+
+    <!-- Banner moved outside the product grid -->
+    <div class="banner" style="display: none;">
+      <a href="{{ banner_link }}">
+        <img width="" height="" class="no-js-hidden lazyautosizes lazyloaded" src="{{ banner_image | image_url }}" alt="">
+      </a>
+      <div class="content">
+        <p>{{ section.settings.promo_banner_text }}</p>
+        <a href="" class="btn">{{ section.settings.promo_banner_button_label }}</a>
+      </div>
+    </div>
+
   </div>
 </section>
 <script>
   document.addEventListener("DOMContentLoaded", function () {
     const filterButtons = document.querySelectorAll(".filter-btn");
     const productCards = document.querySelectorAll(".product-card-collection");
+    const banner = document.querySelector(".banner");
+    const productsGrid = document.querySelector(".products-grid");
   
+    function updateBannerPosition(visibleCards, filter) {
+      // Ensure banner is always visible
+      banner.style.display = "block";
+  
+      if (filter === "all") {
+        // Always place banner as the 4th item on page load
+        if (visibleCards.length >= 3) {
+          visibleCards[3].insertAdjacentElement("beforebegin", banner);
+        } else {
+          productsGrid.appendChild(banner);
+        }
+      } else if (visibleCards.length >= 3) {
+        // Insert banner as the 4th item when 3 or more products are found
+        visibleCards[3].insertAdjacentElement("beforebegin", banner);
+      } else {
+        // If less than 3 results, place the banner at the bottom
+        productsGrid.appendChild(banner);
+      }
+    }
+  
+    function filterProducts(filter) {
+      let visibleCards = [];
+  
+      productCards.forEach(card => {
+        const category = card.getAttribute("data-category").split(" ");
+        if (filter === "all" || category.includes(filter)) {
+          card.style.display = "block";
+          visibleCards.push(card);
+        } else {
+          card.style.display = "none";
+        }
+      });
+  
+      updateBannerPosition(visibleCards, filter);
+    }
+  
+    // Apply filtering when clicking a button
     filterButtons.forEach(button => {
       button.addEventListener("click", function () {
-        const filter = this.getAttribute("data-filter");
-  
-        // Remove active class from all buttons
         filterButtons.forEach(btn => btn.classList.remove("active"));
         this.classList.add("active");
-  
-        productCards.forEach(card => {
-          const category = card.getAttribute("data-category").split(" ");
-          if (filter === "all" || category.includes(filter)) {
-            card.style.display = "block";
-          } else {
-            card.style.display = "none";
-          }
-        });
+        filterProducts(this.getAttribute("data-filter"));
       });
     });
+  
+    // On page load, trigger the "All" filter and ensure banner is 4th
+    filterProducts("all");
   });
 </script>
 
@@ -309,8 +391,8 @@
       const button = event.target.closest(".add-to-cart");
       if (!button) return;
   
-      event.preventDefault(); // Prevent default action
-      event.stopPropagation(); // Stop bubbling to parent div (prevents redirect)
+      event.preventDefault();
+      event.stopPropagation();
   
       const productId = button.getAttribute("data-id");
       if (!productId) {
@@ -318,7 +400,6 @@
         return;
       }
   
-      // Disable button and show loading state
       button.disabled = true;
       button.classList.add("loading");
   
@@ -328,19 +409,18 @@
         body: JSON.stringify({ id: productId, quantity: 1 }),
       })
         .then((response) => response.json())
-        .then(() => fetch("/cart?view=jsonData")) // Get updated cart
+        .then(() => fetch("/cart?view=jsonData"))
         .then((response) => response.text())
         .then((cartHtml) => {
           const drawerBody = document.querySelector("[data-drawer-body]");
           if (drawerBody) {
-            drawerBody.innerHTML = cartHtml; // Update cart contents
+            drawerBody.innerHTML = cartHtml; 
           }
   
           // Open slide-out cart
           document.body.classList.add("side_Drawer_open");
           document.querySelector(".wrapper-overlay").style.display = "block";
   
-          // Focus on cart for accessibility
           const sideDrawer = document.querySelector("[data-side-drawer]");
           if (sideDrawer) {
             sideDrawer.focus();
@@ -348,7 +428,6 @@
         })
         .catch((error) => console.error("Error adding to cart:", error))
         .finally(() => {
-          // Re-enable button after request completes
           button.disabled = false;
           button.classList.remove("loading");
         });

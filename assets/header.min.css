@@ -1538,7 +1538,8 @@ html.no-js .sub-inner-hamburger-outer .hamburger-menu-item .item {
 }
 
 .menu-category-title:hover {
-    background-color: #99D5E04D;
+    background-color: #e1f3f6;
+    opacity: 1;
 }
 
 .fullwidth-megamenus .yv-dropdown-item-link {

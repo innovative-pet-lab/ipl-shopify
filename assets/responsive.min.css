@@ -1418,8 +1418,8 @@
         padding: 0 12px
     }
     .yv-service-item span {
-        min-width: 28px;
-        max-width: 28px;
+        min-width: 48px;
+        max-width: 48px;
         height: 28px;
     }
     .top_page_title {
@@ -3145,6 +3145,7 @@
     }
     .yv-service-item {
         padding: 5px 15px;
+        margin-bottom: 3rem;
     }
     .yv-collections-topbar {
         margin: 0 -20px;
