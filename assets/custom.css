@@ -641,4 +641,8 @@ header .side-menu .inner-side ul li .list-menu__item {
 .bottom-cart-box .bottom-p {
     display: block;
     margin: auto;
+    text-align: center;
+}
+.bottom-cart-box {
+    background-color: #F9F9FA!important;
 }
