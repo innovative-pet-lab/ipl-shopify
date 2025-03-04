@@ -52,7 +52,7 @@
           "type": "spot",
           "disabled": true,
           "settings": {
-            "product": "comprehensive-review",
+            "product": "comprehensive-gutcheck-dog",
             "product_layout": "horizontal",
             "horizontal": 26,
             "vertical": 10,
