@@ -43,6 +43,51 @@
       background:url({{ 'lang-dropdown-arrow.svg' | asset_url }}) no-repeat 97% 50% /10px var(--primaryAlternateBg);
     }
     {%- endif -%}
+
+/* custom styling update */
+.breadcrumb-list, .yv-blog-tags {
+  display: none;
+}
+.shopify-section-main-header header {
+  background: transparent;
+}
+.shopify-section-main-header.sticky-header-main header {
+background: #ffffff;
+}
+.shopify-section-main-header.sticky-header-main header .top-header {
+box-shadow: 0 2px 2px #0000000d;
+}
+.shopify-section-main-header.sticky-header-main header .top-header .header__heading-link img {
+max-width: 60px;
+}
+.shopify-section-main-header.sticky-header-main header {
+height: auto;
+}
+.template_product-compcatproduct .top-header {
+box-shadow: none;
+transition: transform 0.3s ease;
+}
+.template_product-compcatproduct .top-header:hover {
+background: white;
+}
+.yv-dropdown-menus.mega-menu .container {
+margin: 8px 0 0;
+}
+.shopify-section-main-header.sticky-header-main header .yv-dropdown-menus.mega-menu .container {
+margin: 2px 0 0;
+}
+.yv-dropdown-menus.mega-menu .container .mega-menu-5 ul {
+top: 15px;
+}
+@media (min-width: 750px) {
+.yv-dropdown-menus.mega-menu .container .mega-menu-2 ul {
+  top: 22px;
+}
+.shopify-section-main-header.sticky-header-main header .yv-dropdown-menus.mega-menu .container .mega-menu-5 ul {
+top: 9px;
+}
+}
+
 </style>
 <div
   id=""
