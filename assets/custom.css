@@ -606,3 +606,39 @@ header .side-menu .inner-side ul li .list-menu__item {
 .slider-button {
     display: none;
 }
+
+/* cart dwawer */
+.yv_side_drawer_title h6 {
+    font-size: 40px;
+    font-weight: 600;
+    color: #1C1D31;
+}
+.media-link {
+    border-bottom: 1px solid #ECF0EF;
+    padding-bottom: 1.5rem;
+}
+.media-link:last-child {
+    border: none;
+}
+.media-link .cart-tags {
+    font-size: 16px;
+    font-weight: 500;
+    color: #A5A5A5;
+}
+.media-link .yv-product-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #000000;
+}
+.media-link .quantity input {
+    border-radius: 50px;
+    border-color: #03B0A7;
+}
+#mini__cart .bottom-cart-box ul li strong, #mini__cart .bottom-cart-box ul li {
+    font-size: 32px!important;
+    font-weight: bold!important;
+}
+.bottom-cart-box .bottom-p {
+    display: block;
+    margin: auto;
+}

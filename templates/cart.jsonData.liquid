@@ -79,6 +79,8 @@
             <a href="{{ item.url }}" class="yv-product-title" aria-label="{{ item.product.title | strip_html }}">
               {{- item.product.title | strip_html -}}
             </a>
+            <p class="cart-tags">For {{ item.product.tags | join: ' and ' }}</p>
+
             {%- unless item.variant.title == null or item.variant.title == 'Default Title' -%}
               <p class="item-variant-title">{{ item.variant.title | strip_html }}</p>
             {%- endunless -%}

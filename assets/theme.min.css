@@ -1912,7 +1912,6 @@ html:not(.no-js) .yv-collection-slider-wrapper:not(.flickity-enabled) {
 .theme-layout-rounded .quantity-button {
     width: 28px;
     height: 28px;
-    background-color: var(--colorTextBody);
     border-radius: 100%;
     transition: .8s ease;
     top: 50%;
@@ -1936,7 +1935,7 @@ html:not(.no-js) .yv-collection-slider-wrapper:not(.flickity-enabled) {
 }
 
 .theme-layout-rounded .quantity-button svg {
-    fill: var(--primaryColorBody) !important
+    fill: #03B0A7!important
 }
 
 .yv-checkout-btn {
@@ -5139,7 +5138,6 @@ body .fancybox__thumbs .carousel__slide.is-nav-selected .fancybox__thumb::after 
     position: relative;
     padding: 15px 40px 15px 30px;
     width: 100%;
-    border-bottom: 1px solid var(--colorXXlightTextBody)
 }
 
 .yv_side_drawer_title button,
