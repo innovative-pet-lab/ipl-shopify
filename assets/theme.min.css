@@ -5597,7 +5597,10 @@ body .fancybox__thumbs .carousel__slide.is-nav-selected .fancybox__thumb::after 
 }
 
 .rich-text-content .content-heading {
-    margin-bottom: 15px
+    margin-bottom: 15px;
+    font-size: 48px;
+    font-weight: 700;
+    color: #1C1D31;
 }
 
 .rich-text-description p,

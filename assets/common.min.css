@@ -312,7 +312,9 @@ h6,
 }
 
 .text-medium {
-    font-size: var(--mediumText)!important;
+    color: #26286E;
+    font-weight: 700;
+    font-size: 24px;
 }
 
 .text-large {

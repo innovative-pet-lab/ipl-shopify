@@ -1,141 +1,168 @@
 
 <style>
-
     .container {
-      padding: 1rem 8%;
+      padding: 1rem 5%;
+      margin-bottom: 2rem;
     }
     .filter-container {
         display: flex;
         gap: 10px;
         margin-bottom: 30px;
-        justify-content: center;
+        justify-content: left;
     }
-    
     .filter-btn {
         padding: 10px 20px;
         border-radius: 25px;
         border: 1px solid #ccc;
         background-color: white;
         cursor: pointer;
-        font-weight: bold;
+        font-weight: 600;
         transition: all 0.3s ease;
+        font-size: 18px;
     }
-    
+    .filter-btn:hover {
+      border-color: #03B0A7;
+      color: #03B0A7;
+    }
     .filter-btn.active {
         background-color: #2b2a64;
         color: white;
         border-color: #2b2a64;
     }
-    
     /* Product grid */
     .products-grid {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        gap: 20px;
+        gap: 30px;
         margin-bottom: 20px;
+        transition: transform 0.3s ease;
     }
-    
     /* Product cards */
-    .product-card {
-        border: 1px solid #e0e0e0;
+    .product-card-collection {
+        border: 1px solid #73C7AD;
         border-radius: 10px;
         overflow: hidden;
         background-color: white;
         padding: 20px;
         transition: transform 0.3s ease;
         position: relative;
+        cursor: pointer;
     }
-    
-    .product-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    .product-card-collection:hover {
+        background-color: #EBEBEB;
     }
-    
+    .product-card-collection:hover .add-to-cart {
+        background-color: #EFF8F6;
+        color: #03B0A7;
+        border: 1px solid #46c4b5;
+    }
+    .product-card-collection:hover .product-image {
+      transition: transform 0.3s ease;
+    }
+    .product-card-collection:hover .product-image img {
+        transform: rotate(-10deg) scale(1.1);
+        transition: transform 0.3s ease;
+    }
     .best-seller {
         position: absolute;
         top: 15px;
         left: 15px;
-        background-color: #46c4b5;
+        background-color: #03B0A7;
         color: white;
         padding: 5px 10px;
         border-radius: 5px;
-        font-size: 12px;
-        font-weight: bold;
+        font-size: 18px;
+        font-weight: 600;
+        text-transform: uppercase;
     }
-    
     .product-image {
         text-align: center;
         margin-bottom: 15px;
-        padding: 2rem 0;
+        padding: 4rem 0 2rem 0;
     }
-    
     .product-image img {
         max-width: 100%;
         height: auto;
         max-height: 200px;
         object-fit: contain;
     }
-    
     .product-title {
-        font-size: 18px;
-        font-weight: bold;
+        font-size: 24px;
+        font-weight: 600;
         margin-bottom: 5px;
-        color: #2b2a64;
+        color: #000000;
     }
-    
     .product-for {
-        color: #777;
+        color: #A5A5A5;
+        font-size: 20px;
+        font-weight: 700;
         margin-bottom: 10px;
     }
-    
     .product-price {
-        font-weight: bold;
-        font-size: 18px;
+        font-weight: 700;
+        font-size: 20px;
         margin-bottom: 15px;
     }
-    
     .add-to-cart {
         display: flex;
         align-items: center;
         justify-content: center;
         padding: 8px 15px;
         background-color: white;
-        border: 1px solid #46c4b5;
         color: #46c4b5;
-        border-radius: 5px;
+        border-radius: 50px;
         cursor: pointer;
         font-weight: bold;
         transition: all 0.3s ease;
-        width: 100%;
+        min-width: 40%;
+        margin: auto;
+        font-size: 18px;
+        border: 1px solid transparent;
     }
-    
     .add-to-cart:hover {
         background-color: #46c4b5;
         color: white;
     }
-    
     .cart-icon {
         margin-right: 10px;
         color: #46c4b5;
     }
-    
     .add-to-cart:hover .cart-icon {
         color: white;
     }
-    
     .banner {
         border-radius: 8px;
-        margin: 30px 0;
         display: flex;
         align-items: center;
         justify-content: space-between;
+        flex-direction: column;
         grid-column: span 2;
     }
-    
+    .banner .content {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding: 1rem 0;
+        align-items: center;
+    }
+    .banner .content .btn {
+        background-color: #99D5E0;
+        border: none;
+        color: #26286E;
+        padding: 0.6rem 1.1vw;
+        border-radius: 50px;
+        font-size: min(1.1rem, 1.1vw);
+        font-weight: 600;
+        min-width: 140px;
+        text-align: center;
+    }
+    .banner .content .btn:hover {
+        background-color: #26286E;
+        color: #ffffff;
+    }
     .banner-content {
         flex: 1;
     }
-    
     .banner h2 {
         font-size: 32px;
         color: #1a1a2c;
@@ -143,11 +170,9 @@
         line-height: 1.2;
         max-width: 400px;
     }
-    
     .banner-text {
         margin-bottom: 20px;
     }
-    
     .learn-more {
         display: inline-block;
         padding: 10px 20px;
@@ -158,22 +183,21 @@
         font-weight: bold;
         transition: all 0.3s ease;
     }
-    
     .learn-more:hover {
         background-color: #339e96;
     }
-    
     .banner-image {
         flex: 1;
         text-align: right;
     }
-    
     .banner-image img {
         max-width: 100%;
         height: auto;
     }
-
-
+    .sticky-header-main .container-fluid {
+      margin-top: 0;
+      padding-bottom: 0;
+    }
     
     /* Responsive */
     @media (max-width: 768px) {
@@ -184,111 +208,201 @@
           grid-column: span 1;
         }
     }
-    
     @media (max-width: 576px) {
         .products-grid {
             grid-template-columns: 1fr;
         }
-        
         .banner {
             flex-direction: column;
             text-align: center;
         }
-        
         .banner-content {
             margin-bottom: 20px;
         }
-        
         .banner h2 {
             max-width: 100%;
         }
     }
 </style>
+
 {%- liquid
   assign banner_image = section.settings.promo_banner_image
   assign banner_link = section.settings.promo_banner_link
 -%}
 <section>
   <div class="container">
-            <!-- Filter buttons -->
-            <div class="filter-container">
-              <button class="filter-btn active" data-filter="all">All</button>
-              <button class="filter-btn" data-filter="dogs">For Dogs</button>
-              <button class="filter-btn" data-filter="cats">For Cats</button>
-          </div>
-          
+    <div class="filter-container">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="dogs">For Dogs</button>
+      <button class="filter-btn" data-filter="cats">For Cats</button>
+    </div>
+
     <div class="products-grid">
       {% for product in collection.products %}
-        <div class="product-card" data-category="dogs">
+        <div class="product-card-collection" data-category="{% if product.tags contains 'Cats' %}cats{% elsif product.tags contains 'Dogs'%}dogs{% else %}All{% endif %}">
+          <a href="{{ product.url }}">
             <div class="best-seller">Best Seller</div>
             <div class="product-image">
-                <img width="" height="" src="{{ product.featured_image | image_url }}" alt="{{ product.title }}">
+              <img width="" height="" src="{{ product.featured_image | image_url }}" alt="{{ product.title }}">
             </div>
             <h3 class="product-title">{{ product.title }}</h3>
-            <p class="product-for"> 
+            <p class="product-for">
               {% if product.tags.size > 0 %}
                 For {{ product.tags | join: ' and ' }}
               {% endif %}
             </p>
             <p class="product-price">{{ product.price | money }}</p>
-            <button class="add-to-cart">
-                <span class="cart-icon">🛒</span> Add to Cart
+      
+            <button class="add-to-cart" data-id="{{ product.selected_or_first_available_variant.id }}">
+              <span class="cart-icon">
+              <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M10.5 8H12.5V5H15.5V3H12.5V0H10.5V3H7.5V5H10.5M6.5 17C5.4 17 4.5 17.9 4.5 19C4.5 20.1 5.4 21 6.5 21C7.6 21 8.5 20.1 8.5 19C8.5 17.9 7.6 17 6.5 17ZM16.5 17C15.4 17 14.5 17.9 14.5 19C14.5 20.1 15.4 21 16.5 21C17.6 21 18.5 20.1 18.5 19C18.5 17.9 17.6 17 16.5 17ZM6.7 13.8V13.7L7.6 12H15C15.7 12 16.4 11.6 16.7 11L20.6 4L18.9 3L15 10H8L3.8 1H0.5V3H2.5L6.1 10.6L4.7 13C4.6 13.3 4.5 13.6 4.5 14C4.5 15.1 5.4 16 6.5 16H18.5V14H6.9C6.8 14 6.7 13.9 6.7 13.8Z" fill="#03B0A7"/>
+              </svg>
+              </span>{{ 'products.product.add_to_cart' | t }}
             </button>
+          </a>
         </div>
-        
         {% if forloop.index == 3 %}
           <div class="banner">
             <a href="{{ banner_link }}">
-              <img class="no-js-hidden lazyautosizes ls-is-cached lazyloaded" 
-                src="{{ banner_image | image_url}}" 
-                alt="" 
-                width="" 
-                height="">
+              <img width="" height="" class="no-js-hidden lazyautosizes lazyloaded" src="{{ banner_image | image_url }}" alt="">
             </a>
+            <div class="content">
+              <p>{{ section.settings.promo_banner_text }}</p>
+              <a href="" class="btn">{{ section.settings.promo_banner_button_label }}</a>
+            </div>
           </div>
         {% endif %}
       {% endfor %}
     </div>
   </div>
 </section>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const filterButtons = document.querySelectorAll(".filter-btn");
+    const productCards = document.querySelectorAll(".product-card-collection");
+  
+    filterButtons.forEach(button => {
+      button.addEventListener("click", function () {
+        const filter = this.getAttribute("data-filter");
+  
+        // Remove active class from all buttons
+        filterButtons.forEach(btn => btn.classList.remove("active"));
+        this.classList.add("active");
+  
+        productCards.forEach(card => {
+          const category = card.getAttribute("data-category").split(" ");
+          if (filter === "all" || category.includes(filter)) {
+            card.style.display = "block";
+          } else {
+            card.style.display = "none";
+          }
+        });
+      });
+    });
+  });
+</script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    document.body.addEventListener("click", function (event) {
+      const button = event.target.closest(".add-to-cart");
+      if (!button) return;
+  
+      event.preventDefault(); // Prevent default action
+      event.stopPropagation(); // Stop bubbling to parent div (prevents redirect)
+  
+      const productId = button.getAttribute("data-id");
+      if (!productId) {
+        console.error("No product ID found");
+        return;
+      }
+  
+      // Disable button and show loading state
+      button.disabled = true;
+      button.classList.add("loading");
+  
+      fetch("/cart/add.js", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ id: productId, quantity: 1 }),
+      })
+        .then((response) => response.json())
+        .then(() => fetch("/cart?view=jsonData")) // Get updated cart
+        .then((response) => response.text())
+        .then((cartHtml) => {
+          const drawerBody = document.querySelector("[data-drawer-body]");
+          if (drawerBody) {
+            drawerBody.innerHTML = cartHtml; // Update cart contents
+          }
+  
+          // Open slide-out cart
+          document.body.classList.add("side_Drawer_open");
+          document.querySelector(".wrapper-overlay").style.display = "block";
+  
+          // Focus on cart for accessibility
+          const sideDrawer = document.querySelector("[data-side-drawer]");
+          if (sideDrawer) {
+            sideDrawer.focus();
+          }
+        })
+        .catch((error) => console.error("Error adding to cart:", error))
+        .finally(() => {
+          // Re-enable button after request completes
+          button.disabled = false;
+          button.classList.remove("loading");
+        });
+    });
+  });
+</script>
 
 {% schema %}
-{
-  "name": "t:sections.main-collection.name",
-  "tag": "section",
-  "class": "collection-products-section",
-    "settings": [
-      {
-        "type": "header",
-        "content": "Promotional Banner"
-      },
-      {
-        "type": "select",
-        "id": "promotional_banner_size",
-        "label": "Promotional Banner size",
-        "default": "large",
-        "options": [
-          {
-            "value": "large",
-            "label": "large"
-          },
-          {
-            "value": "medium",
-            "label": "medium"
-          }
-        ]
-      },
-      {
-        "type": "image_picker",
-        "id": "promo_banner_image",
-        "label": "Banner Image"
-      },
-      {
-        "type": "url",
-        "id": "promo_banner_link",
-        "label": "Banner Link"
-      }
-    ]
+  {
+    "name": "t:sections.main-collection.name",
+    "tag": "section",
+    "class": "collection-products-section",
+      "settings": [
+        {
+          "type": "header",
+          "content": "Promotional Banner"
+        },
+        {
+          "type": "select",
+          "id": "promotional_banner_size",
+          "label": "Promotional Banner size",
+          "default": "large",
+          "options": [
+            {
+              "value": "large",
+              "label": "large"
+            },
+            {
+              "value": "medium",
+              "label": "medium"
+            }
+          ]
+        },
+        {
+          "type": "image_picker",
+          "id": "promo_banner_image",
+          "label": "Banner Image"
+        },
+        {
+          "type": "text",
+          "id": "promo_banner_text",
+          "label": "Banner Text"
+        },
+        {
+          "type": "text",
+          "id": "promo_banner_button_label",
+          "label": "Banner Button Label"
+        },
+        {
+          "type": "url",
+          "id": "promo_banner_link",
+          "label": "Banner Link"
+        }
+      ]
   }
 {% endschema %}
 
