@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main-page": {
@@ -18,7 +27,7 @@
           "settings": {
             "heading": "You Know Your Pet Best",
             "seo_heading": "h2",
-            "content": "<p>We know that every pet has their own personality and is unique in their own way, which can make some symptoms hard to spot.<\/p>"
+            "content": "<p>We know that every pet has their own personality and is unique in their own way, which can make some symptoms hard to spot.</p>"
           }
         }
       },
@@ -54,7 +63,7 @@
           "type": "spot",
           "disabled": true,
           "settings": {
-            "product": "comprehensive-gut-check",
+            "product": "comprehensive-gut-check-cats",
             "product_layout": "horizontal",
             "horizontal": 40,
             "vertical": 10,
@@ -104,7 +113,7 @@
       ],
       "settings": {
         "enable_fullwidth": false,
-        "image": "shopify:\/\/shop_images\/Chart-Final.jpg",
+        "image": "shopify://shop_images/Chart-Final.jpg",
         "bgcolor": "primary",
         "section_visibility": "always",
         "top_space_desktop": 0,
@@ -121,8 +130,8 @@
           "settings": {
             "heading": "Diarrhea or Constipation",
             "subheading": "",
-            "image": "shopify:\/\/shop_images\/Symptomsv2-17.jpg",
-            "link": "shopify:\/\/collections\/symptom-diarrhea-or-constipation"
+            "image": "shopify://shop_images/Symptomsv2-17.jpg",
+            "link": "shopify://collections/symptom-diarrhea-or-constipation"
           }
         },
         "image_RanWhJ": {
@@ -130,8 +139,8 @@
           "settings": {
             "heading": "Vomiting",
             "subheading": "",
-            "image": "shopify:\/\/shop_images\/Symptomsv2-18.jpg",
-            "link": "shopify:\/\/collections\/vomiting"
+            "image": "shopify://shop_images/Symptomsv2-18.jpg",
+            "link": "shopify://collections/vomiting"
           }
         },
         "image_g48ybN": {
@@ -139,7 +148,7 @@
           "settings": {
             "heading": "Parasites",
             "subheading": "",
-            "image": "shopify:\/\/shop_images\/Cats_Symptoms-22.jpg",
+            "image": "shopify://shop_images/Cats_Symptoms-22.jpg",
             "link": ""
           }
         },
@@ -148,26 +157,26 @@
           "settings": {
             "heading": "Weight Fluctuations",
             "subheading": "",
-            "image": "shopify:\/\/shop_images\/Symptomsv2-20.jpg",
-            "link": "shopify:\/\/collections\/weight-fluctuations"
+            "image": "shopify://shop_images/Symptomsv2-20.jpg",
+            "link": "shopify://collections/weight-fluctuations"
           }
         },
         "image_QhJHaw": {
           "type": "image",
           "settings": {
-            "heading": "Skin\/Coat Issues\/Itching",
+            "heading": "Skin/Coat Issues/Itching",
             "subheading": "",
-            "image": "shopify:\/\/shop_images\/Cats_Symptoms-21_4c461c55-ccf3-4cb2-a3d9-829c260630e9.jpg",
-            "link": "shopify:\/\/collections\/skin-coat-itching"
+            "image": "shopify://shop_images/Cats_Symptoms-21_4c461c55-ccf3-4cb2-a3d9-829c260630e9.jpg",
+            "link": "shopify://collections/skin-coat-itching"
           }
         },
         "image_WVJHbD": {
           "type": "image",
           "settings": {
-            "heading": "Mood\/Behavior",
+            "heading": "Mood/Behavior",
             "subheading": "",
-            "image": "shopify:\/\/shop_images\/Symptomsv2-22.jpg",
-            "link": "shopify:\/\/collections\/mood-behavior"
+            "image": "shopify://shop_images/Symptomsv2-22.jpg",
+            "link": "shopify://collections/mood-behavior"
           }
         },
         "image_XTmbat": {
@@ -175,17 +184,17 @@
           "settings": {
             "heading": "Bad Breath",
             "subheading": "",
-            "image": "shopify:\/\/shop_images\/Symptomsv2-23.jpg",
-            "link": "shopify:\/\/collections\/bad-breath"
+            "image": "shopify://shop_images/Symptomsv2-23.jpg",
+            "link": "shopify://collections/bad-breath"
           }
         },
         "image_rAUR8b": {
           "type": "image",
           "settings": {
-            "heading": "Gas \/ Bloating",
+            "heading": "Gas / Bloating",
             "subheading": "",
-            "image": "shopify:\/\/shop_images\/Symptomsv2-24.jpg",
-            "link": "shopify:\/\/collections\/gas-bloating"
+            "image": "shopify://shop_images/Symptomsv2-24.jpg",
+            "link": "shopify://collections/gas-bloating"
           }
         },
         "image_ETChp9": {
@@ -193,8 +202,8 @@
           "settings": {
             "heading": "Fatigue",
             "subheading": "",
-            "image": "shopify:\/\/shop_images\/Cats_Symptoms-20_76c8e418-2b53-489a-b55a-8aeb4d492c1e.jpg",
-            "link": "shopify:\/\/collections\/fatigue"
+            "image": "shopify://shop_images/Cats_Symptoms-20_76c8e418-2b53-489a-b55a-8aeb4d492c1e.jpg",
+            "link": "shopify://collections/fatigue"
           }
         },
         "image_X3wPtr": {
@@ -202,8 +211,8 @@
           "settings": {
             "heading": "GI DiscomfortGI Discomfort",
             "subheading": "",
-            "image": "shopify:\/\/shop_images\/Symptomsv2-26.jpg",
-            "link": "shopify:\/\/collections\/gi-discomfort"
+            "image": "shopify://shop_images/Symptomsv2-26.jpg",
+            "link": "shopify://collections/gi-discomfort"
           }
         },
         "image_LNaqKx": {
@@ -211,8 +220,8 @@
           "settings": {
             "heading": "Food Reactions",
             "subheading": "",
-            "image": "shopify:\/\/shop_images\/Symptomsv2-27.jpg",
-            "link": "shopify:\/\/collections\/food-reactions"
+            "image": "shopify://shop_images/Symptomsv2-27.jpg",
+            "link": "shopify://collections/food-reactions"
           }
         }
       },
@@ -256,7 +265,7 @@
       "settings": {
         "enable_parallax": false,
         "section_visibility": "always",
-        "image": "shopify:\/\/shop_images\/Chart-Final_dc862020-6a32-41ab-a765-09593c0fa19f.jpg",
+        "image": "shopify://shop_images/Chart-Final_dc862020-6a32-41ab-a765-09593c0fa19f.jpg",
         "desktop_height": "100vh",
         "mobile_height": "500px",
         "banner_title": "",
@@ -265,7 +274,7 @@
         "mobile_title_size": 36,
         "banner_desc": "",
         "button_text": "",
-        "button_link": "shopify:\/\/collections\/all",
+        "button_link": "shopify://collections/all",
         "button_size": "large",
         "mobile_button_size": "m-small",
         "content_position": "center-center",
