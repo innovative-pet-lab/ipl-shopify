@@ -76,11 +76,20 @@
             {%- endif -%}
           </div>
           <div class="media-body">
-            <a href="{{ item.url }}" class="yv-product-title" aria-label="{{ item.product.title | strip_html }}">
-              {{- item.product.title | strip_html -}}
-            </a>
-            <p class="cart-tags">For {{ item.product.tags | join: ' and ' }}</p>
-
+            <div class="flex">
+              <div class="col_1">
+                <a href="{{ item.url }}" class="yv-product-title" aria-label="{{ item.product.title | strip_html }}">
+                  {{- item.product.title | strip_html -}}
+                </a>
+                <p class="cart-tags">For {{ item.product.tags | join: ' and ' }}</p>
+              </div>
+              <div class="yv-prizebox">
+                <span class="yv-product-price">{{ item.final_line_price | money }}</span>
+                {%- if item.original_line_price > item.final_line_price -%}
+                  <span class="yv-product-compare-price">{{ item.original_line_price | money }}</span>
+                {%- endif -%}
+              </div>
+          </div>
             {%- unless item.variant.title == null or item.variant.title == 'Default Title' -%}
               <p class="item-variant-title">{{ item.variant.title | strip_html }}</p>
             {%- endunless -%}
@@ -163,12 +172,12 @@
                 {% endunless %}
 
               <div class="cart-item-price-unit">
-                <div class="yv-prizebox">
+                {% comment %} <div class="yv-prizebox">
                   <span class="yv-product-price">{{ item.final_line_price | money }}</span>
                   {%- if item.original_line_price > item.final_line_price -%}
                     <span class="yv-product-compare-price">{{ item.original_line_price | money }}</span>
                   {%- endif -%}
-                </div>
+                </div> {% endcomment %}
                 {%- if item.unit_price_measurement -%}
                   <small class="yv-product-unit-price">
                     {{ item.variant.unit_price | money }}

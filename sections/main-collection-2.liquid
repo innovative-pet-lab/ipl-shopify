@@ -296,7 +296,7 @@
     <div class="products-grid">
       {% for product in collection.products %}
         <div class="product-card-collection" data-category="{% if product.tags contains 'Cats' %}cats{% elsif product.tags contains 'Dogs'%}dogs{% else %}all{% endif %}">
-          {% comment %} <a href="{{ product.url }}"> {% endcomment %}
+          <a href="{{ product.url }}">
             <div class="best-seller">Best Seller</div>
             <div class="product-image">
               <img width="" height="" src="{{ product.featured_image | image_url }}" alt="{{ product.title }}">
@@ -317,7 +317,7 @@
                   </svg>
                 </span>{{ 'products.product.add_to_cart' | t }}
               </button>
-          {% comment %} </a> {% endcomment %}
+          </a>
         </div>
       {% endfor %}
     </div>
@@ -426,6 +426,7 @@
   
           // Open slide-out cart
           document.body.classList.add("side_Drawer_open");
+          document.body.classList.add("yv_side_Drawer_open");
           document.querySelector(".wrapper-overlay").style.display = "block";
   
           const sideDrawer = document.querySelector("[data-side-drawer]");
