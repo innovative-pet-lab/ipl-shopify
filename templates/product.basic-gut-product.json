@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main-product": {
@@ -95,7 +104,7 @@
       "settings": {
         "enable_parallax": false,
         "section_visibility": "always",
-        "image": "shopify:\/\/shop_images\/Screenshot_2024-02-08_at_3.29.59_PM_copy_40daf36c-1e7f-4d9d-a421-6196824b99f5.jpg",
+        "image": "shopify://shop_images/Screenshot_2024-02-08_at_3.29.59_PM_copy_40daf36c-1e7f-4d9d-a421-6196824b99f5.jpg",
         "desktop_height": "350px",
         "mobile_height": "500px",
         "banner_title": "",
@@ -104,7 +113,7 @@
         "mobile_title_size": 36,
         "banner_desc": "",
         "button_text": "",
-        "button_link": "shopify:\/\/collections\/all",
+        "button_link": "shopify://collections/all",
         "button_size": "small",
         "mobile_button_size": "m-small",
         "content_position": "center-center",
@@ -125,13 +134,14 @@
           "settings": {
             "heading": "Take the mystery out \u0003of your pet’s gut health.",
             "seo_heading": "h2",
-            "content": "<p>If your dog or cat is showing signs of digestive or stomach issues, our Basic Gut Check test can help you proactively identify underlying issues and lead you (and your vet) to better solutions and a better quality of life!<\/p>"
+            "content": "<p>If your dog or cat is showing signs of digestive or stomach issues, our Basic Gut Check test can help you proactively identify underlying issues and lead you (and your vet) to better solutions and a better quality of life!</p>"
           }
         }
       },
       "block_order": [
         "richtext_rHNwhV"
       ],
+      "disabled": true,
       "settings": {
         "content_width": "container sm-container",
         "content_alignment": "center",
@@ -151,25 +161,25 @@
           "settings": {
             "heading": "Diarrhea or Constipation",
             "subheading": "",
-            "image": "shopify:\/\/shop_images\/Symptomsv2-17.jpg",
+            "image": "shopify://shop_images/Symptomsv2-17.jpg",
             "link": ""
           }
         },
         "image_PqNGzR": {
           "type": "image",
           "settings": {
-            "heading": "Mood\/Behavior",
+            "heading": "Mood/Behavior",
             "subheading": "",
-            "image": "shopify:\/\/shop_images\/Symptomsv2-22.jpg",
+            "image": "shopify://shop_images/Symptomsv2-22.jpg",
             "link": ""
           }
         },
         "image_tDAAw8": {
           "type": "image",
           "settings": {
-            "heading": "Skin\/Coat Issues\/Itching",
+            "heading": "Skin/Coat Issues/Itching",
             "subheading": "",
-            "image": "shopify:\/\/shop_images\/Symptomsv2-21.jpg",
+            "image": "shopify://shop_images/Symptomsv2-21.jpg",
             "link": ""
           }
         },
@@ -178,7 +188,7 @@
           "settings": {
             "heading": "Vomiting",
             "subheading": "",
-            "image": "shopify:\/\/shop_images\/Symptomsv2-18.jpg",
+            "image": "shopify://shop_images/Symptomsv2-18.jpg",
             "link": ""
           }
         }
@@ -189,6 +199,7 @@
         "image_tDAAw8",
         "image_JqhMiG"
       ],
+      "disabled": true,
       "settings": {
         "enable_fullwidth": true,
         "heading": "",
@@ -217,7 +228,7 @@
           "type": "image",
           "settings": {
             "image_width": "col-md-4",
-            "image": "shopify:\/\/shop_images\/D_or_C_c835ded5-2673-4aae-aa71-df3b37570dde.png",
+            "image": "shopify://shop_images/D_or_C_c835ded5-2673-4aae-aa71-df3b37570dde.png",
             "heading": "Heading",
             "seo_heading": "h2",
             "enable_text_shadow": false,
@@ -330,6 +341,7 @@
       "blocks": {
         "richtext_WXnq34": {
           "type": "richtext",
+          "disabled": true,
           "settings": {
             "heading": "Benefits of Understanding & Treating Symptoms",
             "seo_heading": "h2",
@@ -340,6 +352,7 @@
       "block_order": [
         "richtext_WXnq34"
       ],
+      "disabled": true,
       "settings": {
         "content_width": "container sm-container",
         "content_alignment": "center",
@@ -359,7 +372,7 @@
           "settings": {
             "heading": "Fewer Tummy Troubles",
             "subheading": "",
-            "image": "shopify:\/\/shop_images\/FEWER_TUMMY_TROUBLES.png",
+            "image": "shopify://shop_images/FEWER_TUMMY_TROUBLES.png",
             "link": ""
           }
         },
@@ -368,7 +381,7 @@
           "settings": {
             "heading": "Stronger Immune System",
             "subheading": "",
-            "image": "shopify:\/\/shop_images\/Stronger_Immune_System.png",
+            "image": "shopify://shop_images/Stronger_Immune_System.png",
             "link": ""
           }
         },
@@ -377,7 +390,7 @@
           "settings": {
             "heading": "Custom Health Plan",
             "subheading": "",
-            "image": "shopify:\/\/shop_images\/Custom_Health_Plan.jpg",
+            "image": "shopify://shop_images/Custom_Health_Plan.jpg",
             "link": ""
           }
         }
@@ -387,6 +400,7 @@
         "image_4EQdBk",
         "image_LGHQWi"
       ],
+      "disabled": true,
       "settings": {
         "enable_fullwidth": false,
         "heading": "",
@@ -424,8 +438,8 @@
           "type": "image",
           "disabled": true,
           "settings": {
-            "first_image": "shopify:\/\/shop_images\/pexels-vlada-karpovich-6802899.jpg",
-            "second_image": "shopify:\/\/shop_images\/tran-mau-tri-tam-pfRES3CjcUM-unsplash.jpg",
+            "first_image": "shopify://shop_images/pexels-vlada-karpovich-6802899.jpg",
+            "second_image": "shopify://shop_images/tran-mau-tri-tam-pfRES3CjcUM-unsplash.jpg",
             "image_shadow": true,
             "bgcolor": "secondary",
             "image_shadow_color": "#d1c9c4"
@@ -434,7 +448,7 @@
         "text_EegppK": {
           "type": "text",
           "settings": {
-            "content": "<h5>Do you want to make sure they live the healthiest, happiest life possible?<\/h5><p><\/p><p><\/p><p>Then you’re gonna love our Basic Gut Health test. Here’s why:<\/p><ul><li>Peace of Mind: Imagine knowing you’re doing everything you can for your pet’s health. Now that’s priceless.<\/li><li>Stronger Immune System: A large part of your pet’s immune system lives in their gut. A healthy gut equals a stronger, healthier pet.<\/li><li>Fewer Tummy Troubles: A balanced gut means fewer upset tummies, bloating, and allergies for your pet.<\/li><li>Custom Health Plan: Every pet is unique. This test helps you cater to their diet and care, based on their gut health.<\/li><li>Early Problem Detection: It’s always better to catch issues early. With this test, you can take action before minor issues become big problems.<\/li><\/ul>"
+            "content": "<h5>Do you want to make sure they live the healthiest, happiest life possible?</h5><p></p><p></p><p>Then you’re gonna love our Basic Gut Health test. Here’s why:</p><ul><li>Peace of Mind: Imagine knowing you’re doing everything you can for your pet’s health. Now that’s priceless.</li><li>Stronger Immune System: A large part of your pet’s immune system lives in their gut. A healthy gut equals a stronger, healthier pet.</li><li>Fewer Tummy Troubles: A balanced gut means fewer upset tummies, bloating, and allergies for your pet.</li><li>Custom Health Plan: Every pet is unique. This test helps you cater to their diet and care, based on their gut health.</li><li>Early Problem Detection: It’s always better to catch issues early. With this test, you can take action before minor issues become big problems.</li></ul>"
           }
         }
       },
@@ -478,7 +492,7 @@
           "type": "image",
           "settings": {
             "image_width": "col-md-4",
-            "image": "shopify:\/\/shop_images\/box_innovative_pet_lab_inflamation_immunity-1024x768_23d18b47-683c-4062-9cc5-a8e0e6ffa561.png",
+            "image": "shopify://shop_images/box_innovative_pet_lab_inflamation_immunity-1024x768_23d18b47-683c-4062-9cc5-a8e0e6ffa561.png",
             "heading": "Digestion & Detox",
             "seo_heading": "h3",
             "enable_text_shadow": false,
