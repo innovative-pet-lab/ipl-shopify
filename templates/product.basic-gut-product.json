@@ -424,6 +424,7 @@
     },
     "spacer_Ydq4Eq": {
       "type": "spacer",
+      "disabled": true,
       "settings": {
         "height_desktop": 100,
         "height_mobile": 1,
