@@ -106,39 +106,188 @@
             {% endif %}
           </div>
         {%- when 'quantity' -%}
-          <div data-spark="b2c-only" class="yv-product-quantity" {{ block.shopify_attributes }}>
-            <label class="yv-variant-title" for="product-quantity-{{ product_form_id }}">
-              {{- 'products.product.quantity.label' | t -}}
-            </label>
-            <div class="quantity">
-              <button type="button" class="quantity-button quantity-down no-js-hidden">
-                <span class="yv-visually-hidden">
-                  {{- 'products.product.quantity.decrease' | t: product: product.title | escape -}}
-                </span>
-                <svg x="0px" y="0px" width="14px" height="14px" viewBox="0 0 14 14">
-                  <rect x="6" transform="matrix(6.123234e-17 -1 1 6.123234e-17 0 14)" width="2.1" height="14" />
-                </svg>
-              </button>
+          <div class="pdp-flex">
+            <div class="yv-product-quantity" {{ block.shopify_attributes }}>
+              <label class="yv-variant-title" for="product-quantity-{{ product_form_id }}">
+                {{- 'products.product.quantity.label' | t -}}
+              </label>
+              <div class="quantity">
+                <button type="button" class="quantity-button quantity-down no-js-hidden">
+                  <span class="yv-visually-hidden">
+                    {{- 'products.product.quantity.decrease' | t: product: product.title | escape -}}
+                  </span>
+                  <svg x="0px" y="0px" width="14px" height="14px" viewBox="0 0 14 14">
+                    <rect x="6" transform="matrix(6.123234e-17 -1 1 6.123234e-17 0 14)" width="2.1" height="14" />
+                  </svg>
+                </button>
 
-              <input
-                id="product-quantity-{{ product_form_id }}"
-                type="number"
-                name="quantity"
-                min="1"
-                step="1"
-                value="1"
-                form="{{ product_form_id }}"
-                aria-label="{{ 'products.product.quantity.label' | t }}"
-              >
+                <input
+                  id="product-quantity-{{ product_form_id }}"
+                  type="number"
+                  name="quantity"
+                  min="1"
+                  step="1"
+                  value="1"
+                  form="{{ product_form_id }}"
+                  aria-label="{{ 'products.product.quantity.label' | t }}"
+                >
 
-              <button type="button" class="quantity-button quantity-up no-js-hidden">
-                <span class="yv-visually-hidden">
-                  {{- 'products.product.quantity.increase' | t: product: product.title | escape -}}
-                </span>
-                <svg x="0px" y="0px" width="14px" height="14px" viewBox="0 0 14 14">
-                  <polygon points="14,6 8,6 8,0 6,0 6,6 0,6 0,8 6,8 6,14 8,14 8,8 14,8 " />
-                </svg>
-              </button>
+                <button type="button" class="quantity-button quantity-up no-js-hidden">
+                  <span class="yv-visually-hidden">
+                    {{- 'products.product.quantity.increase' | t: product: product.title | escape -}}
+                  </span>
+                  <svg x="0px" y="0px" width="14px" height="14px" viewBox="0 0 14 14">
+                    <polygon points="14,6 8,6 8,0 6,0 6,6 0,6 0,8 6,8 6,14 8,14 8,8 14,8 " />
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="product_button" {{ block.shopify_attributes }}>
+              {%- form 'product',
+                product,
+                id: product_form_id,
+                class: 'form main-product-form',
+                novalidate: 'novalidate',
+                data-type: 'add-to-cart-form'
+              -%}
+                {%- liquid
+                  assign gift_card_recipient_feature_active = false
+                  if block.settings.show_recipient_form and product.gift_card?
+                    assign gift_card_recipient_feature_active = true
+                  endif
+                  assign show_dynamic_checkout = false
+                  if block.settings.dynamic_checkout_btn and gift_card_recipient_feature_active == false
+                    assign show_dynamic_checkout = true
+                  endif
+                -%}
+                {% if gift_card_recipient_feature_active %}
+                  {%- render 'gift-card-recipient', product: product, form: form, section: section -%}
+                {% endif %}
+                {%- liquid
+                  render 'product-variants', product: product
+                  assign preorder = false
+                  if settings.enable_preorder and current_variant.inventory_policy == 'continue' and current_variant.inventory_quantity <= 0
+                    assign preorder = true
+                  endif
+                -%}
+                {%- if mainProduct and block.settings.show_subscriptions_plan -%}
+                  <input type="hidden" name="selling_plan" value="">
+
+                  {%- liquid
+                    assign current_variant_selling_groups = ''
+                    assign current_variant_selling_plans = ''
+                    for selling_plan_allocation in current_variant.selling_plan_allocations
+                      unless current_variant_selling_groups contains selling_plan_allocation.selling_plan_group_id
+                        assign current_variant_selling_groups = current_variant_selling_groups | append: selling_plan_allocation.selling_plan_group_id
+                      endunless
+                      unless current_variant_selling_plans contains selling_plan_allocation.selling_plan.id
+                        assign current_variant_selling_plans = current_variant_selling_plans | append: selling_plan_allocation.selling_plan.id
+                      endunless
+                    endfor
+                  -%}
+                  {%- if current_variant.selling_plan_allocations.size > 0 -%}
+                    <div class="selling_plan_wrapper no-js-hidden" data-selling-plan-container>
+                      <div class="selling_group active">
+                        <div class="sellingPlanHeading" for="oneTimePurchase">
+                          <input type="radio" id="oneTimePurchase" name="sellingPlanHeading" checked>
+                          <label for="oneTimePurchase">{{ 'products.product.one_time_purchase' | t }}</label>
+                        </div>
+                      </div>
+                      {%- for selling_plan_group in product.selling_plan_groups -%}
+                        {%- if current_variant_selling_groups contains selling_plan_group.id -%}
+                          <div class="selling_group">
+                            <div class="sellingPlanHeading" for="sellingGroup{{ forloop.index }}">
+                              <input type="radio" id="sellingGroup{{ forloop.index }}" name="sellingPlanHeading" value="">
+                              <label for="sellingGroup{{ forloop.index }}">{{ selling_plan_group.name }}</label>
+                            </div>
+                            <div class="selling_plan" data-val>
+                              <select class="selling_plan_attribute">
+                                {%- for selling_plan in selling_plan_group.selling_plans -%}
+                                  <option
+                                    value="{{ selling_plan.id }}"
+                                    {% if forloop.first %}
+                                      selected
+                                    {% endif %}
+                                  >
+                                    {{ selling_plan.name }}
+                                  </option>
+                                {%- endfor -%}
+                              </select>
+                            </div> 
+                          </div>
+                        {%- endif -%}
+                      {%- endfor -%}
+                    </div>
+                  {%- endif -%}
+                {%- endif -%}
+                {%- if mainProduct -%}
+                  {%- render 'product-pickup-availability', product: product -%}
+                {%- endif -%}
+                <input type="hidden" name="id" value="{{ current_variant.id }}" disabled>
+                <div class="productErrors error-text" style="display:none" role="status"></div>
+                {% if settings.enable_terms_checkbox and settings.terms_conditions_text != blank %}
+                  <div class="terms_conditions-wrapper custom-checkbox" data-terms-conditions-wrapper>
+                    <input
+                      type="checkbox"
+                      name="terms_conditions"
+                      value="yes"
+                      title="{{ settings.terms_conditions_text | strip_html }}"
+                      id="terms_conditions_input"
+                      onClick="acceptTermsConditions(event)"
+                      data-section="shopify-section-{{ section.id }}"
+                    >
+                    <span class="checkmark"></span>
+                    <label for="terms_conditions_input" title="{{ settings.terms_conditions_text | strip_html }}">
+                      {{ settings.terms_conditions_text }}
+                    </label>
+                  </div>
+                {% endif %}
+                <div data-spark="b2c-only"
+                  class="pdp-action-container yv-checkout-btn{% if show_dynamic_checkout %} dynamic-checkout-enabled{% endif %}{% if block.settings.enable_fullwidth %} yv-checkout-btn-full-width{% endif %}{% unless current_variant.available %} disabled {% elsif settings.enable_terms_checkbox and settings.terms_conditions_text != blank %} disabled{% endunless %}"
+                  data-button-wrapper
+                >
+                  <button
+                    type="submit"
+                    class="Sd_addProduct add_to_cart button med-btn"
+                    {% unless current_variant.available %}
+                      disabled
+                    {% elsif settings.enable_terms_checkbox and settings.terms_conditions_text != blank %}
+                      disabled
+                    {% endunless %}
+                  >
+
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M11 9H13V6H16V4H13V1H11V4H8V6H11M7 18C5.9 18 5 18.9 5 20C5 21.1 5.9 22 7 22C8.1 22 9 21.1 9 20C9 18.9 8.1 18 7 18ZM17 18C15.9 18 15 18.9 15 20C15 21.1 15.9 22 17 22C18.1 22 19 21.1 19 20C19 18.9 18.1 18 17 18ZM7.2 14.8V14.7L8.1 13H15.5C16.2 13 16.9 12.6 17.2 12L21.1 5L19.4 4L15.5 11H8.5L4.3 2H1V4H3L6.6 11.6L5.2 14C5.1 14.3 5 14.6 5 15C5 16.1 5.9 17 7 17H19V15H7.4C7.3 15 7.2 14.9 7.2 14.8Z" fill="white"/>
+  </svg>
+  
+                    <span>
+                      {%- unless current_variant.available -%}
+                        {{ 'products.product.sold_out' | t }}
+                      {%- else -%}
+                        {%- if preorder -%}
+                          {{ 'products.product.preorder' | t }}
+                        {%- else -%}
+                          {{ 'products.product.add_to_cart' | t }}
+                        {%- endif -%}
+                      {%- endunless -%}
+                    </span>
+                    <svg
+                      style="margin: auto; display: none; shape-rendering: auto;"
+                      width="200px"
+                      height="200px"
+                      viewBox="0 0 100 100"
+                      preserveAspectRatio="xMidYMid"
+                      class="svg-loader"
+                    >
+                      <circle cx="50" cy="50" fill="none" stroke="currentcolor" stroke-width="6" r="35"
+                        stroke-dasharray="164.93361431346415 56.97787143782138">
+                        <animateTransform attributeName="transform" type="rotate" repeatCount="indefinite" dur="1s"
+                          values="0 50 50;360 50 50" keyTimes="0;1" />
+                      </circle>
+                    </svg>
+                  </button>
+                </div>
+              {%- endform -%}
             </div>
           </div>
 
@@ -490,7 +639,7 @@
           {% render 'pdp-countdown', product: product, current_variant: current_variant, block: block %}
           {%- when 'product_variations' -%}
             {% render 'product-variations', product: product, current_variant: current_variant, block: block %}
-        {%- when 'button' -%}
+        {% comment %} {%- when 'button' -%}
           <div class="product_button" {{ block.shopify_attributes }}>
             {%- form 'product',
               product,
@@ -523,14 +672,14 @@
                 <input type="hidden" name="selling_plan" value="">
 
                 {%- liquid
-                  assign currentVariantSellingGroups = ''
-                  assign currentVariantSellingPlans = ''
+                  assign current_variant_selling_groups = ''
+                  assign current_variant_selling_plans = ''
                   for selling_plan_allocation in current_variant.selling_plan_allocations
-                    unless currentVariantSellingGroups contains selling_plan_allocation.selling_plan_group_id
-                      assign currentVariantSellingGroups = currentVariantSellingGroups | append: selling_plan_allocation.selling_plan_group_id
+                    unless current_variant_selling_groups contains selling_plan_allocation.selling_plan_group_id
+                      assign current_variant_selling_groups = current_variant_selling_groups | append: selling_plan_allocation.selling_plan_group_id
                     endunless
-                    unless currentVariantSellingPlans contains selling_plan_allocation.selling_plan.id
-                      assign currentVariantSellingPlans = currentVariantSellingPlans | append: selling_plan_allocation.selling_plan.id
+                    unless current_variant_selling_plans contains selling_plan_allocation.selling_plan.id
+                      assign current_variant_selling_plans = current_variant_selling_plans | append: selling_plan_allocation.selling_plan.id
                     endunless
                   endfor
                 -%}
@@ -543,7 +692,7 @@
                       </div>
                     </div>
                     {%- for selling_plan_group in product.selling_plan_groups -%}
-                      {%- if currentVariantSellingGroups contains selling_plan_group.id -%}
+                      {%- if current_variant_selling_groups contains selling_plan_group.id -%}
                         <div class="selling_group">
                           <div class="sellingPlanHeading" for="sellingGroup{{ forloop.index }}">
                             <input type="radio" id="sellingGroup{{ forloop.index }}" name="sellingPlanHeading" value="">
@@ -648,7 +797,7 @@
           {%- endcomment -%}
           <p class="visually-hidden" data-loader-status aria-live="assertive" role="alert" aria-hidden="true">
             Adding product to your cart
-          </p>
+          </p> {% endcomment %}
 
         {%- when 'reels' -%}
           <div class="product-video-block">
