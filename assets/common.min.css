@@ -157,10 +157,10 @@ body {
     letter-spacing: var(--base_spacing);
     word-break: break-word;
 }
-
+/* 
 *:not(a, a *, h1, h2, h3, h4, h5, h6, svg, svg *, .rich-editor-text-content *, .button,font) {
     color: var(--colorTextBody);
-}
+} */
 
 select option {
     color: #000!important;
@@ -1457,8 +1457,8 @@ ul.yv-product-meta,.yv-content-body ul.yv-product-meta {
     .container,
     .container-fluid,
     .custom-container {
-        padding-right: 15px;
-        padding-left: 15px;
+        padding-right: 5%;
+        padding-left: 5%;
     }
     .sticky-header .container-fluid {
         padding-bottom: 0;
@@ -1831,9 +1831,9 @@ ul.yv-product-meta,.yv-content-body ul.yv-product-meta {
         font-size: calc( var(--heading_base_size) * 55px);
     }
     h2,
-    .h2 {
+    /* .h2 {
         font-size: calc( var(--heading_base_size) * 34px);
-    }
+    } */
     h3,
     .h3 {
         font-size: calc( var(--heading_base_size) * 30px);

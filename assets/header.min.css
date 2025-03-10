@@ -1499,15 +1499,13 @@ html.no-js .sub-inner-hamburger-outer .hamburger-menu-item .item {
     pointer-events: auto;
     transition: all 0.3s ease-in-out;
 }
-
 .dropdown-inner-menu-item {
     padding: 0 0rem 0 0.5rem;
     background-color: #fff;
 }
-
 .yv-dropdown-item-link {
     display: block;
-    padding: 1rem 1.8rem;
+    padding: 1rem 1.8rem 1rem 1.8rem;
     font-weight: 600;
 }
 /* .yv-dropdown-item-link span {
@@ -1517,13 +1515,11 @@ html.no-js .sub-inner-hamburger-outer .hamburger-menu-item .item {
     color: var(--theme-color);
     background-color: #99D5E04D;
 }
-
 .fullwidth-megamenus .yv-dropdown-menus {
     left: 0;
     width: 100%;
     padding: 0;
 }
-
 .menu-category-title {
     padding-bottom: 18px;
     display: flex;

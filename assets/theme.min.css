@@ -1626,11 +1626,6 @@ html:not(.no-js) .yv-collection-slider-wrapper:not(.flickity-enabled) {
     text-transform: capitalize
 }
 
-.yv-prizebox span {
-    margin-right: 12px;
-    vertical-align: middle
-}
-
 .yv-product-price {
     font-family: var(--priceFontFamily);
     font-weight: 700;

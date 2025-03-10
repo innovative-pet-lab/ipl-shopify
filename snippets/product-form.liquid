@@ -15,6 +15,13 @@
             {{ product.title | strip_html }}
             {% unless mainProduct %}</a>{% endunless %}
           </{{ block.settings.seo_heading }}>
+          {% if product.tags.size > 0 %}
+            <p class="product-tags">For
+              {% for tag in product.tags %}
+                <span class="product-tag">{{ tag }}</span>{% unless forloop.last %} and {% endunless %}
+              {% endfor %}
+            </p>
+          {% endif %}
         {%- when 'review-star' -%}
           {%- if product.metafields.reviews.rating_count > 0 -%}
             {% liquid
