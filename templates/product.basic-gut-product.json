@@ -648,6 +648,7 @@
         },
         "d192928f-441f-42d2-852c-5e1864672797": {
           "type": "column",
+          "disabled": true,
           "settings": {
             "icon": "heart",
             "heading": "Give Your Pet the Care they Need",
