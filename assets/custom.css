@@ -33,6 +33,7 @@
     }
     header.header {
         position: relative!important;
+        margin-bottom: 0;
     }
     .yv-image-banner-heading {
         font-size: min(5rem, 5vw)!important;
