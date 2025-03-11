@@ -4,7 +4,7 @@
     margin: auto;
     padding: 20px;
   }
-  .related-products-container .section-heading h2 {
+  .related-products-container .section-heading .h2 {
     font-size: 40px;
     font-weight: 700;
     margin-bottom: 2rem;
@@ -106,7 +106,7 @@
     
     {%- if recommendations.performed and recommendations.products_count > 0 -%}
       <div class="section-heading">
-        <{{ section.settings.seo_heading }} class="section-heading-title h2">Related Products</{{ section.settings.seo_heading }}>
+        <div class="section-heading-title h2">Related Products</div >
       </div>
       
       <div id="product-recommendations-{{ section.id }}" class="yv-recent-product-grid recommend data-desktop-only">
@@ -115,7 +115,7 @@
             {%- for product in recommendations.products limit: 3 -%}
               <div class="product-card">
                 <div class="img-wrap">
-                  <img src="{{ product.featured_image | image_url }}" alt="{{ product.title }}" class="product-image">
+                  <img width="" height="" src="{{ product.featured_image | image_url }}" alt="{{ product.title }}" class="product-image">
                 </div>
                 <h2 class="product-title">{{ product.title }}</h2>
                 <p class="reco-tags">For Cats and Dogs</p>
@@ -204,39 +204,30 @@
 
 {% schema %}
 {
-  "name": "t:sections.product_recommendations.name",
-  "tag": "section",
-  "class": "product-page-recommendations recent-product-section",
+  "name": "IPL related products",
   "settings": [
     {
-      "label": "t:sections.product_recommendations.settings.heading.label",
-      "id": "heading",
       "type": "text",
-      "default": "Recommended Products"
+      "id": "heading_text",
+      "label": "Heading Text",
+      "default": "Welcome to Our Store!"
     },
     {
-      "type": "select",
-      "id": "seo_heading",
-      "label": "t:common.header.heading_tag.label",
-      "info": "t:common.header.heading_tag.info",
-      "default": "h2",
-      "options": [
-        { "value": "h1", "label": "t:common.header.heading_tag.options.h1.label" },
-        { "value": "h2", "label": "t:common.header.heading_tag.options.h2.label" },
-        { "value": "h3", "label": "t:common.header.heading_tag.options.h3.label" },
-        { "value": "h4", "label": "t:common.header.heading_tag.options.h4.label" },
-        { "value": "h5", "label": "t:common.header.heading_tag.options.h5.label" },
-        { "value": "h6", "label": "t:common.header.heading_tag.options.h6.label" }
-      ]
+      "type": "textarea",
+      "id": "body_text",
+      "label": "Body Text",
+      "default": "This is a customizable page for displaying your content."
     },
     {
-      "type": "range",
-      "id": "products_count",
-      "min": 2,
-      "max": 10,
-      "step": 1,
-      "label": "t:sections.product_recommendations.settings.products_count.label",
-      "default": 8
+      "type": "color",
+      "id": "background_color",
+      "label": "Background Color",
+      "default": "#ffffff"
+    }
+  ],
+  "presets": [
+    {
+      "name": "IPL related products"    
     }
   ]
 }
