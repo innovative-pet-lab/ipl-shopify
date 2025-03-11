@@ -1,0 +1,198 @@
+<style>
+  .benefits-main-wrap {
+    margin: 5rem auto;
+    padding: 0 8%;
+  }
+  .benefits-container {
+      margin: 0 auto;
+      padding: 4rem 3rem;
+      position: relative;
+      overflow: hidden;
+      background-color: #f0f4f4;
+      border-radius: 20px;
+  }
+  
+  .benefits-blob {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 0;
+  }
+  
+  .benefits-content {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+  }
+
+  .benefits-content .benefits-left h1 {
+    font-size: min(2.5rem, 2.5rem);
+    font-weight: 700;
+    color: #2d3b36;
+    margin-bottom: 20px;
+    line-height: 1.2;
+  }
+  
+  .benefits-left {
+      flex: 1;
+      padding-right: 20px;
+  }
+  
+  .benefits-right {
+      flex: 1;
+      padding-left: 1rem;
+  }
+    
+  .benefit-item {
+      display: flex;
+      align-items: center;
+      margin: 1rem 0 0 3rem;
+  }
+  
+  .check-icon {
+      width: 24px;
+      height: 24px;
+      background-color: #5ebaa0;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-right: 15px;
+      flex-shrink: 0;
+  }
+  
+  .check-icon::before {
+      content: '';
+      display: block;
+      width: 8px;
+      height: 12px;
+      border: solid white;
+      border-width: 0 2px 2px 0;
+      transform: rotate(45deg);
+      margin-bottom: 2px;
+  }
+  
+  .benefit-text {
+      font-size: 1.5rem;
+      font-weight: 500;
+      color: #333;
+      margin-left: 1rem;
+  }
+  @media screen and (max-width: 900px) {
+    .benefits-content {
+      flex-direction: column;
+    }
+    .benefits-container {
+      margin: 1rem;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .benefits-main-wrap {
+      padding: 0 2%;
+
+    }
+    .benefits-container {
+      padding: 3rem 2rem;
+    }
+      .benefits-left {
+          width: 100%;
+          padding-right: 0;
+          margin-bottom: 30px;
+      }
+      .benefits-right {
+          width: 100%;
+          padding-left: 0;
+      }
+      .benefit-item {
+        margin: 1rem 0;
+      }
+      .benefits-content .benefits-left h1 {
+        font-size: min(1.5rem, 1.5rem);
+      }
+
+  }
+  
+</style>
+
+<div class="benefits-main-wrap">
+  <div class="benefits-container">
+    <div class="benefits-blob">
+      <svg width="407" height="330" viewBox="0 0 407 330" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g clip-path="url(#clip0_443_3050)">
+        <path d="M323.645 279.472C324.994 268.768 322.559 259.084 316.595 251.471L316.513 251.371C313.776 247.944 310.421 245.062 306.62 242.874L306.202 242.632C288.262 232.632 261.379 237.263 239.312 254.165C223.155 266.513 212.283 283.549 210.23 299.74C208.872 310.446 211.32 320.139 217.316 327.771L217.382 327.852C220.12 331.278 223.475 334.16 227.275 336.35C245.23 346.716 272.303 342.194 294.71 325.097C310.77 312.719 321.595 295.673 323.645 279.472Z" fill="#E8EEEC"/>
+        <path d="M197.224 334.33C190.525 322.244 184.196 310.816 183.909 296.687C183.174 257.611 182.726 234.022 155.062 218.05C127.399 202.079 106.719 213.47 72.4719 232.349C60.0719 239.17 46.9867 239.398 33.1235 239.647C17.2318 239.926 0.812721 240.214 -12.7728 251.592C-17.819 255.607 -22.0486 260.553 -25.2326 266.161C-38.7841 289.633 -31.5287 319.285 -9.06888 332.252C2.52012 338.943 17.1717 342.049 32.6772 345.334C47.5857 348.491 62.9977 351.757 74.2146 358.233C85.4315 364.709 95.9331 376.405 106.076 387.711C116.663 399.455 126.619 410.557 138.241 417.267C160.668 430.215 189.943 421.654 203.494 398.182C206.739 392.604 208.886 386.455 209.817 380.069C212.885 362.601 204.922 348.228 197.224 334.33Z" fill="#E8EEEC"/>
+        <path d="M99.1046 155.144C101.246 169.378 108.006 180.436 118.14 186.287C119.523 187.085 120.963 187.78 122.45 188.366C145.378 197.46 173.437 179.274 186.357 146.914C191.797 133.315 193.717 118.832 191.802 106.166C189.662 91.9594 182.885 80.8995 172.758 75.053C171.375 74.2544 169.934 73.5594 168.448 72.9738C145.52 63.8796 117.461 82.0661 104.541 114.425C99.1058 128.001 97.1935 142.471 99.1046 155.144Z" fill="#E8EEEC"/>
+        <path d="M197.083 231.455C198.333 232.45 199.655 233.35 201.039 234.148C211.178 240.002 224.129 240.324 237.526 235.062C249.45 230.377 260.999 221.471 270.073 209.977C291.629 182.622 293.35 149.229 274.017 133.906C272.767 132.912 271.445 132.012 270.061 131.213C259.927 125.38 246.961 125.041 233.588 130.291C221.661 134.966 210.078 143.87 201.02 155.398C179.463 182.753 177.743 216.146 197.083 231.455Z" fill="#E8EEEC"/>
+        <path d="M28.8112 218.981L28.9214 219.001C38.5161 220.371 48.1235 217.647 56.706 211.12C69.7164 201.221 79.0295 183.311 81.6581 163.152C85.2918 135.251 75.682 109.542 57.7468 99.1868C53.9519 96.9885 49.7776 95.5234 45.4412 94.8678L45.331 94.8477C35.7709 93.4633 26.1485 96.2127 17.5659 102.74C4.55556 112.639 -4.75751 130.549 -7.38611 150.708C-11.0198 178.608 -1.41005 204.318 16.5252 214.673C20.3149 216.865 24.4824 218.326 28.8112 218.981Z" fill="#E8EEEC"/>
+        </g>
+        <defs>
+        <clipPath id="clip0_443_3050">
+        <rect width="386" height="386" fill="white" transform="translate(72.3569 -24.6997) rotate(30)"/>
+        </clipPath>
+        </defs>
+      </svg>  
+    </div>
+    <div class="benefits-content">
+        <div class="benefits-left">
+            <h1>Benefits of understanding & treating symptoms</h1>
+        </div>
+        <div class="benefits-right">
+            <div class="benefit-item">
+                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M16.04 35.7712C23.5392 35.7712 29.6185 29.6919 29.6185 22.1927C29.6185 14.6935 23.5392 8.61426 16.04 8.61426C8.54083 8.61426 2.46155 14.6935 2.46155 22.1927C2.46155 29.6919 8.54083 35.7712 16.04 35.7712Z" fill="#CEE4DE"/>
+                  <path d="M16.1935 32.6876L16.0213 32.3942C13.3905 27.9119 6.39961 18.3997 6.329 18.3042L6.22815 18.1672L8.60992 15.8133L16.1493 21.0779C20.8963 14.918 25.3249 10.687 28.2137 8.21634C31.3738 5.51365 33.4308 4.26942 33.4515 4.25749L33.4983 4.22949H37.5385L37.1525 4.57318C27.2272 13.4136 16.4692 32.2032 16.3621 32.392L16.1935 32.6876Z" fill="#03958D"/>
+                </svg>
+                <div class="benefit-text">Fewer tummy troubles</div>
+            </div>
+            <div class="benefit-item">
+              <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M16.04 35.7712C23.5392 35.7712 29.6185 29.6919 29.6185 22.1927C29.6185 14.6935 23.5392 8.61426 16.04 8.61426C8.54083 8.61426 2.46155 14.6935 2.46155 22.1927C2.46155 29.6919 8.54083 35.7712 16.04 35.7712Z" fill="#CEE4DE"/>
+                <path d="M16.1935 32.6876L16.0213 32.3942C13.3905 27.9119 6.39961 18.3997 6.329 18.3042L6.22815 18.1672L8.60992 15.8133L16.1493 21.0779C20.8963 14.918 25.3249 10.687 28.2137 8.21634C31.3738 5.51365 33.4308 4.26942 33.4515 4.25749L33.4983 4.22949H37.5385L37.1525 4.57318C27.2272 13.4136 16.4692 32.2032 16.3621 32.392L16.1935 32.6876Z" fill="#03958D"/>
+              </svg>
+                <div class="benefit-text">Stronger immune system</div>
+            </div>
+            <div class="benefit-item">
+                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M16.04 35.7712C23.5392 35.7712 29.6185 29.6919 29.6185 22.1927C29.6185 14.6935 23.5392 8.61426 16.04 8.61426C8.54083 8.61426 2.46155 14.6935 2.46155 22.1927C2.46155 29.6919 8.54083 35.7712 16.04 35.7712Z" fill="#CEE4DE"/>
+                  <path d="M16.1935 32.6876L16.0213 32.3942C13.3905 27.9119 6.39961 18.3997 6.329 18.3042L6.22815 18.1672L8.60992 15.8133L16.1493 21.0779C20.8963 14.918 25.3249 10.687 28.2137 8.21634C31.3738 5.51365 33.4308 4.26942 33.4515 4.25749L33.4983 4.22949H37.5385L37.1525 4.57318C27.2272 13.4136 16.4692 32.2032 16.3621 32.392L16.1935 32.6876Z" fill="#03958D"/>
+                </svg>
+                <div class="benefit-text">Custom health plan</div>
+            </div>
+        </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "IPL product benefits",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading_text",
+      "label": "Heading Text",
+      "default": "Welcome to Our Store!"
+    },
+    {
+      "type": "textarea",
+      "id": "body_text",
+      "label": "Body Text",
+      "default": "This is a customizable page for displaying your content."
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background Color",
+      "default": "#ffffff"
+    }
+  ],
+  "presets": [
+    {
+      "name": "IPL product benefits"
+    }
+  ]
+}
+{% endschema %}
