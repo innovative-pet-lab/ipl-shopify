@@ -468,9 +468,25 @@
         "bottom_space_mobile": 30
       }
     },
+    "ipl_product_gut_check_test_g87k96": {
+      "type": "ipl-product-gut-check-test",
+      "settings": {
+        "heading_text": "Welcome to Our Store!",
+        "body_text": "This is a customizable page for displaying your content.",
+        "background_color": "#ffffff"
+      }
+    },
     "product_recommendations": {
       "type": "product_recommendations",
       "disabled": true,
+      "settings": {
+        "heading_text": "Welcome to Our Store!",
+        "body_text": "This is a customizable page for displaying your content.",
+        "background_color": "#ffffff"
+      }
+    },
+    "ipl_product_benefits_7BYcdt": {
+      "type": "ipl-product-benefits",
       "settings": {
         "heading_text": "Welcome to Our Store!",
         "body_text": "This is a customizable page for displaying your content.",
@@ -595,7 +611,7 @@
     "product_recommendations_3MtqYb": {
       "type": "product_recommendations",
       "settings": {
-        "heading_text": "Welcome to Our Store!",
+        "heading_text": "related products",
         "body_text": "This is a customizable page for displaying your content.",
         "background_color": "#ffffff"
       }
@@ -659,22 +675,6 @@
         "bottom_space_desktop": 25,
         "top_space_mobile": 30,
         "bottom_space_mobile": 30
-      }
-    },
-    "ipl_product_benefits_7BYcdt": {
-      "type": "ipl-product-benefits",
-      "settings": {
-        "heading_text": "Welcome to Our Store!",
-        "body_text": "This is a customizable page for displaying your content.",
-        "background_color": "#ffffff"
-      }
-    },
-    "ipl_product_gut_check_test_g87k96": {
-      "type": "ipl-product-gut-check-test",
-      "settings": {
-        "heading_text": "Welcome to Our Store!",
-        "body_text": "This is a customizable page for displaying your content.",
-        "background_color": "#ffffff"
       }
     }
   },
