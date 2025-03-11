@@ -1507,6 +1507,7 @@ html.no-js .sub-inner-hamburger-outer .hamburger-menu-item .item {
     display: block;
     padding: 1rem 1.8rem 1rem 1.8rem;
     font-weight: 600;
+    text-align: left;
 }
 /* .yv-dropdown-item-link span {
     padding-right: 0.5rem;
