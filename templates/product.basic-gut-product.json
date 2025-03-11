@@ -474,16 +474,7 @@
       "settings": {
         "heading": "Recommended Products",
         "seo_heading": "h2",
-        "products_count": 2,
-        "product_grid_radius_desktop": 10,
-        "product_grid_radius_mobile": 10,
-        "product_grid_spacing_desktop": 10,
-        "product_grid_spacing_mobile": 10,
-        "bgcolor": "primary",
-        "top_space_desktop": 60,
-        "bottom_space_desktop": 60,
-        "top_space_mobile": 30,
-        "bottom_space_mobile": 30
+        "products_count": 2
       }
     },
     "8c17cb82-109c-4b83-968b-5a4214762d42": {
@@ -603,6 +594,7 @@
     },
     "recently_viewed_product_LhzVe4": {
       "type": "recently-viewed-product",
+      "disabled": true,
       "settings": {
         "heading": "Recently Viewed",
         "seo_heading": "h2",
@@ -678,6 +670,23 @@
         "top_space_mobile": 30,
         "bottom_space_mobile": 30
       }
+    },
+    "recently_viewed_product_Jg3z9Q": {
+      "type": "recently-viewed-product",
+      "settings": {
+        "heading": "Recently Viewed",
+        "seo_heading": "h2",
+        "product_grid_radius_desktop": 10,
+        "product_grid_radius_mobile": 10,
+        "product_grid_spacing_desktop": 10,
+        "product_grid_spacing_mobile": 10,
+        "bgcolor": "primary",
+        "section_visibility": "always",
+        "top_space_desktop": 60,
+        "bottom_space_desktop": 60,
+        "top_space_mobile": 30,
+        "bottom_space_mobile": 30
+      }
     }
   },
   "order": [
@@ -693,6 +702,7 @@
     "product_recommendations",
     "8c17cb82-109c-4b83-968b-5a4214762d42",
     "recently_viewed_product_LhzVe4",
+    "recently_viewed_product_Jg3z9Q",
     "166133727946ffaeaa"
   ]
 }
