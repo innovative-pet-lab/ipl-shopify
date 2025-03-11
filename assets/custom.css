@@ -429,6 +429,11 @@
     min-width: 176px;
     min-height: 56px;
 }
+@media (max-width: 500px) {
+    .pdp-flex .quantity {
+        min-width: 100px;
+    }
+}
 .yv-product-accordion {
     background-color:white;
     padding: 1.5rem;
