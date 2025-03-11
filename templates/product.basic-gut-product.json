@@ -664,7 +664,8 @@
         "d192928f-441f-42d2-852c-5e1864672797"
       ],
       "custom_css": [
-        ".services-column-section {background: #ecf0ef;}"
+        ".services-column-section {background: #ecf0ef;}",
+        ".text-medium {font-weight: 500 !important; color: #1c3125 !important;}"
       ],
       "settings": {
         "column_background": false,
