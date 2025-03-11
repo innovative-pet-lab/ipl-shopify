@@ -663,6 +663,9 @@
         "f37730b5-14aa-462c-bbfe-db24fa287e5b",
         "d192928f-441f-42d2-852c-5e1864672797"
       ],
+      "custom_css": [
+        ".services-column-section {background: #ecf0ef; color: #1C3125}"
+      ],
       "settings": {
         "column_background": false,
         "mobile_column_count": "1",
