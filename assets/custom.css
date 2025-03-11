@@ -266,6 +266,7 @@
     overflow: scroll;
     justify-content: center;
 }
+
 .product-gallery__thumbnail {
     background: #fff;
     cursor: pointer;
@@ -451,6 +452,7 @@
         overflow: hidden;
         width: 100%;
         padding: 0.5rem;
+        display: none;
     }
 }
 
