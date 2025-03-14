@@ -5238,7 +5238,7 @@ body .fancybox__thumbs .carousel__slide.is-nav-selected .fancybox__thumb::after 
 .cart-items-wrapper {
     display: block;
     width: 100%;
-    height: calc(100% - 118px);
+    height: calc(100% - 97px);
     overflow-x: hidden;
     overflow-y: auto;
     padding-right: 20px

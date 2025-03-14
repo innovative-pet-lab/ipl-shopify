@@ -1500,7 +1500,7 @@ html.no-js .sub-inner-hamburger-outer .hamburger-menu-item .item {
     transition: all 0.3s ease-in-out;
 }
 .dropdown-inner-menu-item {
-    padding: 0 0rem 0 0.5rem;
+    padding: 0;
     background-color: #fff;
 }
 .yv-dropdown-item-link {

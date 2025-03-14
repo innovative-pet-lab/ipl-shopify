@@ -3273,8 +3273,9 @@
     .content-divider-mobile-none .product-section .yv-product-accordion,
     .content-divider-mobile-none .product-section .yv-product-detail-tabs {
         border-top: 0 solid var(--colorXlightTextBody);
-        padding: 0 20px 0!important;
-        border-bottom: 0 solid var(--colorXlightTextBody)
+        padding: 1rem!important;
+        border-bottom: 0 solid var(--colorXlightTextBody);
+        background: transparent;
     }
     .yv-main-product-detail .yv-product-quantity,
     .yv-main-product-detail .product-option-selector,
