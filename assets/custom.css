@@ -137,6 +137,11 @@
     .template_product-basic-gut-product .sticky-header-main .yv-dropdown-menus.mega-menu {
         margin-top: -11px;
     }
+    .yv-service-item span {
+        min-width: 48px!important;
+        max-width: 48px!important;
+        height: 48px!important;
+    }
     .yv-dropdown-menus.mega-menu .container {
         background-color: transparent;
         padding: 0;
