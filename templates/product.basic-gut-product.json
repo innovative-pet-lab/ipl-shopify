@@ -622,7 +622,7 @@
         "5f2a17c3-6834-4f30-ac33-dd871134b6c4": {
           "type": "column",
           "settings": {
-            "icon": "shipping",
+            "icon": "quick-results",
             "heading": "Quick Results",
             "seo_heading": "h2",
             "subtext": ""
@@ -631,7 +631,7 @@
         "1619ab47-2031-4339-961b-21ca08f7f33e": {
           "type": "column",
           "settings": {
-            "icon": "smile",
+            "icon": "satisfaction-guarantee",
             "heading": "Satisfaction Guaranteed",
             "seo_heading": "h2",
             "subtext": ""
@@ -640,7 +640,7 @@
         "f37730b5-14aa-462c-bbfe-db24fa287e5b": {
           "type": "column",
           "settings": {
-            "icon": "thumb",
+            "icon": "vet-recommended",
             "heading": "Vet Reccomended",
             "seo_heading": "h2",
             "subtext": ""
