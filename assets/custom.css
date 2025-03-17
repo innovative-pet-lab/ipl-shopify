@@ -688,6 +688,9 @@
     font-size: 24px;
     margin: 1.5rem 0;
 }
+.yv-newsletter-input .newsletter-btn {
+    text-transform: capitalize;
+}
 
 /* mega menu */
 .mega-menu .col-12 {
