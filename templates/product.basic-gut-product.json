@@ -665,7 +665,7 @@
       ],
       "custom_css": [
         ".services-column-section {background: #ecf0ef; padding-top: 35px; padding-bottom: 40px;}",
-        ".text-medium {font-weight: 500 !important; color: #1c3125 !important;}"
+        ".text-medium {font-weight: 600 !important; color: #1c3125 !important;}"
       ],
       "settings": {
         "column_background": false,
