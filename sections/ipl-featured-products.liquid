@@ -76,7 +76,25 @@
         height: 100%;
         border: 1px solid #73C7AD;
         overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        max-height: 33vw;
+        min-height: 35vw;  
     }
+    @media (max-width: 500px) {
+        .product-card {
+             min-height: 80vw; 
+        }
+    }
+    @media (min-width: 1400px) {
+        .product-card {
+            max-height: 28vw;
+            min-height: 29vw; 
+        }
+    }
+    {% comment %} .product-card.min-height img {
+        max-height: 245px;
+    } {% endcomment %}
     .product-card .product-info {
         padding: 1.6rem 1rem;
         text-align: center;
@@ -101,7 +119,34 @@
     }
     .product-image {
         padding: 3rem 1rem 1rem 1rem;
+        max-height: unset;
     }
+    {% comment %} @media (max-width: 480px) {
+        .product-card.min-height img {
+            max-height: 187px;
+        }
+    }
+    @media (min-width: 1000px) {
+        .product-card.min-height img {
+            max-height: 30vh;
+        }
+    }
+    @media (min-width: 1400px) {
+        .product-card.min-height img {
+            max-height: 15.3em;
+        }
+    } 
+    @media (min-width: 1800px) {
+        .product-card.min-height img {
+            max-height: 17.4em;
+        }
+    }
+    @media (min-width: 2000px) {
+        .product-card.min-height img {
+            max-height: 100%;
+        }
+    } {% endcomment %}
+
     .product-title {
         font-size: 1.25rem;
         color: #1a1a1a;
@@ -205,7 +250,7 @@
             <div class="swiper-wrapper">
                 {% for product in featured_collection.products %}
                 <div class="swiper-slide">
-                    <div class="product-card">
+                    <div class="product-card {% if product.title == 'Stress Test' %}min-height{% endif %}">
                         <img alt="" width="" height="" src="{{ product.featured_image | img_url: '800x' }}" alt="{{ product.title }}" class="product-image">
                         <div class="product-info">
                             <h2 class="product-title">{{ product.title }}</h2>

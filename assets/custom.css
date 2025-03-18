@@ -36,13 +36,19 @@
         margin-bottom: 0;
     }
     .yv-image-banner-heading {
-        font-size: min(5rem, 5vw)!important;
+        font-size: min(5rem, 6vw)!important;
         line-height: normal;
         text-align: center!important;
     }
+    .yv-image-banner-heading br {
+        display: none;
+    }
     .yv-image-banner-desc p {
         text-align: center!important;
-        font-size: min(2rem, 2vw)!important;
+        font-size: min(2rem, 3.1vw)!important;
+    }
+    .yv-image-banner-desc p br {
+        display: none;
     }
     .yv-image-banner-content-inner {
         max-width: 100%!important;
