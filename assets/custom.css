@@ -457,7 +457,7 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    gap: 12px;
+    gap: 18px;
     margin-top: 2rem;
 }
 .pdp-flex .add_to_cart.button, .shopify-payment-button {
@@ -472,8 +472,13 @@
 .pdp-flex .yv-product-quantity {
     width: 176px;
     margin: 0;
-    flex: 1;
     padding: 0;
+}
+@media (max-width: 540px) {
+    .pdp-flex .yv-product-quantity {
+        flex: 1;
+        width: 114px;
+    }
 }
 .pdp-flex .product_button {
     width: 100%;
@@ -494,7 +499,7 @@
 }
 @media (max-width: 500px) {
     .pdp-flex .quantity {
-        min-width: 150px;
+        min-width: 135px;
     }
     .yv-product-accordion {
         background-color: transparent;
