@@ -436,7 +436,7 @@
     display: none!important;
 }
 
-.quantity input {
+.template_product-basic-gut-product .yv-product-quantity .quantity input {
     border-radius: 50px!important;
     border-color: #03B0A7!important;
     font-size: 24px !important;
