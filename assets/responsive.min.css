@@ -1398,7 +1398,7 @@
         height: 40px
     }
     .quantity-button svg {
-        width: 12px
+        width: 18px
     }
     .add_to_cart.button,
     .shopify-payment-button {
@@ -3296,7 +3296,7 @@
         padding: 20px 15px;
         position: sticky;
         bottom: 0;
-        background: var(--primaryColorBody);
+        background: none;
         margin-top: 0
     }
     .product-section .yv-product-accordion,

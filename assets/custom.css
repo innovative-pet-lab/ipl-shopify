@@ -252,7 +252,7 @@
 }
 @media (max-width: 500px) {
     .shopify-section-main-header.sticky-header-main header {
-        height: 50px;
+        height: 60px;
     }
 }
 .shopify-section-main-header.sticky-header-main header .header__heading-link img {
@@ -439,6 +439,8 @@
 .quantity input {
     border-radius: 50px!important;
     border-color: #03B0A7!important;
+    font-size: 24px !important;
+    font-weight: 700;
 }
 
 .product-section .yv-accordion-header.active svg {
@@ -465,16 +467,19 @@
     min-width: 213px !important;
     display: flex;
     gap: 12px;
+    font-weight: 700;
 }
 .pdp-flex .yv-product-quantity {
     width: 176px;
     margin: 0;
+    flex: 1;
     padding: 0;
 }
 .pdp-flex .product_button {
     width: 100%;
     margin: 0;
     padding: 0;
+    flex: 1;
 }
 .pdp-flex .yv-checkout-btn {
     margin: 0;
@@ -489,7 +494,7 @@
 }
 @media (max-width: 500px) {
     .pdp-flex .quantity {
-        min-width: 100px;
+        min-width: 150px;
     }
     .yv-product-accordion {
         background-color: transparent;
