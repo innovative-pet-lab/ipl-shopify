@@ -1,0 +1,282 @@
+{{ 'customer.css' | asset_url | stylesheet_tag }}
+<section class="account-pages-section">
+  <div class="container">
+    <div class="yv-customer-pages register"> 
+      <div class="row">
+        <div class="col-12 col-sm-12 col-md-7 col-lg-6">
+          <div class="left-side-content">
+            <div class="yv-login-form yv-register-form" id="registerForm">
+              <h3 class="form-title" tabindex="-1">
+                {{ 'customer.register.title' | t }}
+              </h3> 
+              <p>{{ 'customer.register.subtext' | t }}</p>
+              {%- form 'create_customer', novalidate: 'novalidate' -%}
+
+              {%- if form.errors -%}
+                <div class="error-container">
+                  <p class="form__message" tabindex="-1">
+                    {{ 'templates.contact.form.error_heading' | t }}
+                  </p>
+                  <ul class="list-unstyled"> 
+                    {%- for field in form.errors -%}
+                    <li>
+                      {%- if field == 'form' -%}
+                        {{ form.errors.messages[field] }}
+                      {%- else -%}
+                        <a href="#signUpForm-{{ field }}">
+                          {{ form.errors.translated_fields[field] | capitalize }}
+                          {{ form.errors.messages[field] }}
+                        </a>
+                      {%- endif -%}
+                    </li>
+                    {%- endfor -%}
+                  </ul>
+                </div>
+              {%- endif -%}
+
+              <div class="field form-group">   
+                <label for="signUpForm-FirstName">{{ 'customer.register.first_name' | t }}</label>   
+                <input type="text" class="form-control" name="customer[first_name]" id="signUpForm-FirstName" required>
+              </div>
+
+              <div class="field form-group">
+                <label for="signUpForm-LastName">{{ 'customer.register.last_name' | t }}</label>
+                <input type="text" class="form-control" name="customer[last_name]" id="signUpForm-LastName" required>
+              </div>
+
+              <div class="field form-group">  
+                <label for="signUpForm-email">{{ 'customer.register.email' | t }}</label>    
+                <input type="email" class="form-control" name="customer[email]" id="signUpForm-email" required>
+              </div>
+
+              <div class="field form-group"> 
+                <label for="signUpForm-password">{{ 'customer.register.password' | t }}</label>    
+                <input type="password" class="form-control" name="customer[password]" id="signUpForm-password" required>
+              </div>
+
+              <!-- Profile Type Selection -->
+              <div class="field form-group">
+                <label for="signUpForm-ProfileType">Profile Type</label>
+                <select class="form-control" id="signUpForm-ProfileType" name="customer[note][profile_type]">
+                  <option value="Regular">Regular</option>
+                  <option value="VIP">VIP</option>
+                  <option value="Wholesaler">Wholesaler</option>
+                  <option value="Distributor">Distributor</option>
+                </select>
+              </div>
+
+              <!-- Where did you purchase our item? -->
+              <div class="field form-group">
+                <label for="signUpForm-PurchaseSource">Where did you purchase our item?</label>
+                <select class="form-control" id="signUpForm-PurchaseSource" name="customer[note][purchase_source]">
+                  <option value="IPL Website">IPL Website</option>
+                  <option value="Amazon">Amazon</option>
+                  <option value="Chewy">Chewy</option>
+                  <option value="Retailer">Retailer - Please list</option>
+                  <option value="IPL Partner">IPL Partner</option>
+                  <option value="Other">Other</option>
+                </select>
+              </div>
+
+              <!-- Hidden input for customer tags -->
+              <input type="hidden" id="customerTags" name="customer[tags]">
+
+              <button type="submit" class="button black-btn btn-block" id="registerSubmit">
+                {{ 'customer.register.submit' | t }}
+              </button>
+              {%- endform -%}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const form = document.querySelector("form");
+    const profileTypeSelect = document.getElementById("signUpForm-ProfileType");
+    const purchaseSourceSelect = document.getElementById("signUpForm-PurchaseSource");
+    const customerTagsInput = document.getElementById("customerTags");
+  
+    form.addEventListener("submit", function (event) {
+      // Set customer tags based on selections
+      const tags = [
+        `Profile Type: ${profileTypeSelect.value}`,
+        `Purchase Source: ${purchaseSourceSelect.value}`
+      ];
+  
+      customerTagsInput.value = tags.join(", ");
+    });
+  });
+</script>
+
+{% schema %}
+{
+  "name": "New customer signup",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "t:sections.text-with-icons.settings.column.heading"
+    },
+    {
+      "type":"checkbox",
+      "id":"column_background",
+      "label":"t:sections.text-with-icons.settings.show_background.label",
+      "default":false
+    },
+    {
+      "type": "select",
+      "id": "mobile_column_count",
+      "label": "t:sections.text-with-icons.settings.mobile_column_count.label",
+      "default": "1",
+      "options": [
+        {
+          "value": "1",
+          "label": "1"
+        },
+        {
+          "value": "2",
+          "label": "2"
+        }
+      ]
+    },
+    {
+      "type": "header",
+      "content": "t:sections.text-with-icons.settings.icon.heading"
+    },
+    {
+      "type":"checkbox",
+      "id":"icon_background",
+      "label":"t:sections.text-with-icons.settings.show_background.label",
+      "default":false
+    },
+    {
+      "type": "select",
+      "id": "icon_position",
+      "label":"t:sections.text-with-icons.settings.icon_position.label",
+      "default": "top",
+      "options": [
+        {
+          "value": "left",
+          "label":"t:sections.text-with-icons.settings.icon_position.options.left.label"
+        },
+        {
+          "value": "top",
+          "label":"t:sections.text-with-icons.settings.icon_position.options.top.label"
+        }
+      ]
+    },
+    {
+      "type": "header",
+      "content": "t:common.header.color_section.label"
+    },
+    {
+      "type": "select",
+      "id": "bgcolor",
+      "label": "t:common.header.background_section.label",
+      "default": "secondary",
+      "options": [
+        {
+          "value": "primary",
+          "label": "t:common.header.primary.label"
+        },
+        {
+          "value": "secondary",
+          "label": "t:common.header.secondary.label"
+        },
+        {
+          "value": "tertiary",
+          "label": "t:common.header.tertiary.label"
+        },
+        {
+          "value": "quaternary",
+          "label": "t:common.header.quaternary.label"
+        },
+        {
+          "value": "gradient",
+          "label": "t:common.header.gradient.label"
+        }
+      ]
+    },
+    {
+      "type":"color",
+      "id":"column_background_color",
+      "label":"t:sections.text-with-icons.settings.column_background_color.label"
+    },
+    {
+      "type":"color",
+      "id":"icon_background_color",
+      "label":"t:sections.text-with-icons.settings.icon_background_color.label"
+    },
+    {
+      "type": "select",
+      "id": "section_visibility",
+      "label": "t:common.section_visibility.label",
+      "default": "always",
+      "options": [
+        {
+          "label": "t:common.section_visibility.options.always.label",
+          "value": "always"
+        },
+        {
+          "label": "t:common.section_visibility.options.small_devices.label",
+          "value": "small"
+        },
+        {
+          "label": "t:common.section_visibility.options.large_devices.label",
+          "value": "large"
+        }
+      ]
+    },
+    {
+      "type": "header",
+      "content": "t:common.header.space_section.label"
+    },
+    {
+      "type": "range",
+      "id": "top_space_desktop",
+      "label": "t:common.top_space_desktop.label",
+      "default": 30,
+      "min": 0,
+      "max": 100,
+      "step": 5
+    },
+    {
+      "type": "range",
+      "id": "bottom_space_desktop",
+      "label": "t:common.bottom_space_desktop.label",
+      "default": 30,
+      "min": 0,
+      "max": 100,
+      "step": 5
+    },
+    {
+      "type": "range",
+      "id": "top_space_mobile",
+      "label": "t:common.top_space_mobile.label",
+      "default": 30,
+      "min": 0,
+      "max": 100,
+      "step": 5
+    },
+    {
+      "type": "range",
+      "id": "bottom_space_mobile",
+      "label": "t:common.bottom_space_mobile.label",
+      "default": 30,
+      "min": 0,
+      "max": 100,
+      "step": 5
+    }
+  ],
+
+  "presets": [
+    {
+      "name": "New customer signup",
+    }
+  ]
+}
+{% endschema %}

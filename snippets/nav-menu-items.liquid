@@ -27,7 +27,7 @@
         -%}
         <div class="{{ child_link_classes }}">
           <div class="dropdown-inner-menu-item">
-            <a class="menu-category-title {% if has_3rd_lvl %}has_3rd{% endif %}" href="{{ childlink.url }}">{{ childlink.title | escape }}</a>
+            <a class="menu-category-title {% if has_3rd_lvl %}has_3rd{% endif %}{% if childlink.title contains 'empty' %}empty{% endif %}" href="{{ childlink.url }}">{{ childlink.title | escape }}</a>
             <ul class="list-unstyled {% if has_3rd_lvl %}has_3rd_ul{% endif %}">
               {%- for grandchildlink in childlink.links -%}
                 <li>

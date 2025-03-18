@@ -1533,7 +1533,13 @@ html.no-js .sub-inner-hamburger-outer .hamburger-menu-item .item {
     align-items: center;
     color: #1C1D31!important;
 }
-
+.menu-category-title.empty {
+    color: transparent!important;
+}
+.menu-category-title.empty:hover {
+    background-color: #fff!important;
+    cursor: unset;
+}
 .menu-category-title:hover {
     background-color: #e1f3f6;
     opacity: 1;
