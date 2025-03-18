@@ -641,7 +641,7 @@
           "type": "column",
           "settings": {
             "icon": "vet-recommended",
-            "heading": "Vet Reccomended",
+            "heading": "Vet Recommended",
             "seo_heading": "h2",
             "subtext": ""
           }
