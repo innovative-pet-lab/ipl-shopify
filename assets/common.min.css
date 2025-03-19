@@ -1467,7 +1467,7 @@ ul.yv-product-meta,.yv-content-body ul.yv-product-meta {
     }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 968px) {
     .col-md {
         -ms-flex-preferred-size: 0;
         flex-basis: 0;
@@ -1492,9 +1492,9 @@ ul.yv-product-meta,.yv-content-body ul.yv-product-meta {
         max-width: 16.666667%;
     }
     .col-md-3 {
-        -ms-flex: 0 0 25%;
-        flex: 0 0 25%;
-        max-width: 25%;
+        -ms-flex: 0 0 33%;
+        flex: 0 0 33%;
+        max-width: 33%;
     }
     .col-md-4 {
         -ms-flex: 0 0 33.333333%;

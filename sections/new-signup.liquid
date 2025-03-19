@@ -13,25 +13,57 @@
               {%- form 'create_customer', novalidate: 'novalidate' -%}
 
               {%- if form.errors -%}
-                <div class="error-container">
-                  <p class="form__message" tabindex="-1">
-                    {{ 'templates.contact.form.error_heading' | t }}
-                  </p>
-                  <ul class="list-unstyled"> 
-                    {%- for field in form.errors -%}
-                    <li>
-                      {%- if field == 'form' -%}
-                        {{ form.errors.messages[field] }}
-                      {%- else -%}
-                        <a href="#signUpForm-{{ field }}">
-                          {{ form.errors.translated_fields[field] | capitalize }}
-                          {{ form.errors.messages[field] }}
-                        </a>
-                      {%- endif -%}
-                    </li>
-                    {%- endfor -%}
-                  </ul>
-                </div>
+                {%- form 'create_customer', novalidate: 'novalidate' -%}
+
+                  <div class="field form-group">
+                    <label for="signUpForm-FirstName">First Name</label>   
+                    <input type="text" class="form-control" name="customer[first_name]" id="signUpForm-FirstName" required>
+                  </div>
+                
+                  <div class="field form-group">
+                    <label for="signUpForm-LastName">Last Name</label>
+                    <input type="text" class="form-control" name="customer[last_name]" id="signUpForm-LastName" required>
+                  </div>
+                
+                  <div class="field form-group">  
+                    <label for="signUpForm-email">Email</label>    
+                    <input type="email" class="form-control" name="customer[email]" id="signUpForm-email" required>
+                  </div>
+                
+                  <div class="field form-group"> 
+                    <label for="signUpForm-password">Password</label>    
+                    <input type="password" class="form-control" name="customer[password]" id="signUpForm-password" required>
+                  </div>
+                
+                  <!-- Profile Type Selection (Now Using customer[tags]) -->
+                  <div class="field form-group">
+                    <label for="signUpForm-ProfileType">Profile Type</label>
+                    <select class="form-control" id="signUpForm-ProfileType" name="customer[tags]">
+                      <option value="">Select Profile Type</option>
+                      <option value="VIP">VIP</option>
+                      <option value="Wholesaler">Wholesaler</option>
+                      <option value="Distributor">Distributor</option>
+                    </select>
+                  </div>
+                
+                  <!-- Where did you purchase our item? (Adding as a tag) -->
+                  <div class="field form-group">
+                    <label for="signUpForm-PurchaseSource">Where did you purchase our item?</label>
+                    <select class="form-control" id="signUpForm-PurchaseSource" name="customer[tags]">
+                      <option value="">Select Source</option>
+                      <option value="IPL Website">IPL Website</option>
+                      <option value="Amazon">Amazon</option>
+                      <option value="Chewy">Chewy</option>
+                      <option value="Retailer">Retailer</option>
+                      <option value="IPL Partner">IPL Partner</option>
+                      <option value="Other">Other</option>
+                    </select>
+                  </div>
+                
+                  <button type="submit" class="button black-btn btn-block">
+                    Submit
+                  </button>
+                {%- endform -%}
               {%- endif -%}
 
               <div class="field form-group">   
@@ -62,6 +94,7 @@
                   <option value="VIP">VIP</option>
                   <option value="Wholesaler">Wholesaler</option>
                   <option value="Distributor">Distributor</option>
+                  <option value="Consumer">Consumer</option>
                 </select>
               </div>
 
@@ -101,12 +134,15 @@
     const customerTagsInput = document.getElementById("customerTags");
   
     form.addEventListener("submit", function (event) {
-      // Set customer tags based on selections
-      const tags = [
-        `Profile Type: ${profileTypeSelect.value}`,
-        `Purchase Source: ${purchaseSourceSelect.value}`
-      ];
+      // Ensure Shopify receives the tags
+      const profileType = profileTypeSelect.value;
+      const purchaseSource = purchaseSourceSelect.value;
   
+      const tags = [];
+      if (profileType) tags.push(`Profile Type: ${profileType}`);
+      if (purchaseSource) tags.push(`Purchase Source: ${purchaseSource}`);
+  
+      // Assign tags to the hidden input before submission
       customerTagsInput.value = tags.join(", ");
     });
   });

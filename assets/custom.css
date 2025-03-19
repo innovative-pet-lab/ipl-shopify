@@ -84,12 +84,14 @@
         margin-top: 0!important;
     }
 }
+
 .yv-image-banner-desc p {
     color:#000011!important;
     text-align: left;
-    font-size: min(2rem, 2vw);
+    font-size: min(2rem, 1.5vw);
     line-height: normal;
 }
+
 .yv-image-banner-button {
     text-align: left;
 }
