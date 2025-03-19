@@ -858,6 +858,7 @@ body:not(.sticky-header, .header2) .shopify-section-main-header header[header-tr
 .side-menu .nav-item.dropdown .inner.grandchild ul {
     border-left: 1px solid var(--mobile-menu-border);
     padding-left: 20px;
+    text-align: left;
 }
 
 .side-menu .nav-item.dropdown .inner.grandchild li {
