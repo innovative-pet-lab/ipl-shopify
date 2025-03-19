@@ -51,7 +51,7 @@
         "template--16809123774757__8231b1f4-8107-414d-9432-3a48f23e000d-166781443747b75229-0": {
           "type": "column",
           "settings": {
-            "icon": "shipping",
+            "icon": "quick-shipping",
             "heading": "Quick Shipping",
             "seo_heading": "h2",
             "subtext": ""
@@ -60,7 +60,7 @@
         "template--16809123774757__8231b1f4-8107-414d-9432-3a48f23e000d-166781443747b75229-1": {
           "type": "column",
           "settings": {
-            "icon": "smile",
+            "icon": "easy-collection",
             "heading": "Easy Collection",
             "seo_heading": "h2",
             "subtext": ""
@@ -69,7 +69,7 @@
         "template--16809123774757__8231b1f4-8107-414d-9432-3a48f23e000d-166781443747b75229-2": {
           "type": "column",
           "settings": {
-            "icon": "support",
+            "icon": "customer-service",
             "heading": "Customer Service",
             "seo_heading": "h2",
             "subtext": ""
