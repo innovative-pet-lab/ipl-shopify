@@ -2439,6 +2439,10 @@ html.no-js .yv-accordion-card[open] .yv-accordion-content {
 
 .column-icon-position-top.yv-service-item {
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .yv-service-item span {
