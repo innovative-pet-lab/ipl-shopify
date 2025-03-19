@@ -155,6 +155,11 @@
         "type": "shopify://apps/miniorange-single-sign-on-sso/blocks/new-customer-account/48152e16-8060-4bf5-8478-83efdf88901f",
         "disabled": false,
         "settings": {}
+      },
+      "9513407616245537438": {
+        "type": "shopify://apps/sami-wholesale/blocks/app-embed-block/799b9db0-2c2b-4b20-8675-98acd123fbb2",
+        "disabled": false,
+        "settings": {}
       }
     }
   },
