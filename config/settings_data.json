@@ -1122,8 +1122,6 @@
     }
   },
   "platform_customizations": {
-    "custom_css": [
-      ".text-medium {font-weighg: 500 !important; color: #1c3125 !important;}"
-    ]
+    "custom_css": []
   }
 }

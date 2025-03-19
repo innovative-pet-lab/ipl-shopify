@@ -92,6 +92,9 @@
         "template--16809123774757__8231b1f4-8107-414d-9432-3a48f23e000d-166781443747b75229-2",
         "template--16809123774757__8231b1f4-8107-414d-9432-3a48f23e000d-166781443747b75229-3"
       ],
+      "custom_css": [
+        ".text-medium {font-weigth: 500 !important; color: #26286E !important;}"
+      ],
       "settings": {
         "column_background": false,
         "mobile_column_count": "1",
