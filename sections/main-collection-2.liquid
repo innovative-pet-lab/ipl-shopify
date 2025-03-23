@@ -295,7 +295,12 @@
 
     <div class="products-grid">
       {% for product in collection.products %}
-        <div class="product-card-collection" data-category="{% if product.tags contains 'Cats' %}cats{% elsif product.tags contains 'Dogs'%}dogs{% else %}all{% endif %}">
+        <div class="product-card-collection" 
+          data-category="
+            {% if product.tags contains 'Cats' %}cats {% endif %}
+            {% if product.tags contains 'Dogs' %}dogs {% endif %}
+            {% unless product.tags contains 'Cats' or product.tags contains 'Dogs' %}all{% endunless %}
+          ">
           <a href="{{ product.url }}">
             <div class="best-seller">Best Seller</div>
             <div class="product-image">
@@ -342,22 +347,12 @@
     const banner = document.querySelector(".banner");
     const productsGrid = document.querySelector(".products-grid");
   
-    function updateBannerPosition(visibleCards, filter) {
-      // Ensure banner is always visible
-      banner.style.display = "block";
+    function updateBannerPosition(visibleCards) {
+      banner.style.display = "block"; // Ensure banner is always visible
   
-      if (filter === "all") {
-        // Always place banner as the 4th item on page load
-        if (visibleCards.length >= 3) {
-          visibleCards[3].insertAdjacentElement("beforebegin", banner);
-        } else {
-          productsGrid.appendChild(banner);
-        }
-      } else if (visibleCards.length >= 3) {
-        // Insert banner as the 4th item when 3 or more products are found
+      if (visibleCards.length >= 4) {
         visibleCards[3].insertAdjacentElement("beforebegin", banner);
       } else {
-        // If less than 3 results, place the banner at the bottom
         productsGrid.appendChild(banner);
       }
     }
@@ -366,8 +361,8 @@
       let visibleCards = [];
   
       productCards.forEach(card => {
-        const category = card.getAttribute("data-category").split(" ");
-        if (filter === "all" || category.includes(filter)) {
+        const categories = card.getAttribute("data-category").split(" ");
+        if (filter === "all" || categories.includes(filter)) {
           card.style.display = "block";
           visibleCards.push(card);
         } else {
@@ -375,10 +370,9 @@
         }
       });
   
-      updateBannerPosition(visibleCards, filter);
+      updateBannerPosition(visibleCards);
     }
   
-    // Apply filtering when clicking a button
     filterButtons.forEach(button => {
       button.addEventListener("click", function () {
         filterButtons.forEach(btn => btn.classList.remove("active"));
@@ -387,7 +381,7 @@
       });
     });
   
-    // On page load, trigger the "All" filter and ensure banner is 4th
+    // Initialize with 'all' filter
     filterProducts("all");
   });
 </script>

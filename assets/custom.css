@@ -471,6 +471,9 @@
     gap: 12px;
     font-weight: 700;
 }
+.pdp-flex .add_to_cart.button:hover svg path {
+    fill: #26286E;
+} 
 .pdp-flex .yv-product-quantity {
     width: 176px;
     margin: 0;
