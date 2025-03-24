@@ -54,8 +54,8 @@
             "top-margin-ppf": "20px",
             "bottom-margin-ppf": "20px",
             "width-ppf": "100%",
-            "min-height-ppf": "500",
-            "max-height-ppf": "500",
+            "min-height-ppf": "500px",
+            "max-height-ppf": "",
             "no-scroll-ppf": false
           }
         }
