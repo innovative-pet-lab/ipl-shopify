@@ -92,9 +92,6 @@
             min-height: 29vw; 
         }
     }
-    {% comment %} .product-card.min-height img {
-        max-height: 245px;
-    } {% endcomment %}
     .product-card .product-info {
         padding: 1.6rem 1rem;
         text-align: center;
@@ -239,8 +236,12 @@
 <div class="ipl-featured-products">
     <div class="container">
         <section class="hero flex">
-            <h1>What is your pet's poop telling you?</h1>
-            <p>Gut health drives 70% of immunity. Our tests check inflammation, immune response, and gut permeability to guide pet care.</p>
+            {% if section.settings.heading_text %}
+            <h1>{{ section.settings.heading_text }}</h1>
+            {% endif %}
+            {% if section.settings.heading_text %}
+            <p>{{ section.settings.body_text }}</p>
+            {% endif %}
         </section>
 
         {% assign featured_collection = collections['all'] %}
@@ -267,11 +268,13 @@
             <p>No featured products available.</p>
         {% endif %}
 
-        <a href="/collections/all" class="view-all-button">View all products</a>
+        {% if section.settings.button_text %}
+        <a href="/collections/all" class="view-all-button">{{ section.settings.button_text }}</a>
+        {% endif %}
     </div>
 </div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.2.0/swiper-bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.2.0/swiper-bundle.min.js" defer></script>
 <script>
     const swiper = new Swiper('.swiper', {
         slidesPerView: 1.5,
@@ -308,15 +311,14 @@
     {
       "type": "textarea",
       "id": "body_text",
-      "label": "Body Text",
-      "default": "This is a customizable page for displaying your content."
+      "label": "Body Text"    
     },
     {
-      "type": "color",
-      "id": "background_color",
-      "label": "Background Color",
-      "default": "#ffffff"
-    }
+      "type": "text",
+      "id": "button_text",
+      "label": "Button Text",
+      "default": "View all"
+    },
   ],
   "presets": [
     {

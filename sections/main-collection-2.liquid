@@ -302,7 +302,9 @@
             {% unless product.tags contains 'Cats' or product.tags contains 'Dogs' %}all{% endunless %}
           ">
           <a href="{{ product.url }}">
-            <div class="best-seller">Best Seller</div>
+            {% if product.tags contains 'Best Seller' %}
+              <div class="best-seller">Best Seller</div>
+            {% endif %}
             <div class="product-image">
               <img width="" height="" src="{{ product.featured_image | image_url }}" alt="{{ product.title }}">
             </div>
