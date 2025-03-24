@@ -143,8 +143,39 @@
     },
     "ipl_happy_customer_CMWRRC": {
       "type": "ipl-happy-customer",
+      "blocks": {
+        "testi_block_3XEmq9": {
+          "type": "testi-block",
+          "settings": {
+            "testi_image": "shopify://shop_images/image_17.png",
+            "quote": "A Game-Changer in Pet-Health: Innovative Pet Lab! As a holistic veterinarian with a focus on gut health, I can't recommend Innovative Pet Lab's stool tests enough...",
+            "author": "Dr. Katie Woodley, DVM"
+          }
+        },
+        "testi_block_nafVMq": {
+          "type": "testi-block",
+          "settings": {
+            "testi_image": "shopify://shop_images/image02-removebg-preview.png",
+            "quote": "Innovative Pet Lab has been a lifesaver for my aging dog. Their supplements improved his mobility and digestion within weeks! He’s more active and happy than ever. I can’t thank Pet Lab Plus enough!”",
+            "author": "— Daniel S., Lifelong Pet Lover"
+          }
+        },
+        "testi_block_zgUqh3": {
+          "type": "testi-block",
+          "settings": {
+            "testi_image": "shopify://shop_images/image2-removebg-preview.png",
+            "quote": "Innovative Pet Lab has completely transformed my dog’s health! Their gut health test gave me clear insights, and their supplements made a huge difference. My pup’s energy is up, his coat is shinier, and his digestion has never been better. Highly recommended!”",
+            "author": "— Jessica M., Proud Dog Mom"
+          }
+        }
+      },
+      "block_order": [
+        "testi_block_3XEmq9",
+        "testi_block_nafVMq",
+        "testi_block_zgUqh3"
+      ],
       "settings": {
-        "heading_text": "Welcome to Our Store!"
+        "heading_text": "Happy Customers"
       }
     },
     "ipl_trust_your_gut_mr4iJR": {
