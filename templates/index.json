@@ -39,9 +39,9 @@
     "ipl_featured_products_bRYQWM": {
       "type": "ipl-featured-products",
       "settings": {
-        "heading_text": "Welcome to Our Store!",
-        "body_text": "This is a customizable page for displaying your content.",
-        "button_text": "View all"
+        "heading_text": "What is your pet’s poop telling you?",
+        "body_text": "Gut health drives 70% of immunity. Our tests check inflammation, immune response, and gut permeability to guide pet care.",
+        "button_text": "View all products"
       }
     },
     "1737447265e68644fb": {
@@ -144,9 +144,7 @@
     "ipl_happy_customer_CMWRRC": {
       "type": "ipl-happy-customer",
       "settings": {
-        "heading_text": "Welcome to Our Store!",
-        "body_text": "This is a customizable page for displaying your content.",
-        "background_color": "#ffffff"
+        "heading_text": "Welcome to Our Store!"
       }
     },
     "ipl_trust_your_gut_mr4iJR": {
