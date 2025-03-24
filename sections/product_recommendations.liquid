@@ -10,6 +10,18 @@
     margin-bottom: 2rem;
     color: #000000;
   }
+  .best-seller {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background-color: #03B0A7;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
   @media (max-width: 500px) {
     .related-products-container .section-heading .h2 {
       font-size: 24px;
@@ -150,6 +162,9 @@
           <div class="product-grid">
             {%- for product in recommendations.products limit: 3 -%}
               <div class="product-card" data-product-url="{{ product.url }}">
+                {% if product.tags contains 'Best Seller' %}
+                  <div class="best-seller">Best Seller</div>
+                {% endif %}
                 <div class="img-wrap">
                   <img width="" height="" src="{{ product.featured_image | image_url }}" alt="{{ product.title }}" class="product-image">
                 </div>
