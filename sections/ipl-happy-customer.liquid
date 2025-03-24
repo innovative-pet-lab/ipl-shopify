@@ -33,6 +33,7 @@
         gap: 40px;
         padding: 0 20px;
     }
+
     @media (max-width: 768px) {
         .testimonial-slide {
             flex-direction: column;
@@ -63,9 +64,16 @@
             font-size: 18px!important;
         }
     }
+
     .testimonial-content {
         flex: 1;
-        min-width: 700px;
+        min-width: 60%;
+    }
+    @media (min-width: 768px) {
+        .testimonial-content {
+            max-width: 60%;
+            min-width: 60%;
+        }
     }
     .quote {
         font-size: 28px;
@@ -106,7 +114,17 @@
     }
     .testimonial-image {
         flex: 1;
-        max-width: 500px;
+    }
+    @media (min-width: 768px) {
+        .testimonial-image {
+        max-width: 400px;
+        min-width: 400px;
+        height: 100vh;
+        overflow: hidden;
+        position: absolute;
+        right: 0;
+        top: 2rem;
+        }
     }
     .testimonial-image img {
         width: 100%;
@@ -146,45 +164,33 @@
 </style>
 <div class="section-wrapper">
     <section class="testimonials-section">
-        <h1>Happy Customers</h1>
+        {% if section.settings.heading_text %}
+            <h1>{{ section.settings.heading_text }}</h1>
+        {% endif %}
         <div class="swiper-testi">
             <div class="swiper-wrapper">
+                {% for block in section.blocks %}
+
                 <div class="swiper-slide">
                     <div class="testimonial-slide">
                         <div class="testimonial-content">
-                            <div class="quote">A Game-Changer in Pet-Health: Innovative Pet Lab! As a holistic veterinarian with a focus on gut health, I can't recommend Innovative Pet Lab's stool tests enough...</div>
-                            <div class="author">Dr. Katie Woodley, DVM</div>
+                            {% if block.settings.quote %}
+                                <div class="quote">{{ block.settings.quote }}</div>
+                            {% endif %}
+                            {% if block.settings.author %}
+                            <div class="author">{{ block.settings.author }}</div>
+                            {% endif %}
                             <div class="rating">★★★★★</div>
                         </div>
                         <div class="testimonial-image">
-                            <img src="https://cdn.shopify.com/s/files/1/0685/6497/5842/files/image_17.png?v=1739277886">
+                            {% if block.settings.testi_image %}
+                            <img src="{{ block.settings.testi_image | image_url }}" alt="" width="" height="">
+                            {% endif %}
                         </div>
                     </div>
                 </div>
-                <div class="swiper-slide">
-                    <div class="testimonial-slide">
-                        <div class="testimonial-content">
-                            <div class="quote">The comprehensive gut health analysis provided by Innovative Pet Lab has revolutionized how I approach pet wellness. Their detailed reports give me exactly what I need...</div>
-                            <div class="author">Dr. Sarah Martinez, DVM</div>
-                            <div class="rating">★★★★★</div>
-                        </div>
-                        <div class="testimonial-image">
-                            <img src="https://cdn.shopify.com/s/files/1/0685/6497/5842/files/image_17.png?v=1739277886">
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="testimonial-slide">
-                        <div class="testimonial-content">
-                            <div class="quote">Finally, a lab that understands the importance of gut health in overall pet wellness! The test results are easy to interpret and the customer service is outstanding...</div>
-                            <div class="author">Dr. Michael Chen, DVM</div>
-                            <div class="rating">★★★★★</div>
-                        </div>
-                        <div class="testimonial-image">
-                            <img src="https://cdn.shopify.com/s/files/1/0685/6497/5842/files/image_17.png?v=1739277886">
-                        </div>
-                    </div>
-                </div>
+
+                {% endfor %}
             </div>
             <div class="swiper-pagination"></div>
         </div>
@@ -197,10 +203,10 @@
             el: '.swiper-pagination',
             clickable: true
         },
-        autoplay: {
+        {% comment %} autoplay: {
             delay: 5000,
             disableOnInteraction: false
-        },
+        }, {% endcomment %}
         effect: 'fade',
         fadeEffect: {
             crossFade: true
@@ -215,19 +221,30 @@
       "type": "text",
       "id": "heading_text",
       "label": "Heading Text",
-      "default": "Welcome to Our Store!"
-    },
+      "default": "Happy Customer"
+    }
+  ],
+  "blocks": [
     {
-      "type": "textarea",
-      "id": "body_text",
-      "label": "Body Text",
-      "default": "This is a customizable page for displaying your content."
-    },
-    {
-      "type": "color",
-      "id": "background_color",
-      "label": "Background Color",
-      "default": "#ffffff"
+      "type": "testi-block",
+      "name": "Testimonial block",
+      "settings": [
+        {
+            "type": "image_picker",
+            "id": "testi_image",
+            "label": "Testimonial Image"
+        },
+        {
+          "type": "textarea",
+          "id": "quote",
+          "label": "Quote"
+        },
+        {
+            "type": "text",
+            "id": "author",
+            "label": "Author"
+        }
+      ]
     }
   ],
   "presets": [
