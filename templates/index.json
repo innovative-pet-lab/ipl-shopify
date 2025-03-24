@@ -41,7 +41,7 @@
       "settings": {
         "heading_text": "Welcome to Our Store!",
         "body_text": "This is a customizable page for displaying your content.",
-        "background_color": "#ffffff"
+        "button_text": "View all"
       }
     },
     "1737447265e68644fb": {
@@ -73,9 +73,10 @@
     "ipl_meet_the_team_VBtzLK": {
       "type": "ipl-meet-the-team",
       "settings": {
-        "heading_text": "Welcome to Our Store!",
-        "body_text": "This is a customizable page for displaying your content.",
-        "background_color": "#ffffff"
+        "heading_text": "A science-driven pet wellness company with a collective 100+ years of clinical laboratory experience.",
+        "body_text": "Innovative Pet Lab® founders bring their extensive experience in human diagnostic medicine to our mission of revolutionizing pet wellness care.",
+        "button_label": "Meet the team",
+        "button_link": "shopify://pages/meet-the-team"
       }
     },
     "ipl_our_process_qFY3kb": {
