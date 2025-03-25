@@ -120,11 +120,6 @@
     },
     "content_for_index": [],
     "blocks": {
-      "9962162814386890965": {
-        "type": "shopify://apps/lantern/blocks/core/619ce3d2-0211-4d3a-9bb0-e881b10b00ad",
-        "disabled": false,
-        "settings": {}
-      },
       "14138263979377034098": {
         "type": "shopify://apps/miniorange-single-sign-on-sso/blocks/sso-widget/48152e16-8060-4bf5-8478-83efdf88901f",
         "disabled": false,
@@ -160,6 +155,11 @@
           "show-popup-how-many-times": "once",
           "auto-trigger-quiz": "tools/perfect-product-finder/ipl-test-quize-uqrwcvyvct"
         }
+      },
+      "9962162814386890965": {
+        "type": "shopify://apps/lantern/blocks/core/619ce3d2-0211-4d3a-9bb0-e881b10b00ad",
+        "disabled": true,
+        "settings": {}
       }
     }
   },
