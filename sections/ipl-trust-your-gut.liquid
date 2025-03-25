@@ -122,36 +122,47 @@
 </style>    
 
 <section class="ipl-trust-your-gut">
-    <h1>Trust your gut, check theirs</h1>
+  {% if section.settings.heading_text != empty %}
+    <h1>{{ section.settings.heading_text }}</h1>
+  {% endif %}
     <div class="wrapper-grid container">
-      <div class="trust-card">
-        <svg width="36" height="33" viewBox="0 0 36 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M14.0399 32.2707C21.5391 32.2707 27.6183 26.1914 27.6183 18.6922C27.6183 11.1931 21.5391 5.11377 14.0399 5.11377C6.54071 5.11377 0.461426 11.1931 0.461426 18.6922C0.461426 26.1914 6.54071 32.2707 14.0399 32.2707Z" fill="#CEE4DE"/>
-          <path d="M14.1934 29.1874L14.0212 28.8939C11.3904 24.4116 4.39949 14.8995 4.32887 14.8039L4.22803 14.6669L6.6098 12.3131L14.1492 17.5776C18.8962 11.4177 23.3248 7.18679 26.2136 4.71609C29.3736 2.0134 31.4306 0.769171 31.4514 0.757248L31.4982 0.729248H35.5383L35.1524 1.07294C25.2271 9.9134 14.4691 28.7029 14.362 28.8917L14.1934 29.1874Z" fill="#03958D"/>
-        </svg>
-        <p>Guided recommendations developed by our veterinary medical team</p>
-      </div>
+        {% if section.settings.trust_gut_block_1 != empty %}
+          <div class="trust-card">
+            <svg width="36" height="33" viewBox="0 0 36 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M14.0399 32.2707C21.5391 32.2707 27.6183 26.1914 27.6183 18.6922C27.6183 11.1931 21.5391 5.11377 14.0399 5.11377C6.54071 5.11377 0.461426 11.1931 0.461426 18.6922C0.461426 26.1914 6.54071 32.2707 14.0399 32.2707Z" fill="#CEE4DE"/>
+              <path d="M14.1934 29.1874L14.0212 28.8939C11.3904 24.4116 4.39949 14.8995 4.32887 14.8039L4.22803 14.6669L6.6098 12.3131L14.1492 17.5776C18.8962 11.4177 23.3248 7.18679 26.2136 4.71609C29.3736 2.0134 31.4306 0.769171 31.4514 0.757248L31.4982 0.729248H35.5383L35.1524 1.07294C25.2271 9.9134 14.4691 28.7029 14.362 28.8917L14.1934 29.1874Z" fill="#03958D"/>
+            </svg>
+            <p>{{ section.settings.trust_gut_block_1 }}</p>
+          </div>
+        {% endif %}
       <div class="trust-card circle">
-        <img src="https://cdn.shopify.com/s/files/1/0685/6497/5842/files/image_24.png?v=1739355823" alt="trust your gut">
+        <img src="{{ section.settings.section_image | image_url }}" alt="trust your gut" width="" height="">
       </div>
       <div class="trust-card right">
+        {% if section.settings.trust_gut_block_2 != empty %}
+          <div class="trust-card__item">
+              <svg width="36" height="33" viewBox="0 0 36 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M14.0399 32.2707C21.5391 32.2707 27.6183 26.1914 27.6183 18.6922C27.6183 11.1931 21.5391 5.11377 14.0399 5.11377C6.54071 5.11377 0.461426 11.1931 0.461426 18.6922C0.461426 26.1914 6.54071 32.2707 14.0399 32.2707Z" fill="#CEE4DE"/>
+                <path d="M14.1934 29.1874L14.0212 28.8939C11.3904 24.4116 4.39949 14.8995 4.32887 14.8039L4.22803 14.6669L6.6098 12.3131L14.1492 17.5776C18.8962 11.4177 23.3248 7.18679 26.2136 4.71609C29.3736 2.0134 31.4306 0.769171 31.4514 0.757248L31.4982 0.729248H35.5383L35.1524 1.07294C25.2271 9.9134 14.4691 28.7029 14.362 28.8917L14.1934 29.1874Z" fill="#03958D"/>
+              </svg>
+              <p>{{ section.settings.trust_gut_block_2 }}</p>
+          </div>
+      {% endif %}
+
+      {% if section.settings.trust_gut_block_3 != empty %}
         <div class="trust-card__item">
-          <svg width="36" height="33" viewBox="0 0 36 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg class="test" width="36" height="33" viewBox="0 0 36 33" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M14.0399 32.2707C21.5391 32.2707 27.6183 26.1914 27.6183 18.6922C27.6183 11.1931 21.5391 5.11377 14.0399 5.11377C6.54071 5.11377 0.461426 11.1931 0.461426 18.6922C0.461426 26.1914 6.54071 32.2707 14.0399 32.2707Z" fill="#CEE4DE"/>
             <path d="M14.1934 29.1874L14.0212 28.8939C11.3904 24.4116 4.39949 14.8995 4.32887 14.8039L4.22803 14.6669L6.6098 12.3131L14.1492 17.5776C18.8962 11.4177 23.3248 7.18679 26.2136 4.71609C29.3736 2.0134 31.4306 0.769171 31.4514 0.757248L31.4982 0.729248H35.5383L35.1524 1.07294C25.2271 9.9134 14.4691 28.7029 14.362 28.8917L14.1934 29.1874Z" fill="#03958D"/>
           </svg>
-          <p>Comprehensive tests <br>that identify root causes of gut health issue</p>
+            <p>{{ section.settings.trust_gut_block_3 }}</p>
         </div>
-        <div class="trust-card__item">
-          <svg width="36" height="33" viewBox="0 0 36 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M14.0399 32.2707C21.5391 32.2707 27.6183 26.1914 27.6183 18.6922C27.6183 11.1931 21.5391 5.11377 14.0399 5.11377C6.54071 5.11377 0.461426 11.1931 0.461426 18.6922C0.461426 26.1914 6.54071 32.2707 14.0399 32.2707Z" fill="#CEE4DE"/>
-            <path d="M14.1934 29.1874L14.0212 28.8939C11.3904 24.4116 4.39949 14.8995 4.32887 14.8039L4.22803 14.6669L6.6098 12.3131L14.1492 17.5776C18.8962 11.4177 23.3248 7.18679 26.2136 4.71609C29.3736 2.0134 31.4306 0.769171 31.4514 0.757248L31.4982 0.729248H35.5383L35.1524 1.07294C25.2271 9.9134 14.4691 28.7029 14.362 28.8917L14.1934 29.1874Z" fill="#03958D"/>
-          </svg>
-          <p>Only we offer testing <br> for inflammation, immune response, and gut permeability.</p>
-        </div>
+      {% endif %}
       </div>
     </div>
-    <a href="/collections/all" class="cta-button">View all products</a>
+    {% if section.settings.trust_gut_button_text != empty %}
+    <a href="{{ section.settings.trust_gut_button_link }}" class="cta-button">{{ section.settings.trust_gut_button_text }}</a>
+    {% endif %}
   </section>
 
 {% schema %}
@@ -165,17 +176,35 @@
       "default": "Welcome to Our Store!"
     },
     {
-      "type": "textarea",
-      "id": "body_text",
-      "label": "Body Text",
-      "default": "This is a customizable page for displaying your content."
+      "type": "image_picker",
+      "id": "section_image",
+      "label": "Section Image"
     },
     {
-      "type": "color",
-      "id": "background_color",
-      "label": "Background Color",
-      "default": "#ffffff"
-    }
+      "type": "textarea",
+      "id": "trust_gut_block_1",
+      "label": "Block item_1"
+    },
+    {
+      "type": "textarea",
+      "id": "trust_gut_block_2",
+      "label": "Block item_2"
+    },
+    {
+      "type": "textarea",
+      "id": "trust_gut_block_3",
+      "label": "Block item_3"
+    },
+    {
+      "type": "text",
+      "id": "trust_gut_button_text",
+      "label": "Button text"
+    },
+    {
+      "type": "url",
+      "id": "trust_gut_button_link",
+      "label": "Button link"
+    },
   ],
   "presets": [
     {
