@@ -70,33 +70,6 @@
         "bottom_space_mobile": 30
       }
     },
-    "1737447265e68644fb": {
-      "type": "apps",
-      "blocks": {
-        "lantern_quiz_rMHnUw": {
-          "type": "shopify://apps/lantern/blocks/quiz/619ce3d2-0211-4d3a-9bb0-e881b10b00ad",
-          "disabled": true,
-          "settings": {
-            "quiz-ppf": "tools/perfect-product-finder/ipl-test-quize",
-            "top-margin-ppf": "20px",
-            "bottom-margin-ppf": "20px",
-            "width-ppf": "100%",
-            "min-height-ppf": "500px",
-            "max-height-ppf": "",
-            "no-scroll-ppf": false
-          }
-        }
-      },
-      "block_order": [
-        "lantern_quiz_rMHnUw"
-      ],
-      "settings": {
-        "top_space_desktop": 0,
-        "bottom_space_desktop": 0,
-        "top_space_mobile": 0,
-        "bottom_space_mobile": 0
-      }
-    },
     "ipl_meet_the_team_VBtzLK": {
       "type": "ipl-meet-the-team",
       "blocks": {
@@ -241,7 +214,6 @@
     "image_banner_CHrfUk",
     "ipl_featured_products_bRYQWM",
     "174290200416010cd9",
-    "1737447265e68644fb",
     "ipl_meet_the_team_VBtzLK",
     "ipl_our_process_qFY3kb",
     "ipl_happy_customer_CMWRRC",
