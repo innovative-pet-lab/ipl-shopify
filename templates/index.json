@@ -56,13 +56,14 @@
             "width-ppf": "100%",
             "min-height-ppf": "500px",
             "max-height-ppf": "",
-            "no-scroll-ppf": false
+            "no-scroll-ppf": true
           }
         }
       },
       "block_order": [
         "lantern_quiz_4KgmAL"
       ],
+      "custom_css": [],
       "settings": {
         "top_space_desktop": 30,
         "bottom_space_desktop": 30,
