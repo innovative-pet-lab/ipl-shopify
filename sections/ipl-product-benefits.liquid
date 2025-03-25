@@ -11,14 +11,12 @@
       background-color: #f0f4f4;
       border-radius: 20px;
   }
-  
   .benefits-blob {
     position: absolute;
     left: 0;
     bottom: -8px;
     z-index: 0;
   }
-  
   .benefits-content {
       display: flex;
       flex-direction: row;
@@ -27,7 +25,6 @@
       position: relative;
       z-index: 1;
   }
-
   .benefits-content .benefits-left h1 {
     font-size: min(2.5rem, 2.5rem);
     font-weight: 700;
@@ -35,23 +32,19 @@
     margin-bottom: 20px;
     line-height: 1.2;
   }
-  
   .benefits-left {
       flex: 1;
       padding-right: 20px;
   }
-  
   .benefits-right {
       flex: 1;
       padding-left: 1rem;
   }
-    
   .benefit-item {
       display: flex;
       align-items: center;
       margin: 1rem 0 0 3rem;
   }
-  
   .check-icon {
       width: 24px;
       height: 24px;
@@ -63,7 +56,6 @@
       margin-right: 15px;
       flex-shrink: 0;
   }
-  
   .check-icon::before {
       content: '';
       display: block;
@@ -74,7 +66,6 @@
       transform: rotate(45deg);
       margin-bottom: 2px;
   }
-  
   .benefit-text {
       font-size: 1.5rem;
       font-weight: 500;
@@ -98,25 +89,23 @@
       padding: 3rem 2rem;
       margin-bottom: 3rem;
     }
-      .benefits-left {
-          width: 100%;
-          padding-right: 0;
-          margin-bottom: 30px;
-      }
-      .benefits-right {
-          width: 100%;
-          padding-left: 0;
-      }
-      .benefit-item {
-        margin: 1rem 0;
-      }
-      .benefits-content .benefits-left h1 {
-        font-size: min(1.5rem, 1.5rem);
-        text-align: center;
-      }
-
+    .benefits-left {
+        width: 100%;
+        padding-right: 0;
+        margin-bottom: 30px;
+    }
+    .benefits-right {
+        width: 100%;
+        padding-left: 0;
+    }
+    .benefit-item {
+      margin: 1rem 0;
+    }
+    .benefits-content .benefits-left h1 {
+      font-size: min(1.5rem, 1.5rem);
+      text-align: center;
+    }
   }
-  
 </style>
 
 <div class="benefits-main-wrap">
@@ -138,31 +127,23 @@
       </svg>  
     </div>
     <div class="benefits-content">
+      {% if section.settings.heading_text != empty %}
         <div class="benefits-left">
-            <h1>Benefits of understanding & treating symptoms</h1>
+            <h1>{{ section.settings.heading_text }}</h1>
         </div>
+      {% endif %}
         <div class="benefits-right">
-            <div class="benefit-item">
-                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M16.04 35.7712C23.5392 35.7712 29.6185 29.6919 29.6185 22.1927C29.6185 14.6935 23.5392 8.61426 16.04 8.61426C8.54083 8.61426 2.46155 14.6935 2.46155 22.1927C2.46155 29.6919 8.54083 35.7712 16.04 35.7712Z" fill="#CEE4DE"/>
-                  <path d="M16.1935 32.6876L16.0213 32.3942C13.3905 27.9119 6.39961 18.3997 6.329 18.3042L6.22815 18.1672L8.60992 15.8133L16.1493 21.0779C20.8963 14.918 25.3249 10.687 28.2137 8.21634C31.3738 5.51365 33.4308 4.26942 33.4515 4.25749L33.4983 4.22949H37.5385L37.1525 4.57318C27.2272 13.4136 16.4692 32.2032 16.3621 32.392L16.1935 32.6876Z" fill="#03958D"/>
-                </svg>
-                <div class="benefit-text">Fewer tummy troubles</div>
-            </div>
-            <div class="benefit-item">
-              <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M16.04 35.7712C23.5392 35.7712 29.6185 29.6919 29.6185 22.1927C29.6185 14.6935 23.5392 8.61426 16.04 8.61426C8.54083 8.61426 2.46155 14.6935 2.46155 22.1927C2.46155 29.6919 8.54083 35.7712 16.04 35.7712Z" fill="#CEE4DE"/>
-                <path d="M16.1935 32.6876L16.0213 32.3942C13.3905 27.9119 6.39961 18.3997 6.329 18.3042L6.22815 18.1672L8.60992 15.8133L16.1493 21.0779C20.8963 14.918 25.3249 10.687 28.2137 8.21634C31.3738 5.51365 33.4308 4.26942 33.4515 4.25749L33.4983 4.22949H37.5385L37.1525 4.57318C27.2272 13.4136 16.4692 32.2032 16.3621 32.392L16.1935 32.6876Z" fill="#03958D"/>
-              </svg>
-                <div class="benefit-text">Stronger immune system</div>
-            </div>
-            <div class="benefit-item">
-                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M16.04 35.7712C23.5392 35.7712 29.6185 29.6919 29.6185 22.1927C29.6185 14.6935 23.5392 8.61426 16.04 8.61426C8.54083 8.61426 2.46155 14.6935 2.46155 22.1927C2.46155 29.6919 8.54083 35.7712 16.04 35.7712Z" fill="#CEE4DE"/>
-                  <path d="M16.1935 32.6876L16.0213 32.3942C13.3905 27.9119 6.39961 18.3997 6.329 18.3042L6.22815 18.1672L8.60992 15.8133L16.1493 21.0779C20.8963 14.918 25.3249 10.687 28.2137 8.21634C31.3738 5.51365 33.4308 4.26942 33.4515 4.25749L33.4983 4.22949H37.5385L37.1525 4.57318C27.2272 13.4136 16.4692 32.2032 16.3621 32.392L16.1935 32.6876Z" fill="#03958D"/>
-                </svg>
-                <div class="benefit-text">Custom health plan</div>
-            </div>
+          {% for block in section.blocks %}
+            {% if block.settings.list_item != empty %}
+              <div class="benefit-item">
+                  <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M16.04 35.7712C23.5392 35.7712 29.6185 29.6919 29.6185 22.1927C29.6185 14.6935 23.5392 8.61426 16.04 8.61426C8.54083 8.61426 2.46155 14.6935 2.46155 22.1927C2.46155 29.6919 8.54083 35.7712 16.04 35.7712Z" fill="#CEE4DE"/>
+                    <path d="M16.1935 32.6876L16.0213 32.3942C13.3905 27.9119 6.39961 18.3997 6.329 18.3042L6.22815 18.1672L8.60992 15.8133L16.1493 21.0779C20.8963 14.918 25.3249 10.687 28.2137 8.21634C31.3738 5.51365 33.4308 4.26942 33.4515 4.25749L33.4983 4.22949H37.5385L37.1525 4.57318C27.2272 13.4136 16.4692 32.2032 16.3621 32.392L16.1935 32.6876Z" fill="#03958D"/>
+                  </svg>
+                  <div class="benefit-text">{{ block.settings.list_item }}</div>
+              </div>
+            {% endif %}
+          {% endfor %}
         </div>
     </div>
   </div>
@@ -177,18 +158,20 @@
       "id": "heading_text",
       "label": "Heading Text",
       "default": "Welcome to Our Store!"
-    },
+    }
+  ],
+  "blocks": [
     {
-      "type": "textarea",
-      "id": "body_text",
-      "label": "Body Text",
-      "default": "This is a customizable page for displaying your content."
-    },
-    {
-      "type": "color",
-      "id": "background_color",
-      "label": "Background Color",
-      "default": "#ffffff"
+      "type": "test_item",
+      "name": "Test item",
+      "limit": 4,
+      "settings": [
+        {
+          "type": "text",
+          "id": "list_item",
+          "label": "List item"
+        }
+      ]
     }
   ],
   "presets": [
