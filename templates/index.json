@@ -181,9 +181,13 @@
     "ipl_trust_your_gut_mr4iJR": {
       "type": "ipl-trust-your-gut",
       "settings": {
-        "heading_text": "Welcome to Our Store!",
-        "body_text": "This is a customizable page for displaying your content.",
-        "background_color": "#ffffff"
+        "heading_text": "Happy Customers",
+        "section_image": "shopify://shop_images/image_24.png",
+        "trust_gut_block_1": "Guided recommendations developed by our veterinary medical team",
+        "trust_gut_block_2": "Comprehensive tests\nthat identify root causes of gut health issue",
+        "trust_gut_block_3": "Only we offer testing for inflammation, immune response, and gut permeability",
+        "trust_gut_button_text": "View all products",
+        "trust_gut_button_link": "shopify://collections/all"
       }
     },
     "241580ea-bd0e-4db7-b075-509b6cb71c9c": {
