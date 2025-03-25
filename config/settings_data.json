@@ -125,23 +125,6 @@
         "disabled": false,
         "settings": {}
       },
-      "17587734367913825621": {
-        "type": "shopify://apps/lantern/blocks/popup/619ce3d2-0211-4d3a-9bb0-e881b10b00ad",
-        "disabled": false,
-        "settings": {
-          "ppf-popup-width": "80%",
-          "ppf-popup-height": "80%",
-          "ppf-popup-width-mobile": "100%",
-          "ppf-popup-height-mobile": "100%",
-          "auto-trigger-on-exit-intent": false,
-          "auto-trigger-on-scroll": false,
-          "auto-trigger-scroll-value": 250,
-          "auto-trigger-after-x-seconds": false,
-          "auto-trigger-time-value": 10,
-          "show-popup-how-many-times": "once",
-          "auto-trigger-quiz": "#open-quiz-tools/perfect-product-finder/ipl-test-quize"
-        }
-      },
       "14138263979377034098": {
         "type": "shopify://apps/miniorange-single-sign-on-sso/blocks/sso-widget/48152e16-8060-4bf5-8478-83efdf88901f",
         "disabled": false,
@@ -160,6 +143,23 @@
         "type": "shopify://apps/sami-wholesale/blocks/app-embed-block/799b9db0-2c2b-4b20-8675-98acd123fbb2",
         "disabled": false,
         "settings": {}
+      },
+      "17587734367913825621": {
+        "type": "shopify://apps/lantern/blocks/popup/619ce3d2-0211-4d3a-9bb0-e881b10b00ad",
+        "disabled": true,
+        "settings": {
+          "ppf-popup-width": "80%",
+          "ppf-popup-height": "80%",
+          "ppf-popup-width-mobile": "100%",
+          "ppf-popup-height-mobile": "100%",
+          "auto-trigger-on-exit-intent": false,
+          "auto-trigger-on-scroll": false,
+          "auto-trigger-scroll-value": 250,
+          "auto-trigger-after-x-seconds": false,
+          "auto-trigger-time-value": 10,
+          "show-popup-how-many-times": "once",
+          "auto-trigger-quiz": "tools/perfect-product-finder/ipl-test-quize-uqrwcvyvct"
+        }
       }
     }
   },
