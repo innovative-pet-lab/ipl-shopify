@@ -42,7 +42,6 @@
   }
 
   .icon-container {
-      {% comment %} background-color: #f2f2f2; {% endcomment %}
       width: 180px;
       height: 180px;
       border-radius: 50%;
@@ -110,38 +109,27 @@
 
 <div class="gut-check-test-container">
   <div class="header">
-      <h1>Take the mystery out of your pet's gut health.</h1>
-      <p>If your dog or cat is showing signs of digestive or stomach issues, our Basic Gut Check test can help you proactively identify underlying issues and lead you (and your vet) to better solutions and a better quality of life!</p>
+    {% if section.settings.heading_text != empty %}
+      <h1>{{ section.settings.heading_text }}</h1>
+    {% endif %}
+    {% if section.settings.subheading_text != empty %}
+      <p>{{ section.settings.subheading_text }}</p>
+    {% endif %}
   </div>
 
   <div class="features">
+    {% for block in section.blocks %}
       <div class="feature">
+        {% if block.settings.test_icon != empty %}
           <div class="icon-container">
-            <img src="https://cdn.shopify.com/s/files/1/0685/6497/5842/files/diarrhea-constipation.png?v=1742304452">
+            <img src="{{ block.settings.test_icon | image_url }}" alt="{{ block.settings.text_item }}" width="" height="">
           </div>
-          <h3>Diarrhea or Constipation</h3>
+        {% endif %}
+          {% if block.settings.test_label != empty %}
+          <h3>{{ block.settings.test_label }}</h3>
+          {% endif %}
       </div>
-
-      <div class="feature">
-          <div class="icon-container">
-            <img src="https://cdn.shopify.com/s/files/1/0685/6497/5842/files/mood-behavior.png?v=1742304898">
-          </div>
-          <h3>Mood/Behavior</h3>
-      </div>
-
-      <div class="feature">
-          <div class="icon-container">
-            <img src="https://cdn.shopify.com/s/files/1/0685/6497/5842/files/parasites.png?v=1742304695">
-          </div>
-          <h3>Skin/Coat Issues/Itching</h3>
-      </div>
-
-      <div class="feature">
-          <div class="icon-container">
-            <img src="https://cdn.shopify.com/s/files/1/0685/6497/5842/files/vomiting.png?v=1742305032">    
-          </div>
-          <h3>Vomiting</h3>
-      </div>
+    {% endfor %}
   </div>
 </div>
 
@@ -157,15 +145,29 @@
     },
     {
       "type": "textarea",
-      "id": "body_text",
-      "label": "Body Text",
+      "id": "subheading_text",
+      "label": "Subheading Text",
       "default": "This is a customizable page for displaying your content."
-    },
+    }
+  ],
+  "blocks": [
     {
-      "type": "color",
-      "id": "background_color",
-      "label": "Background Color",
-      "default": "#ffffff"
+      "type": "test_item",
+      "name": "Test item",
+      "limit": 5,
+      "settings": [
+        {
+          "type": "text",
+          "id": "test_label",
+          "label": "Test Label",
+          "default": "Vomiting"
+        },
+        {
+          "type": "image_picker",
+          "id": "test_icon",
+          "label": "Test icon"
+        }
+      ]
     }
   ],
   "presets": [
