@@ -471,9 +471,7 @@
     "ipl_product_gut_check_test_g87k96": {
       "type": "ipl-product-gut-check-test",
       "settings": {
-        "heading_text": "Welcome to Our Store!",
-        "body_text": "This is a customizable page for displaying your content.",
-        "background_color": "#ffffff"
+        "heading_text": "Take the mystery out \u0003of your pet’s gut health."
       }
     },
     "product_recommendations": {
