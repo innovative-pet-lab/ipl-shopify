@@ -49,6 +49,7 @@
       "blocks": {
         "lantern_quiz_rMHnUw": {
           "type": "shopify://apps/lantern/blocks/quiz/619ce3d2-0211-4d3a-9bb0-e881b10b00ad",
+          "disabled": true,
           "settings": {
             "quiz-ppf": "tools/perfect-product-finder/ipl-test-quize",
             "top-margin-ppf": "20px",
@@ -208,6 +209,32 @@
         "top_space_mobile": 30,
         "bottom_space_mobile": 30
       }
+    },
+    "174290200416010cd9": {
+      "type": "apps",
+      "blocks": {
+        "lantern_quiz_4KgmAL": {
+          "type": "shopify://apps/lantern/blocks/quiz/619ce3d2-0211-4d3a-9bb0-e881b10b00ad",
+          "settings": {
+            "quiz-ppf": "tools/perfect-product-finder/ipl-test-quize-uqrwcvyvct",
+            "top-margin-ppf": "20px",
+            "bottom-margin-ppf": "20px",
+            "width-ppf": "100%",
+            "min-height-ppf": "500px",
+            "max-height-ppf": "",
+            "no-scroll-ppf": false
+          }
+        }
+      },
+      "block_order": [
+        "lantern_quiz_4KgmAL"
+      ],
+      "settings": {
+        "top_space_desktop": 30,
+        "bottom_space_desktop": 30,
+        "top_space_mobile": 30,
+        "bottom_space_mobile": 30
+      }
     }
   },
   "order": [
@@ -218,6 +245,7 @@
     "ipl_our_process_qFY3kb",
     "ipl_happy_customer_CMWRRC",
     "ipl_trust_your_gut_mr4iJR",
-    "241580ea-bd0e-4db7-b075-509b6cb71c9c"
+    "241580ea-bd0e-4db7-b075-509b6cb71c9c",
+    "174290200416010cd9"
   ]
 }
