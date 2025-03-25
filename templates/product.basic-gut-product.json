@@ -522,10 +522,33 @@
     },
     "ipl_product_benefits_7BYcdt": {
       "type": "ipl-product-benefits",
+      "blocks": {
+        "test_item_zQb3BG": {
+          "type": "test_item",
+          "settings": {
+            "list_item": "Fewer tummy troubles"
+          }
+        },
+        "test_item_eeiyxX": {
+          "type": "test_item",
+          "settings": {
+            "list_item": "Stronger immune system"
+          }
+        },
+        "test_item_gmYTxc": {
+          "type": "test_item",
+          "settings": {
+            "list_item": "Custom health plan"
+          }
+        }
+      },
+      "block_order": [
+        "test_item_zQb3BG",
+        "test_item_eeiyxX",
+        "test_item_gmYTxc"
+      ],
       "settings": {
-        "heading_text": "Welcome to Our Store!",
-        "body_text": "This is a customizable page for displaying your content.",
-        "background_color": "#ffffff"
+        "heading_text": "Benefits of understanding & treating symptoms"
       }
     },
     "8c17cb82-109c-4b83-968b-5a4214762d42": {
