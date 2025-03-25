@@ -161,6 +161,16 @@
     .swiper-pagination-bullet-active {
         background: #4CAF50;
     }
+    .swiper-testi .swiper-btn {
+        opacity: 1;
+        top: 66%;
+    }
+    .swiper-testi .swiper-btn.swiper-button-next {
+        right: -7px;
+    }
+    .swiper-testi .swiper-btn.swiper-button-prev {
+        left: -7px;
+    }
 </style>
 <div class="section-wrapper">
     <section class="testimonials-section">
@@ -189,10 +199,13 @@
                         </div>
                     </div>
                 </div>
-
                 {% endfor %}
+
             </div>
+            <div class="swiper-btn swiper-button-prev"></div>
+            <div class="swiper-btn swiper-button-next"></div>
             <div class="swiper-pagination"></div>
+
         </div>
     </section>
 </div>
@@ -203,10 +216,14 @@
             el: '.swiper-pagination',
             clickable: true
         },
-        {% comment %} autoplay: {
-            delay: 5000,
+        autoplay: {
+            delay: 3000,
             disableOnInteraction: false
-        }, {% endcomment %}
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
         effect: 'fade',
         fadeEffect: {
             crossFade: true
