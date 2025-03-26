@@ -51,7 +51,7 @@
           "type": "shopify://apps/lantern/blocks/quiz/619ce3d2-0211-4d3a-9bb0-e881b10b00ad",
           "settings": {
             "quiz-ppf": "tools/perfect-product-finder/ipl-test-quize-uqrwcvyvct",
-            "top-margin-ppf": "20px",
+            "top-margin-ppf": "40px",
             "bottom-margin-ppf": "20px",
             "width-ppf": "100%",
             "min-height-ppf": "500px",
