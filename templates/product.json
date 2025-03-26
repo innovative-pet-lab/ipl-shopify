@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main-product": {
@@ -31,6 +40,10 @@
           "type": "quantity",
           "settings": {}
         },
+        "eb_easy_bundle_builder_app_block_mix_and_match_bundle_QzMF4N": {
+          "type": "shopify://apps/eb-easy-bundle-builder/blocks/app-block-mixAndMatchBundle/05b1325c-6303-4da5-8e2f-b13ab2a50e1a",
+          "settings": {}
+        },
         "16819786-9d1e-449d-966d-08d21e1c91af": {
           "type": "button",
           "settings": {
@@ -62,6 +75,7 @@
         "9db1533f-9baf-4eb6-869d-dd2b494b6990",
         "8658b9a0-c9c5-4055-a2e1-56a8f49d0b68",
         "811e6d87-a5e5-4457-9124-d3c2ed070ba9",
+        "eb_easy_bundle_builder_app_block_mix_and_match_bundle_QzMF4N",
         "16819786-9d1e-449d-966d-08d21e1c91af",
         "icons_mb4DVr"
       ],
@@ -105,7 +119,7 @@
           "settings": {
             "heading": "Take the mystery out \u0003of your pet’s gut health.",
             "seo_heading": "h2",
-            "content": "<p>If your dog or cat is showing signs of digestive or stomach issues, our Basic Gut Check test can help you proactively identify underlying issues and lead you (and your vet) to better solutions and a better quality of life!<\/p>"
+            "content": "<p>If your dog or cat is showing signs of digestive or stomach issues, our Basic Gut Check test can help you proactively identify underlying issues and lead you (and your vet) to better solutions and a better quality of life!</p>"
           }
         }
       },
@@ -130,7 +144,7 @@
           "type": "image",
           "settings": {
             "image_width": "col-md-4",
-            "image": "shopify:\/\/shop_images\/D_or_C_c835ded5-2673-4aae-aa71-df3b37570dde.png",
+            "image": "shopify://shop_images/D_or_C_c835ded5-2673-4aae-aa71-df3b37570dde.png",
             "heading": "Heading",
             "seo_heading": "h2",
             "enable_text_shadow": false,
@@ -290,7 +304,7 @@
       ],
       "settings": {
         "enable_fullwidth": false,
-        "image": "shopify:\/\/shop_images\/chewy-fGxiRXr2oZg-unsplash_1_copy.jpg",
+        "image": "shopify://shop_images/chewy-fGxiRXr2oZg-unsplash_1_copy.jpg",
         "image_shadow": true,
         "enable_image_animation": false,
         "image_alignment": "left",
@@ -321,8 +335,8 @@
           "type": "image",
           "disabled": true,
           "settings": {
-            "first_image": "shopify:\/\/shop_images\/pexels-vlada-karpovich-6802899.jpg",
-            "second_image": "shopify:\/\/shop_images\/tran-mau-tri-tam-pfRES3CjcUM-unsplash.jpg",
+            "first_image": "shopify://shop_images/pexels-vlada-karpovich-6802899.jpg",
+            "second_image": "shopify://shop_images/tran-mau-tri-tam-pfRES3CjcUM-unsplash.jpg",
             "image_shadow": true,
             "bgcolor": "secondary",
             "image_shadow_color": "#d1c9c4"
@@ -331,25 +345,25 @@
         "template--16809124299045__6cf7bc97-dd54-475a-9bff-20c3912ab04b-166781832969539b4d-2": {
           "type": "text",
           "settings": {
-            "content": "<p>Did you know over half of vet visits are because our fur babies have tummy troubles? And these issues aren’t always easy to diagnose or treat. Symptoms to watch out for include:<\/p><ul><li>Diarrhea or constipation<\/li><li>Vomiting<\/li><li>Itching or scratching<\/li><li>Hair, skin, or coat problems<\/li><li>Behavior changes<\/li><li>Weight loss<\/li><\/ul><p><\/p>"
+            "content": "<p>Did you know over half of vet visits are because our fur babies have tummy troubles? And these issues aren’t always easy to diagnose or treat. Symptoms to watch out for include:</p><ul><li>Diarrhea or constipation</li><li>Vomiting</li><li>Itching or scratching</li><li>Hair, skin, or coat problems</li><li>Behavior changes</li><li>Weight loss</li></ul><p></p>"
           }
         },
         "text_QFgQiY": {
           "type": "text",
           "settings": {
-            "content": "<p>These problems can really put a damper on your pet’s day. That’s why we created the Basic Gut Check at-home stool test. It’s like a secret weapon for vets and pet parents, giving us the upper paw by spotting potential issues before they turn into serious conditions.<\/p>"
+            "content": "<p>These problems can really put a damper on your pet’s day. That’s why we created the Basic Gut Check at-home stool test. It’s like a secret weapon for vets and pet parents, giving us the upper paw by spotting potential issues before they turn into serious conditions.</p>"
           }
         },
         "text_EegppK": {
           "type": "text",
           "settings": {
-            "content": "<h5>Do you want to make sure they live the healthiest, happiest life possible?<\/h5><p>Then you’re gonna love our Basic Gut Health test. Here’s why:<\/p><ul><li>Peace of Mind: Imagine knowing you’re doing everything you can for your pet’s health. Now that’s priceless.<\/li><li>Stronger Immune System: A large part of your pet’s immune system lives in their gut. A healthy gut equals a stronger, healthier pet.<\/li><li>Fewer Tummy Troubles: A balanced gut means fewer upset tummies, bloating, and allergies for your pet.<\/li><li>Custom Health Plan: Every pet is unique. This test helps you cater to their diet and care, based on their gut health.<\/li><li>Early Problem Detection: It’s always better to catch issues early. With this test, you can take action before minor issues become big problems.<\/li><\/ul>"
+            "content": "<h5>Do you want to make sure they live the healthiest, happiest life possible?</h5><p>Then you’re gonna love our Basic Gut Health test. Here’s why:</p><ul><li>Peace of Mind: Imagine knowing you’re doing everything you can for your pet’s health. Now that’s priceless.</li><li>Stronger Immune System: A large part of your pet’s immune system lives in their gut. A healthy gut equals a stronger, healthier pet.</li><li>Fewer Tummy Troubles: A balanced gut means fewer upset tummies, bloating, and allergies for your pet.</li><li>Custom Health Plan: Every pet is unique. This test helps you cater to their diet and care, based on their gut health.</li><li>Early Problem Detection: It’s always better to catch issues early. With this test, you can take action before minor issues become big problems.</li></ul>"
           }
         },
         "text_r6xMKz": {
           "type": "text",
           "settings": {
-            "content": "<p>Our at-home kit makes it easy. You collect a stool sample, send it back, and we’ll give you the results online with some personalized tips for your pet. So why wait for issues to show up? Be one step ahead with your pet’s health. Get our Basic Gut Health test today and unlock the secrets to a healthier, happier life for your fur-ever friend!<\/p>"
+            "content": "<p>Our at-home kit makes it easy. You collect a stool sample, send it back, and we’ll give you the results online with some personalized tips for your pet. So why wait for issues to show up? Be one step ahead with your pet’s health. Get our Basic Gut Health test today and unlock the secrets to a healthier, happier life for your fur-ever friend!</p>"
           }
         }
       },
@@ -373,18 +387,9 @@
     "product_recommendations": {
       "type": "product_recommendations",
       "settings": {
-        "heading": "Recommended Products",
-        "seo_heading": "h2",
-        "products_count": 8,
-        "product_grid_radius_desktop": 10,
-        "product_grid_radius_mobile": 10,
-        "product_grid_spacing_desktop": 10,
-        "product_grid_spacing_mobile": 10,
-        "bgcolor": "primary",
-        "top_space_desktop": 60,
-        "bottom_space_desktop": 60,
-        "top_space_mobile": 30,
-        "bottom_space_mobile": 30
+        "heading_text": "Welcome to Our Store!",
+        "body_text": "This is a customizable page for displaying your content.",
+        "background_color": "#ffffff"
       }
     },
     "8c17cb82-109c-4b83-968b-5a4214762d42": {
@@ -394,7 +399,7 @@
           "type": "image",
           "settings": {
             "image_width": "col-md-4",
-            "image": "shopify:\/\/shop_images\/box_innovative_pet_lab_inflamation_immunity-1024x768_23d18b47-683c-4062-9cc5-a8e0e6ffa561.png",
+            "image": "shopify://shop_images/box_innovative_pet_lab_inflamation_immunity-1024x768_23d18b47-683c-4062-9cc5-a8e0e6ffa561.png",
             "heading": "Digestion & Detox",
             "seo_heading": "h3",
             "enable_text_shadow": false,
