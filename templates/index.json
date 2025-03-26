@@ -65,10 +65,10 @@
       ],
       "custom_css": [],
       "settings": {
-        "top_space_desktop": 30,
+        "top_space_desktop": 0,
         "bottom_space_desktop": 30,
         "top_space_mobile": 30,
-        "bottom_space_mobile": 30
+        "bottom_space_mobile": 0
       }
     },
     "ipl_meet_the_team_VBtzLK": {
