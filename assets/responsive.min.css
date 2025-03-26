@@ -600,6 +600,7 @@
         min-width: 220px;
         min-height: 62px;
         font-size: 18px;
+        font-weight: 700;
     }
     .yv-collection-wrapper.fullwidth .yv-collection-slider .flickity-prev-next-button.previous {
         left: -50px;

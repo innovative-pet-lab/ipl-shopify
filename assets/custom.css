@@ -855,6 +855,9 @@ header .side-menu .inner-side ul li .list-menu__item {
 }
 
 /* quiz */
-.sc-19gaevv-0.kioSAt {
-    background-color: red!important;
-}
+/* @media (max-width: 575px) {
+    #shopify-section-template--19014554616034__174290200416010cd9.shopify-section {
+        max-height: 300px!important;
+    }
+} */
+
