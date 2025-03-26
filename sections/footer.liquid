@@ -55,6 +55,9 @@
                     {%- if block.settings.menu != blank -%}
                       <ul class="list-unstyled">
                         {%- for link in block.settings.menu.links -%}
+                          {%- comment %}<locksmith:7684>{% endcomment -%}
+                            {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: link, subject_parent: block.settings.menu, variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% else %}{% continue %}{% endif -%}
+                          {%- comment %}</locksmith:7684>{% endcomment -%}
                           <li>
                             <a href="{{ link.url }}">{{ link.title | split: '{' | first }}</a>
                           </li>

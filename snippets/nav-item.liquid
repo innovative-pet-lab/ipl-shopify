@@ -1,5 +1,11 @@
+{%- comment %}<locksmith:153a>{% endcomment -%}
+  {%- assign locksmith_ed09_forloop__size = 0 %}{%- for link in linklists[section.settings.menu].links -%}{% capture var %}{% render 'locksmith-variables', scope: 'subject', subject: link, subject_parent: linklists[section.settings.menu], variable: 'transparent' %}{% endcapture %}{% if var == 'true' %}{% assign locksmith_ed09_forloop__size = locksmith_ed09_forloop__size | plus: 1 %}{% endif %}{% endfor %}{% assign locksmith_ed09_forloop__index = nil -%}
+{%- comment %}</locksmith:153a>{% endcomment -%}
 {%- for link in linklists[section.settings.menu].links -%}
-  {% assign menuIndex = forloop.index %}
+  {%- comment %}<locksmith:1775>{% endcomment -%}
+    {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: link, subject_parent: linklists[section.settings.menu], variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% if locksmith_ed09_forloop__index == nil %}{% assign locksmith_ed09_forloop__index = 1 %}{% assign locksmith_ed09_forloop__index0 = 0 %}{% else %}{% assign locksmith_ed09_forloop__index = locksmith_ed09_forloop__index | plus: 1 %}{% assign locksmith_ed09_forloop__index0 = locksmith_ed09_forloop__index0 | plus: 1 %}{% endif %}{% if locksmith_ed09_forloop__index == 1 %}{% assign locksmith_ed09_forloop__first = true %}{% else %}{% assign locksmith_ed09_forloop__first = false %}{% endif %}{% if locksmith_ed09_forloop__index == locksmith_ed09_forloop__size %}{% assign locksmith_ed09_forloop__last = true %}{% else %}{% assign locksmith_ed09_forloop__last = false %}{% endif %}{% assign locksmith_ed09_forloop__rindex = locksmith_ed09_forloop__size | minus: locksmith_ed09_forloop__index | minus: 1 %}{% assign locksmith_ed09_forloop__rindex0 = locksmith_ed09_forloop__size | minus: locksmith_ed09_forloop__index0 | minus: 1 %}{% else %}{% continue %}{% endif -%}
+  {%- comment %}</locksmith:1775>{% endcomment -%}
+  {% assign menuIndex = locksmith_ed09_forloop__index %}
   {%- liquid 
     assign menuTitle = link.title | handleize
     assign blockData = ''

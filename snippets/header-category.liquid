@@ -15,6 +15,9 @@
   <div class="category-menu-bar" id="view-catalog">
     <ul class="list-unstyled category-menu">
       {% for link in linklists[section.settings.catalog_menu].links %}
+        {%- comment %}<locksmith:91a6>{% endcomment -%}
+          {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: link, subject_parent: linklists[section.settings.catalog_menu], variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% else %}{% continue %}{% endif -%}
+        {%- comment %}</locksmith:91a6>{% endcomment -%}
         {% liquid
           assign linkImage = ''
           if link.type == 'collection_link'
@@ -52,6 +55,9 @@
                 <div class="category-megamenu-box">
                   <div class="yv-listing-megamenus grid-container">
                     {%- for childlink in link.links -%}
+                      {%- comment %}<locksmith:6fbb>{% endcomment -%}
+                        {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: childlink, subject_parent: link, variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% else %}{% continue %}{% endif -%}
+                      {%- comment %}</locksmith:6fbb>{% endcomment -%}
                       <div class="yv-listing-megamenu-container">
                         <div class="yv-listing-megamenu-item">
                           <a href="{{ childlink.url }}" class="yv-listing-megamenu-title">
@@ -60,6 +66,9 @@
                           {% if childlink.links != blank %}
                             <ul class="list-unstyled">
                               {%- for grandchildlink in childlink.links -%}
+                                {%- comment %}<locksmith:e9ad>{% endcomment -%}
+                                  {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: grandchildlink, subject_parent: childlink, variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% else %}{% continue %}{% endif -%}
+                                {%- comment %}</locksmith:e9ad>{% endcomment -%}
                                 {% liquid
                                   assign grandlinkImage = ''
                                   if grandchildlink.type == 'collection_link'

@@ -15,9 +15,25 @@
         endif
       -%}
       {%- for childlink in link.links -%}
+        {%- comment %}<locksmith:0b48>{% endcomment -%}
+          {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: childlink, subject_parent: link, variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% else %}{% continue %}{% endif -%}
+        {%- comment %}</locksmith:0b48>{% endcomment -%}
         {%- liquid
           assign has_3rd_lvl = false
           for grandchildlink in childlink.links
+            comment
+              <locksmith:28b4> Code added automatically by the Locksmith app. Do not modify or remove.
+            endcomment
+            capture var
+              render 'locksmith-variables', scope: 'subject', subject: grandchildlink, subject_parent: childlink, variable: 'transparent'
+            endcapture
+            if var == "true"
+            else
+              continue
+            endif
+            comment
+              </locksmith:28b4> End Locksmith code block.
+            endcomment
             if grandchildlink
               assign has_3rd_lvl = true
             else
@@ -30,6 +46,9 @@
             <a class="menu-category-title {% if has_3rd_lvl %}has_3rd{% endif %}{% if childlink.title contains 'empty' %}empty{% endif %}" href="{{ childlink.url }}">{{ childlink.title | escape }}</a>
             <ul class="list-unstyled {% if has_3rd_lvl %}has_3rd_ul{% endif %}">
               {%- for grandchildlink in childlink.links -%}
+                {%- comment %}<locksmith:01bb>{% endcomment -%}
+                  {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: grandchildlink, subject_parent: childlink, variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% else %}{% continue %}{% endif -%}
+                {%- comment %}</locksmith:01bb>{% endcomment -%}
                 <li>
                   <a href="{{ grandchildlink.url }}" class="yv-dropdown-item-link">
                     {{- grandchildlink.title | escape -}}
@@ -45,6 +64,9 @@
         <div class="dropdown-inner-menu-item">
           <ul class="list-unstyled no-sub">
             {%- for childlink in link.links -%}
+              {%- comment %}<locksmith:80fe>{% endcomment -%}
+                {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: childlink, subject_parent: link, variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% else %}{% continue %}{% endif -%}
+              {%- comment %}</locksmith:80fe>{% endcomment -%}
               <li>
                 <a class="yv-dropdown-item-link" href="{{ childlink.url }}"
                   ><span>{{ childlink.title | escape }}</span></a
