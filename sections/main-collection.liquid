@@ -257,7 +257,13 @@
 
             <div class="row" data-collection-products>
               {% if collection.products_count > 0 %}
+                {%- comment %}<locksmith:07a3>{% endcomment -%}
+                  {%- assign locksmith_755e_forloop__size = 0 %}{% for product in collection.products %}{% capture var %}{% render 'locksmith-variables', scope: 'subject', subject: product, subject_parent: collection, variable: 'transparent' %}{% endcapture %}{% if var == 'true' %}{% assign locksmith_755e_forloop__size = locksmith_755e_forloop__size | plus: 1 %}{% endif %}{% endfor %}{% assign locksmith_755e_forloop__index = nil -%}
+                {%- comment %}</locksmith:07a3>{% endcomment -%}
                 {% for product in collection.products %}
+                  {%- comment %}<locksmith:ea59>{% endcomment -%}
+                    {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: product, subject_parent: collection, variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% if locksmith_755e_forloop__index == nil %}{% assign locksmith_755e_forloop__index = 1 %}{% assign locksmith_755e_forloop__index0 = 0 %}{% else %}{% assign locksmith_755e_forloop__index = locksmith_755e_forloop__index | plus: 1 %}{% assign locksmith_755e_forloop__index0 = locksmith_755e_forloop__index0 | plus: 1 %}{% endif %}{% if locksmith_755e_forloop__index == 1 %}{% assign locksmith_755e_forloop__first = true %}{% else %}{% assign locksmith_755e_forloop__first = false %}{% endif %}{% if locksmith_755e_forloop__index == locksmith_755e_forloop__size %}{% assign locksmith_755e_forloop__last = true %}{% else %}{% assign locksmith_755e_forloop__last = false %}{% endif %}{% assign locksmith_755e_forloop__rindex = locksmith_755e_forloop__size | minus: locksmith_755e_forloop__index | minus: 1 %}{% assign locksmith_755e_forloop__rindex0 = locksmith_755e_forloop__size | minus: locksmith_755e_forloop__index0 | minus: 1 %}{% else %}{% continue %}{% endif -%}
+                  {%- comment %}</locksmith:ea59>{% endcomment -%}
                   <div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-4" data-product-grid>
                     {%- liquid
                       if settings.enable_animation
@@ -280,7 +286,7 @@
                         assign lg_size = '12'
                      endif
                   -%}
-                  {% if forloop.index == 3 or forloop.index == 7 or forloop.index == 11 %}
+                  {% if locksmith_755e_forloop__index == 3 or locksmith_755e_forloop__index == 7 or locksmith_755e_forloop__index == 11 %}
                     {% comment %} 2 grids equivalent {% endcomment %}
                     {% comment %} <div class="col-12 col-sm-12 col-md-8 col-lg-6 col-xl-6" data-banner-grid> {% endcomment %}
                     

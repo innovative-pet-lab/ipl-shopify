@@ -250,6 +250,9 @@
         <div class="swiper">
             <div class="swiper-wrapper">
                 {% for product in featured_collection.products %}
+                {%- comment %}<locksmith:563c>{% endcomment -%}
+                  {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: product, subject_parent: featured_collection, variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% else %}{% continue %}{% endif -%}
+                {%- comment %}</locksmith:563c>{% endcomment -%}
                 <div class="swiper-slide">
                     <div class="product-card {% if product.title == 'Stress Test' %}min-height{% endif %}">
                         <img alt="" width="" height="" src="{{ product.featured_image | img_url: '800x' }}" alt="{{ product.title }}" class="product-image">

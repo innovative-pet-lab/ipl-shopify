@@ -1,6 +1,9 @@
 {% assign storeBlocks = section.blocks | where: 'type', 'store_details' %}
 {%- capture storeData -%}
   {%- for block in storeBlocks -%}
+    {%- comment %}<locksmith:692c>{% endcomment -%}
+      {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: block, variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% else %}{% continue %}{% endif -%}
+    {%- comment %}</locksmith:692c>{% endcomment -%}
     {%- if block.settings.title != blank or block.settings.details != blank or block.settings.email != blank -%}
     <li>
       <div class="store-location-icon"> 

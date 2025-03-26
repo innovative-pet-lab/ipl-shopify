@@ -161,6 +161,9 @@
         <div class="product-grid-wrapper">
           <div class="product-grid">
             {%- for product in recommendations.products limit: 3 -%}
+              {%- comment %}<locksmith:eebe>{% endcomment -%}
+                {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: product, subject_parent: recommendations, variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% else %}{% continue %}{% endif -%}
+              {%- comment %}</locksmith:eebe>{% endcomment -%}
               <div class="product-card" data-product-url="{{ product.url }}">
                 {% if product.tags contains 'Best Seller' %}
                   <div class="best-seller">Best Seller</div>

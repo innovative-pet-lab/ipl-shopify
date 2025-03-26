@@ -2,8 +2,14 @@
   <div class="tabbed-collage-container img-position-{{ section.settings.media_alignment }}">
     <div class="row">
         <div class="col-12 col-sm-12 col-md-6">
+            {%- comment %}<locksmith:a588>{% endcomment -%}
+              {%- assign locksmith_b0d5_forloop__size = 0 %}{% for block in section.blocks %}{% capture var %}{% render 'locksmith-variables', scope: 'subject', subject: block.settings.product, subject_parent: section, variable: 'transparent' %}{% endcapture %}{% if var == 'true' %}{% assign locksmith_b0d5_forloop__size = locksmith_b0d5_forloop__size | plus: 1 %}{% endif %}{% endfor %}{% assign locksmith_b0d5_forloop__index = nil -%}
+            {%- comment %}</locksmith:a588>{% endcomment -%}
             {% for block in section.blocks %}
-              <div id="blockMedia-{{ block.id }}" class="tabbed-collage-image {% if forloop.first %}active{% endif %}" {% if forloop.first %}style="display:block"{% endif %}>
+              {%- comment %}<locksmith:f261>{% endcomment -%}
+                {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: block.settings.product, subject_parent: section, variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% if locksmith_b0d5_forloop__index == nil %}{% assign locksmith_b0d5_forloop__index = 1 %}{% assign locksmith_b0d5_forloop__index0 = 0 %}{% else %}{% assign locksmith_b0d5_forloop__index = locksmith_b0d5_forloop__index | plus: 1 %}{% assign locksmith_b0d5_forloop__index0 = locksmith_b0d5_forloop__index0 | plus: 1 %}{% endif %}{% if locksmith_b0d5_forloop__index == 1 %}{% assign locksmith_b0d5_forloop__first = true %}{% else %}{% assign locksmith_b0d5_forloop__first = false %}{% endif %}{% if locksmith_b0d5_forloop__index == locksmith_b0d5_forloop__size %}{% assign locksmith_b0d5_forloop__last = true %}{% else %}{% assign locksmith_b0d5_forloop__last = false %}{% endif %}{% assign locksmith_b0d5_forloop__rindex = locksmith_b0d5_forloop__size | minus: locksmith_b0d5_forloop__index | minus: 1 %}{% assign locksmith_b0d5_forloop__rindex0 = locksmith_b0d5_forloop__size | minus: locksmith_b0d5_forloop__index0 | minus: 1 %}{% else %}{% continue %}{% endif -%}
+              {%- comment %}</locksmith:f261>{% endcomment -%}
+              <div id="blockMedia-{{ block.id }}" class="tabbed-collage-image {% if locksmith_b0d5_forloop__first %}active{% endif %}" {% if locksmith_b0d5_forloop__first %}style="display:block"{% endif %}>
                 <div class="image-wrapper">
                 {% if block.settings.video != blank %}
                   <deferred-media>
@@ -57,6 +63,9 @@
             <div class="tabbed-collage-content">
                 <div class="yv-product-accordion yv-faq-accordion">
                   {% for block in section.blocks %}
+                    {%- comment %}<locksmith:b0af>{% endcomment -%}
+                      {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: block.settings.product, subject_parent: section, variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% else %}{% continue %}{% endif -%}
+                    {%- comment %}</locksmith:b0af>{% endcomment -%}
                     {% case block.type %}
                       {% when 'media' %}
                     <div class="yv-accordion-card" {{ block.shopify_attributes }}>
@@ -147,6 +156,9 @@
     {%- endunless -%}
   }
   {% for block in section.blocks %}
+    {%- comment %}<locksmith:c7ce>{% endcomment -%}
+      {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: block.settings.product, subject_parent: section, variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% else %}{% continue %}{% endif -%}
+    {%- comment %}</locksmith:c7ce>{% endcomment -%}
     #blockMedia-{{ block.id }} .image-wrapper{
       {% if section.settings.desktop_height == 'adapt_image' %}
          {% liquid
@@ -173,6 +185,9 @@
       padding-bottom:{{ section.settings.bottom_space_mobile }}px;
     }
     {% for block in section.blocks %}
+      {%- comment %}<locksmith:f907>{% endcomment -%}
+        {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: block.settings.product, subject_parent: section, variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% else %}{% continue %}{% endif -%}
+      {%- comment %}</locksmith:f907>{% endcomment -%}
       #blockMedia-{{ block.id }} .image-wrapper{
         {% if section.settings.mobile_height == 'adapt_image' %}
            {% liquid

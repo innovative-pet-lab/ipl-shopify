@@ -66,8 +66,14 @@
         {%- if predictive_search.resources.products.size > 0 -%}
           <div id="filter-products" class="yv-tab-pane yv-search-result-list product-result {{ activeContent }}">
             <div class="row">
+              {%- comment %}<locksmith:5e13>{% endcomment -%}
+                {%- assign locksmith_8f90_forloop__size = 0 %}{%- for product in predictive_search.resources.products limit: 7 -%}{% capture var %}{% render 'locksmith-variables', scope: 'subject', subject: product, subject_parent: predictive_search.resources, variable: 'transparent' %}{% endcapture %}{% if var == 'true' %}{% assign locksmith_8f90_forloop__size = locksmith_8f90_forloop__size | plus: 1 %}{% endif %}{% endfor %}{% assign locksmith_8f90_forloop__index = nil -%}
+              {%- comment %}</locksmith:5e13>{% endcomment -%}
               {%- for product in predictive_search.resources.products limit: 7 -%}
-                {% if forloop.first %}
+                {%- comment %}<locksmith:a037>{% endcomment -%}
+                  {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: product, subject_parent: predictive_search.resources, variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% if locksmith_8f90_forloop__index == nil %}{% assign locksmith_8f90_forloop__index = 1 %}{% assign locksmith_8f90_forloop__index0 = 0 %}{% else %}{% assign locksmith_8f90_forloop__index = locksmith_8f90_forloop__index | plus: 1 %}{% assign locksmith_8f90_forloop__index0 = locksmith_8f90_forloop__index0 | plus: 1 %}{% endif %}{% if locksmith_8f90_forloop__index == 1 %}{% assign locksmith_8f90_forloop__first = true %}{% else %}{% assign locksmith_8f90_forloop__first = false %}{% endif %}{% if locksmith_8f90_forloop__index == locksmith_8f90_forloop__size %}{% assign locksmith_8f90_forloop__last = true %}{% else %}{% assign locksmith_8f90_forloop__last = false %}{% endif %}{% assign locksmith_8f90_forloop__rindex = locksmith_8f90_forloop__size | minus: locksmith_8f90_forloop__index | minus: 1 %}{% assign locksmith_8f90_forloop__rindex0 = locksmith_8f90_forloop__size | minus: locksmith_8f90_forloop__index0 | minus: 1 %}{% else %}{% continue %}{% endif -%}
+                {%- comment %}</locksmith:a037>{% endcomment -%}
+                {% if locksmith_8f90_forloop__first %}
                   <script>
                    var recentProductHandle = '{{ product.handle }}';
                   </script>

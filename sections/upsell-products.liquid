@@ -4,6 +4,19 @@
     {%- liquid
       if recommendations.products_count > 0
         for product in recommendations.products
+          comment
+            <locksmith:4427> Code added automatically by the Locksmith app. Do not modify or remove.
+          endcomment
+          capture var
+            render 'locksmith-variables', scope: 'subject', subject: product, subject_parent: recommendations, variable: 'transparent'
+          endcapture
+          if var == "true"
+          else
+            continue
+          endif
+          comment
+            </locksmith:4427> End Locksmith code block.
+          endcomment
           unless uniqueProductIdsString contains product.id
             assign mainClass = 'small-product-card'
             render 'product-grid', product: product, hideHoverImage: true, productClasses: mainClass, hide_options: true, hideRelated: true, hideQuickView: true, hidestockcount: true, hidebadges: true, hideCustomLabel:true, hidePickup:true
