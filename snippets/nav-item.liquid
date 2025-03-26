@@ -1,11 +1,11 @@
-{%- comment %}<locksmith:153a>{% endcomment -%}
-  {%- assign locksmith_ed09_forloop__size = 0 %}{%- for link in linklists[section.settings.menu].links -%}{% capture var %}{% render 'locksmith-variables', scope: 'subject', subject: link, subject_parent: linklists[section.settings.menu], variable: 'transparent' %}{% endcapture %}{% if var == 'true' %}{% assign locksmith_ed09_forloop__size = locksmith_ed09_forloop__size | plus: 1 %}{% endif %}{% endfor %}{% assign locksmith_ed09_forloop__index = nil -%}
-{%- comment %}</locksmith:153a>{% endcomment -%}
+{%- comment %}<locksmith:8625>{% endcomment -%}
+  {%- assign locksmith_2bb1_forloop__size = 0 %}{%- for link in linklists[section.settings.menu].links -%}{% capture var %}{% render 'locksmith-variables', scope: 'subject', subject: link, subject_parent: linklists[section.settings.menu], variable: 'transparent' %}{% endcapture %}{% if var == 'true' %}{% assign locksmith_2bb1_forloop__size = locksmith_2bb1_forloop__size | plus: 1 %}{% endif %}{% endfor %}{% assign locksmith_2bb1_forloop__index = nil -%}
+{%- comment %}</locksmith:8625>{% endcomment -%}
 {%- for link in linklists[section.settings.menu].links -%}
-  {%- comment %}<locksmith:1775>{% endcomment -%}
-    {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: link, subject_parent: linklists[section.settings.menu], variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% if locksmith_ed09_forloop__index == nil %}{% assign locksmith_ed09_forloop__index = 1 %}{% assign locksmith_ed09_forloop__index0 = 0 %}{% else %}{% assign locksmith_ed09_forloop__index = locksmith_ed09_forloop__index | plus: 1 %}{% assign locksmith_ed09_forloop__index0 = locksmith_ed09_forloop__index0 | plus: 1 %}{% endif %}{% if locksmith_ed09_forloop__index == 1 %}{% assign locksmith_ed09_forloop__first = true %}{% else %}{% assign locksmith_ed09_forloop__first = false %}{% endif %}{% if locksmith_ed09_forloop__index == locksmith_ed09_forloop__size %}{% assign locksmith_ed09_forloop__last = true %}{% else %}{% assign locksmith_ed09_forloop__last = false %}{% endif %}{% assign locksmith_ed09_forloop__rindex = locksmith_ed09_forloop__size | minus: locksmith_ed09_forloop__index | minus: 1 %}{% assign locksmith_ed09_forloop__rindex0 = locksmith_ed09_forloop__size | minus: locksmith_ed09_forloop__index0 | minus: 1 %}{% else %}{% continue %}{% endif -%}
-  {%- comment %}</locksmith:1775>{% endcomment -%}
-  {% assign menuIndex = locksmith_ed09_forloop__index %}
+  {%- comment %}<locksmith:1ab9>{% endcomment -%}
+    {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: link, subject_parent: linklists[section.settings.menu], variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% if locksmith_2bb1_forloop__index == nil %}{% assign locksmith_2bb1_forloop__index = 1 %}{% assign locksmith_2bb1_forloop__index0 = 0 %}{% else %}{% assign locksmith_2bb1_forloop__index = locksmith_2bb1_forloop__index | plus: 1 %}{% assign locksmith_2bb1_forloop__index0 = locksmith_2bb1_forloop__index0 | plus: 1 %}{% endif %}{% if locksmith_2bb1_forloop__index == 1 %}{% assign locksmith_2bb1_forloop__first = true %}{% else %}{% assign locksmith_2bb1_forloop__first = false %}{% endif %}{% if locksmith_2bb1_forloop__index == locksmith_2bb1_forloop__size %}{% assign locksmith_2bb1_forloop__last = true %}{% else %}{% assign locksmith_2bb1_forloop__last = false %}{% endif %}{% assign locksmith_2bb1_forloop__rindex = locksmith_2bb1_forloop__size | minus: locksmith_2bb1_forloop__index | minus: 1 %}{% assign locksmith_2bb1_forloop__rindex0 = locksmith_2bb1_forloop__size | minus: locksmith_2bb1_forloop__index0 | minus: 1 %}{% else %}{% continue %}{% endif -%}
+  {%- comment %}</locksmith:1ab9>{% endcomment -%}
+  {% assign menuIndex = locksmith_2bb1_forloop__index %}
   {%- liquid 
     assign menuTitle = link.title | handleize
     assign blockData = ''
@@ -57,6 +57,9 @@
             <a href="{{ collection.url }}" class="menu-category-title"> {{ collection.title }}</a>
             <ul class="list-unstyled yv-megamenu-product-list">              
               {%- for product in collection.products limit: 4 -%}
+              {%- comment %}<locksmith:ede2>{% endcomment -%}
+                {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: product, subject_parent: collection, variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% else %}{% continue %}{% endif -%}
+              {%- comment %}</locksmith:ede2>{% endcomment -%}
               {%- assign current_variant = product.selected_or_first_available_variant -%}
               <li class="yv-megamenu-product-box">
                 <a href="{{ product.url }}" class="yv-megamenu-product-img">                 
@@ -168,6 +171,9 @@
             <a href="{{ collection.url }}" class="yv-listing-megamenu-title">{{ collection.title }}</a>
             <ul class="list-unstyled">
               {%- for product in collection.products limit: blockData.settings.products_count -%}
+              {%- comment %}<locksmith:a62d>{% endcomment -%}
+                {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: product, subject_parent: collection, variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% else %}{% continue %}{% endif -%}
+              {%- comment %}</locksmith:a62d>{% endcomment -%}
               <li> <a href="{{ product.url }}" class="yv-megamenu-item-link">{{ product.title | strip_html }}</a></li>
               {%- endfor -%}
             </ul>

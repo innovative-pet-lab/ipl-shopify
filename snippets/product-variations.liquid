@@ -12,6 +12,9 @@
     </label>
     <ul class="list-unstyled product-variations-block-list {% if settings.color_swatch_style == 'circle' %} circle{% endif %}">
     {%- for variationProduct in block.settings.variation_products -%}
+        {%- comment %}<locksmith:ff2a>{% endcomment -%}
+          {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: variationProduct, subject_parent: block.settings, variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% else %}{% continue %}{% endif -%}
+        {%- comment %}</locksmith:ff2a>{% endcomment -%}
         <li
         class="product-variations-block-item color_option{% if variationProduct.id == product.id %} active{% endif %}"
         >

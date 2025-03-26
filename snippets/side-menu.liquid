@@ -39,9 +39,9 @@
           {%- assign itemCount = 1 -%}
           <ul class="list-unstyled navbar-nav navbar-nav-sidebar">
             {%- for link in linklists[section.settings.menu].links -%}
-              {%- comment %}<locksmith:832a>{% endcomment -%}
+              {%- comment %}<locksmith:4e69>{% endcomment -%}
                 {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: link, subject_parent: linklists[section.settings.menu], variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% else %}{% continue %}{% endif -%}
-              {%- comment %}</locksmith:832a>{% endcomment -%}
+              {%- comment %}</locksmith:4e69>{% endcomment -%}
               {%- liquid
                 assign itemCount = itemCount | plus: 1
                 assign menuTitle = link.title | handleize
@@ -65,9 +65,9 @@
     
             {%- if blockData.settings.show_submenu -%}
             {%- for childlink in link.links -%}
-            {%- comment %}<locksmith:88e5>{% endcomment -%}
+            {%- comment %}<locksmith:f3e7>{% endcomment -%}
               {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: childlink, subject_parent: link, variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% else %}{% continue %}{% endif -%}
-            {%- comment %}</locksmith:88e5>{% endcomment -%}
+            {%- comment %}</locksmith:f3e7>{% endcomment -%}
             <li class="nav-item {% if childlink.links != blank %}dropdown{% endif %} ">
               {%- unless childlink.links != blank -%}
               <a class="toggle-level" href="{{ childlink.url }}">
@@ -80,9 +80,9 @@
               <div class="inner grandchild">
                 <ul class="list-unstyled">
                   {%- for grandchildlink in childlink.links -%}
-                  {%- comment %}<locksmith:166b>{% endcomment -%}
+                  {%- comment %}<locksmith:29ca>{% endcomment -%}
                     {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: grandchildlink, subject_parent: childlink, variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% else %}{% continue %}{% endif -%}
-                  {%- comment %}</locksmith:166b>{% endcomment -%}
+                  {%- comment %}</locksmith:29ca>{% endcomment -%}
                   <li class="nav-item">
                     <a href="{{ grandchildlink.url }}">{{ grandchildlink.title | escape   }}</a>
                   </li>
@@ -128,6 +128,9 @@
                 <div class="inner-child-menu">
                   <ul class="list-unstyled yv-megamenu-product-list ">
                     {%- for product in collection.products limit: 4 -%} 
+                    {%- comment %}<locksmith:4be7>{% endcomment -%}
+                      {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: product, subject_parent: collection, variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% else %}{% continue %}{% endif -%}
+                    {%- comment %}</locksmith:4be7>{% endcomment -%} 
                     {%- assign current_variant = product.selected_or_first_available_variant -%}       
                     <li class="yv-megamenu-product-box">
                       <div class="yv-megamenu-product-img">                 
@@ -213,6 +216,9 @@
                 <div class="inner-child-menu">
                   <ul class="list-unstyled">
                     {%- for product in collection.products limit: blockData.settings.products_count -%}
+                    {%- comment %}<locksmith:67b5>{% endcomment -%}
+                      {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: product, subject_parent: collection, variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% else %}{% continue %}{% endif -%}
+                    {%- comment %}</locksmith:67b5>{% endcomment -%}
                     <li>
                       <a href="{{ product.url }}" class="yv-megamenu-item-link">{{ product.title | strip_html }}</a>
                     </li>
@@ -277,9 +283,9 @@
                         {{ menuDropdown }}
                       {% else %}
                         {%- for childlink in link.links -%}
-                          {%- comment %}<locksmith:1720>{% endcomment -%}
+                          {%- comment %}<locksmith:b3a6>{% endcomment -%}
                             {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: childlink, subject_parent: link, variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% else %}{% continue %}{% endif -%}
-                          {%- comment %}</locksmith:1720>{% endcomment -%}
+                          {%- comment %}</locksmith:b3a6>{% endcomment -%}
                           <li class="nav-item {% if childlink.links != blank %}dropdown{% endif %}">
                             {%- unless childlink.links != blank -%}
                               <a class="toggle-level" href="{{ childlink.url }}">
@@ -297,9 +303,9 @@
                               <div class="inner grandchild">
                                 <ul class="list-unstyled">
                                   {%- for grandchildlink in childlink.links -%}
-                                    {%- comment %}<locksmith:638a>{% endcomment -%}
+                                    {%- comment %}<locksmith:fb79>{% endcomment -%}
                                       {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: grandchildlink, subject_parent: childlink, variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% else %}{% continue %}{% endif -%}
-                                    {%- comment %}</locksmith:638a>{% endcomment -%}
+                                    {%- comment %}</locksmith:fb79>{% endcomment -%}
                                     <li class="nav-item">
                                       <a href="{{ grandchildlink.url }}">
                                         {{- grandchildlink.title | split: '{badge' | first | escape -}}
@@ -343,9 +349,9 @@
       >
         <ul class="list-unstyled navbar-nav navbar-nav-sidebar">
           {%- for link in linklists[section.settings.catalog_menu].links -%}
-          {%- comment %}<locksmith:5235>{% endcomment -%}
+          {%- comment %}<locksmith:0e41>{% endcomment -%}
             {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: link, subject_parent: linklists[section.settings.catalog_menu], variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% else %}{% continue %}{% endif -%}
-          {%- comment %}</locksmith:5235>{% endcomment -%}
+          {%- comment %}</locksmith:0e41>{% endcomment -%}
           {% assign menuTitle = link.title | handleize  %} 
           {% capture menubadge %}
             {%  for block in section.blocks %}
@@ -377,9 +383,9 @@
               <div class="inner child">
                 <ul class="list-unstyled">
                   {%- for childlink in link.links -%}
-                    {%- comment %}<locksmith:0e1b>{% endcomment -%}
+                    {%- comment %}<locksmith:0d91>{% endcomment -%}
                       {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: childlink, subject_parent: link, variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% else %}{% continue %}{% endif -%}
-                    {%- comment %}</locksmith:0e1b>{% endcomment -%}
+                    {%- comment %}</locksmith:0d91>{% endcomment -%}
                     <li class="nav-item {% if childlink.links != blank %}dropdown{% endif %}">
                       {%- unless childlink.links != blank -%}
                         <a class="toggle-level" href="{{ childlink.url }}"> {{ childlink.title | escape }}</a>
@@ -392,9 +398,9 @@
                         <div class="inner grandchild">
                           <ul class="list-unstyled">
                             {%- for grandchildlink in childlink.links -%}
-                              {%- comment %}<locksmith:d110>{% endcomment -%}
+                              {%- comment %}<locksmith:1ebc>{% endcomment -%}
                                 {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: grandchildlink, subject_parent: childlink, variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% else %}{% continue %}{% endif -%}
-                              {%- comment %}</locksmith:d110>{% endcomment -%}
+                              {%- comment %}</locksmith:1ebc>{% endcomment -%}
                               {% liquid
                                 assign grand_link_image = ''
                                 if grandchildlink.type == 'collection_link'
