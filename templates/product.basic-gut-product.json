@@ -757,6 +757,24 @@
         "top_space_mobile": 30,
         "bottom_space_mobile": 30
       }
+    },
+    "1743435490cadd0e86": {
+      "type": "apps",
+      "blocks": {
+        "judge_me_reviews_review_widget_mW7CHT": {
+          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_review_widget_mW7CHT"
+      ],
+      "settings": {
+        "top_space_desktop": 30,
+        "bottom_space_desktop": 30,
+        "top_space_mobile": 30,
+        "bottom_space_mobile": 30
+      }
     }
   },
   "order": [
@@ -774,6 +792,7 @@
     "product_recommendations",
     "ipl_product_benefits_7BYcdt",
     "8c17cb82-109c-4b83-968b-5a4214762d42",
+    "1743435490cadd0e86",
     "product_recommendations_3MtqYb",
     "166133727946ffaeaa"
   ]
