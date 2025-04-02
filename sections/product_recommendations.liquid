@@ -161,9 +161,7 @@
         <div class="product-grid-wrapper">
           <div class="product-grid">
             {%- for product in recommendations.products limit: 3 -%}
-              {%- comment %}<locksmith:eebe>{% endcomment -%}
                 {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: product, subject_parent: recommendations, variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% else %}{% continue %}{% endif -%}
-              {%- comment %}</locksmith:eebe>{% endcomment -%}
               <div class="product-card" data-product-url="{{ product.url }}">
                 {% if product.tags contains 'Best Seller' %}
                   <div class="best-seller">Best Seller</div>
@@ -173,9 +171,24 @@
                 </div>
                 <h2 class="product-title">{{ product.title }}</h2>
                 <p class="reco-tags">
-                  {% if product.tags.size > 0 %}
-                    For {{ product.tags | join: ' and ' }}
+                  {% assign allowed_tags = "Cats,Dogs" | split: "," %}
+                  {% assign product_tags = product.tags | uniq %}
+
+                  {% assign filtered_tags = "" %}
+                  {% for tag in product_tags %}
+                    {% if tag != "Best Seller" and allowed_tags contains tag %}
+                      {% if filtered_tags == "" %}
+                        {% assign filtered_tags = tag %}
+                      {% else %}
+                        {% assign filtered_tags = filtered_tags | append: " and " | append: tag %}
+                      {% endif %}
+                    {% endif %}
+                  {% endfor %}
+
+                  {% if filtered_tags != "" %}
+                    For {{ filtered_tags }}
                   {% endif %}
+                  
                 </p>
                 <p class="price">{{ product.price | money }}</p>
                 <button data-id="{{ product.selected_or_first_available_variant.id }}" class="add-to-cart">

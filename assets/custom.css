@@ -470,6 +470,8 @@
     display: flex;
     gap: 12px;
     font-weight: 700;
+    text-transform: capitalize!important;
+    font-size: 18px;
 }
 .pdp-flex .add_to_cart.button:hover svg path {
     fill: #26286E;
