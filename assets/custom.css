@@ -762,6 +762,7 @@ header .side-menu .inner-side ul li .list-menu__item {
     justify-content: space-between;
     align-items: center;
 }
+
 .side-menu .inner-side ul li .list-menu__item, .side-menu .inner-side ul li .toggle-level, .side-menu .social-links ul li a {
     padding-right: 0!important;
 }
@@ -774,6 +775,9 @@ header .side-menu .inner-side ul li .list-menu__item {
 .side-menu .inner-side ul li.dropdown>.toggle-level svg {
     transition: transform 0.3s ease-in-out;
     margin-right: 6px;
+}
+.side-menu .inner-side ul li .toggle-level.empty {
+    display: none;
 }
 .side-menu .inner-side ul li.dropdown>.toggle-level.open-menu-drop svg {
     transform: rotate(90deg);
