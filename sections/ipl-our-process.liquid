@@ -143,21 +143,30 @@
                 {% endif %}
                 <div class="process-grid">
                     {% for block in section.blocks %}
-                    <div class="process-item">
-                        {% if block.settings.icon %}
-                        <div class="icon-container">
-                           {{ block.settings.icon }}
-                        </div>
-                        {% endif %}
-                        <div class="process-info">
-                            {% if block.settings.heading %}
-                            <h3>{{ block.settings.heading }}</h3>
+                        <div class="process-item">
+                            {% if block.settings.image_icon %}
+                                {% if block.settings.image_icon %}
+                                    <div class="icon-container">
+                                    <img src="{{ block.settings.image_icon | image_url }}" width="" height="" alt="{{ heading_text }}">
+                                    </div>
+                                {% endif %}
+                            {% else %}
+                                {% if block.settings.icon %}
+                                    <div class="icon-container">
+                                    {{ block.settings.icon }}
+                                    </div>
+                                {% endif %}
                             {% endif %}
-                            {% if block.settings.text %}
-                            <p>{{ block.settings.text }}</p>
-                            {% endif %}
+
+                            <div class="process-info">
+                                {% if block.settings.heading %}
+                                <h3>{{ block.settings.heading }}</h3>
+                                {% endif %}
+                                {% if block.settings.text %}
+                                <p>{{ block.settings.text }}</p>
+                                {% endif %}
+                            </div>
                         </div>
-                    </div>
                     {% endfor %}
                 </div>
             </div>
@@ -184,6 +193,11 @@
           "type": "textarea",
           "id": "icon",
           "label": "Icon"
+        },
+        {
+            "type": "image_picker",
+            "id": "image_icon",
+            "label": "Image Icon"
         },
         {
             "type": "text",
