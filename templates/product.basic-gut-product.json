@@ -128,16 +128,8 @@
     },
     "1742979229e438f211": {
       "type": "apps",
-      "blocks": {
-        "eb_easy_bundle_builder_app_block_mix_and_match_bundle_GrTbPL": {
-          "type": "shopify://apps/eb-easy-bundle-builder/blocks/app-block-mixAndMatchBundle/05b1325c-6303-4da5-8e2f-b13ab2a50e1a",
-          "settings": {}
-        }
-      },
-      "block_order": [
-        "eb_easy_bundle_builder_app_block_mix_and_match_bundle_GrTbPL"
-      ],
       "settings": {
+        "app_id": "",
         "top_space_desktop": 30,
         "bottom_space_desktop": 30,
         "top_space_mobile": 30,
@@ -684,6 +676,26 @@
         "bottom_space_mobile": 0
       }
     },
+    "1743435490cadd0e86": {
+      "type": "apps",
+      "blocks": {
+        "judge_me_reviews_review_widget_mW7CHT": {
+          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_review_widget_mW7CHT"
+      ],
+      "custom_css": [],
+      "settings": {
+        "app_id": "",
+        "top_space_desktop": 30,
+        "bottom_space_desktop": 30,
+        "top_space_mobile": 30,
+        "bottom_space_mobile": 30
+      }
+    },
     "product_recommendations_3MtqYb": {
       "type": "product_recommendations",
       "settings": {
@@ -754,24 +766,6 @@
         "section_visibility": "always",
         "top_space_desktop": 25,
         "bottom_space_desktop": 25,
-        "top_space_mobile": 30,
-        "bottom_space_mobile": 30
-      }
-    },
-    "1743435490cadd0e86": {
-      "type": "apps",
-      "blocks": {
-        "judge_me_reviews_review_widget_mW7CHT": {
-          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "settings": {}
-        }
-      },
-      "block_order": [
-        "judge_me_reviews_review_widget_mW7CHT"
-      ],
-      "settings": {
-        "top_space_desktop": 30,
-        "bottom_space_desktop": 30,
         "top_space_mobile": 30,
         "bottom_space_mobile": 30
       }
