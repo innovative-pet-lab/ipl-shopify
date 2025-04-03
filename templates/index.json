@@ -65,7 +65,7 @@
       ],
       "custom_css": [],
       "settings": {
-        "app_id": "",
+        "app_id": "quiz",
         "top_space_desktop": 0,
         "bottom_space_desktop": 30,
         "top_space_mobile": 30,
