@@ -56,7 +56,7 @@
             "width-ppf": "100%",
             "min-height-ppf": "500px",
             "max-height-ppf": "",
-            "no-scroll-ppf": false
+            "no-scroll-ppf": true
           }
         }
       },
