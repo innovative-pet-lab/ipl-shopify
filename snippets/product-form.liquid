@@ -16,10 +16,24 @@
             {% unless mainProduct %}</a>{% endunless %}
           </{{ block.settings.seo_heading }}>
           {% if product.tags.size > 0 %}
-            <p class="product-tags">For
-              {% for tag in product.tags %}
-                <span class="product-tag">{{ tag }}</span>{% unless forloop.last %} and {% endunless %}
-              {% endfor %}
+            {% assign allowed_tags = "Cats,Dogs" | split: "," %}
+                  {% assign product_tags = product.tags | uniq %}
+
+                  {% assign filtered_tags = "" %}
+                  {% for tag in product_tags %}
+                    {% if tag != "Best Seller" and allowed_tags contains tag %}
+                      {% if filtered_tags == "" %}
+                        {% assign filtered_tags = tag %}
+                      {% else %}
+                        {% assign filtered_tags = filtered_tags | append: " and " | append: tag %}
+                      {% endif %}
+                    {% endif %}
+                  {% endfor %}
+
+            <p class="product-tags">
+              {% if filtered_tags != "" %}
+                For {{ filtered_tags }}
+              {% endif %}
             </p>
           {% endif %}
         {%- when 'review-star' -%}
