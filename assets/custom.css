@@ -563,6 +563,7 @@
 
     .product-gallery__wrapper {
         padding: unset;
+        width: 100%;
     }
 
     .product-gallery__thumbnails {
