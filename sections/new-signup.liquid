@@ -66,7 +66,7 @@
               <div class="field form-group">
                 <label for="signUpForm-ProfileType">Profile Type</label>
                 <select class="form-control" id="signUpForm-ProfileType" name="customer[tags]">
-                  <option value="">Select Profile Type</option>
+                  <option value="">Select Account Type</option>
                   <option value="wholesale-a">Wholesale A</option>
                   <option value="wholesale-b">Wholesale B</option>
                   <option value="practitioner">Practitioner</option>
@@ -95,17 +95,14 @@
   document.addEventListener("DOMContentLoaded", function () {
     const form = document.querySelector("form");
     const profileTypeSelect = document.getElementById("signUpForm-ProfileType");
-    const purchaseSourceSelect = document.getElementById("signUpForm-PurchaseSource");
     const customerTagsInput = document.getElementById("customerTags");
   
     form.addEventListener("submit", function (event) {
       // Ensure Shopify receives the tags
       const profileType = profileTypeSelect.value;
-      const purchaseSource = purchaseSourceSelect.value;
   
       const tags = [];
-      if (profileType) tags.push(`Profile Type: ${profileType}`);
-      if (purchaseSource) tags.push(`Purchase Source: ${purchaseSource}`);
+      if (profileType) tags.push(`${profileType}`);
   
       // Assign tags to the hidden input before submission
       customerTagsInput.value = tags.join(", ");
