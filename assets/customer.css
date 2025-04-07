@@ -438,7 +438,7 @@ td.product-order-img-wrapper {
 @media (max-width:1440px) {
     .yv-login-form {
         min-height: 600px;
-        max-width: 470px;
+        max-width: 800px;
         padding: 50px 50px 60px
     }
     .address-side-drawer-body {

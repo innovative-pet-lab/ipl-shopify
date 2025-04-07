@@ -3,7 +3,7 @@
   <div class="container">
     <div class="yv-customer-pages register"> 
       <div class="row">
-        <div class="col-12 col-sm-12 col-md-7 col-lg-6">
+        <div class="col-12 col-sm-12">
           <div class="left-side-content">
             <div class="yv-login-form yv-register-form" id="registerForm">
               <h3 class="form-title" tabindex="-1">
@@ -35,31 +35,7 @@
                     <input type="password" class="form-control" name="customer[password]" id="signUpForm-password" required>
                   </div>
                 
-                  <!-- Profile Type Selection (Now Using customer[tags]) -->
-                  <div class="field form-group">
-                    <label for="signUpForm-ProfileType">Profile Type</label>
-                    <select class="form-control" id="signUpForm-ProfileType" name="customer[tags]">
-                      <option value="">Select Profile Type</option>
-                      <option value="VIP">VIP</option>
-                      <option value="Wholesaler">Wholesaler</option>
-                      <option value="Distributor">Distributor</option>
-                    </select>
-                  </div>
-                
-                  <!-- Where did you purchase our item? (Adding as a tag) -->
-                  <div class="field form-group">
-                    <label for="signUpForm-PurchaseSource">Where did you purchase our item?</label>
-                    <select class="form-control" id="signUpForm-PurchaseSource" name="customer[tags]">
-                      <option value="">Select Source</option>
-                      <option value="IPL Website">IPL Website</option>
-                      <option value="Amazon">Amazon</option>
-                      <option value="Chewy">Chewy</option>
-                      <option value="Retailer">Retailer</option>
-                      <option value="IPL Partner">IPL Partner</option>
-                      <option value="Other">Other</option>
-                    </select>
-                  </div>
-                
+        
                   <button type="submit" class="button black-btn btn-block">
                     Submit
                   </button>
@@ -86,31 +62,20 @@
                 <input type="password" class="form-control" name="customer[password]" id="signUpForm-password" required>
               </div>
 
-              <!-- Profile Type Selection -->
+              <!-- Profile Type Selection (Now Using customer[tags]) -->
               <div class="field form-group">
                 <label for="signUpForm-ProfileType">Profile Type</label>
-                <select class="form-control" id="signUpForm-ProfileType" name="customer[note][profile_type]">
-                  <option value="Regular">Regular</option>
-                  <option value="VIP">VIP</option>
-                  <option value="Wholesaler">Wholesaler</option>
-                  <option value="Distributor">Distributor</option>
-                  <option value="Consumer">Consumer</option>
+                <select class="form-control" id="signUpForm-ProfileType" name="customer[tags]">
+                  <option value="">Select Profile Type</option>
+                  <option value="wholesale-a">Wholesale A</option>
+                  <option value="wholesale-b">Wholesale B</option>
+                  <option value="practitioner">Practitioner</option>
+                  <option value="clinical">Clinical trial / Research</option>
+                  <option value="distributor">Distributor</option>
+                  <option value="customer">Customer</option>
                 </select>
               </div>
-
-              <!-- Where did you purchase our item? -->
-              <div class="field form-group">
-                <label for="signUpForm-PurchaseSource">Where did you purchase our item?</label>
-                <select class="form-control" id="signUpForm-PurchaseSource" name="customer[note][purchase_source]">
-                  <option value="IPL Website">IPL Website</option>
-                  <option value="Amazon">Amazon</option>
-                  <option value="Chewy">Chewy</option>
-                  <option value="Retailer">Retailer - Please list</option>
-                  <option value="IPL Partner">IPL Partner</option>
-                  <option value="Other">Other</option>
-                </select>
-              </div>
-
+                            
               <!-- Hidden input for customer tags -->
               <input type="hidden" id="customerTags" name="customer[tags]">
 
