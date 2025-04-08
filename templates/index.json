@@ -179,13 +179,21 @@
             "quote": "My dog Nash has struggled with skin allergies since i got him and it took forever to figure out something that worked for him. He’s been on his current diet for a little over 3 months and i started to notice a difference but that’s when i decided to do an Innovative pet lab test. The results were so fast and it was so easy to do. When i got the results back it made me feel so great that the diet was working. It confirmed everything! He came back normal for all the tests they run!",
             "author": "Jinx & Nash"
           }
+        },
+        "testi_block_WBeXDX": {
+          "type": "testi-block",
+          "settings": {
+            "quote": "We are so excited that IPL is available to pups like us! Our mom is obsessed with our gut health and now we have a way to know the reason for itchy skin and poops that are not easy to pick up at times. Mom uses IPL to make the necessary dietary adjustments to our food and treats, and we love easy potty time and scratch-free, happy life.\nWe woof IPL!",
+            "author": "Axel, Zeppelin and Aspen"
+          }
         }
       },
       "block_order": [
         "testi_block_3XEmq9",
         "testi_block_nafVMq",
         "testi_block_zgUqh3",
-        "testi_block_DwcgVi"
+        "testi_block_DwcgVi",
+        "testi_block_WBeXDX"
       ],
       "settings": {
         "heading_text": "Happy Customers"
