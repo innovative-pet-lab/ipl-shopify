@@ -172,12 +172,20 @@
             "quote": "Innovative Pet Lab has completely transformed my dog’s health! Their gut health test gave me clear insights, and their supplements made a huge difference. My pup’s energy is up, his coat is shinier, and his digestion has never been better. Highly recommended!”",
             "author": "— Jessica M., Proud Dog Mom"
           }
+        },
+        "testi_block_DwcgVi": {
+          "type": "testi-block",
+          "settings": {
+            "quote": "My dog Nash has struggled with skin allergies since i got him and it took forever to figure out something that worked for him. He’s been on his current diet for a little over 3 months and i started to notice a difference but that’s when i decided to do an Innovative pet lab test. The results were so fast and it was so easy to do. When i got the results back it made me feel so great that the diet was working. It confirmed everything! He came back normal for all the tests they run!",
+            "author": "Jinx & Nash"
+          }
         }
       },
       "block_order": [
         "testi_block_3XEmq9",
         "testi_block_nafVMq",
-        "testi_block_zgUqh3"
+        "testi_block_zgUqh3",
+        "testi_block_DwcgVi"
       ],
       "settings": {
         "heading_text": "Happy Customers"
