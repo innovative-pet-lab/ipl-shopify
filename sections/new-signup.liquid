@@ -65,7 +65,8 @@
               <!-- Profile Type Selection (Now Using customer[tags]) -->
               <div class="field form-group">
                 <label for="signUpForm-ProfileType">Profile Type</label>
-                <select class="form-control" id="signUpForm-ProfileType" name="customer[tags]">
+                <!-- Remove name from select -->
+                <select class="form-control" id="signUpForm-ProfileType">
                   <option value="">Select Account Type</option>
                   <option value="wholesale-a">Wholesale A</option>
                   <option value="wholesale-b">Wholesale B</option>
@@ -77,8 +78,8 @@
               </div>
                             
               <!-- Hidden input for customer tags -->
-              <input type="hidden" id="customerTags" name="customer[tags]">
-
+              <input type="hidden" id="customerTags" name="customer[tags]"> 
+              <input type="hidden" id="customerNote" name="customer[note]"> 
               <button type="submit" class="button black-btn btn-block" id="registerSubmit">
                 {{ 'customer.register.submit' | t }}
               </button>
@@ -96,16 +97,15 @@
     const form = document.querySelector("form");
     const profileTypeSelect = document.getElementById("signUpForm-ProfileType");
     const customerTagsInput = document.getElementById("customerTags");
-  
+    const customerNoteInput = document.getElementById("customerNote");
+
     form.addEventListener("submit", function (event) {
-      // Ensure Shopify receives the tags
       const profileType = profileTypeSelect.value;
-  
-      const tags = [];
-      if (profileType) tags.push(`${profileType}`);
-  
-      // Assign tags to the hidden input before submission
-      customerTagsInput.value = tags.join(", ");
+
+      if (profileType) {
+        customerTagsInput.value = `${profileType}`;
+        customerNoteInput.value = `${profileType}`;
+      }
     });
   });
 </script>
