@@ -62,14 +62,20 @@
                 <input type="password" class="form-control" name="customer[password]" id="signUpForm-password" required>
               </div>
 
+              <div class="field form-group">
+                <label for="signUpForm-Subscribe">
+                  Subscribe to marketing <!-- Translation key for "Subscribe to marketing" -->
+                </label>
+                <input type="checkbox" class="form-control" name="customer[accepts_marketing]" id="signUpForm-Subscribe" checked>
+              </div>
+
               <!-- Profile Type Selection (Now Using customer[tags]) -->
               <div class="field form-group">
                 <label for="signUpForm-ProfileType">Profile Type</label>
                 <!-- Remove name from select -->
                 <select class="form-control" id="signUpForm-ProfileType">
                   <option value="">Select Account Type</option>
-                  <option value="wholesale-a">Wholesale A</option>
-                  <option value="wholesale-b">Wholesale B</option>
+                  <option value="wholesale">Wholesale</option>
                   <option value="practitioner">Practitioner</option>
                   <option value="clinical">Clinical trial / Research</option>
                   <option value="distributor">Distributor</option>
@@ -99,13 +105,27 @@
     const customerTagsInput = document.getElementById("customerTags");
     const customerNoteInput = document.getElementById("customerNote");
 
+    const subscribeCheckbox = document.getElementById("signUpForm-Subscribe");
+
+
     form.addEventListener("submit", function (event) {
       const profileType = profileTypeSelect.value;
+      const isSubscribed = subscribeCheckbox.checked;
+
 
       if (profileType) {
         customerTagsInput.value = `${profileType}`;
         customerNoteInput.value = `${profileType}`;
       }
+
+      // Set the customer's subscription status
+      const customerAcceptsMarketingInput = document.createElement("input");
+      customerAcceptsMarketingInput.type = "hidden";
+      customerAcceptsMarketingInput.name = "customer[accepts_marketing]";
+      customerAcceptsMarketingInput.value = isSubscribed ? "true" : "false"; // Ensure it's 'true' or 'false'
+      
+      form.appendChild(customerAcceptsMarketingInput);
+
     });
   });
 </script>
