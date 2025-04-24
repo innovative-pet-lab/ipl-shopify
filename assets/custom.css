@@ -449,12 +449,6 @@
     transform: rotate(180deg);
 }
 
-/* .product-section .yv-accordion-header svg {
-    min-width: 19px!important;
-    max-width: 19px!important;
-    height: 19px!important;
-} */
-
 .pdp-flex {
     display: flex;
     justify-content: flex-start;
@@ -860,11 +854,3 @@ header .side-menu .inner-side ul li .list-menu__item {
     color: #3333;
     margin-bottom: 1rem;
 }
-
-/* quiz */
-/* @media (max-width: 575px) {
-    #shopify-section-template--19014554616034__174290200416010cd9.shopify-section {
-        max-height: 300px!important;
-    }
-} */
-

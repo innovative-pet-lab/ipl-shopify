@@ -53,13 +53,11 @@
                       </h6>
                     {%- endif -%}
                     {%- if block.settings.menu != blank -%}
-                      <ul class="list-unstyled">
+                      <ul class="footer-list list-unstyled ">
                         {%- for link in block.settings.menu.links -%}
-                          {%- comment %}<locksmith:7684>{% endcomment -%}
-                            {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: link, subject_parent: block.settings.menu, variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% else %}{% continue %}{% endif -%}
-                          {%- comment %}</locksmith:7684>{% endcomment -%}
                           <li>
-                            <a href="{{ link.url }}">{{ link.title | split: '{' | first }}</a>
+                            <a id="{% if link.title contains 'Wholesale' %}wholesale{% elsif link.title contains 'Practitioner'%}practitioner{% elsif link.title contains 'Clinical'%}clinical{% elsif link.title contains 'Distributor'%}distributor{% endif %}" 
+                               href="{{ link.url }}">{{ link.title | split: '{' | first }}</a>
                           </li>
                         {%- endfor -%}
                       </ul>
@@ -426,6 +424,24 @@
     }
     {% endif %}
 </style>
+<script>
+  // 1. When a link is clicked, save its ID to localStorage
+document.querySelectorAll('.footer-list li a').forEach(anchor => {
+  anchor.addEventListener('click', function() {
+    localStorage.setItem('selectedProfileType', this.id);
+  });
+});
+
+// 2. On page load, prefill the select if a matching value exists
+window.addEventListener('DOMContentLoaded', () => {
+  const savedProfileType = localStorage.getItem('selectedProfileType');
+  const selectField = document.getElementById('signUpForm-ProfileType');
+
+  if (savedProfileType) {
+    selectField.value = savedProfileType;
+  }
+});
+</script>
 {% schema %}
 {
   "name": "t:sections.footer.name",
