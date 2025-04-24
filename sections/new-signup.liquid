@@ -1,4 +1,57 @@
 {{ 'customer.css' | asset_url | stylesheet_tag }}
+<style>
+  .checkbox-group {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+    
+  }
+  .checkbox-group label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: normal;
+    white-space: nowrap;
+    font-size: 14px;
+  }
+  .form-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .form-row .form-group {
+    flex: 1 1 calc(50% - 10px); 
+    min-width: 250px;
+  }
+  
+  @media (max-width: 768px) {
+    .form-row .form-group {
+      flex: 1 1 100%; 
+    }
+  }
+
+  .radio-group {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .radio-group label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    flex: 1 1 45%;
+    font-size: 14px;
+  }
+  
+  @media (max-width: 768px) {
+    .radio-group label {
+      flex: 1 1 100%;
+    }
+  }
+
+
+</style>
 <section class="account-pages-section">
   <div class="container">
     <div class="yv-customer-pages register"> 
@@ -6,10 +59,10 @@
         <div class="col-12 col-sm-12">
           <div class="left-side-content">
             <div class="yv-login-form yv-register-form" id="registerForm">
-              <h3 class="form-title" tabindex="-1">
+              {% comment %} <h3 class="form-title" tabindex="-1">
                 {{ 'customer.register.title' | t }}
               </h3> 
-              <p>{{ 'customer.register.subtext' | t }}</p>
+              <p>{{ 'customer.register.subtext' | t }}</p> {% endcomment %}
               {%- form 'create_customer', novalidate: 'novalidate' -%}
 
               {%- if form.errors -%}
@@ -42,44 +95,113 @@
                 {%- endform -%}
               {%- endif -%}
 
-              <div class="field form-group">   
-                <label for="signUpForm-FirstName">{{ 'customer.register.first_name' | t }}</label>   
-                <input type="text" class="form-control" name="customer[first_name]" id="signUpForm-FirstName" required>
+              <div class="form-row">
+                <div class="field form-group">
+                  <label for="signUpForm-FirstName">{{ 'customer.register.first_name' | t }}</label>
+                  <input type="text" class="form-control" name="customer[first_name]" id="signUpForm-FirstName" required>
+                </div>
+              
+                <div class="field form-group">
+                  <label for="signUpForm-LastName">{{ 'customer.register.last_name' | t }}</label>
+                  <input type="text" class="form-control" name="customer[last_name]" id="signUpForm-LastName" required>
+                </div>
+              
+                <div class="field form-group">
+                  <label for="signUpForm-email">{{ 'customer.register.email' | t }}</label>
+                  <input type="email" class="form-control" name="customer[email]" id="signUpForm-email" required>
+                </div>
+              
+                <div class="field form-group">
+                  <label for="signUpForm-password">{{ 'customer.register.password' | t }}</label>
+                  <input type="password" class="form-control" name="customer[password]" id="signUpForm-password" required>
+                </div>
+
+                <div class="field form-group">
+                  <label for="signUpForm-ProfileType">Profile Type</label>
+                  <select class="form-control" id="signUpForm-ProfileType">
+                    <option value="">Select Account Type</option>
+                    <option value="wholesale">Wholesale</option>
+                    <option value="practitioner">Practitioner</option>
+                    <option value="clinical">Clinical trial / Research</option>
+                    <option value="distributor">Distributor</option>
+                    <option value="customer">Customer</option>
+                  </select>
+                </div>
+
+                <div class="field form-group">
+                  <label for="signUpForm-password">Phone</label>
+                  <input type="text" class="form-control" name="customer[phone]" required>
+                </div>
               </div>
 
-              <div class="field form-group">
-                <label for="signUpForm-LastName">{{ 'customer.register.last_name' | t }}</label>
-                <input type="text" class="form-control" name="customer[last_name]" id="signUpForm-LastName" required>
-              </div>
+              <div class="field form-group" id="clinicalFields" style="display: none;">
+                <label>Type of Organization:</label>
+                <div class="radio-group">
+                  <label><input type="radio" name="customer[note][org_type]" value="Veterinary Clinic" class="org-type"> Veterinary Clinic</label>
+                  <label><input type="radio" name="customer[note][org_type]" value="Research Institution" class="org-type"> Research Institution</label>
+                  <label><input type="radio" name="customer[note][org_type]" value="Pet Nutrition / Food" class="org-type"> Pet Nutrition / Food</label>
+                  <label><input type="radio" name="customer[note][org_type]" value="Pet Brand/Product Company" class="org-type"> Pet Brand/Product Company</label>
+                  <label><input type="radio" name="customer[note][org_type]" value="Supplement Company" class="org-type"> Supplement Company</label>
+                </div>
+                <div class="form-group" style="width:49%">
+                  <label for="orgOther" style="font-size:14px">Other:</label>
+                  <input type="text" class="form-control" id="orgOther" placeholder="Specify other organization type">
+                </div>
+                <div class="form-group">
+                  <label>Which areas are you interested in studying? (Check all that apply)</label><br>
+                  <div class="checkbox-group">
+                    <label><input type="checkbox" name="customer[note][interest][]" value="supplements"> Supplements</label>
+                    <label><input type="checkbox" name="customer[note][interest][]" value="nutrition"> Nutrition</label>
+                    <label><input type="checkbox" name="customer[note][interest][]" value="behavior"> Behavior and/or stress</label>
+                    <label style="width:49%">
+                      <input type="checkbox" name="customer[note][interest][]" value="other"> Other:
+                      <input type="text" class="form-control mt-1" name="customer[note][interest_other]" placeholder="Please specify">
+                    </label>
+                  </div>
+                </div>
+              
+                <div class="form-group">
+                  <label>Do you have an existing protocol or would you like support designing one?</label><br>
+                  <div class="checkbox-group">
+                    <label><input type="checkbox" name="customer[note][protocol_status][]" value="have"> I have a protocol</label>
+                    <label><input type="checkbox" name="customer[note][protocol_status][]" value="need-help"> I’d like help creating one</label>
+                    <label><input type="checkbox" name="customer[note][protocol_status][]" value="unsure"> Not sure yet</label>
+                  </div>
+                </div>
+              
+                <div class="form-row">
+                  <div class="field form-group">
+                    <label for="speciesInterest">Species of interest in studying</label>
+                    <input type="text" class="form-control" id="speciesInterest" name="customer[note][species_interest]">
+                  </div>
+              
+                  <div class="field form-group">
+                    <label for="petsEnrolled">Estimated number of pets to enroll</label>
+                    <input type="text" class="form-control" id="petsEnrolled" name="customer[note][pets_enrolled]">
+                  </div>
+              
+                  <div class="field form-group">
+                    <label for="startDate">Timeline or ideal start date</label>
+                    <input type="text" class="form-control" id="startDate" name="customer[note][start_date]">
+                  </div>
+                </div>
 
-              <div class="field form-group">  
-                <label for="signUpForm-email">{{ 'customer.register.email' | t }}</label>    
-                <input type="email" class="form-control" name="customer[email]" id="signUpForm-email" required>
               </div>
-
-              <div class="field form-group"> 
-                <label for="signUpForm-password">{{ 'customer.register.password' | t }}</label>    
-                <input type="password" class="form-control" name="customer[password]" id="signUpForm-password" required>
-              </div>
-
-              <!-- Profile Type Selection (Now Using customer[tags]) -->
-              <div class="field form-group">
-                <label for="signUpForm-ProfileType">Profile Type</label>
-                <!-- Remove name from select -->
-                <select class="form-control" id="signUpForm-ProfileType">
-                  <option value="">Select Account Type</option>
-                  <option value="wholesale">Wholesale</option>
-                  <option value="practitioner">Practitioner</option>
-                  <option value="clinical">Clinical trial / Research</option>
-                  <option value="distributor">Distributor</option>
-                  <option value="customer">Customer</option>
-                </select>
-              </div>
-                            
+              
               <!-- Hidden input for customer tags -->
               <input type="hidden" id="customerTags" name="customer[tags]"> 
               <input type="hidden" id="customerNote" name="customer[note]"> 
-              <button type="submit" class="button black-btn btn-block" id="registerSubmit">
+
+              <input type="hidden" id="customerProfileType" name="customer[metafields][clinical][profile_type]">
+              <input type="hidden" id="customerOrgTypes" name="customer[metafields][clinical][org_types]">
+              <input type="hidden" id="customerInterests" name="customer[metafields][clinical][interests_areas]">
+              <input type="hidden" id="customerProtocolStatus" name="customer[metafields][clinical][protocol_status]">
+              <input type="hidden" id="customerSpeciesInterest" name="customer[metafields][clinical][species_interest]">
+              <input type="hidden" id="customerPetsEnrolled" name="customer[metafields][clinical][pets_enrolled]">
+              <input type="hidden" id="customerStartDate" name="customer[metafields][clinical][start_date]">
+
+
+              <button type="submit" class="button black-btn btn-block" id="registerSubmit" style="width:49%;margin-top:1rem;height:60px">
                 {{ 'customer.register.submit' | t }}
               </button>
               {%- endform -%}
@@ -91,12 +213,21 @@
   </div>
 </section>
 
-<script>
+{% comment %} <script>
   document.addEventListener("DOMContentLoaded", function () {
     const form = document.querySelector("form");
     const profileTypeSelect = document.getElementById("signUpForm-ProfileType");
     const customerTagsInput = document.getElementById("customerTags");
     const customerNoteInput = document.getElementById("customerNote");
+
+    const clinicalFields = document.getElementById("clinicalFields");
+
+    const profileType = document.getElementById("signUpForm-ProfileType");
+    const noteField = document.getElementById("customerNote");
+    const orgCheckboxes = document.querySelectorAll(".org-type");
+    const orgOtherInput = document.getElementById("orgOther");
+    const registerForm = profileType.closest("form");
+
 
     form.addEventListener("submit", function (event) {
       const profileType = profileTypeSelect.value;
@@ -106,8 +237,146 @@
         customerNoteInput.value = `${profileType}`;
       }
     });
+
+    setTimeout(function () {
+
+    function toggleClinicalFields() {
+      if (profileType.value === "clinical") {
+        clinicalFields.style.display = "block";
+      } else {
+        clinicalFields.style.display = "none";
+        noteField.value = "";
+      }
+    }
+
+    toggleClinicalFields();
+
+    profileType.addEventListener("change", toggleClinicalFields);
+
+    // Populate note field on form submit
+    registerForm.addEventListener("submit", function () {
+      if (profileType.value === "clinical") {
+        const selected = [];
+        orgCheckboxes.forEach((checkbox) => {
+          if (checkbox.checked) {
+            selected.push(checkbox.value);
+          }
+        });
+        if (orgOtherInput.value.trim() !== "") {
+          selected.push("Other: " + orgOtherInput.value.trim());
+        }
+        noteField.value = selected.join(", ");
+      }
+    });
+  }, 300);
+
+
+  });
+</script> {% endcomment %}
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const form = document.querySelector("form");
+    const profileTypeSelect = document.getElementById("signUpForm-ProfileType");
+    const customerTagsInput = document.getElementById("customerTags");
+    const customerNoteInput = document.getElementById("customerNote");
+    const clinicalFields = document.getElementById("clinicalFields");
+
+    const orgCheckboxes = document.querySelectorAll(".org-type");
+    const orgOtherInput = document.getElementById("orgOther");
+
+    const interestCheckboxes = document.querySelectorAll('input[name="customer[note][interest][]"]');
+    const interestOtherInput = document.querySelector('input[name="customer[note][interest_other]"]');
+
+    const protocolCheckboxes = document.querySelectorAll('input[name="customer[note][protocol_status][]"]');
+
+    const speciesInterestInput = document.getElementById("speciesInterest");
+    const petsEnrolledInput = document.getElementById("petsEnrolled");
+    const startDateInput = document.getElementById("startDate");
+
+    // Hidden metafield inputs
+    const metaProfileType = document.getElementById("customerProfileType");
+    const metaOrgTypes = document.getElementById("customerOrgTypes");
+    const metaInterests = document.getElementById("customerInterests");
+    const metaProtocolStatus = document.getElementById("customerProtocolStatus");
+    const metaSpeciesInterest = document.getElementById("customerSpeciesInterest");
+    const metaPetsEnrolled = document.getElementById("customerPetsEnrolled");
+    const metaStartDate = document.getElementById("customerStartDate");
+
+    setTimeout(function () {
+
+      function toggleClinicalFields() {
+        if (profileTypeSelect.value === "clinical") {
+          clinicalFields.style.display = "block";
+        } else {
+          clinicalFields.style.display = "none";
+          customerNoteInput.value = "";
+        }
+      }
+
+      profileTypeSelect.addEventListener("change", toggleClinicalFields);
+      toggleClinicalFields();
+
+      form.addEventListener("submit", function () {
+        const profileType = profileTypeSelect.value;
+
+        // Build structured data
+        const noteData = {
+          profileType: profileType,
+        };
+
+        // Assign to metafield
+        metaProfileType.value = profileType;
+
+        if (profileType === "clinical") {
+          const selectedOrgs = Array.from(orgCheckboxes)
+            .filter((el) => el.checked)
+            .map((el) => el.value);
+
+          if (orgOtherInput.value.trim()) {
+            selectedOrgs.push("Other: " + orgOtherInput.value.trim());
+          }
+
+          const selectedInterests = Array.from(interestCheckboxes)
+            .filter((el) => el.checked)
+            .map((el) => el.value);
+
+          if (interestOtherInput && interestOtherInput.value.trim()) {
+            selectedInterests.push("Other: " + interestOtherInput.value.trim());
+          }
+
+          const selectedProtocols = Array.from(protocolCheckboxes)
+            .filter((el) => el.checked)
+            .map((el) => el.value);
+
+          const speciesInterest = speciesInterestInput.value.trim();
+          const petsEnrolled = petsEnrolledInput.value.trim();
+          const startDate = startDateInput.value.trim();
+
+          noteData.orgTypes = selectedOrgs;
+          noteData.interests = selectedInterests;
+          noteData.protocolStatus = selectedProtocols;
+          noteData.speciesInterest = speciesInterest;
+          noteData.petsEnrolled = petsEnrolled;
+          noteData.startDate = startDate;
+
+          // Set individual metafields
+          metaOrgTypes.value = selectedOrgs.join(", ");
+          metaInterests.value = selectedInterests.join(", ");
+          metaProtocolStatus.value = selectedProtocols.join(", ");
+          metaSpeciesInterest.value = speciesInterest;
+          metaPetsEnrolled.value = petsEnrolled;
+          metaStartDate.value = startDate;
+        }
+
+        // Also store full JSON in Shopify Notes (optional)
+        customerNoteInput.value = JSON.stringify(noteData);
+      });
+    }, 300);
   });
 </script>
+
 
 {% schema %}
 {
