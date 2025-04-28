@@ -59,82 +59,98 @@
         <div class="col-12 col-sm-12">
           <div class="left-side-content">
             <div class="yv-login-form yv-register-form" id="registerForm">
-              {% comment %} <h3 class="form-title" tabindex="-1">
-                {{ 'customer.register.title' | t }}
-              </h3> 
-              <p>{{ 'customer.register.subtext' | t }}</p> {% endcomment %}
               {%- form 'create_customer', novalidate: 'novalidate' -%}
-
-              {%- if form.errors -%}
-                {%- form 'create_customer', novalidate: 'novalidate' -%}
+              {% comment %} {%- if form.errors -%}
+                {% comment %} {%- form 'create_customer', novalidate: 'novalidate' -%}
 
                   <div class="field form-group">
                     <label for="signUpForm-FirstName">First Name</label>   
-                    <input type="text" class="form-control" name="customer[first_name]" id="signUpForm-FirstName" required>
+                    <input type="text" class="form-control" name="customer[first_name]" placeholder="Your first name" id="signUpForm-FirstName" required>
                   </div>
                 
                   <div class="field form-group">
                     <label for="signUpForm-LastName">Last Name</label>
-                    <input type="text" class="form-control" name="customer[last_name]" id="signUpForm-LastName" required>
+                    <input type="text" class="form-control" name="customer[last_name]" placeholder="Your last name" id="signUpForm-LastName" required>
                   </div>
                 
                   <div class="field form-group">  
                     <label for="signUpForm-email">Email</label>    
-                    <input type="email" class="form-control" name="customer[email]" id="signUpForm-email" required>
+                    <input type="email" class="form-control" name="customer[email]" placeholder="Your email" id="signUpForm-email" required>
                   </div>
                 
                   <div class="field form-group"> 
                     <label for="signUpForm-password">Password</label>    
-                    <input type="password" class="form-control" name="customer[password]" id="signUpForm-password" required>
+                    <input type="password" class="form-control" name="customer[password]" placeholder="Your password" id="signUpForm-password" required>
                   </div>
                 
         
                   <button type="submit" class="button black-btn btn-block">
                     Submit
                   </button>
-                {%- endform -%}
-              {%- endif -%}
+                {%- endform -%} {% endcomment %}
+              {%- endif -%} {% endcomment %}
 
               <div class="form-row">
-                <div class="field form-group">
-                  <label for="signUpForm-FirstName">{{ 'customer.register.first_name' | t }}</label>
-                  <input type="text" class="form-control" name="customer[first_name]" id="signUpForm-FirstName" required>
-                </div>
-              
-                <div class="field form-group">
-                  <label for="signUpForm-LastName">{{ 'customer.register.last_name' | t }}</label>
-                  <input type="text" class="form-control" name="customer[last_name]" id="signUpForm-LastName" required>
-                </div>
-              
-                <div class="field form-group">
-                  <label for="signUpForm-email">{{ 'customer.register.email' | t }}</label>
-                  <input type="email" class="form-control" name="customer[email]" id="signUpForm-email" required>
-                </div>
-              
-                <div class="field form-group">
-                  <label for="signUpForm-password">{{ 'customer.register.password' | t }}</label>
-                  <input type="password" class="form-control" name="customer[password]" id="signUpForm-password" required>
-                </div>
-
                 <div class="field form-group">
                   <label for="signUpForm-ProfileType">Profile Type</label>
                   <select class="form-control" id="signUpForm-ProfileType">
                     <option value="">Select Account Type</option>
                     <option value="wholesale">Wholesale</option>
-                    <option value="practitioner">Practitioner</option>
+                    <option value="veterinarian">Veterinarian</option>
                     <option value="clinical">Clinical trial / Research</option>
-                    <option value="distributor">Distributor</option>
                     <option value="customer">Customer</option>
                   </select>
                 </div>
 
                 <div class="field form-group">
-                  <label for="signUpForm-password">Phone</label>
-                  <input type="text" class="form-control" name="customer[phone]" required>
+                  {% comment %} EMPTY {% endcomment %}
+                </div>
+                
+                <div class="field form-group">
+                  <label for="signUpForm-FirstName">{{ 'customer.register.first_name' | t }}</label>
+                  <input type="text" class="form-control" placeholder="Your First Name" name="customer[first_name]" id="signUpForm-FirstName" required>
+                </div>
+              
+                <div class="field form-group">
+                  <label for="signUpForm-LastName">{{ 'customer.register.last_name' | t }}</label>
+                  <input type="text" class="form-control"  placeholder="Your Last Name" name="customer[last_name]" id="signUpForm-LastName" required>
+                </div>
+              
+                <div class="field form-group">
+                  <label for="signUpForm-email">{{ 'customer.register.email' | t }}</label>
+                  <input type="email" class="form-control"  placeholder="Your Email" name="customer[email]" id="signUpForm-email" required>
+                </div>
+              
+                <div class="field form-group">
+                  <label for="signUpForm-password">{{ 'customer.register.password' | t }}</label>
+                  <input type="password" class="form-control" placeholder="Your Password" name="customer[password]" id="signUpForm-password" required>
                 </div>
               </div>
 
+              {% comment %} clinical type {% endcomment %}
               <div class="field form-group" id="clinicalFields" style="display: none;">
+                <div class="form-row">
+                  <div class="field form-group">
+                    <label for="signUpForm-password">Phone</label>
+                    <input type="text" class="form-control" name="customer[phone]" required>
+                  </div>
+                  <div class="field form-group">
+                    <label for="signUpForm-password">Contact Person</label>
+                    <input type="text" class="form-control" id="contact_person" name="customer[contact_person]" required>
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <div class="field form-group">
+                    <label for="signUpForm-password">Address</label>
+                    <input type="text" id="address" class="form-control" name="customer[address]" required>
+                  </div>
+                  <div class="field form-group">
+                    <label for="signUpForm-password">Website</label>
+                    <input type="text" id="website" class="form-control" name="customer[website]" required>
+                  </div>
+                </div>
+
                 <label>Type of Organization:</label>
                 <div class="radio-group">
                   <label><input type="radio" name="customer[note][org_type]" value="Veterinary Clinic" class="org-type"> Veterinary Clinic</label>
@@ -152,9 +168,9 @@
                   <div class="checkbox-group">
                     <label><input type="checkbox" name="customer[note][interest][]" value="supplements"> Supplements</label>
                     <label><input type="checkbox" name="customer[note][interest][]" value="nutrition"> Nutrition</label>
-                    <label><input type="checkbox" name="customer[note][interest][]" value="behavior"> Behavior and/or stress</label>
+                    <label><input type="checkbox" name="customer[note][interest][]" value="Behavior and/or stress"> Behavior and/or stress</label>
                     <label style="width:49%">
-                      <input type="checkbox" name="customer[note][interest][]" value="other"> Other:
+                      <input type="checkbox" class="interest-checkbox" value="other">Other:
                       <input type="text" class="form-control mt-1" name="customer[note][interest_other]" placeholder="Please specify">
                     </label>
                   </div>
@@ -163,43 +179,107 @@
                 <div class="form-group">
                   <label>Do you have an existing protocol or would you like support designing one?</label><br>
                   <div class="checkbox-group">
-                    <label><input type="checkbox" name="customer[note][protocol_status][]" value="have"> I have a protocol</label>
-                    <label><input type="checkbox" name="customer[note][protocol_status][]" value="need-help"> I’d like help creating one</label>
-                    <label><input type="checkbox" name="customer[note][protocol_status][]" value="unsure"> Not sure yet</label>
+                    <label><input type="checkbox" class="protocol-status-checkbox" name="customer[note][protocol_status][]" value="I have a protocol"> I have a protocol</label>
+                    <label><input type="checkbox" class="protocol-status-checkbox" name="customer[note][protocol_status][]" value="I’d like help creating one"> I’d like help creating one</label>
+                    <label><input type="checkbox" class="protocol-status-checkbox" name="customer[note][protocol_status][]" value="Not sure yet"> Not sure yet</label>
                   </div>
                 </div>
               
                 <div class="form-row">
                   <div class="field form-group">
                     <label for="speciesInterest">Species of interest in studying</label>
-                    <input type="text" class="form-control" id="speciesInterest" name="customer[note][species_interest]">
+                    <input type="text" class="form-control" id="speciesInterest" placeholder="Please specify" name="customer[note][species_interest]">
                   </div>
               
                   <div class="field form-group">
                     <label for="petsEnrolled">Estimated number of pets to enroll</label>
-                    <input type="text" class="form-control" id="petsEnrolled" name="customer[note][pets_enrolled]">
+                    <input type="text" class="form-control" id="petsEnrolled" placeholder="Please enter number only" name="customer[note][pets_enrolled]">
                   </div>
               
                   <div class="field form-group">
                     <label for="startDate">Timeline or ideal start date</label>
-                    <input type="text" class="form-control" id="startDate" name="customer[note][start_date]">
+                    <input type="text" class="form-control" id="startDate" placeholder="MM/DD/YYY" name="customer[note][start_date]">
                   </div>
                 </div>
 
               </div>
+
+              {% comment %} veterinarian type {% endcomment %}
+              <div id="veterinarian-fields" style="display: none;">
+
+                <!-- Degree(s) -->
+                <label>Degree(s)</label><br>
+                <input type="checkbox" name="degree" value="DVM"> DVM<br>
+                <input type="checkbox" name="degree" value="VDM"> VDM<br>
+                <input type="checkbox" name="degree" value="PhD"> PhD<br>
+                <input type="checkbox" name="degree" value="Other"> Other<br><br>
               
+                <div class="form-row">
+                  <div class="field form-group">
+                    <label for="office_address">Office Address</label>
+                    <input type="text" id="office_address" class="form-control" name="customer[office_address]" placeholder="Enter office address">
+                  </div>
+                  <div class="field form-group">
+                  <label for="phone_number">Phone Number</label>
+                  <input type="text" id="phone_number" class="form-control" name="phone_number" placeholder="Enter phone number">
+                  </div>
+                </div>
+
+                <label>How did you learn about Innovative Pet Lab?</label><br>
+                <input type="radio" name="learn_about" value="Facebook"> Facebook<br>
+                <input type="radio" name="learn_about" value="Instagram"> Instagram<br>
+                <input type="radio" name="learn_about" value="Google Search"> Google Search<br>
+                <input type="radio" name="learn_about" value="Friend"> Friend<br>
+                <input type="radio" name="learn_about" value="Colleague"> Colleague<br>
+                <input type="radio" name="learn_about" value="Patient"> Patient<br>
+                <input type="radio" name="learn_about" value="Veterinarian"> Veterinarian<br>
+                <input type="radio" name="learn_about" value="AHVMA"> AHVMA<br>
+                <input type="radio" name="learn_about" value="Other"> Other<br>
+              
+              </div>
+
+              {% comment %} wholesale type {% endcomment %}
+              <div id="wholesaleFields" style="display:none">
+
+                <div class="form-row">
+                  <div class="field form-group">
+                    <label for="store_name">Store Name</label>
+                    <input type="text" id="store_name" class="form-control" name="customer[store_name]" placeholder="Enter store name">
+                  </div>
+                  <div class="field form-group">
+                  <label for="store_address">Store Address</label>
+                  <input type="text" id="store_address" class="form-control" name="store_address" placeholder="Enter store address">
+                  </div>
+                </div>
+              
+                <label>How did you learn about Innovative Pet Lab?</label><br>
+                <input type="checkbox" name="how_learned[]" value="Facebook"> Facebook<br>
+                <input type="checkbox" name="how_learned[]" value="Instagram"> Instagram<br>
+                <input type="checkbox" name="how_learned[]" value="Google Search"> Google Search<br>
+                <input type="checkbox" name="how_learned[]" value="Friend"> Friend<br>
+                <input type="checkbox" name="how_learned[]" value="Colleague"> Colleague<br>
+                <input type="checkbox" name="how_learned[]" value="Patient"> Patient<br>
+                <input type="checkbox" name="how_learned[]" value="Veterinarian"> Veterinarian<br>
+                <input type="checkbox" name="how_learned[]" value="Super Zoo"> Super Zoo<br>
+                <input type="checkbox" name="how_learned[]" value="Other"> Other<br>
+              </div>
+              
+              <div id="agreementFields" style="margin-top: 20px;">
+                  <input type="checkbox" id="termsAgreement" name="termsAgreement" required>
+                  <label for="termsAgreement" style="font-size:14px">
+                    I agree to Innovative Pet Labs' <a href="/terms-conditions/" target="_blank">Terms & Conditions</a> and <a href="/privacy-policy" target="_blank">Privacy Policy</a>.
+                  </label>
+                <div>
+                  <input type="checkbox" id="emailAgreement" name="emailAgreement" required>
+                  <label for="emailAgreement" style="font-size:14px">
+                    By becoming an Innovative Pet Lab provider, I agree to periodic email communication.
+                  </label>
+                </div>
+              </div>
+
               <!-- Hidden input for customer tags -->
               <input type="hidden" id="customerTags" name="customer[tags]"> 
               <input type="hidden" id="customerNote" name="customer[note]"> 
-
-              <input type="hidden" id="customerProfileType" name="customer[metafields][clinical][profile_type]">
-              <input type="hidden" id="customerOrgTypes" name="customer[metafields][clinical][org_types]">
-              <input type="hidden" id="customerInterests" name="customer[metafields][clinical][interests_areas]">
-              <input type="hidden" id="customerProtocolStatus" name="customer[metafields][clinical][protocol_status]">
-              <input type="hidden" id="customerSpeciesInterest" name="customer[metafields][clinical][species_interest]">
-              <input type="hidden" id="customerPetsEnrolled" name="customer[metafields][clinical][pets_enrolled]">
-              <input type="hidden" id="customerStartDate" name="customer[metafields][clinical][start_date]">
-
 
               <button type="submit" class="button black-btn btn-block" id="registerSubmit" style="width:49%;margin-top:1rem;height:60px">
                 {{ 'customer.register.submit' | t }}
@@ -212,6 +292,170 @@
     </div>
   </div>
 </section>
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const form = document.querySelector("form");
+    const profileTypeSelect = document.getElementById("signUpForm-ProfileType");
+    const customerTagsInput = document.getElementById("customerTags");
+
+    const clinicalFields = document.getElementById("clinicalFields");
+    const veterinarianFields = document.getElementById("veterinarian-fields");
+
+    const orgCheckboxes = document.querySelectorAll(".org-type");
+    const orgOtherInput = document.getElementById("orgOther");
+  
+    const interestCheckboxes = document.querySelectorAll("input[name='customer[note][interest][]']");
+    const protocolCheckboxes = document.querySelectorAll(".protocol-status-checkbox");
+  
+    const speciesInterestInput = document.getElementById("speciesInterest");
+    const petsEnrolledInput = document.getElementById("petsEnrolled");
+    const startDateInput = document.getElementById("startDate");
+
+    const address = document.getElementById("address");
+    const website = document.getElementById("website");
+    const contactPerson = document.getElementById("contact_person");
+
+    const vetDegreeCheckboxes = document.querySelectorAll("input[name='degree']");
+    const vetOfficeAddressInput = document.getElementById("office_address");
+    const vetPhoneNumberInput = document.getElementById("phone_number");
+    const vetLearnAboutInput = document.querySelectorAll("input[name='learn_about']");
+
+
+    setTimeout(function () {
+
+      function toggleProfileFields() {
+        if (profileTypeSelect.value === "clinical") {
+          clinicalFields.style.display = "block";
+          veterinarianFields.style.display = "none";
+          wholesaleFields.style.display = "none";
+        } else if (profileTypeSelect.value === "veterinarian") {
+          clinicalFields.style.display = "none";
+          veterinarianFields.style.display = "block";
+          wholesaleFields.style.display = "none";
+        } else if (profileTypeSelect.value === "wholesale") {
+          clinicalFields.style.display = "none";
+          veterinarianFields.style.display = "none";
+          wholesaleFields.style.display = "block";
+        } else {
+          clinicalFields.style.display = "none";
+          veterinarianFields.style.display = "none";
+          wholesaleFields.style.display = "none";
+        }
+      }
+      
+
+    // Execute immediately on page load
+    toggleProfileFields();
+
+    // Add event listener for changes in profile type selection
+    profileTypeSelect.addEventListener("change", toggleProfileFields);
+      
+        form.addEventListener("submit", function (event) {
+          // Collect tags
+          let tags = [];
+      
+          const profileType = profileTypeSelect.value;
+          if (profileType) {
+            tags.push(`profileType:${profileType}`);
+          }
+      
+          if (profileType === "clinical") {
+            orgCheckboxes.forEach(checkbox => {
+              if (checkbox.checked) {
+                tags.push(`org_type:${checkbox.value}`);
+              }
+            });
+            if (orgOtherInput.value.trim() !== "") {
+              tags.push(`org_type:${orgOtherInput.value.trim()}`);
+            }
+      
+            // Areas of interest
+            interestCheckboxes.forEach(checkbox => {
+              if (checkbox.checked) {
+                tags.push(`interest_areas:${checkbox.value}`);
+              }
+            });
+      
+            // Protocol statuses
+            protocolCheckboxes.forEach(checkbox => {
+              if (checkbox.checked) {
+                tags.push(`protocol_status:${checkbox.value}`);
+              }
+            });
+      
+            if (speciesInterestInput.value.trim() !== "") {
+              tags.push(`species_interest:${speciesInterestInput.value.trim()}`);
+            }
+            if (petsEnrolledInput.value.trim() !== "") {
+              tags.push(`pets_enrolled:${petsEnrolledInput.value.trim()}`);
+            }
+            if (startDateInput.value.trim() !== "") {
+              tags.push(`start_date:${startDateInput.value.trim()}`);
+            }
+            if (address.value.trim() !== "") {
+              tags.push(`address:${address.value.trim()}`);
+            }
+            if (website.value.trim() !== "") {
+              tags.push(`website:${website.value.trim()}`);
+            }
+            if (contactPerson.value.trim() !== "") {
+              tags.push(`contact_person:${contactPerson.value.trim()}`);
+            }
+            
+          }
+      
+          if (profileType === "veterinarian") {
+            vetDegreeCheckboxes.forEach(checkbox => {
+              if (checkbox.checked) {
+                tags.push(`vet_degree:${checkbox.value}`);
+              }
+            });
+            if (vetOfficeAddressInput.value.trim() !== "") {
+              tags.push(`office_address:${vetOfficeAddressInput.value.trim()}`);
+            }
+            if (vetPhoneNumberInput.value.trim() !== "") {
+              tags.push(`vet_phone_number:${vetPhoneNumberInput.value.trim()}`);
+            }
+            if (vetLearnAboutInput.value.trim() !== "") {
+              tags.push(`vet_learn_about:${vetLearnAboutInput.value.trim()}`);
+            }
+
+          }
+          // Assign tags to hidden input
+          customerTagsInput.value = tags.join(', ');
+
+        });
+      });
+
+    }, 3000);
+
+    // Get elements
+const termsCheckbox = document.getElementById('termsAgreement');
+const emailCheckbox = document.getElementById('emailAgreement');
+const submitButton = document.getElementById('registerSubmit');
+
+// Function to check if both checkboxes are checked
+function updateSubmitButtonState() {
+  if (termsCheckbox.checked && emailCheckbox.checked) {
+    submitButton.disabled = false;
+    submitButton.classList.remove('disabled');
+  } else {
+    submitButton.disabled = true;
+    submitButton.classList.add('disabled');
+  }
+}
+
+// Initial check on page load
+updateSubmitButtonState();
+
+// Add event listeners to checkboxes
+termsCheckbox.addEventListener('change', updateSubmitButtonState);
+emailCheckbox.addEventListener('change', updateSubmitButtonState);
+
+</script>
+
 
 {% comment %} <script>
   document.addEventListener("DOMContentLoaded", function () {
@@ -269,113 +513,8 @@
       }
     });
   }, 300);
-
-
   });
 </script> {% endcomment %}
-
-
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const form = document.querySelector("form");
-    const profileTypeSelect = document.getElementById("signUpForm-ProfileType");
-    const customerTagsInput = document.getElementById("customerTags");
-    const customerNoteInput = document.getElementById("customerNote");
-    const clinicalFields = document.getElementById("clinicalFields");
-
-    const orgCheckboxes = document.querySelectorAll(".org-type");
-    const orgOtherInput = document.getElementById("orgOther");
-
-    const interestCheckboxes = document.querySelectorAll('input[name="customer[note][interest][]"]');
-    const interestOtherInput = document.querySelector('input[name="customer[note][interest_other]"]');
-
-    const protocolCheckboxes = document.querySelectorAll('input[name="customer[note][protocol_status][]"]');
-
-    const speciesInterestInput = document.getElementById("speciesInterest");
-    const petsEnrolledInput = document.getElementById("petsEnrolled");
-    const startDateInput = document.getElementById("startDate");
-
-    // Hidden metafield inputs
-    const metaProfileType = document.getElementById("customerProfileType");
-    const metaOrgTypes = document.getElementById("customerOrgTypes");
-    const metaInterests = document.getElementById("customerInterests");
-    const metaProtocolStatus = document.getElementById("customerProtocolStatus");
-    const metaSpeciesInterest = document.getElementById("customerSpeciesInterest");
-    const metaPetsEnrolled = document.getElementById("customerPetsEnrolled");
-    const metaStartDate = document.getElementById("customerStartDate");
-
-    setTimeout(function () {
-
-      function toggleClinicalFields() {
-        if (profileTypeSelect.value === "clinical") {
-          clinicalFields.style.display = "block";
-        } else {
-          clinicalFields.style.display = "none";
-          customerNoteInput.value = "";
-        }
-      }
-
-      profileTypeSelect.addEventListener("change", toggleClinicalFields);
-      toggleClinicalFields();
-
-      form.addEventListener("submit", function () {
-        const profileType = profileTypeSelect.value;
-
-        // Build structured data
-        const noteData = {
-          profileType: profileType,
-        };
-
-        // Assign to metafield
-        metaProfileType.value = profileType;
-
-        if (profileType === "clinical") {
-          const selectedOrgs = Array.from(orgCheckboxes)
-            .filter((el) => el.checked)
-            .map((el) => el.value);
-
-          if (orgOtherInput.value.trim()) {
-            selectedOrgs.push("Other: " + orgOtherInput.value.trim());
-          }
-
-          const selectedInterests = Array.from(interestCheckboxes)
-            .filter((el) => el.checked)
-            .map((el) => el.value);
-
-          if (interestOtherInput && interestOtherInput.value.trim()) {
-            selectedInterests.push("Other: " + interestOtherInput.value.trim());
-          }
-
-          const selectedProtocols = Array.from(protocolCheckboxes)
-            .filter((el) => el.checked)
-            .map((el) => el.value);
-
-          const speciesInterest = speciesInterestInput.value.trim();
-          const petsEnrolled = petsEnrolledInput.value.trim();
-          const startDate = startDateInput.value.trim();
-
-          noteData.orgTypes = selectedOrgs;
-          noteData.interests = selectedInterests;
-          noteData.protocolStatus = selectedProtocols;
-          noteData.speciesInterest = speciesInterest;
-          noteData.petsEnrolled = petsEnrolled;
-          noteData.startDate = startDate;
-
-          // Set individual metafields
-          metaOrgTypes.value = selectedOrgs.join(", ");
-          metaInterests.value = selectedInterests.join(", ");
-          metaProtocolStatus.value = selectedProtocols.join(", ");
-          metaSpeciesInterest.value = speciesInterest;
-          metaPetsEnrolled.value = petsEnrolled;
-          metaStartDate.value = startDate;
-        }
-
-        // Also store full JSON in Shopify Notes (optional)
-        customerNoteInput.value = JSON.stringify(noteData);
-      });
-    }, 300);
-  });
-</script>
 
 
 {% schema %}
