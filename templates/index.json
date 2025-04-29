@@ -149,28 +149,20 @@
     "ipl_happy_customer_CMWRRC": {
       "type": "ipl-happy-customer",
       "blocks": {
-        "testi_block_3XEmq9": {
-          "type": "testi-block",
-          "settings": {
-            "testi_image": "shopify://shop_images/jinx_1.png",
-            "quote": "A Game-Changer in Pet-Health: Innovative Pet Lab! As a holistic veterinarian with a focus on gut health, I can't recommend Innovative Pet Lab's stool tests enough...",
-            "author": "Dr. Katie Woodley, DVM"
-          }
-        },
-        "testi_block_zgUqh3": {
-          "type": "testi-block",
-          "settings": {
-            "testi_image": "shopify://shop_images/image2-removebg-preview.png",
-            "quote": "Innovative Pet Lab has completely transformed my dog’s health! Their gut health test gave me clear insights, and their supplements made a huge difference. My pup’s energy is up, his coat is shinier, and his digestion has never been better. Highly recommended!”",
-            "author": "— Jessica M., Proud Dog Mom"
-          }
-        },
         "testi_block_DwcgVi": {
           "type": "testi-block",
           "settings": {
             "testi_image": "shopify://shop_images/jinx_1.png",
             "quote": "My dog Nash has struggled with skin allergies since i got him and it took forever to figure out something that worked for him. He’s been on his current diet for a little over 3 months and i started to notice a difference but that’s when i decided to do an Innovative pet lab test. The results were so fast and it was so easy to do. When i got the results back it made me feel so great that the diet was working. It confirmed everything! He came back normal for all the tests they run!",
             "author": "—Jinx & Nash"
+          }
+        },
+        "testi_block_XwYtXM": {
+          "type": "testi-block",
+          "settings": {
+            "testi_image": "shopify://shop_images/jinx_1.png",
+            "quote": "If you’re a pet parent or veterinarian interested in moving beyond symptom-based care to understand and address the underlying issues affecting a pet’s gut health, Innovative Pet Lab’s stool tests are a must-have tool. Their comprehensive approach aligns seamlessly with integrative and holistic health models, making them an invaluable asset for improving long-term animal well-being.",
+            "author": "Dr. Kendra Pope"
           }
         },
         "testi_block_WBeXDX": {
@@ -191,9 +183,8 @@
         }
       },
       "block_order": [
-        "testi_block_3XEmq9",
-        "testi_block_zgUqh3",
         "testi_block_DwcgVi",
+        "testi_block_XwYtXM",
         "testi_block_WBeXDX",
         "testi_block_bKKCGH"
       ],
