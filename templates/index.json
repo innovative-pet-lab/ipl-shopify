@@ -152,17 +152,9 @@
         "testi_block_3XEmq9": {
           "type": "testi-block",
           "settings": {
-            "testi_image": "shopify://shop_images/Dr._Katie_Woodley_Headshot_1.jpg",
+            "testi_image": "shopify://shop_images/jinx_1.png",
             "quote": "A Game-Changer in Pet-Health: Innovative Pet Lab! As a holistic veterinarian with a focus on gut health, I can't recommend Innovative Pet Lab's stool tests enough...",
             "author": "Dr. Katie Woodley, DVM"
-          }
-        },
-        "testi_block_nafVMq": {
-          "type": "testi-block",
-          "settings": {
-            "testi_image": "shopify://shop_images/image02-removebg-preview.png",
-            "quote": "Innovative Pet Lab has been a lifesaver for my aging dog. Their supplements improved his mobility and digestion within weeks! He’s more active and happy than ever. I can’t thank Pet Lab Plus enough!”",
-            "author": "— Daniel S., Lifelong Pet Lover"
           }
         },
         "testi_block_zgUqh3": {
@@ -176,6 +168,7 @@
         "testi_block_DwcgVi": {
           "type": "testi-block",
           "settings": {
+            "testi_image": "shopify://shop_images/jinx_1.png",
             "quote": "My dog Nash has struggled with skin allergies since i got him and it took forever to figure out something that worked for him. He’s been on his current diet for a little over 3 months and i started to notice a difference but that’s when i decided to do an Innovative pet lab test. The results were so fast and it was so easy to do. When i got the results back it made me feel so great that the diet was working. It confirmed everything! He came back normal for all the tests they run!",
             "author": "—Jinx & Nash"
           }
@@ -183,6 +176,7 @@
         "testi_block_WBeXDX": {
           "type": "testi-block",
           "settings": {
+            "testi_image": "shopify://shop_images/dana.png",
             "quote": "We are so excited that IPL is available to pups like us! Our mom is obsessed with our gut health and now we have a way to know the reason for itchy skin and poops that are not easy to pick up at times. Mom uses IPL to make the necessary dietary adjustments to our food and treats, and we love easy potty time and scratch-free, happy life.\nWe woof IPL!",
             "author": "— Axel, Zeppelin and Aspen"
           }
@@ -190,6 +184,7 @@
         "testi_block_bKKCGH": {
           "type": "testi-block",
           "settings": {
+            "testi_image": "shopify://shop_images/lou_lou_1.png",
             "quote": "Lou Lou is so much happier after we figured out that she had lots of inflammation. After starting her treatment we notice a difference in her skin and scratching issues within the first couple of weeks.”“Lou Lou is so much happier after we figured out that she had lots of inflammation. After starting her treatment we notice a difference in her skin and scratching issues within the first couple of weeks.”\n– Debbie DePree, Texas",
             "author": "— Lou Lou"
           }
@@ -197,7 +192,6 @@
       },
       "block_order": [
         "testi_block_3XEmq9",
-        "testi_block_nafVMq",
         "testi_block_zgUqh3",
         "testi_block_DwcgVi",
         "testi_block_WBeXDX",
