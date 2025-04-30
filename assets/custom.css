@@ -315,6 +315,11 @@
     border: 1px solid #03b0a7;
     min-height: 95.4px;
     max-height: 95.4px;
+    overflow: hidden;
+}
+.product-gallery__thumbnail.is-active img {
+    width: 100%;
+    height: auto;
 }
 
 .template_product-basic-gut-product .col-12 {
@@ -547,12 +552,14 @@
         overflow: hidden;
         padding-right: 1rem;
         padding-left: 1rem;
+        width: 100%;
+        height: 100%;
     }
 
     .product-gallery__image img {
         width: 100%;
         height: 100%;
-        object-fit: contain;
+        object-fit: contain!important;
     }
 
     .product-gallery__wrapper {

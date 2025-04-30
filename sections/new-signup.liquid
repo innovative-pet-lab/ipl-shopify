@@ -266,13 +266,14 @@
               
               <div id="agreementFields" style="margin-top: 20px;">
                   <input type="checkbox" id="termsAgreement" name="termsAgreement" required>
-                  <label for="termsAgreement" style="font-size:14px">
-                    I agree to Innovative Pet Labs' <a href="/terms-conditions/" target="_blank">Terms & Conditions</a> and <a href="/privacy-policy" target="_blank">Privacy Policy</a>.
+                  <label for="termsAgreement" style="font-size:14px;text-transform:capitalize">
+                    I agree to Innovative Pet Labs' <a style="text-decoration:underline" href="/terms-conditions/" target="_blank">Terms & Conditions</a> and <a style="text-decoration:underline" href="/privacy-policy" target="_blank">Privacy Policy</a>.
                   </label>
                 <div>
-                  <input type="checkbox" id="emailAgreement" name="emailAgreement" required>
-                  <label for="emailAgreement" style="font-size:14px">
-                    By becoming an Innovative Pet Lab provider, I agree to periodic email communication.
+                  <input type="checkbox" id="emailAgreement" name="customer[accepts_marketing]" value="true" checked>
+                  <input type="hidden" name="customer[accepts_marketing]" value="true">
+                  <label for="emailAgreement" style="font-size:14px;text-transform:capitalize">
+                    By becoming an Innovative Pet Lab provider, I consent to receiving periodic updates and marketing emails from IPL.
                   </label>
                 </div>
               </div>
@@ -322,6 +323,26 @@
     const vetPhoneNumberInput = document.getElementById("phone_number");
     const vetLearnAboutInput = document.querySelectorAll("input[name='learn_about']");
 
+    const termsCheckbox = document.getElementById('termsAgreement');
+    const emailCheckbox = document.getElementById('emailAgreement');
+    const emailHidden = document.getElementById('emailAgreementHidden');
+    const submitButton = document.getElementById('registerSubmit');
+
+    // Function to check if both checkboxes are checked
+    function updateSubmitButtonState() {
+      if (termsCheckbox.checked && emailCheckbox.checked) {
+        submitButton.disabled = false;
+        submitButton.classList.remove('disabled');
+      } else {
+        submitButton.disabled = true;
+        submitButton.classList.add('disabled');
+      }
+    }
+
+    // Function to sync checkbox to hidden field
+    function updateHiddenField() {
+      emailHidden.value = emailCheckbox.checked ? 'yes' : '';
+    }
 
     setTimeout(function () {
 
@@ -344,116 +365,97 @@
           wholesaleFields.style.display = "none";
         }
       }
-      
 
-    // Execute immediately on page load
-    toggleProfileFields();
+      // Execute immediately on page load
+      toggleProfileFields();
 
-    // Add event listener for changes in profile type selection
-    profileTypeSelect.addEventListener("change", toggleProfileFields);
+      profileTypeSelect.addEventListener("change", toggleProfileFields);
       
-        form.addEventListener("submit", function (event) {
-          // Collect tags
-          let tags = [];
-      
-          const profileType = profileTypeSelect.value;
-          if (profileType) {
-            tags.push(`profileType:${profileType}`);
+      form.addEventListener("submit", function (event) {
+        let tags = [];
+    
+        const profileType = profileTypeSelect.value;
+        if (profileType) {
+          tags.push(`profileType:${profileType}`);
+        }
+    
+        if (profileType === "clinical") {
+          orgCheckboxes.forEach(checkbox => {
+            if (checkbox.checked) {
+              tags.push(`org_type:${checkbox.value}`);
+            }
+          });
+          if (orgOtherInput.value.trim() !== "") {
+            tags.push(`org_type:${orgOtherInput.value.trim()}`);
           }
-      
-          if (profileType === "clinical") {
-            orgCheckboxes.forEach(checkbox => {
-              if (checkbox.checked) {
-                tags.push(`org_type:${checkbox.value}`);
-              }
-            });
-            if (orgOtherInput.value.trim() !== "") {
-              tags.push(`org_type:${orgOtherInput.value.trim()}`);
-            }
-      
-            // Areas of interest
-            interestCheckboxes.forEach(checkbox => {
-              if (checkbox.checked) {
-                tags.push(`interest_areas:${checkbox.value}`);
-              }
-            });
-      
-            // Protocol statuses
-            protocolCheckboxes.forEach(checkbox => {
-              if (checkbox.checked) {
-                tags.push(`protocol_status:${checkbox.value}`);
-              }
-            });
-      
-            if (speciesInterestInput.value.trim() !== "") {
-              tags.push(`species_interest:${speciesInterestInput.value.trim()}`);
-            }
-            if (petsEnrolledInput.value.trim() !== "") {
-              tags.push(`pets_enrolled:${petsEnrolledInput.value.trim()}`);
-            }
-            if (startDateInput.value.trim() !== "") {
-              tags.push(`start_date:${startDateInput.value.trim()}`);
-            }
-            if (address.value.trim() !== "") {
-              tags.push(`address:${address.value.trim()}`);
-            }
-            if (website.value.trim() !== "") {
-              tags.push(`website:${website.value.trim()}`);
-            }
-            if (contactPerson.value.trim() !== "") {
-              tags.push(`contact_person:${contactPerson.value.trim()}`);
-            }
-            
-          }
-      
-          if (profileType === "veterinarian") {
-            vetDegreeCheckboxes.forEach(checkbox => {
-              if (checkbox.checked) {
-                tags.push(`vet_degree:${checkbox.value}`);
-              }
-            });
-            if (vetOfficeAddressInput.value.trim() !== "") {
-              tags.push(`office_address:${vetOfficeAddressInput.value.trim()}`);
-            }
-            if (vetPhoneNumberInput.value.trim() !== "") {
-              tags.push(`vet_phone_number:${vetPhoneNumberInput.value.trim()}`);
-            }
-            if (vetLearnAboutInput.value.trim() !== "") {
-              tags.push(`vet_learn_about:${vetLearnAboutInput.value.trim()}`);
-            }
 
-          }
-          // Assign tags to hidden input
-          customerTagsInput.value = tags.join(', ');
+          interestCheckboxes.forEach(checkbox => {
+            if (checkbox.checked) {
+              tags.push(`interest_areas:${checkbox.value}`);
+            }
+          });
 
-        });
+          protocolCheckboxes.forEach(checkbox => {
+            if (checkbox.checked) {
+              tags.push(`protocol_status:${checkbox.value}`);
+            }
+          });
+
+          if (speciesInterestInput.value.trim() !== "") {
+            tags.push(`species_interest:${speciesInterestInput.value.trim()}`);
+          }
+          if (petsEnrolledInput.value.trim() !== "") {
+            tags.push(`pets_enrolled:${petsEnrolledInput.value.trim()}`);
+          }
+          if (startDateInput.value.trim() !== "") {
+            tags.push(`start_date:${startDateInput.value.trim()}`);
+          }
+          if (address.value.trim() !== "") {
+            tags.push(`address:${address.value.trim()}`);
+          }
+          if (website.value.trim() !== "") {
+            tags.push(`website:${website.value.trim()}`);
+          }
+          if (contactPerson.value.trim() !== "") {
+            tags.push(`contact_person:${contactPerson.value.trim()}`);
+          }
+        }
+
+        if (profileType === "veterinarian") {
+          vetDegreeCheckboxes.forEach(checkbox => {
+            if (checkbox.checked) {
+              tags.push(`vet_degree:${checkbox.value}`);
+            }
+          });
+          if (vetOfficeAddressInput.value.trim() !== "") {
+            tags.push(`office_address:${vetOfficeAddressInput.value.trim()}`);
+          }
+          if (vetPhoneNumberInput.value.trim() !== "") {
+            tags.push(`vet_phone_number:${vetPhoneNumberInput.value.trim()}`);
+          }
+          if (vetLearnAboutInput.value.trim() !== "") {
+            tags.push(`vet_learn_about:${vetLearnAboutInput.value.trim()}`);
+          }
+        }
+
+        customerTagsInput.value = tags.join(', ');
+        updateHiddenField();
       });
 
-    }, 3000);
+      // Call initial updates after timeout
+      updateSubmitButtonState();
+      updateHiddenField();
 
-    // Get elements
-const termsCheckbox = document.getElementById('termsAgreement');
-const emailCheckbox = document.getElementById('emailAgreement');
-const submitButton = document.getElementById('registerSubmit');
+    }, 1000);
 
-// Function to check if both checkboxes are checked
-function updateSubmitButtonState() {
-  if (termsCheckbox.checked && emailCheckbox.checked) {
-    submitButton.disabled = false;
-    submitButton.classList.remove('disabled');
-  } else {
-    submitButton.disabled = true;
-    submitButton.classList.add('disabled');
-  }
-}
+    // Add event listeners to checkboxes
+    termsCheckbox.addEventListener('change', updateSubmitButtonState);
+    emailCheckbox.addEventListener('change', function () {
+      updateSubmitButtonState();
+      updateHiddenField();
+    });
 
-// Initial check on page load
-updateSubmitButtonState();
-
-// Add event listeners to checkboxes
-termsCheckbox.addEventListener('change', updateSubmitButtonState);
-emailCheckbox.addEventListener('change', updateSubmitButtonState);
-
+  });
 </script>
 
 
