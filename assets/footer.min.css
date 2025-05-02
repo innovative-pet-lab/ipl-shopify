@@ -259,7 +259,8 @@ footer select:focus-visible {
 }
 @media screen and (min-width:992px) {
     footer .footer-menu-accordion ul li a:hover {
-        padding-left: 15px
+        padding-left: 0;
+        text-decoration: underline;
     }
     footer .footer-menu-accordion ul li a:before {
         content: "";
@@ -267,7 +268,8 @@ footer select:focus-visible {
         left: 0;
         top: 50%;
         width: 0;
-        height: 1px
+        height: 1px;
+        display: none;
     }
     footer .footer-menu-accordion ul li a:hover:before {
         width: 10px

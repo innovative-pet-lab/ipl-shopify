@@ -465,7 +465,7 @@ td.product-order-img-wrapper {
 
 @media (max-width:1199px) {
     .yv-login-form {
-        max-width: 390px;
+        max-width: 890px;
         padding: 30px 35px 40px
     }
     .customer-page-content {
@@ -495,7 +495,7 @@ td.product-order-img-wrapper {
         justify-content: left
     }
     .yv-login-form {
-        max-width: 350px;
+        max-width: 650px;
         padding: 30px 25px;
     }
     .customer-page-content {

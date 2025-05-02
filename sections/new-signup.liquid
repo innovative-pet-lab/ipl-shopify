@@ -96,7 +96,7 @@
                   <select class="form-control" id="signUpForm-ProfileType">
                     <option value="" selected>Select Account Type</option>
                     <option value="wholesale">Wholesale</option>
-                    <option value="veterinarian">Veterinarian</option>
+                    <option value="practitioner">Practitioner</option>
                     <option value="clinical">Clinical trial / Research</option>
                     <option value="customer">Customer</option>
                   </select>
@@ -351,7 +351,7 @@
           clinicalFields.style.display = "block";
           veterinarianFields.style.display = "none";
           wholesaleFields.style.display = "none";
-        } else if (profileTypeSelect.value === "veterinarian") {
+        } else if (profileTypeSelect.value === "practitioner") {
           clinicalFields.style.display = "none";
           veterinarianFields.style.display = "block";
           wholesaleFields.style.display = "none";
@@ -421,7 +421,7 @@
           }
         }
 
-        if (profileType === "veterinarian") {
+        if (profileType === "practitioner") {
           vetDegreeCheckboxes.forEach(checkbox => {
             if (checkbox.checked) {
               tags.push(`vet_degree:${checkbox.value}`);
