@@ -1138,7 +1138,8 @@
   },
   "platform_customizations": {
     "custom_css": [
-      ".jdgm-rev-widg__title {color: #000; font-weight: 700;}"
+      ".jdgm-rev-widg__title {color: #000; font-weight: 700;}",
+      ".samitaWS-customized-original-price {font-size: 14px!important;}"
     ]
   }
 }
