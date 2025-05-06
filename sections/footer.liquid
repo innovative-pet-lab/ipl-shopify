@@ -442,75 +442,75 @@ window.addEventListener('DOMContentLoaded', () => {
   }
 });
 </script>
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-  
-  let discountCode = 'default5';
+{% comment %} <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    
+    let discountCode = 'default5';
 
-  if (window.customerTags.includes('wholesale') && window.productTitle.includes('Stress')) {
-    discountCode = 'wholesaleST';
-  } else if (window.customerTags.includes('wholesale') && window.productTitle.includes('Comprehensive')) {
-    discountCode = 'wholesaleCompCat';
-  }
+    if (window.customerTags.includes('wholesale') && window.productTitle.includes('Stress')) {
+      discountCode = 'wholesaleST';
+    } else if (window.customerTags.includes('wholesale') && window.productTitle.includes('Comprehensive')) {
+      discountCode = 'wholesaleCompCat';
+    }
 
-  
-  document.querySelector('.add_to_cart').addEventListener('click', function (e) {
-    e.preventDefault();
+    
+    document.querySelector('.add_to_cart').addEventListener('click', function (e) {
+      e.preventDefault();
 
-    const variantId = document.querySelector('[name="id"]').value;
+      const variantId = document.querySelector('[name="id"]').value;
 
-    // Step 1: Add item to cart
-    fetch('/cart/add.js', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({
-        items: [
-          {
-            id: variantId,
-            quantity: 1
-          }
-        ]
+      // Step 1: Add item to cart
+      fetch('/cart/add.js', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          items: [
+            {
+              id: variantId,
+              quantity: 1
+            }
+          ]
+        })
       })
-    })
-    .then(response => response.json())
-    .then(() => {
-      // Step 2: Apply discount silently
-      return fetch(`/discount/${discountCode}`)
-    })
-    .then(() => {
-      // Step 3: Show floating message
-      const messageBox = document.createElement('div');
-      messageBox.classList.add('snackbar-discount');
-      messageBox.textContent = `✅ Discount code ${discountCode} will be applied at checkout.`;
-      messageBox.style.cssText = `
-      position: absolute;
-      top: 20px;
-      right: 20px;
-      padding: 12px 16px;
-      background: #e6f7e6;
-      border: 1px solid #b5e6b5;
-      color: #2d662d;
-      border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      z-index: 9999;
-      font-size: 14px;
-    `;
+      .then(response => response.json())
+      .then(() => {
+        // Step 2: Apply discount silently
+        return fetch(`/discount/${discountCode}`)
+      })
+      .then(() => {
+        // Step 3: Show floating message
+        const messageBox = document.createElement('div');
+        messageBox.classList.add('snackbar-discount');
+        messageBox.textContent = `✅ Discount code ${discountCode} will be applied at checkout.`;
+        messageBox.style.cssText = `
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        padding: 12px 16px;
+        background: #e6f7e6;
+        border: 1px solid #b5e6b5;
+        color: #2d662d;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        z-index: 9999;
+        font-size: 14px;
+      `;
 
-      document.body.appendChild(messageBox);
+        document.body.appendChild(messageBox);
 
-      // Optional: Auto-hide after 5 seconds
-      setTimeout(() => {
-        messageBox.remove();
-      }, 5000);
-    })
-    .catch(err => {
-      console.error('Failed to add to cart or apply discount:', err);
+        // Optional: Auto-hide after 5 seconds
+        setTimeout(() => {
+          messageBox.remove();
+        }, 5000);
+      })
+      .catch(err => {
+        console.error('Failed to add to cart or apply discount:', err);
+      });
     });
   });
-});
-</script>
+</script> {% endcomment %}
 {% schema %}
 {
   "name": "t:sections.footer.name",
