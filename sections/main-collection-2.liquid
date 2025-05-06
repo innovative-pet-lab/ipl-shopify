@@ -329,6 +329,7 @@
                   {% endif %}
                 </p>
                 <p class="product-price">{{ product.price | money }}</p>
+                <div bss-b2b-product-id="{{ product.id }}" bss-b2b-product-price ></div>
               </div>
               <button class="add-to-cart" data-id="{{ product.selected_or_first_available_variant.id }}">
                 <span class="cart-icon">
