@@ -215,6 +215,12 @@
       });
       });
     </script>
+    {% if customer %}
+      <script>
+        window.customerTags = {{ customer.tags | json }};
+        window.productTitle = {{ product.title | json }};
+      </script>
+    {% endif %}
     {%- if request.page_type contains 'customers' -%}
       <div class="yv-reorder-popup">
         <div class="yv-reorder-popup-Container">

@@ -442,7 +442,18 @@ window.addEventListener('DOMContentLoaded', () => {
   }
 });
 </script>
-<script>
+{% comment %} <script>
+document.addEventListener("DOMContentLoaded", function () {
+  
+  let discountCode = 'default5';
+
+  if (window.customerTags.includes('wholesale') && window.productTitle.includes('Stress')) {
+    discountCode = 'wholesaleST';
+  } else if (window.customerTags.includes('wholesale') && window.productTitle.includes('Comprehensive')) {
+    discountCode = 'wholesaleCompCat';
+  }
+
+  
   document.querySelector('.add_to_cart').addEventListener('click', function (e) {
     e.preventDefault();
 
@@ -466,12 +477,13 @@ window.addEventListener('DOMContentLoaded', () => {
     .then(response => response.json())
     .then(() => {
       // Step 2: Apply discount silently
-      return fetch('/discount/wholesale30');
+      return fetch(`/discount/${discountCode}`)
     })
     .then(() => {
       // Step 3: Show floating message
       const messageBox = document.createElement('div');
-      messageBox.textContent = "✅ Discount code 'wholesale30' will be applied at checkout.";
+      messageBox.classList.add('snackbar-discount');
+      messageBox.textContent = `✅ Discount code ${discountCode} will be applied at checkout.`;
       messageBox.style.cssText = `
       position: absolute;
       top: 20px;
@@ -497,7 +509,8 @@ window.addEventListener('DOMContentLoaded', () => {
       console.error('Failed to add to cart or apply discount:', err);
     });
   });
-</script>
+});
+</script> {% endcomment %}
 {% schema %}
 {
   "name": "t:sections.footer.name",
