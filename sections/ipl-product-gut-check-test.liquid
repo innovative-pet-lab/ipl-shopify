@@ -113,7 +113,12 @@
       <h1>{{ section.settings.heading_text }}</h1>
     {% endif %}
     {% if section.settings.subheading_text != empty %}
-      <p>{{ section.settings.subheading_text }}</p>
+      {% assign take_mystery_block = product.metafields.custom.take_mystery_block %}
+      {% if take_mystery_block != blank %}
+        <p>{{ take_mystery_block | metafield_tag }}</p>
+      {% else %}
+        <p>{{ section.settings.subheading_text }}</p>
+      {% endif %}
     {% endif %}
   </div>
 
@@ -131,11 +136,12 @@
       </div>
     {% endfor %}
   </div>
+
 </div>
 
 {% schema %}
 {
-  "name": "IPL gut check test",
+  "name": "IPL gut check",
   "settings": [
     {
       "type": "text",
