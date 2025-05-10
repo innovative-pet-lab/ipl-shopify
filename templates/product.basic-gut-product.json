@@ -512,27 +512,14 @@
       "blocks": {
         "test_item_zQb3BG": {
           "type": "test_item",
+          "repeater": "{{ product.metafields.custom.ipl_product_benefits.value }}",
           "settings": {
-            "list_item": "Fewer tummy troubles"
-          }
-        },
-        "test_item_eeiyxX": {
-          "type": "test_item",
-          "settings": {
-            "list_item": "Stronger immune system"
-          }
-        },
-        "test_item_gmYTxc": {
-          "type": "test_item",
-          "settings": {
-            "list_item": "Custom health plan"
+            "list_item": "{{ block.repeater.item_label.value }}"
           }
         }
       },
       "block_order": [
-        "test_item_zQb3BG",
-        "test_item_eeiyxX",
-        "test_item_gmYTxc"
+        "test_item_zQb3BG"
       ],
       "settings": {
         "heading_text": "Benefits of understanding & treating symptoms"
