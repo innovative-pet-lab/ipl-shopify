@@ -483,38 +483,15 @@
       "blocks": {
         "test_item_wjUVkG": {
           "type": "test_item",
+          "repeater": "{{ product.metafields.custom.gut_check_health.value }}",
           "settings": {
-            "test_label": "Diarrhea or Constipation",
-            "test_icon": "shopify://shop_images/diarrhea-constipation.png"
-          }
-        },
-        "test_item_NBqpgg": {
-          "type": "test_item",
-          "settings": {
-            "test_label": "Mood/Behavior",
-            "test_icon": "shopify://shop_images/mood-behavior.png"
-          }
-        },
-        "test_item_yaVTGK": {
-          "type": "test_item",
-          "settings": {
-            "test_label": "Skin/Coat Issues/Itching",
-            "test_icon": "shopify://shop_images/parasites.png"
-          }
-        },
-        "test_item_FYJh8f": {
-          "type": "test_item",
-          "settings": {
-            "test_label": "Vomiting",
-            "test_icon": "shopify://shop_images/vomiting.png"
+            "test_label": "{{ block.repeater.test_label.value }}",
+            "test_icon": "{{ block.repeater.icon.value }}"
           }
         }
       },
       "block_order": [
-        "test_item_wjUVkG",
-        "test_item_NBqpgg",
-        "test_item_yaVTGK",
-        "test_item_FYJh8f"
+        "test_item_wjUVkG"
       ],
       "settings": {
         "heading_text": "Take the mystery out of your pet’s gut health.",
