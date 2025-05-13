@@ -3,6 +3,7 @@
   <div
     class="{% if mainProduct %}yv-main-product-detail{%else%}yv-feature-product-detail{% endif %} {{ sliderClass }}"
     style="--layoutRadius:{% if settings.layout_style == 'rounded' %}6px{% else %}0px{% endif %};"
+    bss-b2b-main-product-form
   >
     {%- assign product_form_id = 'product-form-' | append: section.id -%}
     {%- for block in section.blocks -%}
@@ -16,22 +17,22 @@
             {% unless mainProduct %}</a>{% endunless %}
           </{{ block.settings.seo_heading }}>
           {% if product.tags.size > 0 %}
-            {% assign allowed_tags = "Cats,Dogs" | split: "," %}
-                  {% assign product_tags = product.tags | uniq %}
+            {% assign allowed_tags = 'Cats,Dogs' | split: ',' %}
+            {% assign product_tags = product.tags | uniq %}
 
-                  {% assign filtered_tags = "" %}
-                  {% for tag in product_tags %}
-                    {% if tag != "Best Seller" and allowed_tags contains tag %}
-                      {% if filtered_tags == "" %}
-                        {% assign filtered_tags = tag %}
-                      {% else %}
-                        {% assign filtered_tags = filtered_tags | append: " and " | append: tag %}
-                      {% endif %}
-                    {% endif %}
-                  {% endfor %}
+            {% assign filtered_tags = '' %}
+            {% for tag in product_tags %}
+              {% if tag != 'Best Seller' and allowed_tags contains tag %}
+                {% if filtered_tags == '' %}
+                  {% assign filtered_tags = tag %}
+                {% else %}
+                  {% assign filtered_tags = filtered_tags | append: ' and ' | append: tag %}
+                {% endif %}
+              {% endif %}
+            {% endfor %}
 
             <p class="product-tags">
-              {% if filtered_tags != "" %}
+              {% if filtered_tags != '' %}
                 For {{ filtered_tags }}
               {% endif %}
             </p>
@@ -103,9 +104,11 @@
           <p class="yv-product-detail-desc" {{ block.shopify_attributes }}>{{ block.settings.text }}</p>
 
         {%- when 'price' -%}
-                        <spark-pdp parent-id="{{ product.id }}"></spark-pdp>
+          <spark-pdp parent-id="{{ product.id }}"></spark-pdp>
           <div data-spark="b2c-only" class="yv-pricebox-outer">
-            {% render 'product-form-price', block: block, current_variant: current_variant %}
+            <span bss-b2b-product-id="{{ product.id }}" bss-b2b-product-price bss-b2b-variant-price bss-b2b-variant-id="{{ product.selected_or_first_available_variant.id }}" bss-b2b-featured-product="true">
+               {% render 'product-form-price', block: block, current_variant: current_variant %}
+            </span>
             {% if section.settings.enable_shipping_policy %}
               {%- if cart.taxes_included or shop.shipping_policy.body != blank -%}
                 <p class="yv-product-tax-shipping">
@@ -119,6 +122,7 @@
               {%- endif -%}
             {% endif %}
           </div>
+          <div class='bss-b2b-qb-table'></div>             
         {%- when 'quantity' -%}
           <div class="pdp-flex">
             <div class="yv-product-quantity" {{ block.shopify_attributes }}>
@@ -211,7 +215,12 @@
                         {%- if current_variant_selling_groups contains selling_plan_group.id -%}
                           <div class="selling_group">
                             <div class="sellingPlanHeading" for="sellingGroup{{ forloop.index }}">
-                              <input type="radio" id="sellingGroup{{ forloop.index }}" name="sellingPlanHeading" value="">
+                              <input
+                                type="radio"
+                                id="sellingGroup{{ forloop.index }}"
+                                name="sellingPlanHeading"
+                                value=""
+                              >
                               <label for="sellingGroup{{ forloop.index }}">{{ selling_plan_group.name }}</label>
                             </div>
                             <div class="selling_plan" data-val>
@@ -227,7 +236,7 @@
                                   </option>
                                 {%- endfor -%}
                               </select>
-                            </div> 
+                            </div>
                           </div>
                         {%- endif -%}
                       {%- endfor -%}
@@ -256,7 +265,8 @@
                     </label>
                   </div>
                 {% endif %}
-                <div data-spark="b2c-only"
+                <div
+                  data-spark="b2c-only"
                   class="pdp-action-container yv-checkout-btn{% if show_dynamic_checkout %} dynamic-checkout-enabled{% endif %}{% if block.settings.enable_fullwidth %} yv-checkout-btn-full-width{% endif %}{% unless current_variant.available %} disabled {% elsif settings.enable_terms_checkbox and settings.terms_conditions_text != blank %} disabled{% endunless %}"
                   data-button-wrapper
                 >
@@ -269,11 +279,10 @@
                       disabled
                     {% endunless %}
                   >
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M11 9H13V6H16V4H13V1H11V4H8V6H11M7 18C5.9 18 5 18.9 5 20C5 21.1 5.9 22 7 22C8.1 22 9 21.1 9 20C9 18.9 8.1 18 7 18ZM17 18C15.9 18 15 18.9 15 20C15 21.1 15.9 22 17 22C18.1 22 19 21.1 19 20C19 18.9 18.1 18 17 18ZM7.2 14.8V14.7L8.1 13H15.5C16.2 13 16.9 12.6 17.2 12L21.1 5L19.4 4L15.5 11H8.5L4.3 2H1V4H3L6.6 11.6L5.2 14C5.1 14.3 5 14.6 5 15C5 16.1 5.9 17 7 17H19V15H7.4C7.3 15 7.2 14.9 7.2 14.8Z" fill="white"/>
+                    </svg>
 
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M11 9H13V6H16V4H13V1H11V4H8V6H11M7 18C5.9 18 5 18.9 5 20C5 21.1 5.9 22 7 22C8.1 22 9 21.1 9 20C9 18.9 8.1 18 7 18ZM17 18C15.9 18 15 18.9 15 20C15 21.1 15.9 22 17 22C18.1 22 19 21.1 19 20C19 18.9 18.1 18 17 18ZM7.2 14.8V14.7L8.1 13H15.5C16.2 13 16.9 12.6 17.2 12L21.1 5L19.4 4L15.5 11H8.5L4.3 2H1V4H3L6.6 11.6L5.2 14C5.1 14.3 5 14.6 5 15C5 16.1 5.9 17 7 17H19V15H7.4C7.3 15 7.2 14.9 7.2 14.8Z" fill="white"/>
-                  </svg>
-  
                     <span>
                       {%- unless current_variant.available -%}
                         {{ 'products.product.sold_out' | t }}
@@ -550,13 +559,49 @@
                   '
                 {% endif %}
               >
-                {%- comment %}<locksmith:506e>{% endcomment -%}
-                  {%- assign locksmith_206f_forloop__size = 0 %}{%- for product in recommendations.products limit: block.settings.products_count -%}{% capture var %}{% render 'locksmith-variables', scope: 'subject', subject: product, subject_parent: recommendations, variable: 'transparent' %}{% endcapture %}{% if var == 'true' %}{% assign locksmith_206f_forloop__size = locksmith_206f_forloop__size | plus: 1 %}{% endif %}{% endfor %}{% assign locksmith_206f_forloop__index = nil -%}
-                {%- comment %}</locksmith:506e>{% endcomment -%}
+                {%- comment %}<locksmith:506e>{%- endcomment %}
+                {%- assign locksmith_206f_forloop__size = 0 %}
                 {%- for product in recommendations.products limit: block.settings.products_count -%}
-                  {%- comment %}<locksmith:ed13>{% endcomment -%}
-                    {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: product, subject_parent: recommendations, variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% if locksmith_206f_forloop__index == nil %}{% assign locksmith_206f_forloop__index = 1 %}{% assign locksmith_206f_forloop__index0 = 0 %}{% else %}{% assign locksmith_206f_forloop__index = locksmith_206f_forloop__index | plus: 1 %}{% assign locksmith_206f_forloop__index0 = locksmith_206f_forloop__index0 | plus: 1 %}{% endif %}{% if locksmith_206f_forloop__index == 1 %}{% assign locksmith_206f_forloop__first = true %}{% else %}{% assign locksmith_206f_forloop__first = false %}{% endif %}{% if locksmith_206f_forloop__index == locksmith_206f_forloop__size %}{% assign locksmith_206f_forloop__last = true %}{% else %}{% assign locksmith_206f_forloop__last = false %}{% endif %}{% assign locksmith_206f_forloop__rindex = locksmith_206f_forloop__size | minus: locksmith_206f_forloop__index | minus: 1 %}{% assign locksmith_206f_forloop__rindex0 = locksmith_206f_forloop__size | minus: locksmith_206f_forloop__index0 | minus: 1 %}{% else %}{% continue %}{% endif -%}
-                  {%- comment %}</locksmith:ed13>{% endcomment -%}
+                  {% capture var %}{% render 'locksmith-variables', scope: 'subject', subject: product, subject_parent: recommendations, variable: 'transparent' %}{% endcapture -%}
+                  {%- if var == 'true' -%}
+                    {%- assign locksmith_206f_forloop__size = locksmith_206f_forloop__size | plus: 1 -%}
+                  {%- endif -%}
+                {%- endfor -%}
+                {%- assign locksmith_206f_forloop__index = null -%}
+                {%- comment %}</locksmith:506e>{%- endcomment %}
+                {%- for product in recommendations.products limit: block.settings.products_count -%}
+                  {%- comment %}<locksmith:ed13>{%- endcomment %}
+                  {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: product, subject_parent: recommendations, variable: 'transparent' %}{% endcapture -%}
+                  {%- if var == 'true' -%}
+                    {%- if locksmith_206f_forloop__index == null -%}
+                      {%- assign locksmith_206f_forloop__index = 1 -%}
+                      {%- assign locksmith_206f_forloop__index0 = 0 -%}
+                    {%- else -%}
+                      {%- assign locksmith_206f_forloop__index = locksmith_206f_forloop__index | plus: 1 -%}
+                      {%- assign locksmith_206f_forloop__index0 = locksmith_206f_forloop__index0 | plus: 1 -%}
+                    {%- endif -%}
+                    {%- if locksmith_206f_forloop__index == 1 -%}
+                      {%- assign locksmith_206f_forloop__first = true -%}
+                    {%- else -%}
+                      {%- assign locksmith_206f_forloop__first = false -%}
+                    {%- endif -%}
+                    {%- if locksmith_206f_forloop__index == locksmith_206f_forloop__size -%}
+                      {%- assign locksmith_206f_forloop__last = true -%}
+                    {%- else -%}
+                      {%- assign locksmith_206f_forloop__last = false -%}
+                    {%- endif -%}
+                    {%- assign locksmith_206f_forloop__rindex = locksmith_206f_forloop__size
+                      | minus: locksmith_206f_forloop__index
+                      | minus: 1
+                    -%}
+                    {%- assign locksmith_206f_forloop__rindex0 = locksmith_206f_forloop__size
+                      | minus: locksmith_206f_forloop__index0
+                      | minus: 1
+                    -%}
+                  {%- else -%}
+                    {%- continue -%}
+                  {%- endif -%}
+                  {%- comment %}</locksmith:ed13>{%- endcomment %}
                   {%- assign currentValue = locksmith_206f_forloop__index | modulo: 2 -%}
                   {%- if locksmith_206f_forloop__first or currentValue == 1 -%}
                     <div class="yv-complementary-product-divider">
@@ -657,167 +702,169 @@
           {% endunless %}
         {%- when 'product-countdown' -%}
           {% render 'pdp-countdown', product: product, current_variant: current_variant, block: block %}
-          {%- when 'product_variations' -%}
-            {% render 'product-variations', product: product, current_variant: current_variant, block: block %}
-        {% comment %} {%- when 'button' -%}
-          <div class="product_button" {{ block.shopify_attributes }}>
-            {%- form 'product',
-              product,
-              id: product_form_id,
-              class: 'form main-product-form',
-              novalidate: 'novalidate',
-              data-type: 'add-to-cart-form'
-            -%}
-              {%- liquid
-                assign gift_card_recipient_feature_active = false
-                if block.settings.show_recipient_form and product.gift_card?
-                  assign gift_card_recipient_feature_active = true
-                endif
-                assign show_dynamic_checkout = false
-                if block.settings.dynamic_checkout_btn and gift_card_recipient_feature_active == false
-                  assign show_dynamic_checkout = true
-                endif
+        {%- when 'product_variations' -%}
+          {% render 'product-variations', product: product, current_variant: current_variant, block: block %}
+          {% comment %}
+            {%- when 'button' -%}
+            <div class="product_button" {{ block.shopify_attributes }}>
+              {%- form 'product',
+                product,
+                id: product_form_id,
+                class: 'form main-product-form',
+                novalidate: 'novalidate',
+                data-type: 'add-to-cart-form'
               -%}
-              {% if gift_card_recipient_feature_active %}
-                {%- render 'gift-card-recipient', product: product, form: form, section: section -%}
-              {% endif %}
-              {%- liquid
-                render 'product-variants', product: product
-                assign preorder = false
-                if settings.enable_preorder and current_variant.inventory_policy == 'continue' and current_variant.inventory_quantity <= 0
-                  assign preorder = true
-                endif
-              -%}
-              {%- if mainProduct and block.settings.show_subscriptions_plan -%}
-                <input type="hidden" name="selling_plan" value="">
-
                 {%- liquid
-                  assign current_variant_selling_groups = ''
-                  assign current_variant_selling_plans = ''
-                  for selling_plan_allocation in current_variant.selling_plan_allocations
-                    unless current_variant_selling_groups contains selling_plan_allocation.selling_plan_group_id
-                      assign current_variant_selling_groups = current_variant_selling_groups | append: selling_plan_allocation.selling_plan_group_id
-                    endunless
-                    unless current_variant_selling_plans contains selling_plan_allocation.selling_plan.id
-                      assign current_variant_selling_plans = current_variant_selling_plans | append: selling_plan_allocation.selling_plan.id
-                    endunless
-                  endfor
+                  assign gift_card_recipient_feature_active = false
+                  if block.settings.show_recipient_form and product.gift_card?
+                    assign gift_card_recipient_feature_active = true
+                  endif
+                  assign show_dynamic_checkout = false
+                  if block.settings.dynamic_checkout_btn and gift_card_recipient_feature_active == false
+                    assign show_dynamic_checkout = true
+                  endif
                 -%}
-                {%- if current_variant.selling_plan_allocations.size > 0 -%}
-                  <div class="selling_plan_wrapper no-js-hidden" data-selling-plan-container>
-                    <div class="selling_group active">
-                      <div class="sellingPlanHeading" for="oneTimePurchase">
-                        <input type="radio" id="oneTimePurchase" name="sellingPlanHeading" checked>
-                        <label for="oneTimePurchase">{{ 'products.product.one_time_purchase' | t }}</label>
-                      </div>
-                    </div>
-                    {%- for selling_plan_group in product.selling_plan_groups -%}
-                      {%- if current_variant_selling_groups contains selling_plan_group.id -%}
-                        <div class="selling_group">
-                          <div class="sellingPlanHeading" for="sellingGroup{{ forloop.index }}">
-                            <input type="radio" id="sellingGroup{{ forloop.index }}" name="sellingPlanHeading" value="">
-                            <label for="sellingGroup{{ forloop.index }}">{{ selling_plan_group.name }}</label>
-                          </div>
-                          <div class="selling_plan" data-val>
-                            <select class="selling_plan_attribute">
-                              {%- for selling_plan in selling_plan_group.selling_plans -%}
-                                <option
-                                  value="{{ selling_plan.id }}"
-                                  {% if forloop.first %}
-                                    selected
-                                  {% endif %}
-                                >
-                                  {{ selling_plan.name }}
-                                </option>
-                              {%- endfor -%}
-                            </select>
-                          </div> 
-                        </div>
-                      {%- endif -%}
-                    {%- endfor -%}
-                  </div>
-                {%- endif -%}
-              {%- endif -%}
-              {%- if mainProduct -%}
-                {%- render 'product-pickup-availability', product: product -%}
-              {%- endif -%}
-              <input type="hidden" name="id" value="{{ current_variant.id }}" disabled>
-              {{ form | payment_terms }}
-              <div class="productErrors error-text" style="display:none" role="status"></div>
-              {% if settings.enable_terms_checkbox and settings.terms_conditions_text != blank %}
-                <div class="terms_conditions-wrapper custom-checkbox" data-terms-conditions-wrapper>
-                  <input
-                    type="checkbox"
-                    name="terms_conditions"
-                    value="yes"
-                    title="{{ settings.terms_conditions_text | strip_html }}"
-                    id="terms_conditions_input"
-                    onClick="acceptTermsConditions(event)"
-                    data-section="shopify-section-{{ section.id }}"
-                  >
-                  <span class="checkmark"></span>
-                  <label for="terms_conditions_input" title="{{ settings.terms_conditions_text | strip_html }}">
-                    {{ settings.terms_conditions_text }}
-                  </label>
-                </div>
-              {% endif %}
-              <div data-spark="b2c-only"
-                class="pdp-action-container yv-checkout-btn{% if show_dynamic_checkout %} dynamic-checkout-enabled{% endif %}{% if block.settings.enable_fullwidth %} yv-checkout-btn-full-width{% endif %}{% unless current_variant.available %} disabled {% elsif settings.enable_terms_checkbox and settings.terms_conditions_text != blank %} disabled{% endunless %}"
-                data-button-wrapper
-              >
-                <button
-                  type="submit"
-                  class="Sd_addProduct add_to_cart button med-btn"
-                  {% unless current_variant.available %}
-                    disabled
-                  {% elsif settings.enable_terms_checkbox and settings.terms_conditions_text != blank %}
-                    disabled
-                  {% endunless %}
-                >
-                  <span>
-                    {%- unless current_variant.available -%}
-                      {{ 'products.product.sold_out' | t }}
-                    {%- else -%}
-                      {%- if preorder -%}
-                        {{ 'products.product.preorder' | t }}
-                      {%- else -%}
-                        {{ 'products.product.add_to_cart' | t }}
-                      {%- endif -%}
-                    {%- endunless -%}
-                  </span>
-                  <svg
-                    style="margin: auto; display: none; shape-rendering: auto;"
-                    width="200px"
-                    height="200px"
-                    viewBox="0 0 100 100"
-                    preserveAspectRatio="xMidYMid"
-                    class="svg-loader"
-                  >
-                    <circle cx="50" cy="50" fill="none" stroke="currentcolor" stroke-width="6" r="35"
-                      stroke-dasharray="164.93361431346415 56.97787143782138">
-                      <animateTransform attributeName="transform" type="rotate" repeatCount="indefinite" dur="1s"
-                        values="0 50 50;360 50 50" keyTimes="0;1" />
-                    </circle>
-                  </svg>
-                </button>
-                {%- if show_dynamic_checkout -%}
-                  {{ form | payment_button }}
-                {%- endif -%}
-              </div>
-            {%- endform -%}
-          </div>
-          {%- comment -%}
-            Live region for announcing updated price and availability to screen readers
-          {%- endcomment -%}
-          <p class="visually-hidden" data-product-status aria-live="polite" role="status"></p>
+                {% if gift_card_recipient_feature_active %}
+                  {%- render 'gift-card-recipient', product: product, form: form, section: section -%}
+                {% endif %}
+                {%- liquid
+                  render 'product-variants', product: product
+                  assign preorder = false
+                  if settings.enable_preorder and current_variant.inventory_policy == 'continue' and current_variant.inventory_quantity <= 0
+                    assign preorder = true
+                  endif
+                -%}
+                {%- if mainProduct and block.settings.show_subscriptions_plan -%}
+                  <input type="hidden" name="selling_plan" value="">
 
-          {%- comment -%}
-            Live region for announcing that the product form has been submitted and the
-            product is in the process being added to the cart
-          {%- endcomment -%}
-          <p class="visually-hidden" data-loader-status aria-live="assertive" role="alert" aria-hidden="true">
-            Adding product to your cart
-          </p> {% endcomment %}
+                  {%- liquid
+                    assign current_variant_selling_groups = ''
+                    assign current_variant_selling_plans = ''
+                    for selling_plan_allocation in current_variant.selling_plan_allocations
+                      unless current_variant_selling_groups contains selling_plan_allocation.selling_plan_group_id
+                        assign current_variant_selling_groups = current_variant_selling_groups | append: selling_plan_allocation.selling_plan_group_id
+                      endunless
+                      unless current_variant_selling_plans contains selling_plan_allocation.selling_plan.id
+                        assign current_variant_selling_plans = current_variant_selling_plans | append: selling_plan_allocation.selling_plan.id
+                      endunless
+                    endfor
+                  -%}
+                  {%- if current_variant.selling_plan_allocations.size > 0 -%}
+                    <div class="selling_plan_wrapper no-js-hidden" data-selling-plan-container>
+                      <div class="selling_group active">
+                        <div class="sellingPlanHeading" for="oneTimePurchase">
+                          <input type="radio" id="oneTimePurchase" name="sellingPlanHeading" checked>
+                          <label for="oneTimePurchase">{{ 'products.product.one_time_purchase' | t }}</label>
+                        </div>
+                      </div>
+                      {%- for selling_plan_group in product.selling_plan_groups -%}
+                        {%- if current_variant_selling_groups contains selling_plan_group.id -%}
+                          <div class="selling_group">
+                            <div class="sellingPlanHeading" for="sellingGroup{{ forloop.index }}">
+                              <input type="radio" id="sellingGroup{{ forloop.index }}" name="sellingPlanHeading" value="">
+                              <label for="sellingGroup{{ forloop.index }}">{{ selling_plan_group.name }}</label>
+                            </div>
+                            <div class="selling_plan" data-val>
+                              <select class="selling_plan_attribute">
+                                {%- for selling_plan in selling_plan_group.selling_plans -%}
+                                  <option
+                                    value="{{ selling_plan.id }}"
+                                    {% if forloop.first %}
+                                      selected
+                                    {% endif %}
+                                  >
+                                    {{ selling_plan.name }}
+                                  </option>
+                                {%- endfor -%}
+                              </select>
+                            </div>
+                          </div>
+                        {%- endif -%}
+                      {%- endfor -%}
+                    </div>
+                  {%- endif -%}
+                {%- endif -%}
+                {%- if mainProduct -%}
+                  {%- render 'product-pickup-availability', product: product -%}
+                {%- endif -%}
+                <input type="hidden" name="id" value="{{ current_variant.id }}" disabled>
+                {{ form | payment_terms }}
+                <div class="productErrors error-text" style="display:none" role="status"></div>
+                {% if settings.enable_terms_checkbox and settings.terms_conditions_text != blank %}
+                  <div class="terms_conditions-wrapper custom-checkbox" data-terms-conditions-wrapper>
+                    <input
+                      type="checkbox"
+                      name="terms_conditions"
+                      value="yes"
+                      title="{{ settings.terms_conditions_text | strip_html }}"
+                      id="terms_conditions_input"
+                      onClick="acceptTermsConditions(event)"
+                      data-section="shopify-section-{{ section.id }}"
+                    >
+                    <span class="checkmark"></span>
+                    <label for="terms_conditions_input" title="{{ settings.terms_conditions_text | strip_html }}">
+                      {{ settings.terms_conditions_text }}
+                    </label>
+                  </div>
+                {% endif %}
+                <div data-spark="b2c-only"
+                  class="pdp-action-container yv-checkout-btn{% if show_dynamic_checkout %} dynamic-checkout-enabled{% endif %}{% if block.settings.enable_fullwidth %} yv-checkout-btn-full-width{% endif %}{% unless current_variant.available %} disabled {% elsif settings.enable_terms_checkbox and settings.terms_conditions_text != blank %} disabled{% endunless %}"
+                  data-button-wrapper
+                >
+                  <button
+                    type="submit"
+                    class="Sd_addProduct add_to_cart button med-btn"
+                    {% unless current_variant.available %}
+                      disabled
+                    {% elsif settings.enable_terms_checkbox and settings.terms_conditions_text != blank %}
+                      disabled
+                    {% endunless %}
+                  >
+                    <span>
+                      {%- unless current_variant.available -%}
+                        {{ 'products.product.sold_out' | t }}
+                      {%- else -%}
+                        {%- if preorder -%}
+                          {{ 'products.product.preorder' | t }}
+                        {%- else -%}
+                          {{ 'products.product.add_to_cart' | t }}
+                        {%- endif -%}
+                      {%- endunless -%}
+                    </span>
+                    <svg
+                      style="margin: auto; display: none; shape-rendering: auto;"
+                      width="200px"
+                      height="200px"
+                      viewBox="0 0 100 100"
+                      preserveAspectRatio="xMidYMid"
+                      class="svg-loader"
+                    >
+                      <circle cx="50" cy="50" fill="none" stroke="currentcolor" stroke-width="6" r="35"
+                        stroke-dasharray="164.93361431346415 56.97787143782138">
+                        <animateTransform attributeName="transform" type="rotate" repeatCount="indefinite" dur="1s"
+                          values="0 50 50;360 50 50" keyTimes="0;1" />
+                      </circle>
+                    </svg>
+                  </button>
+                  {%- if show_dynamic_checkout -%}
+                    {{ form | payment_button }}
+                  {%- endif -%}
+                </div>
+              {%- endform -%}
+            </div>
+            {%- comment -%}
+              Live region for announcing updated price and availability to screen readers
+            {%- endcomment -%}
+            <p class="visually-hidden" data-product-status aria-live="polite" role="status"></p>
+
+            {%- comment -%}
+              Live region for announcing that the product form has been submitted and the
+              product is in the process being added to the cart
+            {%- endcomment -%}
+            <p class="visually-hidden" data-loader-status aria-live="assertive" role="alert" aria-hidden="true">
+              Adding product to your cart
+            </p>
+          {% endcomment %}
 
         {%- when 'reels' -%}
           <div class="product-video-block">
@@ -847,32 +894,42 @@
 
         {%- when 'description' -%}
           {% if block.settings.show_as_accordion %}
-              {% liquid
-                assign heading = 'products.product.description' | t
-                assign show_description = false
-                if product.description != blank
-                  assign show_description = true
-                elsif request.design_mode == true
-                  assign show_description = true
-                endif
-              %}
+            {% liquid
+              assign heading = 'products.product.description' | t
+              assign show_description = false
+              if product.description != blank
+                assign show_description = true
+              elsif request.design_mode == true
+                assign show_description = true
+              endif
+            %}
             {% if show_description %}
-              {% render 'product-accordion-block' block:block,content_heading:heading,content:product.description,open_default_accordion: block.settings.open_default_accordion %}
+              {% render 'product-accordion-block',
+                block: block,
+                content_heading: heading,
+                content: product.description,
+                open_default_accordion: block.settings.open_default_accordion
+              %}
             {% endif %}
-            {% else %}
-          <div
-            class="yv-product-description rich-editor-text-content {% unless block.settings.description_visibility == 'always' %} {% if block.settings.description_visibility == 'small' %}d-block d-md-none{% else %}d-none d-md-block{% endif %}{% endunless %}"
-            {{ block.shopify_attributes }}
-          >
-            {{
-              product.description
-              | replace: '<table', '<div class="table-responsive"><table '
-              | replace: '</table>', '</table></div>'
-            }}
-          </div>
-        {% endif %}
-      {% when 'accordion' %}
-        {% render 'product-accordion-block' block:block,content_heading:block.settings.content_heading,content:block.settings.content,open_default_accordion: block.settings.open_default_accordion %}
+          {% else %}
+            <div
+              class="yv-product-description rich-editor-text-content {% unless block.settings.description_visibility == 'always' %} {% if block.settings.description_visibility == 'small' %}d-block d-md-none{% else %}d-none d-md-block{% endif %}{% endunless %}"
+              {{ block.shopify_attributes }}
+            >
+              {{
+                product.description
+                | replace: '<table', '<div class="table-responsive"><table '
+                | replace: '</table>', '</table></div>'
+              }}
+            </div>
+          {% endif %}
+        {% when 'accordion' %}
+          {% render 'product-accordion-block',
+            block: block,
+            content_heading: block.settings.content_heading,
+            content: block.settings.content,
+            open_default_accordion: block.settings.open_default_accordion
+          %}
       {%- endcase -%}
     {%- endfor -%}
     {%- liquid
