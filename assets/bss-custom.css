@@ -11,6 +11,9 @@
   font-size: var(--largeText) !important;
 }
 
+[bss-b2b-product-id] span:nth-child(1)[style] {
+    color: #a5a5a5!important;
+}
 [bss-b2b-product-id] span:nth-child(2)[style] {
-  color: red!important;
+  color: #000000!important;
 }
