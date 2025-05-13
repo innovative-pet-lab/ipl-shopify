@@ -237,5 +237,7 @@
     {% if settings.enable_stickers %}
       <div class="fixed-overlay"></div>
     {% endif %}
+        {{ 'bss-custom.css' | asset_url | stylesheet_tag }}
+    <script src="{{ 'bss-custom.js' | asset_url }}" defer></script>
   </body>
 </html>
