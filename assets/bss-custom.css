@@ -17,3 +17,8 @@
 [bss-b2b-product-id] span:nth-child(2)[style] {
   color: #000000!important;
 }
+
+.media-body .flex .yv-prizebox span {
+  color: #26286e;
+  font-weight: bold;
+}
