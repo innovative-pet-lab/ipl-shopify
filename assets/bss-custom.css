@@ -1,0 +1,12 @@
+.bss-b2b-cart-item-qty-table {
+  max-width: unset !important;
+  margin-bottom: 10px;
+}
+[bss-b2b-product-id] span[style] {
+  font-size: 24px !important;
+  font-weight: 700 !important;
+}
+
+[bss-b2b-cart-item-key] span[style] {
+  font-size: var(--largeText) !important;
+}
