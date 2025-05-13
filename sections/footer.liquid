@@ -49,11 +49,17 @@
                   <div class="footer-menu-accordion item-{{ forloop.index | minus: 1 }}">
                     {%- if block.settings.heading != blank -%}
                       <h6 class="footer-menu-head footer-menu-accordion-head text">
-                        {{ block.settings.heading }}
+                        {{ block.settings.heading }}gg
                       </h6>
                     {%- endif -%}
                     {%- if block.settings.menu != blank -%}
+
                       <ul class="footer-list list-unstyled ">
+                        {% if customer and block.settings.heading contains 'Account' %}
+                          <li>
+                            <a href="account/logout" >Logout</a>
+                          </li>
+                        {% endif %}
                         {%- for link in block.settings.menu.links -%}
                           <li>
                             <a id="{% if link.title contains 'Wholesale' %}wholesale{% elsif link.title contains 'Practitioner'%}practitioner{% elsif link.title contains 'Clinical'%}clinical{% elsif link.title contains 'Distributor'%}distributor{% endif %}" 
