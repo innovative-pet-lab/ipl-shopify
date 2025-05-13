@@ -55,16 +55,18 @@
                     {%- if block.settings.menu != blank -%}
 
                       <ul class="footer-list list-unstyled ">
-                        {% if customer and block.settings.heading contains 'Account' %}
-                          <li>
-                            <a href="{{ shop.url }}/account">My Account</a> 
-                            <span style="color:#99D5E0">&nbsp;|&nbsp; </span>
-                            <a href="{{ shop.url }}/account/logout" >Logout</a>
-                          </li>
-                        {% else %}
-                          <li>
-                            <a href="{{ shop.url }}/account/login" >Login</a>
-                          </li>
+                        {% if block.settings.heading contains 'Account'  %}
+                          {% if customer %}
+                            <li>
+                              <a href="{{ shop.url }}/account">My Account</a> 
+                              <span style="color:#99D5E0">&nbsp;|&nbsp; </span>
+                              <a href="{{ shop.url }}/account/logout" >Logout</a>
+                            </li>
+                          {% else %}
+                            <li>
+                              <a href="{{ shop.url }}/account/login" >Login</a>
+                            </li>
+                          {% endif %}
                         {% endif %}
                         {%- for link in block.settings.menu.links -%}
                           <li>
