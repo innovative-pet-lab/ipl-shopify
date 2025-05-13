@@ -788,7 +788,7 @@ header .side-menu .inner-side ul li .list-menu__item {
     display: none;
 }
 
-/* cart dwawer */
+/* cart drawer */
 .yv_side_drawer_title h6 {
     font-size: 40px;
     font-weight: 600;
@@ -860,4 +860,9 @@ header .side-menu .inner-side ul li .list-menu__item {
 .bottom-cart-box .bottom-p {
     color: #434343;
     margin-bottom: 1rem;
+}
+
+/* footer */
+.footer-menu-list .flex {
+    display: flex;
 }
