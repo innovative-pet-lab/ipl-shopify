@@ -83,7 +83,7 @@
                 </a>
                 <p class="cart-tags">For {{ item.product.tags | join: ' and ' }}</p>
               </div>
-              <div class="yv-prizebox">
+              <div class="yv-prizebox" bss-b2b-cart-item-key="{{ item.key }}" bss-b2b-final-line-price>
                 <span class="yv-product-price">{{ item.final_line_price | money_without_trailing_zeros }}</span>
                 {%- if item.original_line_price > item.final_line_price -%}
                   <span class="yv-product-compare-price">{{ item.original_line_price | money_without_trailing_zeros }}</span>
