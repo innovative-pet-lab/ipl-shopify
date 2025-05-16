@@ -8,23 +8,26 @@
     font-weight: 700
 }
 
-.left-side-content {
-    border-right: 1px solid var(--colorXXlightTextBody);
-    display: flex;
-    align-items: center;
-    justify-content: center
-}
-
 .yv-login-form {
     margin: 0 auto;
     width: 100%;
     max-width: 1600px;
-    padding: 60px 55px 70px;
+    padding: 32px;
     text-align: left;
     min-height: 700px;
     display: flex;
     flex-direction: column;
-    justify-content: center
+    justify-content: center;
+    background-color: white;
+    border-radius: 16px;
+    margin: 3rem 0 8rem 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.form-control {
+    border-color: #99D5E0;
+    border-width: 2px;
+    border-radius: 50px;
 }
 
 .frgt-pw {
@@ -436,11 +439,6 @@ td.product-order-img-wrapper {
 }
 
 @media (max-width:1440px) {
-    .yv-login-form {
-        min-height: 600px;
-        max-width: 800px;
-        padding: 50px 50px 60px
-    }
     .address-side-drawer-body {
         padding: 20px
     }
@@ -464,10 +462,6 @@ td.product-order-img-wrapper {
 }
 
 @media (max-width:1199px) {
-    .yv-login-form {
-        max-width: 890px;
-        padding: 30px 35px 40px
-    }
     .customer-page-content {
         max-width: 370px
     }
@@ -494,10 +488,6 @@ td.product-order-img-wrapper {
     .right-side-content {
         justify-content: left
     }
-    .yv-login-form {
-        max-width: 650px;
-        padding: 30px 25px;
-    }
     .customer-page-content {
         max-width: 260px;
         margin: 10px 0
@@ -507,9 +497,6 @@ td.product-order-img-wrapper {
     }
     .customer-page-desc {
         margin-bottom: 30px;
-    }
-    .left-side-content {
-        border: 0
     }
     .address-list li {
         max-width: 31.3%;
@@ -533,20 +520,11 @@ td.product-order-img-wrapper {
 }
 
 @media (max-width:767px) {
-    .yv-login-form {
-        min-height: 500px;
-        height: auto;
-        border-bottom: 1px solid var(--colorXXlightTextBody)
-    }
-    .yv-register-form {
-        max-width: 70%
-    }
     .customer .order-details tbody td:before,
     .customer tfoot td:first-of-type,
     .customer th,
     .customer thead,
-    .right-side-content,
-    .yv-login-form label {
+    .right-side-content {
         display: none
     }
     .customer-page-title,
@@ -623,13 +601,6 @@ td.product-order-img-wrapper {
 }
 
 @media (max-width:575px) {
-    .yv-login-form {
-        padding-left: 0;
-        padding-right: 0
-    }
-    .yv-register-form {
-        max-width: 90%
-    }
     .account-header-tabs a:not(.button) {
         padding: 12px 0;
         margin-right: 20px;
@@ -662,12 +633,6 @@ td.product-order-img-wrapper {
         max-width: 100%;
         flex: 0 0 100%;
         margin: 0 0 10px
-    }
-}
-
-@media (max-width:414px) {
-    .yv-register-form {
-        max-width: 100%
     }
 }
 

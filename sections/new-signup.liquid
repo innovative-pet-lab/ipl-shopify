@@ -44,54 +44,46 @@
     font-size: 14px;
   }
   
+  .register .container {
+    padding: 3rem 1rem 1rem 1rem;
+  }
+
+  .register .container h2 {
+    text-align: center;
+    color: #000000;
+    font-size: min(4rem,4vw);
+    font-weight: 700;
+  }
+  
+   .register .container h2 .form-type {
+      text-transform:capitalize;
+      margin-right:0.5rem
+   }
+
   @media (max-width: 768px) {
+    .register .container h2 {
+      font-size: min(2rem, 6vw);
+    }
     .radio-group label {
       flex: 1 1 100%;
     }
   }
 
-
 </style>
 <section class="account-pages-section">
   <div class="container">
     <div class="yv-customer-pages register"> 
+      <div class="container">
+          <h2><span class="form-type">Provider&nbsp;</span>Request Form</h2>
+      </div>
       <div class="row">
         <div class="col-12 col-sm-12">
           <div class="left-side-content">
             <div class="yv-login-form yv-register-form" id="registerForm">
               {%- form 'create_customer', novalidate: 'novalidate' -%}
-              {% comment %} {%- if form.errors -%}
-                {% comment %} {%- form 'create_customer', novalidate: 'novalidate' -%}
-
-                  <div class="field form-group">
-                    <label for="signUpForm-FirstName">First Name</label>   
-                    <input type="text" class="form-control" name="customer[first_name]" placeholder="Your first name" id="signUpForm-FirstName" required>
-                  </div>
-                
-                  <div class="field form-group">
-                    <label for="signUpForm-LastName">Last Name</label>
-                    <input type="text" class="form-control" name="customer[last_name]" placeholder="Your last name" id="signUpForm-LastName" required>
-                  </div>
-                
-                  <div class="field form-group">  
-                    <label for="signUpForm-email">Email</label>    
-                    <input type="email" class="form-control" name="customer[email]" placeholder="Your email" id="signUpForm-email" required>
-                  </div>
-                
-                  <div class="field form-group"> 
-                    <label for="signUpForm-password">Password</label>    
-                    <input type="password" class="form-control" name="customer[password]" placeholder="Your password" id="signUpForm-password" required>
-                  </div>
-                
-        
-                  <button type="submit" class="button black-btn btn-block">
-                    Submit
-                  </button>
-                {%- endform -%} {% endcomment %}
-              {%- endif -%} {% endcomment %}
-
+          
               <div class="form-row">
-                <div class="field form-group">
+                <div class="field">
                   <label for="signUpForm-ProfileType">Profile Type</label>
                   <select class="form-control" id="signUpForm-ProfileType">
                     <option value="" selected>Select Account Type</option>
@@ -102,7 +94,7 @@
                   </select>
                 </div>
 
-                <div class="field form-group">
+                <div class="field form-group empty">
                   {% comment %} EMPTY {% endcomment %}
                 </div>
                 
@@ -263,16 +255,17 @@
                 <input type="checkbox" name="how_learned[]" value="Super Zoo"> Super Zoo<br>
                 <input type="checkbox" name="how_learned[]" value="Other"> Other<br>
               </div>
-              
               <div id="agreementFields" style="margin-top: 20px;">
+                <div style="display:flex;gap:0.6rem">
                   <input type="checkbox" id="termsAgreement" name="termsAgreement" required>
-                  <label for="termsAgreement" style="font-size:14px;text-transform:capitalize">
-                    I agree to Innovative Pet Labs' <a style="text-decoration:underline" href="/terms-conditions/" target="_blank">Terms & Conditions</a> and <a style="text-decoration:underline" href="/privacy-policy" target="_blank">Privacy Policy</a>.
+                  <label for="termsAgreement" style="font-size:20px;text-transform:unset">
+                    I agree to Innovative Pet Labs' <a style="text-decoration:underline;color:#03B0A7" href="/terms-conditions/" target="_blank">Terms & Conditions</a> and <a style="text-decoration:underline;color:#03B0A7" href="/privacy-policy" target="_blank">Privacy Policy</a>.
                   </label>
-                <div>
+                </div>
+                <div style="display:flex;gap:0.6rem">
                   <input type="checkbox" id="emailAgreement" name="customer[accepts_marketing]" value="true" checked>
                   <input type="hidden" name="customer[accepts_marketing]" value="true">
-                  <label for="emailAgreement" style="font-size:14px;text-transform:capitalize">
+                  <label for="emailAgreement" style="font-size:20px;text-transform:unset;line-height:normal">
                     By becoming an Innovative Pet Lab provider, I consent to receiving periodic updates and marketing emails from IPL.
                   </label>
                 </div>
@@ -282,8 +275,8 @@
               <input type="hidden" id="customerTags" name="customer[tags]"> 
               <input type="hidden" id="customerNote" name="customer[note]"> 
 
-              <button type="submit" class="button black-btn btn-block" id="registerSubmit" style="width:49%;margin-top:1rem;height:60px">
-                {{ 'customer.register.submit' | t }}
+              <button type="submit" class="button" id="registerSubmit" style="width:15%;margin-top:1rem;height:60px;text-transform:unset">
+                Send Request
               </button>
               {%- endform -%}
             </div>
@@ -293,7 +286,6 @@
     </div>
   </div>
 </section>
-
 
 <script>
   document.addEventListener("DOMContentLoaded", function () {
@@ -457,67 +449,6 @@
 
   });
 </script>
-
-
-{% comment %} <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const form = document.querySelector("form");
-    const profileTypeSelect = document.getElementById("signUpForm-ProfileType");
-    const customerTagsInput = document.getElementById("customerTags");
-    const customerNoteInput = document.getElementById("customerNote");
-
-    const clinicalFields = document.getElementById("clinicalFields");
-
-    const profileType = document.getElementById("signUpForm-ProfileType");
-    const noteField = document.getElementById("customerNote");
-    const orgCheckboxes = document.querySelectorAll(".org-type");
-    const orgOtherInput = document.getElementById("orgOther");
-    const registerForm = profileType.closest("form");
-
-
-    form.addEventListener("submit", function (event) {
-      const profileType = profileTypeSelect.value;
-
-      if (profileType) {
-        //customerTagsInput.value = `${profileType}`;
-        customerNoteInput.value = `${profileType}`;
-      }
-    });
-
-    setTimeout(function () {
-
-    function toggleClinicalFields() {
-      if (profileType.value === "clinical") {
-        clinicalFields.style.display = "block";
-      } else {
-        clinicalFields.style.display = "none";
-        noteField.value = "";
-      }
-    }
-
-    toggleClinicalFields();
-
-    profileType.addEventListener("change", toggleClinicalFields);
-
-    // Populate note field on form submit
-    registerForm.addEventListener("submit", function () {
-      if (profileType.value === "clinical") {
-        const selected = [];
-        orgCheckboxes.forEach((checkbox) => {
-          if (checkbox.checked) {
-            selected.push(checkbox.value);
-          }
-        });
-        if (orgOtherInput.value.trim() !== "") {
-          selected.push("Other: " + orgOtherInput.value.trim());
-        }
-        noteField.value = selected.join(", ");
-      }
-    });
-  }, 300);
-  });
-</script> {% endcomment %}
-
 
 {% schema %}
 {

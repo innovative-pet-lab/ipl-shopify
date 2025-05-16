@@ -33,6 +33,10 @@ footer {
     font-family: var(--font-family);
     font-weight: bold;
 }
+    
+.footer-menu-list ul {
+    padding-left: 0;
+}
 
 .footer-menu-list ul li a {
     display: inline-block;
@@ -44,7 +48,7 @@ footer {
 }
 @media (max-width: 768px) {
     .footer-menu-list ul li a {
-        font-size: 18px!important;
+        font-size: 22px!important;
     }
     .footer-text-item.d-block p {
         text-align: left!important;
@@ -296,7 +300,7 @@ footer select:focus-visible {
 }
 @media screen and (max-width:1199px) {
     .footer-menu-head {
-        font-size: 16px
+        font-size: 22px
     }
 }
 @media screen and (max-width:991px) {
@@ -341,7 +345,7 @@ footer select:focus-visible {
     .footer-menu-head {
         position: relative;
         margin-bottom: 0;
-      padding-bottom: 12px;
+        padding-bottom: 12px;
     }
     .footer-menu-accordion .footer-menu-head:after,
     .footer-menu-accordion .footer-menu-head:before {
