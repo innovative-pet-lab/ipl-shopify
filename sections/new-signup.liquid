@@ -51,14 +51,71 @@
   .register .container h2 {
     text-align: center;
     color: #000000;
-    font-size: min(4rem,4vw);
+    font-size: min(4rem,3vw);
     font-weight: 700;
   }
   
-   .register .container h2 .form-type {
-      text-transform:capitalize;
-      margin-right:0.5rem
-   }
+  .register .container h2 .form-type {
+    text-transform:capitalize;
+    margin-right:0.5rem
+  }
+
+  .custom-checkbox {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    font-size: 20px;
+    line-height: 1.4;
+    cursor: pointer;
+    padding-left: 0;
+    padding-top: 0.4rem;
+    padding-bottom: 0.4rem;
+  }
+
+  .custom-checkbox input[type="checkbox"] {
+    display: none;
+  }
+
+  .custom-checkbox .checkmark {
+    width: 26px;
+    height: 26px;
+    border: 2px solid #A7D2DB;
+    border-radius: 6px;
+    box-sizing: border-box;
+    position: relative;
+    flex-shrink: 0;
+    margin-top: 2px;
+    background: white!important;
+  }
+
+  .custom-checkbox .checkmark:after {
+    border-color: #A7D2DB!important;
+  }
+
+  .custom-checkbox input[type="checkbox"]:checked + .checkmark::after {
+    content: "";
+    position: absolute;
+    left: 7px;
+    top: 3px;
+    width: 6px;
+    height: 12px;
+    border: solid #03B0A7;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+  }
+
+  .checkbox-text {
+    text-transform: none;
+  }
+  
+  .checkbox-text a {
+    color: #03B0A7;
+    text-decoration: underline;
+  }
+
+  .checkmark {
+    background: white;
+  }
 
   @media (max-width: 768px) {
     .register .container h2 {
@@ -68,6 +125,55 @@
       flex: 1 1 100%;
     }
   }
+
+  /* Custom checkbox container */
+.checkbox-group label {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  font-size: 18px;
+  cursor: pointer;
+  margin-bottom: 0.75rem;
+  position: relative;
+}
+
+/* Hide the default checkbox */
+.checkbox-group input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #03B0A7;
+  border-radius: 4px;
+  position: relative;
+  margin-top: 2px;
+  cursor: pointer;
+}
+
+/* Checkmark styling */
+.checkbox-group input[type="checkbox"]:checked::before {
+  content: '';
+  position: absolute;
+  top: 4px;
+  left: 6px;
+  width: 6px;
+  height: 12px;
+  border: solid #03B0A7;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+/* Text input under "Other" */
+.checkbox-group input[type="text"] {
+  margin-left: 26px;
+  margin-top: 0.4rem;
+  padding: 0.4rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+  max-width: 300px;
+  font-size: 16px;
+}
 
 </style>
 <section class="account-pages-section">
@@ -155,18 +261,29 @@
                   <label for="orgOther" style="font-size:14px">Other:</label>
                   <input type="text" class="form-control" id="orgOther" placeholder="Specify other organization type">
                 </div>
+                
                 <div class="form-group">
-                  <label>Which areas are you interested in studying? (Check all that apply)</label><br>
-                  <div class="checkbox-group">
-                    <label><input type="checkbox" name="customer[note][interest][]" value="supplements"> Supplements</label>
-                    <label><input type="checkbox" name="customer[note][interest][]" value="nutrition"> Nutrition</label>
-                    <label><input type="checkbox" name="customer[note][interest][]" value="Behavior and/or stress"> Behavior and/or stress</label>
-                    <label style="width:49%">
-                      <input type="checkbox" class="interest-checkbox" value="other">Other:
-                      <input type="text" class="form-control mt-1" name="customer[note][interest_other]" placeholder="Please specify">
-                    </label>
-                  </div>
+                <label>Which areas are you interested in studying? (Check all that apply)</label><br>
+                <div class="checkbox-group">
+                  <label>
+                    <input type="checkbox" name="customer[note][interest][]" value="supplements">
+                    Supplements
+                  </label>
+                  <label>
+                    <input type="checkbox" name="customer[note][interest][]" value="nutrition">
+                    Nutrition
+                  </label>
+                  <label>
+                    <input type="checkbox" name="customer[note][interest][]" value="Behavior and/or stress">
+                    Behavior and/or stress
+                  </label>
+                  <label style="width:49%">
+                    <input type="checkbox" class="interest-checkbox" value="other">
+                    Other:
+                    <input type="text" class="form-control mt-1" name="customer[note][interest_other]" placeholder="Please specify">
+                  </label>
                 </div>
+              </div>
               
                 <div class="form-group">
                   <label>Do you have an existing protocol or would you like support designing one?</label><br>
@@ -200,11 +317,33 @@
               <div id="veterinarian-fields" style="display: none;">
 
                 <!-- Degree(s) -->
-                <label>Degree(s)</label><br>
-                <input type="checkbox" name="degree" value="DVM"> DVM<br>
-                <input type="checkbox" name="degree" value="VDM"> VDM<br>
-                <input type="checkbox" name="degree" value="PhD"> PhD<br>
-                <input type="checkbox" name="degree" value="Other"> Other<br><br>
+                <div class="custom-checkbox-group" style="margin-bottom: 1rem;">
+                  <label style="font-size: 20px;">Degree(s)</label><br>
+
+                  <label class="custom-checkbox">
+                    <input type="checkbox" name="degree" value="DVM">
+                    <span class="checkmark"></span>
+                    <span class="checkbox-text">DVM</span>
+                  </label>
+
+                  <label class="custom-checkbox">
+                    <input type="checkbox" name="degree" value="VDM">
+                    <span class="checkmark"></span>
+                    <span class="checkbox-text">VDM</span>
+                  </label>
+
+                  <label class="custom-checkbox">
+                    <input type="checkbox" name="degree" value="PhD">
+                    <span class="checkmark"></span>
+                    <span class="checkbox-text">PhD</span>
+                  </label>
+
+                  <label class="custom-checkbox">
+                    <input type="checkbox" name="degree" value="Other">
+                    <span class="checkmark"></span>
+                    <span class="checkbox-text">Other</span>
+                  </label>
+                </div>
               
                 <div class="form-row">
                   <div class="field form-group">
@@ -244,32 +383,90 @@
                   </div>
                 </div>
               
-                <label>How did you learn about Innovative Pet Lab?</label><br>
-                <input type="checkbox" name="how_learned[]" value="Facebook"> Facebook<br>
-                <input type="checkbox" name="how_learned[]" value="Instagram"> Instagram<br>
-                <input type="checkbox" name="how_learned[]" value="Google Search"> Google Search<br>
-                <input type="checkbox" name="how_learned[]" value="Friend"> Friend<br>
-                <input type="checkbox" name="how_learned[]" value="Colleague"> Colleague<br>
-                <input type="checkbox" name="how_learned[]" value="Patient"> Patient<br>
-                <input type="checkbox" name="how_learned[]" value="Veterinarian"> Veterinarian<br>
-                <input type="checkbox" name="how_learned[]" value="Super Zoo"> Super Zoo<br>
-                <input type="checkbox" name="how_learned[]" value="Other"> Other<br>
-              </div>
-              <div id="agreementFields" style="margin-top: 20px;">
-                <div style="display:flex;gap:0.6rem">
-                  <input type="checkbox" id="termsAgreement" name="termsAgreement" required>
-                  <label for="termsAgreement" style="font-size:20px;text-transform:unset">
-                    I agree to Innovative Pet Labs' <a style="text-decoration:underline;color:#03B0A7" href="/terms-conditions/" target="_blank">Terms & Conditions</a> and <a style="text-decoration:underline;color:#03B0A7" href="/privacy-policy" target="_blank">Privacy Policy</a>.
+                <!-- How did you learn about Innovative Pet Lab? -->
+                <div class="custom-checkbox-group" style="margin-bottom: 1rem;">
+                  <label style="font-size: 20px;">How did you learn about Innovative Pet Lab?</label><br>
+
+                  <label class="custom-checkbox">
+                    <input type="checkbox" name="how_learned[]" value="Facebook">
+                    <span class="checkmark"></span>
+                    <span class="checkbox-text">Facebook</span>
+                  </label>
+
+                  <label class="custom-checkbox">
+                    <input type="checkbox" name="how_learned[]" value="Instagram">
+                    <span class="checkmark"></span>
+                    <span class="checkbox-text">Instagram</span>
+                  </label>
+
+                  <label class="custom-checkbox">
+                    <input type="checkbox" name="how_learned[]" value="Google Search">
+                    <span class="checkmark"></span>
+                    <span class="checkbox-text">Google Search</span>
+                  </label>
+
+                  <label class="custom-checkbox">
+                    <input type="checkbox" name="how_learned[]" value="Friend">
+                    <span class="checkmark"></span>
+                    <span class="checkbox-text">Friend</span>
+                  </label>
+
+                  <label class="custom-checkbox">
+                    <input type="checkbox" name="how_learned[]" value="Colleague">
+                    <span class="checkmark"></span>
+                    <span class="checkbox-text">Colleague</span>
+                  </label>
+
+                  <label class="custom-checkbox">
+                    <input type="checkbox" name="how_learned[]" value="Patient">
+                    <span class="checkmark"></span>
+                    <span class="checkbox-text">Patient</span>
+                  </label>
+
+                  <label class="custom-checkbox">
+                    <input type="checkbox" name="how_learned[]" value="Veterinarian">
+                    <span class="checkmark"></span>
+                    <span class="checkbox-text">Veterinarian</span>
+                  </label>
+
+                  <label class="custom-checkbox">
+                    <input type="checkbox" name="how_learned[]" value="Super Zoo">
+                    <span class="checkmark"></span>
+                    <span class="checkbox-text">Super Zoo</span>
+                  </label>
+
+                  <label class="custom-checkbox">
+                    <input type="checkbox" name="how_learned[]" value="Other">
+                    <span class="checkmark"></span>
+                    <span class="checkbox-text">Other</span>
                   </label>
                 </div>
-                <div style="display:flex;gap:0.6rem">
+              </div>
+
+              <div id="agreementFields" style="margin-top:20px;border-top:1px solid #d2d2d2;padding-top:1rem">
+              <div class="custom-checkbox-group">
+                <label class="custom-checkbox">
+                  <input type="checkbox" id="termsAgreement" name="termsAgreement" required>
+                  <span class="checkmark"></span>
+                  <span class="checkbox-text">
+                    I agree to Innovative Pet Labs' 
+                    <a href="/terms-conditions/" target="_blank">Terms & Conditions</a> and 
+                    <a href="/privacy-policy" target="_blank">Privacy Policy</a>.
+                  </span>
+                </label>
+              </div>
+
+              <div class="custom-checkbox-group">
+                <label class="custom-checkbox">
                   <input type="checkbox" id="emailAgreement" name="customer[accepts_marketing]" value="true" checked>
                   <input type="hidden" name="customer[accepts_marketing]" value="true">
-                  <label for="emailAgreement" style="font-size:20px;text-transform:unset;line-height:normal">
+                  <span class="checkmark"></span>
+                  <span class="checkbox-text">
                     By becoming an Innovative Pet Lab provider, I consent to receiving periodic updates and marketing emails from IPL.
-                  </label>
-                </div>
+                  </span>
+                </label>
               </div>
+            </div>
 
               <!-- Hidden input for customer tags -->
               <input type="hidden" id="customerTags" name="customer[tags]"> 

@@ -1,4 +1,4 @@
-<div class="{% if settings.layout_width == 'boxed' %}container{% else %}container-fluid{% endif %}">
+<div class="container">
   {%- if section.settings.image != blank or section.settings.subtext != blank -%}
     <div class="yv-footer-top-box {% unless section.settings.image != blank %}no-footer-logo{% endunless %}">
       <div class="row align-items-center">
@@ -36,10 +36,7 @@
     </div>
   {%- endif -%}
   {%- if section.blocks.size > 0 -%}
-    <div
-      class="yv-footer-middle-box"
-      style="--layoutRadius:{% if settings.layout_style == 'rounded' %}4px{% else %}0px{% endif %};"
-    >
+    <div class="yv-footer-middle-box">
       <div class="footer-menu-list">
         <div class="footer-flex">
           {%- for block in section.blocks -%}
@@ -470,7 +467,7 @@
     }
 
     .footer-col:nth-child(5) {
-      flex: 1 1 calc(35% - 1rem);
+      flex: 1 1 calc(23% - 1rem);
       min-width: 250px;
     }
   }
