@@ -175,17 +175,6 @@
         "type": "shopify://apps/bss-b2b-solution/blocks/config-header/451233f2-9631-4c49-8b6f-057e4ebcde7f",
         "disabled": false,
         "settings": {}
-      },
-      "11989592277864780042": {
-        "type": "shopify://apps/wholesale-pricing-discount/blocks/app-embed/94cbfa01-7191-4bb2-bcd8-b519b9b3bd06",
-        "disabled": true,
-        "settings": {
-          "showCrossOutPrice": false,
-          "showCurrencyCodes": false,
-          "priceColor": "#000000",
-          "crossOutPriceColor": "#e9330c",
-          "appProxy": "/apps/wpdapp"
-        }
       }
     }
   },
