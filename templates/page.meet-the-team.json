@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main-page": {
@@ -10,223 +19,228 @@
         "textcolor": "#ffffff"
       }
     },
-    "image_with_text_3dyRtE": {
-      "type": "image-with-text",
+    "meet_the_team_section_ietiUW": {
+      "type": "meet-the-team-section",
       "blocks": {
-        "heading_nEUdCE": {
-          "type": "heading",
+        "card_person_profile_AB6hTx": {
+          "type": "card-person-profile",
           "settings": {
-            "heading": "Jamie Smith, CEO & CoFounder",
-            "seo_heading": "h6"
+            "photo": "shopify://shop_images/image.png",
+            "full_name": "Jamie Smith",
+            "role": "CEO & CoFounder",
+            "socmed_url": "https://www.linkedin.com/in/jamie-smith-959a3453/",
+            "socmed_image": "shopify://shop_images/linkedin-logo.png",
+            "socmed_name": "LinkedIn",
+            "profile_description": "Jamie Smith, CEO & Co-Founder of Innovative Pet Lab, brings over 15 years of leadership in diagnostics and digital health. She has transformed IPL from concept to reality, launching innovative at-home pet tests. With expertise in commercial strategy, market development, and Six Sigma-certified operations, she previously led teams at Everly Health Solutions and Genova Diagnostics. A graduate of Indiana University’s Kelley School of Business, Jamie is dedicated to revolutionizing pet healthcare while balancing life with her Navy-active-duty husband, three kids, and two beloved pets."
           }
         },
-        "text_BVYMmU": {
-          "type": "text",
+        "card_person_profile_CWA9ci": {
+          "type": "card-person-profile",
           "settings": {
-            "content": "<p>Jamie Smith is an executive business leader with over 15 years of experience in the diagnostic industry, both domestically and internationally.  Her background includes consumer diagnostics, functional & integrative medicine, commercial operations, digital health, and scaling emerging businesses.  Prior to being a co-founder and CEO at Innovative Pet Laboratory, Jamie served as VP of Diagnostic Solutions at Everly Health and a commercial sales leader at Genova Diagnostics.  She is passionate about animal health and finding ways to improve the quality of our animal companions’ lives.  In her free time, she enjoys spending time with her husband, three kids, and English Golden Retriever, June. <\/p>"
+            "photo": "shopify://shop_images/Betsy-Redmond-1.jpg",
+            "full_name": "Dr. Betsy Redmond",
+            "role": "Chief Science Officer & Co-Founder",
+            "socmed_url": "https://www.linkedin.com/in/redmondnutrition/",
+            "socmed_image": "shopify://shop_images/linkedin-logo.png",
+            "socmed_name": "LinkedIn",
+            "profile_description": "Dr. Betsy Redmond, Chief Scientific Officer at IPL, is a leading expert in nutrition, diagnostics, and lab innovation. Holding a Ph.D. in Nutrition from the University of Georgia and an MMSc from Emory University, she specializes in gastrointestinal health. Her career includes roles at Genova Diagnostics, Metametrix, and private consulting, focusing on research, education, and novel testing methods. A published author and award-winning expert in integrative medicine, Dr. Redmond is passionate about developing cutting-edge pet diagnostic tools."
           }
         },
-        "button_eTMAWM": {
-          "type": "button",
+        "card_person_profile_gYYRHd": {
+          "type": "card-person-profile",
           "settings": {
-            "btn_text": "Jamie's LinkedIn",
-            "btn_link": "https:\/\/www.linkedin.com\/in\/jamie-smith-959a3453\/",
-            "button_size": "large",
-            "mobile_button_size": "m-med"
+            "photo": "shopify://shop_images/Bob-David.jpg",
+            "full_name": "Dr. Bob David",
+            "role": "Advisor",
+            "socmed_url": "https://www.linkedin.com/in/robert-david-b378321/",
+            "socmed_image": "shopify://shop_images/linkedin-logo.png",
+            "socmed_name": "LinkedIn",
+            "profile_description": "Dr. Robert M. David, Chief Lab Officer at IPL, has over 30 years of experience in clinical laboratory leadership, specializing in molecular diagnostics, clinical chemistry, and toxicology. With a Ph.D. in Biochemistry, he has led high-complexity labs in clinical, pharmaceutical, and specialty sectors. Dr. David has contributed to advancing diagnostic methodologies, regulatory compliance, and laboratory growth, ensuring IPL delivers innovative, high-quality pet diagnostics."
+          }
+        },
+        "card_person_profile_fcfFiC": {
+          "type": "card-person-profile",
+          "settings": {
+            "photo": "shopify://shop_images/jennifer-gillen.png",
+            "full_name": "Jennifer Gillen",
+            "role": "Head of Marketing",
+            "socmed_url": "https://www.linkedin.com/in/jenniferholmesgillen/",
+            "socmed_image": "shopify://shop_images/linkedin-logo.png",
+            "socmed_name": "LinkedIn",
+            "profile_description": "Jennifer Gillen, Head of Marketing at IPL, brings 20+ years of expertise in brand management, commercial strategy, and product development. She has played a key role in establishing IPL as a leader in pet diagnostics, overseeing consumer engagement and veterinary market expansion. With leadership experience at Genova Diagnostics and Metametrix, Jennifer’s strategic insights drive impactful marketing campaigns. She holds an MS in Business Administration from San Diego State University."
+          }
+        },
+        "card_person_profile_xdc7Lj": {
+          "type": "card-person-profile",
+          "settings": {
+            "photo": "shopify://shop_images/Cat_Circle_copy.jpg",
+            "full_name": "Katie Phillippi",
+            "role": "VP of Sales",
+            "socmed_url": "https://www.linkedin.com/in/katie-phillippi-3537221/",
+            "socmed_image": "shopify://shop_images/linkedin-logo.png",
+            "socmed_name": "LinkedIn",
+            "profile_description": "Katie Phillippi, VP of Sales at IPL, leverages over 20 years of experience in sales, recruiting, and management to expand IPL’s national reach. She specializes in building strong relationships with veterinarians and wholesale partners, ensuring IPL’s diagnostic tools reach pet owners. With a background in pharmaceuticals and business development, she previously founded her own recruitment agency. A graduate of Indiana University, Katie brings a results-driven approach to IPL’s growth."
+          }
+        },
+        "card_person_profile_m4K6dn": {
+          "type": "card-person-profile",
+          "settings": {
+            "photo": "shopify://shop_images/Dog_Circle_copy.jpg",
+            "full_name": "Ward Watkins",
+            "role": "Head of Purchasing & Supply",
+            "socmed_url": "https://www.linkedin.com/in/ward-watkins-77a06529/",
+            "socmed_image": "shopify://shop_images/linkedin-logo.png",
+            "socmed_name": "LinkedIn",
+            "profile_description": "Ward Watkins, Head of Purchasing & Supply at IPL, ensures seamless supply chain operations and procurement efficiency. With extensive experience in vendor relations, cost reduction, and logistics, he maintains IPL’s high standards while meeting growing demand. His background includes leadership roles at Genova Diagnostics and Metametrix, where he optimized supply chain processes and supplier relationships."
+          }
+        },
+        "card_person_profile_tbhYKW": {
+          "type": "card-person-profile",
+          "settings": {
+            "photo": "shopify://shop_images/1691584422267.jpg",
+            "full_name": "Laci Brown",
+            "role": "VP of Partnerships",
+            "socmed_url": "https://www.linkedin.com/in/laci-brown-80669b104/",
+            "socmed_image": "shopify://shop_images/linkedin-logo.png",
+            "socmed_name": "LinkedIn",
+            "profile_description": "Laci Brown, VP of Partnerships at IPL, drives strategic collaborations and revenue growth, positioning IPL as a trusted pet diagnostics leader. With a background in education and business leadership, she excels in stakeholder engagement and innovation. Before IPL, she successfully ran her own business and held leadership roles in education. A Texas Tech University graduate, Laci brings a creative and results-oriented approach to expanding IPL’s partnerships."
+          }
+        },
+        "card_person_profile_LJNN4N": {
+          "type": "card-person-profile",
+          "settings": {
+            "photo": "shopify://shop_images/Dog_Circle_copy.jpg",
+            "full_name": "Joe Zavala",
+            "role": "VP of eCommerce and Retail Sales",
+            "socmed_url": "https://www.linkedin.com/in/joe-zavala/",
+            "socmed_image": "shopify://shop_images/linkedin-logo.png",
+            "socmed_name": "LinkedIn",
+            "profile_description": "Joe Zavala is an experienced brand strategist with 20+ years in eCommerce, retail strategy, and supply chain operations. Specializing in category management, vendor partnerships, and omnichannel growth, he has helped brands strengthen their market presence and scale efficiently. With leadership roles at Everly Health and beyond, Joe leverages data-driven insights to drive strategic brand success."
           }
         }
       },
       "block_order": [
-        "heading_nEUdCE",
-        "text_BVYMmU",
-        "button_eTMAWM"
+        "card_person_profile_AB6hTx",
+        "card_person_profile_CWA9ci",
+        "card_person_profile_gYYRHd",
+        "card_person_profile_fcfFiC",
+        "card_person_profile_xdc7Lj",
+        "card_person_profile_m4K6dn",
+        "card_person_profile_tbhYKW",
+        "card_person_profile_LJNN4N"
       ],
+      "name": "Meet the team section",
+      "settings": {}
+    },
+    "media_inline_text_X89FYi": {
+      "type": "media-inline-text",
+      "blocks": {
+        "paragraph_pahBnt": {
+          "type": "paragraph",
+          "settings": {
+            "content": "Innovative Pet Lab is a Science-Driven Pet Wellness Company.  We are on a mission to empower the pet community with at-home tests and personalized solutions to enhance the lives and well-being of all pets.",
+            "is_above_media": true
+          }
+        },
+        "paragraph_Cb3iUc": {
+          "type": "paragraph",
+          "settings": {
+            "content": "Innovative Pet Care is redefining pet care with a line of scientifically proven at-home tests that evaluate your pet’s total  health.",
+            "is_above_media": false
+          }
+        },
+        "paragraph_9zka6D": {
+          "type": "paragraph",
+          "settings": {
+            "content": "We understand that pets can’t tell us where it hurts or how they feel. Inspired by our love of animals, the Innovative Pet Lab team recognized the need to provide pet parents with the crucial information they wish their furry family members could convey.",
+            "is_above_media": false
+          }
+        },
+        "paragraph_WrTddm": {
+          "type": "paragraph",
+          "settings": {
+            "content": "Our journey began with a (18-year-old) dog named Linda, who shared life with our Chief Scientific Officer, Dr. Betsy Redmond. For many years, Linda struggled with chronic gastric issues, leaving her feeling tired and unwell. Ironically, Linda’s symptoms mirrored those of the patients that we were seeing in the human lab, where our CoFounders worked together helping treat individuals with chronic health issues.",
+            "is_above_media": false
+          }
+        },
+        "paragraph_QYGHe3": {
+          "type": "paragraph",
+          "settings": {
+            "content": "Dr. Betsy realized if she could test Linda’s gut health using the same advanced methods employed for humans, she could identify the right diet, supplements, pharmaceuticals, and lifestyle changes to help Linda live a longer, healthier life. Linda lived to be 18 years young.",
+            "is_above_media": false
+          }
+        },
+        "paragraph_8PdcC6": {
+          "type": "paragraph",
+          "settings": {
+            "content": "Linda’s journey sparked a revolution in pet health testing from the comfort of home, leading us to develop comprehensive testing and personalized treatment plans that transform the lives of pets everywhere.",
+            "is_above_media": false
+          }
+        }
+      },
+      "block_order": [
+        "paragraph_pahBnt",
+        "paragraph_Cb3iUc",
+        "paragraph_9zka6D",
+        "paragraph_WrTddm",
+        "paragraph_QYGHe3",
+        "paragraph_8PdcC6"
+      ],
+      "name": "Media inline text",
       "settings": {
-        "enable_fullwidth": false,
-        "image": "shopify:\/\/shop_images\/J.SmithHeadshot10.22.226113-600x600.jpg",
-        "image_shadow": true,
-        "enable_image_animation": false,
-        "image_alignment": "left",
-        "image_height": "aspect",
-        "content_position": "start",
-        "bgcolor": "primary",
-        "image_shadow_color": "#03b0a7",
-        "section_visibility": "always",
-        "top_space_desktop": 60,
-        "bottom_space_desktop": 30,
-        "top_space_mobile": 30,
-        "bottom_space_mobile": 30
+        "title": "Our story",
+        "thumbnail": "shopify://shop_images/our-story-thumbnail.png",
+        "media_url": "https://www.youtube.com/watch?v=MBp3Jwd8Suw"
       }
     },
-    "image_with_text_68UYWV": {
-      "type": "image-with-text",
+    "multi_column_logos_nNpfTz": {
+      "type": "multi-column-logos",
       "blocks": {
-        "heading_dhgLHn": {
-          "type": "heading",
+        "card_awards_bQhXUB": {
+          "type": "card-awards",
           "settings": {
-            "heading": "Dr. Betsy Redmond, Chief Science Officer & CoFounder",
-            "seo_heading": "h2"
+            "photo": "shopify://shop_images/sku-cpg-logo.png",
+            "description": "SKU CPG Accelerator Inaugural <br>\nPetcare Track <br>\n2023 Winner: <br>\nPetcare Pitch"
           }
         },
-        "text_Xb7kbi": {
-          "type": "text",
+        "card_awards_XEmmGT": {
+          "type": "card-awards",
           "settings": {
-            "content": "<p>Dr. Redmond has worked in clinical laboratory education and research for almost 20 years. She holds a Masters of Medical Science (MMSc) from Emory University, a Ph.D. in Nutrition from the University of Georgia. Her research has included evaluating the impact of diet on colon health, how to target education to make changes that improve laboratory values, and in translational science finding the best ways to move new research into applied clinical care. In her professional work, she was a member of the team that brought the first available gut microbiome PCR test to market and has researched how to apply metabolomics (the study of metabolites) in clinical practice and the differences across species. As a co-founder of Innovative Pet Lab Betsy’s goal is to provide easy-to-use testing that gives pet owners a deeper understanding of their pet’s overall health and actionable steps.  Dr. Redmond lives in Atlanta and enjoys spending time with her husband, three kids, and two dogs Ollie and Linda. She also enjoys running and can never get enough of researching the right answer.<\/p>"
+            "photo": "shopify://shop_images/superzoo-logo.png",
+            "description": "Superzoo <br>\nPurina & WPA <br>\n2023 Winner: <br>\nPitch Contest"
           }
         },
-        "button_cUiW4e": {
-          "type": "button",
+        "card_awards_RpBxDT": {
+          "type": "card-awards",
           "settings": {
-            "btn_text": "Betsy's Linkedin",
-            "btn_link": "https:\/\/www.linkedin.com\/in\/redmondnutrition\/",
-            "button_size": "large",
-            "mobile_button_size": "m-med"
+            "photo": "shopify://shop_images/leap-academy-logo.png",
+            "description": "Leap Academy <br>\nMontpellier, France <br>\n2023 Winner: Social Butterfly <br>\nand Poppy Pez Dispenser"
+          }
+        },
+        "card_awards_dXTBxz": {
+          "type": "card-awards",
+          "settings": {
+            "photo": "shopify://shop_images/petcare-innovation-logo.png",
+            "description": "Petcare Innovation <br>\nSummit <br>\n2022 Best in Show <br>\nSpotlight"
           }
         }
       },
       "block_order": [
-        "heading_dhgLHn",
-        "text_Xb7kbi",
-        "button_cUiW4e"
+        "card_awards_bQhXUB",
+        "card_awards_XEmmGT",
+        "card_awards_RpBxDT",
+        "card_awards_dXTBxz"
       ],
+      "name": "Multi-column logo cards",
       "settings": {
-        "enable_fullwidth": false,
-        "image": "shopify:\/\/shop_images\/Betsy-Redmond-1.jpg",
-        "image_shadow": true,
-        "enable_image_animation": false,
-        "image_alignment": "left",
-        "image_height": "aspect",
-        "content_position": "start",
-        "bgcolor": "primary",
-        "image_shadow_color": "#99d5e0",
-        "section_visibility": "always",
-        "top_space_desktop": 60,
-        "bottom_space_desktop": 30,
-        "top_space_mobile": 30,
-        "bottom_space_mobile": 30
-      }
-    },
-    "image_with_text_86tGTC": {
-      "type": "image-with-text",
-      "blocks": {
-        "heading_kRD4y8": {
-          "type": "heading",
-          "settings": {
-            "heading": "Dr. Bob David, Advisor",
-            "seo_heading": "h2"
-          }
-        },
-        "text_C4yEDF": {
-          "type": "text",
-          "settings": {
-            "content": "<p>As one of Innovative Pet Lab’s Co-Founders and Clinical Advisor, “Dr. Bob” brings his over 30-years of medical lab experience to the pet laboratory testing marketplace. He also serves as Lab Director of Genova Diagnostics in Atlanta, Georgia, and has managed labs across the U.S. throughout his career. Dr. David holds degrees in chemistry and biochemistry from Bellarmine College, Mississippi State University and Creighton Medical Center (where he studied scorpion venom!). He conducted post-doctoral work in clinical chemistry at Wake Forest University where he met his wife of 30 years, Martha. Together, they have four children, one granddaughter, and a Basset Hound named Mia. When he’s not in the lab, he enjoys spending time with his family, grilling and reading.<\/p>"
-          }
-        },
-        "button_xiHLBR": {
-          "type": "button",
-          "settings": {
-            "btn_text": "Bob's Linkedin",
-            "btn_link": "https:\/\/www.linkedin.com\/in\/bob-david-048092ab\/",
-            "button_size": "large",
-            "mobile_button_size": "m-med"
-          }
-        }
-      },
-      "block_order": [
-        "heading_kRD4y8",
-        "text_C4yEDF",
-        "button_xiHLBR"
-      ],
-      "settings": {
-        "enable_fullwidth": false,
-        "image": "shopify:\/\/shop_images\/Bob-David.jpg",
-        "image_shadow": true,
-        "enable_image_animation": true,
-        "image_alignment": "left",
-        "image_height": "aspect",
-        "content_position": "start",
-        "bgcolor": "primary",
-        "image_shadow_color": "#73c7ad",
-        "section_visibility": "always",
-        "top_space_desktop": 60,
-        "bottom_space_desktop": 30,
-        "top_space_mobile": 30,
-        "bottom_space_mobile": 30
-      }
-    },
-    "gallery_carousel_KFY6R8": {
-      "type": "gallery-carousel",
-      "blocks": {
-        "image_rM8B6G": {
-          "type": "image",
-          "settings": {
-            "heading": "",
-            "subheading": "Katie Phillippi, Sales",
-            "image": "shopify:\/\/shop_images\/Square_3_f0c8a5f4-8848-4756-99f3-778f43903482.jpg",
-            "link": "https:\/\/www.linkedin.com\/in\/katie-phillippi-3537221\/"
-          }
-        },
-        "image_EQNT9r": {
-          "type": "image",
-          "settings": {
-            "heading": "",
-            "subheading": "Laci Brown, Partnerships",
-            "image": "shopify:\/\/shop_images\/1691584422267.jpg",
-            "link": "https:\/\/www.linkedin.com\/in\/laci-brown-80669b104\/"
-          }
-        },
-        "image_47UMcV": {
-          "type": "image",
-          "settings": {
-            "heading": "",
-            "subheading": "Jennifer Gillen, Marketing",
-            "image": "shopify:\/\/shop_images\/1560978841677.jpg",
-            "link": "https:\/\/www.linkedin.com\/in\/jenniferholmesgillen\/"
-          }
-        },
-        "image_G4CERx": {
-          "type": "image",
-          "settings": {
-            "heading": "",
-            "subheading": "Ward Watkins, Advisor",
-            "image": "shopify:\/\/shop_images\/Square_2_6e47db04-9346-4eb5-a9a9-4866427db1f8.jpg",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "image_rM8B6G",
-        "image_EQNT9r",
-        "image_47UMcV",
-        "image_G4CERx"
-      ],
-      "settings": {
-        "enable_fullwidth": true,
-        "heading": "The IPL Team",
-        "seo_heading": "h2",
-        "heading_size": "h2",
-        "gallery_style": "stacked",
-        "slide_direction": "right",
-        "image_style": "circle",
-        "image_size": "large",
-        "text_alignment": "center",
-        "enable_image_animation": true,
-        "image_crop": false,
-        "image_background": false,
-        "bgcolor": "primary",
-        "section_visibility": "always",
-        "top_space_desktop": 45,
-        "bottom_space_desktop": 45,
-        "top_space_mobile": 35,
-        "bottom_space_mobile": 0
+        "multi_column_awards_title": ""
       }
     }
   },
   "order": [
     "main-page",
-    "image_with_text_3dyRtE",
-    "image_with_text_68UYWV",
-    "image_with_text_86tGTC",
-    "gallery_carousel_KFY6R8"
+    "meet_the_team_section_ietiUW",
+    "media_inline_text_X89FYi",
+    "multi_column_logos_nNpfTz"
   ]
 }
