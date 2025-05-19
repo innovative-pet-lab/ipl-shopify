@@ -171,7 +171,12 @@
   padding-left: 1rem
 }
 
- @media (max-width: 768px) {
+.form-flex {
+  display: flex;
+  gap: 8rem;
+}
+
+@media (max-width: 768px) {
     .yv-login-form {
       margin-top: 1.5rem;
       margin-bottom: 4rem; 
@@ -260,25 +265,29 @@
 
                 <div class="form-group">
                   <label>Type of Organization:</label>
+
+                  <div class="form-flex">
+                    <div class="radio-group">
+                      <label class="custom-checkbox">
+                        <input type="radio" name="customer[note][org_type]" value="Veterinary Clinic" class="org-type">
+                        <span class="checkmark"></span>
+                        <span class="checkbox-text">Veterinary Clinic</span>
+                      </label>
+
+                      <label class="custom-checkbox">
+                        <input type="radio" name="customer[note][org_type]" value="Research Institution" class="org-type">
+                        <span class="checkmark"></span>
+                        <span class="checkbox-text">Research Institution</span>
+                      </label>
+
+                      <label class="custom-checkbox">
+                        <input type="radio" name="customer[note][org_type]" value="Pet Nutrition / Food" class="org-type">
+                        <span class="checkmark"></span>
+                        <span class="checkbox-text">Pet Nutrition / Food</span>
+                      </label>
+                    </div>
+
                   <div class="radio-group">
-                    <label class="custom-checkbox">
-                      <input type="radio" name="customer[note][org_type]" value="Veterinary Clinic" class="org-type">
-                      <span class="checkmark"></span>
-                      <span class="checkbox-text">Veterinary Clinic</span>
-                    </label>
-
-                    <label class="custom-checkbox">
-                      <input type="radio" name="customer[note][org_type]" value="Research Institution" class="org-type">
-                      <span class="checkmark"></span>
-                      <span class="checkbox-text">Research Institution</span>
-                    </label>
-
-                    <label class="custom-checkbox">
-                      <input type="radio" name="customer[note][org_type]" value="Pet Nutrition / Food" class="org-type">
-                      <span class="checkmark"></span>
-                      <span class="checkbox-text">Pet Nutrition / Food</span>
-                    </label>
-
                     <label class="custom-checkbox">
                       <input type="radio" name="customer[note][org_type]" value="Pet Brand/Product Company" class="org-type">
                       <span class="checkmark"></span>
@@ -292,12 +301,16 @@
                     </label>
 
                     <!-- Other radio with input -->
-                    <label class="custom-checkbox other-radio">
-                      <input type="radio" name="customer[note][org_type]" value="Other" class="org-type">
-                      <span class="checkmark"></span>
-                      <span class="checkbox-text">Other:</span>
-                    </label>
-                    <input type="text" class="form-control" name="customer[note][org_type_other]" placeholder="Specify other organization type" style="max-width:300px">
+                    <div class="form-flex">
+                      <label class="custom-checkbox other-radio">
+                        <input type="radio" name="customer[note][org_type]" value="Other" class="org-type">
+                        <span class="checkmark"></span>
+                        <span class="checkbox-text">Other:</span>
+                      </label>
+                      <input type="text" class="form-control" name="customer[note][org_type_other]" placeholder="Specify other organization type">
+                    </div>
+
+                  </div>
                   </div>
                 </div>
                 
