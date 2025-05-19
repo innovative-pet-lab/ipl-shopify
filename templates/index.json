@@ -50,7 +50,7 @@
         "lantern_quiz_4KgmAL": {
           "type": "shopify://apps/lantern/blocks/quiz/619ce3d2-0211-4d3a-9bb0-e881b10b00ad",
           "settings": {
-            "quiz-ppf": "tools/perfect-product-finder/ipl-test-quize-uqrwcvyvct",
+            "quiz-ppf": "tools/perfect-product-finder/ipl-test-quiz-copy",
             "top-margin-ppf": "40px",
             "bottom-margin-ppf": "20px",
             "width-ppf": "100%",
