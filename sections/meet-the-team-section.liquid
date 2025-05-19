@@ -1,0 +1,175 @@
+<style>
+  .team-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+  }
+
+  .team-heading {
+    text-align: center;
+    font-size: 32px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    font-weight: bold;
+  }
+
+  .profile-card {
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .profile-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .profile-photo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  .profile-info {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .profile-name {
+    font-weight: bold;
+    font-size: 18px;
+  }
+
+  .profile-role {
+    color: #555;
+    font-size: 14px;
+  }
+
+  .socmed-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background-color: #f1f5f9;
+    color: #0077b5;
+    font-weight: 500;
+    font-size: 14px;
+    padding: 6px 12px;
+    border-radius: 20px;
+    margin-top: 6px;
+    text-decoration: none;
+    white-space: nowrap;
+    width: fit-content;
+  }
+
+  .socmed-button img {
+    width: 16px;
+    height: 16px;
+  }
+
+  .profile-description {
+    margin-top: 16px;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #333;
+    alignment: justify;
+  }
+</style>
+
+<div class="team-container">
+  {% for block in section.blocks %}
+    <div class="profile-card col-md-6">
+      <div class="profile-header">
+        <img
+          width="100%"
+          height="100%"
+          class="profile-photo"
+          src="{{ block.settings.photo | image_url }}"
+          alt="{{ block.settings.full_name }}"
+        >
+        <div class="profile-info">
+          <div class="profile-name">{{ block.settings.full_name }}</div>
+          <div class="profile-role">{{ block.settings.role }}</div>
+          <a class="socmed-button" href="{{ block.settings.socmed_url }}">
+            <img
+              width="16px"
+              height="16px"
+              src="{{ block.settings.socmed_image | image_url }}"
+              alt="{{ block.settings.socmed_name }}"
+            >
+            {{ block.settings.socmed_name }}
+          </a>
+        </div>
+      </div>
+      <div class="profile-description">
+        {{ block.settings.profile_description }}
+      </div>
+    </div>
+  {% endfor %}
+</div>
+
+{% schema %}
+{
+  "name": "Meet the team section",
+  "settings": [],
+  "blocks": [
+    {
+      "type": "card-person-profile",
+      "name": "Person Profiles",
+      "limit": 8,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "photo",
+          "label": "Profile photo"
+        },
+        {
+          "type": "text",
+          "id": "full_name",
+          "label": "Full name",
+          "default": "John Doe"
+        },
+        {
+          "type": "text",
+          "id": "role",
+          "label": "Role",
+          "default": "CEO & Founder"
+        },
+        {
+          "type": "url",
+          "id": "socmed_url",
+          "label": "Social media profile URL"
+        },
+        {
+          "type": "image_picker",
+          "id": "socmed_image",
+          "label": "Social media icon"
+        },
+        {
+          "type": "text",
+          "id": "socmed_name",
+          "label": "Social media platform",
+          "default": "LinkedIn"
+        },
+        {
+          "type": "textarea",
+          "id": "profile_description",
+          "label": "Profile description",
+          "default": "Add a short biography or description here."
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Meet the team section"
+    }
+  ]
+}
+{% endschema %}
