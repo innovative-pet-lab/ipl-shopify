@@ -21,6 +21,7 @@
     },
     "new_signup_RKBett": {
       "type": "new-signup",
+      "disabled": true,
       "settings": {
         "column_background": false,
         "mobile_column_count": "1",
