@@ -14,7 +14,6 @@
     font-size: 32px;
     margin-top: 40px;
     margin-bottom: 40px;
-    font-weight: bold;
   }
 
   .profile-card {
@@ -80,8 +79,16 @@
     color: #333;
     alignment: justify;
   }
+
+  @media screen and (max-width: 540px) {
+    .team-heading {
+      text-align: left;
+      margin-left: 30px;
+    }
+  }
 </style>
 
+<h2 class="team-heading">{{ section.settings.meet_the_team_title }}</h2>
 <div class="team-container">
   {% for block in section.blocks %}
     <div class="profile-card col-md-6">
@@ -117,7 +124,14 @@
 {% schema %}
 {
   "name": "Meet the team section",
-  "settings": [],
+  "settings": [
+    {
+      "type": "text",
+      "id": "meet_the_team_title",
+      "label": "Meet the team title",
+      "default": "Meet the team"
+    }
+  ],
   "blocks": [
     {
       "type": "card-person-profile",

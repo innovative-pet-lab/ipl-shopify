@@ -7,7 +7,6 @@
     text-align: center;
     font-size: 32px;
     margin: 40px auto;
-    font-weight: bold;
   }
 
   .cards-container {
@@ -38,6 +37,40 @@
     color: #333;
     text-align: center;
   }
+
+  @media screen and (max-width: 540px) {
+    .awards-heading {
+      font-size: 30px;
+      margin-bottom: 10px;
+    }
+
+    .awards-heading {
+      text-align: left;
+    }
+
+    .award-card {
+      flex-direction: row;
+      margin: 5px 0;
+    }
+
+    .award-photo {
+      width: 30%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .award-description {
+      display: flex;
+      text-align: left;
+      height: 100%;
+      margin: 0 0 0 15px;
+      font-size: 14px;
+      line-height: 1.6;
+      font-weight: bold;
+      color: #333;
+      align-items: center;
+    }
+  }
 </style>
 
 <section class="awards-section">
@@ -58,6 +91,27 @@
     {% endfor %}
   </div>
 </section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    function removeIntentionalBreaksOnSmallScreens() {
+      const elements = document.getElementsByClassName('award-description');
+
+      if (window.innerWidth <= 540) {
+        Array.from(elements).forEach((el) => {
+          const brs = el.querySelectorAll('br');
+          brs.forEach((br) => br.remove());
+        });
+      }
+    }
+
+    // Run on initial load
+    removeIntentionalBreaksOnSmallScreens();
+
+    // Run again on resize
+    window.addEventListener('resize', removeIntentionalBreaksOnSmallScreens);
+  });
+</script>
 
 {% schema %}
 {

@@ -8,7 +8,6 @@
     font-size: 32px;
     margin-top: 40px;
     margin-bottom: 40px;
-    font-weight: bold;
   }
 
   .overflow-text {
@@ -43,8 +42,8 @@
     left: 50%;
     transform: translate(-50%, -50%);
     background: rgba(255, 255, 255, 0.7);
-    width: 150px;
-    height: 150px;
+    width: 30%;
+    height: 50%;
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -57,6 +56,30 @@
     border-left: 40px solid rgba(0, 0, 0, 0.5);
     border-top: 24px solid transparent;
     border-bottom: 24px solid transparent;
+  }
+
+  @media screen and (max-width: 767px) {
+    .overlay-button {
+      border-left: 20px solid rgba(0, 0, 0, 0.5);
+      border-top: 12px solid transparent;
+      border-bottom: 12px solid transparent;
+    }
+  }
+
+  @media screen and (max-width: 540px) {
+    .inline-media-heading {
+      text-align: left;
+    }
+
+    .media-float {
+      width: 100%;
+      margin-top: 20px;
+      margin-left: 30px;
+      margin-bottom: 20px;
+    }
+
+    .inline-media-thumbnail {
+    }
   }
 </style>
 
