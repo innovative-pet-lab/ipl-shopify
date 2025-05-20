@@ -1,41 +1,3 @@
-{%- if section.blocks.size > 0 -%}
-  <div class="{% if settings.layout_width == 'boxed' %}container{% else %}container-fluid{% endif %}">
-    <div class="yv-faq-detail">
-      {%- if section.settings.heading != blank -%}
-        <{{ section.settings.seo_heading }} class="h4">{{ section.settings.heading }}</{{ section.settings.seo_heading }}>
-      {%- endif -%}
-      <div class="yv-product-accordion yv-faq-accordion">
-        {%- for block in section.blocks -%}
-          {%- if block.settings.heading != blank or block.settings.answer != blank -%}
-            <div class="yv-accordion-card">
-              <div
-                class="yv-accordion-header faq-{{ section.id }} faqSection-header {% if forloop.first %}active{% endif %}"
-                content="faq-content-{{ block.id }}"
-              >
-                <h6 class="accordion-heading text-medium">{{ block.settings.heading }}</h6>
-                <svg viewBox="0 0 13 12" width="13" height="12">
-                  <path d="m6 0h1v13h-1z" class="v-line"></path>
-                  <path d="m0 6h13v1h-13z" class="h-line"></path>
-                </svg>
-              </div>
-              <div
-                class="yv-accordion-content faqSection-content"
-                id="faq-content-{{ block.id }}"
-                {% if forloop.first %}
-                  style="display:block;"
-                {% endif %}
-              >
-                <div class="yv-content-body">
-                  {{ block.settings.answer }}
-                </div>
-              </div>
-            </div>
-          {%- endif -%}
-        {%- endfor -%}
-      </div>
-    </div>
-  </div>
-{% endif %}
 <style>
   #shopify-section-{{ section.id }}.shopify-section {
     background:var(--{{- section.settings.bgcolor -}}ColorBody);
@@ -74,7 +36,144 @@
         }
       }
   {% endif %}
+
+  {% comment %} Force override accordion styling {% endcomment %}
+  .faq-heading {
+    color: black !important;
+    font-weight: 500 !important;
+    font-size: 20px !important;
+  }
+
+  .faq-answer {
+    font-weight: 400 !important;
+    font-size: 20px !important;
+    margin: 0 1em 1em 1em !important;
+    padding: 0.5em 0 0.5em 1em !important;
+  }
+
+  .faq-answer p {
+    margin: 0 !important;
+  }
+
+  .faq-card {
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    margin: 0 !important;
+  }
+
+  .yv-faq-accordion {
+    padding-bottom: 20px;
+  }
 </style>
+
+{%- if section.blocks.size > 0 -%}
+  <div class="{% if settings.layout_width == 'boxed' %}container{% else %}container-fluid{% endif %}">
+    <div class="yv-faq-detail">
+      {%- if section.settings.heading != blank -%}
+        <{{ section.settings.seo_heading }} class="h4">
+          {{- section.settings.heading -}}
+        </{{ section.settings.seo_heading }}>
+      {%- endif -%}
+      <div class="yv-product-accordion yv-faq-accordion">
+        {%- for block in section.blocks -%}
+          {%- if block.settings.heading != blank or block.settings.answer != blank -%}
+            <div
+              class="yv-accordion-card faq-card"
+              style="border: none;"
+            >
+              {% if forloop.first %}{% else %}<hr style="display: block; border-top: 1px solid #ECF0EF;">{% endif %}
+              <div
+                class="yv-accordion-header faq-{{ section.id }} faqSection-header {% if forloop.first %}active{% endif %}"
+                content="faq-content-{{ block.id }}"
+              >
+                <h6 class="accordion-heading text-medium faq-heading">{{ block.settings.heading }}</h6>
+                <span class="chevron-icon">
+                  <!-- Down by default except first block -->
+                  <svg
+                    class="chevron-down"
+                    viewBox="0 0 24 24"
+                    width="16"
+                    height="16"
+                    style="display: {% if forloop.first %}none{% else %}block{% endif %};"
+                  >
+                    <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  <!-- Up, hidden by default except first block -->
+                  <svg
+                    class="chevron-up"
+                    viewBox="0 0 24 24"
+                    width="16"
+                    height="16"
+                    style="display: {% if forloop.first %}block{% else %}none{% endif %};"
+                  >
+                    <path d="M18 15l-6-6-6 6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </span>
+              </div>
+              <div
+                class="yv-accordion-content faqSection-content"
+                id="faq-content-{{ block.id }}"
+                {% if forloop.first %}
+                  style="display:block;"
+                {% endif %}
+              >
+                <div
+                  class="yv-content-body faq-answer"
+                  style="background-color: {{ section.settings.row_answer_bgcolor }}"
+                >
+                  {{ block.settings.answer }}
+                </div>
+              </div>
+            </div>
+          {%- endif -%}
+        {%- endfor -%}
+      </div>
+    </div>
+  </div>
+{% endif %}
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const questions = document.querySelectorAll('.yv-accordion-header');
+
+    const toggleAllChevronsDown = (questions) => {
+      questions.forEach((question) => {
+        const chevronDown = question.querySelector('.chevron-down');
+        const chevronUp = question.querySelector('.chevron-up');
+        chevronDown.style.display = 'inline';
+        chevronUp.style.display = 'none';
+      });
+    };
+
+    questions.forEach((question) => {
+      question.addEventListener('click', function () {
+        // Set all chevrons to down except the clicked one
+        toggleAllChevronsDown(questions);
+
+        const content = this.nextElementSibling;
+        const chevronDown = this.querySelector('.chevron-down');
+        const chevronUp = this.querySelector('.chevron-up');
+
+        if (content && content.classList.contains('yv-accordion-content')) {
+          const isOpen = content.style.display === 'block';
+
+          // Toggle accordion content
+          content.style.display = isOpen ? 'none' : 'block';
+
+          // Toggle active state
+          this.classList.toggle('active');
+
+          // Toggle chevron icons
+          if (chevronDown && chevronUp) {
+            chevronDown.style.display = isOpen ? 'none' : 'inline';
+            chevronUp.style.display = isOpen ? 'inline' : 'none';
+          }
+        }
+      });
+    });
+  });
+</script>
+
 {% schema %}
 {
   "name": "t:sections.faq-section.name",
@@ -83,7 +182,7 @@
   "max_blocks": 6,
   "disabled_on": {
     "groups": ["header"]
-   },
+  },
   "settings": [
     {
       "type": "text",
@@ -92,38 +191,38 @@
       "label": "t:sections.faq-section.settings.heading.label"
     },
     {
-          "type": "select",
-          "id": "seo_heading",
-          "label": "t:common.header.heading_tag.label",
-          "info": "t:common.header.heading_tag.info",
-          "default": "h2",
-          "options": [
-            {
-              "value": "h1",
-              "label": "t:common.header.heading_tag.options.h1.label"
-            },
-            {
-              "value": "h2",
-              "label": "t:common.header.heading_tag.options.h2.label"
-            },
-            {
-              "value": "h3",
-              "label": "t:common.header.heading_tag.options.h3.label"
-            },
-            {
-              "value": "h4",
-              "label": "t:common.header.heading_tag.options.h4.label"
-            },
-            {
-              "value": "h5",
-              "label": "t:common.header.heading_tag.options.h5.label"
-            },
-            {
-              "value": "h6",
-              "label": "t:common.header.heading_tag.options.h6.label"
-            }
-          ]
-      },
+      "type": "select",
+      "id": "seo_heading",
+      "label": "t:common.header.heading_tag.label",
+      "info": "t:common.header.heading_tag.info",
+      "default": "h2",
+      "options": [
+        {
+          "value": "h1",
+          "label": "t:common.header.heading_tag.options.h1.label"
+        },
+        {
+          "value": "h2",
+          "label": "t:common.header.heading_tag.options.h2.label"
+        },
+        {
+          "value": "h3",
+          "label": "t:common.header.heading_tag.options.h3.label"
+        },
+        {
+          "value": "h4",
+          "label": "t:common.header.heading_tag.options.h4.label"
+        },
+        {
+          "value": "h5",
+          "label": "t:common.header.heading_tag.options.h5.label"
+        },
+        {
+          "value": "h6",
+          "label": "t:common.header.heading_tag.options.h6.label"
+        }
+      ]
+    },
     {
       "type": "header",
       "content": "t:common.header.color_section.label"
@@ -160,7 +259,7 @@
       "type": "select",
       "id": "row_bgcolor",
       "label": "t:sections.faq-section.settings.row_bgcolor.label",
-      "default": "secondary",
+      "default": "quaternary",
       "options": [
         {
           "value": "primary",
@@ -183,6 +282,12 @@
           "label": "t:common.header.gradient.label"
         }
       ]
+    },
+    {
+      "type": "color",
+      "id": "row_answer_bgcolor",
+      "label": "Answer background color", // Todo: handle translations
+      "default": "#F0F6F4"
     },
     {
       "type": "select",
@@ -283,9 +388,3 @@
   ]
 }
 {% endschema %}
-
-{% stylesheet %}
-{% endstylesheet %}
-
-{% javascript %}
-{% endjavascript %}
