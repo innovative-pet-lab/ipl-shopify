@@ -73,7 +73,7 @@
   }
 </style>
 
-<section class="awards-section">
+<section class="awards-section" id="{{ section.settings.page_section_id }}">
   <h2 class="awards-heading">{{ section.settings.multi_column_awards_title }}</h2>
 
   <div class="cards-container">
@@ -117,6 +117,12 @@
 {
   "name": "Multi-column award cards",
   "settings": [
+    {
+      "type": "text",
+      "id": "page_section_id",
+      "label": "Define ID that will be used for navigation redirect.",
+      "default": "meet-the-team-awards-section"
+    },
     {
       "type": "text",
       "id": "multi_column_awards_title",

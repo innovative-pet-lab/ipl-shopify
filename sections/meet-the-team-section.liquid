@@ -89,7 +89,7 @@
 </style>
 
 <h2 class="team-heading">{{ section.settings.meet_the_team_title }}</h2>
-<div class="team-container">
+<div class="team-container" id="{{ section.settings.page_section_id }}">
   {% for block in section.blocks %}
     <div class="profile-card col-md-6">
       <div class="profile-header">
@@ -130,6 +130,12 @@
       "id": "meet_the_team_title",
       "label": "Meet the team title",
       "default": "Meet the team"
+    },
+    {
+      "type": "text",
+      "id": "page_section_id",
+      "label": "Define ID that will be used for navigation redirect.",
+      "default": "meet-the-team-section"
     }
   ],
   "blocks": [

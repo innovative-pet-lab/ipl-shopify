@@ -80,7 +80,7 @@
   }
 </style>
 
-<section class="inline-media-section">
+<section class="inline-media-section" id="{{ section.settings.page_section_id }}">
   <h2 class="inline-media-heading">{{ section.settings.title }}</h2>
 
   {% for block in section.blocks %}
@@ -121,6 +121,12 @@
 {
   "name": "Media inline text",
   "settings": [
+    {
+      "type": "text",
+      "id": "page_section_id",
+      "label": "Define ID that will be used for navigation redirect.",
+      "default": "meet-the-team-our-story-section"
+    },
     {
       "type": "text",
       "id": "title",
