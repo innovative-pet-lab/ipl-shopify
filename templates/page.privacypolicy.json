@@ -21,6 +21,9 @@
     },
     "custom_liquid_rGCx4r": {
       "type": "custom-liquid",
+      "custom_css": [
+        "h2 {color: #1c1d31; font-size: 48px; font-weight: 500;}"
+      ],
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
         "custom_liquid": "<h2>Privacy Policy</h2>",
@@ -36,11 +39,12 @@
     "custom_liquid_riL9kf": {
       "type": "custom-liquid",
       "custom_css": [
+        "p {color: #333333; margin: 0 30px; font-size: 24px; line-height: 32px;}",
         "@media screen and (max-width: 540px) {p {text-align: center; }}"
       ],
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "<p>\nYour privacy is important to us. It is Innovative Pet Lab’s policy to respect your privacy regarding any information we may collect from you across our website, www.innovativepetlab.com, and other sites we own and operate.\n</p>\n\n<p>\nWe only ask for personal information when we truly need it to provide a service to you. We collect it by fair and lawful means, with your knowledge and consent. We also let you know why we’re collecting it and how it will be used.\n</p>\n\n<p>\nWe only retain collected information for as long as necessary to provide you with your requested service. What data we store, we’ll protect within commercially acceptable means to prevent loss and theft, as well as unauthorized access, disclosure, copying, use or modification.\n</p>\n\n<p>\nWe don’t share any personally identifying information publicly or with third-parties, except when required to by law.\n</p>\n\n<p>\nOur website may link to external sites that are not operated by us. Please be aware that we have no control over the content and practices of these sites, and cannot accept responsibility or liability for their respective privacy policies.\n</p>\n\n<p>\nYou are free to refuse our request for your personal information, with the understanding that we may be unable to provide you with some of your desired services.\n</p>\n\n<p>\nYour continued use of our website will be regarded as acceptance of our practices around privacy and personal information. If you have any questions about how we handle user data and personal information, feel free to contact us.\n</p>\n\n<p>\nThis policy is effective as of November 01, 2021.\n</p>",
+        "custom_liquid": "<p>\nYour privacy is important to us. It is Innovative Pet Lab’s policy to respect your privacy regarding any information we may collect from you across our website, www.innovativepetlab.com, and other sites we own and operate.\n</p>\n\n<br>\n\n<p>\nWe only ask for personal information when we truly need it to provide a service to you. We collect it by fair and lawful means, with your knowledge and consent. We also let you know why we’re collecting it and how it will be used.\n</p>\n\n<br>\n\n<p>\nWe only retain collected information for as long as necessary to provide you with your requested service. What data we store, we’ll protect within commercially acceptable means to prevent loss and theft, as well as unauthorized access, disclosure, copying, use or modification.\n</p>\n\n<br>\n\n<p>\nWe don’t share any personally identifying information publicly or with third-parties, except when required to by law.\n</p>\n\n<br>\n\n<p>\nOur website may link to external sites that are not operated by us. Please be aware that we have no control over the content and practices of these sites, and cannot accept responsibility or liability for their respective privacy policies.\n</p>\n\n<br>\n\n<p>\nYou are free to refuse our request for your personal information, with the understanding that we may be unable to provide you with some of your desired services.\n</p>\n\n<br>\n\n<p>\nYour continued use of our website will be regarded as acceptance of our practices around privacy and personal information. If you have any questions about how we handle user data and personal information, feel free to contact us.\n</p>\n\n<br>\n\n<p>\nThis policy is effective as of November 01, 2021.\n</p>\n\n<br>",
         "content_alignment": "left",
         "bgcolor": "quaternary",
         "section_visibility": "always",
