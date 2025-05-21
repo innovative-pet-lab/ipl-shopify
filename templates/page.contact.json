@@ -19,6 +19,20 @@
         "textcolor": "#ffffff"
       }
     },
+    "custom_liquid_YUcF8k": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<h2> Contact Us </h2>",
+        "content_alignment": "center",
+        "bgcolor": "primary",
+        "section_visibility": "always",
+        "top_space_desktop": 30,
+        "bottom_space_desktop": 30,
+        "top_space_mobile": 30,
+        "bottom_space_mobile": 30
+      }
+    },
     "main": {
       "type": "contact-page-template",
       "settings": {
@@ -71,6 +85,7 @@
   },
   "order": [
     "main-page",
+    "custom_liquid_YUcF8k",
     "main",
     "d4990aa8-00b1-4fd3-bf9d-3832c1bd440a",
     "ffdeadde-5060-4cc0-bf3c-1351ff984a59",
