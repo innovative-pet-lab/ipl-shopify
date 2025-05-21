@@ -1,37 +1,43 @@
 <style>
+  .page-title-with-button {
+    display: none;
+  }
+
   .team-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 60px;
-    max-width: 1200px;
     margin: 0 auto;
-    padding: 40px 20px;
+    padding: 0 20px 40px 20px;
   }
 
   .team-heading {
+    color: #1c1d31;
     text-align: center;
-    font-size: 32px;
+    font-size: 48px;
+    font-weight: 600;
     margin-top: 40px;
     margin-bottom: 40px;
   }
 
   .profile-card {
-    max-width: 500px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    padding: 0 20px 50px 20px;
   }
 
   .profile-header {
     display: flex;
     align-items: center;
     gap: 16px;
+    color: #000000;
+    font-size: 24px;
   }
 
   .profile-photo {
-    width: 100px;
-    height: 100px;
+    width: 140px;
+    height: 140px;
     border-radius: 50%;
     object-fit: cover;
   }
@@ -47,8 +53,8 @@
   }
 
   .profile-role {
-    color: #555;
-    font-size: 14px;
+    color: #333333;
+    font-size: 20px;
   }
 
   .socmed-button {
@@ -56,9 +62,9 @@
     align-items: center;
     gap: 6px;
     background-color: #f1f5f9;
-    color: #0077b5;
+    color: ##0b66c2;
     font-weight: 500;
-    font-size: 14px;
+    font-size: 18px;
     padding: 6px 12px;
     border-radius: 20px;
     margin-top: 6px;
@@ -68,57 +74,106 @@
   }
 
   .socmed-button img {
-    width: 16px;
-    height: 16px;
+    width: 18px;
+    height: 18px;
   }
 
   .profile-description {
     margin-top: 16px;
-    font-size: 14px;
-    line-height: 1.6;
-    color: #333;
+    font-size: 20px;
+    line-height: 26px;
+    color: #333333;
     alignment: justify;
   }
 
+  @media screen and (min-width: 992px) {
+    .team-container {
+      padding: 0 4% 0 4%;
+    }
+  }
+
   @media screen and (max-width: 540px) {
+    .page-title {
+      display: none;
+    }
+
+    .page-title-with-button {
+      display: flex;
+      flex-direction: row;
+      margin: 0 5% 20px 5%;
+      align-items: center;
+    }
+
+    .page-title-with-button button {
+      font-size: 44px;
+      color: #26286e;
+      margin: 0;
+    }
+
+    .page-title-with-button h2 {
+      margin: 0 5px;
+      line-height: 100%;
+    }
+
     .team-heading {
+      color: #26286e;
+      font-size: 20px;
       text-align: left;
       margin-left: 30px;
+    }
+
+    .profile-name {
+      font-size: 20px;
+    }
+
+    .profile-role {
+      font-size: 16px;
+    }
+
+    .profile-description {
+      font-size: 16px;
     }
   }
 </style>
 
-<h2 class="team-heading">{{ section.settings.meet_the_team_title }}</h2>
-<div class="team-container">
-  {% for block in section.blocks %}
-    <div class="profile-card col-md-6">
-      <div class="profile-header">
-        <img
-          width="100%"
-          height="100%"
-          class="profile-photo"
-          src="{{ block.settings.photo | image_url }}"
-          alt="{{ block.settings.full_name }}"
-        >
-        <div class="profile-info">
-          <div class="profile-name">{{ block.settings.full_name }}</div>
-          <div class="profile-role">{{ block.settings.role }}</div>
-          <a class="socmed-button" href="{{ block.settings.socmed_url }}">
-            <img
-              width="16px"
-              height="16px"
-              src="{{ block.settings.socmed_image | image_url }}"
-              alt="{{ block.settings.socmed_name }}"
-            >
-            {{ block.settings.socmed_name }}
-          </a>
+<div class="page-title-with-button">
+  <button onclick="window.history.back()">←</button>
+  <h2 class="team-heading">{{ section.settings.meet_the_team_title }}</h2>
+</div>
+
+<h2 class="page-title team-heading">{{ section.settings.meet_the_team_title }}</h2>
+<div class="team-container container-fluid" id="{{ section.settings.page_section_id }}">
+  <div class="row">
+    {% for block in section.blocks %}
+      <div class="profile-card col-md-6">
+        <div class="profile-header">
+          <img
+            width="100%"
+            height="100%"
+            class="profile-photo"
+            src="{{ block.settings.photo | image_url }}"
+            alt="{{ block.settings.full_name }}"
+          >
+          <div class="profile-info">
+            <div class="profile-name">{{ block.settings.full_name }}</div>
+            <div class="profile-role">{{ block.settings.role }}</div>
+            <a class="socmed-button" href="{{ block.settings.socmed_url }}">
+              <img
+                width="16px"
+                height="16px"
+                src="{{ block.settings.socmed_image | image_url }}"
+                alt="{{ block.settings.socmed_name }}"
+              >
+              {{ block.settings.socmed_name }}
+            </a>
+          </div>
+        </div>
+        <div class="profile-description">
+          {{ block.settings.profile_description }}
         </div>
       </div>
-      <div class="profile-description">
-        {{ block.settings.profile_description }}
-      </div>
-    </div>
-  {% endfor %}
+    {% endfor %}
+  </div>
 </div>
 
 {% schema %}
@@ -130,6 +185,12 @@
       "id": "meet_the_team_title",
       "label": "Meet the team title",
       "default": "Meet the team"
+    },
+    {
+      "type": "text",
+      "id": "page_section_id",
+      "label": "Define ID that will be used for navigation redirect.",
+      "default": "meet-the-team-section"
     }
   ],
   "blocks": [

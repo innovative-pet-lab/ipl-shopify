@@ -4,8 +4,10 @@
   }
 
   .awards-heading {
+    color: #1c1d31;
     text-align: center;
-    font-size: 32px;
+    font-size: 48px;
+    font-weight: 600;
     margin: 40px auto;
   }
 
@@ -32,25 +34,26 @@
 
   .award-description {
     margin-top: 20px;
-    font-size: 14px;
-    line-height: 1.6;
-    color: #333;
+    font-size: 20px;
+    line-height: 26px;
+    color: #333333;
     text-align: center;
   }
 
   @media screen and (max-width: 540px) {
-    .awards-heading {
-      font-size: 30px;
-      margin-bottom: 10px;
+    .awards-section {
+      margin: 0 6% 40px 6%;
     }
 
     .awards-heading {
       text-align: left;
+      font-size: 20px;
+      margin-bottom: 10px;
     }
 
     .award-card {
       flex-direction: row;
-      margin: 5px 0;
+      margin: 18px 0;
     }
 
     .award-photo {
@@ -64,8 +67,8 @@
       text-align: left;
       height: 100%;
       margin: 0 0 0 15px;
-      font-size: 14px;
-      line-height: 1.6;
+      font-size: 16px;
+      line-height: 1.2;
       font-weight: bold;
       color: #333;
       align-items: center;
@@ -73,7 +76,7 @@
   }
 </style>
 
-<section class="awards-section">
+<section class="awards-section" id="{{ section.settings.page_section_id }}">
   <h2 class="awards-heading">{{ section.settings.multi_column_awards_title }}</h2>
 
   <div class="cards-container">
@@ -117,6 +120,12 @@
 {
   "name": "Multi-column award cards",
   "settings": [
+    {
+      "type": "text",
+      "id": "page_section_id",
+      "label": "Define ID that will be used for navigation redirect.",
+      "default": "meet-the-team-awards-section"
+    },
     {
       "type": "text",
       "id": "multi_column_awards_title",

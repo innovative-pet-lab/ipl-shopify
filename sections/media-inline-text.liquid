@@ -1,20 +1,28 @@
 <style>
   .inline-media-section {
-    margin: 0 40px 40px 40px;
+    margin: 0 5% 40px 5%;
   }
 
   .inline-media-heading {
+    color: #1c1d31;
     text-align: center;
-    font-size: 32px;
+    font-size: 48px;
+    font-weight: 600;
     margin-top: 40px;
     margin-bottom: 40px;
   }
 
   .overflow-text {
+    font-size: 20px;
+    line-height: 26px;
+    color: #333333;
     margin: 10px 0;
   }
 
   .inline-text {
+    font-size: 20px;
+    line-height: 26px;
+    color: #333333;
     margin: 10px 0;
   }
 
@@ -58,6 +66,18 @@
     border-bottom: 24px solid transparent;
   }
 
+  @media screen and (min-width: 992px) {
+    .inline-media-section {
+      margin: 0 7% 40px 7%;
+    }
+  }
+
+  @media screen and (max-width: 967px) {
+    .inline-media-section {
+      margin: 0 4% 40px 4%;
+    }
+  }
+
   @media screen and (max-width: 767px) {
     .overlay-button {
       border-left: 20px solid rgba(0, 0, 0, 0.5);
@@ -67,8 +87,24 @@
   }
 
   @media screen and (max-width: 540px) {
+    .inline-media-section {
+      margin: 0 6% 40px 6%;
+    }
+
     .inline-media-heading {
       text-align: left;
+      font-size: 20px;
+      font-weight: 600;
+    }
+
+    .overflow-text {
+      font-size: 16px;
+      line-height: 22px;
+    }
+
+    .inline-text {
+      font-size: 16px;
+      line-height: 22px;
     }
 
     .media-float {
@@ -80,7 +116,7 @@
   }
 </style>
 
-<section class="inline-media-section">
+<section class="inline-media-section" id="{{ section.settings.page_section_id }}">
   <h2 class="inline-media-heading">{{ section.settings.title }}</h2>
 
   {% for block in section.blocks %}
@@ -121,6 +157,12 @@
 {
   "name": "Media inline text",
   "settings": [
+    {
+      "type": "text",
+      "id": "page_section_id",
+      "label": "Define ID that will be used for navigation redirect.",
+      "default": "meet-the-team-our-story-section"
+    },
     {
       "type": "text",
       "id": "title",
