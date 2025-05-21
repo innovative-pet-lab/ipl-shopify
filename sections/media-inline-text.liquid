@@ -116,8 +116,9 @@
   }
 </style>
 
+<div style="height: 80px; margin-top: -80px;" id="{{ section.settings.page_section_id }}"></div>
 <section class="inline-media-section">
-  <h2 class="inline-media-heading" id="{{ section.settings.page_section_id }}">{{ section.settings.title }}</h2>
+  <h2 class="inline-media-heading">{{ section.settings.title }}</h2>
 
   {% for block in section.blocks %}
     {% if block.settings.is_above_media %}
@@ -152,6 +153,19 @@
     {% endfor %}
   </div>
 </section>
+
+{% comment %}
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      console.log('Triggered!');
+      const scrollFocusElement = document.getElementById('{{ section.settings.page_section_id }}');
+      if (scrollFocusElement) {
+        console.log('Pasok!');
+        scrollFocusElement.style.scrollMarginTop = '1000px'; // Set offset
+      }
+    });
+  </script>
+{% endcomment %}
 
 {% schema %}
 {
