@@ -116,8 +116,8 @@
   }
 </style>
 
-<section class="inline-media-section" id="{{ section.settings.page_section_id }}">
-  <h2 class="inline-media-heading">{{ section.settings.title }}</h2>
+<section class="inline-media-section">
+  <h2 class="inline-media-heading" id="{{ section.settings.page_section_id }}">{{ section.settings.title }}</h2>
 
   {% for block in section.blocks %}
     {% if block.settings.is_above_media %}
