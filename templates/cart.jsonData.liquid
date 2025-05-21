@@ -81,7 +81,18 @@
                 <a href="{{ item.url }}" class="yv-product-title" aria-label="{{ item.product.title | strip_html }}">
                   {{- item.product.title | strip_html -}}
                 </a>
-                <p class="cart-tags">For {{ item.product.tags | join: ' and ' }}</p>
+                {% comment %} <p class="cart-tags">For {{ item.product.tags | join: ' and ' }}</p> {% endcomment %}
+                 {% assign filtered_tags = '' %}
+                {% for tag in item.product.tags %}
+                  {% if tag == 'Cats' or tag == 'Dogs' %}
+                    {% assign filtered_tags = filtered_tags | append: tag | append: '||' %}
+                  {% endif %}
+                {% endfor %}
+
+                {% assign filtered_tags_array = filtered_tags | split: '||' | uniq %}
+                {% if filtered_tags_array.size > 0 %}
+                  <p class="cart-tags">For {{ filtered_tags_array | join: ' and ' }}</p>
+                {% endif %}
               </div>
               <div class="yv-prizebox" bss-b2b-cart-item-key="{{ item.key }}" bss-b2b-final-line-price>
                 <span class="yv-product-price">{{ item.final_line_price | money_without_trailing_zeros }}</span>
