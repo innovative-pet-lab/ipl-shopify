@@ -25,7 +25,7 @@
         "card_person_profile_AB6hTx": {
           "type": "card-person-profile",
           "settings": {
-            "photo": "shopify://shop_images/image.png",
+            "photo": "shopify://shop_images/J.SmithHeadshot10.22.226113-600x600.jpg",
             "full_name": "Jamie Smith",
             "role": "CEO & CoFounder",
             "socmed_url": "https://www.linkedin.com/in/jamie-smith-959a3453/",
@@ -130,7 +130,9 @@
         "card_person_profile_LJNN4N"
       ],
       "name": "Meet the team section",
-      "settings": {}
+      "settings": {
+        "meet_the_team_title": "Meet the team"
+      }
     },
     "media_inline_text_X89FYi": {
       "type": "media-inline-text",
