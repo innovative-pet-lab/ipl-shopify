@@ -131,7 +131,8 @@
       ],
       "name": "Meet the team section",
       "settings": {
-        "meet_the_team_title": "Meet the team"
+        "meet_the_team_title": "Meet the team",
+        "page_section_id": "profiles"
       }
     },
     "media_inline_text_X89FYi": {
@@ -190,6 +191,7 @@
       ],
       "name": "Media inline text",
       "settings": {
+        "page_section_id": "our-story",
         "title": "Our story",
         "thumbnail": "shopify://shop_images/our-story-thumbnail.png",
         "media_url": "https://www.youtube.com/watch?v=MBp3Jwd8Suw"
@@ -235,6 +237,7 @@
       ],
       "name": "Multi-column logo cards",
       "settings": {
+        "page_section_id": "awards",
         "multi_column_awards_title": "Awards & Accolades"
       }
     }
