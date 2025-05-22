@@ -11,6 +11,7 @@
   "sections": {
     "main-page": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "seo_heading": "h2",
         "banner_height_desktop": "auto",
@@ -19,17 +20,16 @@
         "textcolor": "#ffffff"
       }
     },
-    "new_signup_RKBett": {
-      "type": "new-signup",
-      "disabled": true,
+    "custom_liquid_fkaLhK": {
+      "type": "custom-liquid",
+      "custom_css": [
+        "h2 {font-size: 48px; font-weight: 700;}"
+      ],
+      "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "column_background": false,
-        "mobile_column_count": "1",
-        "icon_background": false,
-        "icon_position": "top",
-        "bgcolor": "secondary",
-        "column_background_color": "",
-        "icon_background_color": "",
+        "custom_liquid": "<h2> Learn </h2>",
+        "content_alignment": "center",
+        "bgcolor": "quaternary",
         "section_visibility": "always",
         "top_space_desktop": 30,
         "bottom_space_desktop": 30,
@@ -40,6 +40,6 @@
   },
   "order": [
     "main-page",
-    "new_signup_RKBett"
+    "custom_liquid_fkaLhK"
   ]
 }
