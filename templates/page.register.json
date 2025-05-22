@@ -18,27 +18,9 @@
         "bgcolor": "#26286e",
         "textcolor": "#ffffff"
       }
-    },
-    "new_signup_RKBett": {
-      "type": "new-signup",
-      "settings": {
-        "column_background": false,
-        "mobile_column_count": "1",
-        "icon_background": false,
-        "icon_position": "top",
-        "bgcolor": "secondary",
-        "column_background_color": "",
-        "icon_background_color": "",
-        "section_visibility": "always",
-        "top_space_desktop": 30,
-        "bottom_space_desktop": 30,
-        "top_space_mobile": 30,
-        "bottom_space_mobile": 30
-      }
     }
   },
   "order": [
-    "main-page",
-    "new_signup_RKBett"
+    "main-page"
   ]
 }
