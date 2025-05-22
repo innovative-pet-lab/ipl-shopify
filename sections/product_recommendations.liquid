@@ -165,7 +165,6 @@
         <div class="product-grid-wrapper">
           <div class="product-grid">
             {%- for product in recommendations.products limit: 3 -%}
-                {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: product, subject_parent: recommendations, variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% else %}{% continue %}{% endif -%}
               <div class="product-card" data-product-url="{{ product.url }}">
                 {% if product.tags contains 'Best Seller' %}
                   <div class="best-seller">Best Seller</div>
@@ -331,6 +330,31 @@
     });
   });
 </script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+      document.addEventListener("mouseover", function (event) {
+          const card = event.target.closest(".product-card");
+          if (card) {
+              console.log('logged this hover');
+              card.style.cursor = "pointer"; // Indicate it's clickable
+          }
+      });
+
+      document.addEventListener("click", function (event) {
+        const card = event.target.closest(".product-card");
+    
+        // Avoid redirect if a form or button inside card was clicked
+        if (card && !event.target.closest("form") && event.target.tagName !== "BUTTON") {
+            console.log('logged this click');
+            const productUrl = card.getAttribute("data-product-url");
+            if (productUrl) {
+                window.location.assign(productUrl);
+            }
+        }
+    });
+  });
+</script> 
 
 {% schema %}
   {
