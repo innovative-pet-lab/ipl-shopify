@@ -1,0 +1,154 @@
+<style>
+  .page-title-with-button {
+    display: none;
+  }
+
+  .buttons-heading {
+    color: #1c1d31;
+    text-align: center;
+    font-size: 48px;
+    font-weight: 600;
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+  }
+
+  .row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .button-container {
+    margin: 10px 0;
+    padding: 0 10px;
+  }
+
+  .row button {
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 600;
+    border: solid 1px #73c7ad;
+    border-radius: 16px;
+    height: 96px;
+    width: 100%;
+  }
+
+  .row button:hover {
+    background-color: #f0f6f4;
+  }
+
+  @media screen and (min-width: 967px) {
+    .container {
+      padding: 0 7.5% 0 7.5%;
+    }
+  }
+
+  @media screen and (max-width: 540px) {
+    .page-title {
+      display: none;
+    }
+
+    .page-title-with-button {
+      display: flex;
+      flex-direction: row;
+      margin: 0 5% 20px 5%;
+      align-items: center;
+    }
+
+    .page-title-with-button button {
+      font-size: 44px;
+      color: #26286e;
+      margin: 0;
+    }
+
+    .page-title-with-button h2 {
+      margin: 0 5px;
+      line-height: 100%;
+    }
+
+    .buttons-heading {
+      color: #26286e;
+      font-size: 20px;
+      text-align: left;
+      margin-left: 30px;
+    }
+
+    .row button {
+      font-size: 20px;
+      line-height: 26px;
+      font-weight: 600;
+      height: 72px;
+    }
+  }
+</style>
+
+<div class="page-title-with-button">
+  <button onclick="window.history.back()">←</button>
+  <h2 class="buttons-heading">{{ section.settings.multi_column_buttons_title }}</h2>
+</div>
+
+<h2 class="page-title buttons-heading">{{ section.settings.multi_column_buttons_title }}</h2>
+<section class="container">
+  <div class="row">
+    {% for block in section.blocks %}
+      <div class="button-container col-sm-3">
+        <button onclick="handleRedirect(event, '{{ block.settings.redirect_page }}', '{{ block.external_url }}')">
+          {{ block.settings.button_label }}
+        </button>
+      </div>
+    {% endfor %}
+  </div>
+</section>
+
+<script>
+  function handleRedirect(event, page, url) {
+    window.location.href = url ? url : page;
+  }
+</script>
+
+{% schema %}
+{
+  "name": "Multi-column buttons",
+  "settings": [
+    {
+      "type": "text",
+      "id": "multi_column_buttons_title",
+      "label": "Page title for multi-column buttons"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "button",
+      "name": "Button",
+      "settings": [
+        {
+          "type": "text",
+          "id": "button_label",
+          "label": "Text label for button"
+        },
+        {
+          "type": "page",
+          "id": "redirect_page",
+          "label": "Page where button should redirect"
+        },
+        {
+          "type": "url",
+          "id": "external_url",
+          "label": "External link where button should redirect if there's no page"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Multi-column buttons"
+    }
+  ]
+}
+{% endschema %}
