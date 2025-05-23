@@ -19,27 +19,9 @@
         "bgcolor": "#26286e",
         "textcolor": "#ffffff"
       }
-    },
-    "custom_liquid_fkaLhK": {
-      "type": "custom-liquid",
-      "custom_css": [
-        "h2 {font-size: 48px; font-weight: 700;}"
-      ],
-      "name": "t:sections.custom-liquid.presets.name",
-      "settings": {
-        "custom_liquid": "<h2> Learn </h2>",
-        "content_alignment": "center",
-        "bgcolor": "quaternary",
-        "section_visibility": "always",
-        "top_space_desktop": 30,
-        "bottom_space_desktop": 30,
-        "top_space_mobile": 30,
-        "bottom_space_mobile": 30
-      }
     }
   },
   "order": [
-    "main-page",
-    "custom_liquid_fkaLhK"
+    "main-page"
   ]
 }
