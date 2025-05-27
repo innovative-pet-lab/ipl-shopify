@@ -566,7 +566,7 @@
         overflow-x: auto;
     }
     .yv-image-banner-content-inner {
-        max-width: 39%;
+        max-width: 42%;
         padding-right: 3rem;
     }
     .fullwidth-container .color-collections-products {
@@ -582,8 +582,8 @@
 }
 @media (min-width: 1600px) {
     .yv-image-banner-content-inner {
-        max-width: 38%;
-        padding-right: 3rem;
+        max-width: 42%;
+        padding-right: 2rem;
     }
 }
 @media (min-width:1200px) {
@@ -717,7 +717,7 @@
         padding: 0 15px;
     }
     .yv-image-banner-content-inner {
-        max-width: 39%;
+        max-width: 40vw;
     }
 }
 

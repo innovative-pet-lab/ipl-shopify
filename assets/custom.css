@@ -16,7 +16,7 @@
 }
 
 .yv-image-banner-heading {
-    font-size: min(2.5rem, 3.5vw);
+    font-size: 2.8vw;
     text-wrap: balance;
     color: #000011!important;
     font-weight: 700;
@@ -24,7 +24,12 @@
     line-height: 1.2;
     margin-bottom: 0;
 }
-@media (min-width: 1023px) and (max-width: 1059px) {
+/* @media (min-width: 1300px) {
+    .yv-image-banner-heading {
+        font-size: min(1.5rem, 2.5vw);
+    }
+} */
+@media (max-width: 1059px) {
     .yv-image-banner-heading {
         font-size: min(1.5rem, 4vw);
     }
