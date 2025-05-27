@@ -59,7 +59,7 @@
           "type": "button",
           "settings": {
             "button_label": "Case Studies",
-            "redirect_page": "case-studies",
+            "redirect_page": "clinical-case-studies",
             "external_url": ""
           }
         },
