@@ -566,8 +566,8 @@
         overflow-x: auto;
     }
     .yv-image-banner-content-inner {
-        max-width: 50%;
-        padding-right: 4rem;
+        max-width: 39%;
+        padding-right: 3rem;
     }
     .fullwidth-container .color-collections-products {
         max-width: 75%;
@@ -580,7 +580,12 @@
         transform: rotate(90deg);
     }
 }
-
+@media (min-width: 1600px) {
+    .yv-image-banner-content-inner {
+        max-width: 34%;
+        padding-right: 3rem;
+    }
+}
 @media (min-width:1200px) {
     .blog-result .col-lg-2,
     .yv-products-list .col-xl-2 {
@@ -710,6 +715,9 @@
     .yv-gallery-box.small .yv-gallery-item {
         width: 200px;
         padding: 0 15px;
+    }
+    .yv-image-banner-content-inner {
+        max-width: 39%;
     }
 }
 

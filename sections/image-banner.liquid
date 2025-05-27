@@ -144,8 +144,57 @@
           }
         }
     {% endif %}
+
+    /* Left glow */
+    .yv-image-banner-wrapper::before {
+        content: '';
+        position: absolute;
+        top: 32%;
+        left: 25%;
+        width: 600px;
+        height: 600px;
+        transform: translate(-50%, -50%);
+        background: radial-gradient(
+          circle,
+          rgba(163, 242, 255, 0.6) 0%, 
+          rgba(163, 242, 255, 0.2) 40%, 
+          transparent 70%
+        );
+        filter: blur(60px);
+        z-index: 1;
+        pointer-events: none;
+      }
+    }
+
+    /* Right glow */
+    .container.yv-image-banner-content {
+      position: relative;
+    }
+    .container.yv-image-banner-content::before {
+      content: '';
+      position: absolute;
+      bottom: -30%;
+      right: 10%;
+      width: 900px;
+      height: 900px;
+      background: radial-gradient(
+        circle,
+        rgba(163, 242, 255, 0.6) 0%,
+        rgba(163, 242, 255, 0.2) 40%,
+        transparent 70%
+      );
+      filter: blur(50px);
+      z-index: 1;
+      pointer-events: none;
+    }
+
     .yv-image-banner-wrapper .image-wrapper img {
       object-fit: contain;
+    }
+    @media (max-width: 1299px) {
+      .container.yv-image-banner-content::before {
+        display: none;
+      }
     }
     @media (min-width: 1020px) {
         .yv-image-banner-wrapper .image-wrapper img {
