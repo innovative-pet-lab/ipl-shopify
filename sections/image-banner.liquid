@@ -121,29 +121,13 @@
   }
     #shopify-section-{{ section.id }} .yv-image-banner-heading{
       color:{{ section.settings.title_color }};
-      {% comment %} font-size: {{ section.settings.mobile_title_size }}px; {% endcomment %}
     }
     #shopify-section-{{ section.id }} .yv-image-banner-desc p{
       color:{{ section.settings.desc_color }};
     }
-    {% comment %} @media screen and (min-width:768px){
-      #shopify-section-{{ section.id }} .yv-image-banner-heading{
-        font-size: calc({{ section.settings.desktop_title_size }}px * 0.65);
-      }
-    }
-    @media screen and (min-width:1200px){
-      #shopify-section-{{ section.id }} .yv-image-banner-heading{
-        font-size: calc({{ section.settings.desktop_title_size }}px * 0.85);
-      }
-    } {% endcomment %}
-    {% comment %} @media screen and (min-width:1441px){
-      #shopify-section-{{ section.id }} .yv-image-banner-heading{
-        font-size: {{ section.settings.desktop_title_size }}px;
-      }
-    } {% endcomment %}
+
     @media screen and (max-width:1020px){
       #shopify-section-{{ section.id }}{
-        {% comment %} --bannerHeight:{{ section.settings.mobile_height }}; {% endcomment %}
         --bannerHeight: 82vw;
       }
     }
@@ -160,6 +144,14 @@
           }
         }
     {% endif %}
+    .yv-image-banner-wrapper .image-wrapper img {
+      object-fit: contain;
+    }
+    @media (min-width: 1020px) {
+        .yv-image-banner-wrapper .image-wrapper img {
+        object-position: bottom!important;
+        }
+    }
 </style>
 {% schema %}
 {

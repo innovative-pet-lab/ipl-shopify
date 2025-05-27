@@ -16,7 +16,7 @@
 }
 
 .yv-image-banner-heading {
-    font-size: min(4rem, 4vw);
+    font-size: min(2rem, 4vw);
     text-wrap: balance;
     color: #000011!important;
     font-weight: 700;
@@ -90,7 +90,7 @@
 .yv-image-banner-desc p {
     color:#000011!important;
     text-align: left;
-    font-size: min(2rem, 1.5vw);
+    font-size: min(1rem, 1.5vw);
     line-height: normal;
 }
 
@@ -589,7 +589,7 @@
 }
 
 .image-wrapper {
-    background-color: #f9f9f9;
+    background-color: #ffffff;
 }
 
 .image-wrapper img {
