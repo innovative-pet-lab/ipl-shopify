@@ -36,10 +36,29 @@
         "top_space_mobile": 30,
         "bottom_space_mobile": 30
       }
+    },
+    "custom_liquid_MJaabb": {
+      "type": "custom-liquid",
+      "custom_css": [
+        "p ul li {color: #333333; margin: 0 30px; font-size: 24px; line-height: 32px;}",
+        "@media screen and (max-width: 540px) {p {text-align: center; }}"
+      ],
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<p><strong> Effective Date: April 16, 2025 </strong></p>\n\n<p>\nInnovative Pet Lab (“IPL”, “we”, “our”, or “us”) reserves the right to change these Terms and Conditions at any time. Customers are encouraged to review them periodically for updates. Your continued use of our services signifies your acceptance of any modifications.\n</p>\n\n<hr />\n<br />\n\n<p>\n<strong>\nRefund & Return Policy\n</strong>\n</p>\n\n<p>\n<strong>\nThis policy applies only to tests purchased directly from IPL via our official website. For purchases through third parties, please contact the seller directly.\n</strong>\n</p>\n\n<p>\n<strong>\nRefunds:\n</strong>\n</p>\n\n<ul>\n  <li>Orders not shipped within 7 business days are eligible for a full refund.</li>\n  <li>If your kit is unused and returned within 30 days, you are eligible for a refund minus a $10 handling fee.</li>\n  <li>Refund requests after 30 days from purchase are not eligible.</li>\n</ul>\n\n<br />\n\n<p>\n<strong>\nReturns\n</strong>\n</p>\n\n<ul>\n  <li>We do not accept returned kits for reuse due to health and safety regulations. Please dispose of unused kits responsibly.</li>\n</ul>\n\n<br>\n\n<p>\n<strong>\nCancellations:\n</strong>\n</p>\n\n<ul>\n  <li>You may cancel an order before it ships. Once a kit is in transit, cancellations are not permitted. Refer to the refund policy for guidance.</li>\n</ul>\n\n<br />\n<hr />\n<br />\n\n<p>\n<strong>\nPayment & Shipping\n</strong>\n</p>\n\n<p><strong>Payment methods:</strong></p>\n\n<ul>\n  <li>All transactions must be completed via credit/debit card. Charges are in USD and processed at the time of purchase.</li>\n</ul>\n\n<br />\n\n<p><strong>Shipping:</strong></p>\n\n<ul>\n  <li>Kits are shipped via USPS Ground. Expedited shipping is available for an additional fee based on your order size.</li>\n  <li>Return shipping for samples is included via prepaid USPS 2-day mail.</li>\n</ul>\n\n<br />\n<hr />\n<br />\n\n<p>\n<strong>\nResale & Distribution Policy\n</strong>\n</p>\n\n<p>\nOnly authorized resellers and practitioners may distribute IPL products. Unauthorized resale or listing on third-party marketplaces (e.g., Amazon, eBay) is strictly prohibited.\n</p>\n\n<p>\n<strong>\nAuthorized Practitioner Requirements:\n</strong>\n</p>\n\n<ul>\n  <li>Must sell only to End Users (i.e., final consumers).</li>\n  <li>Must comply with all marketing, ethical, and advertising standards.</li>\n  <li>Must obtain written permission to list or sell online.</li>\n</ul>\n\n<br />\n\n<p>\n<strong>\nGeographic Limitations:\n</strong>\n</p>\n\n<ul>\n  <li>Products may only be sold and shipped within the United States unless otherwise approved in writing.</li>\n</ul>\n\n<br />\n<hr />\n<br />\n\n<p>\n<strong>\nDisclaimers & Disclosures\n</strong>\n</p>\n\n<p>\n<strong>Medical Disclaimer:</strong> IPL tests are <strong>not a substitute for veterinary advice, diagnosis, or treatment</strong>. Always consult your veterinarian before making changes to your pet’s care.\n<br />\n<strong>Test Accuracy & Limitations:</strong> Our tests provide insights based on the latest veterinary research and are conducted in CLIA-certified labs. However, results may vary depending on individual pet health and sample quality.\n</p>\n\n<hr />\n<br />\n\n<p>\n<strong>\nUse of Services\n</strong>\n</p>\n\n<p>By using our services, including submitting samples, creating an account, or accessing the website, you agree to abide by these terms. You must not use our services for any unlawful or unauthorized purpose.</p>\n\n<hr />\n<br />\n\n<p>\n<strong>\nIntellectual Property & Brand Usage\n</strong>\n</p>\n\n<p>All IPL trademarks, logos, and proprietary materials are owned by Innovative Pet Lab. Use by Authorized Practitioners is subject to express written consent and brand guidelines.</p>\n\n<hr />\n<br />\n\n<p>\n<strong>\nPrivacy & Data\n</strong>\n</p>\n\n<p>We collect data necessary to process your order and perform tests. For full transparency, see our [Privacy Policy]. IPL complies with all relevant consumer protection and data privacy laws, including GDPR (where applicable) and U.S. state laws (e.g., California Consumer Privacy Act).</p>\n\n<hr />\n<br />\n\n<p>\n<strong>\nLiability & Legal\n</strong>\n</p>\n\n<p>\n<strong>Limitation of Liability:</strong>\n<br />\nIPL is not liable for indirect or incidental damages. Our total liability is limited to the amount paid for the specific service.\n</p>\n\n<p>\n<strong>Governing Law:</strong>\n<br />\nThese Terms are governed by the laws of Georgia. All disputes shall be resolved in Georgia state or federal courts.\n</p>\n\n<br />\n\n<p>\n<strong>\nContact Us\n</strong>\n</p>\n\n<p>\nQuestions or concerns? Reach out at:\n<br />\n<strong>Innovative Pet Lab</strong>\n<br />\n3941 Holcomb Bridge, Suite 301\n<br />\nNorcross, GA 30092\n<br />\ninfo@innovativepetlab.com\n</p>",
+        "content_alignment": "center",
+        "bgcolor": "primary",
+        "section_visibility": "always",
+        "top_space_desktop": 30,
+        "bottom_space_desktop": 30,
+        "top_space_mobile": 30,
+        "bottom_space_mobile": 30
+      }
     }
   },
   "order": [
     "main-page",
-    "custom_liquid_8pHHQL"
+    "custom_liquid_8pHHQL",
+    "custom_liquid_MJaabb"
   ]
 }
