@@ -607,7 +607,7 @@
 @media (max-width: 1020px) {
     .image-wrapper img {
         object-fit: contain!important;
-        top: 16vw!important;
+        top: 17vw!important;
     }
 }
 .image-wrapper:hover {
