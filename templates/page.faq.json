@@ -161,7 +161,7 @@
           "type": "faq",
           "settings": {
             "heading": "International Shipping Info:",
-            "answer": "<p>There is a $50 shipping fee (per item) for Canada. Each kit will come with instructions and all the contents to mail the sample back to the lab. If you have additional shipping questions, please reach out to <strong>info@innovativepetlab.com</strong></p>"
+            "answer": "<p>There is a $50 shipping fee (per item) for Canada. Each kit will come with instructions and all the contents to mail the sample back to the lab. If you have additional shipping questions, please reach out to <a href=\"mailto:info@innovativepetlab.com\">info@innovativepetlab.com</a></p>"
           }
         }
       },
