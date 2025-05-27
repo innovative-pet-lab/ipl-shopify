@@ -108,6 +108,13 @@
     "faq_section_6miKkz": {
       "type": "faq-section",
       "blocks": {
+        "faq_nQXBTU": {
+          "type": "faq",
+          "settings": {
+            "heading": "Refunds, Cancellation & Replacement Policy",
+            "answer": "<p>This only applies to tests purchased on the IPL website.  If you purchased your test through one of our partners, please contact them directly.</p><p>Refunds:</p><ul><li>If you ordered a test, and it has not shipped, you are eligable for a 100% refund.</li><li>If you have received your kit and it has benn within 30 days of purchase, you are eligable for a full refund,<br/>minus a $10 handling fee.</li><li>If it has been more than 30 days since your purchase, you are not eligable for a refund.</li><li>For any questions on the policy, please <strong>contact us via our form</strong>.</li></ul><p>Returns:</p><ul><li>We do not accept a returned kit.  Please recycle any unused or unwanted kits.</li></ul><p>Cancellations:</p><ul><li>You can cancel an order prior to shipment.  Once a kit is shipped, it cannot be canceled. Please see the<br/>refund policy for any questions or <strong>contact us via our form</strong>.<br/></li></ul>"
+          }
+        },
         "faq_AinwtU": {
           "type": "faq",
           "settings": {
@@ -152,6 +159,7 @@
         }
       },
       "block_order": [
+        "faq_nQXBTU",
         "faq_AinwtU",
         "faq_bYcNr4",
         "faq_fK64KM",
