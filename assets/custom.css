@@ -16,7 +16,7 @@
 }
 
 .yv-image-banner-heading {
-    font-size: min(2rem, 3.5vw);
+    font-size: min(2.5rem, 3.5vw);
     text-wrap: balance;
     color: #000011!important;
     font-weight: 700;
