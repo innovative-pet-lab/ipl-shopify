@@ -668,6 +668,7 @@ body:not(.sticky-header, .header2) .shopify-section-main-header header[header-tr
 #mobileMenu:target,
 .nav-open .side-menu {
     transform: translateX(0);
+    background-color: #f9f9f9;
 }
 
 

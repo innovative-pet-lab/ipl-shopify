@@ -36,7 +36,7 @@
 }
 @media (max-width: 768px) {
     .side-menu {
-        background-color: #ffffff;
+        background-color: #f9f9f9!important;
         color: #010101;
     }
     .side-menu .inner-side .navbar-nav {
