@@ -98,7 +98,11 @@
   <div class="row">
     {% for block in section.blocks %}
       <div class="button-container col-sm-3">
-        <button onclick="handleRedirect(event, '{{ block.settings.redirect_page }}', '{{ block.external_url }}')">
+        <button
+          class="redirect-button"
+          data-page="{{ block.settings.redirect_page | escape }}"
+          data-url="{{ block.settings.external_url | escape }}"
+        >
           {{ block.settings.button_label }}
         </button>
       </div>
@@ -107,9 +111,15 @@
 </section>
 
 <script>
-  function handleRedirect(event, page, url) {
-    window.location.href = url ? url : page;
-  }
+  document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('.redirect-button').forEach((btn) => {
+      btn.addEventListener('click', function (event) {
+        const page = this.dataset.page;
+        const url = this.dataset.url;
+        window.location.href = url || page;
+      });
+    });
+  });
 </script>
 
 {% schema %}
