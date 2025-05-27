@@ -19,9 +19,75 @@
         "bgcolor": "#26286e",
         "textcolor": "#ffffff"
       }
+    },
+    "multi_column_buttons_nkYUA3": {
+      "type": "multi-column-buttons",
+      "blocks": {
+        "button_A3EFwa": {
+          "type": "button",
+          "settings": {
+            "button_label": "Instructions",
+            "redirect_page": "kit-instructions",
+            "external_url": ""
+          }
+        },
+        "button_7EmBF4": {
+          "type": "button",
+          "settings": {
+            "button_label": "Research",
+            "redirect_page": "research-information",
+            "external_url": ""
+          }
+        },
+        "button_ceXPYi": {
+          "type": "button",
+          "settings": {
+            "button_label": "FAQs",
+            "redirect_page": "faqs",
+            "external_url": ""
+          }
+        },
+        "button_Mxpdmg": {
+          "type": "button",
+          "settings": {
+            "button_label": "Partners",
+            "redirect_page": "affiliates",
+            "external_url": ""
+          }
+        },
+        "button_kQKR4E": {
+          "type": "button",
+          "settings": {
+            "button_label": "Case Studies",
+            "redirect_page": "case-studies",
+            "external_url": ""
+          }
+        },
+        "button_zdMrcm": {
+          "type": "button",
+          "settings": {
+            "button_label": "Gut Instincts - Blog",
+            "redirect_page": "",
+            "external_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "button_A3EFwa",
+        "button_7EmBF4",
+        "button_ceXPYi",
+        "button_Mxpdmg",
+        "button_kQKR4E",
+        "button_zdMrcm"
+      ],
+      "name": "Multi-column buttons",
+      "settings": {
+        "multi_column_buttons_title": "Learn"
+      }
     }
   },
   "order": [
-    "main-page"
+    "main-page",
+    "multi_column_buttons_nkYUA3"
   ]
 }
