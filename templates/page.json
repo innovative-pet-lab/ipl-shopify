@@ -51,8 +51,8 @@
           "type": "button",
           "settings": {
             "button_label": "Partners",
-            "redirect_page": "affiliates",
-            "external_url": ""
+            "redirect_page": "",
+            "external_url": "https://staging.app.innovativepetlab.com/partners"
           }
         },
         "button_kQKR4E": {
