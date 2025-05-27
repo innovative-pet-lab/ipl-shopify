@@ -156,6 +156,13 @@
             "heading": "How long from when I receive my kit, do I have to collect a sample and ship it in?",
             "answer": "<p>All tests kits must be returned to the lab within 6 months of purchase.</p>"
           }
+        },
+        "faq_yn3ben": {
+          "type": "faq",
+          "settings": {
+            "heading": "International Shipping Info:",
+            "answer": "<p>There is a $50 shipping fee (per item) for Canada. Each kit will come with instructions and all the contents to mail the sample back to the lab. If you have additional shipping questions, please reach out to info@innovativepetlab.com</p>"
+          }
         }
       },
       "block_order": [
@@ -165,7 +172,8 @@
         "faq_fK64KM",
         "faq_YH8Cqh",
         "faq_VHiwDA",
-        "faq_FrQMmN"
+        "faq_FrQMmN",
+        "faq_yn3ben"
       ],
       "settings": {
         "heading": "Shipping",
