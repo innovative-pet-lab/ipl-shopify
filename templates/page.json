@@ -59,7 +59,7 @@
           "type": "button",
           "settings": {
             "button_label": "Case Studies",
-            "redirect_page": "",
+            "redirect_page": "case-studies",
             "external_url": ""
           }
         },
@@ -67,7 +67,7 @@
           "type": "button",
           "settings": {
             "button_label": "Gut Instincts - Blog",
-            "redirect_page": "",
+            "redirect_page": "gut-instincts-blog",
             "external_url": ""
           }
         }
