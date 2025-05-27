@@ -99,10 +99,14 @@
 .yv-image-banner-desc p {
     color:#000011!important;
     text-align: left;
-    font-size: min(1rem, 1.5vw);
+    font-size: 1.1vw;
     line-height: normal;
 }
-
+@media (max-width: 1800px) {
+    .yv-image-banner-desc p {
+        font-size: 1.5vw;
+    }
+}
 .yv-image-banner-button {
     text-align: left;
 }
