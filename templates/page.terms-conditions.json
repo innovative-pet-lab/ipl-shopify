@@ -29,7 +29,7 @@
       "settings": {
         "custom_liquid": "<h2>Terms & Conditions</h2>",
         "content_alignment": "center",
-        "bgcolor": "primary",
+        "bgcolor": "quaternary",
         "section_visibility": "always",
         "top_space_desktop": 30,
         "bottom_space_desktop": 30,
