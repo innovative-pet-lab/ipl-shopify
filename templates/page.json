@@ -80,6 +80,7 @@
         "button_kQKR4E",
         "button_zdMrcm"
       ],
+      "disabled": true,
       "name": "Multi-column buttons",
       "settings": {
         "multi_column_buttons_title": "Learn"
