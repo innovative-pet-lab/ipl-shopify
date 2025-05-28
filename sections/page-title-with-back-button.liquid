@@ -1,0 +1,91 @@
+<style>
+  .container {
+    margin: 20px 0 100px 0;
+  }
+
+  .page-title-with-button {
+    display: none;
+  }
+
+  .buttons-heading {
+    color: #1c1d31;
+    text-align: center;
+    font-size: 48px;
+    font-weight: 600;
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+
+  @media screen and (min-width: 967px) {
+    .container {
+      padding: 0 7.5% 0 7.5%;
+    }
+  }
+
+  @media screen and (max-width: 991px) {
+    .page-title {
+      display: none;
+    }
+
+    .page-title-with-button {
+      display: flex;
+      flex-direction: row;
+      margin: 10px 5% 20px 5%;
+      align-items: center;
+    }
+
+    .page-title-with-button button {
+      display: flex;
+      align-items: center;
+      margin: 0;
+      padding: 20px 10px 20px 0;
+    }
+
+    .page-title-with-button h2 {
+      margin: 0 5px;
+      line-height: 100%;
+    }
+
+    .buttons-heading {
+      color: #26286e;
+      font-size: 20px;
+      text-align: left;
+      margin-left: 30px;
+    }
+
+    .container {
+      margin: 20px 0;
+      padding-bottom: 20px;
+    }
+  }
+</style>
+
+<div class="page-title-with-button">
+  <button onclick="window.history.back()">
+    <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M19 8H1.5" stroke="#26286E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+      <path d="M8 15L1 8L8 1" stroke="#26286E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+    </svg>
+  </button>
+  <h2 class="buttons-heading">{{ section.settings.page_title }}</h2>
+</div>
+
+<h2 class="page-title buttons-heading">{{ section.settings.page_title }}</h2>
+
+{% schema %}
+{
+  "name": "Page title with back",
+  "settings": [
+    {
+      "type": "text",
+      "id": "page_title",
+      "label": "Page Title"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Page title with back"
+    }
+  ]
+}
+{% endschema %}

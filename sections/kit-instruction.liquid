@@ -1,0 +1,269 @@
+<style>
+  .container {
+    margin: 20px 0 100px 0;
+  }
+
+  .image-container-mobile {
+    display: none;
+  }
+
+  .image-container {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+  }
+
+  .image-aligned-right {
+    justify-content: flex-end;
+  }
+
+  .row img {
+    object-fit: contain;
+    max-height: 320px;
+    padding: 0 20px;
+  }
+
+  .text-content {
+    padding: 0;
+    margin: 0;
+  }
+
+  .section-heading {
+    font: #1c1d31;
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 30px;
+  }
+
+  .section-content * {
+    color: #333333 !important;
+    font-size: 24px !important;
+    line-height: 32px !important;
+    font-weight: 400 !important;
+  }
+
+  .section-footnote {
+    margin: 24px 0 24px -10px;
+    padding: 10px 0;
+    background-color: #ebf7f9;
+  }
+
+  .section-footnote p {
+    margin: 0;
+    padding-left: 10px;
+    color: #333333;
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 500;
+  }
+
+  @media screen and (min-width: 967px) {
+    .container {
+      padding: 0 7.5% 0 7.5%;
+    }
+  }
+
+  @media screen and (max-width: 991px) {
+    .container {
+      margin: 20px 0;
+      padding-bottom: 20px;
+    }
+
+    .row {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .image-container {
+      display: none;
+    }
+
+    .image-container-mobile {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    .row img {
+      object-fit: contain;
+      max-height: 120px;
+      padding: 0;
+    }
+
+    .section-heading {
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    .section-content * {
+      font-size: 16px !important;
+      line-height: 22px !important;
+      font-weight: 400 !important;
+      margin-bottom: 20px !important;
+    }
+
+    .section-content li {
+      margin-bottom: 0 !important;
+    }
+
+    .section-footnote p {
+      font-size: 16px;
+      line-height: 22px;
+      font-weight: 500;
+    }
+  }
+</style>
+
+<section class="container">
+  <div class="row">
+    <div class="image-container-mobile col-sm-12 col-md-3">
+      <img
+        height="{{ section.settings.image_dimension }}"
+        width="auto"
+        src="{{ section.settings.image | image_url }}"
+        alt="Instruction Image"
+      >
+    </div>
+    {%- if section.settings.image_alignment == 'left' -%}
+      <div class="image-container col-sm-12 col-md-3">
+        <img
+          height="{{ section.settings.image_dimension }}"
+          width="auto"
+          src="{{ section.settings.image | image_url }}"
+          alt="Instruction Image"
+        >
+      </div>
+    {% endif %}
+    <div class="text-container col-sm-12 col-md-8">
+      <div class="text-content">
+        {% for block in section.blocks %}
+          {% case block.type %}
+            {% when 'heading' %}
+              <div class="section-heading h2">
+                {{ block.settings.instruction_heading }}
+              </div>
+            {% when 'text' %}
+              <div class="section-content">
+                {{ block.settings.content }}
+              </div>
+            {% when 'footnote' %}
+              <div class="section-footnote">
+                <p>
+                  <strong>{{ block.settings.footnote_tagline }}</strong>
+                  {{ block.settings.footnote_content }}
+                </p>
+              </div>
+          {% endcase %}
+        {% endfor %}
+      </div>
+    </div>
+    {%- if section.settings.image_alignment == 'right' -%}
+      <div class="image-container image-aligned-right col-sm-12 col-md-3">
+        <img
+          height="{{ section.settings.image_dimension }}"
+          width="auto"
+          src="{{ section.settings.image | image_url }}"
+          alt="Instruction Image"
+        >
+      </div>
+    {%- endif -%}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Kit Instruction",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Instruction background image"
+    },
+    {
+      "type": "select",
+      "id": "image_alignment",
+      "label": "Image Alignment",
+      "default": "left",
+      "options": [
+        {
+          "label": "Left",
+          "value": "left"
+        },
+        {
+          "label": "Right",
+          "value": "right"
+        }
+      ]
+    },
+    {
+      "type": "number",
+      "id": "image_dimension",
+      "label": "Manually set image dimension",
+      "default": 300
+    }
+  ],
+  "blocks": [
+    {
+      "type": "heading",
+      "name": "Kit Instruction Title",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "instruction_heading",
+          "label": "Define instruction header",
+          "default": "Kit Instruction"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "name": "Content",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "richtext",
+          "label": "Kit instruction content",
+          "id": "content",
+          "default": "<p>Set your instruction here.</p>"
+        }
+      ]
+    },
+    {
+      "type": "footnote",
+      "name": "Tip",
+      "settings": [
+        {
+          "type": "text",
+          "id": "footnote_tagline",
+          "label": "Footnote tip tagline",
+          "default": "Tip:"
+        },
+        {
+          "type": "text",
+          "id": "footnote_content",
+          "label": "Footnote tip content",
+          "default": "Insert tip here"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Kit Instruction",
+      "blocks": [
+        {
+          "type": "heading"
+        },
+        {
+          "type": "text"
+        },
+        {
+          "type": "footnote"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
