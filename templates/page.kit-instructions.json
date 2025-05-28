@@ -265,6 +265,84 @@
         "image_alignment": "right",
         "image_dimension": 300
       }
+    },
+    "kit_instruction_wy3pDj": {
+      "type": "kit-instruction",
+      "blocks": {
+        "heading_pamceG": {
+          "type": "heading",
+          "settings": {
+            "instruction_heading": "Collect your pet’s sample"
+          }
+        },
+        "text_LCGzyD": {
+          "type": "text",
+          "settings": {
+            "content": "<p>Collect a fresh stool sample. If you are unable to mail within 24 hours, keep the sample in the freezer until you are ready to send.</p><ul><li>Record sample collection date and pet’s name on the tube.</li><li>Use the spork attached(or a stick from outside) to collect the sample.</li><li>Fill the tube to the red fill line on the collection tube.</li><li>Tightly twist the cap on the collection tube; then put it inside the biohazard bag and seal.</li></ul>"
+          }
+        },
+        "footnote_xmkWzd": {
+          "type": "footnote",
+          "settings": {
+            "footnote_tagline": "Tip for Dog Collections:",
+            "footnote_content": "Take your dog for a walk and quickly scoop the poop. Try to keep the sample free from grass and debris if possible."
+          }
+        },
+        "footnote_3bP3N6": {
+          "type": "footnote",
+          "settings": {
+            "footnote_tagline": "Tip for Cat Collections:",
+            "footnote_content": "Litter is not a problem when testing."
+          }
+        }
+      },
+      "block_order": [
+        "heading_pamceG",
+        "text_LCGzyD",
+        "footnote_xmkWzd",
+        "footnote_3bP3N6"
+      ],
+      "name": "Kit Instruction",
+      "settings": {
+        "image": "shopify://shop_images/pet-sample-icon.png",
+        "image_alignment": "left",
+        "image_dimension": 300
+      }
+    },
+    "kit_instruction_TVBqn9": {
+      "type": "kit-instruction",
+      "blocks": {
+        "heading_qYd6tt": {
+          "type": "heading",
+          "settings": {
+            "instruction_heading": "Mail to the Lab"
+          }
+        },
+        "text_LWXijg": {
+          "type": "text",
+          "settings": {
+            "content": "<p>Put the biohazard bag with the collection tube into the white box</p><ul><li>Place box in the mailer and affix the USPS mailing label to the outside</li><li>Place the mailer in your mailbox or at a United States Postal Service Office</li><li>You will be notified via email when your results are ready typically within 10-14 days</li></ul>"
+          }
+        },
+        "footnote_3zUd9c": {
+          "type": "footnote",
+          "settings": {
+            "footnote_tagline": "Remember:",
+            "footnote_content": "Mail within 24 hours of collecting or keep in the freezer prior to sending."
+          }
+        }
+      },
+      "block_order": [
+        "heading_qYd6tt",
+        "text_LWXijg",
+        "footnote_3zUd9c"
+      ],
+      "name": "Kit Instruction",
+      "settings": {
+        "image": "shopify://shop_images/document-with-magnifying-glass-icon.png",
+        "image_alignment": "right",
+        "image_dimension": 300
+      }
     }
   },
   "order": [
@@ -274,6 +352,8 @@
     "image_with_text_jFrcNB",
     "image_with_text_hxUa86",
     "page_title_with_back_button_M3emaq",
-    "kit_instruction_TDLQaL"
+    "kit_instruction_TDLQaL",
+    "kit_instruction_wy3pDj",
+    "kit_instruction_TVBqn9"
   ]
 }
