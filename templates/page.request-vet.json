@@ -90,6 +90,16 @@
         "top_space_mobile": 30,
         "bottom_space_mobile": 30
       }
+    },
+    "spacer_pD9CaM": {
+      "type": "spacer",
+      "name": "t:sections.spacer.presets.name",
+      "settings": {
+        "height_desktop": 89,
+        "height_mobile": 1,
+        "bgcolor": "primary",
+        "custom_color": ""
+      }
     }
   },
   "order": [
@@ -98,6 +108,7 @@
     "d4990aa8-00b1-4fd3-bf9d-3832c1bd440a",
     "ffdeadde-5060-4cc0-bf3c-1351ff984a59",
     "spacer_fDFx8m",
-    "17484222778aa9f6d2"
+    "17484222778aa9f6d2",
+    "spacer_pD9CaM"
   ]
 }
