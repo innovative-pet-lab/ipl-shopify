@@ -1,0 +1,180 @@
+{%- if product.media.size > 0 -%}
+  <div class="product-gallery">
+    <div class="product-gallery__wrapper">
+      <!-- Thumbnail Navigation -->
+      <div class="{%- if product.media.size > 5 -%}is-slider--{{ product.id }}{% endif %} product-gallery__thumbnails ">
+        <div class=" swiper-wrapper slide-{%- if product.media.size > 5 -%}true{% else %}false{% endif %}">
+          {%- for media in product.media -%}
+            <div class="{%- if product.media.size > 5 -%}swiper-slide{% else %}normal-slide{% endif %}">
+              <button 
+                class="product-gallery__thumbnail{% if forloop.first %} is-active{% endif %}" 
+                data-media-id="{{ media.id }}"
+                aria-label="Show image {{ forloop.index }} of {{ product.media.size }}"
+              >
+                <img 
+                  width="100" 
+                  height="100" 
+                  src="{{ media | image_url: width: 100, crop: 'center' }}" 
+                  alt="{{ media.alt | escape }}" 
+                  loading="lazy">
+              </button>
+            </div>
+          {%- endfor -%}
+        </div>
+      </div>
+
+      {%- if product.media.size > 5 -%}
+        <div class="swiper-button-wrap">
+          <div class="swiper-button-prev-ipl">
+          <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_198_636)">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M13.8215 21.1783C13.509 20.8658 13.3335 20.4419 13.3335 20C13.3335 19.5581 13.509 19.1342 13.8215 18.8217L23.2498 9.39334C23.4036 9.23415 23.5875 9.10718 23.7908 9.01983C23.9941 8.93248 24.2128 8.88651 24.4341 8.88458C24.6554 8.88266 24.8749 8.92483 25.0797 9.00863C25.2846 9.09243 25.4706 9.21619 25.6271 9.37268C25.7836 9.52917 25.9074 9.71525 25.9912 9.92008C26.075 10.1249 26.1171 10.3444 26.1152 10.5657C26.1133 10.787 26.0673 11.0057 25.98 11.209C25.8926 11.4123 25.7657 11.5963 25.6065 11.75L17.3565 20L25.6065 28.25C25.9101 28.5643 26.0781 28.9853 26.0743 29.4223C26.0705 29.8593 25.8952 30.2774 25.5862 30.5864C25.2772 30.8954 24.8591 31.0707 24.4221 31.0745C23.9851 31.0783 23.5641 30.9103 23.2498 30.6067L13.8215 21.1783Z" fill="#808080"/>
+            </g>
+            <defs>
+            <clipPath id="clip0_198_636">
+            <rect width="40" height="40" fill="white"/>
+            </clipPath>
+            </defs>
+          </svg>
+          </div>
+          <div class="swiper-button-next-ipl">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#clip0_198_640)">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M26.1781 18.8217C26.4905 19.1342 26.6661 19.5581 26.6661 20C26.6661 20.4419 26.4905 20.8658 26.1781 21.1783L16.7498 30.6067C16.596 30.7658 16.4121 30.8928 16.2088 30.9802C16.0054 31.0675 15.7867 31.1135 15.5654 31.1154C15.3441 31.1173 15.1247 31.0752 14.9198 30.9914C14.715 30.9076 14.5289 30.7838 14.3724 30.6273C14.2159 30.4708 14.0922 30.2847 14.0084 30.0799C13.9246 29.8751 13.8824 29.6556 13.8843 29.4343C13.8863 29.213 13.9322 28.9943 14.0196 28.791C14.1069 28.5876 14.2339 28.4037 14.3931 28.25L22.6431 20L14.3931 11.75C14.0895 11.4357 13.9215 11.0147 13.9253 10.5777C13.9291 10.1407 14.1044 9.72264 14.4134 9.41363C14.7224 9.10462 15.1404 8.92934 15.5774 8.92554C16.0144 8.92174 16.4354 9.08973 16.7498 9.39333L26.1781 18.8217Z" fill="#808080"/>
+              </g>
+              <defs>
+              <clipPath id="clip0_198_640">
+              <rect width="40" height="40" fill="white"/>
+              </clipPath>
+              </defs>
+            </svg>
+          </div>
+        </div>
+      {%- endif -%}
+
+      <!-- Main Image Viewer -->
+      <div class="product-gallery__viewer swiper">
+        <div class="swiper-wrapper">
+          {%- for media in product.media -%}
+            <div 
+              class="product-gallery__image-wrapper{% if forloop.first %} is-active{% endif %} swiper-slide" 
+              data-media-id="{{ media.id }}"
+            >
+              <div class="product-gallery__image">
+                <img 
+                  width="" 
+                  height="" 
+                  src="{{ media | image_url: width: 800 }}" 
+                  alt="{{ media.alt | escape }}" 
+                  loading="eager">
+              </div>
+            </div>
+          {%- endfor -%}
+        </div>
+        <div class="swiper-pagination"></div>
+
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      if (document.querySelector('.is-slider--{{ product.id }}')) {
+        const thumbnailSwiper = new Swiper('.product-gallery__thumbnails', {
+          spaceBetween: 12, 
+          slidesPerView: 5, 
+          navigation: {
+            nextEl: '.swiper-button-next-ipl',
+            prevEl: '.swiper-button-prev-ipl',
+          },
+          breakpoints: {
+            1024: { // Desktop view
+              slidesPerView: 5,
+            },
+            768: { // Tablet view
+              slidesPerView: 5,
+             // slideWidth: 105, 
+            },
+            480: { // Mobile view
+              slidesPerView: 4,
+            },
+          },
+        });
+      }
+
+      // Main viewer functionality
+      const thumbnails = document.querySelectorAll('.product-gallery__thumbnail');
+      const imageWrappers = document.querySelectorAll('.product-gallery__image-wrapper');
+      let activeIndex = 0;
+
+      thumbnails.forEach((thumbnail, index) => {
+        thumbnail.addEventListener('click', () => {
+          updateActiveSlide(index);
+        });
+      });
+
+      function updateActiveSlide(index) {
+        activeIndex = index;
+
+        thumbnails.forEach((thumbnail) => thumbnail.classList.remove('is-active'));
+        imageWrappers.forEach((wrapper) => wrapper.classList.remove('is-active'));
+
+        thumbnails[activeIndex].classList.add('is-active');
+        imageWrappers[activeIndex].classList.add('is-active');
+      }
+    });
+  </script>
+<style>
+  .swiper-slide .product-gallery__image-wrapper .swiper-slide {
+    width: 250px
+  }
+  .swiper-slide .product-gallery__image-wrapper .swiper-slide img {
+    width: 100%;
+    height: 100%;
+  }
+  @media (max-width: 768px) {
+
+    .swiper .product-gallery__image img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+   } 
+   .single__product .product-gallery__viewer {
+      width: 100%;
+      height: auto;
+      max-height: unset;
+      min-height: unset;
+    }
+  }
+
+</style>
+<script>
+
+  let swiperInstance;
+
+  function initSwiper() {
+    if (window.innerWidth < 768 && !swiperInstance) {
+      swiperInstance = new Swiper('.swiper', {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        loop: true,
+        autoplay: {
+          delay: 2000, // 2 seconds
+          disableOnInteraction: true,
+        },
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+      });
+    } else if (window.innerWidth >= 768 && swiperInstance) {
+      swiperInstance.destroy(true, true);
+      swiperInstance = null;
+    }
+  }
+
+  // Run on load and resize
+  window.addEventListener('load', initSwiper);
+  window.addEventListener('resize', initSwiper);
+</script>
+{%- endif -%}

@@ -29,12 +29,19 @@ Never pick related items from those.
 {%- comment -%} theme-check-disable LiquidTag{%- endcomment -%}
 {%- capture related_items -%}
 
+{%- comment %}<locksmith:8a91>{% endcomment -%}
+  {%- assign locksmith_86fa_forloop__size = 0 %}{%- for product in products -%}{% capture var %}{% render 'locksmith-variables', scope: 'subject', subject: product, variable: 'transparent' %}{% endcapture %}{% if var == 'true' %}{% assign locksmith_86fa_forloop__size = locksmith_86fa_forloop__size | plus: 1 %}{% endif %}{% endfor %}{% assign locksmith_86fa_forloop__index = nil -%}
+{%- comment %}</locksmith:8a91>{% endcomment -%}
 {%- for product in products -%}
+
+  {%- comment %}<locksmith:e6cc>{% endcomment -%}
+    {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: product, variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% if locksmith_86fa_forloop__index == nil %}{% assign locksmith_86fa_forloop__index = 1 %}{% assign locksmith_86fa_forloop__index0 = 0 %}{% else %}{% assign locksmith_86fa_forloop__index = locksmith_86fa_forloop__index | plus: 1 %}{% assign locksmith_86fa_forloop__index0 = locksmith_86fa_forloop__index0 | plus: 1 %}{% endif %}{% if locksmith_86fa_forloop__index == 1 %}{% assign locksmith_86fa_forloop__first = true %}{% else %}{% assign locksmith_86fa_forloop__first = false %}{% endif %}{% if locksmith_86fa_forloop__index == locksmith_86fa_forloop__size %}{% assign locksmith_86fa_forloop__last = true %}{% else %}{% assign locksmith_86fa_forloop__last = false %}{% endif %}{% assign locksmith_86fa_forloop__rindex = locksmith_86fa_forloop__size | minus: locksmith_86fa_forloop__index | minus: 1 %}{% assign locksmith_86fa_forloop__rindex0 = locksmith_86fa_forloop__size | minus: locksmith_86fa_forloop__index0 | minus: 1 %}{% else %}{% continue %}{% endif -%}
+  {%- comment %}</locksmith:e6cc>{% endcomment -%}
 
   {%- unless product.handle == current_product.handle -%}
         <li class="yv-similar-product-item">
           {% liquid 
-            assign delay = 200 | times : forloop.index
+            assign delay = 200 | times : locksmith_86fa_forloop__index
             if settings.enable_animation
               assign animationAttr = 'data-aos="fade-up" data-aos-delay="' | append : delay | append : '"'  
             else

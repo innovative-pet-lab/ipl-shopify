@@ -1,0 +1,271 @@
+<style>
+    .section-wrapper {
+        background:linear-gradient(to bottom, #FAFAFA, #F0F6F4);
+    } 
+    .testimonials-section {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 5rem 20px 0 20px;
+        position: relative;
+        overflow: hidden;
+    }
+    .testimonials-section h1 {
+        text-align: center;
+        font-size: 48px;
+        font-weight: bold;
+        color: #000;
+        margin-bottom: 80px;
+    }
+    h1 {
+        text-align: center;
+        font-size: 2.5rem;
+        margin-bottom: 40px;
+        color: #333;
+    }
+    .swiper {
+        width: 100%;
+        padding: 40px 0;
+    }
+    .testimonial-slide {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+        padding: 0 20px;
+    }
+
+    @media (max-width: 768px) {
+        .testimonial-slide {
+            flex-direction: column;
+        }
+        .testimonials-section h1 {
+            font-size: 24px;
+        }
+        .testimonials-section {
+            padding: 0 1rem;
+        }
+        .quote, .author {
+            font-size: 20px!important;
+        }
+        .testimonial-content {
+            text-align: center;
+            min-width: unset!important;
+        }
+        .quote::before {
+            left: -13px!important;
+        }
+        .quote {
+            line-height: normal!important;
+        }
+    }
+
+    @media (max-width: 375px) {
+        .quote, .author {
+            font-size: 18px!important;
+        }
+    }
+
+    .testimonial-content {
+        flex: 1;
+        min-width: 60%;
+    }
+    @media (min-width: 768px) {
+        .testimonial-content {
+            max-width: 60%;
+            min-width: 60%;
+        }
+    }
+    .quote {
+        font-size: 28px;
+        line-height: 38.25px;
+        color: #333;
+        margin-bottom: 20px;
+        position: relative;
+    }
+    .testimonials-section .swiper-pagination-bullet-active {
+        background-color: #73C7AD!important;
+    }
+    .testimonials-section .swiper-pagination-bullet {
+        border: 0.5px solid #73C7AD;
+        background-color: transparent;
+    }
+    .quote::before {
+        content: "";
+        display: inline-block;
+        width: 6rem;
+        height: 6rem;
+        position: absolute;
+        left: -40px;
+        top: -40px;
+        z-index: -1;
+        background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="112" height="102" viewBox="0 0 112 102" fill="none"><g opacity="0.6"><path fill-rule="evenodd" clip-rule="evenodd" d="M0.607918 41.3071C0.607918 40.4987 -0.625707 18.4673 16.8308 6.34864L16.8385 6.3435C29.8107 -2.5976 44.1335 0.358116 46.5652 0.901313C47.5597 1.12318 48.3253 1.91883 48.5136 2.92107C48.7018 3.92586 48.2719 4.94601 47.4249 5.51216C43.8334 7.91193 35.9254 13.6703 30.6577 24.7154C25.9724 34.5184 25.9801 43.8063 26.3794 48.8685L46.0132 48.8685C50.1847 48.8685 53.5982 52.2935 53.5982 56.4759L53.5981 94.3952C53.5981 98.5776 50.1847 102 46.0132 102L8.19285 102C4.02139 102 0.607911 98.5776 0.607911 94.3952L0.607918 41.3071Z" fill="black" fill-opacity="0.1"/><path fill-rule="evenodd" clip-rule="evenodd" d="M58.5961 41.3097C58.5961 40.5012 57.3625 18.4673 74.8216 6.34864L74.8266 6.3435C87.8014 -2.5976 102.122 0.358116 104.553 0.901313C105.548 1.12318 106.316 1.91883 106.502 2.92107C106.69 3.92586 106.263 4.94601 105.413 5.51216C101.822 7.91193 93.9161 13.6703 88.6484 24.7154C83.9631 34.5184 83.9682 43.8063 84.3701 48.8685L104.004 48.8685C108.175 48.8685 111.589 52.2935 111.589 56.4759L111.589 94.3952C111.589 98.5776 108.175 102 104.004 102L66.1836 102C62.0121 102 58.5961 98.5776 58.5961 94.3952L58.5961 41.3097Z" fill="black" fill-opacity="0.1"/></g></svg>');
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    .author {
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: #666;
+    }
+    .rating {
+        color: #ffd700;
+        font-size: 1.2rem;
+        margin: 10px 0;
+    }
+    .testimonial-image {
+        flex: 1;
+    }
+    @media (min-width: 768px) {
+        .testimonial-image {
+        max-width: 400px;
+        min-width: 400px;
+        overflow: hidden;
+        right: 0;
+        top: 0;
+        }
+    }
+    .testimonial-image img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+        position: relative;
+        top: 5px;
+    }
+    @media (max-width: 768px) {
+        .quote::before {
+            width: 4rem;
+            top: -23px;
+        }
+        .testimonial-image img {
+            width: 80%;
+            margin: auto;
+            display: block;
+            margin-bottom: 3rem;
+        }
+        .swiper-pagination {
+            margin-bottom: 0!important;
+        }
+    }
+    .swiper-pagination {
+        position: absolute;
+        margin-bottom: 1rem;
+    }
+    .swiper-pagination-bullet {
+        width: 12px;
+        height: 12px;
+        background: #ddd;
+        opacity: 1;
+    }
+    .swiper-pagination-bullet-active {
+        background: #4CAF50;
+    }
+    .swiper-testi .swiper-btn {
+        opacity: 1;
+        top: 66%;
+    }
+    .swiper-testi .swiper-btn.swiper-button-next {
+        right: -7px;
+    }
+    .swiper-testi .swiper-btn.swiper-button-prev {
+        left: -7px;
+    }
+</style>
+<div class="section-wrapper">
+    <section class="testimonials-section">
+        {% if section.settings.heading_text %}
+            <h1>{{ section.settings.heading_text }}</h1>
+        {% endif %}
+        <div class="swiper-testi">
+            <div class="swiper-wrapper">
+                {% for block in section.blocks %}
+
+                <div class="swiper-slide">
+                    <div class="testimonial-slide">
+                        <div class="testimonial-content">
+                            {% if block.settings.quote %}
+                                <div class="quote">{{ block.settings.quote }}</div>
+                            {% endif %}
+                            {% if block.settings.author %}
+                            <div class="author">{{ block.settings.author }}</div>
+                            {% endif %}
+                            <div class="rating">★★★★★</div>
+                        </div>
+                        <div class="testimonial-image">
+                            {% if block.settings.testi_image %}
+                            <img src="{{ block.settings.testi_image | image_url }}" alt="" width="" height="">
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+
+            </div>
+            <div class="swiper-btn swiper-button-prev"></div>
+            <div class="swiper-btn swiper-button-next"></div>
+            <div class="swiper-pagination"></div>
+
+        </div>
+    </section>
+</div>
+<script>
+    new Swiper('.swiper-testi', {
+        loop: true,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true
+        },
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        effect: 'fade',
+        fadeEffect: {
+            crossFade: true
+        }
+    });
+</script>
+{% schema %}
+{
+  "name": "IPL happy customer",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading_text",
+      "label": "Heading Text",
+      "default": "Happy Customer"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "testi-block",
+      "name": "Testimonial block",
+      "settings": [
+        {
+            "type": "image_picker",
+            "id": "testi_image",
+            "label": "Testimonial Image"
+        },
+        {
+          "type": "textarea",
+          "id": "quote",
+          "label": "Quote"
+        },
+        {
+            "type": "text",
+            "id": "author",
+            "label": "Author"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "IPL happy customer",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}

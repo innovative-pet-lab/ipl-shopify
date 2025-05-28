@@ -1,4 +1,3 @@
-
 <div class="yv-lookbook-container lookbook-to-normal d-none d-md-block" data-lookbook-container >
   {% for block in section.blocks %}
     {% liquid 
@@ -66,6 +65,9 @@
             {% if collection.products_count > 0 and productData == blank %}
      
               {% for product in collection.products limit: 10 %}
+                {%- comment %}<locksmith:45cf>{% endcomment -%}
+                  {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: product, subject_parent: collection, variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% else %}{% continue %}{% endif -%}
+                {%- comment %}</locksmith:45cf>{% endcomment -%}
                 {%- liquid
                   assign productFormId = 'product-form-' | append: block.id | append: product.id
                   render 'product-grid', product: product, productFormId: productFormId, productClasses: mainClass, hideHoverImage: true, hide_options: true, hideRelated: true, hideQuickView: true, producttags:true

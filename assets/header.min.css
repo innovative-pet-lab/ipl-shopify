@@ -327,6 +327,7 @@ header {
 .dropdown-menu-item svg {
     width: 8px;
     vertical-align: middle;
+    color: #1C1D31;
 }
 
 .header__icons {
@@ -421,13 +422,12 @@ header {
 .wrapper-top-cart a {
     display: flex;
     align-items: center;
-    width: 44px;
-    height: 44px;
+    width: 50px;
+    height: 50px;
     justify-content: center;
 }
 
 .top-header .nav__header {
-    /*   border-top: 1px solid rgb(100 100 100 / 9%); */
     box-shadow: -1px 0px 2px #0000004d;
 }
 
@@ -461,7 +461,7 @@ header {
     margin-right: 10px;
     margin-left: 0;
     padding: 17px 30px 17px 0;
-    font-size: 16px;
+    font-size: 18px;
     line-height: 24px;
 }
 
@@ -590,6 +590,7 @@ header {
 .yv-listing-megamenu-title,
 .product-menu-item {
     color: var(--colorTextBody) !important;
+    background-color: #fff;
 }
 
 .yv-megamenu-product-detail a:hover,
@@ -667,6 +668,7 @@ body:not(.sticky-header, .header2) .shopify-section-main-header header[header-tr
 #mobileMenu:target,
 .nav-open .side-menu {
     transform: translateX(0);
+    background-color: #f9f9f9;
 }
 
 
@@ -676,32 +678,39 @@ body:not(.sticky-header, .header2) .shopify-section-main-header header[header-tr
 
 .side-menu .inner-side {
     padding: 0 30px 40px;
-    height: calc(100% - 120px);
+    height: calc(90% - 120px);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     overflow-y: auto;
 }
-
 .side-menu-header {
     position: sticky;
     top: 0;
-    padding: 10px 10px 10px;
+    padding: 1rem;
     z-index: 1;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
+}
+.side-menu .drawer-login-btn.register {
+    padding: 10.5px 46px;
+    border: 2px solid #03B0A7;
+    border-radius: 80px;
+    background-color: #E6F7F6;
+    color: #03B0A7 !important;
+    text-decoration: none;
 }
 
 .side-menu .close-btn {
     align-content: center;
     display: flex;
-    align-items: center;
-    font-size: 16px;
+    align-items: start;
+    font-size: 18px;
     background: 0 0;
 }
 
 .side-menu .close-btn svg {
-    fill: currentcolor;
+    fill: #333333;
     width: 14px;
     margin-right: 8px;
 }
@@ -716,6 +725,30 @@ body:not(.sticky-header, .header2) .shopify-section-main-header header[header-tr
 .side-menu .inner-side .navbar-nav>.nav-item {
     width: 100%;
     border-bottom: 1px solid var(--mobile-menu-border);
+}
+
+.side-menu .inner-footer {
+    height: 100vh;
+    padding: 0 2rem;
+}
+
+.side-menu .inner-footer .flex{
+    padding-top: 1.7rem;
+    border-top: 1px solid #2222;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.side-menu .inner-footer .flex .my-account {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.side-menu .inner-footer .flex .my-account a {
+    font-size: 20px;
+    font-weight: 600;
 }
 
 .inner.child,
@@ -742,7 +775,7 @@ body:not(.sticky-header, .header2) .shopify-section-main-header header[header-tr
     font-family: var(--navigationFontFamily);
     font-style: var(--navigationFontStyle);
     font-weight: var(--navigationFontWeight);
-    color: #fff;
+    color: #010101;
 }
 
 .side-menu .inner-side ul li.dropdown>.list-menu__item::after,
@@ -811,7 +844,6 @@ body:not(.sticky-header, .header2) .shopify-section-main-header header[header-tr
 
 .side-menu .nav-item.dropdown .inner.child li .toggle-level,
 .side-menu .nav-item.dropdown .inner.child li a:not(.yv-megamenu-collection) {
-    font-size: 15px;
     padding: 13px 0;
     padding-right: 20px;
 }
@@ -827,6 +859,7 @@ body:not(.sticky-header, .header2) .shopify-section-main-header header[header-tr
 .side-menu .nav-item.dropdown .inner.grandchild ul {
     border-left: 1px solid var(--mobile-menu-border);
     padding-left: 20px;
+    text-align: left;
 }
 
 .side-menu .nav-item.dropdown .inner.grandchild li {
@@ -838,7 +871,6 @@ body:not(.sticky-header, .header2) .shopify-section-main-header header[header-tr
 }
 
 .side-menu .nav-item.dropdown .inner.grandchild li a {
-    font-size: 14px !important;
     padding: 0 !important;
     margin: 0;
     display: block;
@@ -1457,8 +1489,8 @@ html.no-js .sub-inner-hamburger-outer .hamburger-menu-item .item {
     transition: all 0.3s ease-in-out;
     box-shadow: 0 1px 2px #9f9f9f;
     max-height: 70vh;
-    overflow: auto;
-    padding: 20px;
+    overflow: hidden;
+    padding: 20px 0;
 }
 
 .yv-dropdown-detail[open] .yv-dropdown-menus {
@@ -1469,34 +1501,50 @@ html.no-js .sub-inner-hamburger-outer .hamburger-menu-item .item {
     pointer-events: auto;
     transition: all 0.3s ease-in-out;
 }
-
 .dropdown-inner-menu-item {
-    padding: 10px 0;
+    padding: 0;
+    background-color: #fff;
 }
-
 .yv-dropdown-item-link {
     display: block;
-    margin-bottom: 12px;
+    padding: 1rem 1.8rem 1rem 1.8rem;
+    font-weight: 600;
+    text-align: left;
 }
-
+/* .yv-dropdown-item-link span {
+    padding-right: 0.5rem;
+} */
 .yv-dropdown-item-link:hover {
     color: var(--theme-color);
-    text-decoration: underline;
+    background-color: #99D5E04D;
 }
-
 .fullwidth-megamenus .yv-dropdown-menus {
     left: 0;
     width: 100%;
     padding: 0;
 }
-
 .menu-category-title {
     padding-bottom: 18px;
-    display: inline-block;
+    display: flex;
     font-size: var(--text);
     font-family: var(--navigationFontFamily);
     font-style: var(--navigationFontStyle);
-    font-weight: var(--navigationFontWeight);
+    font-weight: 600;
+    min-height: 44px;
+    padding: 1rem 1.5rem;
+    align-items: center;
+    color: #1C1D31!important;
+}
+.menu-category-title.empty {
+    color: transparent!important;
+}
+.menu-category-title.empty:hover {
+    background-color: #fff!important;
+    cursor: unset;
+}
+.menu-category-title:hover {
+    background-color: #e1f3f6;
+    opacity: 1;
 }
 
 .fullwidth-megamenus .yv-dropdown-item-link {
@@ -2375,10 +2423,10 @@ header #registerForm {
 
 @media screen and (max-width: 1440px) {
     .navbar-nav {
-        max-width: 90%;
+        max-width: 48vw;
     }
     .nav-item .nav-link {
-        margin: 0 5px;
+        margin: 0 15px;
     }
     .yv-megamenu-product-img {
         min-width: 70px;
@@ -2622,7 +2670,7 @@ header #registerForm {
         display: none;
     }
     .header__heading-link img {
-        max-width: 150px;
+        max-width: 50%;
     }
     .navigation__header {
         padding: 18px 0;
@@ -2673,7 +2721,7 @@ header #registerForm {
         top: 6px;
     }
     .side-menu {
-        max-width: 90%;
+        max-width: 95%;
     }
     .back-to-menu span {
         position: unset;

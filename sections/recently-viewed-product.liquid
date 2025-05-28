@@ -6,6 +6,9 @@
           
     {%- if search.performed -%}
           {%- for item in search.results -%}
+          {%- comment %}<locksmith:5422>{% endcomment -%}
+            {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: item, subject_parent: search, variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% else %}{% continue %}{% endif -%}
+          {%- comment %}</locksmith:5422>{% endcomment -%}
           {%- case item.object_type -%}
           {%- when 'product' -%}
           <div class="col-6 col-sm-4 col-md-4 col-lg-3 col-xl-2" data-product-grid>

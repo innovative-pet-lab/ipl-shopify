@@ -1,7 +1,17 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main-page": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "seo_heading": "h2",
         "banner_height_desktop": "auto",
@@ -10,103 +20,74 @@
         "textcolor": "#ffffff"
       }
     },
-    "gallery_carousel_UEA6Dr": {
-      "type": "gallery-carousel",
+    "multi_column_buttons_nkYUA3": {
+      "type": "multi-column-buttons",
       "blocks": {
-        "image_DGxjMr": {
-          "type": "image",
+        "button_A3EFwa": {
+          "type": "button",
           "settings": {
-            "heading": "",
-            "subheading": "",
-            "image": "shopify:\/\/shop_images\/AWARD_4.jpg",
-            "link": ""
+            "button_label": "Instructions",
+            "redirect_page": "kit-instructions",
+            "external_url": ""
           }
         },
-        "image_yeMp9R": {
-          "type": "image",
+        "button_7EmBF4": {
+          "type": "button",
           "settings": {
-            "heading": "",
-            "subheading": "",
-            "image": "shopify:\/\/shop_images\/AWARD_3.jpg",
-            "link": ""
+            "button_label": "Research",
+            "redirect_page": "research-information",
+            "external_url": ""
           }
         },
-        "image_x4jVWH": {
-          "type": "image",
+        "button_ceXPYi": {
+          "type": "button",
           "settings": {
-            "heading": "",
-            "subheading": "",
-            "image": "shopify:\/\/shop_images\/AWARD_2.jpg",
-            "link": ""
+            "button_label": "FAQs",
+            "redirect_page": "faqs",
+            "external_url": ""
           }
         },
-        "image_mxPhLB": {
-          "type": "image",
+        "button_Mxpdmg": {
+          "type": "button",
           "settings": {
-            "heading": "",
-            "subheading": "",
-            "image": "shopify:\/\/shop_images\/AWARD_1.jpg",
-            "link": ""
+            "button_label": "Partners",
+            "redirect_page": "",
+            "external_url": "https://staging.app.innovativepetlab.com/partners"
+          }
+        },
+        "button_kQKR4E": {
+          "type": "button",
+          "settings": {
+            "button_label": "Case Studies",
+            "redirect_page": "case-studies",
+            "external_url": ""
+          }
+        },
+        "button_zdMrcm": {
+          "type": "button",
+          "settings": {
+            "button_label": "Gut Instincts - Blog",
+            "redirect_page": "gut-instincts-blog",
+            "external_url": ""
           }
         }
       },
       "block_order": [
-        "image_DGxjMr",
-        "image_yeMp9R",
-        "image_x4jVWH",
-        "image_mxPhLB"
+        "button_A3EFwa",
+        "button_7EmBF4",
+        "button_ceXPYi",
+        "button_Mxpdmg",
+        "button_kQKR4E",
+        "button_zdMrcm"
       ],
+      "name": "Multi-column buttons",
       "settings": {
-        "enable_fullwidth": true,
-        "heading": "",
-        "seo_heading": "h2",
-        "heading_size": "h2",
-        "gallery_style": "swipe",
-        "slide_direction": "right",
-        "image_style": "square",
-        "image_size": "medium",
-        "text_alignment": "center",
-        "enable_image_animation": false,
-        "image_crop": false,
-        "image_background": false,
-        "bgcolor": "primary",
-        "section_visibility": "always",
-        "top_space_desktop": 45,
-        "bottom_space_desktop": 45,
-        "top_space_mobile": 35,
-        "bottom_space_mobile": 0
-      }
-    },
-    "rich_text_MkiDPp": {
-      "type": "rich-text",
-      "blocks": {
-        "richtext_NYhGGc": {
-          "type": "richtext",
-          "settings": {
-            "heading": "",
-            "seo_heading": "h2",
-            "content": "<p>We support Military & Veteran Groups as well as Local Shelters & Rescues.<\/p>"
-          }
-        }
-      },
-      "block_order": [
-        "richtext_NYhGGc"
-      ],
-      "settings": {
-        "content_width": "container sm-container",
-        "content_alignment": "center",
-        "bgcolor": "primary",
-        "section_visibility": "always",
-        "top_space_desktop": 50,
-        "bottom_space_desktop": 0,
-        "top_space_mobile": 30,
-        "bottom_space_mobile": 30
+        "multi_column_buttons_title": "Learn"
       }
     }
   },
   "order": [
     "main-page",
-    "gallery_carousel_UEA6Dr",
-    "rich_text_MkiDPp"
+    "multi_column_buttons_nkYUA3"
   ]
 }

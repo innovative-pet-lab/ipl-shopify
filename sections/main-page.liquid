@@ -8,14 +8,14 @@
     }
   }
 </style>
-<div
+{% comment %} <div
   class="yv-page-banner"
   style="{% if section.settings.banner != blank %}background:url({{ section.settings.banner | image_url }}) no-repeat {{ section.settings.banner.presentation.focal_point }}/cover;{% elsif section.settings.bgcolor != blank %}background-color:{{section.settings.bgcolor}};{% endif %}"
 >
   <div class="page-banner-content text-center">
     <{{ section.settings.seo_heading }} class="page-banner-title h2" style="color:{{ section.settings.textcolor }}">{{ page.title }}</{{ section.settings.seo_heading }}>
   </div>
-</div>
+</div> {% endcomment %}
 {%- if page.content != blank -%}
   <div class="yv-page-description-wrapper">
     <div class="{% if settings.layout_width == 'boxed' %}container{% else %}container-fluid{% endif %}">
@@ -32,7 +32,7 @@
 
 {% schema %}
 {
-  "name": "t:sections.main-page.name",
+  "name": "IPL Featured Products",
   "tag": "section",
   "class": "banner-top-section",
   "settings": [

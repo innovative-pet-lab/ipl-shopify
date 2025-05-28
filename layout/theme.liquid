@@ -1,6 +1,11 @@
+{%- comment %}<locksmith:8a43>{% endcomment -%}
+  {%- include 'locksmith' -%}
+{%- comment %}</locksmith:8a43>{% endcomment -%}
+
 <!doctype html>
 <html class="no-js" lang="{{ request.locale.iso_code }}">
   <head>
+    {{ locksmith_initializations }}
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -16,7 +21,10 @@
     {%- endunless -%}
     <title>{{ page_title }}</title>
     {%- if page_description -%}
-      <meta name="description" content="{{ page_description | escape }}">
+      {%- comment %}<locksmith:f53c>{% endcomment -%}
+        {%- capture var %}{% render 'locksmith-variables', variable: 'transparent', hiding_scope: 'resource' %}{% endcapture %}{% if var == 'true' %}<meta name="description" content="{{ page_description | escape }}">{% endif -%}
+        {%- comment %}original: <meta name="description" content="{{ page_description | escape }}">{%- endcomment %}
+      {%- comment %}</locksmith:f53c>{% endcomment -%}
     {%- endif -%}
     {{ content_for_header }}
     <script>
@@ -25,6 +33,11 @@
 
     {%- render 'theme-style' -%}
     {%- render 'theme-scripts' -%}
+
+<!-- Swiper -->
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
 
   {%- if customer.metafields.sparklayer.authentication -%}
 <!-- Anything inside here only shows for logged in customers-->
@@ -133,6 +146,7 @@
 
   }
 </style>
+
 <!-- End SparkLayer Sample CSS Code -->
 {%- endif -%}
   </head>
@@ -201,6 +215,12 @@
       });
       });
     </script>
+    {% if customer %}
+      <script>
+        window.customerTags = {{ customer.tags | json }};
+        window.productTitle = {{ product.title | json }};
+      </script>
+    {% endif %}
     {%- if request.page_type contains 'customers' -%}
       <div class="yv-reorder-popup">
         <div class="yv-reorder-popup-Container">
@@ -217,5 +237,8 @@
     {% if settings.enable_stickers %}
       <div class="fixed-overlay"></div>
     {% endif %}
+    {{ 'bss-custom.css' | asset_url | stylesheet_tag }}
+    <script src="{{ 'bss-custom.js' | asset_url }}" defer></script>
+    
   </body>
 </html>

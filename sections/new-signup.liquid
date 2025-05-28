@@ -1,0 +1,768 @@
+{{ 'customer.css' | asset_url | stylesheet_tag }}
+<style>
+  .checkbox-group {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+    
+  }
+  .checkbox-group label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: normal;
+    white-space: nowrap;
+    font-size: 14px;
+  }
+  .form-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .form-row .form-group {
+    flex: 1 1 calc(50% - 10px); 
+    min-width: 250px;
+  }
+  
+  form button[type="submit"]:not([name="checkout"]) {
+    font-size: 16px;
+    float: right;
+  }
+
+  @media (max-width: 768px) {
+    .form-row .form-group {
+      flex: 1 1 100%; 
+    }
+  }
+
+  .radio-group label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex: 1 1 45%;
+    font-size: 14px;
+  }
+  
+  .register .container {
+    padding: 3rem 1rem 1rem 1rem;
+  }
+
+  .register .container h2 {
+    text-align: center;
+    color: #000000;
+    font-size: min(4rem,3vw);
+    font-weight: 700;
+  }
+  
+  .register .container h2 .form-type {
+    text-transform:capitalize;
+    margin-right:0.5rem
+  }
+
+  
+  .custom-checkbox {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    font-size: 20px;
+    line-height: 1.4;
+    cursor: pointer;
+    padding-left: 0;
+    padding-top: 0.4rem;
+    padding-bottom: 0.4rem;
+  }
+
+  .custom-checkbox input[type="checkbox"] {
+    display: none;
+  }
+
+  .custom-checkbox .checkmark {
+    width: 26px;
+    height: 26px;
+    border: 2px solid #A7D2DB;
+    border-radius: 6px;
+    box-sizing: border-box;
+    position: relative;
+    flex-shrink: 0;
+    margin-top: 2px;
+    background: white!important;
+  }
+
+  .custom-checkbox .checkmark:after {
+    border-color: #A7D2DB!important;
+  }
+
+  .custom-checkbox input[type="checkbox"]:checked + .checkmark::after {
+    content: "";
+    position: absolute;
+    left: 7px;
+    top: 3px;
+    width: 6px;
+    height: 12px;
+    border: solid #03B0A7;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+  }
+
+  .checkbox-text {
+    text-transform: none;
+    font-size: 16px;
+  }
+  
+  .checkbox-text a {
+    color: #03B0A7;
+    text-decoration: underline;
+  }
+
+  .checkmark {
+    background: white;
+  }
+
+  @media (max-width: 768px) {
+    .register .container h2 {
+      font-size: min(2rem, 6vw);
+    }
+    .radio-group label {
+      flex: 1 1 100%;
+    }
+  }
+
+/* Hide the default checkbox */
+.checkbox-group input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #03B0A7;
+  border-radius: 4px;
+  position: relative;
+  margin-top: 2px;
+  cursor: pointer;
+}
+
+/* Checkmark styling */
+.checkbox-group input[type="checkbox"]:checked::before {
+  content: '';
+  position: absolute;
+  top: 4px;
+  left: 6px;
+  width: 6px;
+  height: 12px;
+  border: solid #03B0A7;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.checkbox-group input[type="text"] {
+  margin-top: 0.4rem;
+  padding: 0.4rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+  max-width: 300px;
+  font-size: 16px;
+}
+
+.form-control-2 {
+  border-width: 2px;
+  border-radius: 50px;
+  border-color: #99d5e0;
+  padding-left: 1rem
+}
+
+.form-flex {
+  display: flex;
+  gap: 8rem;
+}
+
+@media (max-width: 768px) {
+    .yv-login-form {
+      margin-top: 1.5rem;
+      margin-bottom: 4rem; 
+      padding: 13px;
+    }
+    .form-row {
+      gap: 8px;
+    }
+    .form-row label {
+      font-size: 16px!important;
+    }
+ }
+</style>
+<section class="account-pages-section">
+  <div class="container">
+    <div class="yv-customer-pages register">
+      <div class="container">
+      <h2><span class="form-type">Provider&nbsp;</span>Request Form</h2>
+      </div>
+      <div class="row">
+        <div class="col-12 col-sm-12">
+          <div class="left-side-content">
+            <div class="yv-login-form yv-register-form" id="registerForm">
+              {%- form 'create_customer', novalidate: 'novalidate' -%}
+              {% comment %} {%- if form.errors -%}
+                {% comment %} {%- form 'create_customer', novalidate: 'novalidate' -%}
+
+                  <div class="field form-group">
+                    <label for="signUpForm-FirstName">First Name</label>   
+                    <input type="text" class="form-control" name="customer[first_name]" placeholder="Your first name" id="signUpForm-FirstName" required>
+                  </div>
+                
+                  <div class="field form-group">
+                    <label for="signUpForm-LastName">Last Name</label>
+                    <input type="text" class="form-control" name="customer[last_name]" placeholder="Your last name" id="signUpForm-LastName" required>
+                  </div>
+                
+                  <div class="field form-group">  
+                    <label for="signUpForm-email">Email</label>    
+                    <input type="email" class="form-control" name="customer[email]" placeholder="Your email" id="signUpForm-email" required>
+                  </div>
+                
+                  <div class="field form-group"> 
+                    <label for="signUpForm-password">Password</label>    
+                    <input type="password" class="form-control" name="customer[password]" placeholder="Your password" id="signUpForm-password" required>
+                  </div>
+                
+        
+                  <button type="submit" class="button black-btn btn-block">
+                    Submit
+                  </button>
+                {%- endform -%} {% endcomment %}
+              {%- endif -%} {% endcomment %}
+
+              <div class="form-row">
+                <div class="field">
+                  <label for="signUpForm-ProfileType">Profile Type</label>
+                  <select class="form-control" id="signUpForm-ProfileType">
+                    <option value="" selected>Select Account Type</option>
+                    <option value="wholesale">Wholesale</option>
+                    <option value="practitioner">Practitioner</option>
+                    <option value="clinical">Clinical trial / Research</option>
+                    <option value="customer">Customer</option>
+                  </select>
+                </div>
+
+                <div class="field form-group">
+                  {% comment %} EMPTY {% endcomment %}
+                </div>
+
+                <div class="field form-group">
+                  <label for="signUpForm-FirstName">{{ 'customer.register.first_name' | t }}</label>
+                  <input type="text" class="form-control" placeholder="Your First Name" name="customer[first_name]" id="signUpForm-FirstName" required>
+                </div>
+
+                <div class="field form-group">
+                  <label for="signUpForm-LastName">{{ 'customer.register.last_name' | t }}</label>
+                  <input type="text" class="form-control"  placeholder="Your Last Name" name="customer[last_name]" id="signUpForm-LastName" required>
+                </div>
+
+                <div class="field form-group">
+                  <label for="signUpForm-email">{{ 'customer.register.email' | t }}</label>
+                  <input type="email" class="form-control"  placeholder="Your Email" name="customer[email]" id="signUpForm-email" required>
+                </div>
+
+                <div class="field form-group">
+                  <label for="signUpForm-password">{{ 'customer.register.password' | t }}</label>
+                  <input type="password" class="form-control" placeholder="Your Password" name="customer[password]" id="signUpForm-password" required>
+                </div>
+              </div>
+
+              {% comment %} clinical type {% endcomment %}
+              <div class="field form-group" id="clinicalFields" style="display: none;">
+                <div class="form-row">
+                  <div class="field form-group">
+                    <label for="signUpForm-password">Phone</label>
+                    <input type="text" class="form-control" name="customer[phone]" required>
+                  </div>
+                  <div class="field form-group">
+                    <label for="signUpForm-password">Contact Person</label>
+                    <input type="text" class="form-control" id="contact_person" name="customer[contact_person]" required>
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <div class="field form-group">
+                    <label for="signUpForm-password">Address</label>
+                    <input type="text" id="address" class="form-control" name="customer[address]" required>
+                  </div>
+                  <div class="field form-group">
+                    <label for="signUpForm-password">Website</label>
+                    <input type="text" id="website" class="form-control" name="customer[website]" required>
+                  </div>
+                </div>
+
+                <label>Type of Organization:</label>
+                <div class="radio-group">
+                  <label><input type="radio" name="customer[note][org_type]" value="Veterinary Clinic" class="org-type"> Veterinary Clinic</label>
+                  <label><input type="radio" name="customer[note][org_type]" value="Research Institution" class="org-type"> Research Institution</label>
+                  <label><input type="radio" name="customer[note][org_type]" value="Pet Nutrition / Food" class="org-type"> Pet Nutrition / Food</label>
+                  <label><input type="radio" name="customer[note][org_type]" value="Pet Brand/Product Company" class="org-type"> Pet Brand/Product Company</label>
+                  <label><input type="radio" name="customer[note][org_type]" value="Supplement Company" class="org-type"> Supplement Company</label>
+                </div>
+                <div class="form-group" style="width:49%">
+                  <label for="orgOther" style="font-size:14px">Other:</label>
+                  <input type="text" class="form-control" id="orgOther" placeholder="Specify other organization type">
+                </div>
+                <div class="form-group">
+                  <label>Which areas are you interested in studying? (Check all that apply)</label><br>
+                  <div class="checkbox-group">
+                    <label><input type="checkbox" name="customer[note][interest][]" value="supplements"> Supplements</label>
+                    <label><input type="checkbox" name="customer[note][interest][]" value="nutrition"> Nutrition</label>
+                    <label><input type="checkbox" name="customer[note][interest][]" value="Behavior and/or stress"> Behavior and/or stress</label>
+                    <label style="width:49%">
+                      <input type="checkbox" class="interest-checkbox" value="other">Other:
+                      <input type="text" class="form-control mt-1" name="customer[note][interest_other]" placeholder="Please specify">
+                    </label>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label>Do you have an existing protocol or would you like support designing one?</label><br>
+                  <div class="checkbox-group">
+                    <label><input type="checkbox" class="protocol-status-checkbox" name="customer[note][protocol_status][]" value="I have a protocol"> I have a protocol</label>
+                    <label><input type="checkbox" class="protocol-status-checkbox" name="customer[note][protocol_status][]" value="I’d like help creating one"> I’d like help creating one</label>
+                    <label><input type="checkbox" class="protocol-status-checkbox" name="customer[note][protocol_status][]" value="Not sure yet"> Not sure yet</label>
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <div class="field form-group">
+                    <label for="speciesInterest">Species of interest in studying</label>
+                    <input type="text" class="form-control" id="speciesInterest" placeholder="Please specify" name="customer[note][species_interest]">
+                  </div>
+
+                  <div class="field form-group">
+                    <label for="petsEnrolled">Estimated number of pets to enroll</label>
+                    <input type="text" class="form-control" id="petsEnrolled" placeholder="Please enter number only" name="customer[note][pets_enrolled]">
+                  </div>
+
+                  <div class="field form-group">
+                    <label for="startDate">Timeline or ideal start date</label>
+                    <input type="text" class="form-control" id="startDate" placeholder="MM/DD/YYY" name="customer[note][start_date]">
+                  </div>
+                </div>
+
+              </div>
+
+              {% comment %} veterinarian type {% endcomment %}
+              <div id="veterinarian-fields" style="display: none;">
+
+                <!-- Degree(s) -->
+                <label>Degree(s)</label><br>
+                <input type="checkbox" name="degree" value="DVM"> DVM<br>
+                <input type="checkbox" name="degree" value="VDM"> VDM<br>
+                <input type="checkbox" name="degree" value="PhD"> PhD<br>
+                <input type="checkbox" name="degree" value="Other"> Other<br><br>
+
+                <div class="form-row">
+                  <div class="field form-group">
+                    <label for="office_address">Office Address</label>
+                    <input type="text" id="office_address" class="form-control" name="customer[office_address]" placeholder="Enter office address">
+                  </div>
+                  <div class="field form-group">
+                  <label for="phone_number">Phone Number</label>
+                  <input type="text" id="phone_number" class="form-control" name="phone_number" placeholder="Enter phone number">
+                  </div>
+                </div>
+
+                <label>How did you learn about Innovative Pet Lab?</label><br>
+                <input type="radio" name="learn_about" value="Facebook"> Facebook<br>
+                <input type="radio" name="learn_about" value="Instagram"> Instagram<br>
+                <input type="radio" name="learn_about" value="Google Search"> Google Search<br>
+                <input type="radio" name="learn_about" value="Friend"> Friend<br>
+                <input type="radio" name="learn_about" value="Colleague"> Colleague<br>
+                <input type="radio" name="learn_about" value="Patient"> Patient<br>
+                <input type="radio" name="learn_about" value="Veterinarian"> Veterinarian<br>
+                <input type="radio" name="learn_about" value="AHVMA"> AHVMA<br>
+                <input type="radio" name="learn_about" value="Other"> Other<br>
+
+              </div>
+
+              {% comment %} wholesale type {% endcomment %}
+              <div id="wholesaleFields" style="display:none">
+
+                <div class="form-row">
+                  <div class="field form-group">
+                    <label for="store_name">Store Name</label>
+                    <input type="text" id="store_name" class="form-control" name="customer[store_name]" placeholder="Enter store name">
+                  </div>
+                  <div class="field form-group">
+                  <label for="store_address">Store Address</label>
+                  <input type="text" id="store_address" class="form-control" name="store_address" placeholder="Enter store address">
+                  </div>
+                </div>
+
+                <label>How did you learn about Innovative Pet Lab?</label><br>
+                <input type="checkbox" name="how_learned[]" value="Facebook"> Facebook<br>
+                <input type="checkbox" name="how_learned[]" value="Instagram"> Instagram<br>
+                <input type="checkbox" name="how_learned[]" value="Google Search"> Google Search<br>
+                <input type="checkbox" name="how_learned[]" value="Friend"> Friend<br>
+                <input type="checkbox" name="how_learned[]" value="Colleague"> Colleague<br>
+                <input type="checkbox" name="how_learned[]" value="Patient"> Patient<br>
+                <input type="checkbox" name="how_learned[]" value="Veterinarian"> Veterinarian<br>
+                <input type="checkbox" name="how_learned[]" value="Super Zoo"> Super Zoo<br>
+                <input type="checkbox" name="how_learned[]" value="Other"> Other<br>
+              </div>
+
+              <div id="agreementFields" style="margin-top: 20px;">
+                  <input type="checkbox" id="termsAgreement" name="termsAgreement" required>
+                  <label for="termsAgreement" style="font-size:14px;text-transform:capitalize">
+                    I agree to Innovative Pet Labs' <a style="text-decoration:underline" href="/terms-conditions/" target="_blank">Terms & Conditions</a> and <a style="text-decoration:underline" href="/privacy-policy" target="_blank">Privacy Policy</a>.
+                  </label>
+                <div>
+                  <input type="checkbox" id="emailAgreement" name="customer[accepts_marketing]" value="true" checked>
+                  <input type="hidden" name="customer[accepts_marketing]" value="true">
+                  <label for="emailAgreement" style="font-size:14px;text-transform:capitalize">
+                    By becoming an Innovative Pet Lab provider, I consent to receiving periodic updates and marketing emails from IPL.
+                  </label>
+                </div>
+              </div>
+
+              <!-- Hidden input for customer tags -->
+              <input type="hidden" id="customerTags" name="customer[tags]"> 
+              <input type="hidden" id="customerNote" name="customer[note]"> 
+
+              <button type="submit" class="button black-btn btn-block" id="registerSubmit" style="width:49%;margin-top:1rem;height:60px">
+                {{ 'customer.register.submit' | t }}
+              </button>
+              {%- endform -%}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const form = document.querySelector("form");
+    const profileTypeSelect = document.getElementById("signUpForm-ProfileType");
+    const customerTagsInput = document.getElementById("customerTags");
+
+    const clinicalFields = document.getElementById("clinicalFields");
+    const veterinarianFields = document.getElementById("veterinarian-fields");
+
+    const orgCheckboxes = document.querySelectorAll(".org-type");
+    const orgOtherInput = document.getElementById("orgOther");
+  
+    const interestCheckboxes = document.querySelectorAll("input[name='customer[note][interest][]']");
+    const protocolCheckboxes = document.querySelectorAll(".protocol-status-checkbox");
+  
+    const speciesInterestInput = document.getElementById("speciesInterest");
+    const petsEnrolledInput = document.getElementById("petsEnrolled");
+    const startDateInput = document.getElementById("startDate");
+
+    const address = document.getElementById("address");
+    const website = document.getElementById("website");
+    const contactPerson = document.getElementById("contact_person");
+
+    const vetDegreeCheckboxes = document.querySelectorAll("input[name='degree']");
+    const vetOfficeAddressInput = document.getElementById("office_address");
+    const vetPhoneNumberInput = document.getElementById("phone_number");
+    const vetLearnAboutInput = document.querySelectorAll("input[name='learn_about']");
+
+    const termsCheckbox = document.getElementById('termsAgreement');
+    const emailCheckbox = document.getElementById('emailAgreement');
+    const emailHidden = document.getElementById('emailAgreementHidden');
+    const submitButton = document.getElementById('registerSubmit');
+
+    // Function to check if both checkboxes are checked
+    function updateSubmitButtonState() {
+      if (termsCheckbox.checked && emailCheckbox.checked) {
+        submitButton.disabled = false;
+        submitButton.classList.remove('disabled');
+      } else {
+        submitButton.disabled = true;
+        submitButton.classList.add('disabled');
+      }
+    }
+
+    // Function to sync checkbox to hidden field
+    function updateHiddenField() {
+      emailHidden.value = emailCheckbox.checked ? 'yes' : '';
+    }
+
+    setTimeout(function () {
+
+      function toggleProfileFields() {
+        if (profileTypeSelect.value === "clinical") {
+          clinicalFields.style.display = "block";
+          veterinarianFields.style.display = "none";
+          wholesaleFields.style.display = "none";
+        } else if (profileTypeSelect.value === "practitioner") {
+          clinicalFields.style.display = "none";
+          veterinarianFields.style.display = "block";
+          wholesaleFields.style.display = "none";
+        } else if (profileTypeSelect.value === "wholesale") {
+          clinicalFields.style.display = "none";
+          veterinarianFields.style.display = "none";
+          wholesaleFields.style.display = "block";
+        } else {
+          clinicalFields.style.display = "none";
+          veterinarianFields.style.display = "none";
+          wholesaleFields.style.display = "none";
+        }
+      }
+
+      // Execute immediately on page load
+      toggleProfileFields();
+
+      profileTypeSelect.addEventListener("change", toggleProfileFields);
+      
+      form.addEventListener("submit", function (event) {
+        let tags = [];
+    
+        const profileType = profileTypeSelect.value;
+        if (profileType) {
+          tags.push(`profileType:${profileType}`);
+        }
+    
+        if (profileType === "clinical") {
+          orgCheckboxes.forEach(checkbox => {
+            if (checkbox.checked) {
+              tags.push(`org_type:${checkbox.value}`);
+            }
+          });
+          if (orgOtherInput.value.trim() !== "") {
+            tags.push(`org_type:${orgOtherInput.value.trim()}`);
+          }
+
+          interestCheckboxes.forEach(checkbox => {
+            if (checkbox.checked) {
+              tags.push(`interest_areas:${checkbox.value}`);
+            }
+          });
+
+          protocolCheckboxes.forEach(checkbox => {
+            if (checkbox.checked) {
+              tags.push(`protocol_status:${checkbox.value}`);
+            }
+          });
+
+          if (speciesInterestInput.value.trim() !== "") {
+            tags.push(`species_interest:${speciesInterestInput.value.trim()}`);
+          }
+          if (petsEnrolledInput.value.trim() !== "") {
+            tags.push(`pets_enrolled:${petsEnrolledInput.value.trim()}`);
+          }
+          if (startDateInput.value.trim() !== "") {
+            tags.push(`start_date:${startDateInput.value.trim()}`);
+          }
+          if (address.value.trim() !== "") {
+            tags.push(`address:${address.value.trim()}`);
+          }
+          if (website.value.trim() !== "") {
+            tags.push(`website:${website.value.trim()}`);
+          }
+          if (contactPerson.value.trim() !== "") {
+            tags.push(`contact_person:${contactPerson.value.trim()}`);
+          }
+        }
+
+        if (profileType === "practitioner") {
+          vetDegreeCheckboxes.forEach(checkbox => {
+            if (checkbox.checked) {
+              tags.push(`vet_degree:${checkbox.value}`);
+            }
+          });
+          if (vetOfficeAddressInput.value.trim() !== "") {
+            tags.push(`office_address:${vetOfficeAddressInput.value.trim()}`);
+          }
+          if (vetPhoneNumberInput.value.trim() !== "") {
+            tags.push(`vet_phone_number:${vetPhoneNumberInput.value.trim()}`);
+          }
+          if (vetLearnAboutInput.value.trim() !== "") {
+            tags.push(`vet_learn_about:${vetLearnAboutInput.value.trim()}`);
+          }
+        }
+
+        customerTagsInput.value = tags.join(', ');
+        updateHiddenField();
+      });
+
+      // Call initial updates after timeout
+      updateSubmitButtonState();
+      updateHiddenField();
+
+    }, 1000);
+
+    // Add event listeners to checkboxes
+    termsCheckbox.addEventListener('change', updateSubmitButtonState);
+    emailCheckbox.addEventListener('change', function () {
+      updateSubmitButtonState();
+      updateHiddenField();
+    });
+
+  });
+</script>
+
+{% schema %}
+{
+  "name": "New customer signup",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "t:sections.text-with-icons.settings.column.heading"
+    },
+    {
+      "type":"checkbox",
+      "id":"column_background",
+      "label":"t:sections.text-with-icons.settings.show_background.label",
+      "default":false
+    },
+    {
+      "type": "select",
+      "id": "mobile_column_count",
+      "label": "t:sections.text-with-icons.settings.mobile_column_count.label",
+      "default": "1",
+      "options": [
+        {
+          "value": "1",
+          "label": "1"
+        },
+        {
+          "value": "2",
+          "label": "2"
+        }
+      ]
+    },
+    {
+      "type": "header",
+      "content": "t:sections.text-with-icons.settings.icon.heading"
+    },
+    {
+      "type":"checkbox",
+      "id":"icon_background",
+      "label":"t:sections.text-with-icons.settings.show_background.label",
+      "default":false
+    },
+    {
+      "type": "select",
+      "id": "icon_position",
+      "label":"t:sections.text-with-icons.settings.icon_position.label",
+      "default": "top",
+      "options": [
+        {
+          "value": "left",
+          "label":"t:sections.text-with-icons.settings.icon_position.options.left.label"
+        },
+        {
+          "value": "top",
+          "label":"t:sections.text-with-icons.settings.icon_position.options.top.label"
+        }
+      ]
+    },
+    {
+      "type": "header",
+      "content": "t:common.header.color_section.label"
+    },
+    {
+      "type": "select",
+      "id": "bgcolor",
+      "label": "t:common.header.background_section.label",
+      "default": "secondary",
+      "options": [
+        {
+          "value": "primary",
+          "label": "t:common.header.primary.label"
+        },
+        {
+          "value": "secondary",
+          "label": "t:common.header.secondary.label"
+        },
+        {
+          "value": "tertiary",
+          "label": "t:common.header.tertiary.label"
+        },
+        {
+          "value": "quaternary",
+          "label": "t:common.header.quaternary.label"
+        },
+        {
+          "value": "gradient",
+          "label": "t:common.header.gradient.label"
+        }
+      ]
+    },
+    {
+      "type":"color",
+      "id":"column_background_color",
+      "label":"t:sections.text-with-icons.settings.column_background_color.label"
+    },
+    {
+      "type":"color",
+      "id":"icon_background_color",
+      "label":"t:sections.text-with-icons.settings.icon_background_color.label"
+    },
+    {
+      "type": "select",
+      "id": "section_visibility",
+      "label": "t:common.section_visibility.label",
+      "default": "always",
+      "options": [
+        {
+          "label": "t:common.section_visibility.options.always.label",
+          "value": "always"
+        },
+        {
+          "label": "t:common.section_visibility.options.small_devices.label",
+          "value": "small"
+        },
+        {
+          "label": "t:common.section_visibility.options.large_devices.label",
+          "value": "large"
+        }
+      ]
+    },
+    {
+      "type": "header",
+      "content": "t:common.header.space_section.label"
+    },
+    {
+      "type": "range",
+      "id": "top_space_desktop",
+      "label": "t:common.top_space_desktop.label",
+      "default": 30,
+      "min": 0,
+      "max": 100,
+      "step": 5
+    },
+    {
+      "type": "range",
+      "id": "bottom_space_desktop",
+      "label": "t:common.bottom_space_desktop.label",
+      "default": 30,
+      "min": 0,
+      "max": 100,
+      "step": 5
+    },
+    {
+      "type": "range",
+      "id": "top_space_mobile",
+      "label": "t:common.top_space_mobile.label",
+      "default": 30,
+      "min": 0,
+      "max": 100,
+      "step": 5
+    },
+    {
+      "type": "range",
+      "id": "bottom_space_mobile",
+      "label": "t:common.bottom_space_mobile.label",
+      "default": 30,
+      "min": 0,
+      "max": 100,
+      "step": 5
+    }
+  ],
+
+  "presets": [
+    {
+      "name": "New customer signup",
+    }
+  ]
+}
+{% endschema %}

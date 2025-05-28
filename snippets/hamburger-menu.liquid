@@ -8,6 +8,9 @@
   <div class="hamburger-menu-outer">
     {% assign itembageCount = 1 %}
     {%- for link in linklists[section.settings.menu].links -%}
+         {%- comment %}<locksmith:f624>{% endcomment -%}
+           {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: link, subject_parent: linklists[section.settings.menu], variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% else %}{% continue %}{% endif -%}
+         {%- comment %}</locksmith:f624>{% endcomment -%}
          {%  assign menuTitle = link.title | handleize %}
          {% capture menubadge %}
           {%  for block in section.blocks %}
@@ -46,6 +49,9 @@
                 {{ link.title | escape }}
               </button>
               {%- for childlink in link.links -%}
+                {%- comment %}<locksmith:062e>{% endcomment -%}
+                  {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: childlink, subject_parent: link, variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% else %}{% continue %}{% endif -%}
+                {%- comment %}</locksmith:062e>{% endcomment -%}
                 {% if childlink.links != blank %}
                   <div class="hamburger-menu-item inner-item dropdown-hamburger-menu-item">
                     <a href="javscript:void(0);" class="dropdown-hamburger-menu-item-title item">
@@ -68,6 +74,9 @@
                           {{ childlink.title | escape }}
                         </button>
                         {%- for grandchildlink in childlink.links -%}
+                          {%- comment %}<locksmith:04e0>{% endcomment -%}
+                            {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: grandchildlink, subject_parent: childlink, variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% else %}{% continue %}{% endif -%}
+                          {%- comment %}</locksmith:04e0>{% endcomment -%}
                           <a class="hamburger-menu-item sub-inner-item" href="{{ grandchildlink.url }} ">
                             <span class="item">{{ grandchildlink.title | escape }}</span>
                           </a>
@@ -125,6 +134,9 @@
     <div class="hamburger-lower-menu">
       <div class="lower-nav">
         <div class="menu-login-btn">
+          <a class="drawer-login-btn register" href="{{ routes.account_login_url }}">
+            Register Kit
+          </a>
           {%- if customer -%}
             <a class="drawer-login-btn" href="{{ routes.account_logout_url }}">
               {{- 'customer.log_out' | t   -}}
@@ -159,12 +171,18 @@
     {%- assign itemCount = 1 -%}
     {%- assign menuLength = linklists[section.settings.menu].links.size | minus : 1 -%}
     {%- assign initalDelay = menuLength | times : 0.05 -%}
+    {%- comment %}<locksmith:2507>{% endcomment -%}
+      {%- assign locksmith_b27d_forloop__size = 0 %}{%- for link in linklists[section.settings.menu].links -%}{% capture var %}{% render 'locksmith-variables', scope: 'subject', subject: link, subject_parent: linklists[section.settings.menu], variable: 'transparent' %}{% endcapture %}{% if var == 'true' %}{% assign locksmith_b27d_forloop__size = locksmith_b27d_forloop__size | plus: 1 %}{% endif %}{% endfor %}{% assign locksmith_b27d_forloop__index = nil -%}
+    {%- comment %}</locksmith:2507>{% endcomment -%}
     {%- for link in linklists[section.settings.menu].links -%}
-    .hamburger-menu-outer .hamburger-menu-item.opened:not(.inner-item, .sub-inner-item):nth-child({{ forloop.index }}) {
+    {%- comment %}<locksmith:7b1a>{% endcomment -%}
+      {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: link, subject_parent: linklists[section.settings.menu], variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% if locksmith_b27d_forloop__index == nil %}{% assign locksmith_b27d_forloop__index = 1 %}{% assign locksmith_b27d_forloop__index0 = 0 %}{% else %}{% assign locksmith_b27d_forloop__index = locksmith_b27d_forloop__index | plus: 1 %}{% assign locksmith_b27d_forloop__index0 = locksmith_b27d_forloop__index0 | plus: 1 %}{% endif %}{% if locksmith_b27d_forloop__index == 1 %}{% assign locksmith_b27d_forloop__first = true %}{% else %}{% assign locksmith_b27d_forloop__first = false %}{% endif %}{% if locksmith_b27d_forloop__index == locksmith_b27d_forloop__size %}{% assign locksmith_b27d_forloop__last = true %}{% else %}{% assign locksmith_b27d_forloop__last = false %}{% endif %}{% assign locksmith_b27d_forloop__rindex = locksmith_b27d_forloop__size | minus: locksmith_b27d_forloop__index | minus: 1 %}{% assign locksmith_b27d_forloop__rindex0 = locksmith_b27d_forloop__size | minus: locksmith_b27d_forloop__index0 | minus: 1 %}{% else %}{% continue %}{% endif -%}
+    {%- comment %}</locksmith:7b1a>{% endcomment -%}
+    .hamburger-menu-outer .hamburger-menu-item.opened:not(.inner-item, .sub-inner-item):nth-child({{ locksmith_b27d_forloop__index }}) {
       transition-delay: {{ transitionDelay }}s;
     }
     {%- assign transitionDelay = transitionDelay | plus : 0.05 -%}
-    .hamburger-menu-item:not(.inner-item, .sub-inner-item ):nth-child({{ forloop.index }}) {
+    .hamburger-menu-item:not(.inner-item, .sub-inner-item ):nth-child({{ locksmith_b27d_forloop__index }}) {
       transition-delay: {{ initalDelay }}s;
     }
     {%- assign initalDelay = initalDelay | minus : 0.05 -%}

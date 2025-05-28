@@ -1,8 +1,17 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "current": {
     "color_base": "#26286e",
-    "color_body_bg": "#ffffff",
-    "color_body_text": "#03b0a7",
+    "color_body_bg": "#fafafa",
+    "color_body_text": "#1c1d31",
     "heading_color": "#26286e",
     "color_button": "#26286e",
     "color_button_border": "#26286e",
@@ -17,7 +26,7 @@
     "sold_badge_bg": "#73c7ad",
     "preorder_badge_bg": "#73c7ad",
     "custom_badge_bg": "#26286e",
-    "secondary_color_body_bg": "#99d5e0",
+    "secondary_color_body_bg": "#ebf7f9",
     "secondary_color_body_text": "#26286e",
     "secondary_heading_color": "#26286e",
     "secondary_color_button": "#ffffff",
@@ -30,23 +39,23 @@
     "quaternary_color_body_text": "#555555",
     "quaternary_heading_color": "#26286e",
     "gradient_color_body_bg": "linear-gradient(262deg, rgba(255, 235, 231, 1), rgba(238, 238, 238, 1) 100%)",
-    "type_heading_font_family": "quicksand_n7",
-    "heading_font_scale": 125,
+    "type_heading_font_family": "figtree_n4",
+    "heading_font_scale": 150,
     "type_header_spacing": "0",
     "type_heading_line_height": 1.1,
     "heading_text_transform": "capitalize",
-    "type_base_font_family": "montserrat_n5",
+    "type_base_font_family": "figtree_n4",
     "type_base_spacing": "0",
     "type_base_size": 125,
     "type_base_line_height": 1.6,
-    "navigation_font_family": "--font-family",
+    "navigation_font_family": "--heading-font-family",
     "buttons_font_family": "--font-family",
     "tab_heading_font_family": "--font-family",
     "filters_heading_font_family": "--font-family",
     "layout_style": "rounded",
     "layout_width": "fullwidth",
     "enable_animation": true,
-    "button_radius": 6,
+    "button_radius": 50,
     "product_image_style": "square",
     "product_image_size": "cover",
     "pass_through_product_images": true,
@@ -68,11 +77,11 @@
     "product_hover_auto_slide": false,
     "product_grid_content_alignment": "text-center",
     "newsletter_pop_enable": false,
-    "newsletter_description": "<p>Join our Newsletter<\/p>",
+    "newsletter_description": "<p>Join our Newsletter</p>",
     "show_scrollToTop_text": true,
     "custom_scrollToTop_svg": "",
     "googlemapapi": "",
-    "favicon": "shopify:\/\/shop_images\/IPL_LOGO_0f4b4daa-c9bb-4151-93f9-88486b45a75f.png",
+    "favicon": "shopify://shop_images/IPL_LOGO_0f4b4daa-c9bb-4151-93f9-88486b45a75f.png",
     "buttonType": "custom",
     "custom_radius": 6,
     "color_button_hover": "#ffffff",
@@ -109,7 +118,70 @@
         }
       }
     },
-    "content_for_index": []
+    "content_for_index": [],
+    "blocks": {
+      "14138263979377034098": {
+        "type": "shopify://apps/miniorange-single-sign-on-sso/blocks/sso-widget/48152e16-8060-4bf5-8478-83efdf88901f",
+        "disabled": false,
+        "settings": {
+          "css_selector": "#customer_login",
+          "css_button_class": "mo_button",
+          "css_selector_password": "#password-modal-heading"
+        }
+      },
+      "14033927738893891564": {
+        "type": "shopify://apps/miniorange-single-sign-on-sso/blocks/new-customer-account/48152e16-8060-4bf5-8478-83efdf88901f",
+        "disabled": false,
+        "settings": {}
+      },
+      "17587734367913825621": {
+        "type": "shopify://apps/lantern/blocks/popup/619ce3d2-0211-4d3a-9bb0-e881b10b00ad",
+        "disabled": true,
+        "settings": {
+          "ppf-popup-width": "80%",
+          "ppf-popup-height": "80%",
+          "ppf-popup-width-mobile": "100%",
+          "ppf-popup-height-mobile": "100%",
+          "auto-trigger-on-exit-intent": false,
+          "auto-trigger-on-scroll": false,
+          "auto-trigger-scroll-value": 250,
+          "auto-trigger-after-x-seconds": false,
+          "auto-trigger-time-value": 10,
+          "show-popup-how-many-times": "once",
+          "auto-trigger-quiz": "tools/perfect-product-finder/ipl-test-quize-uqrwcvyvct"
+        }
+      },
+      "9962162814386890965": {
+        "type": "shopify://apps/lantern/blocks/core/619ce3d2-0211-4d3a-9bb0-e881b10b00ad",
+        "disabled": true,
+        "settings": {}
+      },
+      "1373006865992778634": {
+        "type": "shopify://apps/impact-com/blocks/utt/adac1a7f-d17f-4936-8a12-45628cdd8add",
+        "disabled": true,
+        "settings": {}
+      },
+      "14060646107696862457": {
+        "type": "shopify://apps/judge-me-reviews/blocks/judgeme_core/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+        "disabled": false,
+        "settings": {}
+      },
+      "9513407616245537438": {
+        "type": "shopify://apps/sami-wholesale/blocks/app-embed-block/799b9db0-2c2b-4b20-8675-98acd123fbb2",
+        "disabled": true,
+        "settings": {}
+      },
+      "13969055170449783870": {
+        "type": "shopify://apps/bss-b2b-solution/blocks/config-header/451233f2-9631-4c49-8b6f-057e4ebcde7f",
+        "disabled": false,
+        "settings": {}
+      },
+      "5775402938904533032": {
+        "type": "shopify://apps/miniorange-single-sign-on-sso/blocks/session-extension/48152e16-8060-4bf5-8478-83efdf88901f",
+        "disabled": false,
+        "settings": {}
+      }
+    }
   },
   "presets": {
     "Amaze": {
@@ -160,7 +232,7 @@
       "product_hover_auto_slide": false,
       "product_grid_content_alignment": "text-left",
       "newsletter_pop_enable": false,
-      "newsletter_description": "<p>Join our Newsletter<\/p>",
+      "newsletter_description": "<p>Join our Newsletter</p>",
       "show_scrollToTop_text": true,
       "custom_scrollToTop_svg": "",
       "googlemapapi": "",
@@ -379,7 +451,7 @@
       "product_hover_auto_slide": false,
       "product_grid_content_alignment": "text-left",
       "newsletter_pop_enable": false,
-      "newsletter_description": "<p>Join our Newsletter<\/p>",
+      "newsletter_description": "<p>Join our Newsletter</p>",
       "show_scrollToTop_text": true,
       "custom_scrollToTop_svg": "",
       "googlemapapi": "",
@@ -469,7 +541,7 @@
       "product_hover_auto_slide": false,
       "product_grid_content_alignment": "text-left",
       "newsletter_pop_enable": false,
-      "newsletter_description": "<p>Join our Newsletter<\/p>",
+      "newsletter_description": "<p>Join our Newsletter</p>",
       "show_scrollToTop_text": true,
       "custom_scrollToTop_svg": "",
       "googlemapapi": "",
@@ -686,7 +758,7 @@
       "product_hover_auto_slide": false,
       "product_grid_content_alignment": "text-left",
       "newsletter_pop_enable": false,
-      "newsletter_description": "<p>Join our Newsletter<\/p>",
+      "newsletter_description": "<p>Join our Newsletter</p>",
       "show_scrollToTop_text": true,
       "custom_scrollToTop_svg": "",
       "googlemapapi": "",
@@ -904,7 +976,7 @@
       "product_hover_auto_slide": false,
       "product_grid_content_alignment": "text-left",
       "newsletter_pop_enable": false,
-      "newsletter_description": "<p>Join our Newsletter<\/p>",
+      "newsletter_description": "<p>Join our Newsletter</p>",
       "show_scrollToTop_text": true,
       "custom_scrollToTop_svg": "",
       "googlemapapi": "",
@@ -1073,5 +1145,14 @@
       },
       "content_for_index": []
     }
+  },
+  "platform_customizations": {
+    "custom_css": [
+      ".jdgm-rev-widg__title {color: #000; font-weight: 700;}",
+      ".samitaWS-customized-original-price {font-size: 20px !important; color: #a5a5a5;}",
+      ".yv-main-product-detail .samitaWS-customized-original-price {color: #a5a5a5; font-size: 24px; font-weight: bold;}",
+      ".yv-main-product-detail .samitaWS-customized-price {font-size: 24px; font-weight: bold;}",
+      ".yv-prizebox {gap: 8px;}"
+    ]
   }
 }

@@ -1,6 +1,46 @@
+{%- comment %}<locksmith:8625>{%- endcomment %}
+{%- assign locksmith_2bb1_forloop__size = 0 %}
 {%- for link in linklists[section.settings.menu].links -%}
-  {% assign menuIndex = forloop.index %}
-  {%- liquid 
+  {% capture var %}{% render 'locksmith-variables', scope: 'subject', subject: link, subject_parent: linklists[section.settings.menu], variable: 'transparent' %}{% endcapture -%}
+  {%- if var == 'true' %}{% assign locksmith_2bb1_forloop__size = locksmith_2bb1_forloop__size | plus: 1 %}{% endif -%}
+{%- endfor -%}
+{%- assign locksmith_2bb1_forloop__index = null -%}
+{%- comment %}</locksmith:8625>{%- endcomment %}
+{%- for link in linklists[section.settings.menu].links -%}
+  {%- comment %}<locksmith:1ab9>{%- endcomment %}
+  {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: link, subject_parent: linklists[section.settings.menu], variable: 'transparent' %}{% endcapture -%}
+  {%- if var == 'true' -%}
+    {%- if locksmith_2bb1_forloop__index == null -%}
+      {%- assign locksmith_2bb1_forloop__index = 1 -%}
+      {%- assign locksmith_2bb1_forloop__index0 = 0 -%}
+    {%- else -%}
+      {%- assign locksmith_2bb1_forloop__index = locksmith_2bb1_forloop__index | plus: 1 -%}
+      {%- assign locksmith_2bb1_forloop__index0 = locksmith_2bb1_forloop__index0 | plus: 1 -%}
+    {%- endif -%}
+    {%- if locksmith_2bb1_forloop__index == 1 -%}
+      {%- assign locksmith_2bb1_forloop__first = true -%}
+    {%- else -%}
+      {%- assign locksmith_2bb1_forloop__first = false -%}
+    {%- endif -%}
+    {%- if locksmith_2bb1_forloop__index == locksmith_2bb1_forloop__size -%}
+      {%- assign locksmith_2bb1_forloop__last = true -%}
+    {%- else -%}
+      {%- assign locksmith_2bb1_forloop__last = false -%}
+    {%- endif -%}
+    {%- assign locksmith_2bb1_forloop__rindex = locksmith_2bb1_forloop__size
+      | minus: locksmith_2bb1_forloop__index
+      | minus: 1
+    -%}
+    {%- assign locksmith_2bb1_forloop__rindex0 = locksmith_2bb1_forloop__size
+      | minus: locksmith_2bb1_forloop__index0
+      | minus: 1
+    -%}
+  {%- else -%}
+    {%- continue -%}
+  {%- endif -%}
+  {%- comment %}</locksmith:1ab9>{%- endcomment %}
+  {% assign menuIndex = locksmith_2bb1_forloop__index %}
+  {%- liquid
     assign menuTitle = link.title | handleize
     assign blockData = ''
     assign menuDropdown = ''
@@ -10,26 +50,26 @@
         assign blockData = block
         break
       endif
-    endfor 
+    endfor
   -%}
-{%- capture menuDropdown -%}
+  {%- capture menuDropdown -%}
 {%- case blockData.type -%}
         {%-when 'style-1' -%}
-        {%- liquid 
+        {%- liquid
           if blockData.settings.show_submenu
             render 'nav-menu-items' link : link
-          endif 
+          endif
         -%}
         {%- capture megaMenuProducts -%}
         {%- for i in (1..6) -%}
         {%- assign productIndex = 'product' | append: i -%}
         {%- if blockData.settings[productIndex] != blank -%}
-        <div class="col-12 col-sm-12 col-md-4 col-lg-3 col-xl-2">
+        <div class="col-12 col-sm-4 col-md-4 col-lg-3 col-xl-2">
           <div class="dropdown-inner-menu-item product-menu-item">
             {%- render 'product-grid' product: blockData.settings[productIndex], productClasses: 'xsmall-product-card', hideRelated: true, hide_options: true , hideHoverImage: true -%}
           </div>
         </div>
-        {%- endif -%}        		
+        {%- endif -%}
         {%- endfor -%}
         {%- endcapture -%}
         {%- if megaMenuProducts != blank -%}
@@ -41,19 +81,22 @@
         {%-when 'style-2' -%}
         {%- capture collProducts -%}
         {%- for i in (1..2) -%}
-        {%- liquid 
+        {%- liquid
           assign collectionIndex = 'collection' | append: i
-          assign collection = blockData.settings[collectionIndex] 
+          assign collection = blockData.settings[collectionIndex]
         -%}
         {%- if collection != blank -%}
-        <div class="col-12 col-sm-12 col-md-12 col-lg-6">
+        <div class="col-12 col-md-12 col-lg-6">
           <div class="yv-megamenu-product-outer">
             <a href="{{ collection.url }}" class="menu-category-title"> {{ collection.title }}</a>
-            <ul class="list-unstyled yv-megamenu-product-list">              
+            <ul class="list-unstyled yv-megamenu-product-list">
               {%- for product in collection.products limit: 4 -%}
+              {%- comment %}<locksmith:ede2>{% endcomment -%}
+                {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: product, subject_parent: collection, variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% else %}{% continue %}{% endif -%}
+              {%- comment %}</locksmith:ede2>{% endcomment -%}
               {%- assign current_variant = product.selected_or_first_available_variant -%}
               <li class="yv-megamenu-product-box">
-                <a href="{{ product.url }}" class="yv-megamenu-product-img">                 
+                <a href="{{ product.url }}" class="yv-megamenu-product-img">
                     {%- if product.featured_media != blank -%}
                     <div class="image-wrapper" style="padding-bottom:{{ 1 | divided_by : product.featured_media.preview_image.aspect_ratio | times: 100 }}%">
                     {%- render 'lazy-image' image: product.featured_media.preview_image, class : 'lazypreload', width: '110x' -%}
@@ -81,7 +124,7 @@
         {%- endcapture -%}
         {%- capture imageContent -%}
         {%- for i in (1..2) -%}
-          {%- liquid 
+          {%- liquid
             assign imageIndex = 'image' | append: i
             assign headingIndex = 'heading' | append: i
             assign subheadingIndex = 'subheading' | append: i
@@ -89,7 +132,7 @@
             assign image = blockData.settings[imageIndex]
             assign heading = blockData.settings[headingIndex]
             assign subheading = blockData.settings[subheadingIndex]
-            assign imageLink = blockData.settings[linkIndex] 
+            assign imageLink = blockData.settings[linkIndex]
           -%}
         {%- if image != blank or heading != blank or subheading != blank -%}
         <div class="col-12 col-sm-12 col-md-6">
@@ -137,7 +180,7 @@
         </div>
         {%- endif -%}
 
-        {%-when 'style-3' -%}  
+        {%-when 'style-3' -%}
         {%- assign collectionCount = 1 -%}
         {%- capture megaMenu3 -%}
         <div class="yv-listing-megamenus grid-container">
@@ -146,38 +189,41 @@
             assign container2 ='<div class="yv-listing-megamenu-container">'
             assign container3 ='<div class="yv-listing-megamenu-container">'
             assign container4 ='<div class="yv-listing-megamenu-container">'
-            assign collectionCount = 1 
+            assign collectionCount = 1
           -%}
             {% assign groupMenu = 'group_' | append: menuIndex %}
           {%- for i in (1..12) -%}
           {%- liquid
             assign collectionIndex = 'collection' | append: i
-            assign collection = blockData.settings[collectionIndex] 
-          -%}          
-            
-          {%- if collection != blank and collection.all_products_count > 0 -%} 
+            assign collection = blockData.settings[collectionIndex]
+          -%}
+
+          {%- if collection != blank and collection.all_products_count > 0 -%}
           {%- capture containercycle -%}{% cycle groupMenu: 1, 2, 3, 4 %}{%- endcapture -%}
           {%- capture collectionContent -%}
           <div class="yv-listing-megamenu-item">
             <a href="{{ collection.url }}" class="yv-listing-megamenu-title">{{ collection.title }}</a>
             <ul class="list-unstyled">
               {%- for product in collection.products limit: blockData.settings.products_count -%}
+              {%- comment %}<locksmith:a62d>{% endcomment -%}
+                {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: product, subject_parent: collection, variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% else %}{% continue %}{% endif -%}
+              {%- comment %}</locksmith:a62d>{% endcomment -%}
               <li> <a href="{{ product.url }}" class="yv-megamenu-item-link">{{ product.title | strip_html }}</a></li>
               {%- endfor -%}
             </ul>
           </div>
           {%- endcapture -%}
-          {%- liquid 
-            if containercycle == '1'  
+          {%- liquid
+            if containercycle == '1'
               assign container1 =container1 | append: collectionContent
             elsif containercycle == '2'
               assign container2 =container2 | append: collectionContent
-            elsif containercycle == '3' 
+            elsif containercycle == '3'
               assign container3 =container3 | append: collectionContent
             elsif containercycle == '4'
               assign container4 =container4 | append: collectionContent
-            endif 
-            assign collectionCount =collectionCount | plus: 1 
+            endif
+            assign collectionCount =collectionCount | plus: 1
           -%}
           {%- endif -%}
           {%- endfor -%}
@@ -185,47 +231,47 @@
             if collectionCount > 1
               echo container1 | append: '</div>'
             endif
-            if collectionCount > 2 
+            if collectionCount > 2
               echo container2 | append: '</div>'
             endif
             if collectionCount > 3
               echo container3 | append: '</div>'
-            endif 
+            endif
             if collectionCount > 4
               echo container4 | append: '</div>'
-            endif 
+            endif
           -%}
         </div>
         {%- endcapture -%}
         {%- liquid
           if collectionCount > 1
             echo megaMenu3
-          endif 
+          endif
         -%}
        {%- endcase -%}
 {%- endcapture -%}
-{% assign dropDown = false %}
-{% liquid
-  if link.links != blank
-    if blockData.type == 'style-1' and blockData.settings.show_submenu 
-      assign dropDown = true
-    else
-      assign dropDown = true
+  {% assign dropDown = false %}
+  {% liquid
+    if link.links != blank
+      if blockData.type == 'style-1' and blockData.settings.show_submenu
+        assign dropDown = true
+      else
+        assign dropDown = true
+      endif
     endif
-  endif 
--%}
+  -%}
 
-{%- liquid 
-  assign fullwidthMenu = false
-  if link.levels > 1 and link.links.size > 4 or menuDropdown != '' 
-    assign fullwidthMenu = true
-  elsif menuDropdown  != ''
-    assign fullwidthMenu = true
-  endif 
--%}
+  {%- liquid
+    assign fullwidthMenu = false
+    if link.levels > 1 and link.links.size > 4 or menuDropdown != ''
+      assign fullwidthMenu = false
+    elsif menuDropdown != ''
+      assign fullwidthMenu = true
+    endif
+  -%}
 
-{% capture menubadge %}
-      
+  {% capture menubadge %}
+
   {%  for block in section.blocks %}
     {% if block.type == 'menu-badge' %}
       {% assign badgetitle =  block.settings.badge_label | handleize  %}
@@ -234,66 +280,78 @@
            {% assign itembageCount = itembageCount | plus:1 %}
       {% endif %}
     {% endif %}
-  {% endfor  %} 
-{% endcapture %} 
+  {% endfor  %}
+{% endcapture %}
 
-<li class="nav-item {% if dropDown or menuDropdown != '' %}dropdown-menu-list {% endif %}{% if fullwidthMenu %}nav-item-mega-menu {% endif %}{% if link.current %}active{% endif %}">
-  {%- if link.links != blank or menuDropdown != '' -%}
-  <details-disclousre>
-  {% if section.settings.menu_navigations == 'hover' %}
-  <div class="yv-dropdown-detail">
-  <a href="{{ link.url }}" class="nav-link dropdown-menu-item">
-    {{ link.title | escape }}
-    {% if menubadge != blank %}
-      {{ menubadge }}
-    {% endif  %}
-    <svg fill="currentColor" viewBox="0 0 448 512">
-      <path fill="currentColor" d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z" class=""></path>
-    </svg>
-  </a>                        
-  <div class="yv-dropdown-menus-outer {% if fullwidthMenu %}fullwidth-megamenus{% endif %}">
-    <div class="yv-dropdown-menus">
-      <div class="container">
-        {%- if menuDropdown != '' -%}
-        {{- menuDropdown -}}
-        {%- else -%}
-        	{%- render 'nav-menu-items' link: link -%}
-        {%- endif -%}
-      </div>
-    </div>
-  </div> 
-  </div>
-    {% else %}
-    <details class="yv-dropdown-detail">
-  <summary class="nav-link dropdown-menu-item">
-    {{ link.title | escape }}
-    {% if menubadge != blank %}
-      {{ menubadge }}
-    {% endif  %}
-    <svg fill="currentColor" viewBox="0 0 448 512">
-      <path fill="currentColor" d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z" class=""></path>
-    </svg>
-  </summary>                        
-  <div class="yv-dropdown-menus-outer {% if fullwidthMenu %}fullwidth-megamenus{% endif %}">
-    <div class="yv-dropdown-menus">
-      <div class="container">
-        {%- if menuDropdown != '' -%}
-        {{- menuDropdown -}}
-        {%- else -%}
-        	{%- render 'nav-menu-items' link: link -%}
-        {%- endif -%}
-      </div>
-    </div>
-  </div> 
-  </details>
-    {% endif %}
-  </details-disclousre>
-  {%- else -%} 
-  <a class="nav-link list-menu__item" href="{{ link.url }}">{{ link.title | escape   }}
-    {% if menubadge != blank %}
-      {{ menubadge }}
-    {% endif  %}
-    </a>
-  {%- endif -%}  
-</li>
-{%- endfor-%}
+  <li class="nav-item {% if dropDown or menuDropdown != '' %}dropdown-menu-list {% endif %}{% if fullwidthMenu %}nav-item-mega-menu {% endif %}{% if link.current %}active{% endif %}">
+    {%- if link.links != blank or menuDropdown != '' -%}
+      <details-disclousre>
+        {% if section.settings.menu_navigations == 'hover' %}
+          <div class="yv-dropdown-detail">
+            <a href="{{ link.url }}" class="nav-link dropdown-menu-item">
+              <span>{{ link.title | escape }}</span>
+
+              {% if menubadge != blank %}
+                {{ menubadge }}
+              {% endif %}
+              <svg fill="currentColor" viewBox="0 0 448 512">
+                <path fill="currentColor" d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z" class=""></path>
+              </svg>
+            </a>
+            <div class="yv-dropdown-menus-outer {% if fullwidthMenu %}fullwidth-megamenus{% endif %}">
+              <div class="yv-dropdown-menus 44">
+                <div class="container">
+                  {%- if menuDropdown != '' -%}
+                    {{- menuDropdown -}}
+                  {%- else -%}
+                    {%- render 'nav-menu-items', link: link -%}
+                  {%- endif -%}
+                </div>
+              </div>
+            </div>
+          </div>
+        {% else %}
+          <details class="yv-dropdown-detail">
+            <summary onclick="handleMenuClick(event, '{{ link.url }}')" class="nav-link dropdown-menu-item">
+              <span>{{ link.title | escape }}</span>
+
+              {% if menubadge != blank %}
+                {{ menubadge }}
+              {% endif %}
+              <svg fill="currentColor" viewBox="0 0 448 512">
+                <path fill="currentColor" d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z" class=""></path>
+              </svg>
+            </summary>
+            <div class="yv-dropdown-menus-outer {% if fullwidthMenu %}fullwidth-megamenus{% endif %}">
+              <div class="yv-dropdown-menus mega-menu">
+                <div class="container">
+                  {%- if menuDropdown != '' -%}
+                    {{- menuDropdown -}}
+                  {%- else -%}
+                    {%- render 'nav-menu-items', link: link -%}
+                  {%- endif -%}
+                </div>
+              </div>
+            </div>
+          </details>
+        {% endif %}
+      </details-disclousre>
+    {%- else -%}
+      <a class="nav-link list-menu__item" href="{{ link.url }}">
+        {{- link.title | escape }}
+        {% if menubadge != blank %}
+          {{ menubadge }}
+        {% endif %}
+      </a>
+    {%- endif -%}
+  </li>
+{%- endfor -%}
+
+<script>
+  function handleMenuClick(event, url) {
+    const mobileSize = 768;
+    if (window.innerWidth >= mobileSize) {
+      window.location.href = url;
+    }
+  }
+</script>

@@ -6,9 +6,6 @@
         <div class="col-12 col-sm-12 col-md-7 col-lg-6">
           <div class="left-side-content">
             <div class="yv-login-form yv-register-form" id="registerForm">
-              <h3 class="form-title" tabindex="-1">
-                {{ 'customer.register.title' | t }}
-              </h3> 
               <p>{{ 'customer.register.subtext' | t }}</p>
               {%- form 'create_customer', novalidate: 'novalidate' -%}
               {%- if form.errors -%}

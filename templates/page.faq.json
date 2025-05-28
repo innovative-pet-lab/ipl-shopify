@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "page-header": {
@@ -17,14 +26,14 @@
           "type": "faq",
           "settings": {
             "heading": "Does my kit expire?",
-            "answer": "<p>No, your kit does not have an expiration date.<\/p>"
+            "answer": "<p>No, your kit does not have an expiration date.</p>"
           }
         },
         "3d382006-13d6-496a-865c-f186c23dc69f": {
           "type": "faq",
           "settings": {
             "heading": "How long from the time I receive my kit do I have to collect a sample and ship it back to IPL?",
-            "answer": "<p>While the kit does not have an expiration date, all kits must be registered and returned to the lab within six months of purchase.<\/p>"
+            "answer": "<p>While the kit does not have an expiration date, all kits must be registered and returned to the lab within six months of purchase.</p>"
           }
         }
       },
@@ -36,7 +45,8 @@
         "heading": "Kit",
         "seo_heading": "h2",
         "bgcolor": "primary",
-        "row_bgcolor": "secondary",
+        "row_bgcolor": "quaternary",
+        "row_answer_bgcolor": "#f0f6f4",
         "section_visibility": "always",
         "top_space_desktop": 45,
         "bottom_space_desktop": 45,
@@ -51,28 +61,28 @@
           "type": "faq",
           "settings": {
             "heading": "How fresh does the poop need to be for an accurate sample?",
-            "answer": "<p>You will need a clean, fresh sample. It can sit at room temperature for up to 24 hours prior to mailing. If you are unable to mail the sample within 24 hours, keep the sample in the freezer until you are ready to send.<\/p>"
+            "answer": "<p>You will need a clean, fresh sample. It can sit at room temperature for up to 24 hours prior to mailing. If you are unable to mail the sample within 24 hours, keep the sample in the freezer until you are ready to send.</p>"
           }
         },
         "faq_wY7ptf": {
           "type": "faq",
           "settings": {
             "heading": "How do I collect a sample?",
-            "answer": "<p><strong>Step 1:<\/strong><br\/>Record the date the sample was collected, and pet’s name on the tube if you haven’t already<\/p><p><strong>Step 2:<br\/><\/strong>Collect a fresh stool sample (A “poop bag” and glove are included for your convenience)<\/p><p><strong>Step 3:<br\/><\/strong>Open the collection tube and use the spork attached to the top of the tube to collect the sample. (If you prefer, you can also use the wooden stick for collection).<\/p><p><strong>Step 3:<\/strong><br\/>Fill the tube to the red fill line on the collection tube<\/p><p><strong>Step 4:<\/strong><br\/>Tightly twist the cap on the collection tube; then put it inside the biohazard bag and seal<\/p><p><em><strong>Tip for Dogs:<\/strong><\/em> Take your dog for a walk and quickly scoop the poop. Try to keep the sample free from grass and debris if possible.<\/p><p><em><strong>Tip for Cats:<\/strong><\/em> Litter is not a problem when testing.<\/p><p><em><strong>Please Note:<\/strong><\/em><em> <\/em>The sample can sit at room temperature for up to 24 hours prior to mailing. If you are unable to mail within 24 hours, keep the sample in the freezer until you are ready to send.<\/p>"
+            "answer": "<p><strong>Step 1:</strong><br/>Record the date the sample was collected, and pet’s name on the tube if you haven’t already</p><p><strong>Step 2:<br/></strong>Collect a fresh stool sample (A “poop bag” and glove are included for your convenience)</p><p><strong>Step 3:<br/></strong>Open the collection tube and use the spork attached to the top of the tube to collect the sample. (If you prefer, you can also use the wooden stick for collection).</p><p><strong>Step 3:</strong><br/>Fill the tube to the red fill line on the collection tube</p><p><strong>Step 4:</strong><br/>Tightly twist the cap on the collection tube; then put it inside the biohazard bag and seal</p><p><em><strong>Tip for Dogs:</strong></em> Take your dog for a walk and quickly scoop the poop. Try to keep the sample free from grass and debris if possible.</p><p><em><strong>Tip for Cats:</strong></em> Litter is not a problem when testing.</p><p><em><strong>Please Note:</strong></em><em> </em>The sample can sit at room temperature for up to 24 hours prior to mailing. If you are unable to mail within 24 hours, keep the sample in the freezer until you are ready to send.</p>"
           }
         },
         "faq_xQHnrq": {
           "type": "faq",
           "settings": {
             "heading": "Does my pet’s poop need to be solid for collection?",
-            "answer": "<p>Your pet’s poop should be solid or semi-solid for best results. If you are able to pick up the poop with a poop bag, we will be able to run the test.<\/p>"
+            "answer": "<p>Your pet’s poop should be solid or semi-solid for best results. If you are able to pick up the poop with a poop bag, we will be able to run the test.</p>"
           }
         },
         "faq_Cq4B8d": {
           "type": "faq",
           "settings": {
             "heading": "Should my pet be fasting before collection of poop?",
-            "answer": "<p>Your pet doesn’t need to be fasting before the poop collection.<\/p>"
+            "answer": "<p>Your pet doesn’t need to be fasting before the poop collection.</p>"
           }
         }
       },
@@ -86,7 +96,8 @@
         "heading": "Collection",
         "seo_heading": "h2",
         "bgcolor": "primary",
-        "row_bgcolor": "secondary",
+        "row_bgcolor": "quaternary",
+        "row_answer_bgcolor": "#f0f6f4",
         "section_visibility": "always",
         "top_space_desktop": 30,
         "bottom_space_desktop": 30,
@@ -97,62 +108,79 @@
     "faq_section_6miKkz": {
       "type": "faq-section",
       "blocks": {
+        "faq_nQXBTU": {
+          "type": "faq",
+          "settings": {
+            "heading": "Refunds, Cancellation & Replacement Policy",
+            "answer": "<p>This only applies to tests purchased on the IPL website.  If you purchased your test through one of our partners, please contact them directly.</p><p><strong>Refunds:</strong></p><ul><li>If you ordered a test, and it has not shipped, you are eligable for a 100% refund.</li><li>If you have received your kit and it has benn within 30 days of purchase, you are eligable for a full refund,<br/>minus a $10 handling fee.</li><li>If it has been more than 30 days since your purchase, you are not eligable for a refund.</li><li>For any questions on the policy, please <a href=\"/pages/contact-1\" title=\"Contact\"><strong>contact us via our form</strong></a>.</li></ul><p><strong>Returns:</strong></p><ul><li>We do not accept a returned kit.  Please recycle any unused or unwanted kits.</li></ul><p><strong>Cancellations:</strong></p><ul><li>You can cancel an order prior to shipment.  Once a kit is shipped, it cannot be canceled. Please see the<br/>refund policy for any questions or <a href=\"/pages/contact-1\" title=\"Contact\"><strong>contact us via our form</strong></a>.<br/></li></ul>"
+          }
+        },
         "faq_AinwtU": {
           "type": "faq",
           "settings": {
             "heading": "How do I return my sample once it is collected?",
-            "answer": "<p><strong>Step 1:<\/strong><br\/>Once your sample is collected in the collection tube place the tube in the biohazard bag and close the bag.<\/p><p><strong>Step 2:<\/strong><br\/>Place the biohazard bag inside the white box.<\/p><p><strong>Step 3:<\/strong><br\/>Put your white box inside the white mailer<\/p><p><strong>Step 4<\/strong>:<br\/>Affix the USPS shipping label to the outside of the white mailer<\/p><p><strong>Step 5:<\/strong><br\/>Drop the white mailer (with USPS shipping label) in your mailbox or at your local USPS office<\/p>"
+            "answer": "<p><strong>Step 1:</strong><br/>Once your sample is collected in the collection tube place the tube in the biohazard bag and close the bag.</p><p><strong>Step 2:</strong><br/>Place the biohazard bag inside the white box.</p><p><strong>Step 3:</strong><br/>Put your white box inside the white mailer</p><p><strong>Step 4</strong>:<br/>Affix the USPS shipping label to the outside of the white mailer</p><p><strong>Step 5:</strong><br/>Drop the white mailer (with USPS shipping label) in your mailbox or at your local USPS office</p>"
           }
         },
         "faq_bYcNr4": {
           "type": "faq",
           "settings": {
             "heading": "Are you able to return the kit for a refund?",
-            "answer": "<p>If you have received your kit and it has been within 30 days, you are eligible for a full refund, minus a $10 handling fee.  If it has been more than 30 days since your purchase, you are not eligible for a refund.  Since we accept kits once they have shipped, please recycle your materials after requesting a refund.<\/p>"
+            "answer": "<p>If you have received your kit and it has been within 30 days, you are eligible for a full refund, minus a $10 handling fee.  If it has been more than 30 days since your purchase, you are not eligible for a refund.  Since we accept kits once they have shipped, please recycle your materials after requesting a refund.</p>"
           }
         },
         "faq_fK64KM": {
           "type": "faq",
           "settings": {
             "heading": "Can I cancel my order?",
-            "answer": "<p><a href=\"\/pages\/refund-return-policy\" target=\"_blank\" title=\"Refund & Return Policy\">Learn more here.<\/a><\/p>"
+            "answer": "<p><a href=\"/pages/refund-return-policy\" target=\"_blank\" title=\"Refund & Return Policy\">Learn more here.</a></p>"
           }
         },
         "faq_YH8Cqh": {
           "type": "faq",
           "settings": {
             "heading": "What if I cannot find my return label or my kit doesn’t contain one?",
-            "answer": "<p>If your kit does not contain or you cannot find your prepaid USPS shipping label, please use our <a href=\"\/pages\/contact-1\" target=\"_blank\" title=\"Contact\">contact form <\/a>and include your name, order number or unique ID.<\/p>"
+            "answer": "<p>If your kit does not contain or you cannot find your prepaid USPS shipping label, please use our <a href=\"/pages/contact-1\" target=\"_blank\" title=\"Contact\">contact form </a>and include your name, order number or unique ID.</p>"
           }
         },
         "faq_VHiwDA": {
           "type": "faq",
           "settings": {
             "heading": "Do temperatures during shipment effect my sample or results?",
-            "answer": "<p>Temperature shifts during shipping will not affect samples.<\/p>"
+            "answer": "<p>Temperature shifts during shipping will not affect samples.</p>"
           }
         },
         "faq_FrQMmN": {
           "type": "faq",
           "settings": {
             "heading": "How long from when I receive my kit, do I have to collect a sample and ship it in?",
-            "answer": "<p>All tests kits must be returned to the lab within 6 months of purchase.<\/p>"
+            "answer": "<p>All tests kits must be returned to the lab within 6 months of purchase.</p>"
+          }
+        },
+        "faq_yn3ben": {
+          "type": "faq",
+          "settings": {
+            "heading": "International Shipping Info:",
+            "answer": "<p>There is a $50 shipping fee (per item) for Canada. Each kit will come with instructions and all the contents to mail the sample back to the lab. If you have additional shipping questions, please reach out to <a href=\"mailto:info@innovativepetlab.com\">info@innovativepetlab.com</a></p>"
           }
         }
       },
       "block_order": [
+        "faq_nQXBTU",
         "faq_AinwtU",
         "faq_bYcNr4",
         "faq_fK64KM",
         "faq_YH8Cqh",
         "faq_VHiwDA",
-        "faq_FrQMmN"
+        "faq_FrQMmN",
+        "faq_yn3ben"
       ],
       "settings": {
         "heading": "Shipping",
         "seo_heading": "h2",
         "bgcolor": "primary",
-        "row_bgcolor": "secondary",
+        "row_bgcolor": "quaternary",
+        "row_answer_bgcolor": "#f0f6f4",
         "section_visibility": "always",
         "top_space_desktop": 30,
         "bottom_space_desktop": 30,
@@ -167,14 +195,14 @@
           "type": "faq",
           "settings": {
             "heading": "What if I lost my unique ID?",
-            "answer": "<p>If you lose your unique ID, please <a href=\"\/pages\/contact-1\" target=\"_blank\" title=\"Contact\">contact us via our form.<\/a> Please include your name and order number.<\/p>"
+            "answer": "<p>If you lose your unique ID, please <a href=\"/pages/contact-1\" target=\"_blank\" title=\"Contact\">contact us via our form.</a> Please include your name and order number.</p>"
           }
         },
         "faq_rQCDeP": {
           "type": "faq",
           "settings": {
             "heading": "How do I register my kit?",
-            "answer": "<p><strong>Step 1:<\/strong><br\/>Locate your unique ID card (inside your kit)<\/p><p><strong>Step 2:<\/strong><br\/>Go to innovativepetlab.com\/register-a-kit\/<\/p><p><strong>Step 3:<\/strong><br\/>Follow the step by step instructions to enter your information<\/p>"
+            "answer": "<p><strong>Step 1:</strong><br/>Locate your unique ID card (inside your kit)</p><p><strong>Step 2:</strong><br/>Go to <a href=\"https://innovativepetlab.com/register-a-kit/\" target=\"_blank\" title=\"Kit registration page\">kit registration page</a></p><p><strong>Step 3:</strong><br/>Follow the step by step instructions to enter your information</p>"
           }
         },
         "faq_WtLVz9": {
@@ -182,14 +210,14 @@
           "disabled": true,
           "settings": {
             "heading": "Where can I find my unique ID?",
-            "answer": "<p>NEED ANSWER WITHOUT IMAGE<\/p>"
+            "answer": "<p>NEED ANSWER WITHOUT IMAGE</p>"
           }
         },
         "faq_THndaM": {
           "type": "faq",
           "settings": {
             "heading": "Do I need to activate my account before mailing it back to the lab?",
-            "answer": "<p>Yes, you need to activate and register your kit before you mail it back to the lab. Having your kit registered online is our way of tracking your pet’s poop sample and getting results back to you via email.<\/p>"
+            "answer": "<p>Yes, you need to activate and register your kit before you mail it back to the lab. Having your kit registered online is our way of tracking your pet’s poop sample and getting results back to you via email.</p>"
           }
         }
       },
@@ -203,7 +231,8 @@
         "heading": "Registration",
         "seo_heading": "h2",
         "bgcolor": "primary",
-        "row_bgcolor": "secondary",
+        "row_bgcolor": "quaternary",
+        "row_answer_bgcolor": "#f0f6f4",
         "section_visibility": "always",
         "top_space_desktop": 30,
         "bottom_space_desktop": 30,
@@ -218,35 +247,35 @@
           "type": "faq",
           "settings": {
             "heading": "If my dog is taking a supplement or medication, should that stop before taking the test?",
-            "answer": "<p>You should leave your dog on supplements and\/or medications. Continue what you’ve been doing and don’t make changes prior to the test.<\/p>"
+            "answer": "<p>You should leave your dog on supplements and/or medications. Continue what you’ve been doing and don’t make changes prior to the test.</p>"
           }
         },
         "faq_mTyMry": {
           "type": "faq",
           "settings": {
             "heading": "Can I send these results to a veterinarian?",
-            "answer": "<p>You can absolutely send them to your pet care provider!<\/p>"
+            "answer": "<p>You can absolutely send them to your pet care provider!</p>"
           }
         },
         "faq_B7z3zg": {
           "type": "faq",
           "settings": {
             "heading": "What if I have further questions about my test results?",
-            "answer": "<p>Please send your questions <a href=\"\/pages\/contact-1\" target=\"_blank\" title=\"Contact\">via our contact form<\/a> and we’d be happy to answer your questions<\/p>"
+            "answer": "<p>Please send your questions <a href=\"/pages/contact-1\" target=\"_blank\" title=\"Contact\">via our contact form</a> and we’d be happy to answer your questions</p>"
           }
         },
         "faq_CNFCWL": {
           "type": "faq",
           "settings": {
             "heading": "Is a vet visit required to take this test?",
-            "answer": "<p>A vet visit is not required to take this test. Part of our mission at IPL is to make pet health care accessible at home. All the items you need to take this test are included in your kit.<\/p>"
+            "answer": "<p>A vet visit is not required to take this test. Part of our mission at IPL is to make pet health care accessible at home. All the items you need to take this test are included in your kit.</p>"
           }
         },
         "faq_KMCqcY": {
           "type": "faq",
           "settings": {
             "heading": "What if my pet’s results are high or out of range?",
-            "answer": "<p>Your test results come with recommendations. However, IPL always advises and encourages you to work with your veterinarian.<\/p>"
+            "answer": "<p>Your test results come with recommendations. However, IPL always advises and encourages you to work with your veterinarian.</p>"
           }
         }
       },
@@ -261,7 +290,8 @@
         "heading": "Clinical",
         "seo_heading": "h2",
         "bgcolor": "primary",
-        "row_bgcolor": "secondary",
+        "row_bgcolor": "quaternary",
+        "row_answer_bgcolor": "#f0f6f4",
         "section_visibility": "always",
         "top_space_desktop": 30,
         "bottom_space_desktop": 30,
@@ -276,28 +306,28 @@
           "type": "faq",
           "settings": {
             "heading": "How long will it take to get my pet’s results?",
-            "answer": "<p>Approximately 10-14 days. <\/p><p>Once your sample is picked up by USPS it should arrive at our Lab in Atlanta in 1-2 business days. At the lab we have a team that will receive your pet’s sample and immediately put it in our freezer (to preserve the sample). Our Lab Director checks in samples every few days (this is when you will get an email telling you your pet’s sample has arrived). Now the clock starts ticking - our team is working diligently to run your pet’s sample and you will be notified by email when your pet’s results are ready. If you have any question about the process please contact us at <a href=\"mailto:info@innovativepetlab.com\"><span style=\"text-decoration:underline\">info@innovativepetlab.com<\/span><\/a><\/p>"
+            "answer": "<p>Approximately 10-14 days. </p><p>Once your sample is picked up by USPS it should arrive at our Lab in Atlanta in 1-2 business days. At the lab we have a team that will receive your pet’s sample and immediately put it in our freezer (to preserve the sample). Our Lab Director checks in samples every few days (this is when you will get an email telling you your pet’s sample has arrived). Now the clock starts ticking - our team is working diligently to run your pet’s sample and you will be notified by email when your pet’s results are ready. If you have any question about the process please contact us at <a href=\"mailto:info@innovativepetlab.com\"><span style=\"text-decoration:underline\">info@innovativepetlab.com</span></a></p>"
           }
         },
         "faq_NEk7mU": {
           "type": "faq",
           "settings": {
             "heading": "Where do I find my results?",
-            "answer": "<p>Your results will be emailed to you. You can also log in to your IPL account (set up at registration) to access your results.<\/p>"
+            "answer": "<p>Your results will be emailed to you. You can also log in to your IPL account (set up at registration) to access your results.</p>"
           }
         },
         "faq_hVmd49": {
           "type": "faq",
           "settings": {
             "heading": "Normal results, what’s next?",
-            "answer": "<p>Your pet is doing well, consider rechecking yearly for optimal health.<\/p>"
+            "answer": "<p>Your pet is doing well, consider rechecking yearly for optimal health.</p>"
           }
         },
         "faq_76ngFW": {
           "type": "faq",
           "settings": {
             "heading": "Abnormal results, what’s next?",
-            "answer": "<p>Your test results come with recommendations and next steps. However, IPL always advises and encourages you to work with your veterinarian.<\/p>"
+            "answer": "<p>Your test results come with recommendations and next steps. However, IPL always advises and encourages you to work with your veterinarian.</p>"
           }
         }
       },
@@ -311,7 +341,8 @@
         "heading": "Results",
         "seo_heading": "h2",
         "bgcolor": "primary",
-        "row_bgcolor": "secondary",
+        "row_bgcolor": "quaternary",
+        "row_answer_bgcolor": "#f0f6f4",
         "section_visibility": "always",
         "top_space_desktop": 30,
         "bottom_space_desktop": 30,
@@ -326,15 +357,15 @@
           "type": "faq",
           "settings": {
             "heading": "How do I create an account?",
-            "answer": "<p><strong>Step 1:<\/strong><br\/>Go to <a href=\"http:\/\/www.innovativepetlab.com\/\">innovativepetlab.com<\/a><\/p><p><strong>Step 2:<\/strong><br\/>Click the “Sign In” link<\/p><p><strong>Step 3:<\/strong><br\/>Follow the directions for creating an account<\/p>"
+            "answer": "<p><strong>Step 1:</strong><br/>Go to <a href=\"http://www.innovativepetlab.com/\">innovativepetlab.com</a></p><p><strong>Step 2:</strong><br/>Click the “Sign In” link</p><p><strong>Step 3:</strong><br/>Follow the directions for creating an account</p>"
           }
         },
         "faq_ycFNta": {
           "type": "faq",
           "disabled": true,
           "settings": {
-            "heading": "What if I forgot\/lost my password?",
-            "answer": "<p><strong>Step 1:<\/strong><br\/>Go to <a href=\"https:\/\/innovativepetlab.com\/\">innovativepetlab.com<\/a><\/p><p><strong>Step 2:<\/strong><br\/>Click on the “Sign In” link<\/p><p><strong>Step 3:<\/strong><br\/>Click the “Lost your password?” link<\/p><p><strong>Step 4:<\/strong><br\/>Check your inbox for an email on how to reset your password<\/p>"
+            "heading": "What if I forgot/lost my password?",
+            "answer": "<p><strong>Step 1:</strong><br/>Go to <a href=\"https://innovativepetlab.com/\">innovativepetlab.com</a></p><p><strong>Step 2:</strong><br/>Click on the “Sign In” link</p><p><strong>Step 3:</strong><br/>Click the “Lost your password?” link</p><p><strong>Step 4:</strong><br/>Check your inbox for an email on how to reset your password</p>"
           }
         },
         "faq_6Y6nkL": {
@@ -342,7 +373,7 @@
           "disabled": true,
           "settings": {
             "heading": "Can I delete my account?",
-            "answer": "<p>coming soon…<\/p>"
+            "answer": "<p>coming soon…</p>"
           }
         }
       },
@@ -355,7 +386,8 @@
         "heading": "Account",
         "seo_heading": "h2",
         "bgcolor": "primary",
-        "row_bgcolor": "secondary",
+        "row_bgcolor": "quaternary",
+        "row_answer_bgcolor": "#f0f6f4",
         "section_visibility": "always",
         "top_space_desktop": 30,
         "bottom_space_desktop": 30,
@@ -370,14 +402,14 @@
           "type": "faq",
           "settings": {
             "heading": "I am interested in Partnering with IPL, who can I contact?",
-            "answer": "<p>If you are interested in partnering with IPL, please reach out to <a href=\"mailto:parnterships@innovativepetlab.com\"><span style=\"text-decoration:underline\">parnterships@innovativepetlab.com<\/span><\/a><\/p>"
+            "answer": "<p>If you are interested in partnering with IPL, please reach out to <a href=\"mailto:parnterships@innovativepetlab.com\"><span style=\"text-decoration:underline\">parnterships@innovativepetlab.com</span></a></p>"
           }
         },
         "faq_ViH7xm": {
           "type": "faq",
           "settings": {
             "heading": "I am part of a Shelter, Rescue or Non Profit who can I contact?",
-            "answer": "<p>Please reach out to <a href=\"mailto:parnterships@innovativepetlab.com\"><span style=\"text-decoration:underline\">parnterships@innovativepetlab.com<\/span><\/a><\/p>"
+            "answer": "<p>Please reach out to <a href=\"mailto:parnterships@innovativepetlab.com\"><span style=\"text-decoration:underline\">parnterships@innovativepetlab.com</span></a></p>"
           }
         }
       },
@@ -389,7 +421,8 @@
         "heading": "Partnerships",
         "seo_heading": "h2",
         "bgcolor": "primary",
-        "row_bgcolor": "secondary",
+        "row_bgcolor": "quaternary",
+        "row_answer_bgcolor": "#f0f6f4",
         "section_visibility": "always",
         "top_space_desktop": 30,
         "bottom_space_desktop": 30,

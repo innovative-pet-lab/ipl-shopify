@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main-page": {
@@ -10,28 +19,37 @@
         "textcolor": "#ffffff"
       }
     },
-    "rich_text_z8qcGE": {
-      "type": "rich-text",
-      "blocks": {
-        "richtext_pcpLit": {
-          "type": "richtext",
-          "settings": {
-            "heading": "",
-            "seo_heading": "h2",
-            "content": "<p>Your privacy is important to us. It is Innovative Pet Lab’s policy to respect your privacy regarding any information we may collect from you across our website, <a href=\"http:\/\/innovativepetlab.com\/\" target=\"_blank\">www.innovativepetlab.com<\/a>, and other sites we own and operate.<\/p><p>We only ask for personal information when we truly need it to provide a service to you. We collect it by fair and lawful means, with your knowledge and consent. We also let you know why we’re collecting it and how it will be used.<\/p><p>We only retain collected information for as long as necessary to provide you with your requested service. What data we store, we’ll protect within commercially acceptable means to prevent loss and theft, as well as unauthorized access, disclosure, copying, use or modification.<\/p><p>We don’t share any personally identifying information publicly or with third-parties, except when required to by law.<\/p><p>Our website may link to external sites that are not operated by us. Please be aware that we have no control over the content and practices of these sites, and cannot accept responsibility or liability for their respective privacy policies.<\/p><p>You are free to refuse our request for your personal information, with the understanding that we may be unable to provide you with some of your desired services.<\/p><p>Your continued use of our website will be regarded as acceptance of our practices around privacy and personal information. If you have any questions about how we handle user data and personal information, feel free to contact us.<\/p><p>This policy is effective as of November 01, 2021.<\/p>"
-          }
-        }
-      },
-      "block_order": [
-        "richtext_pcpLit"
+    "custom_liquid_rGCx4r": {
+      "type": "custom-liquid",
+      "custom_css": [
+        "h2 {color: #1c1d31; font-size: 48px; font-weight: 600;}"
       ],
+      "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "content_width": "container sm-container",
-        "content_alignment": "left",
+        "custom_liquid": "<h2>Privacy Policy</h2>",
+        "content_alignment": "center",
         "bgcolor": "quaternary",
         "section_visibility": "always",
         "top_space_desktop": 50,
-        "bottom_space_desktop": 0,
+        "bottom_space_desktop": 30,
+        "top_space_mobile": 30,
+        "bottom_space_mobile": 30
+      }
+    },
+    "custom_liquid_riL9kf": {
+      "type": "custom-liquid",
+      "custom_css": [
+        "p ul li {color: #333333; margin: 0 30px; font-size: 24px; line-height: 32px;}",
+        "@media screen and (max-width: 540px) {p {text-align: center; }}"
+      ],
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<p><strong> Effective Date: April 16, 2025 </strong></p>\n\n<p>\nAt Innovative Pet Lab (\"IPL\", \"we\", \"us\", or \"our\"), we are committed to protecting your privacy. This Privacy Policy explains how we collect, use, store, and share information—including data related to your pet—when you use our website, services, and products.\n</p>\n\n<p>\nBy using our services, you agree to the collection and use of information in accordance with this policy.\n</p>\n\n<hr />\n<br />\n\n<p>\n<strong>\nWhat We Collect\n</strong>\n</p>\n\n<p>We may collect the following information:</p>\n\n<ul>\n  <li>Your name, email, shipping address, and payment details</li>\n  <li>Your pet’s biological sample(s) and test results</li>\n  <li>Information about your pet (name, species, breed, age, symptoms, behavior, etc.)</li>\n  <li>Technical and usage data when you use our site (cookies, browser type, etc.)</li>\n</ul>\n\n<br />\n<hr />\n<br />\n\n<p>\n<strong>\nHow We Use Pet Data\n</strong>\n</p>\n\n<p>We use your pet’s data to:</p>\n\n<ul>\n  <li>Analyze samples and generate test results</li>\n  <li>Deliver personalized health insights and recommendations</li>\n  <li>Improve the accuracy, effectiveness, and science behind our testing</li>\n  <li>Develop new products and services</li>\n  <li>Communicate with you about your order, account, or pet health</li>\n</ul>\n\n<br />\n<hr />\n<br />\n\n<p>\n<strong>\nData Sharing Policy\n</strong>\n</p>\n\n<p>We may <strong>share your pet’s data, including test results, trends, or biological insights</strong>, under the following circumstances:</p>\n\n<ul>\n  <li><strong>With authorized veterinary professionals, wellness practitioners, or consultants</strong> you work with through IPL.</li>\n  <li><strong>With research partners</strong> for scientific, clinical, or product development purposes. Any shared data will be de-identified unless otherwise agreed.</li>\n  <li><strong>With third parties if required by law or regulation.</strong></li>\n  <li><strong>At IPL’s discretion</strong>, if we determine that sharing your pet's data is in the best interest of improving services, supporting research, or contributing to public or veterinary knowledge.</li>\n</ul>\n\n<br />\n\n<ul>\n  <li style=\"list-style-type: none\">\n    <strong>Note:</strong> While we respect your privacy, <strong>by using our\n    services, you consent to IPL sharing your pet’s data when we deem it\n    appropriate</strong>, including with partners, researchers, or for internal use.\n  </li>\n</ul>\n\n<br />\n<hr />\n<br />\n\n<p>\n<strong>\nOwnership and Rights\n</strong>\n</p>\n\n<p>\nYou retain ownership of your pet’s physical sample. IPL retains ownership of all data derived from the analysis of that sample and any intellectual property developed using such data.\n</p>\n\n<hr />\n<br />\n\n<p>\n<strong>\nYour Rights\n</strong>\n</p>\n\n<p>You may:</p>\n\n<ul>\n  <li>Request access to your data</li>\n  <li>Request deletion of your personal data (excluding test results, which we may retain for clinical or operational use)</li>\n  <li>Withdraw consent for marketing communications at any time</li>\n</ul>\n\n<br />\n\n<p>To make a request, email: <strong>info@innovativepetlab.com</strong></p>\n\n<hr />\n<br />\n\n<p>\n<strong>\nData Security\n</strong>\n</p>\n\n<p>We use secure servers and industry-standard encryption to protect your data. However, no method is 100% secure and we cannot guarantee absolute protection.</p>\n\n<hr />\n<br />\n\n<p>\n<strong>\nChildren's Privacy\n</strong>\n</p>\n\n<p>Our services are not intended for use by individuals under 18. We do not knowingly collect personal information from children.</p>\n\n<hr />\n<br />\n\n<p>\n<strong>\nPolicy Updates\n</strong>\n</p>\n\n<p>We may update this Privacy Policy occasionally to reflect changes in regulations, technology, or our practices. The latest version will always be available on our website.</p>\n\n<hr />\n<br />\n\n<p>\n<strong>\nContact Us\n</strong>\n</p>\n\n<p>For questions about this policy or your data, contact:\n<br />\n<strong>info@innovativepetlab.com</strong>\n<br />\nor\n<br />\n<strong>Innovative Pet Lab</strong>\n<br />\n3941 Holcomb Bridge, Suite 301\n<br />\nNorcross, GA 30092\n</p>",
+        "content_alignment": "left",
+        "bgcolor": "quaternary",
+        "section_visibility": "always",
+        "top_space_desktop": 30,
+        "bottom_space_desktop": 30,
         "top_space_mobile": 30,
         "bottom_space_mobile": 30
       }
@@ -39,6 +57,7 @@
   },
   "order": [
     "main-page",
-    "rich_text_z8qcGE"
+    "custom_liquid_rGCx4r",
+    "custom_liquid_riL9kf"
   ]
 }

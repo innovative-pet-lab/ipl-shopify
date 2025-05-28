@@ -90,6 +90,9 @@
         
                 {% if collection.products_count > 0 and productData == blank %}
                     {% for product in collection.products limit: 10 %}
+                    {%- comment %}<locksmith:e603>{% endcomment -%}
+                      {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: product, subject_parent: collection, variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% else %}{% continue %}{% endif -%}
+                    {%- comment %}</locksmith:e603>{% endcomment -%}
                     {%- liquid
                         assign productFormId = 'product-form-' | append: block.id | append: product.id
                         render 'product-grid', product: product, productFormId: productFormId, productClasses: mainClass, hideHoverImage: true, hide_options: true, hideRelated: fals, hideQuickView: true, producttags:true

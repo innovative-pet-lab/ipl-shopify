@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main-cart": {
@@ -70,10 +79,33 @@
         "top_space_mobile": 30,
         "bottom_space_mobile": 30
       }
+    },
+    "17468871990702ee3a": {
+      "type": "apps",
+      "blocks": {
+        "bss_b2b_solution_dc_form_mTWjyj": {
+          "type": "shopify://apps/bss-b2b-solution/blocks/dc-form/451233f2-9631-4c49-8b6f-057e4ebcde7f",
+          "settings": {
+            "error_color": "#FF0000",
+            "success_color": "#00FF00"
+          }
+        }
+      },
+      "block_order": [
+        "bss_b2b_solution_dc_form_mTWjyj"
+      ],
+      "settings": {
+        "app_id": "",
+        "top_space_desktop": 30,
+        "bottom_space_desktop": 30,
+        "top_space_mobile": 30,
+        "bottom_space_mobile": 30
+      }
     }
   },
   "order": [
     "main-cart",
-    "16467232233a9d5e13"
+    "16467232233a9d5e13",
+    "17468871990702ee3a"
   ]
 }

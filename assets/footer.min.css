@@ -33,14 +33,27 @@ footer {
     font-family: var(--font-family);
     font-weight: bold;
 }
+    
+.footer-menu-list ul {
+    padding-left: 0;
+}
 
 .footer-menu-list ul li a {
     display: inline-block;
     margin-bottom: 10px;
     transition: padding .3s;
-    position: relative
+    position: relative;
+    color: #99D5E0!important;
+    font-size: 20px!important;
 }
-
+@media (max-width: 768px) {
+    .footer-menu-list ul li a {
+        font-size: 22px!important;
+    }
+    .footer-text-item.d-block p {
+        text-align: left!important;
+    }
+}
 .yv-newsletter-text {
     max-width: 33%;
     flex: 0 0 33%
@@ -250,7 +263,8 @@ footer select:focus-visible {
 }
 @media screen and (min-width:992px) {
     footer .footer-menu-accordion ul li a:hover {
-        padding-left: 15px
+        padding-left: 0;
+        text-decoration: underline;
     }
     footer .footer-menu-accordion ul li a:before {
         content: "";
@@ -258,7 +272,8 @@ footer select:focus-visible {
         left: 0;
         top: 50%;
         width: 0;
-        height: 1px
+        height: 1px;
+        display: none;
     }
     footer .footer-menu-accordion ul li a:hover:before {
         width: 10px
@@ -285,7 +300,7 @@ footer select:focus-visible {
 }
 @media screen and (max-width:1199px) {
     .footer-menu-head {
-        font-size: 16px
+        font-size: 22px
     }
 }
 @media screen and (max-width:991px) {
@@ -330,7 +345,7 @@ footer select:focus-visible {
     .footer-menu-head {
         position: relative;
         margin-bottom: 0;
-      padding-bottom: 12px;
+        padding-bottom: 12px;
     }
     .footer-menu-accordion .footer-menu-head:after,
     .footer-menu-accordion .footer-menu-head:before {

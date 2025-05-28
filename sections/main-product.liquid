@@ -21,8 +21,8 @@
       {% endunless %}
     }
   {% endif %}
-    {% assign colorBrightness = settings.color_body_bg | color_brightness %}
-    {%- if colorBrightness < 130 -%}
+    {% assign color_brightness = settings.color_body_bg | color_brightness %}
+    {%- if color_brightness < 130 -%}
       #shopify-section-{{ section.id }}.product-section select{
         background: url({{ 'select-arrow-white.png' | asset_url }}) no-repeat 97% 50% /10px transparent;
       }
@@ -43,6 +43,76 @@
       background:url({{ 'lang-dropdown-arrow.svg' | asset_url }}) no-repeat 97% 50% /10px var(--primaryAlternateBg);
     }
     {%- endif -%}
+
+/* custom styling update */
+.breadcrumb-list, .yv-blog-tags {
+  display: none;
+}
+.single__product {
+  margin-top: 1rem;
+  background-color: #fafafa;
+}
+@media (max-width: 500px) {
+  .single__product {
+    margin-top: 0;
+  }
+}
+.single__flex {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 7rem;
+  color: #03B0A7;
+  font-weight: 700;
+}
+.above-container {
+  margin-bottom: 1rem;
+  padding-left: 1rem;
+}
+.single__product .product-gallery__viewer {
+  background-color: white;
+  min-height: 500px;
+  max-height: 500px;
+  min-width: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.single__product .product-gallery__viewer .product-gallery__image-wrapper {
+  border: none;
+}
+.shopify-section-main-header header {
+  background-color: transparent;
+}
+.shopify-section-main-header header .top-header {
+  box-shadow: none;
+  min-height: 80px;
+}
+@media (max-width: 750px) {
+  .shopify-section-main-header header .top-header {
+    min-height: 50px;
+  }
+}
+.shopify-section-main-header.sticky-header-main header {
+  background-color: #ffffff;
+  box-shadow: 0 2px 2px #0000000d;
+  min-height: 80px;
+}
+@media (max-width: 750px) {
+  .shopify-section-main-header.sticky-header-main header {
+    min-height: 50px;
+  }
+}
+.shopify-section-main-header.sticky-header-main header .container-fluid {
+  margin-top: 0;
+  padding-top: 0;
+}
+@media (min-width: 750px) {
+  .sticky-header .header__heading-link img {
+      max-width: 60px;
+  }
+}
 </style>
 <div
   id=""
@@ -52,22 +122,23 @@
     class="yv_product_content_section {% if settings.layout_style == 'rounded'%}product-layout-rounded{% endif %}"
     style="--layoutRadius:{% if settings.layout_style == 'rounded' %}10px{% else %}0px{% endif %}"
   >
+    <div class="above-container">
+      <a href="javascript:void(0);" class="single__flex" onclick="goBack()">
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M30 15.9997C30 16.2649 29.8946 16.5193 29.7071 16.7068C29.5196 16.8944 29.2652 16.9997 29 16.9997L5.414 16.9997L11.708 23.2917C11.8958 23.4795 12.0013 23.7342 12.0013 23.9997C12.0013 24.2653 11.8958 24.5199 11.708 24.7077C11.5202 24.8955 11.2655 25.001 11 25.001C10.7344 25.001 10.4798 24.8955 10.292 24.7077L2.292 16.7077C2.19887 16.6148 2.12499 16.5045 2.07457 16.383C2.02416 16.2615 1.99821 16.1312 1.99821 15.9997C1.99821 15.8682 2.02416 15.7379 2.07457 15.6164C2.12499 15.495 2.19887 15.3846 2.292 15.2917L10.292 7.29171C10.4798 7.10394 10.7344 6.99845 11 6.99845C11.2656 6.99845 11.5202 7.10394 11.708 7.29171C11.8958 7.47948 12.0013 7.73416 12.0013 7.99971C12.0013 8.26526 11.8958 8.51994 11.708 8.70771L5.414 14.9997L29 14.9997C29.2652 14.9997 29.5196 15.1051 29.7071 15.2926C29.8946 15.4801 30 15.7345 30 15.9997Z" fill="#03B0A7"/>
+        </svg>
+        Back
+      </a>
+      
+    </div>
     <div class="row no-gutters">
-      <div class="col-12 col-sm-12 col-md-6{% if section.settings.gallery_style == 'slider' %} col-lg-8 yv-product-slider-wrapper{% else %} col-lg-7{% endif %}">
+      <div class="col-12 col-sm-12 col-md-6{% if section.settings.gallery_style == 'slider' %} col-lg-8 yv-product-slider-wrapper{% else %} col-lg-6{% endif %}">
         <a class="skip-to-content-link button yv-visually-hidden focus-inside" href="#ProductData-{{ section.id }}">
           {{ 'accessibility.skip_to_product_info' | t }}
         </a>
-        {%- liquid
-          if section.settings.gallery_style == 'slider'
-            render 'product-page-images-slider', section: section, product: product
-          elsif section.settings.gallery_style == 'stacked'
-            render 'product-page-images-stacked', section: section, product: product
-          elsif section.settings.gallery_style == 'gallery'
-            render 'product-page-images-gallery', section: section, product: product
-          endif
-        -%}
+          {% render 'product-page-images-thumbs', section: section, product: product %}
       </div>
-      <div class="col-12 col-sm-12 col-md-6{% if section.settings.gallery_style == 'slider' %} col-lg-4{% else %} col-lg-5{% endif %}">
+      <div class="col-12 col-sm-12 col-md-6{% if section.settings.gallery_style == 'slider' %} col-lg-4{% else %} col-lg-6{% endif %}">
         <div id="ProductData-{{ section.id }}" class="sticky-item content-divider-mobile-{{ section.settings.content_divider_mobile}}">
           {%- render 'product-form',
             product: product,
@@ -137,6 +208,15 @@
     }
     window.localStorage.setItem(cookieName, JSON.stringify(rvProducts.slice(0, 14)));
   })
+</script>
+<script>
+  function goBack() {
+      if (document.referrer) {
+          window.history.back();
+      } else {
+          window.location.href = '/';
+      }
+  } 
 </script>
 
 {% schema %}

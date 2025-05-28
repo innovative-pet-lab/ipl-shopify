@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main-page": {
@@ -12,6 +21,7 @@
     },
     "main": {
       "type": "request-vet-page-template",
+      "disabled": true,
       "settings": {
         "contact_heading": "Support",
         "seo_heading_service": "h3",
@@ -28,11 +38,12 @@
     },
     "d4990aa8-00b1-4fd3-bf9d-3832c1bd440a": {
       "type": "map",
+      "disabled": true,
       "settings": {
         "full_width": true,
         "mapaddress": "",
         "map_style": "roadmap",
-        "image": "shopify:\/\/shop_images\/Contact_Page_Image.jpg",
+        "image": "shopify://shop_images/Contact_Page_Image.jpg",
         "content_position": "middle-left",
         "desktop_height": "500px",
         "m_content_position": "overlay",
@@ -58,6 +69,37 @@
         "bgcolor": "primary",
         "custom_color": ""
       }
+    },
+    "17484222778aa9f6d2": {
+      "type": "apps",
+      "blocks": {
+        "bss_b2b_solution_form_TyhzU8": {
+          "type": "shopify://apps/bss-b2b-solution/blocks/form/451233f2-9631-4c49-8b6f-057e4ebcde7f",
+          "settings": {
+            "form_id": "30012"
+          }
+        }
+      },
+      "block_order": [
+        "bss_b2b_solution_form_TyhzU8"
+      ],
+      "settings": {
+        "app_id": "",
+        "top_space_desktop": 30,
+        "bottom_space_desktop": 30,
+        "top_space_mobile": 30,
+        "bottom_space_mobile": 30
+      }
+    },
+    "spacer_pD9CaM": {
+      "type": "spacer",
+      "name": "t:sections.spacer.presets.name",
+      "settings": {
+        "height_desktop": 89,
+        "height_mobile": 1,
+        "bgcolor": "primary",
+        "custom_color": ""
+      }
     }
   },
   "order": [
@@ -65,6 +107,8 @@
     "main",
     "d4990aa8-00b1-4fd3-bf9d-3832c1bd440a",
     "ffdeadde-5060-4cc0-bf3c-1351ff984a59",
-    "spacer_fDFx8m"
+    "spacer_fDFx8m",
+    "17484222778aa9f6d2",
+    "spacer_pD9CaM"
   ]
 }

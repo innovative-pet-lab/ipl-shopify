@@ -3,6 +3,19 @@
   assign productMetaStatus = false
   assign productMeta = ''
   for block in productMetaBlock
+    comment
+      <locksmith:555e> Code added automatically by the Locksmith app. Do not modify or remove.
+    endcomment
+    capture var
+      render 'locksmith-variables', scope: 'subject', subject: block, variable: 'transparent'
+    endcapture
+    if var == "true"
+    else
+      continue
+    endif
+    comment
+      </locksmith:555e> End Locksmith code block.
+    endcomment
     if block.settings.show_as_tab and block.settings.heading != blank
       if block.settings.show_availability or block.settings.show_sku or block.settings.show_vendor or block.settings.show_type or block.settings.show_collections or block.settings.show_tags
         assign productMeta = block

@@ -1,4 +1,3 @@
-
 {%- if predictive_search.performed -%}
     {% if settings.enable_result_suggestions and predictive_search.resources.queries.size > 0 %}
         <div class="searchbar-suggestion">
@@ -17,6 +16,9 @@
                 <h6 class="searchbar-list-head text-small">{{ 'templates.search.product' | t }}</h6>
                 <ul class="list-unstyled searchbar-product-list searchbar-list">
                     {%- for product in predictive_search.resources.products limit: 7 -%}
+                        {%- comment %}<locksmith:3b4e>{% endcomment -%}
+                          {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: product, subject_parent: predictive_search.resources, variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% else %}{% continue %}{% endif -%}
+                        {%- comment %}</locksmith:3b4e>{% endcomment -%}
                         <li class="searchbar-item searchbar-product-item">
                                 <div class="searchbar-product-card">
                                     <a href="{{ product.url }}" class="searchbar-product-img" aria-label="{{ product.title }}">

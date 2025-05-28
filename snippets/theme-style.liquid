@@ -29,6 +29,8 @@
 
 {%- render 'style-variables' -%}
 
+{{ 'custom.css' | asset_url | stylesheet_tag }}
+
 <link rel="preload" as="style" href="{{ 'common.min.css' | asset_url }}">
 
 <link rel="preload" as="style" href="{{ 'customer.css' | asset_url }}">
@@ -48,6 +50,7 @@
 {% if settings.enable_animation %}
   <link rel="preload" as="style" href="{{ 'aos.css' | asset_url }}">
 {% endif %}
+
 
 {{ 'flickity.min.css' | asset_url | stylesheet_tag }}
 

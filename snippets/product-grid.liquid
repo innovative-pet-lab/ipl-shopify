@@ -234,11 +234,11 @@
             {%- if settings.show_atc -%}
               {%- if product.has_only_default_variant or product.variants.size == 1 -%}
                 {%- if product.available -%}
-                  {%- assign formID = productFormId | append: '-' | append: product.id -%}
+                  {%- assign form_id = productFormId | append: '-' | append: product.id -%}
                   <li class="yv-product-grid-form">
                     {%- form 'product',
                       product,
-                      id: formID,
+                      id: form_id,
                       data-product-form: '',
                       data-product-handle: product.handle,
                       data-enable-history-state: 'true'
@@ -278,33 +278,33 @@
 
         {%- unless hideRelated or settings.show_similar == false -%} 
         {%- liquid
-          assign productUrl = routes.search_url | append : "?section_id=similar-products&product=" | append: product.handle | append: "&q="
+          assign product_url = routes.search_url | append : "?section_id=similar-products&product=" | append: product.handle | append: "&q="
           assign nosimilar = false
           if settings.similar_condition == "vendor" or settings.similar_condition == "both"
             if product.vendor != blank
-              assign productUrl = productUrl | append :"vendor:" | append: product.vendor
+              assign product_url = product_url | append :"vendor:" | append: product.vendor
               assign nosimilar = true
             endif
           endif
           if settings.similar_condition == "both"
             if product.type != blank and product.vendor != blank
-            assign productUrl = productUrl | append :" AND "
+            assign product_url = product_url | append :" AND "
           endif
          endif
           if settings.similar_condition == "type" or settings.similar_condition == "both"
             if product.type != blank
-            assign productUrl = productUrl | append :"product_type:" | append: product.type
+            assign product_url = product_url | append :"product_type:" | append: product.type
             assign nosimilar = true
           endif
         endif
-        assign productUrl = productUrl | append :"&nosimilar=" | append:nosimilar
+        assign product_url = product_url | append :"&nosimilar=" | append:nosimilar
         -%}
           {%- comment -%} theme-check-enable LiquidTag{%- endcomment -%}
           <a
             href="{{ product.url }}"
             class="similar_options {% unless settings.show_similar_text == false %}similar-hover-text{% endunless %} no-js-hidden"
             aria-label="{{ 'products.product.similar_products' | t }}"
-            data-url="{{ productUrl }}"
+            data-url="{{ product_url }}"
             tabindex="-1"
           >
             <span class="vs-icon text-{{ settings.show_similar_text }}">
@@ -366,18 +366,18 @@
       {% assign custom_tags = settings.custom_tag | split: ',' %}
       {% if settings.custom_tag_label != blank %}
         {% liquid
-          assign tagStatus = false
+          assign tag_status = false
           for tag in custom_tags
-            assign customTag = tag | downcase | strip
+            assign custom_tag = tag | downcase | strip
             for productTag in product.tags
-              assign currentTag = productTag | downcase
-              if currentTag == customTag
-                assign tagStatus = true
+              assign custom_tag = productTag | downcase
+              if custom_tag == custom_tag
+                assign tag_status = true
               endif
             endfor
           endfor
         %}
-        {% if tagStatus %}
+        {% if tag_status %}
           <div class="yv-product-badge custom-badge">
             {{ settings.custom_tag_label }}
           </div>
@@ -389,17 +389,17 @@
         {%- unless hideReviews -%}
           {%- if product.metafields.reviews.rating_count > 0 -%}
             {%- liquid
-              assign productRating = product.metafields.reviews.rating.value.rating | floor
-              assign decimalProductRating = 0
+              assign product_rating = product.metafields.reviews.rating.value.rating | floor
+              assign decimalproduct_rating = 0
               assign decimal = product.metafields.reviews.rating.value.rating | modulo: 1
               if decimal >= 0.3 and decimal <= 0.7
-                assign decimalProductRating = 0.5
+                assign decimalproduct_rating = 0.5
               endif
             -%}
             <div class="ratingbox">
               <span class="star-ratings">
                 {%- for i in (1..5) -%}
-                  {%- if i <= productRating -%}
+                  {%- if i <= product_rating -%}
                     <svg
                       class="fill-review"
                       xmlns="http://www.w3.org/2000/svg"
@@ -409,7 +409,7 @@
                     >
                       <path fill-rule="evenodd"  fill="currentcolor" d="m204.7 10.5l37.5 116.1l122-0.3c15.4 0 21.2 19.1 7.7 28.9l-97.5 70.5l37.9 115.9c4.9 14.8-12.9 26.5-24.6 16.5l-97.6-71.2l-98.6 71.9c-13.4 9.7-28.2-3.4-22.6-20.4l36.9-112.7l-98.8-71.5c-12.6-9.1-5.2-28.9 10.1-27.9l120.9 0.3l37.5-116.1c4.5-14.2 24.7-14.1 29.2 0z" />
                     </svg>
-                  {%- elsif productRating < i and decimalProductRating == 0.5 -%}
+                  {%- elsif product_rating < i and decimalproduct_rating == 0.5 -%}
                     <svg class="half-fill-review" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.89 19.01">
                       <defs><style>.d{fill:#ddd;}.e{fill:currentcolor;}</style></defs>
                       <g/>
@@ -510,6 +510,7 @@
           data-saved-style="{{ settings.saved_amount_style }}"
           data-price-wrapper=""
           {{ block.shopify_attributes }}
+          bss-b2b-product-id="{{ product.id }}" bss-b2b-product-price bss-b2b-variant-price bss-b2b-variant-id="{{ product.selected_or_first_available_variant.id }}" bss-b2b-featured-product="true"
         >
           {%- assign price_min = product.price_min | money -%}
           {%- if product.price_varies -%}

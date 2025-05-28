@@ -3582,18 +3582,7 @@ function toggleForm(event) {
 }
 function toggleAccountPopup(event, accountType) {
   event.preventDefault();
-  let element = event.target;
-  if (accountType == 'dropdown') {
-    let toggleElement = document.querySelector('[data-account-dropdown]');
-    if (toggleElement) {
-      DOMAnimations.slideToggle(toggleElement, 250);
-    }
-  } else {
-    let toggleElement = document.querySelector('[data-account-popup]');
-    if (toggleElement) {
-      document.querySelector('body').classList.add('account-popup-open')
-    }
-  }
+  window.location.href = `https://store.xecurify.com/moas/broker/login/shopify/4135dc-4.myshopify.com/account?idpname=auth0_Ews`
 }
 
 function toggleStoreDetails(event) {

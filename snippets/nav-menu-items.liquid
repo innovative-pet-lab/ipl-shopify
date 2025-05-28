@@ -3,23 +3,52 @@
     {%- if link.levels > 1 -%}
       {%- liquid
         if link.links.size == 1
-          assign chillinksClasses = 'col-12 col-sm-12 col-md-12'
+          assign child_link_classes = 'col-12 col-md-12 mega-menu-1'
         elsif link.links.size == 2
-          assign chillinksClasses = 'col-12 col-sm-12 col-md-6'
+          assign child_link_classes = 'col-12 col-md-12 mega-menu-2'
         elsif link.links.size == 3
-          assign chillinksClasses = 'col-12 col-sm-12 col-md-4'
+          assign child_link_classes = 'col-12 col-md-4 mega-menu-3'
         elsif link.links.size == 4
-          assign chillinksClasses = 'col-12 col-sm-12 col-md-3'
+          assign child_link_classes = 'col-12 col-sm-12 col-md-3 mega-menu-4'
         else
-          assign chillinksClasses = 'col-12 col-sm-12 col-md-4 col-lg-3 col-xl-2'
+          assign child_link_classes = 'col-12 col-sm-6 mega-menu-5'
         endif
       -%}
       {%- for childlink in link.links -%}
-        <div class="{{ chillinksClasses }}">
+        {%- comment %}<locksmith:0b48>{% endcomment -%}
+          {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: childlink, subject_parent: link, variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% else %}{% continue %}{% endif -%}
+        {%- comment %}</locksmith:0b48>{% endcomment -%}
+        {%- liquid
+          assign has_3rd_lvl = false
+          for grandchildlink in childlink.links
+            comment
+              <locksmith:28b4> Code added automatically by the Locksmith app. Do not modify or remove.
+            endcomment
+            capture var
+              render 'locksmith-variables', scope: 'subject', subject: grandchildlink, subject_parent: childlink, variable: 'transparent'
+            endcapture
+            if var == "true"
+            else
+              continue
+            endif
+            comment
+              </locksmith:28b4> End Locksmith code block.
+            endcomment
+            if grandchildlink
+              assign has_3rd_lvl = true
+            else
+              assign has_3rd_lvl = false
+            endif
+          endfor
+        -%}
+        <div class="{{ child_link_classes }}">
           <div class="dropdown-inner-menu-item">
-            <a class="menu-category-title" href="{{ childlink.url }}">{{ childlink.title | escape }}</a>
-            <ul class="list-unstyled">
+            <a class="menu-category-title {% if has_3rd_lvl %}has_3rd{% endif %}{% if childlink.title contains 'empty' %}empty{% endif %}" href="{{ childlink.url }}">{{ childlink.title | escape }}</a>
+            <ul class="list-unstyled {% if has_3rd_lvl %}has_3rd_ul{% endif %}">
               {%- for grandchildlink in childlink.links -%}
+                {%- comment %}<locksmith:01bb>{% endcomment -%}
+                  {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: grandchildlink, subject_parent: childlink, variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% else %}{% continue %}{% endif -%}
+                {%- comment %}</locksmith:01bb>{% endcomment -%}
                 <li>
                   <a href="{{ grandchildlink.url }}" class="yv-dropdown-item-link">
                     {{- grandchildlink.title | escape -}}
@@ -31,10 +60,13 @@
         </div>
       {%- endfor -%}
     {%- else -%}
-      <div class="col-12 col-sm-12 col-md-12">
+      <div>
         <div class="dropdown-inner-menu-item">
-          <ul class="list-unstyled">
+          <ul class="list-unstyled no-sub">
             {%- for childlink in link.links -%}
+              {%- comment %}<locksmith:80fe>{% endcomment -%}
+                {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: childlink, subject_parent: link, variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% else %}{% continue %}{% endif -%}
+              {%- comment %}</locksmith:80fe>{% endcomment -%}
               <li>
                 <a class="yv-dropdown-item-link" href="{{ childlink.url }}"
                   ><span>{{ childlink.title | escape }}</span></a
@@ -47,3 +79,66 @@
     {%- endif -%}
   </div>
 {%- endif -%}
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const navItems = document.querySelectorAll('.nav-item.dropdown-menu-list');
+    const menuItem = document.querySelector('.mega-menu-2:nth-child(1) .dropdown-inner-menu-item a');
+
+    navItems.forEach((navItem) => {
+      const details = navItem.querySelector('details');
+  
+      if (details) {
+        navItem.addEventListener('mouseenter', () => {
+          details.setAttribute('open', 'true');
+         // console.log('hover in');
+        });
+  
+        navItem.addEventListener('mouseleave', () => {
+          details.removeAttribute('open');
+         // console.log('hover out');
+        });
+      }
+    });
+  });
+</script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    ['.mega-menu-2', '.mega-menu-5'].forEach(selector => {
+      document.querySelectorAll(selector).forEach(menu => {
+        const submenu = menu.querySelector('ul');
+        if (submenu) {
+          menu.addEventListener('mouseenter', () => {
+            submenu.classList.add('show');
+            submenu.classList.remove('hidden');
+          });
+
+          menu.addEventListener('mouseleave', () => {
+            submenu.classList.add('hidden');
+            submenu.classList.remove('show');
+          });
+        } else {
+          console.warn(`Submenu (ul) not found for ${selector} element:`, menu);
+        }
+      });
+    });
+  });
+</script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.has_3rd_ul').forEach(ul => {
+      ul.addEventListener('mouseenter', () => {
+        const prevAnchor = ul.previousElementSibling;
+        if (prevAnchor && prevAnchor.classList.contains('has_3rd')) {
+          prevAnchor.classList.add('hover-active');
+        }
+      });
+  
+      ul.addEventListener('mouseleave', () => {
+        const prevAnchor = ul.previousElementSibling;
+        if (prevAnchor && prevAnchor.classList.contains('has_3rd')) {
+          prevAnchor.classList.remove('hover-active');
+        }
+      });
+    });
+  });
+</script>

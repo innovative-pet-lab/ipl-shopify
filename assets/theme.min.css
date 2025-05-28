@@ -1626,11 +1626,6 @@ html:not(.no-js) .yv-collection-slider-wrapper:not(.flickity-enabled) {
     text-transform: capitalize
 }
 
-.yv-prizebox span {
-    margin-right: 12px;
-    vertical-align: middle
-}
-
 .yv-product-price {
     font-family: var(--priceFontFamily);
     font-weight: 700;
@@ -1875,7 +1870,7 @@ html:not(.no-js) .yv-collection-slider-wrapper:not(.flickity-enabled) {
     width: 100%;
     margin: 0;
     padding: 2px 35px;
-    border: 1px solid var(--colorXlightTextBody);
+    border: 2px solid var(--colorXlightTextBody);
     text-align: center;
     border-radius: var(--layoutRadius);
     font-size: var(--mediumText)
@@ -1912,7 +1907,6 @@ html:not(.no-js) .yv-collection-slider-wrapper:not(.flickity-enabled) {
 .theme-layout-rounded .quantity-button {
     width: 28px;
     height: 28px;
-    background-color: var(--colorTextBody);
     border-radius: 100%;
     transition: .8s ease;
     top: 50%;
@@ -1936,7 +1930,7 @@ html:not(.no-js) .yv-collection-slider-wrapper:not(.flickity-enabled) {
 }
 
 .theme-layout-rounded .quantity-button svg {
-    fill: var(--primaryColorBody) !important
+    fill: #03B0A7!important
 }
 
 .yv-checkout-btn {
@@ -2445,6 +2439,10 @@ html.no-js .yv-accordion-card[open] .yv-accordion-content {
 
 .column-icon-position-top.yv-service-item {
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .yv-service-item span {
@@ -5139,7 +5137,6 @@ body .fancybox__thumbs .carousel__slide.is-nav-selected .fancybox__thumb::after 
     position: relative;
     padding: 15px 40px 15px 30px;
     width: 100%;
-    border-bottom: 1px solid var(--colorXXlightTextBody)
 }
 
 .yv_side_drawer_title button,
@@ -5245,7 +5242,7 @@ body .fancybox__thumbs .carousel__slide.is-nav-selected .fancybox__thumb::after 
 .cart-items-wrapper {
     display: block;
     width: 100%;
-    height: calc(100% - 118px);
+    height: calc(100% - 97px);
     overflow-x: hidden;
     overflow-y: auto;
     padding-right: 20px
@@ -5597,7 +5594,10 @@ body .fancybox__thumbs .carousel__slide.is-nav-selected .fancybox__thumb::after 
 }
 
 .rich-text-content .content-heading {
-    margin-bottom: 15px
+    margin-bottom: 15px;
+    font-size: 48px;
+    font-weight: 700;
+    color: #1C1D31;
 }
 
 .rich-text-description p,
@@ -7368,7 +7368,7 @@ deferred-media.product-img {
 }
 
 .yv-newsletter-input .form-control {
-    padding: 9px 170px 9px 15px;
+    padding: 9px 170px 9px 22px;
     min-height: 58px;
     background-color: #fff;
     color: #000
@@ -7993,11 +7993,11 @@ deferred-media.product-img {
     background: var(--primaryColorBody)!important;
 }
 
-.pass-through-color img,
+/* .pass-through-color img,
 .pass-through-color svg {
     mix-blend-mode: multiply;
 }
-
+ */
 
 /* timeline section css start */
 
@@ -9026,7 +9026,12 @@ body.account-popup-open .yv-login-popup {
     text-align: center;
     justify-content: center;
 }
-
+@media (max-width: 768px) {
+    .yv-image-banner-content.text-align-center {
+        position: relative;
+        top: -2rem;
+    }
+}
 .yv-image-banner-content.text-align-center .yv-image-banner-heading,
 .yv-image-banner-content.text-align-center .yv-image-banner-desc {
     text-align: center;

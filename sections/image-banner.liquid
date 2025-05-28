@@ -107,7 +107,7 @@
 </div>
 <style>
     #shopify-section-{{ section.id }}{
-      --bannerHeight:{{ section.settings.desktop_height }};
+      --bannerHeight: 55vw;
       --colorBtnPrimaryText:{{ section.settings.btn_text }};
       --colorBtnPrimary:{{ section.settings.btn_bg }};
       --colorBtnPrimaryBorder:{{ section.settings.btn_border }};
@@ -121,29 +121,14 @@
   }
     #shopify-section-{{ section.id }} .yv-image-banner-heading{
       color:{{ section.settings.title_color }};
-      font-size: {{ section.settings.mobile_title_size }}px;
     }
     #shopify-section-{{ section.id }} .yv-image-banner-desc p{
       color:{{ section.settings.desc_color }};
     }
-    @media screen and (min-width:768px){
-      #shopify-section-{{ section.id }} .yv-image-banner-heading{
-        font-size: calc({{ section.settings.desktop_title_size }}px * 0.65);
-      }
-    }
-    @media screen and (min-width:1200px){
-      #shopify-section-{{ section.id }} .yv-image-banner-heading{
-        font-size: calc({{ section.settings.desktop_title_size }}px * 0.85);
-      }
-    }
-    @media screen and (min-width:1441px){
-      #shopify-section-{{ section.id }} .yv-image-banner-heading{
-        font-size: {{ section.settings.desktop_title_size }}px;
-      }
-    }
-    @media screen and (max-width:767px){
+
+    @media screen and (max-width:1020px){
       #shopify-section-{{ section.id }}{
-        --bannerHeight:{{ section.settings.mobile_height }};
+        --bannerHeight: 82vw;
       }
     }
     {% if section.settings.section_visibility == 'large' %}
@@ -159,6 +144,64 @@
           }
         }
     {% endif %}
+
+    /* Left glow */
+    .yv-image-banner-wrapper::before {
+        content: '';
+        position: absolute;
+        top: 32%;
+        left: 25%;
+        width: 600px;
+        height: 600px;
+        transform: translate(-50%, -50%);
+        background: radial-gradient(
+          circle,
+          rgba(163, 242, 255, 0.6) 0%, 
+          rgba(163, 242, 255, 0.2) 40%, 
+          transparent 70%
+        );
+        filter: blur(60px);
+        z-index: 1;
+        pointer-events: none;
+      }
+    }
+
+    /* Right glow */
+    .container.yv-image-banner-content {
+      position: relative;
+    }
+    .container.yv-image-banner-content::before {
+      content: '';
+      position: absolute;
+      bottom: -30%;
+      right: 10%;
+      width: 900px;
+      height: 810px;
+      background: radial-gradient(
+        circle,
+        rgba(163, 242, 255, 0.6) 0%,
+        rgba(163, 242, 255, 0.2) 40%,
+        transparent 70%
+      );
+      filter: blur(50px);
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    .yv-image-banner-wrapper .image-wrapper img {
+      object-fit: contain;
+      background: #fafafa;
+    }
+    @media (max-width: 1299px) {
+      .container.yv-image-banner-content::before {
+        display: none;
+      }
+    }
+    @media (min-width: 1020px) {
+        .yv-image-banner-wrapper .image-wrapper img {
+          object-position: bottom!important;
+        }
+    }
 </style>
 {% schema %}
 {

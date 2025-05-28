@@ -83,6 +83,7 @@
                             data-saved="true"
                             data-saved-style="percentage"
                             data-price-wrapper=""
+                            bss-b2b-cart-item-key="{{ item.key }}" bss-b2b-item-original-price
                           >
                             {%- if item.original_price != item.final_price -%}
                               <span class="yv-product-price">{{ item.final_price | money }}</span>
@@ -183,7 +184,7 @@
                     </td>
                     <td class="cart-price" data-label="price">
                       <div class="yv-product-information d-none d-sm-block">
-                        <div class="yv-prizebox" data-saved="true" data-saved-style="percentage" data-price-wrapper="">
+                        <div class="yv-prizebox" data-saved="true" data-saved-style="percentage" data-price-wrapper="" bss-b2b-cart-item-key="{{ item.key }}" bss-b2b-final-line-price>
                           {%- if item.original_line_price != item.final_line_price -%}
                             <span class="yv-product-price text-large">{{- item.final_line_price | money -}}</span>
                             <span class="yv-product-compare-price">{{- item.original_line_price | money -}}</span>
@@ -317,7 +318,7 @@
               {% endif %}
               <li class="cart-total-item text-large" data-cart-total>
                 <p>{{ 'sections.cart.new_subtotal' | t }}</p>
-                <strong class="h2" data-cart-total-price>{{ cart.total_price | money }}</strong>
+                <strong class="h2 subtotal_bss" data-cart-total-price bss-b2b-cart-total-price>{{ cart.total_price | money }}</strong>
               </li>
             </ul>
         {% if settings.gift_wrap_product != blank

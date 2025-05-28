@@ -1,0 +1,161 @@
+<style>
+  .awards-section {
+    margin: 0 40px 40px 40px;
+  }
+
+  .awards-heading {
+    color: #1c1d31;
+    text-align: center;
+    font-size: 48px;
+    font-weight: 600;
+    margin: 40px auto;
+  }
+
+  .cards-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0;
+    width: 100%;
+    height: auto;
+  }
+
+  .award-card {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .award-photo {
+    width: 100%;
+    height: 35%;
+    object-fit: contain;
+  }
+
+  .award-description {
+    margin-top: 20px;
+    font-size: 20px;
+    line-height: 26px;
+    font-weight: 600;
+    color: #333333;
+    text-align: center;
+  }
+
+  @media screen and (max-width: 540px) {
+    .awards-section {
+      margin: 0 6% 40px 6%;
+    }
+
+    .awards-heading {
+      text-align: left;
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    .award-card {
+      flex-direction: row;
+      margin: 18px 0;
+    }
+
+    .award-photo {
+      width: 30%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .award-description {
+      display: flex;
+      text-align: left;
+      height: 100%;
+      margin: 0 0 0 15px;
+      font-size: 16px;
+      line-height: 1.2;
+      font-weight: bold;
+      color: #333;
+      align-items: center;
+    }
+  }
+</style>
+
+<div style="height: 80px; margin-top: -80px;" id="{{ section.settings.page_section_id }}"></div>
+<section class="awards-section">
+  <h2 class="awards-heading">{{ section.settings.multi_column_awards_title }}</h2>
+
+  <div class="cards-container">
+    {% for block in section.blocks %}
+      <div class="award-card col-sm-3">
+        <img
+          class="award-photo"
+          src="{{ block.settings.photo | image_url }}"
+          alt="{{ block.settings.description }}"
+        >
+        <div class="award-description">
+          {{ block.settings.description }}
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    function removeIntentionalBreaksOnSmallScreens() {
+      const elements = document.getElementsByClassName('award-description');
+
+      if (window.innerWidth <= 540) {
+        Array.from(elements).forEach((el) => {
+          const brs = el.querySelectorAll('br');
+          brs.forEach((br) => br.remove());
+        });
+      }
+    }
+
+    // Run on initial load
+    removeIntentionalBreaksOnSmallScreens();
+
+    // Run again on resize
+    window.addEventListener('resize', removeIntentionalBreaksOnSmallScreens);
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Multi-column award cards",
+  "settings": [
+    {
+      "type": "text",
+      "id": "page_section_id",
+      "label": "Define ID that will be used for navigation redirect.",
+      "default": "meet-the-team-awards-section"
+    },
+    {
+      "type": "text",
+      "id": "multi_column_awards_title",
+      "label": "Title for multi column award cards"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "card-awards",
+      "name": "Awards",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "photo",
+          "label": "Award thumbnail"
+        },
+        {
+          "type": "textarea",
+          "id": "description",
+          "label": "Award description"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Multi-column logo cards"
+    }
+  ]
+}
+{% endschema %}

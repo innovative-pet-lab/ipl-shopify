@@ -1,6 +1,11 @@
 <div class="container">
+{% comment %} <div class="custom-app-section">
+ <button id="quiz-button" class="button">Start the quiz</button>
+</div> {% endcomment %}
 {% for block in section.blocks %}
-{% render block %}
+  <div id="app-{{ section.settings.app_id }}">
+  {% render block %}
+  </div>
 {% endfor %}
 </div>
 <style>
@@ -14,11 +19,50 @@
       padding-bottom:{{ section.settings.bottom_space_mobile }}px;
     }
   }
+@media (max-width: 520px) {
+  #app-quiz .shopify-app-block div,  #app-quiz .shopify-app-block div iframe {
+    min-height: 275px!important;
+    max-height: 275px!important;
+  }
+}
+
 </style>
+{% comment %} <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const quizButton = document.querySelector("#quiz-button");
+    const quizApp = document.querySelector("#app-{{ section.settings.app_id }}");
+
+    if (quizButton && quizApp) {
+        quizButton.addEventListener("click", function () {
+            console.log("Click quiz");
+            quizApp.style.display = "block";
+        });
+    }
+
+    window.addEventListener("message", function (event) {
+      // Ensure the message comes from the correct origin (replace 'https://iframe-domain.com' with actual URL)
+      if (event.origin !== "https://4135dc-4.myshopify.com/tools/perfect-product-finder/ipl-test-quize-uqrwcvyvct") {
+          console.warn("Ignored message from unknown origin:", event.origin);
+          return;
+      }
+  
+      if (event.data === "startOverClicked") {
+          console.log("Start Over button clicked inside iframe!");
+          // Add any logic you want to trigger here, like hiding the quiz
+          document.querySelector("#quiz-app").style.display = "none";
+      }
+  });
+});
+</script> {% endcomment %}
 {% schema %}
 {
   "name": "t:sections.apps.name",
   "settings": [
+    {
+      "type": "text",
+      "id": "app_id",
+      "label": "App ID"
+    },
     {
       "type": "range",
       "id": "top_space_desktop",

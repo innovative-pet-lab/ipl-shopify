@@ -1,0 +1,24 @@
+.bss-b2b-cart-item-qty-table {
+  max-width: unset !important;
+  margin-bottom: 10px;
+}
+[bss-b2b-product-id] span[style] {
+  font-size: 24px !important;
+  font-weight: 700 !important;
+}
+
+[bss-b2b-cart-item-key] span[style] {
+  font-size: var(--largeText) !important;
+}
+
+[bss-b2b-product-id] span:nth-child(1)[style] {
+    color: #d4d4d4!important;
+}
+[bss-b2b-product-id] span:nth-child(2)[style] {
+  color: #26286e!important;
+}
+
+.media-body .flex .yv-prizebox span {
+  color: #26286e!important;
+  font-weight: bold;
+}

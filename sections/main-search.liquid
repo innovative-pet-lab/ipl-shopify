@@ -177,6 +177,9 @@
                 {%- endif -%}
                 <div class="row" data-collection-products>
                   {%- for item in search.results -%}
+                  {%- comment %}<locksmith:f9bd>{% endcomment -%}
+                    {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: item, subject_parent: search, variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% else %}{% continue %}{% endif -%}
+                  {%- comment %}</locksmith:f9bd>{% endcomment -%}
                   {%- case item.object_type -%}
                   {%- when 'product' -%}
                   <div class="col-6 col-sm-4 col-md-4 col-lg-3 col-xl-2" data-product-grid>
@@ -201,6 +204,9 @@
                   data-result="others"
                   >
                 {%- for item in search.results -%}
+                {%- comment %}<locksmith:10a7>{% endcomment -%}
+                  {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: item, subject_parent: search, variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% else %}{% continue %}{% endif -%}
+                {%- comment %}</locksmith:10a7>{% endcomment -%}
                 {%- case item.object_type -%}
                 {%- when 'article' -%}
                 <div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-3">
@@ -247,6 +253,9 @@
                   data-result="others"
                   >
                 {%- for item in search.results limit: 50 -%}
+                {%- comment %}<locksmith:f305>{% endcomment -%}
+                  {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: item, subject_parent: search, variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% else %}{% continue %}{% endif -%}
+                {%- comment %}</locksmith:f305>{% endcomment -%}
                 {%- case item.object_type -%}
                 {%- when 'page' -%}
               <div class="col-12 col-sm-6 col-md-4">

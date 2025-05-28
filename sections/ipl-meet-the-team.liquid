@@ -1,0 +1,267 @@
+<style>
+    .ipl-meet-the-team-container {
+        max-width: 100%;
+        margin: 1rem auto;
+        padding: 4rem 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 2rem;
+        min-height: 48vw;
+        background-image: url(https://cdn.shopify.com/s/files/1/0685/6497/5842/files/image_27.png?v=1739271141);
+        background-size: contain;
+        background-position: right;
+        background-repeat: no-repeat;
+    }
+    .ipl-meet-the-team-container h1 {
+        text-align: left;
+    }
+    .ipl-meet-the-team-container img {
+        width: 70%;
+        position: absolute;
+        right: 0;
+    }
+    .ipl-meet-the-team-container .content {
+        flex: 1;
+        max-width: 50%;
+        background: transparent;
+        padding: 1rem;
+        border-radius: 1rem;
+        position: absolute;
+    }
+    @media (min-width: 1080px) {
+        .ipl-meet-the-team-container .content {
+            padding-right: 14rem;
+        }
+    }
+    @media (max-width: 376px) {
+        .ipl-meet-the-team-container {
+            min-height: 20vh!important;
+        }
+    } 
+    @media (max-width: 430px) {
+        .ipl-meet-the-team-container {
+            min-height: 40vh!important;
+        }
+    }
+    @media (max-width: 768px) {
+        .ipl-meet-the-team-container .content {
+            margin-left: -2rem;
+            padding: 0 1rem;
+            max-width: 100%;
+        }
+        .ipl-meet-the-team-container img {
+            display: none;
+        }
+    }
+    @media (min-width: 1441px) {
+        .ipl-meet-the-team-container {
+            max-width: 100%;
+            padding: 0 8%;
+        }
+        {% comment %} .ipl-meet-the-team-container img {
+            width: 45%;
+            right: 14%;
+        } {% endcomment %}
+    }
+    .title {
+        font-size: 32px;
+        font-weight: 700;
+        color: #1a1f36;
+        line-height: 43.71px;
+        margin-bottom: 1.5rem;
+    }
+    .description {
+        font-size: 24px;
+        color: #4a5568;
+        line-height: normal;
+        margin-bottom: 2rem;
+    }
+    .cta-button {
+        display: inline-block;
+        padding: 0.875rem 2rem;
+        background-color: #2b2f6c;
+        color: white;
+        text-decoration: none;
+        border-radius: 9999px;
+        transition: background-color 0.3s ease;
+        font-size: 18px;
+        font-weight: 700;
+    }
+    .cta-button:hover {
+        background-color: #1e2252;
+    }
+    .image-section {
+        flex: 1;
+        max-width: 600px;
+    }
+    .image-section img {
+        width: 100%;
+        height: auto;
+        border-radius: 1rem;
+        object-fit: cover;
+    }
+
+    @media (max-width: 768px) {
+        .container {
+            flex-direction: column;
+            text-align: center;
+            padding: 2rem 1rem;
+        }
+        .title {
+            font-size: 24px;
+            text-align: center;
+        }
+        .ipl-meet-the-team-container {
+            background: unset;
+            margin: 0 auto;
+            margin-bottom: 3rem;
+        }
+        .ipl-meet-the-team-container h1 {
+            text-align: center;
+            line-height: normal;
+        }
+        .description {
+            font-size: 1rem;
+            text-align: center;
+        }
+        .image-section {
+            order: -1;
+        }
+        .cta-button {
+            font-size: 14px;
+            font-weight: normal;
+            display: block;
+            margin: auto;
+            width: 38%;
+            min-width: 140px;
+            max-width: 140px;
+            text-align: center;
+            padding: 0.5rem 1rem;
+        }
+    }
+    .ipl-meet-the-team-usp-bar {
+        padding: 1.5rem 5rem;
+        background-color: #EBF7F9;
+        margin-top: 6rem;
+        margin-bottom: 4rem;
+    }
+    .svg-icon-3 {
+        display: none;
+    }
+    @media (max-width: 768px) {
+        .ipl-meet-the-team-usp-bar {
+            margin-bottom: 0;
+            padding: 0;
+        }
+    }
+    .ipl-meet-the-team-usp-bar .container {
+        max-width: 1080px;
+        margin: auto;
+        display: block;
+        padding: 0;
+    }
+    .ipl-meet-the-team-usp-bar .container .flex {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .ipl-meet-the-team-usp-bar .container .flex .col_ {
+        color: #26286E;
+        font-size: 32px;
+    }
+    @media (max-width: 768px) {
+        .ipl-meet-the-team-usp-bar {
+            margin-top: 0;
+            padding: 0 1rem;
+        }
+        .ipl-meet-the-team-usp-bar .container .flex .col_ {
+            font-size: 16px;
+            padding: 0.5rem 0;
+        }
+        .ipl-meet-the-team-usp-bar .container .flex svg {
+            height: 16px;
+        }
+    }
+</style>
+
+<div class="ipl-meet-the-team-container">
+    <img src="https://cdn.shopify.com/s/files/1/0685/6497/5842/files/image_26.png?v=1739271839" alt="Team members with their pets">
+    <div class="content">
+        {% if section.settings.heading_text %}
+        <h1 class="title">{{ section.settings.heading_text }}</h1>
+        {% endif %}
+        {% if section.settings.body_text %}
+        <p class="description">{{ section.settings.body_text }}</p>
+        {% endif %}
+        {% if section.settings.button_label %}
+        <a href="{{ section.settings.button_link }}" class="cta-button">{{ section.settings.button_label }}</a>
+        {% endif %}
+    </div>
+    <div class="image-section">
+    </div>
+</div>
+<div class="ipl-meet-the-team-usp-bar">
+    <div class="container">
+        <div class="flex">
+            {% for block in section.blocks %}
+            <div class="col_">{{ block.settings.team_usp }}</div>
+            <svg class="svg-icon-{{ forloop.index }}" width="2" height="32" viewBox="0 0 2 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.96513 -1.90735e-06V32H0.045125V-1.90735e-06H1.96513Z" fill="#26286E"/>
+            </svg>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+{% schema %}
+{
+  "name": "IPL Meet the Team",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading_text",
+      "label": "Heading Text",
+      "default": "Text heading"
+    },
+    {
+      "type": "textarea",
+      "id": "body_text",
+      "label": "Body Text",
+      "default": "This is a customizable page for displaying your content."
+    },
+    {
+        "type": "text",
+        "id": "button_label",
+        "label": "Button Label",
+        "default": "Meet the team"
+    },
+    {
+        "type": "url",
+        "id": "button_link",
+        "label": "Button Link" 
+    }
+    
+  ],
+  "blocks": [
+    {
+      "type": "team_usp",
+      "name": "team_usp",
+      "limit": 3,
+      "settings": [
+        {
+          "type": "text",
+          "id": "team_usp",
+          "label": "Team USP"
+        },
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "IPL Meet the Team",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}

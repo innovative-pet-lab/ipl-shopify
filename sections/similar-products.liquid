@@ -20,6 +20,9 @@
 {% paginate search.results by 100 %}
 {%- capture related_items -%}
 {%- for product in search.results -%}
+  {%- comment %}<locksmith:b7ca>{% endcomment -%}
+    {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: product, subject_parent: search, variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% else %}{% continue %}{% endif -%}
+  {%- comment %}</locksmith:b7ca>{% endcomment -%}
   {%- unless product.handle == current_product -%}
     {%- assign counter = counter | plus: 1 -%}
         <li class="yv-similar-product-item">
