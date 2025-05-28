@@ -61,7 +61,12 @@
                             </li>
                           {% else %}
                             <li>
-                              <a href="{{ shop.url }}/account/login" >Login</a>
+                              <a class="acc-links text-hover acc-sign-in" 
+                                id="customer_login_link" href="{%- if customer -%}{{- routes.account_url -}}{%-else-%}{{ routes.account_login_url }}{%- endif -%}"
+                                {% unless section.settings.account_type == 'page' or request.page_type contains 'customers' %} onClick=toggleAccountPopup(event,'{{- accountPageType -}}'){% endunless %}
+                                title="{%- if customer -%}{{ 'customer.account_fallback' | t }}{%-else-%}{{ 'customer.log_in' | t }}{%- endif -%}">
+                               Login
+                             </a>
                             </li>
                           {% endif %}
                         {% endif %}
