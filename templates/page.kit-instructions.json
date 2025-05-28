@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main-page": {
@@ -18,7 +27,7 @@
           "settings": {
             "heading": "",
             "subheading": "Register",
-            "image": "shopify:\/\/shop_images\/Symptomsv2-25_11e43499-4454-49e5-8d45-c68e10f4dfcb.jpg",
+            "image": "shopify://shop_images/Symptomsv2-25_11e43499-4454-49e5-8d45-c68e10f4dfcb.jpg",
             "link": ""
           }
         },
@@ -27,7 +36,7 @@
           "settings": {
             "heading": "",
             "subheading": "Collect",
-            "image": "shopify:\/\/shop_images\/Symptomsv2-26_45637c79-7b82-42f0-b645-5aadd749d90d.jpg",
+            "image": "shopify://shop_images/Symptomsv2-26_45637c79-7b82-42f0-b645-5aadd749d90d.jpg",
             "link": ""
           }
         },
@@ -36,7 +45,7 @@
           "settings": {
             "heading": "",
             "subheading": "Mail",
-            "image": "shopify:\/\/shop_images\/Symptomsv2-27_e3daabaf-4a59-4f98-922f-3f027437a4c7.jpg",
+            "image": "shopify://shop_images/Symptomsv2-27_e3daabaf-4a59-4f98-922f-3f027437a4c7.jpg",
             "link": ""
           }
         }
@@ -46,6 +55,7 @@
         "image_kUitFM",
         "image_TTQyXE"
       ],
+      "disabled": true,
       "settings": {
         "enable_fullwidth": false,
         "heading": "How It Works",
@@ -80,7 +90,7 @@
         "text_yBYiGA": {
           "type": "text",
           "settings": {
-            "content": "<h6><\/h6><p><\/p><p>Click ‘Log In\/Register’ and follow the instructions<\/p><p>Each test kit includes:<\/p><ul><li>A unique kit ID label <\/li><li>Collection materials including: latex glove, poop bag, collection tube, wooden stick, and biohazard bag<\/li><li>Mailing supplies including: white box, USPS shipping label, and mailer<\/li><\/ul><p><\/p><p><em><strong>Tip:<\/strong><\/em><em> Don’t discard the box. You will need it to return your pet’s sample.<\/em><\/p>"
+            "content": "<h6></h6><p></p><p>Click ‘Log In/Register’ and follow the instructions</p><p>Each test kit includes:</p><ul><li>A unique kit ID label </li><li>Collection materials including: latex glove, poop bag, collection tube, wooden stick, and biohazard bag</li><li>Mailing supplies including: white box, USPS shipping label, and mailer</li></ul><p></p><p><em><strong>Tip:</strong></em><em> Don’t discard the box. You will need it to return your pet’s sample.</em></p>"
           }
         },
         "icon_with_text_FCU6RA": {
@@ -88,8 +98,8 @@
           "disabled": true,
           "settings": {
             "icon": "user",
-            "heading": "Click ‘Log In\/Register’ and follow the instructions",
-            "content": "<p>Each test kit includes:<\/p><ul><li>A unique kit ID label <\/li><li>Collection materials including: latex glove, poop bag, collection tube, wooden stick, and biohazard bag<\/li><li>Mailing supplies including: white box, USPS shipping label, and mailer<\/li><\/ul><p><\/p><p><em><strong>Tip:<\/strong><\/em><em> Don’t discard the box. You will need it to return your pet’s sample.<\/em><\/p>"
+            "heading": "Click ‘Log In/Register’ and follow the instructions",
+            "content": "<p>Each test kit includes:</p><ul><li>A unique kit ID label </li><li>Collection materials including: latex glove, poop bag, collection tube, wooden stick, and biohazard bag</li><li>Mailing supplies including: white box, USPS shipping label, and mailer</li></ul><p></p><p><em><strong>Tip:</strong></em><em> Don’t discard the box. You will need it to return your pet’s sample.</em></p>"
           }
         }
       },
@@ -98,9 +108,10 @@
         "text_yBYiGA",
         "icon_with_text_FCU6RA"
       ],
+      "disabled": true,
       "settings": {
         "enable_fullwidth": false,
-        "image": "shopify:\/\/shop_images\/Step1.jpg",
+        "image": "shopify://shop_images/Step1.jpg",
         "image_shadow": false,
         "enable_image_animation": false,
         "image_alignment": "left",
@@ -128,7 +139,7 @@
         "text_cXBkct": {
           "type": "text",
           "settings": {
-            "content": "<p><\/p><p>Collect a fresh stool sample. If you are unable to mail within 24 hours, keep the sample in the freezer until you are ready to send.<\/p><ul><li>Record sample collection date and pet’s name on the tube.<\/li><li>Use the spork attached(or a stick from outside) to collect the sample.<\/li><li>Fill the tube to the red fill line on the collection tube.<\/li><li>Tightly twist the cap on the collection tube; then put it inside the biohazard bag and seal.<\/li><\/ul><p><\/p><p><em><strong>Tip for Dog Collections:<\/strong><\/em><em> Take your dog for a walk and quickly scoop the poop. Try to keep the sample free from grass and debris if possible.<\/em><\/p><p><em><strong>Tip for Cat Collections:<\/strong><\/em> <em>Litter is not a problem when testing.<\/em><\/p>"
+            "content": "<p></p><p>Collect a fresh stool sample. If you are unable to mail within 24 hours, keep the sample in the freezer until you are ready to send.</p><ul><li>Record sample collection date and pet’s name on the tube.</li><li>Use the spork attached(or a stick from outside) to collect the sample.</li><li>Fill the tube to the red fill line on the collection tube.</li><li>Tightly twist the cap on the collection tube; then put it inside the biohazard bag and seal.</li></ul><p></p><p><em><strong>Tip for Dog Collections:</strong></em><em> Take your dog for a walk and quickly scoop the poop. Try to keep the sample free from grass and debris if possible.</em></p><p><em><strong>Tip for Cat Collections:</strong></em> <em>Litter is not a problem when testing.</em></p>"
           }
         },
         "icon_with_text_iiJj8H": {
@@ -137,7 +148,7 @@
           "settings": {
             "icon": "gift",
             "heading": "Collect a Fresh Stool Sample",
-            "content": "<p>A “poop bag” and glove are included for your convenience<\/p><p><\/p><p><em><strong>Tip for Dogs:<\/strong><\/em><em> Take your dog for a walk and quickly scoop the poop. Try to keep the sample free from grass and debris if possible.<\/em><\/p><p><\/p><p><em><strong>Tip for Cats:<\/strong><\/em><em> Litter is not a problem when testing.<\/em><\/p>"
+            "content": "<p>A “poop bag” and glove are included for your convenience</p><p></p><p><em><strong>Tip for Dogs:</strong></em><em> Take your dog for a walk and quickly scoop the poop. Try to keep the sample free from grass and debris if possible.</em></p><p></p><p><em><strong>Tip for Cats:</strong></em><em> Litter is not a problem when testing.</em></p>"
           }
         },
         "icon_with_text_38CjLX": {
@@ -146,7 +157,7 @@
           "settings": {
             "icon": "shipping",
             "heading": "Icon with text",
-            "content": "<p>To provide clients insight into your brand, pair words with any image to introduce a new campaign.<\/p>"
+            "content": "<p>To provide clients insight into your brand, pair words with any image to introduce a new campaign.</p>"
           }
         }
       },
@@ -156,9 +167,10 @@
         "icon_with_text_iiJj8H",
         "icon_with_text_38CjLX"
       ],
+      "disabled": true,
       "settings": {
         "enable_fullwidth": false,
-        "image": "shopify:\/\/shop_images\/Step2.jpg",
+        "image": "shopify://shop_images/Step2.jpg",
         "image_shadow": false,
         "enable_image_animation": false,
         "image_alignment": "right",
@@ -186,7 +198,7 @@
         "text_FAXkmC": {
           "type": "text",
           "settings": {
-            "content": "<p>Put the biohazard bag with the collection tube into the white box<\/p><p><\/p><ul><li>Place box in the mailer and affix the USPS mailing label to the outside<\/li><li>Place the mailer in your mailbox or at a United States Postal Service Office<\/li><li>You will be notified via email when your results are ready typically within 10-14 days<\/li><\/ul><p><\/p><p><em><strong>Remember:<\/strong><\/em><em> Mail within 24 hours of collecting or keep in the freezer prior to sending.<\/em><\/p>"
+            "content": "<p>Put the biohazard bag with the collection tube into the white box</p><p></p><ul><li>Place box in the mailer and affix the USPS mailing label to the outside</li><li>Place the mailer in your mailbox or at a United States Postal Service Office</li><li>You will be notified via email when your results are ready typically within 10-14 days</li></ul><p></p><p><em><strong>Remember:</strong></em><em> Mail within 24 hours of collecting or keep in the freezer prior to sending.</em></p>"
           }
         }
       },
@@ -194,9 +206,10 @@
         "heading_BFCTEX",
         "text_FAXkmC"
       ],
+      "disabled": true,
       "settings": {
         "enable_fullwidth": false,
-        "image": "shopify:\/\/shop_images\/Step3_copy_4092c49a-e5bc-444d-8a46-ebc6aff2ecbe.jpg",
+        "image": "shopify://shop_images/Step3_copy_4092c49a-e5bc-444d-8a46-ebc6aff2ecbe.jpg",
         "image_shadow": false,
         "enable_image_animation": false,
         "image_alignment": "left",
@@ -210,6 +223,48 @@
         "top_space_mobile": 30,
         "bottom_space_mobile": 30
       }
+    },
+    "page_title_with_back_button_M3emaq": {
+      "type": "page-title-with-back-button",
+      "name": "Page title with back",
+      "settings": {
+        "page_title": "How it works"
+      }
+    },
+    "kit_instruction_TDLQaL": {
+      "type": "kit-instruction",
+      "blocks": {
+        "heading_6K4y3t": {
+          "type": "heading",
+          "settings": {
+            "instruction_heading": "Register your kit online"
+          }
+        },
+        "text_Gd9PXy": {
+          "type": "text",
+          "settings": {
+            "content": "<p>Click ‘Log In/Register’ and follow the instructions</p><p>Each test kit includes:</p><ul><li>A unique kit ID label</li><li>Collection materials including: latex glove, poop bag, collection tube, wooden stick, and biohazard bag</li><li>Mailing supplies including: white box, USPS shipping label, and mailer</li></ul>"
+          }
+        },
+        "footnote_eVB6xW": {
+          "type": "footnote",
+          "settings": {
+            "footnote_tagline": "Tip:",
+            "footnote_content": "Don’t discard the box. You will need it to return your pet’s sample."
+          }
+        }
+      },
+      "block_order": [
+        "heading_6K4y3t",
+        "text_Gd9PXy",
+        "footnote_eVB6xW"
+      ],
+      "name": "Kit Instruction",
+      "settings": {
+        "image": "shopify://shop_images/doctor-notes-icon.png",
+        "image_alignment": "right",
+        "image_dimension": 300
+      }
     }
   },
   "order": [
@@ -217,6 +272,8 @@
     "gallery_carousel_99Gxi3",
     "image_with_text_9NKaGR",
     "image_with_text_jFrcNB",
-    "image_with_text_hxUa86"
+    "image_with_text_hxUa86",
+    "page_title_with_back_button_M3emaq",
+    "kit_instruction_TDLQaL"
   ]
 }
