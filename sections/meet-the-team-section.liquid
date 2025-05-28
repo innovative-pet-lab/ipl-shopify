@@ -104,9 +104,10 @@
     }
 
     .page-title-with-button button {
-      font-size: 44px;
-      color: #26286e;
       margin: 0;
+      display: flex;
+      align-items: center;
+      padding: 20px 10px 20px 0;
     }
 
     .page-title-with-button h2 {
@@ -136,7 +137,12 @@
 </style>
 
 <div class="page-title-with-button">
-  <button onclick="window.history.back()">←</button>
+  <button onclick="window.history.back()">
+    <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M19 8H1.5" stroke="#26286E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+      <path d="M8 15L1 8L8 1" stroke="#26286E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+    </svg>
+  </button>
   <h2 class="team-heading">{{ section.settings.meet_the_team_title }}</h2>
 </div>
 
