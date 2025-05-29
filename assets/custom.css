@@ -911,3 +911,9 @@ header .side-menu .inner-side ul li .list-menu__item {
 .account-header-tabs a:last-child {
     margin-bottom: 1rem;
 }
+
+.checkout-btn.disabled {
+    pointer-events: none!important;
+    opacity: 0.5;
+    cursor: not-allowed!important;
+}
