@@ -85,10 +85,19 @@
       "settings": {
         "multi_column_buttons_title": "Learn"
       }
+    },
+    "ipl_blogs_nqbrXA": {
+      "type": "ipl-blogs",
+      "name": "Blog List",
+      "settings": {
+        "heading": "Case Studies",
+        "blog": "case-studies-1"
+      }
     }
   },
   "order": [
     "main-page",
-    "multi_column_buttons_nkYUA3"
+    "multi_column_buttons_nkYUA3",
+    "ipl_blogs_nqbrXA"
   ]
 }
