@@ -24,8 +24,8 @@
       "type": "ipl-blogs",
       "name": "Blog List",
       "settings": {
-        "heading": "Gut Instincts - Blog",
-        "blog": "gut-instincts-blog"
+        "heading": "Case studies",
+        "blog": "case-studies"
       }
     }
   },
