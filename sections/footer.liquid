@@ -500,6 +500,132 @@
   });
 </script>
 
+{% if customer %}
+  {% assign tags = customer.tags %}
+  {% if tags contains 'wholesale' or tags contains 'provider' or tags contains 'distributor' %}
+    <script>
+      (function () {
+        function waitForBSSPrices(callback, timeout = 3000, checkInterval = 75) {
+          const start = Date.now();
+      
+          const check = setInterval(() => {
+            const priceSpans = document.querySelectorAll('.yv-prizebox span');
+            const cartContainer = document.querySelector('.cart-item-container');
+            const checkoutBtn = document.querySelector(".checkout-btn");
+      
+            const now = Date.now();
+      
+            if (!priceSpans.length) {
+              if (now - start > timeout) {
+                clearInterval(check);
+                callback(); // fallback if spans are missing entirely
+              }
+              return;
+            }
+      
+            const discountedSpans = Array.from(priceSpans).filter((span) =>
+              span.getAttribute("style")?.includes("#82787d")
+            );
+      
+            const showLoader = discountedSpans.length === 0;
+      
+            if (showLoader && cartContainer && !cartContainer.querySelector('.bss-loader-wrapper')) {
+              cartContainer.style.opacity = '0.2';
+              cartContainer.style.position = 'relative';
+      
+              const wrapper = document.createElement('div');
+              wrapper.className = 'bss-loader-wrapper';
+              wrapper.style.cssText = `
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                z-index: 10;
+                text-align: center;
+              `;
+      
+              const loader = document.createElement('div');
+              loader.className = 'bss-loader';
+              loader.style.cssText = `
+                width: 30px;
+                height: 30px;
+                margin: 0 auto 8px;
+                border: 3px solid #ccc;
+                border-top: 3px solid #26286e;
+                border-radius: 50%;
+                animation: spin 0.6s linear infinite;
+              `;
+      
+              const message = document.createElement('div');
+              message.textContent = 'Recalculating discount...';
+              message.style.fontSize = '13px';
+              message.style.color = '#26286e';
+      
+              wrapper.appendChild(loader);
+              wrapper.appendChild(message);
+              cartContainer.appendChild(wrapper);
+      
+              if (checkoutBtn) checkoutBtn.style.display = 'none';
+            }
+      
+            if (!showLoader && cartContainer) {
+              cartContainer.style.opacity = '1';
+              const wrapper = cartContainer.querySelector('.bss-loader-wrapper');
+              if (wrapper) wrapper.remove();
+              if (checkoutBtn) checkoutBtn.style.display = '';
+            }
+      
+            if (!showLoader) {
+              clearInterval(check);
+              callback();
+            } else if (now - start > timeout) {
+              clearInterval(check);
+      
+              // fallback: try to fetch cart + recheck once more
+              fetch('/cart.js')
+                .then(res => res.json())
+                .then(() => {
+                  const retrySpans = document.querySelectorAll('.yv-prizebox span');
+                  const retryDiscounted = Array.from(retrySpans).filter((span) =>
+                    span.getAttribute("style")?.includes("#82787d")
+                  );
+      
+                  if (retryDiscounted.length > 0) {
+                    callback();
+                  } else {
+                    const cartIcon = document.querySelector(".cart-icon.openCartDrawer");
+                    if (cartIcon) {
+                      window.location.href = '/cart/';
+                    }
+                    callback();
+                  }
+                })
+                .catch(() => {
+                  // fallback fail
+                  callback();
+                });
+            }
+          }, checkInterval);
+        }
+      
+        document.addEventListener("DOMContentLoaded", function () {
+          const cartButtons = document.querySelectorAll(".openCartDrawer");
+      
+          cartButtons.forEach((btn) => {
+            btn.addEventListener("click", function (e) {
+              e.preventDefault();
+              waitForBSSPrices(() => {
+                btn.dispatchEvent(new Event("cartdrawer:trigger", { bubbles: true }));
+              });
+            });
+          });
+        });
+      })();
+    </script>
+{% endif %}
+{% endif %}
+
+
 {% schema %}
   {
     "name": "t:sections.footer.name",

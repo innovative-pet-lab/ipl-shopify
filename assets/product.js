@@ -358,38 +358,38 @@ function sizeChart(){
 //   })
 // }
 
-const getMousePos = (e) => {
-  var pos = e.currentTarget.getBoundingClientRect();
-  return {
-    x: e.clientX - pos.left,
-    y: e.clientY - pos.top,
-  };
-};
-let zoomIcon = document.querySelector('[zoom-icon]').getAttribute('zoom-icon');
-if(zoomIcon){
-function productZoomInit(){
-  $('.yv-product-zoom').mouseenter(function(e){
-    $('.yv-product-zoom').removeClass('show');
-    if($(window).width() > 1021){
-      $(this).addClass('show');
-    }
-  })
-  $('.yv-product-zoom').mousemove(function(e){
-    if($(window).width() > 1021){
-      let t = getMousePos(e);
-      this.querySelector('.gallery-cursor').style.translate = `${t.x}px ${t.y}px`;
-    }
-  })
-  $('.yv-product-zoom').mouseleave(function(e){
-    $('.yv-product-zoom').removeClass('show');
-  })
-}
-}
+// const getMousePos = (e) => {
+//   var pos = e.currentTarget.getBoundingClientRect();
+//   return {
+//     x: e.clientX - pos.left,
+//     y: e.clientY - pos.top,
+//   };
+// };
+// let zoomIcon = document.querySelector('[zoom-icon]').getAttribute('zoom-icon');
+// if(zoomIcon){
+// function productZoomInit(){
+//   $('.yv-product-zoom').mouseenter(function(e){
+//     $('.yv-product-zoom').removeClass('show');
+//     if($(window).width() > 1021){
+//       $(this).addClass('show');
+//     }
+//   })
+//   $('.yv-product-zoom').mousemove(function(e){
+//     if($(window).width() > 1021){
+//       let t = getMousePos(e);
+//       this.querySelector('.gallery-cursor').style.translate = `${t.x}px ${t.y}px`;
+//     }
+//   })
+//   $('.yv-product-zoom').mouseleave(function(e){
+//     $('.yv-product-zoom').removeClass('show');
+//   })
+// }
+// }
 document.addEventListener("DOMContentLoaded", findVisibleItems,false);
 document.addEventListener("shopify:section:load", findVisibleItems,false);
 
-document.addEventListener("DOMContentLoaded", productZoomInit,false);
-document.addEventListener("shopify:section:load", productZoomInit,false);
+// document.addEventListener("DOMContentLoaded", productZoomInit,false);
+// document.addEventListener("shopify:section:load", productZoomInit,false);
 
 document.addEventListener("DOMContentLoaded", initProductSlider(),false);
 document.addEventListener("DOMContentLoaded", initProductThumbSlider(),false);

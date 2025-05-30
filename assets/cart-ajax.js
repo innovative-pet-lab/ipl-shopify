@@ -744,14 +744,13 @@ if (window.location.pathname.indexOf("/cart") > -1) {
           setTimeout(function () {
             $(".Sd_addProductSticky").removeClass("is-loading");
             submit.removeClass("is-loading");
-          }, 1000);
+          }, 200);
         },
       };
       jQuery.ajax(params);
     });
 
     // Update quantity based on input on change
-
     $(document).on("click", ".quantity-button", function (evt) {
       evt.preventDefault();
       var $el = $(this),
@@ -847,33 +846,6 @@ if (window.location.pathname.indexOf("/cart") > -1) {
 
 }
 
-$("body").on("click", "#GiftWrapProduct", function () {
-  params = {
-    type: "POST",
-    url: cartAddUrl,
-    data: { id: parseInt($(this).attr("data-product")), quantity: 1 },
-    dataType: "json",
-    success: function (line_item) {
-      jQuery.getJSON(cartUrl, function (cart, textStatus) {
-        if (window.location.pathname.indexOf("/cart") > -1) {
-          cartPageUpdate(cart);
-        } else {
-          buildCart(cart, true);
-        }
-      });
-    },
-    error: function (XMLHttpRequest, textStatus) {
-      jQuery.getJSON(cartUrl, function (cart, textStatus) {
-        if (window.location.pathname.indexOf("/cart") > -1) {
-          buildCart(cart, true);
-        } else {
-          cartPageUpdate(cart);
-        }
-      });
-    },
-  };
-  jQuery.ajax(params);
-});
 
 cartPageUpdate = function (cart) {
   $.ajax({
@@ -968,6 +940,35 @@ $(document).on("click","[data-drawer-side-header]",function(){
      $(this).closest(".yv-upsell-drawer").addClass("active")
   }
 })
+
+$("body").on("click", "#GiftWrapProduct", function () {
+  params = {
+    type: "POST",
+    url: cartAddUrl,
+    data: { id: parseInt($(this).attr("data-product")), quantity: 1 },
+    dataType: "json",
+    success: function (line_item) {
+      jQuery.getJSON(cartUrl, function (cart, textStatus) {
+        if (window.location.pathname.indexOf("/cart") > -1) {
+          cartPageUpdate(cart);
+        } else {
+          buildCart(cart, true);
+        }
+      });
+    },
+    error: function (XMLHttpRequest, textStatus) {
+      jQuery.getJSON(cartUrl, function (cart, textStatus) {
+        if (window.location.pathname.indexOf("/cart") > -1) {
+          buildCart(cart, true);
+        } else {
+          cartPageUpdate(cart);
+        }
+      });
+    },
+  };
+  jQuery.ajax(params);
+});
+
 
 function upsellCartDrawerProducts(cart) {
   if(cart.item_count != 0){
