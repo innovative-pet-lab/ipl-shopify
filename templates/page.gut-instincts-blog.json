@@ -85,10 +85,19 @@
       "settings": {
         "multi_column_buttons_title": "Learn"
       }
+    },
+    "ipl_blogs_49CkGX": {
+      "type": "ipl-blogs",
+      "name": "Blog List",
+      "settings": {
+        "heading": "Gut Instincts - Blog",
+        "blog": "gut-instincts-blog"
+      }
     }
   },
   "order": [
     "main-page",
-    "multi_column_buttons_nkYUA3"
+    "multi_column_buttons_nkYUA3",
+    "ipl_blogs_49CkGX"
   ]
 }
