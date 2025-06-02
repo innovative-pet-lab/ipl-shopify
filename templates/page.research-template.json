@@ -69,7 +69,7 @@
         "question_font_size": 20,
         "question_font_weight": "500",
         "question_color": "#1a1a1a",
-        "answer_font_size": 16,
+        "answer_font_size": 18,
         "answer_color": "#666666",
         "hover_background": "#f8f8f8",
         "active_background": "#f0f0f0",
