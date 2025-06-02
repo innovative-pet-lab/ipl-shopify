@@ -180,6 +180,11 @@ document.addEventListener('DOMContentLoaded', function() {
   color: {{ section.settings.answer_color }};
 }
 
+.ipl-accordion-answer p {
+  background: #f0f6f4;
+  padding: 10px 1rem;
+}
+
 .ipl-accordion-answer p:first-child {
   margin-top: 0;
 }
@@ -205,7 +210,7 @@ document.addEventListener('DOMContentLoaded', function() {
     padding: 1rem {{ section.settings.mobile_padding_x }}px {{ section.settings.mobile_answer_padding_bottom }}px;
     font-size: {{ section.settings.mobile_answer_font_size }}px;
   }
-  
+
   .ipl-accordion-main-title {
     font-size: {{ section.settings.mobile_title_font_size }}px;
   }
