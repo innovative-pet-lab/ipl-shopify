@@ -35,7 +35,7 @@
           "type": "button",
           "settings": {
             "button_label": "Research",
-            "redirect_page": "research-information",
+            "redirect_page": "research",
             "external_url": ""
           }
         },
