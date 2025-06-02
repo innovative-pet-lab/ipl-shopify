@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main-page": {
@@ -10,130 +19,67 @@
         "textcolor": "#ffffff"
       }
     },
-    "image_banner_BqeHkE": {
-      "type": "image-banner",
-      "settings": {
-        "enable_parallax": false,
-        "section_visibility": "always",
-        "image": "shopify:\/\/shop_images\/How_it_works_page_image_copy_55a6af8c-3414-4f3f-b304-d1f051f196b3.jpg",
-        "desktop_height": "750px",
-        "mobile_height": "500px",
-        "banner_title": "Welcome!",
-        "seo_heading": "h2",
-        "desktop_title_size": 70,
-        "mobile_title_size": 36,
-        "banner_desc": "We are so glad you are here! Innovative Pet Lab introduces a game-changing solution for your practice—our at-home GI stool tests for dogs and cats.",
-        "button_text": "Request your vet account",
-        "button_link": "shopify:\/\/pages\/request-a-vet-account",
-        "button_size": "small",
-        "mobile_button_size": "m-small",
-        "content_position": "center-left",
-        "title_color": "#ffffff",
-        "desc_color": "#26286e",
-        "btn_bg": "#26286e",
-        "btn_text": "#ffffff",
-        "btn_border": "#26286e",
-        "overlay_color": "",
-        "overlay_opacity": 50
-      }
-    },
-    "rich_text_iRt3CM": {
-      "type": "rich-text",
+    "ipl_veterinarians_4V9YWp": {
+      "type": "ipl-veterinarians",
       "blocks": {
-        "richtext_jzjrjT": {
-          "type": "richtext",
+        "benefit_NhyUnH": {
+          "type": "benefit",
           "settings": {
-            "heading": "Join the Veterinary Revolution",
-            "seo_heading": "h2",
-            "content": "<p>Ready to elevate your veterinary practice and provide exceptional care for dogs and cats? Partner with Innovative Pet Lab and experience the future of diagnostics in your clinic. Join us in making a real difference in the lives of your furry patients today!<\/p>"
+            "icon": "shopify://shop_images/Layer_1.png",
+            "title": "Convenience for you and your clients – no in-clinic stool sample",
+            "description": "Say goodbye to the hassle of coordinating in-clinic stool sample collection. Our at-home tests empower pet owners to collect stool samples at their convenience, reducing the time and effort involved in the testing process."
           }
         },
-        "richtext_xYHAzB": {
-          "type": "richtext",
+        "benefit_cJarkH": {
+          "type": "benefit",
           "settings": {
-            "heading": "Why Choose Innovative Pet Lab?",
-            "seo_heading": "h2",
-            "content": "<h6><strong>Convenience for You and Your Clients – No In-Clinic Stool Sample:<\/strong><\/h6><p>Say goodbye to the hassle of coordinating in-clinic stool sample collection. Our at-home tests empower pet owners to collect stool samples at their convenience, reducing the time and effort involved in the testing process.<\/p><p><\/p><p><\/p><h6><strong>Comprehensive Insights – Identify Underlying Issues, Target Treatments, Measure Progress:<\/strong><\/h6><p>Our tests offer a comprehensive view of your patients’ gastrointestinal health, helping you identify and treat conditions effectively and target treatments as well as measure improvements.<\/p><p><\/p><h6><strong>Improved Client Engagement – Ensures Protocols are Followed by Clients:<\/strong><\/h6><p>By involving pet owners directly in the diagnostic process, you can foster better client engagement and understanding, enhancing the overall care experience for pets and their families.<\/p><p><\/p><h6><strong>Streamlined Ordering and Reporting – Efficiency – Saves you Time:<\/strong><\/h6><p>Our user-friendly platform makes it easy to order tests, track results, and access comprehensive reports. We’re here to make your life easier!<\/p>"
+            "icon": "shopify://shop_images/document-with-magnifying-glass-icon.png",
+            "title": "Comprehensive insights – identify underlying issues, target treatments, measure progress",
+            "description": "Our tests offer a comprehensive view of your patients’ gastrointestinal health, helping you identify and treat conditions effectively and target treatments as well as measure improvements."
+          }
+        },
+        "benefit_EwpmXg": {
+          "type": "benefit",
+          "settings": {
+            "icon": "shopify://shop_images/Layer_1_1.png",
+            "title": "Improved client engagement – ensures protocols are followed by clients",
+            "description": "By involving pet owners directly in the diagnostic process, you can foster better client engagement and understanding, enhancing the overall care experience for pets and their families."
+          }
+        },
+        "benefit_fdyeNm": {
+          "type": "benefit",
+          "settings": {
+            "icon": "shopify://shop_images/Layer_1_2.png",
+            "title": "Streamlined ordering and reporting – efficiency – saves you time",
+            "description": "Our user-friendly platform makes it easy to order tests, track results, and access comprehensive reports. We’re here to make your life easier!"
           }
         }
       },
       "block_order": [
-        "richtext_jzjrjT",
-        "richtext_xYHAzB"
+        "benefit_NhyUnH",
+        "benefit_cJarkH",
+        "benefit_EwpmXg",
+        "benefit_fdyeNm"
       ],
+      "name": "Veterinarians Page",
       "settings": {
-        "content_width": "container sm-container",
-        "content_alignment": "left",
-        "bgcolor": "quaternary",
-        "section_visibility": "always",
-        "top_space_desktop": 50,
-        "bottom_space_desktop": 50,
-        "top_space_mobile": 30,
-        "bottom_space_mobile": 30
-      }
-    },
-    "gallery_carousel_Jizkie": {
-      "type": "gallery-carousel",
-      "blocks": {
-        "image_tBFNRy": {
-          "type": "image",
-          "settings": {
-            "heading": "",
-            "subheading": "Jett",
-            "image": "shopify:\/\/shop_images\/Comprehensive.webp",
-            "link": "shopify:\/\/blogs\/case-studies\/case-study-jett"
-          }
-        },
-        "image_tkTiWj": {
-          "type": "image",
-          "settings": {
-            "heading": "",
-            "subheading": "Boris",
-            "image": "shopify:\/\/shop_images\/Cat_Circle_copy.jpg",
-            "link": "shopify:\/\/blogs\/case-studies\/case-study-boris"
-          }
-        },
-        "image_fGxhaj": {
-          "type": "image",
-          "settings": {
-            "heading": "",
-            "subheading": "Gigi",
-            "image": "shopify:\/\/shop_images\/Dog_Circle_copy.jpg",
-            "link": "shopify:\/\/blogs\/case-studies\/case-study-gigi"
-          }
-        }
-      },
-      "block_order": [
-        "image_tBFNRy",
-        "image_tkTiWj",
-        "image_fGxhaj"
-      ],
-      "settings": {
-        "enable_fullwidth": true,
-        "heading": "Case Studies",
-        "seo_heading": "h2",
-        "heading_size": "h2",
-        "gallery_style": "stacked",
-        "slide_direction": "right",
-        "image_style": "square",
-        "image_size": "medium",
-        "text_alignment": "center",
-        "enable_image_animation": true,
-        "image_crop": false,
-        "image_background": false,
-        "bgcolor": "primary",
-        "section_visibility": "always",
-        "top_space_desktop": 45,
-        "bottom_space_desktop": 45,
-        "top_space_mobile": 35,
-        "bottom_space_mobile": 0
+        "vet_page_heading": "Veterinarians",
+        "vet_page_subheading": "Revolutionize your practice with Innovative Pet Lab At-Home GI Stool Tests!",
+        "welcome_section_header": "Welcome!",
+        "welcome_section_description": "We are so glad you are here! Innovative Pet Lab introduces a game-changing solution for your practice—our at-home GI stool tests for dogs and cats.",
+        "why_choose_innovative_pet_lab_header": "Why Choose Innovative Pet Lab?",
+        "join_the_veterinary_revolution_header": "Join the Veterinary Revolution",
+        "join_the_veterinary_revolution_description": "Ready to elevate your veterinary practice and provide exceptional care for dogs and cats? Partner with Innovative Pet Lab and experience the future of diagnostics in your clinic. Join us in making a real difference in the lives of your furry patients today!",
+        "vet_guide_button_text": "Vet Guide for IPL Testing",
+        "vet_guide_url": "",
+        "request_vet_account_button_text": "Request your Vet account",
+        "request_vet_account_url": "shopify://pages/request-a-vet-account",
+        "join_the_veterinary_revolution_image": "shopify://shop_images/image_15_c8812bfc-f89f-47e2-93a4-1b864f0c82ee.png"
       }
     }
   },
   "order": [
     "main-page",
-    "image_banner_BqeHkE",
-    "rich_text_iRt3CM",
-    "gallery_carousel_Jizkie"
+    "ipl_veterinarians_4V9YWp"
   ]
 }
