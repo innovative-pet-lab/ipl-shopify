@@ -20,14 +20,6 @@
         "textcolor": "#ffffff"
       }
     },
-    "ipl_blogs_49CkGX": {
-      "type": "ipl-blogs",
-      "name": "Blog List",
-      "settings": {
-        "heading": "Research",
-        "blog": "research"
-      }
-    },
     "ipl_accordion_pd3hhf": {
       "type": "ipl-accordion",
       "blocks": {
@@ -62,7 +54,7 @@
       "settings": {
         "title": "Research Information",
         "title_alignment": "center",
-        "max_width": 800,
+        "max_width": 1300,
         "single_open": true,
         "margin_top": 40,
         "margin_bottom": 40,
@@ -81,7 +73,7 @@
         "answer_color": "#666666",
         "hover_background": "#f8f8f8",
         "active_background": "#f0f0f0",
-        "icon_color": "#666666",
+        "icon_color": "#03b0a7",
         "item_padding_x": 25,
         "item_padding_y": 20,
         "answer_padding_bottom": 20,
@@ -89,6 +81,14 @@
         "mobile_question_font_size": 16,
         "mobile_answer_font_size": 15,
         "mobile_padding_x": 20
+      }
+    },
+    "ipl_blogs_49CkGX": {
+      "type": "ipl-blogs",
+      "name": "Blog List",
+      "settings": {
+        "heading": "Research",
+        "blog": "research"
       }
     }
   },
