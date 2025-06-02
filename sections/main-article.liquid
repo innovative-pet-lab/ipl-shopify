@@ -1,8 +1,4 @@
 <!-- templates/article.liquid or sections/main-article.liquid -->
-
-
-
-
 {% if blog.handle == 'case-studies' %}
   <!-- Custom Layout for case-studies blog -->
   <div class="single-blog-container">
@@ -31,33 +27,33 @@
         </div>
       </div>
 
-<aside class="related-posts" style="flex: 1 1 30%;">
-  <h2>Related Posts</h2>
-  <ul>
-    {% for related in blog.articles limit: 4 %}
-      {% unless related.id == article.id %}
-        <li>
+    <aside class="related-posts" style="flex: 1 1 30%;">
+      <h2>Related Posts</h2>
+      <ul>
+        {% for related in blog.articles limit: 4 %}
+          {% unless related.id == article.id %}
+            <li>
 
-          {% if related.image %}
-            <a href="{{ related.url }}">
-              <img width="" height="" src="{{ related.image | image_url: width: 392 }}" alt="{{ related.title }}"/>
-            </a>
-          {% endif %}
-          
-          <div class="related-details" style="flex: 1;">
-            <a href="{{ related.url }}">
-              {{ related.title }}
-            </a>
-            {% if related.content %}
-              <p class="content">{{ related.content | strip_html | truncatewords: 11 }}</p>
-            {% endif %}
-            <p class="published-date">{{ related.published_at | date: "%b %d, %Y" }}</p>
-          </div>
-        </li>
-      {% endunless %}
-    {% endfor %}
-  </ul>
-</aside>
+              {% if related.image %}
+                <a href="{{ related.url }}">
+                  <img width="" height="" src="{{ related.image | image_url: width: 392 }}" alt="{{ related.title }}"/>
+                </a>
+              {% endif %}
+              
+              <div class="related-details" style="flex: 1;">
+                <a href="{{ related.url }}">
+                  {{ related.title }}
+                </a>
+                {% if related.content %}
+                  <p class="content">{{ related.content | strip_html | truncatewords: 11 }}</p>
+                {% endif %}
+                <p class="published-date">{{ related.published_at | date: "%b %d, %Y" }}</p>
+              </div>
+            </li>
+          {% endunless %}
+        {% endfor %}
+      </ul>
+    </aside>
 
     </div>
   </div>
@@ -79,7 +75,13 @@
   <div class="blog-content-wrapper">
     <h1 class="blog-title">{{ article.title }}</h1>
     <p class="blog-author">{{ article.author }}</p>
-
+    {% if article.tags.size > 0 %}
+      <ul class="blog-tags">
+        {% for tag in article.tags %}
+          <li class="blog-tag">{{ tag }}</li>
+        {% endfor %}
+      </ul>
+    {% endif %}
     <div class="blog-content">
       {{ article.content }}
     </div>

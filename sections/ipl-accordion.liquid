@@ -1,0 +1,534 @@
+
+<div class="ipl-accordion-wrapper" id="ipl-accordion-{{ section.id }}">
+  {% if section.settings.title != blank %}
+    <div class="ipl-accordion-header">
+      <h2 class="ipl-accordion-main-title">{{ section.settings.title }}</h2>
+    </div>
+  {% endif %}
+
+  <div class="ipl-accordion-container">
+    {% for block in section.blocks %}
+      <div class="ipl-accordion-item" data-accordion-item {{ block.shopify_attributes }}>
+        <button class="ipl-accordion-trigger" 
+                data-accordion-trigger
+                aria-expanded="false"
+                aria-controls="accordion-content-{{ block.id }}">
+          <span class="ipl-accordion-question">{{ block.settings.question }}</span>
+          <span class="ipl-accordion-icon" data-accordion-icon>
+            <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+        </button>
+        <div class="ipl-accordion-content" 
+             id="accordion-content-{{ block.id }}"
+             aria-hidden="true"
+             data-accordion-content>
+          <div class="ipl-accordion-answer">
+            {{ block.settings.answer }}
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const accordionWrapper = document.getElementById('ipl-accordion-{{ section.id }}');
+  
+  if (!accordionWrapper) return;
+  
+  const triggers = accordionWrapper.querySelectorAll('[data-accordion-trigger]');
+  
+  triggers.forEach(trigger => {
+    trigger.addEventListener('click', function(e) {
+      e.preventDefault();
+      
+      const item = this.closest('[data-accordion-item]');
+      const content = item.querySelector('[data-accordion-content]');
+      const icon = item.querySelector('[data-accordion-icon]');
+      const isExpanded = this.getAttribute('aria-expanded') === 'true';
+      
+      {% if section.settings.single_open %}
+      if (!isExpanded) {
+        triggers.forEach(otherTrigger => {
+          if (otherTrigger !== this) {
+            const otherItem = otherTrigger.closest('[data-accordion-item]');
+            const otherContent = otherItem.querySelector('[data-accordion-content]');
+            const otherIcon = otherItem.querySelector('[data-accordion-icon]');
+            
+            otherTrigger.setAttribute('aria-expanded', 'false');
+            otherContent.setAttribute('aria-hidden', 'true');
+            otherItem.classList.remove('is-open');
+            otherContent.style.maxHeight = null;
+          }
+        });
+      }
+      {% endif %}
+      
+      // Toggle current accordion
+      if (isExpanded) {
+        this.setAttribute('aria-expanded', 'false');
+        content.setAttribute('aria-hidden', 'true');
+        item.classList.remove('is-open');
+        content.style.maxHeight = null;
+      } else {
+        this.setAttribute('aria-expanded', 'true');
+        content.setAttribute('aria-hidden', 'false');
+        item.classList.add('is-open');
+        content.style.maxHeight = content.scrollHeight + 'px';
+      }
+    });
+  });
+});
+</script>
+
+<style>
+.ipl-accordion-wrapper {
+  max-width: {{ section.settings.max_width }}px;
+  margin: {{ section.settings.margin_top }}px auto {{ section.settings.margin_bottom }}px;
+  padding: 0 20px;
+}
+
+.ipl-accordion-header {
+  text-align: {{ section.settings.title_alignment }};
+  margin-bottom: {{ section.settings.title_margin_bottom }}px;
+}
+
+.ipl-accordion-main-title {
+  font-size: {{ section.settings.title_font_size }}px;
+  font-weight: {{ section.settings.title_font_weight }};
+  color: {{ section.settings.title_color }};
+  margin: 0;
+  line-height: 1.3;
+}
+
+.ipl-accordion-container {
+  background: {{ section.settings.container_background }};
+  border-radius: {{ section.settings.border_radius }}px;
+  overflow: hidden;
+  {% if section.settings.container_shadow %}
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  {% endif %}
+}
+
+.ipl-accordion-item {
+  border-bottom: 1px solid {{ section.settings.border_color }};
+  transition: all 0.3s ease;
+}
+
+.ipl-accordion-item:last-child {
+  border-bottom: none;
+}
+
+.ipl-accordion-trigger {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: {{ section.settings.item_padding_y }}px {{ section.settings.item_padding_x }}px;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s ease;
+  font-family: inherit;
+}
+
+.ipl-accordion-trigger:hover {
+  background-color: {{ section.settings.hover_background }};
+}
+
+.ipl-accordion-item.is-open .ipl-accordion-trigger {
+  background-color: {{ section.settings.active_background }};
+}
+
+.ipl-accordion-question {
+  font-size: {{ section.settings.question_font_size }}px;
+  font-weight: {{ section.settings.question_font_weight }};
+  color: {{ section.settings.question_color }};
+  line-height: 1.4;
+  margin-right: 20px;
+}
+
+.ipl-accordion-icon {
+  flex-shrink: 0;
+  color: {{ section.settings.icon_color }};
+  transition: transform 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+}
+
+.ipl-accordion-item.is-open .ipl-accordion-icon {
+  transform: rotate(180deg);
+}
+
+.ipl-accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.ipl-accordion-answer {
+  padding: 1rem {{ section.settings.item_padding_x }}px {{ section.settings.answer_padding_bottom }}px;
+  font-size: {{ section.settings.answer_font_size }}px;
+  line-height: 1.6;
+  color: {{ section.settings.answer_color }};
+}
+
+.ipl-accordion-answer p:first-child {
+  margin-top: 0;
+}
+
+.ipl-accordion-answer p:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .ipl-accordion-wrapper {
+    padding: 0 15px;
+  }
+  
+  .ipl-accordion-trigger {
+    padding: {{ section.settings.mobile_padding_y }}px {{ section.settings.mobile_padding_x }}px;
+  }
+  
+  .ipl-accordion-question {
+    font-size: {{ section.settings.mobile_question_font_size }}px;
+  }
+  
+  .ipl-accordion-answer {
+    padding: 1rem {{ section.settings.mobile_padding_x }}px {{ section.settings.mobile_answer_padding_bottom }}px;
+    font-size: {{ section.settings.mobile_answer_font_size }}px;
+  }
+  
+  .ipl-accordion-main-title {
+    font-size: {{ section.settings.mobile_title_font_size }}px;
+  }
+}
+</style>
+
+{% schema %}
+{
+  "name": "IPL Accordion",
+  "tag": "section",
+  "class": "section-ipl-accordion",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Section Settings"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Section Title",
+      "default": "Research Information"
+    },
+    {
+      "type": "select",
+      "id": "title_alignment",
+      "label": "Title Alignment",
+      "options": [
+        { "value": "left", "label": "Left" },
+        { "value": "center", "label": "Center" },
+        { "value": "right", "label": "Right" }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "range",
+      "id": "max_width",
+      "label": "Maximum Width (px)",
+      "min": 600,
+      "max": 1400,
+      "step": 50,
+      "default": 800
+    },
+    {
+      "type": "checkbox",
+      "id": "single_open",
+      "label": "Allow only one accordion open at a time",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "Spacing"
+    },
+    {
+      "type": "range",
+      "id": "margin_top",
+      "label": "Top Margin (px)",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "margin_bottom",
+      "label": "Bottom Margin (px)",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "title_margin_bottom",
+      "label": "Title Bottom Margin (px)",
+      "min": 10,
+      "max": 60,
+      "step": 5,
+      "default": 30
+    },
+    {
+      "type": "header",
+      "content": "Container Style"
+    },
+    {
+      "type": "color",
+      "id": "container_background",
+      "label": "Container Background",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "border_color",
+      "label": "Border Color",
+      "default": "#e5e5e5"
+    },
+    {
+      "type": "range",
+      "id": "border_radius",
+      "label": "Border Radius (px)",
+      "min": 0,
+      "max": 20,
+      "step": 2,
+      "default": 8
+    },
+    {
+      "type": "checkbox",
+      "id": "container_shadow",
+      "label": "Add container shadow",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "Typography"
+    },
+    {
+      "type": "range",
+      "id": "title_font_size",
+      "label": "Title Font Size (px)",
+      "min": 24,
+      "max": 48,
+      "step": 2,
+      "default": 32
+    },
+    {
+      "type": "select",
+      "id": "title_font_weight",
+      "label": "Title Font Weight",
+      "options": [
+        { "value": "400", "label": "Normal" },
+        { "value": "500", "label": "Medium" },
+        { "value": "600", "label": "Semi Bold" },
+        { "value": "700", "label": "Bold" }
+      ],
+      "default": "600"
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Title Color",
+      "default": "#1a1a1a"
+    },
+    {
+      "type": "range",
+      "id": "question_font_size",
+      "label": "Question Font Size (px)",
+      "min": 14,
+      "max": 24,
+      "step": 1,
+      "default": 18
+    },
+    {
+      "type": "select",
+      "id": "question_font_weight",
+      "label": "Question Font Weight",
+      "options": [
+        { "value": "400", "label": "Normal" },
+        { "value": "500", "label": "Medium" },
+        { "value": "600", "label": "Semi Bold" }
+      ],
+      "default": "500"
+    },
+    {
+      "type": "color",
+      "id": "question_color",
+      "label": "Question Color",
+      "default": "#1a1a1a"
+    },
+    {
+      "type": "range",
+      "id": "answer_font_size",
+      "label": "Answer Font Size (px)",
+      "min": 13,
+      "max": 20,
+      "step": 1,
+      "default": 16
+    },
+    {
+      "type": "color",
+      "id": "answer_color",
+      "label": "Answer Color",
+      "default": "#666666"
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "hover_background",
+      "label": "Hover Background",
+      "default": "#f8f8f8"
+    },
+    {
+      "type": "color",
+      "id": "active_background",
+      "label": "Active Background",
+      "default": "#f0f0f0"
+    },
+    {
+      "type": "color",
+      "id": "icon_color",
+      "label": "Icon Color",
+      "default": "#666666"
+    },
+    {
+      "type": "header",
+      "content": "Padding"
+    },
+    {
+      "type": "range",
+      "id": "item_padding_x",
+      "label": "Item Horizontal Padding (px)",
+      "min": 15,
+      "max": 40,
+      "step": 5,
+      "default": 25
+    },
+    {
+      "type": "range",
+      "id": "item_padding_y",
+      "label": "Item Vertical Padding (px)",
+      "min": 15,
+      "max": 35,
+      "step": 5,
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "answer_padding_bottom",
+      "label": "Answer Bottom Padding (px)",
+      "min": 15,
+      "max": 35,
+      "step": 5,
+      "default": 20
+    },
+    {
+      "type": "header",
+      "content": "Mobile Settings"
+    },
+    {
+      "type": "range",
+      "id": "mobile_title_font_size",
+      "label": "Mobile Title Font Size (px)",
+      "min": 20,
+      "max": 32,
+      "step": 2,
+      "default": 28
+    },
+    {
+      "type": "range",
+      "id": "mobile_question_font_size",
+      "label": "Mobile Question Font Size (px)",
+      "min": 14,
+      "max": 20,
+      "step": 1,
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "mobile_answer_font_size",
+      "label": "Mobile Answer Font Size (px)",
+      "min": 13,
+      "max": 18,
+      "step": 1,
+      "default": 15
+    },
+    {
+      "type": "range",
+      "id": "mobile_padding_x",
+      "label": "Mobile Horizontal Padding (px)",
+      "min": 15,
+      "max": 30,
+      "step": 5,
+      "default": 20
+    }
+  ],
+  "blocks": [
+    {
+      "type": "accordion_item",
+      "name": "Accordion Item",
+      "settings": [
+        {
+          "type": "text",
+          "id": "question",
+          "label": "Question",
+          "default": "What is the Gut?"
+        },
+        {
+          "type": "richtext",
+          "id": "answer",
+          "label": "Answer",
+          "default": "<p>The gut, also known as the gastrointestinal tract, is your body's digestive system that processes food, absorbs nutrients, and eliminates waste. It includes your stomach, small intestine, large intestine, and the trillions of microorganisms that live there.</p>"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "IPL Accordion",
+      "blocks": [
+        {
+          "type": "accordion_item",
+          "settings": {
+            "question": "What is the Gut?",
+            "answer": "<p>The gut, also known as the gastrointestinal tract, is your body's digestive system that processes food, absorbs nutrients, and eliminates waste. It includes your stomach, small intestine, large intestine, and the trillions of microorganisms that live there.</p>"
+          }
+        },
+        {
+          "type": "accordion_item",
+          "settings": {
+            "question": "What do we mean when we talk about Gut Inflammation?",
+            "answer": "<p>Gut inflammation refers to the immune system's response to irritants in your digestive tract. This can be caused by certain foods, stress, medications, or an imbalance in gut bacteria. Chronic inflammation can lead to various digestive issues and may affect overall health.</p>"
+          }
+        },
+        {
+          "type": "accordion_item",
+          "settings": {
+            "question": "What is Leaky Gut?",
+            "answer": "<p>Leaky gut, or increased intestinal permeability, occurs when the lining of your small intestine becomes damaged, allowing undigested food particles, toxic waste products, and bacteria to leak through the intestines and flood the bloodstream. This can trigger inflammation and changes in the gut flora.</p>"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
