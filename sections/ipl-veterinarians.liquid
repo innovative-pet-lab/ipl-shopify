@@ -1,0 +1,525 @@
+<style>
+    h3, h4, h2, h1 {
+        color: black
+    }
+    p {
+        color: black
+    }
+
+    .page-title-with-button {
+        display: flex;
+        flex-direction: row;
+        gap: 16px;
+        justify-content: flex-start;
+    }
+
+    .page-title {
+        display: none
+    }
+
+    .vet-guide-button svg {
+        display: inline-block;
+        vertical-align: middle;
+        height: 1em;
+        width: auto;
+    }
+
+    .heading {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        align-items: stretch;
+    }
+
+    .veterinarians-page {
+        display: flex;
+        min-height: 100vh;
+        flex-direction: column;
+        gap: 32px;
+        padding: 24px 48px;
+    }
+
+    .veterinarians-page-details {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+        justify-content: flex-start
+    }
+
+    .veterinarians-page-sections {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .welcome-section {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+    }
+
+    .benefits-grid {
+        display: grid;
+        gap: 32px;
+    }
+
+    .headers {
+        font-size: 16px;
+        font-weight: 700;
+        color: rgba(38, 40, 110, 1)
+    }
+
+    .subheaders {
+        font-size: 16px;
+        font-weight: 700;
+    }
+
+    .descriptions {
+        font-size: 12px;
+    }
+
+    .join-the-veterinary-revolution {
+        padding: 32px 16px;
+        gap: 16px;
+        border-radius: 24px;
+        box-shadow:
+            0 2px 8px 2px rgba(29, 30, 85, 0.05),
+            0 1px 2px 0 rgba(29, 30, 85, 0.05);
+        background:
+            linear-gradient(
+                to right,
+                rgba(207, 208, 203, 1) 0%,
+                rgba(207, 208, 203, 1) 40%,
+                rgba(207, 208, 203, 0.1) 60%,
+                rgba(207, 208, 203, 0) 100%
+            ),
+        url({{ section.settings.join_the_veterinary_revolution_image | image_url }});
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 20% center;
+        background-blend-mode: normal;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .vet-guide-button {
+        border: 2px solid rgba(38, 40, 110, 1);
+        padding: 8px 12px;
+        border-radius: 80px;
+        color: rgba(38, 40, 110, 1);
+        font-weight: 700;
+        font-size: 12px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .request-vet-account-button {
+        border: 2px solid rgba(38, 40, 110, 1);
+        padding: 8px 12px;
+        border-radius: 80px;
+        color: rgba(255, 255, 255, 1);
+        font-weight: 700;
+        background-color: rgba(38, 40, 110, 1);
+        font-size: 12px;
+        text-align: center;
+    }
+
+    .join-the-veterinary-revolution-header {
+        font-size: 16px;
+        font-weight: 700;
+    }
+
+    .vet-buttons {
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 8px;
+    }
+
+    .join-the-veterinary-revolution-contents {
+        max-width: 480px;
+        gap: 16px;
+        display: flex;
+        flex-direction: column;
+        line-height: 16px;
+    }
+
+    @media(min-width: 471px) {
+        .vet-buttons {
+            display: flex;
+            gap: 16px;
+            align-items: center;
+            flex-direction: row;
+            gap: 8px;
+        }
+
+        .vet-guide-button {
+            padding: 8px 8px;
+            gap: 4px;
+        }
+
+        .request-vet-account-button {
+            padding: 8px 8px;
+        }
+    }
+
+    @media(min-width: 483px) {
+        .vet-buttons {
+            display: flex;
+            gap: 16px;
+            align-items: center;
+            flex-direction: row;
+        }
+
+        .vet-guide-button {
+            padding: 8px 8px;
+        }
+
+        .request-vet-account-button {
+            padding: 8px 8px;
+        }
+    }
+
+    @media(min-width: 768px) {
+        .page-title-with-button {
+            display: none;
+        }
+
+        .page-title {
+            display: block;
+        }
+
+        .heading {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            align-items: center;
+            text-align: center;
+        }
+
+        .veterinarians-page {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            flex-direction: column;
+            gap: 40px;
+            padding: 40px 40px;
+            max-width: 915px;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        .veterinarians-page-details {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            justify-content: flex-start
+        }
+
+        .veterinarians-page-sections {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .welcome-section {
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 32px;
+            margin-top: 4px;
+        }
+
+        .headers {
+            font-size: 40px;
+            font-weight: 700;
+            color: black;
+        }
+
+        .subheaders {
+            font-size: 24px;
+            font-weight: 700;
+        }
+
+        .descriptions {
+            font-size: 16px;
+        }
+
+        .join-the-veterinary-revolution {
+            background:
+                linear-gradient(
+                    to right,
+                    rgba(207, 208, 203, 1) 0%,
+                    rgba(207, 208, 203, 1) 40%,
+                    rgba(207, 208, 203, 0.1) 60%,
+                    rgba(207, 208, 203, 0.1) 80%,
+                    rgba(207, 208, 203, 0.1) 100%
+                ),
+                url({{ section.settings.join_the_veterinary_revolution_image | image_url }});
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center right;
+            background-blend-mode: normal;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            padding: 56px 40px;
+            gap: 32px;
+            border-radius: 24px;
+            box-shadow:
+                0 2px 8px 2px rgba(29, 30, 85, 0.05),
+                0 1px 2px 0 rgba(29, 30, 85, 0.05);
+        }
+
+        .vet-guide-button {
+            border: 2px solid rgba(38, 40, 110, 1);
+            padding: 12px 20px;
+            border-radius: 80px;
+            color: rgba(38, 40, 110, 1);
+            font-weight: 700;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 8px;
+            font-size: 16px;
+        }
+
+        .request-vet-account-button {
+            border: 2px solid rgba(38, 40, 110, 1);
+            padding: 12px 20px;
+            border-radius: 80px;
+            color: rgba(255, 255, 255, 1);
+            font-weight: 700;
+            background-color: rgba(38, 40, 110, 1);
+            font-size: 16px;
+        }
+
+        .join-the-veterinary-revolution-header {
+            font-size: 32px;
+            font-weight: 700;
+        }
+
+        .vet-buttons {
+            display: flex;
+            flex-direction: row;
+            gap: 16px;
+        }
+
+        .join-the-veterinary-revolution-contents {
+            max-width: 500px;
+            gap: 24px;
+            display: flex;
+            flex-direction: column;
+            line-height: 24px;
+        }
+    }
+</style>
+
+<div class="veterinarians-page">
+    <div class="heading">
+        <div class="page-title-with-button">
+            <button onclick="window.history.back()">
+                <svg
+                    width="20"
+                    height="16"
+                    viewBox="0 0 20 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                <path
+                    d="M19 8H1.5"
+                    stroke="#26286E"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round">
+                </path>
+                <path
+                    d="M8 15L1 8L8 1"
+                    stroke="#26286E"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round">
+                </path>
+                </svg>
+            </button>
+            <h2 class="headers">
+                {{ section.settings.vet_page_heading }}
+            </h2>
+        </div>
+        <h1 class="page-title headers">
+            {{ section.settings.vet_page_heading }}
+        </h1>
+        <p class="descriptions">{{ section.settings.vet_page_subheading }}</p>
+    </div>
+    <div class="veterinarians-page-details">
+        <div class="veterinarians-page-sections">
+            <h3 class="subheaders">
+                {{ section.settings.welcome_section_header }}
+            </h3>
+            <p class="descriptions">
+                {{ section.settings.welcome_section_description }}
+            </p>
+        </div>
+        <div class="veterinarians-page-sections">
+            <h3 class="subheaders">
+                {{ section.settings.why_choose_innovative_pet_lab_header }}
+            </h3>
+            <div class="benefits-grid">
+                {% for block in section.blocks %}
+                    {% if block.type == 'benefit' %}
+                    <div class="benefit-card">
+                        {% if block.settings.icon %}
+                            <img
+                                src="{{ block.settings.icon | image_url }}"
+                                alt=""
+                                width="80px"
+                                height="80px"
+                            />
+                        {% endif %}
+                        <p style="font-weight: 700" class="descriptions">
+                            {{ block.settings.title }}
+                        </p>
+                        <p class="descriptions">
+                            {{ block.settings.description }}
+                        </p>
+                    </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+        <div class="join-the-veterinary-revolution">
+            <div class="join-the-veterinary-revolution-contents">
+                <h2 class="join-the-veterinary-revolution-header">
+                    {{ section.settings.join_the_veterinary_revolution_header }}
+                </h2>
+                <p class="descriptions">
+                    {{ section.settings.join_the_veterinary_revolution_description }}
+                </p>
+                <div class="vet-buttons">
+                    <a class="vet-guide-button" href={{ section.settings.vet_guide_url }}>
+                        <svg width="16" height="20" viewBox="0 0 16 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10 0H2C1.46957 0 0.960859 0.210714 0.585786 0.585786C0.210714 0.960859 0 1.46957 0 2V18C0 18.5304 0.210714 19.0391 0.585786 19.4142C0.960859 19.7893 1.46957 20 2 20H14C14.5304 20 15.0391 19.7893 15.4142 19.4142C15.7893 19.0391 16 18.5304 16 18V6L10 0ZM5.498 14.19C5.189 14.48 4.733 14.61 4.202 14.61C4.09902 14.6119 3.99605 14.6059 3.894 14.592V16.018H3V12.082C3.40347 12.022 3.81112 11.9946 4.219 12C4.776 12 5.172 12.106 5.439 12.319C5.693 12.521 5.865 12.852 5.865 13.242C5.864 13.634 5.734 13.965 5.498 14.19ZM9.305 15.545C8.885 15.894 8.246 16.06 7.465 16.06C6.997 16.06 6.666 16.03 6.441 16V12.083C6.84462 12.0243 7.25214 11.9966 7.66 12C8.417 12 8.909 12.136 9.293 12.426C9.708 12.734 9.968 13.225 9.968 13.93C9.968 14.693 9.689 15.22 9.305 15.545ZM13 12.77H11.468V13.681H12.9V14.415H11.468V16.019H10.562V12.03H13V12.77ZM10 7H9V2L14 7H10Z" fill="#26286E"/>
+                        </svg>
+                        {{ section.settings.vet_guide_button_text }}
+                    </a>
+                    <a class="request-vet-account-button" href={{ section.settings.request_vet_account_url }}>
+                        {{ section.settings.request_vet_account_button_text }}
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% schema %}
+{
+  "name": "Veterinarians Page",
+  "settings": [
+    {
+      "type": "text",
+      "id": "vet_page_heading",
+      "label": "Vet Page Heading",
+      "default": "Veterinarians"
+    },
+    {
+        "type": "text",
+        "id": "vet_page_subheading",
+        "label": "Vet Page Subheading",
+        "default": "Revolutionize your practice with Innovative Pet Lab At-Home GI Stool Tests!"
+    },
+    {
+      "type": "text",
+      "id": "welcome_section_header",
+      "label": "Welcome Section Header",
+      "default": "Welcome!"
+    },
+    {
+        "type": "text",
+        "id": "welcome_section_description",
+        "label": "Welcome Section Description",
+        "default": "We are so glad you are here! Innovative Pet Lab introduces a game-changing solution for your practice—our at-home GI stool tests for dogs and cats."
+    },
+    {
+        "type": "text",
+        "id": "why_choose_innovative_pet_lab_header",
+        "label": "Why Choose Innovative Pet Lab Header",
+        "default": "Why Choose Innovative Pet Lab?"
+    },
+    {
+        "type": "text",
+        "id": "join_the_veterinary_revolution_header",
+        "label": "Join The Veterinary Revolution Header",
+        "default": "Join the Veterinary Revolution"
+    },
+    {
+        "type": "text",
+        "id": "join_the_veterinary_revolution_description",
+        "label": "Join The Veterinary Revolution Description",
+        "default": "Ready to elevate your veterinary practice and provide exceptional care for dogs and cats? Partner with Innovative Pet Lab and experience the future of diagnostics in your clinic. Join us in making a real difference in the lives of your furry patients today!"
+    },
+    {
+        "type": "text",
+        "id": "vet_guide_button_text",
+        "label": "Vet Guide Button Text",
+        "default": "Vet Guide for IPL Testing"
+    },
+    {
+        "type": "url",
+        "id": "vet_guide_url",
+        "label": "Vet Guide URL",
+    },
+    {
+        "type": "text",
+        "id": "request_vet_account_button_text",
+        "label": "Request Vet Account Button Text",
+        "default": "Request your Vet account"
+    },
+    {
+        "type": "url",
+        "id": "request_vet_account_url",
+        "label": "Request Vet Account URL",
+    },
+    {
+        "type": "image_picker",
+        "id": "join_the_veterinary_revolution_image",
+        "label": "Join The Veterinary Revolution image",
+    }
+  ],
+  "blocks": [
+    {
+        "type": "benefit",
+        "name": "Benefit",
+        "settings": [
+            {
+                "type": "image_picker",
+                "id": "icon",
+                "label": "Icon"
+            },
+            {
+                "type": "text",
+                "id": "title",
+                "label": "Benefit Title"
+            },
+            {
+                "type": "textarea",
+                "id": "description",
+                "label": "Benefit Description"
+            }
+        ]
+    },
+   ],
+
+  "presets": [
+    {
+      "name": "Veterinarians Page"
+    }
+  ]
+}
+{% endschema %}
