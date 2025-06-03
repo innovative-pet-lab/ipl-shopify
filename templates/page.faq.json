@@ -11,12 +11,20 @@
   "sections": {
     "page-header": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "seo_heading": "h2",
         "banner_height_desktop": "auto",
         "banner_height_mobile": "auto",
         "bgcolor": "#26286e",
         "textcolor": "#ffffff"
+      }
+    },
+    "page_title_with_back_button_qHJTUh": {
+      "type": "page-title-with-back-button",
+      "name": "Page title with back",
+      "settings": {
+        "page_title": "FAQs"
       }
     },
     "1658318505f1feb568": {
@@ -433,6 +441,7 @@
   },
   "order": [
     "page-header",
+    "page_title_with_back_button_qHJTUh",
     "1658318505f1feb568",
     "faq_section_4Rdjbx",
     "faq_section_6miKkz",
