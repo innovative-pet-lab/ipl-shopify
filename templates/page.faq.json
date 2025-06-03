@@ -203,7 +203,7 @@
           "type": "faq",
           "settings": {
             "heading": "What if I lost my unique ID?",
-            "answer": "<p>If you lose your unique ID, please <a href=\"/pages/contact-1\" target=\"_blank\" title=\"Contact\">contact us via our form.</a> Please include your name and order number.</p>"
+            "answer": "<p>If you lose your unique ID, please <a href=\"/pages/contact-1\" target=\"_blank\" title=\"Contact\"><strong>contact us via our form</strong>.</a> Please include your name and order number.</p>"
           }
         },
         "faq_rQCDeP": {
