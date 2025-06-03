@@ -18,8 +18,8 @@
         {% endif %}
 
         <h1 class="blog-title">{{ article.title }}</h1>
-        <p class="blog-author">{{ article.published_at | date: "%b %d, %Y" }}</p>
-
+        <!-- <p class="blog-author">{{ article.published_at | date: "%b %d, %Y" }}</p>
+ -->
         <div class="blog-content-wrapper">
           <div class="blog-content">
             {{ article.content }}
@@ -47,8 +47,8 @@
                 {% if related.content %}
                   <p class="content">{{ related.content | strip_html | truncatewords: 11 }}</p>
                 {% endif %}
-                <p class="published-date">{{ related.published_at | date: "%b %d, %Y" }}</p>
-              </div>
+                <!-- <p class="published-date">{{ related.published_at | date: "%b %d, %Y" }}</p>
+              </div> -->
             </li>
           {% endunless %}
         {% endfor %}
@@ -74,7 +74,7 @@
 
   <div class="blog-content-wrapper">
     <h1 class="blog-title">{{ article.title }}</h1>
-    <!-- <p class="blog-author">{{ article.author }}</p> -->
+    <p class="blog-author">{{ article.author }}</p>
     {% if article.tags.size > 0 %}
       <ul class="blog-tags">
         {% for tag in article.tags %}
