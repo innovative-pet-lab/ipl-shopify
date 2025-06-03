@@ -141,14 +141,14 @@
           "type": "faq",
           "settings": {
             "heading": "Can I cancel my order?",
-            "answer": "<p>You can cancel an order prior to shipment. Once a kit is shipped, it cannot be canceled. Please see the refund policy for any questions or <a href=\"/pages/contact-1\" target=\"_blank\" title=\"Contact\"><strong>contact us via our form</strong></a>.</p>"
+            "answer": "<p>You can cancel an order prior to shipment. Once a kit is shipped, it cannot be canceled. Please see the refund policy for any questions or <a href=\"/pages/contact-1\" target=\"_blank\" title=\"Contact\">contact us via our form</a>.</p>"
           }
         },
         "faq_YH8Cqh": {
           "type": "faq",
           "settings": {
             "heading": "What if I cannot find my return label or my kit doesn’t contain one?",
-            "answer": "<p>If your kit does not contain or you cannot find your prepaid USPS shipping label, please use our <a href=\"/pages/contact-1\" target=\"_blank\" title=\"Contact\">contact form </a>and include your name, order number or unique ID.</p>"
+            "answer": "<p>If your kit does not contain or you cannot find your prepaid USPS shipping label, please use our <a href=\"/pages/contact-1\" target=\"_blank\" title=\"Contact\"><strong>contact form</strong> </a>and include your name, order number or unique ID.</p>"
           }
         },
         "faq_VHiwDA": {
