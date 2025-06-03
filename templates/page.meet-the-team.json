@@ -191,10 +191,11 @@
       ],
       "name": "Media inline text",
       "settings": {
+        "media_video": "shopify://files/videos/Copy of Our story.mp4",
         "page_section_id": "our-story",
         "title": "Our Story",
-        "thumbnail": "shopify://shop_images/our-story-thumbnail.png",
-        "media_url": "https://www.youtube.com/watch?v=MBp3Jwd8Suw"
+        "thumbnail": "shopify://shop_images/our-story-thumbnail_3149148e-9909-49fd-a747-745092fdfd18.png",
+        "media_url": ""
       }
     },
     "multi_column_logos_nNpfTz": {
