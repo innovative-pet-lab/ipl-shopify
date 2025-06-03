@@ -173,16 +173,16 @@ Custom Shopify section: Displays blog articles in a 3-column flex layout (3 on d
               <div class="blog-title-text">{{ article.title }}</div>
               {% if blog_handle contains 'gut' %}
                 {% assign author_tag = '' %}
-            {% for tag in article.tags %}
-              {% if tag contains 'author:' %}
-                {% assign author_tag = tag | remove: 'author:' | strip %}
-                {% break %}
-              {% endif %}
-            {% endfor %}
+                {% for tag in article.tags %}
+                  {% if tag contains 'author:' %}
+                    {% assign author_tag = tag | remove: 'author:' | strip %}
+                    {% break %}
+                  {% endif %}
+                {% endfor %}
 
-            {% if author_tag != '' %}
-              <p class="blog-author">{{ author_tag }}</p>
-            {% endif %}
+                {% if author_tag != '' %}
+                  <p class="blog-author">{{ author_tag }}</p>
+                {% endif %}
               {% endif %}
               <ul class="blog-tags">
                 {% for tag in article.tags %}
