@@ -227,13 +227,21 @@
             "photo": "shopify://shop_images/petcare-innovation-logo.png",
             "description": "Petcare Innovation <br>\nSummit <br>\n2022 Best in Show <br>\nSpotlight"
           }
+        },
+        "card_awards_9qkNC8": {
+          "type": "card-awards",
+          "settings": {
+            "photo": "shopify://shop_images/innovation-summit-logo.png",
+            "description": "Pet Care Innovation Network <br>\nVeterinary Innovation Summit: <br>\n2024 Pitch Winner"
+          }
         }
       },
       "block_order": [
         "card_awards_bQhXUB",
         "card_awards_XEmmGT",
         "card_awards_RpBxDT",
-        "card_awards_dXTBxz"
+        "card_awards_dXTBxz",
+        "card_awards_9qkNC8"
       ],
       "name": "Multi-column logo cards",
       "settings": {
