@@ -83,7 +83,7 @@
             >
               {% if forloop.first %}{% else %}<hr style="display: block; border-top: 1px solid #ECF0EF;">{% endif %}
               <div
-                class="yv-accordion-header faq-{{ section.id }} faqSection-header {% if forloop.first %}active{% endif %}"
+                class="yv-accordion-header faq-{{ section.id }} faqSection-header"
                 content="faq-content-{{ block.id }}"
               >
                 <h6 class="accordion-heading text-medium faq-heading">{{ block.settings.heading }}</h6>
@@ -94,7 +94,6 @@
                     viewBox="0 0 24 24"
                     width="16"
                     height="16"
-                    style="display: {% if forloop.first %}none{% else %}block{% endif %};"
                   >
                     <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
                   </svg>
@@ -104,7 +103,7 @@
                     viewBox="0 0 24 24"
                     width="16"
                     height="16"
-                    style="display: {% if forloop.first %}block{% else %}none{% endif %};"
+                    style="display: none;"
                   >
                     <path d="M18 15l-6-6-6 6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
                   </svg>
@@ -113,9 +112,6 @@
               <div
                 class="yv-accordion-content faqSection-content"
                 id="faq-content-{{ block.id }}"
-                {% if forloop.first %}
-                  style="display:block;"
-                {% endif %}
               >
                 <div
                   class="yv-content-body faq-answer"
@@ -136,40 +132,33 @@
   document.addEventListener('DOMContentLoaded', function () {
     const questions = document.querySelectorAll('.yv-accordion-header');
 
-    const toggleAllChevronsDown = (questions) => {
-      questions.forEach((question) => {
-        const chevronDown = question.querySelector('.chevron-down');
-        const chevronUp = question.querySelector('.chevron-up');
-        chevronDown.style.display = 'inline';
-        chevronUp.style.display = 'none';
-      });
-    };
+    questions.forEach((question, index) => {
+      if (question.dataset.initialized === 'true') return;
+      question.dataset.initialized = 'true';
 
-    questions.forEach((question) => {
       question.addEventListener('click', function () {
-        // Set all chevrons to down except the clicked one
-        toggleAllChevronsDown(questions);
-
         const content = this.nextElementSibling;
         const chevronDown = this.querySelector('.chevron-down');
         const chevronUp = this.querySelector('.chevron-up');
 
-        if (content && content.classList.contains('yv-accordion-content')) {
-          const isOpen = content.style.display === 'block';
+        // Reset all icons
+        document.querySelectorAll('.chevron-up').forEach((el) => (el.style.display = 'none'));
+        document.querySelectorAll('.chevron-down').forEach((el) => (el.style.display = 'inline'));
 
-          // Toggle accordion content
-          content.style.display = isOpen ? 'none' : 'block';
+        const isOpen = getComputedStyle(content).display === 'block';
+        content.style.display = isOpen ? 'none' : 'block';
 
-          // Toggle active state
-          this.classList.toggle('active');
-
-          // Toggle chevron icons
-          if (chevronDown && chevronUp) {
-            chevronDown.style.display = isOpen ? 'none' : 'inline';
-            chevronUp.style.display = isOpen ? 'inline' : 'none';
-          }
+        if (chevronDown && chevronUp) {
+          chevronDown.style.display = isOpen ? 'inline' : 'none';
+          chevronUp.style.display = isOpen ? 'none' : 'inline';
         }
       });
+
+      // Auto-click only the first question ONCE
+      if (index === 0 && !document.body.dataset.faqAutoOpened) {
+        question.click();
+        document.body.dataset.faqAutoOpened = 'true';
+      }
     });
   });
 </script>
