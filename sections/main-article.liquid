@@ -71,11 +71,15 @@
 
   <div class="blog-content-wrapper">
     <h1 class="blog-title">{{ article.title }}</h1>
-    <p class="blog-author">{{ article.author }}</p>
+    {% if blog.handle contains 'gut' %}
+      <p class="blog-author">{{ article.author }}</p>
+    {% endif %}
     {% if article.tags.size > 0 %}
       <ul class="blog-tags">
         {% for tag in article.tags %}
-          <li class="blog-tag">{{ tag }}</li>
+          {% unless tag contains 'author:' %}
+            <li class="blog-tag">{{ tag }}</li>
+          {% endunless %}
         {% endfor %}
       </ul>
     {% endif %}
@@ -223,6 +227,24 @@
     font-size: 16px; 
     color: #999; 
     margin-bottom:2.5rem;
+  }
+
+  .blog-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 6px;
+    margin-bottom: 1rem;
+    padding: 0!important;
+    list-style: none;
+  }
+
+  .blog-tag {
+    background-color: #99D5E099;
+    font-size: 16px;
+    padding: 0.3rem 1rem;
+    border-radius: 50px;
+    color: #26286E;
   }
 
   @media (max-width: 639px) {
