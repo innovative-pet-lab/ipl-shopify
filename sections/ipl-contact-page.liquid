@@ -1,0 +1,373 @@
+<style>
+    h3, h4, h2, h1 {
+        color: black
+    }
+    p {
+        color: black
+    }
+
+    .descriptions {
+        font-weight: 600;
+    }
+
+    .sub-container {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .contact-form-wrapper,
+    .contact-info-wrapper {
+        width: 100%;
+    }
+
+    .contact-page-form-group {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .page-title-with-button {
+        display: flex;
+        flex-direction: row;
+        gap: 12px;
+        justify-content: flex-start;
+        padding: 24px;
+    }
+
+    .page-title {
+        display: none
+    }
+
+    .headers {
+        color: rgba(38, 40, 110, 1);
+        font-size: 20px;
+        font-weight: 700;
+    }
+
+    .subheaders {
+        font-size: 20px;
+        font-weight: 700;
+    }
+
+    .contact-page-form {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        background-color: white;
+        padding: 24px;
+        box-shadow:
+            0 2px 8px 2px rgba(29, 30, 85, 0.05),
+            0 1px 2px 0 rgba(29, 30, 85, 0.05);
+    }
+
+    .contact-form label {
+        display: block !important;
+        color: rgba(165, 165, 165, 1) !important;
+        text-transform: none !important;
+        font-size: 16px !important;
+        font-weight: 600;
+    }
+
+    .form-control {
+        padding: 12px 16px !important;
+        border-radius: 80px;
+    }
+
+    .send-message-button {
+        align-self: flex-end;
+        border: 2px solid rgba(38, 40, 110, 1);
+        padding: 8px 24px;
+        border-radius: 80px;
+        color: rgba(255, 255, 255, 1);
+        font-weight: 700;
+        background-color: rgba(38, 40, 110, 1);
+        font-size: 14px;
+    }
+
+    .contact-info-container {
+        display: flex;
+        flex-direction: column;
+        padding: 24px;
+        gap: 24px;
+        box-shadow:
+            0 2px 8px 2px rgba(29, 30, 85, 0.05),
+            0 1px 2px 0 rgba(29, 30, 85, 0.05);
+        background-color: white;
+    }
+
+    .contact-info-card {
+        display: flex;
+        flex-direction: row;
+        gap: 16px;
+        align-items: center;
+    }
+
+    .contact-info-image {
+        border-radius: 4px;
+        background-color: rgba(236, 240, 239, 0.6);
+        padding: 12px;
+        width: 72px;
+        height: 72px;
+        flex-shrink: 0;
+    }
+
+    .contact-info-image img {
+        width: 48px;
+        height: 48px;
+        object-fit: contain;
+    }
+
+    @media (min-width: 768px) {
+        .subheaders {
+            font-size: 32px;
+        }
+
+        .page-title-with-button {
+            display: none;
+        }
+
+        .page-title {
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            padding-top: 40px;
+        }
+
+        .headers {
+            color: black;
+            font-size: 48px;
+        }
+
+        .sub-container {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            justify-content: center;
+            gap: 24px;
+            max-width: 1440px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 40px 40px;
+        }
+
+        .contacts-page {
+            flex-direction: column;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        .contact-page-form {
+            padding: 32px;
+            gap: 24px;
+            border-radius: 16px;
+        }
+
+        .contact-info-container {
+            padding: 32px;
+            border-radius: 16px;
+        }
+
+        .form-control {
+            padding: 12px 24px !important;
+            border-radius: 12px;
+        }
+
+        .contact-form label {
+            display: block !important;
+            color: rgba(165, 165, 165, 1) !important;
+            text-transform: none !important;
+            font-size: 20px !important;
+            font-weight: 600;
+        }
+
+        .send-message-button {
+            padding: 8px 40px;
+            font-size: 18px;
+        }
+
+        .descriptions {
+            font-size: 20px;
+        }
+    }
+</style>
+
+<div class="contacts-page">
+    <div class="heading">
+        <div class="page-title-with-button">
+            <button onclick="window.history.back()">
+                <svg
+                    width="20"
+                    height="16"
+                    viewBox="0 0 20 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                <path
+                    d="M19 8H1.5"
+                    stroke="#26286E"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round">
+                </path>
+                <path
+                    d="M8 15L1 8L8 1"
+                    stroke="#26286E"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round">
+                </path>
+                </svg>
+            </button>
+            <h2 class="headers">
+                {{ section.settings.contact_page_heading }}
+            </h2>
+        </div>
+        <h1 class="page-title headers">
+            {{ section.settings.contact_page_heading }}
+        </h1>
+    </div>
+
+    <div class="sub-container">
+        <div class="contact-form-wrapper">
+            {%- form 'contact', id: 'ContactForm' -%}
+                <div class="contact-page-form">
+                    <h3 class="subheaders">
+                        {{ section.settings.get_in_touch_text }}
+                    </h3>
+                    <div class="contact-page-form-group">
+                        <label for="ContactForm-username">{{ 'sections.contact.name' | t }}</label>
+                        <input type="text" class="form-control" id="ContactForm-username" name="contact[Name]" placeholder="{{ 'sections.contact.name' | t }}" required>
+                    </div>
+                    <div class="contact-page-form-group">
+                        <label
+                            class="field__label"
+                            for="ContactForm-email">{{ 'templates.contact.form.email' | t }}
+                        </label>
+                        <input
+                            autocomplete="email"
+                            type="email"
+                            id="ContactForm-email"
+                            class="form-control"
+                            name="contact[email]"
+                            spellcheck="false"
+                            autocapitalize="off"
+                            value="{% if form.email %}{{ form.email }}{% elsif customer %}{{ customer.email }}{% endif %}"
+                            aria-required="true"
+                            {% if form.errors contains 'email' %}
+                            aria-invalid="true"
+                            aria-describedby="ContactForm-email-error"
+                            {% endif %}
+                            placeholder="{{ 'sections.contact.email' | t }}"
+                            required
+                        >
+                        {% if form.errors contains 'email' %}
+                        <span class="error-text">
+                            {{ form.errors.translated_fields['email'] | capitalize }} {{ form.errors.messages['email'] }}
+                        </span>
+                        {%- endif -%}
+                    </div>
+                    <div class="contact-page-form-group">
+                        <label for="ContactForm-body">{{ 'sections.contact.message' | t }}</label>
+                        <textarea id="ContactForm-body" class="form-control" name="contact[Message]"  placeholder="{{ 'sections.contact.message' | t }}" rows="3" required>{{ form.body }}</textarea>
+                    </div>
+                    <button type="submit" class="send-message-button">
+                        {{ section.settings.contact_page_send_button_text }}
+                    </button>
+                </div>
+            {%- endform 'contact', id: 'ContactForm' -%}
+        </div>
+        <div class="contact-info-wrapper">
+            <div class="contact-info-container">
+                <h3 class="subheaders">
+                    {{ section.settings.contact_page_support_header }}
+                </h3>
+                {% for block in section.blocks %}
+                    {% if block.type == 'contact_info' %}
+                        <div class="contact-info-card">
+                            {% if block.settings.icon %}
+                                <div class="contact-info-image">
+                                    <img
+                                        src="{{ block.settings.icon | image_url }}"
+                                        alt=""
+                                        width="48px"
+                                        height="48px"
+                                    />
+                                </div>
+                            {% endif %}
+                            <div class="descriptions" style="display: flex; flex-direction: column;">
+                                <p style="color: rgba(165, 165, 165, 1);">
+                                    {{ block.settings.support_subheading }}
+                                </p>
+                                <p class="descriptions">
+                                    {{ block.settings.support_details }}
+                                </p>
+                            </div>
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+
+{% schema %}
+{
+  "name": "Contact Page",
+  "settings": [
+    {
+      "type": "text",
+      "id": "contact_page_heading",
+      "label": "Contact Page Heading",
+      "default": "Contact Us"
+    },
+    {
+        "type": "text",
+        "id": "get_in_touch_text",
+        "label": "Contact Page Get in Touch Header",
+        "default": "Get in touch"
+    },
+    {
+        "type": "text",
+        "id": "contact_page_send_button_text",
+        "label": "Contact Page Send Button Text",
+        "default": "Send message"
+    },
+    {
+        "type": "text",
+        "id": "contact_page_support_header",
+        "label": "Contact Page Support Header",
+        "default": "Support"
+    },
+  ],
+  "blocks": [
+    {
+        "type": "contact_info",
+        "name": "Contact Info",
+        "settings": [
+            {
+                "type": "image_picker",
+                "id": "icon",
+                "label": "Icon"
+            },
+            {
+                "type": "text",
+                "id": "support_subheading",
+                "label": "Support Subheading"
+            },
+            {
+                "type": "text",
+                "id": "support_details",
+                "label": "Support Details"
+            }
+        ]
+    },
+   ],
+
+  "presets": [
+    {
+      "name": "Contact Page"
+    }
+  ]
+}
+{% endschema %}
