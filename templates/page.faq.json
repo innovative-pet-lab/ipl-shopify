@@ -269,7 +269,7 @@
           "type": "faq",
           "settings": {
             "heading": "What if I have further questions about my test results?",
-            "answer": "<p>Please send your questions <a href=\"/pages/contact-1\" target=\"_blank\" title=\"Contact\">via our contact form</a> and we’d be happy to answer your questions</p>"
+            "answer": "<p>Please send your questions <a href=\"/pages/contact-1\" target=\"_blank\" title=\"Contact\"><strong>via our contact form</strong></a> and we’d be happy to answer your questions</p>"
           }
         },
         "faq_CNFCWL": {
