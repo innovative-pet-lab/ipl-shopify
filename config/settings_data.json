@@ -1159,7 +1159,7 @@
       ".yv-main-product-detail .samitaWS-customized-price {font-size: 24px; font-weight: bold;}",
       ".yv-prizebox {gap: 8px;}",
       ".breadcrumb-list,.yv-blog-tags {display: none;}",
-      ".cart-total-item strong span {font-size: 2rem!important;}"
+      ".cart-total-list .cart-total-item strong span {font-size: 2rem !important;}"
     ]
   }
 }
