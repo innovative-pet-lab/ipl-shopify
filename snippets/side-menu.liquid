@@ -39,9 +39,6 @@
           {%- assign itemCount = 1 -%}
           <ul class="list-unstyled navbar-nav navbar-nav-sidebar">
             {%- for link in linklists[section.settings.menu].links -%}
-              {%- comment %}<locksmith:4e69>{% endcomment -%}
-                {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: link, subject_parent: linklists[section.settings.menu], variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% else %}{% continue %}{% endif -%}
-              {%- comment %}</locksmith:4e69>{% endcomment -%}
               {%- liquid
                 assign itemCount = itemCount | plus: 1
                 assign menuTitle = link.title | handleize
@@ -65,9 +62,6 @@
     
             {%- if blockData.settings.show_submenu -%}
             {%- for childlink in link.links -%}
-            {%- comment %}<locksmith:f3e7>{% endcomment -%}
-              {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: childlink, subject_parent: link, variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% else %}{% continue %}{% endif -%}
-            {%- comment %}</locksmith:f3e7>{% endcomment -%}
             <li class="nav-item {% if childlink.links != blank %}dropdown{% endif %} ">
               {%- unless childlink.links != blank -%}
               <a class="toggle-level" href="{{ childlink.url }}">
@@ -80,9 +74,6 @@
               <div class="inner grandchild">
                 <ul class="list-unstyled">
                   {%- for grandchildlink in childlink.links -%}
-                  {%- comment %}<locksmith:29ca>{% endcomment -%}
-                    {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: grandchildlink, subject_parent: childlink, variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% else %}{% continue %}{% endif -%}
-                  {%- comment %}</locksmith:29ca>{% endcomment -%}
                   <li class="nav-item">
                     <a href="{{ grandchildlink.url }}">{{ grandchildlink.title | escape   }}</a>
                   </li>
@@ -128,9 +119,6 @@
                 <div class="inner-child-menu">
                   <ul class="list-unstyled yv-megamenu-product-list ">
                     {%- for product in collection.products limit: 4 -%} 
-                    {%- comment %}<locksmith:4be7>{% endcomment -%}
-                      {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: product, subject_parent: collection, variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% else %}{% continue %}{% endif -%}
-                    {%- comment %}</locksmith:4be7>{% endcomment -%} 
                     {%- assign current_variant = product.selected_or_first_available_variant -%}       
                     <li class="yv-megamenu-product-box">
                       <div class="yv-megamenu-product-img">                 
@@ -216,9 +204,6 @@
                 <div class="inner-child-menu">
                   <ul class="list-unstyled">
                     {%- for product in collection.products limit: blockData.settings.products_count -%}
-                    {%- comment %}<locksmith:67b5>{% endcomment -%}
-                      {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: product, subject_parent: collection, variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% else %}{% continue %}{% endif -%}
-                    {%- comment %}</locksmith:67b5>{% endcomment -%}
                     <li>
                       <a href="{{ product.url }}" class="yv-megamenu-item-link">{{ product.title | strip_html }}</a>
                     </li>
@@ -283,9 +268,6 @@
                         {{ menuDropdown }}
                       {% else %}
                         {%- for childlink in link.links -%}
-                          {%- comment %}<locksmith:b3a6>{% endcomment -%}
-                            {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: childlink, subject_parent: link, variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% else %}{% continue %}{% endif -%}
-                          {%- comment %}</locksmith:b3a6>{% endcomment -%}
                           <li class="nav-item {% if childlink.links != blank %}dropdown{% endif %}">
                             {%- unless childlink.links != blank -%}
                               <a class="toggle-level {% if childlink.title contains 'empty' %}empty{% endif %}" href="{{ childlink.url }}">
@@ -303,9 +285,6 @@
                               <div class="inner grandchild">
                                 <ul class="list-unstyled">
                                   {%- for grandchildlink in childlink.links -%}
-                                    {%- comment %}<locksmith:fb79>{% endcomment -%}
-                                      {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: grandchildlink, subject_parent: childlink, variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% else %}{% continue %}{% endif -%}
-                                    {%- comment %}</locksmith:fb79>{% endcomment -%}
                                     <li class="nav-item">
                                       <a href="{{ grandchildlink.url }}">
                                         {{- grandchildlink.title | split: '{badge' | first | escape -}}
@@ -349,9 +328,6 @@
       >
         <ul class="list-unstyled navbar-nav navbar-nav-sidebar">
           {%- for link in linklists[section.settings.catalog_menu].links -%}
-          {%- comment %}<locksmith:0e41>{% endcomment -%}
-            {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: link, subject_parent: linklists[section.settings.catalog_menu], variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% else %}{% continue %}{% endif -%}
-          {%- comment %}</locksmith:0e41>{% endcomment -%}
           {% assign menuTitle = link.title | handleize  %} 
           {% capture menubadge %}
             {%  for block in section.blocks %}
@@ -383,9 +359,6 @@
               <div class="inner child">
                 <ul class="list-unstyled">
                   {%- for childlink in link.links -%}
-                    {%- comment %}<locksmith:0d91>{% endcomment -%}
-                      {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: childlink, subject_parent: link, variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% else %}{% continue %}{% endif -%}
-                    {%- comment %}</locksmith:0d91>{% endcomment -%}
                     <li class="nav-item {% if childlink.links != blank %}dropdown{% endif %}">
                       {%- unless childlink.links != blank -%}
                         <a class="toggle-level" href="{{ childlink.url }}"> {{ childlink.title | escape }}</a>
@@ -398,9 +371,6 @@
                         <div class="inner grandchild">
                           <ul class="list-unstyled">
                             {%- for grandchildlink in childlink.links -%}
-                              {%- comment %}<locksmith:1ebc>{% endcomment -%}
-                                {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: grandchildlink, subject_parent: childlink, variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% else %}{% continue %}{% endif -%}
-                              {%- comment %}</locksmith:1ebc>{% endcomment -%}
                               {% liquid
                                 assign grand_link_image = ''
                                 if grandchildlink.type == 'collection_link'
@@ -439,48 +409,8 @@
               </div>
             </li>
           {%- endfor -%}
-          {% comment %} {%- if customer -%}
-            <li class="nav-item {% if link.current %}active{% endif %}">
-              <a class="list-menu__item" href="{{- routes.account_url -}}">{{ 'customer.account.title' | t }}</a>
-            </li>
-          {%- endif -%} {% endcomment %}
         </ul>
-  </div>
-
-
-    {% comment %} {% liquid
-          if section.settings.enable_language_selector or section.settings.enable_currency_selector
-            if catalogDesktop
-            echo '<div class="header-form d-lg-none">'
-              else
-            echo '<div class="header-form">'
-            endif
-            render 'header-localization', section: section, formId: 'headerMobileForm'
-            echo '</div>'
-          endif
-        %} {% endcomment %}
-    {% comment %}           
-    {% render 'social-media-icons' catalogDesktop:catalogDesktop %}
-    {%- if section.settings.trust_badge_logo != blank -%}
-      <div class="header__icons {% if catalogDesktop %}d-lg-none{% endif %}">
-        <div class="header-img d-block d-lg-none">
-          {%- if section.settings.trust_badge_link != blank -%}
-            <a href="{{ section.settings.trust_badge_link }}">
-          {% endif %}
-          <img
-            src="{{ section.settings.trust_badge_logo | img_url: 'master' }}"
-            alt="{{ section.settings.trust_badge_logo.alt | default: shop.name | strip_html }}"
-            width="{{ section.settings.trust_badge_logo.width }}"
-            height="{{ section.settings.trust_badge_logo.height }}"
-          >
-          {%- if section.settings.trust_badge_link != blank -%}
-            </a>
-          {% endif %}
-        </div>
-      </div>
-    {% endif %} {% endcomment %}
-
-
+    </div>
   </div>
 
 <div class="inner-footer">
@@ -489,7 +419,7 @@
         <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M14 0.666687C15.7681 0.666687 17.4638 1.36907 18.714 2.61931C19.9642 3.86955 20.6666 5.56524 20.6666 7.33335C20.6666 9.10146 19.9642 10.7972 18.714 12.0474C17.4638 13.2976 15.7681 14 14 14C12.2318 14 10.5362 13.2976 9.28591 12.0474C8.03567 10.7972 7.33329 9.10146 7.33329 7.33335C7.33329 5.56524 8.03567 3.86955 9.28591 2.61931C10.5362 1.36907 12.2318 0.666687 14 0.666687ZM14 4.00002C13.1159 4.00002 12.2681 4.35121 11.6429 4.97633C11.0178 5.60145 10.6666 6.4493 10.6666 7.33335C10.6666 8.21741 11.0178 9.06525 11.6429 9.69038C12.2681 10.3155 13.1159 10.6667 14 10.6667C14.884 10.6667 15.7319 10.3155 16.357 9.69038C16.9821 9.06525 17.3333 8.21741 17.3333 7.33335C17.3333 6.4493 16.9821 5.60145 16.357 4.97633C15.7319 4.35121 14.884 4.00002 14 4.00002ZM14 15.6667C18.45 15.6667 27.3333 17.8834 27.3333 22.3334V27.3334H0.666626V22.3334C0.666626 17.8834 9.54996 15.6667 14 15.6667ZM14 18.8334C9.04996 18.8334 3.83329 21.2667 3.83329 22.3334V24.1667H24.1666V22.3334C24.1666 21.2667 18.95 18.8334 14 18.8334Z" fill="#26286E"/>
         </svg>  
-        <a href="">My Account</a>
+        <a href="{{- routes.account_url -}}">{{ 'customer.account.title' | t }}</a>
     </div>
     <svg width="7" height="14" viewBox="0 0 7 14" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path fill-rule="evenodd" clip-rule="evenodd" d="M6.73276 6.24365C6.90387 6.44084 7 6.70825 7 6.98708C7 7.26591 6.90387 7.53332 6.73276 7.73051L1.56929 13.679C1.48509 13.7794 1.38438 13.8595 1.27302 13.9146C1.16166 13.9697 1.04188 13.9987 0.920688 14C0.799493 14.0012 0.679302 13.9746 0.567127 13.9217C0.454953 13.8688 0.353041 13.7907 0.26734 13.692C0.181639 13.5933 0.113864 13.4759 0.0679696 13.3467C0.0220754 13.2174 -0.00101869 13.079 3.4463e-05 12.9393C0.00108762 12.7997 0.0262672 12.6617 0.0741039 12.5334C0.121941 12.4052 0.191476 12.2891 0.278654 12.1921L4.7968 6.98708L0.278654 1.78203C0.112388 1.58371 0.0203869 1.31809 0.0224665 1.04239C0.0245462 0.766681 0.12054 0.502946 0.289772 0.307984C0.459005 0.113023 0.687936 0.00243556 0.927258 3.97504e-05C1.16658 -0.00235606 1.39714 0.103632 1.56929 0.295175L6.73276 6.24365Z" fill="#26286E"/>
