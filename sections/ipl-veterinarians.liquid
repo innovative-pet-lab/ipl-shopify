@@ -85,7 +85,7 @@
         box-shadow:
             0 2px 8px 2px rgba(29, 30, 85, 0.05),
             0 1px 2px 0 rgba(29, 30, 85, 0.05);
-        background:
+        background-image:
             linear-gradient(
                 to right,
                 rgba(207, 208, 203, 1) 0%,
@@ -93,13 +93,17 @@
                 rgba(207, 208, 203, 0.1) 60%,
                 rgba(207, 208, 203, 0) 100%
             ),
-        url({{ section.settings.join_the_veterinary_revolution_image | image_url }});
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: 20% center;
+            url({{ section.settings.join_the_veterinary_revolution_image | image_url }});
+        background-repeat: no-repeat, no-repeat;
+        background-size: 100% 100%, 170%;
+        background-position: left center, left 50px center;
         background-blend-mode: normal;
         display: flex;
         flex-direction: column;
+    }
+
+    .join-the-veterinary-revolution .descriptions {
+        max-width: 230px;
     }
 
     .vet-guide-button {
@@ -113,6 +117,8 @@
         justify-content: center;
         align-items: center;
         gap: 8px;
+        background-color: rgba(255, 255, 255, 0.3)
+
     }
 
     .request-vet-account-button {
@@ -138,19 +144,28 @@
     }
 
     .join-the-veterinary-revolution-contents {
-        max-width: 480px;
         gap: 16px;
         display: flex;
         flex-direction: column;
         line-height: 16px;
     }
 
+    @media(min-width: 425px) {
+        .join-the-veterinary-revolution .descriptions {
+            max-width: 255px;
+        }
+        
+        .join-the-veterinary-revolution {
+            {% comment %} background-size: 100% 100%, 160%; {% endcomment %}
+            background-position: left center, left 60px center;
+        }
+    }
+
     @media(min-width: 471px) {
         .vet-buttons {
             display: flex;
             gap: 16px;
-            align-items: center;
-            flex-direction: row;
+            flex-direction: column-reverse;
             gap: 8px;
         }
 
@@ -162,23 +177,89 @@
         .request-vet-account-button {
             padding: 8px 8px;
         }
+
+       .join-the-veterinary-revolution .descriptions {
+            max-width: 335px;
+        }
+
+        .join-the-veterinary-revolution {
+            background-position: left center, left 172px center;
+            background-size: 100% 100%, 115%;
+                    background-image:
+            linear-gradient(
+                to right,
+                rgba(207, 208, 203, 1) 0%,
+                rgba(207, 208, 203, 1) 40%,
+                rgba(207, 208, 203, 0.9) 50%,
+                rgba(207, 208, 203, 0) 100%
+            ),
+            url({{ section.settings.join_the_veterinary_revolution_image | image_url }});
+        } 
     }
 
-    @media(min-width: 483px) {
+    @media(min-width: 512px) {
+       .join-the-veterinary-revolution .descriptions {
+            max-width: 335px;
+        }
+
+        .join-the-veterinary-revolution {
+            background-position: left center, left 155px center;
+            background-size: 100% 100%, 130%;
+            background-image:
+                linear-gradient(
+                    to right,
+                    rgba(207, 208, 203, 1) 0%,
+                    rgba(207, 208, 203, 1) 40%,
+                    rgba(207, 208, 203, 0.9) 50%,
+                    rgba(207, 208, 203, 0) 100%
+                ),
+                url({{ section.settings.join_the_veterinary_revolution_image | image_url }});
+        } 
+    }
+
+    @media(min-width: 525px) {
         .vet-buttons {
-            display: flex;
-            gap: 16px;
-            align-items: center;
             flex-direction: row;
         }
+    }
 
-        .vet-guide-button {
-            padding: 8px 8px;
+    @media(min-width: 600px) {
+       .join-the-veterinary-revolution .descriptions {
+            max-width: 300px;
+        }
+        .join-the-veterinary-revolution {
+            background-position: left center, left 110px center;
+            background-size: 100% 100%, 100%;
+            background-image:
+                linear-gradient(
+                    to right,
+                    rgba(207, 208, 203, 1) 0%,
+                    rgba(207, 208, 203, 1) 40%,
+                    rgba(207, 208, 203, 0) 50%,
+                    rgba(207, 208, 203, 0) 100%
+                ),
+                url({{ section.settings.join_the_veterinary_revolution_image | image_url }});
+        } 
+    }
+
+    @media(min-width: 700px) {
+       .join-the-veterinary-revolution .descriptions {
+            max-width: 335px;
         }
 
-        .request-vet-account-button {
-            padding: 8px 8px;
-        }
+        .join-the-veterinary-revolution {
+            background-position: left center, left 155px center;
+            background-size: 100% 100%, 100%;
+            background-image:
+                linear-gradient(
+                    to right,
+                    rgba(207, 208, 203, 1) 0%,
+                    rgba(207, 208, 203, 1) 40%,
+                    rgba(207, 208, 203, 0) 50%,
+                    rgba(207, 208, 203, 0) 100%
+                ),
+                url({{ section.settings.join_the_veterinary_revolution_image | image_url }});
+        } 
     }
 
     @media(min-width: 768px) {
@@ -263,14 +344,21 @@
                     rgba(207, 208, 203, 0.1) 100%
                 ),
                 url({{ section.settings.join_the_veterinary_revolution_image | image_url }});
-            background-repeat: no-repeat;
-            background-size: contain;
-            background-position: center right;
+          background-position: left center, left 155px center;
+            background-size: 100% 100%, 100%;
+            background-image:
+                linear-gradient(
+                    to right,
+                    rgba(207, 208, 203, 1) 0%,
+                    rgba(207, 208, 203, 1) 40%,
+                    rgba(207, 208, 203, 0) 50%,
+                    rgba(207, 208, 203, 0) 100%
+                ),
+                url({{ section.settings.join_the_veterinary_revolution_image | image_url }});
             background-blend-mode: normal;
             display: flex;
-            flex-direction: row;
+            flex-direction: column;
             justify-content: space-between;
-            align-items: center;
             padding: 56px 40px;
             gap: 32px;
             border-radius: 24px;
@@ -308,16 +396,18 @@
 
         .vet-buttons {
             display: flex;
-            flex-direction: row;
             gap: 16px;
         }
 
         .join-the-veterinary-revolution-contents {
-            max-width: 500px;
             gap: 24px;
             display: flex;
             flex-direction: column;
             line-height: 24px;
+        }
+
+        .join-the-veterinary-revolution .descriptions {
+            max-width: 400px;
         }
     }
 </style>
@@ -395,24 +485,24 @@
             </div>
         </div>
         <div class="join-the-veterinary-revolution">
+            <h2 class="join-the-veterinary-revolution-header">
+                {{ section.settings.join_the_veterinary_revolution_header }}
+            </h2>
             <div class="join-the-veterinary-revolution-contents">
-                <h2 class="join-the-veterinary-revolution-header">
-                    {{ section.settings.join_the_veterinary_revolution_header }}
-                </h2>
                 <p class="descriptions">
                     {{ section.settings.join_the_veterinary_revolution_description }}
                 </p>
-                <div class="vet-buttons">
-                    <a class="vet-guide-button" href={{ section.settings.vet_guide_url }}>
-                        <svg width="16" height="20" viewBox="0 0 16 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M10 0H2C1.46957 0 0.960859 0.210714 0.585786 0.585786C0.210714 0.960859 0 1.46957 0 2V18C0 18.5304 0.210714 19.0391 0.585786 19.4142C0.960859 19.7893 1.46957 20 2 20H14C14.5304 20 15.0391 19.7893 15.4142 19.4142C15.7893 19.0391 16 18.5304 16 18V6L10 0ZM5.498 14.19C5.189 14.48 4.733 14.61 4.202 14.61C4.09902 14.6119 3.99605 14.6059 3.894 14.592V16.018H3V12.082C3.40347 12.022 3.81112 11.9946 4.219 12C4.776 12 5.172 12.106 5.439 12.319C5.693 12.521 5.865 12.852 5.865 13.242C5.864 13.634 5.734 13.965 5.498 14.19ZM9.305 15.545C8.885 15.894 8.246 16.06 7.465 16.06C6.997 16.06 6.666 16.03 6.441 16V12.083C6.84462 12.0243 7.25214 11.9966 7.66 12C8.417 12 8.909 12.136 9.293 12.426C9.708 12.734 9.968 13.225 9.968 13.93C9.968 14.693 9.689 15.22 9.305 15.545ZM13 12.77H11.468V13.681H12.9V14.415H11.468V16.019H10.562V12.03H13V12.77ZM10 7H9V2L14 7H10Z" fill="#26286E"/>
-                        </svg>
-                        {{ section.settings.vet_guide_button_text }}
-                    </a>
-                    <a class="request-vet-account-button" href={{ section.settings.request_vet_account_url }}>
-                        {{ section.settings.request_vet_account_button_text }}
-                    </a>
-                </div>
+            </div>
+            <div class="vet-buttons">
+                <a class="vet-guide-button" href={{ section.settings.vet_guide_url }}>
+                    <svg width="16" height="20" viewBox="0 0 16 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10 0H2C1.46957 0 0.960859 0.210714 0.585786 0.585786C0.210714 0.960859 0 1.46957 0 2V18C0 18.5304 0.210714 19.0391 0.585786 19.4142C0.960859 19.7893 1.46957 20 2 20H14C14.5304 20 15.0391 19.7893 15.4142 19.4142C15.7893 19.0391 16 18.5304 16 18V6L10 0ZM5.498 14.19C5.189 14.48 4.733 14.61 4.202 14.61C4.09902 14.6119 3.99605 14.6059 3.894 14.592V16.018H3V12.082C3.40347 12.022 3.81112 11.9946 4.219 12C4.776 12 5.172 12.106 5.439 12.319C5.693 12.521 5.865 12.852 5.865 13.242C5.864 13.634 5.734 13.965 5.498 14.19ZM9.305 15.545C8.885 15.894 8.246 16.06 7.465 16.06C6.997 16.06 6.666 16.03 6.441 16V12.083C6.84462 12.0243 7.25214 11.9966 7.66 12C8.417 12 8.909 12.136 9.293 12.426C9.708 12.734 9.968 13.225 9.968 13.93C9.968 14.693 9.689 15.22 9.305 15.545ZM13 12.77H11.468V13.681H12.9V14.415H11.468V16.019H10.562V12.03H13V12.77ZM10 7H9V2L14 7H10Z" fill="#26286E"/>
+                    </svg>
+                    {{ section.settings.vet_guide_button_text }}
+                </a>
+                <a class="request-vet-account-button" href={{ section.settings.request_vet_account_url }}>
+                    {{ section.settings.request_vet_account_button_text }}
+                </a>
             </div>
         </div>
     </div>
@@ -426,7 +516,7 @@
       "type": "text",
       "id": "vet_page_heading",
       "label": "Vet Page Heading",
-      "default": "Veterinarians"
+      "default": "Providers"
     },
     {
         "type": "text",
@@ -479,12 +569,12 @@
         "type": "text",
         "id": "request_vet_account_button_text",
         "label": "Request Vet Account Button Text",
-        "default": "Request your Vet account"
+        "default": "Request your Provider account"
     },
     {
         "type": "url",
         "id": "request_vet_account_url",
-        "label": "Request Vet Account URL",
+        "label": "Request Provider Account URL",
     },
     {
         "type": "image_picker",
