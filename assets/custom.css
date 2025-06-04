@@ -921,6 +921,10 @@ header .side-menu .inner-side ul li .list-menu__item {
     cursor: not-allowed!important;
 }
 
+.yv-shipping-estimations {
+    display: none;
+}
+
 /* hide PDP sticky add to cart on desktop */
 .yv-product-viewbar {
     display: none;
