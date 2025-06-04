@@ -73,7 +73,7 @@
         "vet_guide_button_text": "Provider Guide for IPL Testing",
         "vet_guide_url": "",
         "request_vet_account_button_text": "Request your Vet account",
-        "request_vet_account_url": "shopify://pages/request-a-vet-account",
+        "request_vet_account_url": "shopify://pages/request-provider-account",
         "join_the_veterinary_revolution_image": "shopify://shop_images/image_15_c8812bfc-f89f-47e2-93a4-1b864f0c82ee.png"
       }
     }
