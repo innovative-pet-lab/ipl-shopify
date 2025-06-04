@@ -72,7 +72,17 @@
   <div class="blog-content-wrapper">
     <h1 class="blog-title">{{ article.title }}</h1>
     {% if blog.handle contains 'gut' %}
-      <p class="blog-author">{{ article.author }}</p>
+    {% assign author_tag = '' %}
+    {% for tag in article.tags %}
+    {% if tag contains 'author:' %}
+    {% assign author_tag = tag | remove: 'author:' | strip %}
+    {% break %}
+    {% endif %}
+    {% endfor %}
+
+    {% if author_tag != '' %}
+    <p class="blog-author">{{ author_tag }}</p>
+    {% endif %}
     {% endif %}
     {% if article.tags.size > 0 %}
       <ul class="blog-tags">
