@@ -307,16 +307,15 @@
           </ul>
         </div>
         <div class="lower-nav">
-          <div class="menu-login-btn">
-            <a class="drawer-login-btn register" href="{{ routes.account_login_url }}">
+        <div class="menu-login-btn">
+          {% assign menu = linklists['right-menu'] %}
+
+          {% if menu.links.size > 0 %}
+            <a class="drawer-login-btn register" href="{{ menu.links[0].url }}">
               Register Kit
-            </a><br><br>
-            {%- if customer -%}
-              <a class="drawer-login-btn" href="{{ routes.account_logout_url }}">{{ 'customer.log_out' | t }}</a>
-            {%- else -%}
-              <a class="drawer-login-btn" href="{{ routes.account_login_url }}">{{ 'customer.log_in' | t }}</a>
-            {%- endif -%}
-          </div>
+            </a>
+          {% endif %}
+        </div>
         </div>
       </div>
       <div
