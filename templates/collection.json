@@ -39,7 +39,7 @@
       "type": "main-collection-2",
       "settings": {
         "promotional_banner_size": "medium",
-        "promo_banner_image": "shopify://shop_images/Frame_67.jpg",
+        "promo_banner_image": "shopify://shop_images/product_page_image.png",
         "promo_banner_text": "Do you want to make sure they live the healthiest, happiest life possible?",
         "promo_banner_button_label": "Learn more",
         "promo_banner_link": "shopify://pages/cat-guide-page"
@@ -93,7 +93,7 @@
         "template--16809123774757__8231b1f4-8107-414d-9432-3a48f23e000d-166781443747b75229-3"
       ],
       "custom_css": [
-        ".text-medium {font-weigth: 500 !important; color: #26286E !important;}"
+        ".text-medium {font-weigth: 500 !important; color: #26286e !important;}"
       ],
       "settings": {
         "column_background": false,
