@@ -1158,7 +1158,7 @@
   },
   "platform_customizations": {
     "custom_css": [
-      "@media (max-width: 768px) {.cart-items-wrapper a {font-size: 14px; }}"
+      "@media (max-width: 768px) {.cart-items-wrapper a {font-size: 14px!important; }}"
     ]
   }
 }
