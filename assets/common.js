@@ -3582,7 +3582,7 @@ function toggleForm(event) {
 }
 function toggleAccountPopup(event, accountType) {
   event.preventDefault();
-  window.location.href = `https://store.xecurify.com/moas/broker/login/shopify/4135dc-4.myshopify.com/account?idpname=auth0_Ews`
+  window.location.href = `https://store.xecurify.com/moas/broker/login/shopify/www.innovativepetlab.com/account?idpname=auth0_AAx`
 }
 
 function toggleStoreDetails(event) {
