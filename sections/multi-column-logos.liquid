@@ -1,6 +1,6 @@
 <style>
   .awards-section {
-    margin: 0 40px 40px 40px;
+    margin: 0 120px 40px 120px;
   }
 
   .awards-heading {
@@ -15,7 +15,7 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
     margin: 0;
     width: 100%;
     height: auto;
@@ -24,6 +24,7 @@
   .award-card {
     display: flex;
     flex-direction: column;
+    max-height: 300px;
   }
 
   .award-photo {
@@ -83,7 +84,7 @@
 
   <div class="cards-container">
     {% for block in section.blocks %}
-      <div class="award-card col-sm-3">
+      <div class="award-card col-sm-4">
         <img
           class="award-photo"
           src="{{ block.settings.photo | image_url }}"

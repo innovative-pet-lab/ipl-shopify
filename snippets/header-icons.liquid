@@ -1,13 +1,5 @@
 <div class="header__icons {{ section.settings.icon_weight }}-icon">
   <div class="right-menu">
-    {%- comment %}<locksmith:d778>{% endcomment -%}
-      {%- assign locksmith_413b_forloop__size = 0 %}{%- for link in linklists['right-menu'].links -%}{% capture var %}{% render 'locksmith-variables', scope: 'subject', subject: link, subject_parent: linklists.right-menu, variable: 'transparent' %}{% endcapture %}{% if var == 'true' %}{% assign locksmith_413b_forloop__size = locksmith_413b_forloop__size | plus: 1 %}{% endif %}{% endfor %}{% assign locksmith_413b_forloop__index = nil -%}
-    {%- comment %}</locksmith:d778>{% endcomment -%}
-    {%- for link in linklists['right-menu'].links -%}
-      {%- comment %}<locksmith:c4c4>{% endcomment -%}
-        {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: link, subject_parent: linklists.right-menu, variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% if locksmith_413b_forloop__index == nil %}{% assign locksmith_413b_forloop__index = 1 %}{% assign locksmith_413b_forloop__index0 = 0 %}{% else %}{% assign locksmith_413b_forloop__index = locksmith_413b_forloop__index | plus: 1 %}{% assign locksmith_413b_forloop__index0 = locksmith_413b_forloop__index0 | plus: 1 %}{% endif %}{% if locksmith_413b_forloop__index == 1 %}{% assign locksmith_413b_forloop__first = true %}{% else %}{% assign locksmith_413b_forloop__first = false %}{% endif %}{% if locksmith_413b_forloop__index == locksmith_413b_forloop__size %}{% assign locksmith_413b_forloop__last = true %}{% else %}{% assign locksmith_413b_forloop__last = false %}{% endif %}{% assign locksmith_413b_forloop__rindex = locksmith_413b_forloop__size | minus: locksmith_413b_forloop__index | minus: 1 %}{% assign locksmith_413b_forloop__rindex0 = locksmith_413b_forloop__size | minus: locksmith_413b_forloop__index0 | minus: 1 %}{% else %}{% continue %}{% endif -%}
-      {%- comment %}</locksmith:c4c4>{% endcomment -%}
-      {% assign menuIndex = locksmith_413b_forloop__index %}
       {%- liquid 
         assign menuTitle = link.title | handleize
         assign blockData = ''
@@ -59,9 +51,6 @@
                   <a href="{{ collection.url }}" class="menu-category-title"> {{ collection.title }}</a>
                   <ul class="list-unstyled yv-megamenu-product-list">              
                     {%- for product in collection.products limit: 4 -%}
-                    {%- comment %}<locksmith:3555>{% endcomment -%}
-                      {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: product, subject_parent: collection, variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% else %}{% continue %}{% endif -%}
-                    {%- comment %}</locksmith:3555>{% endcomment -%}
                     {%- assign current_variant = product.selected_or_first_available_variant -%}
                     <li class="yv-megamenu-product-box">
                       <a href="{{ product.url }}" class="yv-megamenu-product-img">                 
@@ -172,10 +161,6 @@
                 <div class="yv-listing-megamenu-item">
                   <a href="{{ collection.url }}" class="yv-listing-megamenu-title">{{ collection.title }}</a>
                   <ul class="list-unstyled">
-                    {%- for product in collection.products limit: blockData.settings.products_count -%}
-                    {%- comment %}<locksmith:e3f5>{% endcomment -%}
-                      {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: product, subject_parent: collection, variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% else %}{% continue %}{% endif -%}
-                    {%- comment %}</locksmith:e3f5>{% endcomment -%}
                     <li> <a href="{{ product.url }}" class="yv-megamenu-item-link">{{ product.title | strip_html }}</a></li>
                     {%- endfor -%}
                   </ul>

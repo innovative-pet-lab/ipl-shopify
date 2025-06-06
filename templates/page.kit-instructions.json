@@ -261,7 +261,7 @@
       ],
       "name": "Kit Instruction",
       "settings": {
-        "image": "shopify://shop_images/doctor-notes-icon.png",
+        "image": "shopify://shop_images/register_2b91c865-6fee-4d13-9b88-f5e0c6b9f766.png",
         "image_alignment": "right",
         "image_dimension": 300
       }
@@ -304,7 +304,7 @@
       ],
       "name": "Kit Instruction",
       "settings": {
-        "image": "shopify://shop_images/pet-sample-icon.png",
+        "image": "shopify://shop_images/collect-2.png",
         "image_alignment": "left",
         "image_dimension": 300
       }
@@ -339,7 +339,7 @@
       ],
       "name": "Kit Instruction",
       "settings": {
-        "image": "shopify://shop_images/document-with-magnifying-glass-icon.png",
+        "image": "shopify://shop_images/ship_1.png",
         "image_alignment": "right",
         "image_dimension": 300
       }

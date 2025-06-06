@@ -736,8 +736,8 @@ body:not(.sticky-header, .header2) .shopify-section-main-header header[header-tr
     padding-top: 1.7rem;
     border-top: 1px solid #2222;
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    gap: 12px;
 }
 
 .side-menu .inner-footer .flex .my-account {

@@ -11,12 +11,20 @@
   "sections": {
     "page-header": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "seo_heading": "h2",
         "banner_height_desktop": "auto",
         "banner_height_mobile": "auto",
         "bgcolor": "#26286e",
         "textcolor": "#ffffff"
+      }
+    },
+    "page_title_with_back_button_qHJTUh": {
+      "type": "page-title-with-back-button",
+      "name": "Page title with back",
+      "settings": {
+        "page_title": "FAQs"
       }
     },
     "1658318505f1feb568": {
@@ -112,7 +120,7 @@
           "type": "faq",
           "settings": {
             "heading": "Refunds, Cancellation & Replacement Policy",
-            "answer": "<p>This only applies to tests purchased on the IPL website.  If you purchased your test through one of our partners, please contact them directly.</p><p><strong>Refunds:</strong></p><ul><li>If you ordered a test, and it has not shipped, you are eligable for a 100% refund.</li><li>If you have received your kit and it has benn within 30 days of purchase, you are eligable for a full refund,<br/>minus a $10 handling fee.</li><li>If it has been more than 30 days since your purchase, you are not eligable for a refund.</li><li>For any questions on the policy, please <a href=\"/pages/contact-1\" title=\"Contact\"><strong>contact us via our form</strong></a>.</li></ul><p><strong>Returns:</strong></p><ul><li>We do not accept a returned kit.  Please recycle any unused or unwanted kits.</li></ul><p><strong>Cancellations:</strong></p><ul><li>You can cancel an order prior to shipment.  Once a kit is shipped, it cannot be canceled. Please see the<br/>refund policy for any questions or <a href=\"/pages/contact-1\" title=\"Contact\"><strong>contact us via our form</strong></a>.<br/></li></ul>"
+            "answer": "<p>This only applies to tests purchased on the IPL website.  If you purchased your test through one of our partners, please contact them directly.</p><p><strong>Refunds:</strong></p><ul><li>If you ordered a test, and it has not shipped, you are eligable for a 100% refund.</li><li>If you have received your kit and it has benn within 30 days of purchase, you are eligable for a full refund, minus a $10 handling fee.</li><li>If it has been more than 30 days since your purchase, you are not eligable for a refund.</li><li>For any questions on the policy, please <a href=\"/pages/contact-1\" title=\"Contact\"><strong>contact us via our form</strong></a>.</li></ul><p><strong>Returns:</strong></p><ul><li>We do not accept a returned kit.  Please recycle any unused or unwanted kits.</li></ul><p><strong>Cancellations:</strong></p><ul><li>You can cancel an order prior to shipment.  Once a kit is shipped, it cannot be canceled. Please see the refund policy for any questions or <a href=\"/pages/contact-1\" title=\"Contact\"><strong>contact us via our form</strong></a>.<br/></li></ul>"
           }
         },
         "faq_AinwtU": {
@@ -133,14 +141,14 @@
           "type": "faq",
           "settings": {
             "heading": "Can I cancel my order?",
-            "answer": "<p><a href=\"/pages/refund-return-policy\" target=\"_blank\" title=\"Refund & Return Policy\">Learn more here.</a></p>"
+            "answer": "<p>You can cancel an order prior to shipment. Once a kit is shipped, it cannot be canceled. Please see the refund policy for any questions or <a href=\"/pages/contact-1\" target=\"_blank\" title=\"Contact\">contact us via our form</a>.</p>"
           }
         },
         "faq_YH8Cqh": {
           "type": "faq",
           "settings": {
             "heading": "What if I cannot find my return label or my kit doesn’t contain one?",
-            "answer": "<p>If your kit does not contain or you cannot find your prepaid USPS shipping label, please use our <a href=\"/pages/contact-1\" target=\"_blank\" title=\"Contact\">contact form </a>and include your name, order number or unique ID.</p>"
+            "answer": "<p>If your kit does not contain or you cannot find your prepaid USPS shipping label, please use our <a href=\"/pages/contact-1\" target=\"_blank\" title=\"Contact\"><strong>contact form</strong> </a>and include your name, order number or unique ID.</p>"
           }
         },
         "faq_VHiwDA": {
@@ -161,7 +169,7 @@
           "type": "faq",
           "settings": {
             "heading": "International Shipping Info:",
-            "answer": "<p>There is a $50 shipping fee (per item) for Canada. Each kit will come with instructions and all the contents to mail the sample back to the lab. If you have additional shipping questions, please reach out to <a href=\"mailto:info@innovativepetlab.com\">info@innovativepetlab.com</a></p>"
+            "answer": "<p>There is a $50 shipping fee (per item) for Canada. Each kit will come with instructions and all the contents to mail the sample back to the lab. If you have additional shipping questions, please reach out using <a href=\"/pages/contact-1\" target=\"_blank\" title=\"Contact\"><strong>our contact form</strong></a>.</p>"
           }
         }
       },
@@ -195,14 +203,14 @@
           "type": "faq",
           "settings": {
             "heading": "What if I lost my unique ID?",
-            "answer": "<p>If you lose your unique ID, please <a href=\"/pages/contact-1\" target=\"_blank\" title=\"Contact\">contact us via our form.</a> Please include your name and order number.</p>"
+            "answer": "<p>If you lose your unique ID, please <a href=\"/pages/contact-1\" target=\"_blank\" title=\"Contact\"><strong>contact us via our form</strong>.</a> Please include your name and order number.</p>"
           }
         },
         "faq_rQCDeP": {
           "type": "faq",
           "settings": {
             "heading": "How do I register my kit?",
-            "answer": "<p><strong>Step 1:</strong><br/>Locate your unique ID card (inside your kit)</p><p><strong>Step 2:</strong><br/>Go to <a href=\"https://innovativepetlab.com/register-a-kit/\" target=\"_blank\" title=\"Kit registration page\">kit registration page</a></p><p><strong>Step 3:</strong><br/>Follow the step by step instructions to enter your information</p>"
+            "answer": "<p><strong>Step 1:</strong><br/>Locate your unique ID card (inside your kit)</p><p><strong>Step 2:</strong><br/>Go to <a href=\"https://innovativepetlab.com/register-a-kit/\" target=\"_blank\" title=\"Kit registration page\"><strong>kit registration page</strong></a></p><p><strong>Step 3:</strong><br/>Follow the step by step instructions to enter your information</p>"
           }
         },
         "faq_WtLVz9": {
@@ -261,7 +269,7 @@
           "type": "faq",
           "settings": {
             "heading": "What if I have further questions about my test results?",
-            "answer": "<p>Please send your questions <a href=\"/pages/contact-1\" target=\"_blank\" title=\"Contact\">via our contact form</a> and we’d be happy to answer your questions</p>"
+            "answer": "<p>Please send your questions <a href=\"/pages/contact-1\" target=\"_blank\" title=\"Contact\"><strong>via our contact form</strong></a> and we’d be happy to answer your questions</p>"
           }
         },
         "faq_CNFCWL": {
@@ -306,7 +314,7 @@
           "type": "faq",
           "settings": {
             "heading": "How long will it take to get my pet’s results?",
-            "answer": "<p>Approximately 10-14 days. </p><p>Once your sample is picked up by USPS it should arrive at our Lab in Atlanta in 1-2 business days. At the lab we have a team that will receive your pet’s sample and immediately put it in our freezer (to preserve the sample). Our Lab Director checks in samples every few days (this is when you will get an email telling you your pet’s sample has arrived). Now the clock starts ticking - our team is working diligently to run your pet’s sample and you will be notified by email when your pet’s results are ready. If you have any question about the process please contact us at <a href=\"mailto:info@innovativepetlab.com\"><span style=\"text-decoration:underline\">info@innovativepetlab.com</span></a></p>"
+            "answer": "<p>Approximately 10-14 days. </p><p>Once your sample is picked up by USPS it should arrive at our Lab in Atlanta in 1-2 business days. At the lab we have a team that will receive your pet’s sample and immediately put it in our freezer (to preserve the sample). Our Lab Director checks in samples every few days (this is when you will get an email telling you your pet’s sample has arrived). Now the clock starts ticking - our team is working diligently to run your pet’s sample and you will be notified by email when your pet’s results are ready. If you have any question about the process please contact us using <a href=\"/pages/contact-1\" target=\"_blank\" title=\"Contact\"><strong>our contact form</strong></a>.</p>"
           }
         },
         "faq_NEk7mU": {
@@ -433,6 +441,7 @@
   },
   "order": [
     "page-header",
+    "page_title_with_back_button_qHJTUh",
     "1658318505f1feb568",
     "faq_section_4Rdjbx",
     "faq_section_6miKkz",

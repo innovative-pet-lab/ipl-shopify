@@ -1,0 +1,101 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main-page": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "seo_heading": "h2",
+        "banner_height_desktop": "auto",
+        "banner_height_mobile": "auto",
+        "bgcolor": "#26286e",
+        "textcolor": "#ffffff"
+      }
+    },
+    "ipl_accordion_pd3hhf": {
+      "type": "ipl-accordion",
+      "blocks": {
+        "accordion_item_XrDWD6": {
+          "type": "accordion_item",
+          "settings": {
+            "question": "What is the Gut?",
+            "answer": "<p>The gut, also known as the gastrointestinal tract, is your body's digestive system that processes food, absorbs nutrients, and eliminates waste. It includes your stomach, small intestine, large intestine, and the trillions of microorganisms that live there.</p>"
+          }
+        },
+        "accordion_item_pxCzNY": {
+          "type": "accordion_item",
+          "settings": {
+            "question": "What do we mean when we talk about Gut Inflammation?",
+            "answer": "<p>Gut inflammation refers to the immune system's response to irritants in your digestive tract. This can be caused by certain foods, stress, medications, or an imbalance in gut bacteria. Chronic inflammation can lead to various digestive issues and may affect overall health.</p>"
+          }
+        },
+        "accordion_item_ETBEMy": {
+          "type": "accordion_item",
+          "settings": {
+            "question": "What is Leaky Gut?",
+            "answer": "<p>Leaky gut, or increased intestinal permeability, occurs when the lining of your small intestine becomes damaged, allowing undigested food particles, toxic waste products, and bacteria to leak through the intestines and flood the bloodstream. This can trigger inflammation and changes in the gut flora.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "accordion_item_XrDWD6",
+        "accordion_item_pxCzNY",
+        "accordion_item_ETBEMy"
+      ],
+      "disabled": true,
+      "name": "IPL Accordion",
+      "settings": {
+        "title": "Research Information",
+        "title_alignment": "center",
+        "max_width": 1200,
+        "single_open": true,
+        "margin_top": 40,
+        "margin_bottom": 40,
+        "title_margin_bottom": 50,
+        "container_background": "#ffffff",
+        "border_color": "#e5e5e5",
+        "border_radius": 8,
+        "container_shadow": true,
+        "title_font_size": 48,
+        "title_font_weight": "600",
+        "title_color": "#1a1a1a",
+        "question_font_size": 20,
+        "question_font_weight": "500",
+        "question_color": "#1a1a1a",
+        "answer_font_size": 18,
+        "answer_color": "#666666",
+        "hover_background": "#ffffff",
+        "active_background": "#ffffff",
+        "icon_color": "#03b0a7",
+        "item_padding_x": 25,
+        "item_padding_y": 20,
+        "answer_padding_bottom": 20,
+        "mobile_title_font_size": 28,
+        "mobile_question_font_size": 16,
+        "mobile_answer_font_size": 15,
+        "mobile_padding_x": 20
+      }
+    },
+    "ipl_blogs_49CkGX": {
+      "type": "ipl-blogs",
+      "name": "Blog List",
+      "settings": {
+        "heading": "Research",
+        "blog": "research"
+      }
+    }
+  },
+  "order": [
+    "main-page",
+    "ipl_accordion_pd3hhf",
+    "ipl_blogs_49CkGX"
+  ]
+}

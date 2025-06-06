@@ -26,6 +26,11 @@
     margin: 10px 0;
   }
 
+  .inline-media-thumbnail video {
+    width: 100%;
+    border-radius: 12px;
+  }
+
   .media-float {
     float: right;
     width: 40%;
@@ -130,19 +135,27 @@
 
   <div>
     <div class="media-float">
-      <a href="{{ section.settings.media_url }}" target="_blank">
-        <div class="inline-media-thumbnail">
-          <img
+      <div class="inline-media-thumbnail">
+        {% assign mp4_source = '' %}
+        {% for source in section.settings.media_video.sources %}
+          {% if source.format == 'mp4' %}
+            {% assign mp4_source = source.url %}
+            {% break %}
+          {% endif %}
+        {% endfor %}
+        {% if mp4_source != '' %}
+          <video
+            controls
+            poster="{{ section.settings.thumbnail | image_url }}"
             width="100%"
-            height="100%"
-            src="{{ section.settings.thumbnail | image_url: width: 600 }}"
-            alt="Video thumbnail"
-          >
-          <div class="overlay-button-border">
-            <div class="overlay-button"></div>
-          </div>
-        </div>
-      </a>
+            style="border-radius: 12px;">
+            <source src="{{ mp4_source }}" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        {% else %}
+          <p>MP4 format not found.</p>
+        {% endif %}
+      </div>
     </div>
     {% for block in section.blocks %}
       {% if block.settings.is_above_media == false %}
@@ -158,6 +171,11 @@
 {
   "name": "Media inline text",
   "settings": [
+    {
+      "type": "video",
+      "id": "media_video",
+      "label": "Upload Video"
+    },
     {
       "type": "text",
       "id": "page_section_id",

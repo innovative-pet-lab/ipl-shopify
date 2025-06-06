@@ -180,6 +180,16 @@
         "type": "shopify://apps/miniorange-single-sign-on-sso/blocks/session-extension/48152e16-8060-4bf5-8478-83efdf88901f",
         "disabled": false,
         "settings": {}
+      },
+      "13897900069594145190": {
+        "type": "shopify://apps/accessibility-by-cartcoders/blocks/app-embed/e146c6fb-5384-4cc3-946f-03621d06f241",
+        "disabled": false,
+        "settings": {}
+      },
+      "855628211100114053": {
+        "type": "shopify://apps/klaviyo-email-marketing-sms/blocks/klaviyo-onsite-embed/2632fe16-c075-4321-a88b-50b567f42507",
+        "disabled": false,
+        "settings": {}
       }
     }
   },
@@ -1148,11 +1158,7 @@
   },
   "platform_customizations": {
     "custom_css": [
-      ".jdgm-rev-widg__title {color: #000; font-weight: 700;}",
-      ".samitaWS-customized-original-price {font-size: 20px !important; color: #a5a5a5;}",
-      ".yv-main-product-detail .samitaWS-customized-original-price {color: #a5a5a5; font-size: 24px; font-weight: bold;}",
-      ".yv-main-product-detail .samitaWS-customized-price {font-size: 24px; font-weight: bold;}",
-      ".yv-prizebox {gap: 8px;}"
+      "@media (max-width: 768px) {.cart-items-wrapper a {font-size: 14px !important; } .media-body .yv-product-title {padding-right: 0; } .media-body .flex .yv-prizebox {min-width: 60px; justify-content: center; } .media-body .flex .yv-prizebox span {font-size: 16!important; }}"
     ]
   }
 }

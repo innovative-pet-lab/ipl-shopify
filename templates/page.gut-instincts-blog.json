@@ -20,75 +20,17 @@
         "textcolor": "#ffffff"
       }
     },
-    "multi_column_buttons_nkYUA3": {
-      "type": "multi-column-buttons",
-      "blocks": {
-        "button_A3EFwa": {
-          "type": "button",
-          "settings": {
-            "button_label": "Instructions",
-            "redirect_page": "kit-instructions",
-            "external_url": ""
-          }
-        },
-        "button_7EmBF4": {
-          "type": "button",
-          "settings": {
-            "button_label": "Research",
-            "redirect_page": "research-information",
-            "external_url": ""
-          }
-        },
-        "button_ceXPYi": {
-          "type": "button",
-          "settings": {
-            "button_label": "FAQs",
-            "redirect_page": "faqs",
-            "external_url": ""
-          }
-        },
-        "button_Mxpdmg": {
-          "type": "button",
-          "settings": {
-            "button_label": "Partners",
-            "redirect_page": "affiliates",
-            "external_url": ""
-          }
-        },
-        "button_kQKR4E": {
-          "type": "button",
-          "settings": {
-            "button_label": "Case Studies",
-            "redirect_page": "case-studies",
-            "external_url": ""
-          }
-        },
-        "button_zdMrcm": {
-          "type": "button",
-          "settings": {
-            "button_label": "Gut Instincts - Blog",
-            "redirect_page": "gut-instincts-blog",
-            "external_url": ""
-          }
-        }
-      },
-      "block_order": [
-        "button_A3EFwa",
-        "button_7EmBF4",
-        "button_ceXPYi",
-        "button_Mxpdmg",
-        "button_kQKR4E",
-        "button_zdMrcm"
-      ],
-      "disabled": true,
-      "name": "Multi-column buttons",
+    "ipl_blogs_49CkGX": {
+      "type": "ipl-blogs",
+      "name": "Blog List",
       "settings": {
-        "multi_column_buttons_title": "Learn"
+        "heading": "Gut Instincts - Blog",
+        "blog": "gut-instincts-blog"
       }
     }
   },
   "order": [
     "main-page",
-    "multi_column_buttons_nkYUA3"
+    "ipl_blogs_49CkGX"
   ]
 }

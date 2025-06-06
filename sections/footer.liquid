@@ -211,61 +211,7 @@
 
   {%- endif -%}
 </div>
-{% comment %} <div
-  class="yv-footer-bottom-box"
-  style="--layoutRadius:{% if settings.layout_style == 'rounded' %}4px{% else %}0px{% endif %};"
->
-  <div class="{% if settings.layout_width == 'boxed' %}container{% else %}container-fluid{% endif %}">
-    <div class="row align-items-center">
-      <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
-        <div class="yv-footer-copyright-box">
-          {% unless section.settings.hide_copyright_content %}
-          <p class="yv-copyright-content">
-            <small class="copyright__content"
-              >{% if section.settings.custom_copyright_content != blank %}
-                {{ section.settings.custom_copyright_content }}
-                {% else %}
-              Copyright&copy; {{ 'now' | date: '%Y' }} {{ shop.name | link_to: routes.root_url }} {{ powered_by_link -}}
-                {% endif %}
-            </small>
-          </p>
-            {% endunless %}
-          {%- if section.settings.show_policies -%}
-            <ul class="yv-footer-links list-unstyled">
-              {%- for policy in shop.policies -%}
-                {%- if policy != blank -%}
-                  <li>
-                    <a href="{{ policy.url }}">{{ policy.title }}</a>
-                  </li>
-                {%- endif -%}
-              {%- endfor -%}
-            </ul>
-          {%- endif -%}
-        </div>
-      </div>
-      <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
-        {%- if section.settings.enable_language_selector or section.settings.enable_currency_selector -%}
-          {%- render 'localization' section:section -%}
-        {%- endif -%}
-      </div>
-      <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
-        <div class="yv-footer-payment-box">
-          {%- if section.settings.payment_enable -%}
-            <div class="footer-payment">
-              <ul class="list-unstyled list list-payment">
-                {%- for type in shop.enabled_payment_types -%}
-                  <li class="list-payment__item">
-                    {{ type | payment_type_svg_tag: class: 'icon' }}
-                  </li>
-                {%- endfor -%}
-              </ul>
-            </div>
-          {%- endif -%}
-        </div>
-      </div>
-    </div>
-  </div>
-</div> {% endcomment %}
+
 <style>
     #shopify-section-{{ section.id }}{
       background-color:{{ section.settings.footer_bg }};
@@ -278,9 +224,7 @@
     .yv-footer-top-box{
       border-color:{{ section.settings.footer_text | color_modify : 'alpha' ,0.1 }};
     }
-    {% comment %} #shopify-section-{{ section.id }} .yv-footer-bottom-box{
-      border-top:1px solid {{ section.settings.footer_text | color_modify : 'alpha' ,0.1 }};
-    }   {% endcomment %}
+
     {% liquid
       assign backgroundColor = 'transparent'
       if section.settings.show_language_background
@@ -428,6 +372,7 @@
     }
     {% endif %}
 </style>
+
 <style>
   .footer-flex {
     display: flex;
@@ -477,8 +422,8 @@
     }
   }
 </style>
-<script>
 
+<script>
   // 1. When a link is clicked, save its ID to localStorage
   document.querySelectorAll('.footer-list li a').forEach(anchor => {
     anchor.addEventListener('click', function() {
@@ -499,6 +444,188 @@
 
   });
 </script>
+
+<script>
+  function disableCheckoutButton() {
+    const checkoutBtn = document.querySelector(".checkout-btn");
+    if (checkoutBtn) {
+      checkoutBtn.classList.add("disabled");
+      checkoutBtn.addEventListener("click", preventCheckout);
+    }
+  }
+
+  function enableCheckoutButton() {
+    const checkoutBtn = document.querySelector(".checkout-btn");
+    if (checkoutBtn) {
+      checkoutBtn.classList.remove("disabled");
+      checkoutBtn.removeEventListener("click", preventCheckout);
+    }
+  }
+
+  function preventCheckout(e) {
+    e.preventDefault();
+    e.stopPropagation();
+  }
+
+  // MutationObserver: Detect cart drawer updates
+  let cartUpdateTimeout;
+  function observeCartUpdates() {
+    const drawerBody = document.querySelector("[data-drawer-body]");
+    if (!drawerBody) return;
+  
+    const observer = new MutationObserver(() => {
+      if (cartUpdateTimeout) clearTimeout(cartUpdateTimeout);
+      cartUpdateTimeout = setTimeout(() => {
+        document.dispatchEvent(new CustomEvent("cart:updated"));
+      }, 300);
+    });
+  
+    observer.observe(drawerBody, { childList: true, subtree: true });
+  }
+
+  // Setup on DOM ready
+  document.addEventListener("DOMContentLoaded", function () {
+    disableCheckoutButton();
+    observeCartUpdates();
+  });
+
+  // Re-enable after cart updates
+  document.addEventListener("cart:updated", () => {
+    setTimeout(() => {
+      if (window.location.hostname.includes("localhost")) {
+        console.log("Cart has been updatedsss");
+      }
+      enableCheckoutButton();
+    }, 1000);
+  });
+</script>
+
+{% if customer %}
+  {% assign tags = customer.tags %}
+  {% if tags contains 'wholesale' or tags contains 'provider' or tags contains 'distributor' %}
+    <script>
+      (function () {
+        function waitForBSSPrices(callback, timeout = 3000, checkInterval = 75) {
+          const start = Date.now();
+      
+          const check = setInterval(() => {
+            const priceSpans = document.querySelectorAll('.yv-prizebox span');
+            const cartContainer = document.querySelector('.cart-item-container');
+            const checkoutBtn = document.querySelector(".checkout-btn");
+      
+            const now = Date.now();
+      
+            if (!priceSpans.length) {
+              if (now - start > timeout) {
+                clearInterval(check);
+                callback(); // fallback if spans are missing entirely
+              }
+              return;
+            }
+      
+            const discountedSpans = Array.from(priceSpans).filter((span) =>
+              span.getAttribute("style")?.includes("#82787d")
+            );
+      
+            const showLoader = discountedSpans.length === 0;
+      
+            if (showLoader && cartContainer && !cartContainer.querySelector('.bss-loader-wrapper')) {
+              cartContainer.style.opacity = '0.2';
+              cartContainer.style.position = 'relative';
+      
+              const wrapper = document.createElement('div');
+              wrapper.className = 'bss-loader-wrapper';
+              wrapper.style.cssText = `
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                z-index: 10;
+                text-align: center;
+              `;
+      
+              const loader = document.createElement('div');
+              loader.className = 'bss-loader';
+              loader.style.cssText = `
+                width: 30px;
+                height: 30px;
+                margin: 0 auto 8px;
+                border: 3px solid #ccc;
+                border-top: 3px solid #26286e;
+                border-radius: 50%;
+                animation: spin 0.6s linear infinite;
+              `;
+      
+              const message = document.createElement('div');
+              message.textContent = 'Recalculating discount...';
+              message.style.fontSize = '13px';
+              message.style.color = '#26286e';
+      
+              wrapper.appendChild(loader);
+              wrapper.appendChild(message);
+              cartContainer.appendChild(wrapper);
+      
+              if (checkoutBtn) checkoutBtn.style.display = 'none';
+            }
+      
+            if (!showLoader && cartContainer) {
+              cartContainer.style.opacity = '1';
+              const wrapper = cartContainer.querySelector('.bss-loader-wrapper');
+              if (wrapper) wrapper.remove();
+              if (checkoutBtn) checkoutBtn.style.display = '';
+            }
+      
+            if (!showLoader) {
+              clearInterval(check);
+              callback();
+            } else if (now - start > timeout) {
+              clearInterval(check);
+      
+              // fallback: try to fetch cart + recheck once more
+              fetch('/cart.js')
+                .then(res => res.json())
+                .then(() => {
+                  const retrySpans = document.querySelectorAll('.yv-prizebox span');
+                  const retryDiscounted = Array.from(retrySpans).filter((span) =>
+                    span.getAttribute("style")?.includes("#82787d")
+                  );
+      
+                  if (retryDiscounted.length > 0) {
+                    callback();
+                  } else {
+                    const cartIcon = document.querySelector(".cart-icon.openCartDrawer");
+                    if (cartIcon) {
+                      window.location.href = '/cart/';
+                    }
+                    callback();
+                  }
+                })
+                .catch(() => {
+                  // fallback fail
+                  callback();
+                });
+            }
+          }, checkInterval);
+        }
+      
+        document.addEventListener("DOMContentLoaded", function () {
+          const cartButtons = document.querySelectorAll(".openCartDrawer");
+      
+          cartButtons.forEach((btn) => {
+            btn.addEventListener("click", function (e) {
+              e.preventDefault();
+              waitForBSSPrices(() => {
+                btn.dispatchEvent(new Event("cartdrawer:trigger", { bubbles: true }));
+              });
+            });
+          });
+        });
+      })();
+    </script>
+{% endif %}
+{% endif %}
+
+
 {% schema %}
   {
     "name": "t:sections.footer.name",

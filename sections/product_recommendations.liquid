@@ -314,7 +314,8 @@
         }
 
         document.body.classList.add("side_Drawer_open", "yv_side_Drawer_open");
-        document.querySelector(".wrapper-overlay").style.display = "block";
+        const overlay = document.querySelector(".wrapper-overlay");
+            if (overlay) overlay.style.display = "block";
         const sideDrawer = document.querySelector("[data-side-drawer]");
         if (sideDrawer) {
           sideDrawer.focus();

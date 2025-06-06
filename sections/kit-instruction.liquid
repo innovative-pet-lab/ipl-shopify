@@ -18,12 +18,6 @@
     justify-content: flex-end;
   }
 
-  .row img {
-    object-fit: contain;
-    max-height: 320px;
-    padding: 0 20px;
-  }
-
   .text-content {
     padding: 0;
     margin: 0;
@@ -58,9 +52,36 @@
     font-weight: 500;
   }
 
+
+  .custom-image-wrapper {
+    border-radius: 50%;
+    background-color: rgba(236, 240, 239, 1);
+    padding: 2px 20px;
+    width: 120px;
+    height: 120px;
+    flex-shrink: 0;
+    display: flex;                    
+    justify-content: center;         
+    align-items: center;             
+    overflow: hidden;                
+  }
+
+  .custom-image-wrapper img {
+    object-fit: contain;
+    display: block;
+  }
+
   @media screen and (min-width: 967px) {
     .container {
       padding: 0 7.5% 0 7.5%;
+    }
+  }
+
+  @media screen and (min-width: 992px) {
+    .custom-image-wrapper {
+      width: 300px;
+      height: 300px;
+      padding: 2px 48px;
     }
   }
 
@@ -82,12 +103,6 @@
     .image-container-mobile {
       display: block;
       margin-bottom: 10px;
-    }
-
-    .row img {
-      object-fit: contain;
-      max-height: 120px;
-      padding: 0;
     }
 
     .section-heading {
@@ -118,21 +133,25 @@
 <section class="container">
   <div class="row">
     <div class="image-container-mobile col-sm-12 col-md-3">
-      <img
-        height="{{ section.settings.image_dimension }}"
-        width="auto"
-        src="{{ section.settings.image | image_url }}"
-        alt="Instruction Image"
-      >
-    </div>
-    {%- if section.settings.image_alignment == 'left' -%}
-      <div class="image-container col-sm-12 col-md-3">
+      <div class="custom-image-wrapper">
         <img
-          height="{{ section.settings.image_dimension }}"
-          width="auto"
+          height="{{ section.settings.image_dimension }}px"
+          width=auto
           src="{{ section.settings.image | image_url }}"
           alt="Instruction Image"
         >
+      </div>
+    </div>
+    {%- if section.settings.image_alignment == 'left' -%}
+      <div class="image-container col-sm-12 col-md-3">
+        <div class="custom-image-wrapper">
+          <img
+            height="{{ section.settings.image_dimension }}px"
+            width=auto
+            src="{{ section.settings.image | image_url }}"
+            alt="Instruction Image"
+          >
+        </div>
       </div>
     {% endif %}
     <div class="text-container col-sm-12 col-md-8">
@@ -160,12 +179,15 @@
     </div>
     {%- if section.settings.image_alignment == 'right' -%}
       <div class="image-container image-aligned-right col-sm-12 col-md-3">
-        <img
-          height="{{ section.settings.image_dimension }}"
-          width="auto"
-          src="{{ section.settings.image | image_url }}"
-          alt="Instruction Image"
-        >
+        <div class="custom-image-wrapper">
+          <img
+            height="{{ section.settings.image_dimension }}px"
+            width=auto
+            src="{{ section.settings.image | image_url }}"
+            alt="Instruction Image"
+          >
+        </div>
+
       </div>
     {%- endif -%}
   </div>
