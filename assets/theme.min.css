@@ -126,21 +126,6 @@ html:not(.no-js) .lazyloading+.yuva-loader {
 }
 
 
-/* .lazyImg .yuva-loader:after,
-html:not(.no-js) .lazyload+.yuva-loader:after,
-html:not(.no-js) .lazyloading+.yuva-loader:after {
-    -webkit-animation: 3s cubic-bezier(.43, .43, .25, .99) infinite lazyLoader;
-    animation: 3s cubic-bezier(.43, .43, .25, .99) infinite lazyLoader
-} */
-
-.wrapper {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    margin-top: auto;
-    height: 100%
-}
-
 main {
     min-height: 450px;
     z-index: 2

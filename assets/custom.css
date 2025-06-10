@@ -128,11 +128,12 @@
         max-width: 60px;
     }
     .header__icons {
-        min-width: 23em;
+        min-width: 25rem;
         justify-content: right;
     }
     .header__icons a {
-        color: #333333!important;
+        color: #03B0A7!important;
+        font-weight: 700;
     }
     .right-menu .nav-item .nav-link {
         padding: 5px 28px;
@@ -298,14 +299,11 @@
     overflow: scroll;
     justify-content: center;
 }
-
 .product-gallery__thumbnail {
     background: #fff;
     cursor: pointer;
     transition: border-color 0.3s ease;
 }
-
-
 .product-gallery__viewer {
     flex-grow: 1;
     position: relative;
@@ -395,29 +393,24 @@
     justify-content: center;
     align-items: center;
 }
-
 .product-gallery__thumbnails .normal-slide {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
 .product-gallery__thumbnails .swiper-wrapper.slide-false {
     gap: 13px;
 }
-
 .product-gallery__thumbnail img {
     display: block;
     width: 100%;
     height: auto;
 }
-
 .product-gallery__thumbnail img {
     display: block;
     width: 100%;
     height: auto;
 }
-
 .swiper-button-next-ipl {
     color: #000011!important;
     display: none!important;
@@ -896,6 +889,85 @@ header .side-menu .inner-side ul li .list-menu__item {
         margin: 0 3rem;
     }
 }
+
+.customer-links {
+  position: relative;
+}
+
+.customer-links a.acc-links {
+  margin-left: 1rem;
+  width: unset !important;
+}
+
+/* Container to control hover scope */
+.logged-user-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.user-firstname {
+  padding: 1rem;
+  margin-left: 0.8rem;
+  background-color: #03b0a7;
+  color: #fff!important;
+  font-size: 24px;
+  font-weight: 700;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+/* Show dropdown on hover of container */
+.logged-in-links {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 100%;
+  margin-top: 0.5rem;
+  background: #fff;
+  list-style: none;
+  min-width: 10rem;
+  padding: 1rem;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.1);
+  border-radius: 4px;
+  z-index: 10;
+}
+
+.logged-in-links li {
+  padding: 0.2rem 0.5rem;
+}
+
+.logged-in-links li a {
+  color: #1C1D31!important;
+  font-size: 18px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.logged-in-links li a:hover {
+  text-decoration: underline;
+}
+
+.user-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+
+/* Show on hover */
+.user-dropdown:hover .logged-in-links {
+  display: block;
+}
+
+/* Show if manually toggled via JS */
+.logged-in-links.show {
+  display: block !important;
+}
+
 
 /* footer */
 .footer-menu-list .flex {

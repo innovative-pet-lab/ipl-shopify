@@ -1,12 +1,6 @@
 <div class="header__icons {{ section.settings.icon_weight }}-icon">
   <div class="right-menu">
-    {%- comment %}<locksmith:d778>{% endcomment -%}
-      {%- assign locksmith_413b_forloop__size = 0 %}{%- for link in linklists['right-menu'].links -%}{% capture var %}{% render 'locksmith-variables', scope: 'subject', subject: link, subject_parent: linklists.right-menu, variable: 'transparent' %}{% endcapture %}{% if var == 'true' %}{% assign locksmith_413b_forloop__size = locksmith_413b_forloop__size | plus: 1 %}{% endif %}{% endfor %}{% assign locksmith_413b_forloop__index = nil -%}
-    {%- comment %}</locksmith:d778>{% endcomment -%}
     {%- for link in linklists['right-menu'].links -%}
-      {%- comment %}<locksmith:c4c4>{% endcomment -%}
-        {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: link, subject_parent: linklists.right-menu, variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% if locksmith_413b_forloop__index == nil %}{% assign locksmith_413b_forloop__index = 1 %}{% assign locksmith_413b_forloop__index0 = 0 %}{% else %}{% assign locksmith_413b_forloop__index = locksmith_413b_forloop__index | plus: 1 %}{% assign locksmith_413b_forloop__index0 = locksmith_413b_forloop__index0 | plus: 1 %}{% endif %}{% if locksmith_413b_forloop__index == 1 %}{% assign locksmith_413b_forloop__first = true %}{% else %}{% assign locksmith_413b_forloop__first = false %}{% endif %}{% if locksmith_413b_forloop__index == locksmith_413b_forloop__size %}{% assign locksmith_413b_forloop__last = true %}{% else %}{% assign locksmith_413b_forloop__last = false %}{% endif %}{% assign locksmith_413b_forloop__rindex = locksmith_413b_forloop__size | minus: locksmith_413b_forloop__index | minus: 1 %}{% assign locksmith_413b_forloop__rindex0 = locksmith_413b_forloop__size | minus: locksmith_413b_forloop__index0 | minus: 1 %}{% else %}{% continue %}{% endif -%}
-      {%- comment %}</locksmith:c4c4>{% endcomment -%}
       {% assign menuIndex = locksmith_413b_forloop__index %}
       {%- liquid 
         assign menuTitle = link.title | handleize
@@ -169,7 +163,7 @@
                 {%- if collection != blank and collection.all_products_count > 0 -%} 
                 {%- capture containercycle -%}{% cycle groupMenu: 1, 2, 3, 4 %}{%- endcapture -%}
                 {%- capture collectionContent -%}
-                <div class="yv-listing-megamenu-item">
+                  <div class="yv-listing-megamenu-item">
                   <a href="{{ collection.url }}" class="yv-listing-megamenu-title">{{ collection.title }}</a>
                   <ul class="list-unstyled">
                     {%- for product in collection.products limit: blockData.settings.products_count -%}
@@ -346,50 +340,101 @@
       assign accountPageType = 'dropdown'
     endif
   %}
-  <div class="customer-links">
-    <a class="acc-links text-hover acc-sign-in" 
-       id="customer_login_link" href="{%- if customer -%}{{- routes.account_url -}}{%-else-%}{{ routes.account_login_url }}{%- endif -%}"
-       {% unless section.settings.account_type == 'page' or request.page_type contains 'customers' %} onClick=toggleAccountPopup(event,'{{- accountPageType -}}'){% endunless %}
-       title="{%- if customer -%}{{ 'customer.account_fallback' | t }}{%-else-%}{{ 'customer.log_in' | t }}{%- endif -%}">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M12 4C13.0609 4 14.0783 4.42143 14.8284 5.17157C15.5786 5.92172 16 6.93913 16 8C16 9.06087 15.5786 10.0783 14.8284 10.8284C14.0783 11.5786 13.0609 12 12 12C10.9391 12 9.92172 11.5786 9.17157 10.8284C8.42143 10.0783 8 9.06087 8 8C8 6.93913 8.42143 5.92172 9.17157 5.17157C9.92172 4.42143 10.9391 4 12 4ZM12 6C11.4696 6 10.9609 6.21071 10.5858 6.58579C10.2107 6.96086 10 7.46957 10 8C10 8.53043 10.2107 9.03914 10.5858 9.41421C10.9609 9.78929 11.4696 10 12 10C12.5304 10 13.0391 9.78929 13.4142 9.41421C13.7893 9.03914 14 8.53043 14 8C14 7.46957 13.7893 6.96086 13.4142 6.58579C13.0391 6.21071 12.5304 6 12 6ZM12 13C14.67 13 20 14.33 20 17V20H4V17C4 14.33 9.33 13 12 13ZM12 14.9C9.03 14.9 5.9 16.36 5.9 17V18.1H18.1V17C18.1 16.36 14.97 14.9 12 14.9Z" fill="#1C1D31"/>
-      </svg>
-    </a>
-  {% unless request.page_type contains 'customers' %}
-        <div class="customer-account-popup account-wrapper" data-account-dropdown>
-          {% if customer and section.settings.account_type != 'page' %}
-            <div class="customer-account-popup-inner">
-              <p>{{ customer.name }}</p>
-              <a href="{{ routes.account_url }}"  class="account-link">
-                {{ 'customer.account_fallback' | t }}
-              </a>
-              <a class="button black-btn small-btn btn-block" href="{{ routes.account_logout_url }}">
-                {{ 'customer.log_out' | t }}
-              </a>
-            </div>
-          {% elsif section.settings.account_type == 'dropdown' %}
-              {% render 'header-account' %}
-          {% endif %}
-        </div>
-      {% endunless %}
-    </div>
-  {%- endif -%}
-<div class="wrapper-top-cart">
-    <a href="{{ routes.cart_url }}" title="{{ 'templates.cart.cart' | t }}" class="cart-icon {% if settings.enable_cart_drawer and template != 'cart' %}openCartDrawer{% endif %}">
-      {% if section.settings.cart_icon == 'cart' %}
-        
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M17 18C17.5304 18 18.0391 18.2107 18.4142 18.5858C18.7893 18.9609 19 19.4696 19 20C19 20.5304 18.7893 21.0391 18.4142 21.4142C18.0391 21.7893 17.5304 22 17 22C16.4696 22 15.9609 21.7893 15.5858 21.4142C15.2107 21.0391 15 20.5304 15 20C15 18.89 15.89 18 17 18ZM1 2H4.27L5.21 4H20C20.2652 4 20.5196 4.10536 20.7071 4.29289C20.8946 4.48043 21 4.73478 21 5C21 5.17 20.95 5.34 20.88 5.5L17.3 11.97C16.96 12.58 16.3 13 15.55 13H8.1L7.2 14.63L7.17 14.75C7.17 14.8163 7.19634 14.8799 7.24322 14.9268C7.29011 14.9737 7.3537 15 7.42 15H19V17H7C6.46957 17 5.96086 16.7893 5.58579 16.4142C5.21071 16.0391 5 15.5304 5 15C5 14.65 5.09 14.32 5.24 14.04L6.6 11.59L3 4H1V2ZM7 18C7.53043 18 8.03914 18.2107 8.41421 18.5858C8.78929 18.9609 9 19.4696 9 20C9 20.5304 8.78929 21.0391 8.41421 21.4142C8.03914 21.7893 7.53043 22 7 22C6.46957 22 5.96086 21.7893 5.58579 21.4142C5.21071 21.0391 5 20.5304 5 20C5 18.89 5.89 18 7 18ZM16 11L18.78 6H6.14L8.5 11H16Z" fill="#1C1D31"/>
-        </svg>
-  
-        {% else %}
 
+      <div class="wrapper-top-cart">
+      <a href="{{ routes.cart_url }}" title="{{ 'templates.cart.cart' | t }}" class="cart-icon {% if settings.enable_cart_drawer and template != 'cart' %}openCartDrawer{% endif %}">
+        {% if section.settings.cart_icon == 'cart' %}
+          
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M17 18C17.5304 18 18.0391 18.2107 18.4142 18.5858C18.7893 18.9609 19 19.4696 19 20C19 20.5304 18.7893 21.0391 18.4142 21.4142C18.0391 21.7893 17.5304 22 17 22C16.4696 22 15.9609 21.7893 15.5858 21.4142C15.2107 21.0391 15 20.5304 15 20C15 18.89 15.89 18 17 18ZM1 2H4.27L5.21 4H20C20.2652 4 20.5196 4.10536 20.7071 4.29289C20.8946 4.48043 21 4.73478 21 5C21 5.17 20.95 5.34 20.88 5.5L17.3 11.97C16.96 12.58 16.3 13 15.55 13H8.1L7.2 14.63L7.17 14.75C7.17 14.8163 7.19634 14.8799 7.24322 14.9268C7.29011 14.9737 7.3537 15 7.42 15H19V17H7C6.46957 17 5.96086 16.7893 5.58579 16.4142C5.21071 16.0391 5 15.5304 5 15C5 14.65 5.09 14.32 5.24 14.04L6.6 11.59L3 4H1V2ZM7 18C7.53043 18 8.03914 18.2107 8.41421 18.5858C8.78929 18.9609 9 19.4696 9 20C9 20.5304 8.78929 21.0391 8.41421 21.4142C8.03914 21.7893 7.53043 22 7 22C6.46957 22 5.96086 21.7893 5.58579 21.4142C5.21071 21.0391 5 20.5304 5 20C5 18.89 5.89 18 7 18ZM16 11L18.78 6H6.14L8.5 11H16Z" fill="#1C1D31"/>
+          <path d="M17 18C17.5304 18 18.0391 18.2107 18.4142 18.5858C18.7893 18.9609 19 19.4696 19 20C19 20.5304 18.7893 21.0391 18.4142 21.4142C18.0391 21.7893 17.5304 22 17 22C16.4696 22 15.9609 21.7893 15.5858 21.4142C15.2107 21.0391 15 20.5304 15 20C15 18.89 15.89 18 17 18ZM1 2H4.27L5.21 4H20C20.2652 4 20.5196 4.10536 20.7071 4.29289C20.8946 4.48043 21 4.73478 21 5C21 5.17 20.95 5.34 20.88 5.5L17.3 11.97C16.96 12.58 16.3 13 15.55 13H8.1L7.2 14.63L7.17 14.75C7.17 14.8163 7.19634 14.8799 7.24322 14.9268C7.29011 14.9737 7.3537 15 7.42 15H19V17H7C6.46957 17 5.96086 16.7893 5.58579 16.4142C5.21071 16.0391 5 15.5304 5 15C5 14.65 5.09 14.32 5.24 14.04L6.6 11.59L3 4H1V2ZM7 18C7.53043 18 8.03914 18.2107 8.41421 18.5858C8.78929 18.9609 9 19.4696 9 20C9 20.5304 8.78929 21.0391 8.41421 21.4142C8.03914 21.7893 7.53043 22 7 22C6.46957 22 5.96086 21.7893 5.58579 21.4142C5.21071 21.0391 5 20.5304 5 20C5 18.89 5.89 18 7 18ZM16 11L18.78 6H6.14L8.5 11H16Z" fill="#1C1D31"/>
           </svg>
-            
-      {% endif %}
-      <span class="cartCount" data-cart-count="" {% if cart.item_count == 0 %}style="display:none"{% endif %}>{% if cart.item_count < 100 %}{{cart.item_count}}{% endif %}</span>
-    </a>
+
+          {% else %}
+
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M17 18C17.5304 18 18.0391 18.2107 18.4142 18.5858C18.7893 18.9609 19 19.4696 19 20C19 20.5304 18.7893 21.0391 18.4142 21.4142C18.0391 21.7893 17.5304 22 17 22C16.4696 22 15.9609 21.7893 15.5858 21.4142C15.2107 21.0391 15 20.5304 15 20C15 18.89 15.89 18 17 18ZM1 2H4.27L5.21 4H20C20.2652 4 20.5196 4.10536 20.7071 4.29289C20.8946 4.48043 21 4.73478 21 5C21 5.17 20.95 5.34 20.88 5.5L17.3 11.97C16.96 12.58 16.3 13 15.55 13H8.1L7.2 14.63L7.17 14.75C7.17 14.8163 7.19634 14.8799 7.24322 14.9268C7.29011 14.9737 7.3537 15 7.42 15H19V17H7C6.46957 17 5.96086 16.7893 5.58579 16.4142C5.21071 16.0391 5 15.5304 5 15C5 14.65 5.09 14.32 5.24 14.04L6.6 11.59L3 4H1V2ZM7 18C7.53043 18 8.03914 18.2107 8.41421 18.5858C8.78929 18.9609 9 19.4696 9 20C9 20.5304 8.78929 21.0391 8.41421 21.4142C8.03914 21.7893 7.53043 22 7 22C6.46957 22 5.96086 21.7893 5.58579 21.4142C5.21071 21.0391 5 20.5304 5 20C5 18.89 5.89 18 7 18ZM16 11L18.78 6H6.14L8.5 11H16Z" fill="#1C1D31"/>
+            </svg>
+              
+        {% endif %}
+        <span class="cartCount" data-cart-count="" {% if cart.item_count == 0 %}style="display:none"{% endif %}>{% if cart.item_count < 100 %}{{cart.item_count}}{% endif %}</span>
+      </a>
+    </div>
+
+  <div class="customer-links">
+    {% if customer %}
+      <div class="user-dropdown" id="userDropdown">
+        <div class="user-firstname" id="userToggle">
+          {{ customer.first_name | slice: 0, 1 | upcase }}
+        </div>
+        <ul class="logged-in-links" id="userMenu">
+          <li><a href="https://app.innovativepetlab.com/">My Test</a></li>
+          <li><a href="/account">My Account</a></li>
+          <li><a href="{{ shop.url }}/apps/sso/moas/broker/login/shopify/slo/logout">Logout</a></li>
+        </ul>
+      </div>
+    {% else %}
+      <a class="acc-links text-hover acc-sign-in" 
+        id="customer_login_link" href="{%- if customer -%}{{- routes.account_url -}}{%-else-%}{{ routes.account_login_url }}{%- endif -%}"
+        {% unless section.settings.account_type == 'page' or request.page_type contains 'customers' %} onClick=toggleAccountPopup(event,'{{- accountPageType -}}'){% endunless %}
+        title="{%- if customer -%}{{ 'customer.account_fallback' | t }}{%-else-%}{{ 'customer.log_in' | t }}{%- endif -%}">
+        Log in / Sign up
+      </a>
+    {% endif %}
   </div>
+
+    {% unless request.page_type contains 'customers' %}
+          <div class="customer-account-popup account-wrapper" data-account-dropdown>
+            {% if customer and section.settings.account_type != 'page' %}
+              <div class="customer-account-popup-inner">
+                <p>{{ customer.name }}</p>
+                <a href="{{ routes.account_url }}"  class="account-link">
+                  {{ 'customer.account_fallback' | t }}
+                </a>
+                <a class="button black-btn small-btn btn-block" href="{{ routes.account_logout_url }}">
+                  {{ 'customer.log_out' | t }}
+                </a>
+              </div>
+            {% elsif section.settings.account_type == 'dropdown' %}
+                {% render 'header-account' %}
+            {% endif %}
+          </div>
+      {% endunless %}
+   </div>
+  {%- endif -%}
+
 </div>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const toggle = document.getElementById('userToggle');
+    const menu = document.getElementById('userMenu');
+    const dropdown = document.getElementById('userDropdown');
+
+    let hoverTimeout;
+
+    // Toggle on click
+    toggle.addEventListener('click', function (e) {
+      e.stopPropagation();
+      menu.classList.toggle('show');
+    });
+
+    // Hover in
+    dropdown.addEventListener('mouseenter', function () {
+      clearTimeout(hoverTimeout);
+      menu.classList.add('show');
+    });
+
+    // Hover out with delay
+    dropdown.addEventListener('mouseleave', function () {
+      hoverTimeout = setTimeout(() => {
+        menu.classList.remove('show');
+      }, 200); // Adjust delay as needed (ms)
+    });
+
+    // Close on outside click
+    document.addEventListener('click', function (e) {
+      if (!dropdown.contains(e.target)) {
+        menu.classList.remove('show');
+      }
+    });
+  });
+</script>
