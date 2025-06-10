@@ -184,9 +184,6 @@
                 {%- liquid
                   render 'product-variants', product: product
                   assign preorder = false
-                  if settings.enable_preorder and current_variant.inventory_policy == 'continue' and current_variant.inventory_quantity <= 0
-                    assign preorder = true
-                  endif
                 -%}
                 {%- if mainProduct and block.settings.show_subscriptions_plan -%}
                   <input type="hidden" name="selling_plan" value="">
