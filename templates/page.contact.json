@@ -55,11 +55,20 @@
             "support_subheading": "Address",
             "support_details": "941 Holcomb Bridge, Suite 301, Norcross, GA 30092"
           }
+        },
+        "contact_info_CThMVY": {
+          "type": "contact_info",
+          "settings": {
+            "icon": "shopify://shop_images/Envelope.png",
+            "support_subheading": "IPL Phone number",
+            "support_details": "404-490-0451"
+          }
         }
       },
       "block_order": [
         "contact_info_dFxJxJ",
-        "contact_info_nDjk9z"
+        "contact_info_nDjk9z",
+        "contact_info_CThMVY"
       ],
       "name": "Contact Page",
       "settings": {
