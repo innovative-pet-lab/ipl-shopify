@@ -300,11 +300,9 @@
               </li>
             {%- endfor -%}
             {%- if customer -%}
-              <li class="nav-item  {% if link.current %}active{% endif %}">
-                <a class="list-menu__item {% if routes.account_url contains 'account' %}account{% endif %}" href="{{- routes.account_url -}}">{{ 'customer.account.title' | t }}</a>
-              </li>
+              <li class="nav-item dropdown"><button class="list-menu__item toggle" onclick="location.href=`https://app.innovativepetlab.com/`">My Test</button></li>
+              <li class="nav-item dropdown"><button class="list-menu__item toggle" onclick="location.href='/account'">My Account</button></li>
             {%- endif -%}
-          </ul>
         </div>
         <div class="lower-nav">
         <div class="menu-login-btn">
@@ -335,7 +333,7 @@
               {% endif %}
             {% endfor  %} 
           {% endcapture %} 
-            <li class="nav-item {% if link.links != blank %}dropdown{% endif %} {% if link.current %}active{% endif %}">
+            <li class="nav-item{% if link.links != blank %}dropdown{% endif %} {% if link.current %}active{% endif %}">
               {%- unless link.links != blank -%}
                 <a class="list-menu__item" href="{{ link.url }}">
                   {{ link.title | escape }}
@@ -416,7 +414,7 @@
         <path d="M14 0.666687C15.7681 0.666687 17.4638 1.36907 18.714 2.61931C19.9642 3.86955 20.6666 5.56524 20.6666 7.33335C20.6666 9.10146 19.9642 10.7972 18.714 12.0474C17.4638 13.2976 15.7681 14 14 14C12.2318 14 10.5362 13.2976 9.28591 12.0474C8.03567 10.7972 7.33329 9.10146 7.33329 7.33335C7.33329 5.56524 8.03567 3.86955 9.28591 2.61931C10.5362 1.36907 12.2318 0.666687 14 0.666687ZM14 4.00002C13.1159 4.00002 12.2681 4.35121 11.6429 4.97633C11.0178 5.60145 10.6666 6.4493 10.6666 7.33335C10.6666 8.21741 11.0178 9.06525 11.6429 9.69038C12.2681 10.3155 13.1159 10.6667 14 10.6667C14.884 10.6667 15.7319 10.3155 16.357 9.69038C16.9821 9.06525 17.3333 8.21741 17.3333 7.33335C17.3333 6.4493 16.9821 5.60145 16.357 4.97633C15.7319 4.35121 14.884 4.00002 14 4.00002ZM14 15.6667C18.45 15.6667 27.3333 17.8834 27.3333 22.3334V27.3334H0.666626V22.3334C0.666626 17.8834 9.54996 15.6667 14 15.6667ZM14 18.8334C9.04996 18.8334 3.83329 21.2667 3.83329 22.3334V24.1667H24.1666V22.3334C24.1666 21.2667 18.95 18.8334 14 18.8334Z" fill="#26286E"/>
       </svg>
       {% if customer %}
-        <a href="{{ routes.account_url }}">{{ 'customer.account.title' | t }}</a>
+        <a href="{{ shop.url }}/apps/sso/moas/broker/login/shopify/slo/logout">Logout</a>
       {% else %}
       <a class="acc-links text-hover acc-sign-in" 
         id="customer_login_link" href="{%- if customer -%}{{- routes.account_url -}}{%-else-%}{{ routes.account_login_url }}{%- endif -%}"

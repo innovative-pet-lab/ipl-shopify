@@ -364,7 +364,11 @@
     {% if customer %}
       <div class="user-dropdown" id="userDropdown">
         <div class="user-firstname" id="userToggle">
-          {{ customer.first_name | slice: 0, 1 | upcase }}
+          {% if customer.first_name  %}
+            {{ customer.first_name | slice: 0, 1 | upcase }}
+          {% else %}
+            {{ customer.email | slice: 0, 1 | upcase }}
+          {% endif %}
         </div>
         <ul class="logged-in-links" id="userMenu">
           <li><a href="https://app.innovativepetlab.com/">My Test</a></li>
