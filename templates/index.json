@@ -103,7 +103,9 @@
         "heading_text": "A science-driven pet wellness company with a collective 100+ years of clinical laboratory experience.",
         "body_text": "Innovative Pet Lab® founders bring their extensive experience in human diagnostic medicine to our mission of revolutionizing pet wellness care.",
         "button_label": "Meet the team",
-        "button_link": "shopify://pages/meet-the-team"
+        "button_link": "shopify://pages/meet-the-team",
+        "meet_the_team_image": "shopify://shop_images/IMG_9244_1_-_cleaned_up_3.png",
+        "meet_the_team_image_alt": ""
       }
     },
     "ipl_our_process_qFY3kb": {
