@@ -210,7 +210,7 @@
           "type": "faq",
           "settings": {
             "heading": "How do I register my kit?",
-            "answer": "<p><strong>Step 1:</strong><br/>Locate your unique ID card (inside your kit)</p><p><strong>Step 2:</strong><br/>Go to <a href=\"https://innovativepetlab.com/register-a-kit/\" target=\"_blank\" title=\"Kit registration page\"><strong>kit registration page</strong></a></p><p><strong>Step 3:</strong><br/>Follow the step by step instructions to enter your information</p>"
+            "answer": "<p><strong>Step 1:</strong><br/>Locate your unique ID card (inside your kit)</p><p><strong>Step 2:</strong><br/><a href=\"https://app.innovativepetlab.com/\" target=\"_blank\" title=\"https://app.innovativepetlab.com/\">Log in</a> to your account.</p><p><strong>Step 3:</strong><br/>Click the Register a new kit button at the top right corner.</p><p><strong>Step 4:</strong><br/>Follow the step by step instructions to enter your information.</p>"
           }
         },
         "faq_WtLVz9": {
