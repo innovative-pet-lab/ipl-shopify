@@ -8,18 +8,22 @@
         justify-content: space-between;
         gap: 2rem;
         min-height: 48vw;
-        background-image: url(https://cdn.shopify.com/s/files/1/0685/6497/5842/files/image_27.png?v=1739271141);
+        background-image: url(https://cdn.shopify.com/s/files/1/0685/6497/5842/files/bg_4.png?v=1750342372);
         background-size: contain;
-        background-position: right;
+        background-position: 140% center;
         background-repeat: no-repeat;
     }
     .ipl-meet-the-team-container h1 {
         text-align: left;
     }
-    .ipl-meet-the-team-container img {
-        width: 70%;
+    .ipl-meet-the-team-container .meet-the-team-image {
+        width: 50%;
         position: absolute;
         right: 0;
+    }
+
+    .ipl-meet-the-team-container .meet-the-team-image-mobile {
+        display: none;
     }
     .ipl-meet-the-team-container .content {
         flex: 1;
@@ -29,31 +33,68 @@
         border-radius: 1rem;
         position: absolute;
     }
+
     @media (min-width: 1080px) {
         .ipl-meet-the-team-container .content {
             padding-right: 14rem;
+            max-width: 70%;
         }
     }
+
+    @media (min-width: 1145px) {
+        .ipl-meet-the-team-container .content {
+            max-width: 65%;
+        }
+    }
+
     @media (max-width: 376px) {
         .ipl-meet-the-team-container {
             min-height: 20vh!important;
         }
-    } 
+    }
+
     @media (max-width: 430px) {
         .ipl-meet-the-team-container {
             min-height: 40vh!important;
         }
     }
     @media (max-width: 768px) {
-        .ipl-meet-the-team-container .content {
-            margin-left: -2rem;
-            padding: 0 1rem;
-            max-width: 100%;
+        .ipl-meet-the-team-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+            min-height: auto;
+            background: unset;
         }
-        .ipl-meet-the-team-container img {
+
+        .ipl-meet-the-team-container .content {
+            position: relative;
+            margin: 0;
+            max-width: 100%;
+            padding: 0 1rem;
+        }
+
+        .meet-the-team-image-mobile {
+            width: 100%;
+            max-width: 100%;
+            margin-top: 1rem;
+            display: block !important;
+        }
+
+        .meet-the-team-image-mobile img {
+            width: 100%;
+            height: auto;
+        }
+
+        .meet-the-team-image {
             display: none;
         }
     }
+
     @media (min-width: 1441px) {
         .ipl-meet-the-team-container {
             max-width: 100%;
@@ -63,6 +104,17 @@
             width: 45%;
             right: 14%;
         } {% endcomment %}
+        .ipl-meet-the-team-container .content {
+            padding-right: 14rem;
+            max-width: 60%;
+        }
+    }
+
+    @media (min-width: 1542px) {
+        .ipl-meet-the-team-container .content {
+            padding-right: 14rem;
+            max-width: 55%;
+        }
     }
     .title {
         font-size: 32px;
@@ -130,7 +182,7 @@
         }
         .cta-button {
             font-size: 14px;
-            font-weight: normal;
+            font-weight: bold;
             display: block;
             margin: auto;
             width: 38%;
@@ -186,7 +238,15 @@
 </style>
 
 <div class="ipl-meet-the-team-container">
-    <img src="https://cdn.shopify.com/s/files/1/0685/6497/5842/files/image_26.png?v=1739271839" alt="Team members with their pets">
+    {%  if section.settings.meet_the_team_image %}
+        <div class="meet-the-team-image">
+            <img
+                src="{{ section.settings.meet_the_team_image | image_url }}"
+                alt="{{ section.settings.meet_the_team_image_alt }}"
+            >
+        </div>
+
+    {%  endif % %}
     <div class="content">
         {% if section.settings.heading_text %}
         <h1 class="title">{{ section.settings.heading_text }}</h1>
@@ -197,8 +257,12 @@
         {% if section.settings.button_label %}
         <a href="{{ section.settings.button_link }}" class="cta-button">{{ section.settings.button_label }}</a>
         {% endif %}
-    </div>
-    <div class="image-section">
+        <div class="meet-the-team-image-mobile">
+            <img
+                src="{{ section.settings.meet_the_team_image | image_url }}"
+                alt="{{ section.settings.meet_the_team_image_alt }}"
+            >
+        </div>
     </div>
 </div>
 <div class="ipl-meet-the-team-usp-bar">
@@ -239,9 +303,18 @@
     {
         "type": "url",
         "id": "button_link",
-        "label": "Button Link" 
-    }
-    
+        "label": "Button Link"
+    },
+    {
+        "type": "image_picker",
+        "id": "meet_the_team_image",
+        "label": "IPL Team Image",
+    },
+    {
+        "type": "text",
+        "id": "meet_the_team_image_alt",
+        "label": "Alt for the IPL Team Image",
+    },
   ],
   "blocks": [
     {
