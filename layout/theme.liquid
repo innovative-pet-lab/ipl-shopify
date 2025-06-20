@@ -239,6 +239,10 @@
     {% endif %}
     {{ 'bss-custom.css' | asset_url | stylesheet_tag }}
     <script src="{{ 'bss-custom.js' | asset_url }}" defer></script>
-    
+    {% if template contains 'customers/login' and customer == null %}
+      <script>
+        window.location.href = `https://store.xecurify.com/moas/broker/login/shopify/www.innovativepetlab.com/account?idpname=auth0_AAx`;
+      </script>
+    {% endif %}
   </body>
 </html>
