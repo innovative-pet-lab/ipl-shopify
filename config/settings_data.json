@@ -76,6 +76,7 @@
     "show_reviews": false,
     "product_hover_auto_slide": false,
     "product_grid_content_alignment": "text-center",
+    "enable_preorder_badge": false,
     "newsletter_pop_enable": false,
     "newsletter_description": "<p>Join our Newsletter</p>",
     "show_scrollToTop_text": true,
@@ -1158,7 +1159,7 @@
   },
   "platform_customizations": {
     "custom_css": [
-      "@media (max-width: 768px) {.cart-items-wrapper a {font-size: 14px !important; } .media-body .yv-product-title {padding-right: 0; } .media-body .flex .yv-prizebox {min-width: 60px; justify-content: center; } .media-body .flex .yv-prizebox span {font-size: 16!important; }}"
+      "@media (max-width: 768px) {.cart-items-wrapper a {font-size: 14px !important; } .media-body .yv-product-title {padding-right: 0; } .media-body .flex .yv-prizebox {min-width: 60px; justify-content: center; } .media-body .flex .yv-prizebox span {font-size: 16 !important; }}"
     ]
   }
 }

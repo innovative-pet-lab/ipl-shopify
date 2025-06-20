@@ -120,7 +120,7 @@
           "type": "faq",
           "settings": {
             "heading": "Refunds, Cancellation & Replacement Policy",
-            "answer": "<p>This only applies to tests purchased on the IPL website.  If you purchased your test through one of our partners, please contact them directly.</p><p><strong>Refunds:</strong></p><ul><li>If you ordered a test and it has not yet shipped, you are eligible for a full refund</li><li>If you have received your kit and it has been within 30 days of purchase, you are  for a full refund, minus a $10 handling fee.</li><li>If it has been more than 30 days since your purchase, you are not eligable for a refund.</li><li>For any questions on the policy, please <a href=\"/pages/contact-1\" title=\"Contact\"><strong>contact us via our form</strong></a>.</li></ul><p><strong>Returns:</strong></p><ul><li>We do not accept a returned kit.  Please recycle any unused or unwanted kits.</li></ul><p><strong>Cancellations:</strong></p><ul><li>You can cancel an order prior to shipment.  Once a kit is shipped, it cannot be canceled. Please see the refund policy for any questions or <a href=\"/pages/contact-1\" title=\"Contact\"><strong>contact us via our form</strong></a>.<br/></li></ul>"
+            "answer": "<p>This only applies to tests purchased on the IPL website.  If you purchased your test through one of our partners, please contact them directly.</p><p><strong>Refunds:</strong></p><ul><li>If you ordered a test and it has not yet shipped, you are eligible for a full refund</li><li>If you have received your kit and it has been within 30 days of purchase, you are eligible for a full refund, minus a $10 handling fee.</li><li>If it has been more than 30 days since your purchase, you are not eligible for a refund.</li><li>For any questions on the policy, please <a href=\"/pages/contact-1\" title=\"Contact\"><strong>contact us via our form</strong></a>.</li></ul><p><strong>Returns:</strong></p><ul><li>We do not accept a returned kit.  Please recycle any unused or unwanted kits.</li></ul><p><strong>Cancellations:</strong></p><ul><li>You can cancel an order prior to shipment.  Once a kit is shipped, it cannot be canceled. Please see the refund policy for any questions or <a href=\"/pages/contact-1\" title=\"Contact\"><strong>contact us via our form</strong></a>.<br/></li></ul>"
           }
         },
         "faq_AinwtU": {
@@ -210,7 +210,7 @@
           "type": "faq",
           "settings": {
             "heading": "How do I register my kit?",
-            "answer": "<p><strong>Step 1:</strong><br/>Locate your unique ID card (inside your kit)</p><p><strong>Step 2:</strong><br/><a href=\"https://app.innovativepetlab.com/\" target=\"_blank\" title=\"https://app.innovativepetlab.com/\">Log in</a> to your account.</p><p><strong>Step 3:</strong><br/>Click the <strong>Register a new kit</strong> button at the top right corner.</p><p><strong>Step 4:</strong><br/>Follow the step by step instructions to enter your information.</p>"
+            "answer": "<p><strong>Step 1:</strong><br/>Locate your unique ID card (inside your kit)</p><p><strong>Step 2:</strong><br/><a href=\"https://app.innovativepetlab.com/\">Log in</a> to your account.</p><p><strong>Step 3:</strong><br/>Click the <strong>Register a new kit</strong> button at the top right corner.</p><p><strong>Step 4:</strong><br/>Follow the step by step instructions to enter your information.</p>"
           }
         },
         "faq_WtLVz9": {
@@ -365,7 +365,7 @@
           "type": "faq",
           "settings": {
             "heading": "How do I create an account?",
-            "answer": "<p><strong>Step 1:</strong><br/>Go to <a href=\"http://www.innovativepetlab.com/\">innovativepetlab.com</a></p><p><strong>Step 2:</strong><br/>Click the “Log in / Sign up” link</p><p><strong>Step 3:</strong><br/>Follow the directions for creating an account</p>"
+            "answer": "<p><strong>Step 1:</strong><br/>Go to <a href=\"http://www.innovativepetlab.com/\">innovativepetlab.com</a></p><p><strong>Step 2:</strong><br/>Click the <strong>“Log in / Sign up”</strong> link</p><p><strong>Step 3:</strong><br/>Follow the directions for creating an account</p>"
           }
         },
         "faq_ycFNta": {
@@ -417,7 +417,7 @@
           "type": "faq",
           "settings": {
             "heading": "I am part of a Shelter, Rescue or Non Profit who can I contact?",
-            "answer": "<p>Please reach out to <a href=\"mailto:parnterships@innovativepetlab.com\"><span style=\"text-decoration:underline\">info@innovativepetlab.com</span></a></p>"
+            "answer": "<p>Please reach out to <a href=\"mailto:info@innovativepetlab.com\" title=\"mailto:info@innovativepetlab.com\"><span style=\"text-decoration:underline\">info@innovativepetlab.com</span></a></p>"
           }
         }
       },
