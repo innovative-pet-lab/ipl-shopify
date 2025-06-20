@@ -53,16 +53,19 @@
             {% endif %}
             data-product-grid-main-image
           >
-            {% if product.featured_media.media_type == 'video' %}              
+            {% if product.featured_media.media_type == 'video' %}
               <deferred-media class="product-first-img">
                 <template style="display:none">
-                  {{ product.featured_media | video_tag:  image_size: '600x',
-                    class: 'videoBackgroundFile', 
-                    autoplay: true,
-                    loop: true,
-                    controls: false,
-                    muted: true
-                }}
+                  {{
+                    product.featured_media
+                    | video_tag:
+                      image_size: '600x',
+                      class: 'videoBackgroundFile',
+                      autoplay: true,
+                      loop: true,
+                      controls: false,
+                      muted: true
+                  }}
                 </template>
                 <noscript>
                   <img
@@ -73,26 +76,29 @@
                   >
                 </noscript>
               </deferred-media>
-              {% else %}
+            {% else %}
               {%- render 'lazy-image',
                 image: product.featured_media.preview_image,
                 class: 'product-first-img',
                 width: productImageSize,
-                sizes:'[100,200,300,400,500,600,700,800]' 
+                sizes: '[100,200,300,400,500,600,700,800]'
               -%}
             {% endif %}
           </div>
           {%- if onProductHover == 'image' and second_image != blank -%}
-            {% if second_image.media_type == 'video' %}              
+            {% if second_image.media_type == 'video' %}
               <deferred-media class="product-second-img">
                 <template style="display:none">
-                  {{ second_image | video_tag:  image_size: '400x',
-                    class: 'videoBackgroundFile', 
-                    autoplay: true,
-                    loop: true,
-                    controls: false,
-                    muted: true
-                }}
+                  {{
+                    second_image
+                    | video_tag:
+                      image_size: '400x',
+                      class: 'videoBackgroundFile',
+                      autoplay: true,
+                      loop: true,
+                      controls: false,
+                      muted: true
+                  }}
                 </template>
                 <noscript>
                   <img
@@ -103,8 +109,13 @@
                   >
                 </noscript>
               </deferred-media>
-              {% else %}
-            {%- render 'lazy-image', image: second_image, class: 'product-second-img', width: productImageSize, sizes:'[100,200,300,400,500,600,700,800]'-%}
+            {% else %}
+              {%- render 'lazy-image',
+                image: second_image,
+                class: 'product-second-img',
+                width: productImageSize,
+                sizes: '[100,200,300,400,500,600,700,800]'
+              -%}
             {% endif %}
           {%- endif -%}
         {%- else -%}
@@ -131,45 +142,52 @@
                 {% if product.media.size > 2 %}
                   data-flickity-hover-slider='{"fade":true,"wrapAround":true,"contain":true,{{- hoverSettings -}}"cellSelector":".sd-slide-wrapper","pauseAutoPlayOnHover": false}'
                 {% endif %}
-              >        
-                <deferred-media{% if product.media.size <= 2 %} class="product-img"{% endif %}>
+              >
+                <deferred-media
+                  {% if product.media.size <= 2 %}
+                    class="product-img"
+                  {% endif %}
+                >
                   <template style="display:none">
                     {% liquid
                       assign limit = 1
                       if product.media.size == 3
-                      assign limit = 2
+                        assign limit = 2
                       endif
                     %}
-                  {% for in in (1..limit) %}
-                  {%- for media in product.media offset: 1 limit: 5 -%}
-                    <div class="sd-slide-wrapper sd-active-slider">
-                      <div class="yv-product-img">
-                        <div
-                          class="image-wrapper image-{{ settings.product_image_style }}"
-                          {% if settings.product_image_style == 'aspect' %}
-                            style="padding-bottom:{{ 1 | divided_by : media.preview_image.aspect_ratio | times: 100 | minus : 1 }}%"
-                          {% endif %}
-                        >
-                          {% if media.media_type == 'video' %}      
-                                {{ media | video_tag:  image_size: '400x',
-                                  class: 'videoBackgroundFile', 
-                                  autoplay: true,
-                                  loop: true,
-                                  controls: false,
-                                  muted: true
-                              }}
-                            {% else %}
-                            {%- render 'lazy-image',
-                              image: media.preview_image,
-                              width: productImageSize,
-                              sizes:'[100,200,300,400,500,600,700,800]' 
-                            -%}
-                          {% endif %}
+                    {% for in in (1..limit) %}
+                      {%- for media in product.media offset: 1 limit: 5 -%}
+                        <div class="sd-slide-wrapper sd-active-slider">
+                          <div class="yv-product-img">
+                            <div
+                              class="image-wrapper image-{{ settings.product_image_style }}"
+                              {% if settings.product_image_style == 'aspect' %}
+                                style="padding-bottom:{{ 1 | divided_by : media.preview_image.aspect_ratio | times: 100 | minus : 1 }}%"
+                              {% endif %}
+                            >
+                              {% if media.media_type == 'video' %}
+                                {{
+                                  media
+                                  | video_tag:
+                                    image_size: '400x',
+                                    class: 'videoBackgroundFile',
+                                    autoplay: true,
+                                    loop: true,
+                                    controls: false,
+                                    muted: true
+                                }}
+                              {% else %}
+                                {%- render 'lazy-image',
+                                  image: media.preview_image,
+                                  width: productImageSize,
+                                  sizes: '[100,200,300,400,500,600,700,800]'
+                                -%}
+                              {% endif %}
+                            </div>
+                          </div>
                         </div>
-                      </div>
-                    </div>
-                  {%- endfor -%}
-                  {%- endfor -%}
+                      {%- endfor -%}
+                    {%- endfor -%}
                   </template>
                 </deferred-media>
               </div>
@@ -276,29 +294,29 @@
           </ul>
         {%- endunless -%}
 
-        {%- unless hideRelated or settings.show_similar == false -%} 
-        {%- liquid
-          assign product_url = routes.search_url | append : "?section_id=similar-products&product=" | append: product.handle | append: "&q="
-          assign nosimilar = false
-          if settings.similar_condition == "vendor" or settings.similar_condition == "both"
-            if product.vendor != blank
-              assign product_url = product_url | append :"vendor:" | append: product.vendor
-              assign nosimilar = true
+        {%- unless hideRelated or settings.show_similar == false -%}
+          {%- liquid
+            assign product_url = routes.search_url | append: '?section_id=similar-products&product=' | append: product.handle | append: '&q='
+            assign nosimilar = false
+            if settings.similar_condition == 'vendor' or settings.similar_condition == 'both'
+              if product.vendor != blank
+                assign product_url = product_url | append: 'vendor:' | append: product.vendor
+                assign nosimilar = true
+              endif
             endif
-          endif
-          if settings.similar_condition == "both"
-            if product.type != blank and product.vendor != blank
-            assign product_url = product_url | append :" AND "
-          endif
-         endif
-          if settings.similar_condition == "type" or settings.similar_condition == "both"
-            if product.type != blank
-            assign product_url = product_url | append :"product_type:" | append: product.type
-            assign nosimilar = true
-          endif
-        endif
-        assign product_url = product_url | append :"&nosimilar=" | append:nosimilar
-        -%}
+            if settings.similar_condition == 'both'
+              if product.type != blank and product.vendor != blank
+                assign product_url = product_url | append: ' AND '
+              endif
+            endif
+            if settings.similar_condition == 'type' or settings.similar_condition == 'both'
+              if product.type != blank
+                assign product_url = product_url | append: 'product_type:' | append: product.type
+                assign nosimilar = true
+              endif
+            endif
+            assign product_url = product_url | append: '&nosimilar=' | append: nosimilar
+          -%}
           {%- comment -%} theme-check-enable LiquidTag{%- endcomment -%}
           <a
             href="{{ product.url }}"
@@ -389,51 +407,40 @@
         {%- unless hideReviews -%}
           {%- if product.metafields.reviews.rating_count > 0 -%}
             {%- liquid
-              assign product_rating = product.metafields.reviews.rating.value.rating | floor
-              assign decimalproduct_rating = 0
+              assign productRating = product.metafields.reviews.rating.value.rating | floor
+              assign decimalProductRating = 0
               assign decimal = product.metafields.reviews.rating.value.rating | modulo: 1
-              if decimal >= 0.3 and decimal <= 0.7
-                assign decimalproduct_rating = 0.5
-              endif
+              assign widthPercentage = decimal | times: 100 | round
             -%}
             <div class="ratingbox">
               <span class="star-ratings">
-                {%- for i in (1..5) -%}
-                  {%- if i <= product_rating -%}
-                    <svg
-                      class="fill-review"
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 380 362"
-                      width="20"
-                      height="19"
-                    >
-                      <path fill-rule="evenodd"  fill="currentcolor" d="m204.7 10.5l37.5 116.1l122-0.3c15.4 0 21.2 19.1 7.7 28.9l-97.5 70.5l37.9 115.9c4.9 14.8-12.9 26.5-24.6 16.5l-97.6-71.2l-98.6 71.9c-13.4 9.7-28.2-3.4-22.6-20.4l36.9-112.7l-98.8-71.5c-12.6-9.1-5.2-28.9 10.1-27.9l120.9 0.3l37.5-116.1c4.5-14.2 24.7-14.1 29.2 0z" />
+                {% for i in (1..5) %}
+                  {% if i <= productRating %}
+                    <svg class="fill-review" viewBox="0 0 380 362" width="20" height="19">
+                      <path fill-rule="evenodd" fill="currentcolor"
+                        d="m204.7 10.5l37.5 116.1l122-0.3c15.4 0 21.2 19.1 7.7 28.9l-97.5 70.5l37.9 115.9c4.9 14.8-12.9 26.5-24.6 16.5l-97.6-71.2l-98.6 71.9c-13.4 9.7-28.2-3.4-22.6-20.4l36.9-112.7l-98.8-71.5c-12.6-9.1-5.2-28.9 10.1-27.9l120.9 0.3l37.5-116.1c4.5-14.2 24.7-14.1 29.2 0z" />
                     </svg>
-                  {%- elsif product_rating < i and decimalproduct_rating == 0.5 -%}
-                    <svg class="half-fill-review" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.89 19.01">
-                      <defs><style>.d{fill:#ddd;}.e{fill:currentcolor;}</style></defs>
-                      <g/>
-                      <g>
-                        <g>
-                          <g>
-                            <path class="e" d="M9.18,.56l-1.97,6.09-6.35-.02c-.8-.05-1.19,.99-.53,1.46l5.19,3.75-1.94,5.92c-.29,.89,.48,1.58,1.19,1.07l5.17-3.77V0c-.32,0-.65,.19-.76,.56Z"/>
-                            <path class="d" d="M19.08,6.63l-6.4,.02L10.71,.56C10.59,.19,10.27,0,9.94,0V15.07h0l5.12,3.73c.61,.52,1.55-.09,1.29-.87l-1.99-6.08,5.12-3.7c.71-.51,.4-1.52-.4-1.52Z"/>
-                          </g>
-                        </g>
-                      </g>
+                  {% elsif productRating < i and decimal > 0 %}
+                    <svg viewBox="0 0 380 362" width="20" height="19">
+                      <defs>
+                        <linearGradient id="grad-{{ forloop.index }}" x1="0%" y1="0%" x2="100%" y2="0%">
+                          <stop offset="{{ widthPercentage }}%" stop-color="currentColor" />
+                          <stop offset="{{ widthPercentage }}%" stop-color="#ddd" />
+                        </linearGradient>
+                      </defs>
+                      <path fill="url(#grad-{{ forloop.index }})" d="m204.7 10.5l37.5 116.1l122-0.3c15.4 0 21.2 19.1 7.7 28.9l-97.5 70.5l37.9 115.9c4.9 14.8-12.9 26.5-24.6 16.5l-97.6-71.2l-98.6 71.9c-13.4 9.7-28.2-3.4-22.6-20.4l36.9-112.7l-98.8-71.5c-12.6-9.1-5.2-28.9 10.1-27.9l120.9 0.3l37.5-116.1c4.5-14.2 24.7-14.1 29.2 0z" />
                     </svg>
-                  {%- else -%}
-                    <svg
-                      class="unfill-review"
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 380 362"
-                      width="20"
-                      height="19"
-                    >
-                      <path fill-rule="evenodd"  fill="#ddd" d="m204.7 10.5l37.5 116.1l122-0.3c15.4 0 21.2 19.1 7.7 28.9l-97.5 70.5l37.9 115.9c4.9 14.8-12.9 26.5-24.6 16.5l-97.6-71.2l-98.6 71.9c-13.4 9.7-28.2-3.4-22.6-20.4l36.9-112.7l-98.8-71.5c-12.6-9.1-5.2-28.9 10.1-27.9l120.9 0.3l37.5-116.1c4.5-14.2 24.7-14.1 29.2 0z" />
+                  {% else %}
+                    <svg class="unfill-review" viewBox="0 0 380 362" width="20" height="19">
+                      <path fill-rule="evenodd" fill="#ddd"
+                        d="m204.7 10.5l37.5 116.1l122-0.3c15.4 0 21.2 19.1 7.7 28.9l-97.5 70.5l37.9 115.9c4.9 14.8-12.9 26.5-24.6 16.5l-97.6-71.2l-98.6 71.9c-13.4 9.7-28.2-3.4-22.6-20.4l36.9-112.7l-98.8-71.5c-12.6-9.1-5.2-28.9 10.1-27.9l120.9 0.3l37.5-116.1c4.5-14.2 24.7-14.1 29.2 0z" />
                     </svg>
-                  {%- endif -%}
-                {%- endfor -%}
+                  {% endif %}
+                {% endfor %}
+              </span>
+              <span class="review-count">
+                {{- product.metafields.reviews.rating_count }}
+                {{ product.metafields.reviews.rating_count | pluralize: 'review', 'reviews' -}}
               </span>
             </div>
           {%- endif -%}
@@ -485,9 +492,8 @@
                 assign stockClass = 'yv-instock'
               endif
             elsif track_inventory == false
-                assign stockconent = 'products.product.in_stock' | t
-                assign stockClass = 'yv-instock'
-            
+              assign stockconent = 'products.product.in_stock' | t
+              assign stockClass = 'yv-instock'
             endif
           else
             assign stockconent = 'products.product.out_of_stock' | t
@@ -504,13 +510,17 @@
       </a>
       {%- if settings.show_price -%}
         <div
-          data-spark="b2c-only" 
+          data-spark="b2c-only"
           class="yv-prizebox"
           data-saved="{{ settings.show_saved_amount }}"
           data-saved-style="{{ settings.saved_amount_style }}"
           data-price-wrapper=""
           {{ block.shopify_attributes }}
-          bss-b2b-product-id="{{ product.id }}" bss-b2b-product-price bss-b2b-variant-price bss-b2b-variant-id="{{ product.selected_or_first_available_variant.id }}" bss-b2b-featured-product="true"
+          bss-b2b-product-id="{{ product.id }}"
+          bss-b2b-product-price
+          bss-b2b-variant-price
+          bss-b2b-variant-id="{{ product.selected_or_first_available_variant.id }}"
+          bss-b2b-featured-product="true"
         >
           {%- assign price_min = product.price_min | money -%}
           {%- if product.price_varies -%}
@@ -540,7 +550,7 @@
           <span>{% render 'icons', icon: stockClass %}</span>{{ stockconent }}
         </p>
       {% endif %}
-                        <spark-product-card parent-id="{{ product.id }}"></spark-product-card>
+      <spark-product-card parent-id="{{ product.id }}"></spark-product-card>
       {% unless hideCustomLabel %}
         {% unless producttags %}
           <ul class="list-unstyled yv-product-card-label-container">
@@ -605,21 +615,21 @@
                     assign min = 1
                     assign max = 1000000
                     assign diff = max | minus: min
-                    assign randomNumber = "now" | date: "%N" | modulo: diff | plus: min
+                    assign randomNumber = 'now' | date: '%N' | modulo: diff | plus: min
                   -%}
                   <li class="color_option variant_option" data-color-wrapper>
-                   {%- liquid
+                    {%- liquid
                       assign variantImage = ''
                       if settings.variant_image
-                      assign variantsList = product.variants | where: varOptionIndex, value
-                      for variant in variantsList
-                      if variant.featured_image != blank
-                      assign variantImage = variant.featured_image
-                      break
+                        assign variantsList = product.variants | where: varOptionIndex, value
+                        for variant in variantsList
+                          if variant.featured_image != blank
+                            assign variantImage = variant.featured_image
+                            break
+                          endif
+                        endfor
                       endif
-                      endfor
-                      endif
-                  -%}
+                    -%}
                     <label
                       class="visually-hidden"
                       for="product-{{ product.id }}_option-{{ forloop.index }}-{{ section.id }}{{ randomNumber }}-{{ index }}-{{ block.id }}-{{  value | handle }}"
@@ -638,19 +648,26 @@
                         onClick="switchSwatchMedia(event)"
                       {% endif %}
                     >
-                     {%- assign variantColorImage = value | handleize | append : '.png' -%}
+                    {%- assign variantColorImage = value | handleize | append: '.png' -%}
                     <span
                       class="option {% unless settings.variant_image %}variantColorOption{% else %}variantImageOption{% endunless %}"
                       data-color="{{ value }}"
-                       {% unless settings.variant_image and variantImage !=blank %}
-                      style="background-color:{{ value }};background-image:url('{{ variantColorImage | asset_img_url : 100 }}');"
-                      {% endunless %}>
-                     {%- if settings.variant_image -%}
-                      {%- if variantImage != blank -%}
-                      <img src="{{ variantImage | image_url: width: 34 }}" width="34" height="34"
-                        alt="{{ variantImage.alt | strip_html | escape }}" loading="lazy">
+                      {% unless settings.variant_image and variantImage != blank %}
+                        style="background-color:{{ value }};background-image:url('{{ variantColorImage | asset_img_url : 100 }}');"
+                      {% endunless %}
+                    >
+                      {%- if settings.variant_image -%}
+                        {%- if variantImage != blank -%}
+                          <img
+                            src="{{ variantImage | image_url: width: 34 }}"
+                            width="34"
+                            height="34"
+                            alt="{{ variantImage.alt | strip_html | escape }}"
+                            loading="lazy"
+                          >
+                        {%- endif -%}
                       {%- endif -%}
-                      {%- endif -%}</span>
+                    </span>
                     {% if variantValue.featured_media != blank %}
                       {% capture selectedColorImage %}
                       <div class="media-content">
