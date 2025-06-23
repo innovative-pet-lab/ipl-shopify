@@ -1,5 +1,72 @@
 {{ 'customer.css' | asset_url | stylesheet_tag }}
 
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const tbody = document.querySelector(".order-history tbody");
+    const sortButton = document.querySelector('[data-sort-key="date"]');
+
+    if (!tbody || !sortButton) return;
+
+    sortButton.addEventListener("click", function () {
+      const currentDirection = sortButton.getAttribute("data-sort-direction");
+      const ascending = currentDirection === "desc";
+
+      const rows = Array.from(tbody.querySelectorAll("tr"));
+
+      rows.sort((a, b) => {
+        const dateA = new Date(a.querySelector('[data-date]').dataset.date);
+        const dateB = new Date(b.querySelector('[data-date]').dataset.date);
+        return ascending ? dateA - dateB : dateB - dateA;
+      });
+
+      const fragment = document.createDocumentFragment();
+      rows.forEach(row => fragment.appendChild(row));
+      tbody.appendChild(fragment);
+
+      sortButton.setAttribute("data-sort-direction", ascending ? "asc" : "desc");
+    });
+  });
+</script>
+
+<style>
+  .sortable {
+    position: relative;
+    padding-right: 1.2em;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font: inherit;
+  }
+
+  .sortable::before,
+  .sortable::after {
+    content: '';
+    position: absolute;
+    right: 0.4em;
+    border-left: 0.3em solid transparent;
+    border-right: 0.3em solid transparent;
+    opacity: 0.3;
+  }
+
+  .sortable::before {
+    top: 0.3em;
+    border-bottom: 0.5em solid #000;
+  }
+
+  .sortable::after {
+    bottom: 0.3em;
+    border-top: 0.5em solid #000;
+  }
+
+  .sortable[data-sort-direction="asc"]::before {
+    opacity: 1;
+  }
+
+  .sortable[data-sort-direction="desc"]::after {
+    opacity: 1;
+  }
+</style>
+
 <div class="yv-page-banner yv-account-page-banner">
   <div class="page-banner-content">
     <h2 class="page-banner-title">{{ 'customer.account.title' | t }}</h2>
@@ -20,7 +87,11 @@
               <thead>
                 <tr>
                   <th id="ColumnOrder" scope="col">{{ 'customer.orders.order_number' | t }}</th>
-                  <th id="ColumnDate" scope="col">{{ 'customer.orders.date' | t }}</th>
+                  <th id="ColumnDate" scope="col">
+                    <button type="button" class="sortable" data-sort-key="date" data-sort-direction="desc">
+                      {{ 'customer.orders.date' | t }}
+                    </button>
+                  </th>
                   <th id="ColumnPayment" scope="col">{{ 'customer.orders.payment_status' | t }}</th>
                   <th id="ColumnFulfillment" scope="col">{{ 'customer.orders.fulfillment_status' | t }}</th>
                   <th id="ColumnTotal" scope="col">{{ 'customer.orders.total' | t }}</th>
@@ -46,7 +117,7 @@
                         {{ order.name }}
                       </a>
                     </td>
-                    <td headers="ColumnOrder ColumnDate" data-label="{{ 'customer.orders.date' | t }}">
+                    <td headers="ColumnOrder ColumnDate" data-label="{{ 'customer.orders.date' | t }}" data-date="{{ order.created_at | date: '%Y-%m-%dT%H:%M:%S' }}">
                       {{ order.created_at | time_tag: format: 'date' }}
                     </td>
                     <td headers="ColumnOrder ColumnPayment" data-label="{{ 'customer.orders.payment_status' | t }}">
