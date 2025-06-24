@@ -9,7 +9,7 @@
     capture var
       render 'locksmith-variables', scope: 'subject', subject: block, variable: 'transparent'
     endcapture
-    if var == "true"
+    if var == 'true'
     else
       continue
     endif
@@ -22,117 +22,156 @@
         assign product_meta_status = true
       endif
     endif
-  endfor 
+  endfor
 %}
-{% if section.settings.show_description or section.settings.content_heading != blank or section.settings.content_heading2 != blank or section.settings.content_heading3 != blank or product_meta_status %}
-<div class="yv-product-accordion {{ position }}" id="yv-product-accordion">
-  
-  {% if section.settings.width == 'full' %}
-    <div class="container">
+{% if section.settings.show_description
+  or section.settings.content_heading != blank
+  or section.settings.content_heading2 != blank
+  or section.settings.content_heading3 != blank
+  or product_meta_status
+%}
+  <div class="yv-product-accordion {{ position }}" id="yv-product-accordion">
+    {% if section.settings.width == 'full' %}
+      <div class="container">
     {% endif %}
-  {% if section.settings.show_description %}
-  <details class="yv-accordion-card"{% if section.settings.open_description_accordion %} open{% endif %}>
-    <summary class="yv-accordion-header{% if section.settings.open_description_accordion %} active{% endif %}" content="accordion-content-description">
-      <h6>{{ 'products.product.description' | t }}</h6>
-      
-        <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path fill-rule="evenodd" clip-rule="evenodd" d="M7.70698 7.70685C7.51945 7.89433 7.26514 7.99964 6.99998 7.99964C6.73481 7.99964 6.4805 7.89433 6.29298 7.70685L0.635977 2.04985C0.540467 1.95761 0.464284 1.84726 0.411875 1.72526C0.359466 1.60326 0.33188 1.47204 0.330726 1.33926C0.329572 1.20648 0.354874 1.0748 0.405155 0.951901C0.455436 0.829005 0.529689 0.717352 0.623582 0.623459C0.717475 0.529567 0.829126 0.455314 0.952023 0.405033C1.07492 0.354752 1.2066 0.32945 1.33938 0.330604C1.47216 0.331758 1.60338 0.359344 1.72538 0.411753C1.84739 0.464162 1.95773 0.540344 2.04998 0.635854L6.99998 5.58586L11.95 0.635854C12.1386 0.453696 12.3912 0.352902 12.6534 0.35518C12.9156 0.357459 13.1664 0.462628 13.3518 0.648036C13.5372 0.833444 13.6424 1.08426 13.6447 1.34645C13.6469 1.60865 13.5461 1.86125 13.364 2.04985L7.70698 7.70685Z" fill="#03B0A7"/>
-        </svg>
-  
-    </summary>
-    <div id="accordion-content-description" class="yv-accordion-content"{% if section.settings.open_description_accordion %} style="display:block"{% endif %}>
-      <div class="yv-content-body rich-editor-text-content">
-        {{ product.description | replace: '<table', '<div class="table-responsive"><table ' | replace: '</table>', '</table></div>' }}
-      </div>
-    </div>
-  </details>
-  {% endif %}
-  {% if section.settings.content_heading != blank %}
-  <details class="yv-accordion-card">
-    <summary class="yv-accordion-header" content="accordion-content-{{ section.id }}">
-      <h6>{{ section.settings.content_heading }}</h6>
-      {% comment %} <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" width="14px" height="14px" viewBox="0 0 14 14" xml:space="preserve">
-        <rect class="v-line" x="6" y="0" width="2.1" height="14"/>
-        <rect class="h-line" x="6" transform="matrix(6.123234e-17 -1 1 6.123234e-17 0 14)" width="2.1" height="14"/>
-      </svg> {% endcomment %}
-    </summary>
-    <div id="accordion-content-{{ section.id }}" class="yv-accordion-content">
-      <div class="yv-content-body">
-      {% if section.settings.content %}
-      {{ section.settings.content }}
-      {% else %}
-      {{ 'onboarding.rich_text_page' | t }}
-      {% endif %}
-      </div>
-    </div>
-  </details>
-  {% endif %}
-  
-  {% if section.settings.content_heading2 != blank %}
-  <details class="yv-accordion-card">
-    <summary class="yv-accordion-header" content="accordion-content2-{{ section.id }}">
-      <h6>{{ section.settings.content_heading2 }}</h6>
-
-      <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path fill-rule="evenodd" clip-rule="evenodd" d="M7.70698 7.70685C7.51945 7.89433 7.26514 7.99964 6.99998 7.99964C6.73481 7.99964 6.4805 7.89433 6.29298 7.70685L0.635977 2.04985C0.540467 1.95761 0.464284 1.84726 0.411875 1.72526C0.359466 1.60326 0.33188 1.47204 0.330726 1.33926C0.329572 1.20648 0.354874 1.0748 0.405155 0.951901C0.455436 0.829005 0.529689 0.717352 0.623582 0.623459C0.717475 0.529567 0.829126 0.455314 0.952023 0.405033C1.07492 0.354752 1.2066 0.32945 1.33938 0.330604C1.47216 0.331758 1.60338 0.359344 1.72538 0.411753C1.84739 0.464162 1.95773 0.540344 2.04998 0.635854L6.99998 5.58586L11.95 0.635854C12.1386 0.453696 12.3912 0.352902 12.6534 0.35518C12.9156 0.357459 13.1664 0.462628 13.3518 0.648036C13.5372 0.833444 13.6424 1.08426 13.6447 1.34645C13.6469 1.60865 13.5461 1.86125 13.364 2.04985L7.70698 7.70685Z" fill="#03B0A7"/>
-      </svg>
-        
-    </summary>
-    <div id="accordion-content2-{{ section.id }}" class="yv-accordion-content">
-      <div class="yv-content-body">
-      {% if section.settings.content2 %}
-        {% assign how_it_works = product.metafields.custom.how_it_works %}
-        {% if how_it_works != blank %}
-          <div class="how-it-works">
-            {{ how_it_works | metafield_tag }}
-          </div>
+    {% if section.settings.show_description %}
+      <details
+        class="yv-accordion-card"
+        {% if section.settings.open_description_accordion %}
+          open
         {% endif %}
-      {% else %}
-      {{ 'onboarding.rich_text_page' | t }}
-      {% endif %}
-      </div>
-    </div>
-  </details>
-  {% endif %}
-  {% if section.settings.content_heading3 != blank %}
-  <details class="yv-accordion-card">
-    <summary class="yv-accordion-header" content="accordion-content3-{{ section.id }}">
-      <h6>{{ section.settings.content_heading3 }}</h6>67
+      >
+        <summary
+          class="yv-accordion-header{% if section.settings.open_description_accordion %} active{% endif %}"
+          content="accordion-content-description"
+        >
+          <h6>{{ 'products.product.description' | t }}</h6>
 
-      <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path fill-rule="evenodd" clip-rule="evenodd" d="M7.70698 7.70685C7.51945 7.89433 7.26514 7.99964 6.99998 7.99964C6.73481 7.99964 6.4805 7.89433 6.29298 7.70685L0.635977 2.04985C0.540467 1.95761 0.464284 1.84726 0.411875 1.72526C0.359466 1.60326 0.33188 1.47204 0.330726 1.33926C0.329572 1.20648 0.354874 1.0748 0.405155 0.951901C0.455436 0.829005 0.529689 0.717352 0.623582 0.623459C0.717475 0.529567 0.829126 0.455314 0.952023 0.405033C1.07492 0.354752 1.2066 0.32945 1.33938 0.330604C1.47216 0.331758 1.60338 0.359344 1.72538 0.411753C1.84739 0.464162 1.95773 0.540344 2.04998 0.635854L6.99998 5.58586L11.95 0.635854C12.1386 0.453696 12.3912 0.352902 12.6534 0.35518C12.9156 0.357459 13.1664 0.462628 13.3518 0.648036C13.5372 0.833444 13.6424 1.08426 13.6447 1.34645C13.6469 1.60865 13.5461 1.86125 13.364 2.04985L7.70698 7.70685Z" fill="#03B0A7"/>
-      </svg>
-        
-    </summary>
-    <div id="accordion-content3-{{ section.id }}" class="yv-accordion-content">
-      <div class="yv-content-body">
-      {% if section.settings.content3 %}
-      {{ section.settings.content3 }}
-      {% else %}
-      {{ 'onboarding.rich_text_page' | t }}
-      {% endif %}
-      </div>
-    </div>
-  </details>
-  {% endif %}
-  {% if product_meta.settings.heading != blank %}
-  <details class="yv-accordion-card">
-    <summary class="yv-accordion-header" content="accordion-content-{{ product_meta.id }}">
-      <h6>{{ product_meta.settings.heading }}</h6>3323
-      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" width="14px" height="14px" viewBox="0 0 14 14" xml:space="preserve">
-        <rect class="v-line" x="6" y="0" width="2.1" height="14"/>
-        <rect class="h-line" x="6" transform="matrix(6.123234e-17 -1 1 6.123234e-17 0 14)" width="2.1" height="14"/>
-      </svg>
-    </summary>
-    <div id="accordion-content-{{ product_meta.id }}" class="yv-accordion-content">
-      <div class="yv-content-body">
-              {% render 'product-meta', product:product, current_variant:product.selected_or_first_available_variant, block: product_meta %}
-      </div>
-    </div>
-  </details>
-  {% endif %}
-  {% if section.settings.width == 'full' %}
-  </div>
+          <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M7.70698 7.70685C7.51945 7.89433 7.26514 7.99964 6.99998 7.99964C6.73481 7.99964 6.4805 7.89433 6.29298 7.70685L0.635977 2.04985C0.540467 1.95761 0.464284 1.84726 0.411875 1.72526C0.359466 1.60326 0.33188 1.47204 0.330726 1.33926C0.329572 1.20648 0.354874 1.0748 0.405155 0.951901C0.455436 0.829005 0.529689 0.717352 0.623582 0.623459C0.717475 0.529567 0.829126 0.455314 0.952023 0.405033C1.07492 0.354752 1.2066 0.32945 1.33938 0.330604C1.47216 0.331758 1.60338 0.359344 1.72538 0.411753C1.84739 0.464162 1.95773 0.540344 2.04998 0.635854L6.99998 5.58586L11.95 0.635854C12.1386 0.453696 12.3912 0.352902 12.6534 0.35518C12.9156 0.357459 13.1664 0.462628 13.3518 0.648036C13.5372 0.833444 13.6424 1.08426 13.6447 1.34645C13.6469 1.60865 13.5461 1.86125 13.364 2.04985L7.70698 7.70685Z" fill="#03B0A7"/>
+          </svg>
+        </summary>
+        <div
+          id="accordion-content-description"
+          class="yv-accordion-content"
+          {% if section.settings.open_description_accordion %}
+            style="display:block"
+          {% endif %}
+        >
+          <div class="yv-content-body rich-editor-text-content">
+            {{
+              product.description
+              | replace: '<table', '<div class="table-responsive"><table '
+              | replace: '</table>', '</table></div>'
+            }}
+          </div>
+        </div>
+      </details>
     {% endif %}
-</div>
+    {% if section.settings.content_heading != blank %}
+      <details class="yv-accordion-card">
+        <summary class="yv-accordion-header" content="accordion-content-{{ section.id }}">
+          <h6>{{ section.settings.content_heading }}</h6>
+          {% comment %}
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" width="14px" height="14px" viewBox="0 0 14 14" xml:space="preserve">
+              <rect class="v-line" x="6" y="0" width="2.1" height="14"/>
+              <rect class="h-line" x="6" transform="matrix(6.123234e-17 -1 1 6.123234e-17 0 14)" width="2.1" height="14"/>
+            </svg>
+          {% endcomment %}
+        </summary>
+        <div id="accordion-content-{{ section.id }}" class="yv-accordion-content">
+          <div class="yv-content-body">
+            {% if section.settings.content %}
+              {{ section.settings.content }}
+            {% else %}
+              {{ 'onboarding.rich_text_page' | t }}
+            {% endif %}
+          </div>
+        </div>
+      </details>
+    {% endif %}
+
+    {% if section.settings.content_heading2 != blank %}
+      <details class="yv-accordion-card">
+        <summary class="yv-accordion-header" content="accordion-content2-{{ section.id }}">
+          <h6>{{ section.settings.content_heading2 }}</h6>
+
+          <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M7.70698 7.70685C7.51945 7.89433 7.26514 7.99964 6.99998 7.99964C6.73481 7.99964 6.4805 7.89433 6.29298 7.70685L0.635977 2.04985C0.540467 1.95761 0.464284 1.84726 0.411875 1.72526C0.359466 1.60326 0.33188 1.47204 0.330726 1.33926C0.329572 1.20648 0.354874 1.0748 0.405155 0.951901C0.455436 0.829005 0.529689 0.717352 0.623582 0.623459C0.717475 0.529567 0.829126 0.455314 0.952023 0.405033C1.07492 0.354752 1.2066 0.32945 1.33938 0.330604C1.47216 0.331758 1.60338 0.359344 1.72538 0.411753C1.84739 0.464162 1.95773 0.540344 2.04998 0.635854L6.99998 5.58586L11.95 0.635854C12.1386 0.453696 12.3912 0.352902 12.6534 0.35518C12.9156 0.357459 13.1664 0.462628 13.3518 0.648036C13.5372 0.833444 13.6424 1.08426 13.6447 1.34645C13.6469 1.60865 13.5461 1.86125 13.364 2.04985L7.70698 7.70685Z" fill="#03B0A7"/>
+          </svg>
+        </summary>
+        <div id="accordion-content2-{{ section.id }}" class="yv-accordion-content">
+          <div class="yv-content-body">
+            {% if section.settings.content2 %}
+              {% assign how_it_works = product.metafields.custom.how_it_works %}
+              {% if how_it_works != blank %}
+                <div class="how-it-works">
+                  {{ how_it_works | metafield_tag }}
+                </div>
+              {% endif %}
+            {% else %}
+              {{ 'onboarding.rich_text_page' | t }}
+            {% endif %}
+          </div>
+        </div>
+      </details>
+    {% endif %}
+    {% if section.settings.content_heading3 != blank %}
+      <details class="yv-accordion-card">
+        <summary class="yv-accordion-header" content="accordion-content3-{{ section.id }}">
+          <h6>{{ section.settings.content_heading3 }}</h6>
+
+          <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M7.70698 7.70685C7.51945 7.89433 7.26514 7.99964 6.99998 7.99964C6.73481 7.99964 6.4805 7.89433 6.29298 7.70685L0.635977 2.04985C0.540467 1.95761 0.464284 1.84726 0.411875 1.72526C0.359466 1.60326 0.33188 1.47204 0.330726 1.33926C0.329572 1.20648 0.354874 1.0748 0.405155 0.951901C0.455436 0.829005 0.529689 0.717352 0.623582 0.623459C0.717475 0.529567 0.829126 0.455314 0.952023 0.405033C1.07492 0.354752 1.2066 0.32945 1.33938 0.330604C1.47216 0.331758 1.60338 0.359344 1.72538 0.411753C1.84739 0.464162 1.95773 0.540344 2.04998 0.635854L6.99998 5.58586L11.95 0.635854C12.1386 0.453696 12.3912 0.352902 12.6534 0.35518C12.9156 0.357459 13.1664 0.462628 13.3518 0.648036C13.5372 0.833444 13.6424 1.08426 13.6447 1.34645C13.6469 1.60865 13.5461 1.86125 13.364 2.04985L7.70698 7.70685Z" fill="#03B0A7"/>
+          </svg>
+        </summary>
+        <div id="accordion-content3-{{ section.id }}" class="yv-accordion-content">
+          <div class="yv-content-body">
+            {% assign analytes_included = product.metafields.custom.analytes_included %}
+            {% if analytes_included != blank %}
+              <div class="analytes-included">
+                {{ analytes_included | metafield_tag }}
+              </div>
+            {% else %}
+              {{ 'onboarding.rich_text_page' | t }}
+            {% endif %}
+          </div>
+        </div>
+      </details>
+    {% endif %}
+    {% if product_meta.settings.heading != blank %}
+      <details class="yv-accordion-card">
+        <summary class="yv-accordion-header" content="accordion-content-{{ product_meta.id }}">
+          <h6>{{ product_meta.settings.heading }}</h6>
+          3323
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            version="1.1"
+            x="0px"
+            y="0px"
+            width="14px"
+            height="14px"
+            viewBox="0 0 14 14"
+            xml:space="preserve"
+          >
+            <rect class="v-line" x="6" y="0" width="2.1" height="14"/>
+            <rect class="h-line" x="6" transform="matrix(6.123234e-17 -1 1 6.123234e-17 0 14)" width="2.1" height="14"/>
+          </svg>
+        </summary>
+        <div id="accordion-content-{{ product_meta.id }}" class="yv-accordion-content">
+          <div class="yv-content-body">
+            {% render 'product-meta',
+              product: product,
+              current_variant: product.selected_or_first_available_variant,
+              block: product_meta
+            %}
+          </div>
+        </div>
+      </details>
+    {% endif %}
+    {% if section.settings.width == 'full' %}
+      </div>
+    {% endif %}
+  </div>
 {% endif %}
