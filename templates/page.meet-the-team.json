@@ -19,6 +19,69 @@
         "textcolor": "#ffffff"
       }
     },
+    "media_inline_text_X89FYi": {
+      "type": "media-inline-text",
+      "blocks": {
+        "paragraph_pahBnt": {
+          "type": "paragraph",
+          "settings": {
+            "content": "Innovative Pet Lab is a Science-Driven Pet Wellness Company.  We are on a mission to empower the pet community with at-home tests and personalized solutions to enhance the lives and well-being of all pets.",
+            "is_above_media": true
+          }
+        },
+        "paragraph_Cb3iUc": {
+          "type": "paragraph",
+          "settings": {
+            "content": "Innovative Pet Care is redefining pet care with a line of scientifically proven at-home tests that evaluate your pet’s total  health.",
+            "is_above_media": false
+          }
+        },
+        "paragraph_9zka6D": {
+          "type": "paragraph",
+          "settings": {
+            "content": "We understand that pets can’t tell us where it hurts or how they feel. Inspired by our love of animals, the Innovative Pet Lab team recognized the need to provide pet parents with the crucial information they wish their furry family members could convey.",
+            "is_above_media": false
+          }
+        },
+        "paragraph_WrTddm": {
+          "type": "paragraph",
+          "settings": {
+            "content": "Our journey began with a (18-year-old) dog named Linda, who shared life with our Chief Scientific Officer, Dr. Betsy Redmond. For many years, Linda struggled with chronic gastric issues, leaving her feeling tired and unwell. Ironically, Linda’s symptoms mirrored those of the patients that we were seeing in the human lab, where our CoFounders worked together helping treat individuals with chronic health issues.",
+            "is_above_media": false
+          }
+        },
+        "paragraph_QYGHe3": {
+          "type": "paragraph",
+          "settings": {
+            "content": "Dr. Betsy realized if she could test Linda’s gut health using the same advanced methods employed for humans, she could identify the right diet, supplements, pharmaceuticals, and lifestyle changes to help Linda live a longer, healthier life. Linda lived to be 18 years young.",
+            "is_above_media": false
+          }
+        },
+        "paragraph_8PdcC6": {
+          "type": "paragraph",
+          "settings": {
+            "content": "Linda’s journey sparked a revolution in pet health testing from the comfort of home, leading us to develop comprehensive testing and personalized treatment plans that transform the lives of pets everywhere.",
+            "is_above_media": false
+          }
+        }
+      },
+      "block_order": [
+        "paragraph_pahBnt",
+        "paragraph_Cb3iUc",
+        "paragraph_9zka6D",
+        "paragraph_WrTddm",
+        "paragraph_QYGHe3",
+        "paragraph_8PdcC6"
+      ],
+      "name": "Media inline text",
+      "settings": {
+        "media_video": "shopify://files/videos/Copy of Our story.mp4",
+        "page_section_id": "our-story",
+        "title": "Our Story",
+        "thumbnail": "shopify://shop_images/our-story-thumbnail_3149148e-9909-49fd-a747-745092fdfd18.png",
+        "media_url": ""
+      }
+    },
     "meet_the_team_section_ietiUW": {
       "type": "meet-the-team-section",
       "blocks": {
@@ -135,69 +198,6 @@
         "page_section_id": "profiles"
       }
     },
-    "media_inline_text_X89FYi": {
-      "type": "media-inline-text",
-      "blocks": {
-        "paragraph_pahBnt": {
-          "type": "paragraph",
-          "settings": {
-            "content": "Innovative Pet Lab is a Science-Driven Pet Wellness Company.  We are on a mission to empower the pet community with at-home tests and personalized solutions to enhance the lives and well-being of all pets.",
-            "is_above_media": true
-          }
-        },
-        "paragraph_Cb3iUc": {
-          "type": "paragraph",
-          "settings": {
-            "content": "Innovative Pet Care is redefining pet care with a line of scientifically proven at-home tests that evaluate your pet’s total  health.",
-            "is_above_media": false
-          }
-        },
-        "paragraph_9zka6D": {
-          "type": "paragraph",
-          "settings": {
-            "content": "We understand that pets can’t tell us where it hurts or how they feel. Inspired by our love of animals, the Innovative Pet Lab team recognized the need to provide pet parents with the crucial information they wish their furry family members could convey.",
-            "is_above_media": false
-          }
-        },
-        "paragraph_WrTddm": {
-          "type": "paragraph",
-          "settings": {
-            "content": "Our journey began with a (18-year-old) dog named Linda, who shared life with our Chief Scientific Officer, Dr. Betsy Redmond. For many years, Linda struggled with chronic gastric issues, leaving her feeling tired and unwell. Ironically, Linda’s symptoms mirrored those of the patients that we were seeing in the human lab, where our CoFounders worked together helping treat individuals with chronic health issues.",
-            "is_above_media": false
-          }
-        },
-        "paragraph_QYGHe3": {
-          "type": "paragraph",
-          "settings": {
-            "content": "Dr. Betsy realized if she could test Linda’s gut health using the same advanced methods employed for humans, she could identify the right diet, supplements, pharmaceuticals, and lifestyle changes to help Linda live a longer, healthier life. Linda lived to be 18 years young.",
-            "is_above_media": false
-          }
-        },
-        "paragraph_8PdcC6": {
-          "type": "paragraph",
-          "settings": {
-            "content": "Linda’s journey sparked a revolution in pet health testing from the comfort of home, leading us to develop comprehensive testing and personalized treatment plans that transform the lives of pets everywhere.",
-            "is_above_media": false
-          }
-        }
-      },
-      "block_order": [
-        "paragraph_pahBnt",
-        "paragraph_Cb3iUc",
-        "paragraph_9zka6D",
-        "paragraph_WrTddm",
-        "paragraph_QYGHe3",
-        "paragraph_8PdcC6"
-      ],
-      "name": "Media inline text",
-      "settings": {
-        "media_video": "shopify://files/videos/Copy of Our story.mp4",
-        "page_section_id": "our-story",
-        "title": "Our Story",
-        "thumbnail": "shopify://shop_images/our-story-thumbnail_3149148e-9909-49fd-a747-745092fdfd18.png",
-        "media_url": ""
-      }
-    },
     "multi_column_logos_nNpfTz": {
       "type": "multi-column-logos",
       "blocks": {
@@ -253,8 +253,8 @@
   },
   "order": [
     "main-page",
-    "meet_the_team_section_ietiUW",
     "media_inline_text_X89FYi",
+    "meet_the_team_section_ietiUW",
     "multi_column_logos_nNpfTz"
   ]
 }
