@@ -1,59 +1,107 @@
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const formWrapper = document.getElementById('bss-b2b-registration-form');
+
+    if (!formWrapper) return;
+
+    const observer = new MutationObserver(function (mutations) {
+      for (let mutation of mutations) {
+        if (mutation.type === 'childList' || mutation.type === 'subtree') {
+          const errorSpan = document.querySelector('.bss-b2b-translation-rf-customer_exist');
+          if (errorSpan && errorSpan.textContent.includes('Customer email already exists')) {
+            errorSpan.textContent =
+              'The email address entered is already associated with an existing account. If you believe this is an error, please contact us at info@innovativepetlab.com.';
+          }
+        }
+      }
+    });
+
+    observer.observe(formWrapper, {
+      childList: true,
+      subtree: true,
+    });
+  });
+
+  document.addEventListener('DOMContentLoaded', function () {
+    setTimeout(function () {
+      const target = document.querySelector('.bss-b2b-rf-submit-button input');
+      if (!target) return;
+      document.addEventListener(
+        'click',
+        function (e) {
+          console.log('event: ', e);
+          if (e.target === target) {
+            target.value = 'Submitting...';
+            setTimeout(() => {
+              target.value = 'Submit';
+            }, 2000);
+          }
+        },
+        true
+      );
+    }, 3000);
+  });
+</script>
+
 <div class="container">
-{% comment %} <div class="custom-app-section">
- <button id="quiz-button" class="button">Start the quiz</button>
-</div> {% endcomment %}
-{% for block in section.blocks %}
-  <div id="app-{{ section.settings.app_id }}">
-  {% render block %}
-  </div>
-{% endfor %}
+  {% comment %}
+    <div class="custom-app-section">
+     <button id="quiz-button" class="button">Start the quiz</button>
+    </div>
+  {% endcomment %}
+  {% for block in section.blocks %}
+    <div id="app-{{ section.settings.app_id }}">
+      {% render block %}
+    </div>
+  {% endfor %}
 </div>
 <style>
-  #shopify-section-{{ section.id }}.shopify-section {
-    padding-top:{{ section.settings.top_space_desktop }}px;
-    padding-bottom:{{ section.settings.bottom_space_desktop }}px;
-  }
-  @media only screen and (max-width:575px) {
-    #shopify-section-{{ section.id }}.shopify-section{
-      padding-top:{{ section.settings.top_space_mobile }}px;
-      padding-bottom:{{ section.settings.bottom_space_mobile }}px;
+    #shopify-section-{{ section.id }}.shopify-section {
+      padding-top:{{ section.settings.top_space_desktop }}px;
+      padding-bottom:{{ section.settings.bottom_space_desktop }}px;
+    }
+    @media only screen and (max-width:575px) {
+      #shopify-section-{{ section.id }}.shopify-section{
+        padding-top:{{ section.settings.top_space_mobile }}px;
+        padding-bottom:{{ section.settings.bottom_space_mobile }}px;
+      }
+    }
+  @media (max-width: 520px) {
+    #app-quiz .shopify-app-block div,  #app-quiz .shopify-app-block div iframe {
+      min-height: 275px!important;
+      max-height: 275px!important;
     }
   }
-@media (max-width: 520px) {
-  #app-quiz .shopify-app-block div,  #app-quiz .shopify-app-block div iframe {
-    min-height: 275px!important;
-    max-height: 275px!important;
-  }
-}
-
 </style>
-{% comment %} <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const quizButton = document.querySelector("#quiz-button");
-    const quizApp = document.querySelector("#app-{{ section.settings.app_id }}");
+{% comment %}
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const quizButton = document.querySelector("#quiz-button");
+      const quizApp = document.querySelector("#app-{{ section.settings.app_id }}");
 
-    if (quizButton && quizApp) {
-        quizButton.addEventListener("click", function () {
-            console.log("Click quiz");
-            quizApp.style.display = "block";
-        });
-    }
+      if (quizButton && quizApp) {
+          quizButton.addEventListener("click", function () {
+              console.log("Click quiz");
+              quizApp.style.display = "block";
+          });
+      }
 
-    window.addEventListener("message", function (event) {
-      // Ensure the message comes from the correct origin (replace 'https://iframe-domain.com' with actual URL)
-      if (event.origin !== "https://4135dc-4.myshopify.com/tools/perfect-product-finder/ipl-test-quize-uqrwcvyvct") {
-          console.warn("Ignored message from unknown origin:", event.origin);
-          return;
-      }
-  
-      if (event.data === "startOverClicked") {
-          console.log("Start Over button clicked inside iframe!");
-          // Add any logic you want to trigger here, like hiding the quiz
-          document.querySelector("#quiz-app").style.display = "none";
-      }
+      window.addEventListener("message", function (event) {
+        // Ensure the message comes from the correct origin (replace 'https://iframe-domain.com' with actual URL)
+        if (event.origin !== "https://4135dc-4.myshopify.com/tools/perfect-product-finder/ipl-test-quize-uqrwcvyvct") {
+            console.warn("Ignored message from unknown origin:", event.origin);
+            return;
+        }
+
+        if (event.data === "startOverClicked") {
+            console.log("Start Over button clicked inside iframe!");
+            // Add any logic you want to trigger here, like hiding the quiz
+            document.querySelector("#quiz-app").style.display = "none";
+        }
+    });
   });
-});
-</script> {% endcomment %}
+  </script>
+{% endcomment %}
 {% schema %}
 {
   "name": "t:sections.apps.name",
