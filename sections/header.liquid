@@ -26,6 +26,11 @@
 
   {%- comment -%}theme-check-enable NestedSnippet {%- endcomment -%}
   <style>
+              @media (min-width: 992px) {
+            .top-header.header_1 .container-fluid {
+              max-width: 100%;
+            }
+          }
          #shopify-section-{{ section.id }}{
           --header-form-border: {{ section.settings.catalog_text_border }};
           --search-icon-bg: {{ section.settings.searchbar_icon_bg }};
