@@ -26,87 +26,10 @@
 
   {%- comment -%}theme-check-enable NestedSnippet {%- endcomment -%}
   <style>
-         #shopify-section-{{ section.id }}{
-          --header-form-border: {{ section.settings.catalog_text_border }};
-          --search-icon-bg: {{ section.settings.searchbar_icon_bg }};
-           --search-icon-color:{{ section.settings.searchbar_icon_color }};
-           --mobile-menu-border:{{ section.settings.mobile_menu_border_color }};
+      @media (min-width: 992px) {
+        .top-header.header_1 .container-fluid {
+          max-width: 100%;
         }
-        body {
-          --search-icon-bg: {{ section.settings.searchbar_icon_bg }};
-           --search-icon-color:{{ section.settings.searchbar_icon_color }};
-        }
-        #nav_style_3 .navbar-nav.list-menu--inline{
-          justify-content: {{ section.settings.menu_position }};
-        }
-        .nav-item .nav-link {
-           font-size: 16px;
-        }
-        .side-menu .inner-side ul li .list-menu__item,
-        .side-menu .inner-side ul li .toggle-level,
-        .side-menu .social-links ul li a {
-           font-size: {{ section.settings.type_font_size }}px;
-        }
-        .side-menu .nav-item.dropdown .inner.child li .toggle-level,
-        .side-menu .nav-item.dropdown .inner.child li a:not(.yv-megamenu-collection){
-          opacity: 1;
-        }
-        .header_2 .nav-item .nav-link ,.header_4 .nav-item .nav-link {
-          font-size: {{ section.settings.type_font_size }}px;
-        }
-        .navigation__header{
-          justify-content: {{ section.settings.logo_position }};
-        }
-        {%- if section.settings.enable_sticky_header -%}
-        .shopify-section-main-header {
-          position: sticky;
-          top: 0;
-        }
-        {%- endif -%}
-      {% unless section.settings.full_width_bgcolor contains 'rgba(0,0,0,0)' or section.settings.full_width_bgcolor == blank %}
-        .header_2 .nav__header, .header_4 .nav__header{
-          background:{{ section.settings.full_width_bgcolor }}
-        }
-    {% endunless %}
-    {% unless section.settings.full_width_textcolor contains 'rgba(0,0,0,0)' or section.settings.full_width_textcolor == blank %}
-      .header_2 .nav__header .nav-item .nav-link, .header_4 .nav__header .nav-item  .nav-link {
-          color: {{ section.settings.full_width_textcolor }};
-      }
-    {% endunless %}
-    {% unless section.settings.full_width_textcolor_hover contains 'rgba(0,0,0,0)' or section.settings.full_width_textcolor_hover == blank %}
-      .header_2 .nav__header .nav-item .nav-link:hover, .header_4 .nav__header .nav-item .nav-link:hover {
-          color: {{ section.settings.full_width_textcolor_hover }} !important;
-      }
-    {% endunless %}
-        .shopify-section-main-header {
-          z-index:4;
-          transition: transform .4s ease;
-        }
-        .shopify-section-main-header header,
-        .shopify-section-main-header .wrapper-top-cart.cart-fixed{
-          background-color:{{ section.settings.header_bgcolor }};
-        }
-        body:not(.sticky-header, .header2) .shopify-section-main-header header[header-transparent=true]:not(:hover) .header__heading-link,
-        body:not(.sticky-header, .header2) .shopify-section-main-header header[header-transparent=true]:not(:hover) .header__icons a,
-        body:not(.sticky-header, .header2) .shopify-section-main-header header[header-transparent=true]:not(:hover) .nav-item .nav-link{
-          color: {{ section.settings.transparent_text_color }};
-        }
-          body:not(.sticky-header, .header2) .shopify-section-main-header header[header-transparent=true]:not(:hover) .navbar-toggler-icon,
-          body:not(.sticky-header, .header2) .shopify-section-main-header header[header-transparent=true]:not(:hover) .navbar-toggler-icon:before,
-          body:not(.sticky-header, .header2) .shopify-section-main-header header[header-transparent=true]:not(:hover) .navbar-toggler-icon:after,
-          body:not(.sticky-header, .header2) .shopify-section-main-header header[header-transparent=true]:not(:hover)  .hamburger-line{
-          background: {{ section.settings.transparent_text_color }};
-        }
-        header a:not(.searchPage_link,.all_results_link,.dropdown-item, .drawer-login-btn,.hamburger-menu-item, .menu-category-title, .yv-dropdown-item-link, .yv-product-title, .dropdown-hamburger-menu-item-title, .back-to-menu,.yv-dropdown-item-link,.yv-megamenu-item-link, .category-menu-bar ul .category-menu-item a),
-        header .list-menu__item,
-        header .nav-link,
-        .header_3 .nav__btn .menu_title,
-        .header_3 .category_title h2,
-        .shopify-section-main-header .wrapper-top-cart.cart-fixed .cart-icon{
-          color:{{ section.settings.header_textcolor }};
-        }
-      .shopify-section-main-header .wrapper-top-cart.cart-fixed .cart-icon svg{
-        fill:currentColor;
       }
 
         header .navbar-toggler span.navbar-toggler-icon,
