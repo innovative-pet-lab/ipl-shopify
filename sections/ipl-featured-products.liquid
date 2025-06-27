@@ -1,294 +1,393 @@
 <style>
-    .ipl-featured-products {
-        background-color: #F0F6F4;
-    }
-    .ipl-featured-products h1 {
-        text-align: left;
-    }
+  .ipl-featured-products {
+    background-color: #F0F6F4;
+  }
+  .ipl-featured-products h1 {
+    text-align: left;
+  }
+  .ipl-featured-products .container {
+    max-width: 100%;
+    padding-left: 7%;
+    margin: 0 auto;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+  @media (min-width: 1900px) {
     .ipl-featured-products .container {
-        max-width: 100%;
-        padding-left: 7%;
-        margin: 0 auto;
-        padding-top: 6rem;
-        padding-bottom: 6rem;
+      padding-right: 12%;
+      padding-left: 12%;
     }
-    @media (min-width: 1900px) {
-        .ipl-featured-products .container {
-            padding-right: 12%;
-            padding-left: 12%;
-        }
+  }
+  @media (min-width: 2900px) {
+    .ipl-featured-products .container {
+      padding-right: 22%;
+      padding-left: 22%;
     }
-    @media (min-width: 2900px) {
-        .ipl-featured-products .container {
-            padding-right: 22%;
-            padding-left: 22%;
-        }
-    }
+  }
+  .hero.flex {
+    display: flex;
+  }
+  @media (max-width: 768px) {
     .hero.flex {
-        display: flex;
-    }
-    @media (max-width: 768px) {
-        .hero.flex {
-            flex-wrap: wrap;
-            padding: 0 1rem;
-        }
-        .hero {
-            margin-bottom: 2rem!important;
-            text-align: center;
-        }
-    }
-    @media (max-width: 1020px) {
-        .hero.flex {
-            flex-wrap: wrap;
-        }
-        .hero {
-            text-align: center;
-        }
+      flex-wrap: wrap;
+      padding: 0 1rem;
     }
     .hero {
-        text-align: left;
-        margin-bottom: 3rem;
+      margin-bottom: 2rem!important;
+      text-align: center;
     }
+  }
+  @media (max-width: 1020px) {
+    .hero.flex {
+      flex-wrap: wrap;
+    }
+    .hero {
+      text-align: center;
+    }
+  }
+  .hero {
+    text-align: left;
+    margin-bottom: 3rem;
+  }
+  .hero h1 {
+    font-size: 40px;
+    margin-bottom: 1rem;
+    color: #1a1a1a;
+    font-weight: 700;
+    min-width: 494px;
+  }
+  .hero p {
+    font-size: 24px;
+    color: #333333;
+    line-height: 32.78px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .swiper {
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    position: relative;
+  }
+  .product-card {
+    background: white;
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+    height: 100%;
+    border: 1px solid #73C7AD;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    {% comment %} max-height: 33vw;
+    min-height: 35vw;   {% endcomment %}
+  }
+  {% comment %} @media (max-width: 1024px) {
+    .product-card.min-height img {
+      min-height: 194px;
+      max-height: 194px!important;
+    }
+  } {% endcomment %}
+  .product-card.min-height img {
+    max-height: 357px;
+  }
+  @media (max-width: 501px) {
+    .product.card.min.height img {
+      max-height: 347px;
+    }
+  }
+  @media (max-width: 500px) {
+    .product-card {
+      min-height: 80vw;
+    }
+  }
+  @media (min-width: 1400px) {
+    .product-card {
+      max-height: 28vw;
+      min-height: 29vw;
+    }
+    .product-card.min-height img {
+      padding: 1rem;
+    }
+  }
+  .product-card .product-info {
+    padding: 1rem;
+    text-align: center;
+  }
+  .product-card .product-info h2 {
+    font-size: 18px;
+    font-weight: 700;
+  }
+  .product-card:hover {
+    background-color: #F0F6F4;
+  }
+  .product-card:hover img {
+    transform: rotate(-10deg) scale(1.1);
+    transition: transform 0.3s ease;
+  }
+  .product-card:hover .product-info .view-product {
+    padding: 5px 28px;
+    border: 2px solid #03B0A7;
+    border-radius: 80px;
+    background-color: #e6f7f6;
+    color: #03b0a7;
+  }
+  .product-image {
+    padding: 3rem 1rem 1rem 1rem;
+    max-height: unset;
+    display: flex;
+    margin: auto;
+  }
+  .product-title {
+    font-size: 1.25rem;
+    color: #1a1a1a;
+    margin-bottom: 1rem;
+  }
+  .product-card:hover .view-product {
+    color: white;
+  }
+  .view-product {
+    display: inline-block;
+    color: #2bb7a4;
+    text-decoration: none;
+    font-weight: 700;
+    transition: color 0.2s ease;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    padding: 5px 28px;
+    border: 2px solid transparent;
+  }
+  .view-product:hover {
+    color: #1a8f80;
+  }
+  .view-all-button {
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    background-color: #2e2b6e;
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: background-color 0.2s ease;
+    font-size: 18px;
+    font-weight: 700;
+  }
+  .view-all-button:hover {
+    background-color: #1f1c4d;
+  }
+  .swiper-button-next.swiper-button-disabled, .swiper-button-prev.swiper-button-disabled {
+    opacity: 0;
+  }
+  .swiper-button-next,
+  .swiper-button-prev {
+    color: #2e2b6e;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .swiper-pagination-bullet-active {
+    background: #2e2b6e;
+  }
+  .swiper:hover .swiper-button-next,
+  .swiper:hover .swiper-button-prev {
+    opacity: 1;
+  }
+  .swiper-button-next:after, .swiper-button-prev:after {
+    font-size: 24px;
+    color: #03B0A7;
+  }
+  @media (max-width: 768px) {
     .hero h1 {
-        font-size: 40px;
-        margin-bottom: 1rem;
-        color: #1a1a1a;
-        font-weight: 700;
-        min-width: 494px;
+      font-size: 24px;
+      text-align: center;
+      min-width: unset;
+      padding: 0 2rem;
+      width: 100%;
     }
     .hero p {
-        font-size: 24px;
-        color: #333333;
-        line-height: 32.78px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+      font-size: 14px;
+      text-align: center;
+      line-height: 19.12px;
+    }
+    .ipl-featured-products .container {
+      padding: 2rem 0rem 1rem 0rem;
     }
     .swiper {
-        width: 100%;
-        padding: 1rem;
-        margin-bottom: 1rem;
-        position: relative;
-    }
-    .product-card {
-        background: white;
-        border-radius: 12px;
-        transition: transform 0.3s ease;
-        height: 100%;
-        border: 1px solid #73C7AD;
-        overflow: hidden;
-        display: flex;
-        flex-direction: column;
-        {% comment %} max-height: 33vw;
-        min-height: 35vw;   {% endcomment %}
-    }
-    {% comment %} @media (max-width: 1024px) {
-        .product-card.min-height img {
-            min-height: 194px;
-            max-height: 194px!important;
-        }
-    } {% endcomment %}
-    .product-card.min-height img {
-        max-height: 357px;
-    }
-    @media (max-width: 500px) {
-        .product-card {
-             min-height: 80vw; 
-        }
-    }
-    @media (min-width: 1400px) {
-        .product-card {
-            max-height: 28vw;
-            min-height: 29vw; 
-        }
-        .product-card.min-height img {
-            padding: 1rem;
-        }
-    }
-    .product-card .product-info {
-        padding: 1rem;
-        text-align: center;
-    }
-    .product-card .product-info h2 {
-        font-size: 18px;
-        font-weight: 700;
-    }
-    .product-card:hover {
-        background-color: #F0F6F4;
-    }
-    .product-card:hover img {
-        transform: rotate(-10deg) scale(1.1);
-        transition: transform 0.3s ease;
-    }
-    .product-card:hover .product-info .view-product {
-        padding: 5px 28px;
-        border: 2px solid #03B0A7;
-        border-radius: 80px;
-        background-color: #e6f7f6;
-        color: #03b0a7;
-    }
-    .product-image {
-        padding: 3rem 1rem 1rem 1rem;
-        max-height: unset;
-        display: flex;
-        margin: auto;
-    }
-    .product-title {
-        font-size: 1.25rem;
-        color: #1a1a1a;
-        margin-bottom: 1rem;
-    }
-    .product-card:hover .view-product {
-        color: white;
-    }
-    .view-product {
-        display: inline-block;
-        color: #2bb7a4;
-        text-decoration: none;
-        font-weight: 700;
-        transition: color 0.2s ease;
-        margin-bottom: 1rem;
-        margin-top: 1rem;
-        padding: 5px 28px;
-        border: 2px solid transparent;
-    }
-    .view-product:hover {
-        color: #1a8f80;
+      padding: 24px!important;
     }
     .view-all-button {
-        display: block;
-        width: fit-content;
-        margin: 0 auto;
-        padding: 1rem 2rem;
-        background-color: #2e2b6e;
-        color: white;
-        text-decoration: none;
-        border-radius: 50px;
-        transition: background-color 0.2s ease;
-        font-size: 18px;
-        font-weight: 700;
+      padding: 0.5rem 1rem;
+      font-size: 14px;
+      margin: 2rem auto 1rem auto;
     }
-    .view-all-button:hover {
-        background-color: #1f1c4d;
+  }
+  @media (min-width: 1800px) {
+    .hero.flex {
+        gap: 2rem;
     }
-    .swiper-button-next.swiper-button-disabled, .swiper-button-prev.swiper-button-disabled {
-        opacity: 0;
+  }
+
+  @media (min-width: 769px) {
+    .swiper-button-prev.swiper-button-disabled,
+    .swiper-button-next.swiper-button-disabled {
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
     }
-    .swiper-button-next,
-    .swiper-button-prev {
-        color: #2e2b6e;
-        opacity: 0;
-        transition: opacity 0.3s ease;
-    }
-    .swiper-pagination-bullet-active {
-        background: #2e2b6e;
-    }
-    .swiper:hover .swiper-button-next,
-    .swiper:hover .swiper-button-prev {
-        opacity: 1;
-    }
-    .swiper-button-next:after, .swiper-button-prev:after {
-        font-size: 24px;
-        color: #03B0A7;
-    }
-    @media (max-width: 768px) {
-        .hero h1 {
-            font-size: 24px;
-            text-align: center;
-            min-width: unset;
-            padding: 0 2rem;
-            width: 100%;
-        }
-        .hero p {
-            font-size: 14px;
-            text-align: center;
-            line-height: 19.12px;
-        }
-        .ipl-featured-products .container {
-            padding: 2rem 0rem 1rem 0rem;
-        }
-        .swiper {
-            padding: 0!important;
-        }
-        .view-all-button {
-            padding: 0.5rem 1rem;
-            font-size: 14px;
-            margin: 2rem auto 1rem auto;
-        }
-    }
-    @media (min-width: 1800px) {
-        .hero.flex {
-            gap: 2rem;
-        }
-    }
+  }
+  .swiper-fade-wrapper::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100px;
+    height: 100%;
+    background: linear-gradient(to left, #F0F6F4, transparent);
+    pointer-events: none;
+    z-index: 2;
+    transition: opacity 0.3s ease;
+    opacity: 1;
+  }
+  .swiper-fade-wrapper.hide-gradient::after {
+    opacity: 0;
+  }
+  .swiper-fade-wrapper {
+    position: relative;
+  }
+
+  .swiper-fade-wrapper::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 100%;
+    background: linear-gradient(to right, #F0F6F4, transparent);
+    pointer-events: none;
+    z-index: 2;
+    transition: opacity 0.3s ease;
+    opacity: 0; /* hidden by default */
+  }
+
+  .swiper-fade-wrapper.show-left-gradient::before {
+    opacity: 1;
+  }
 </style>
 
 <div class="ipl-featured-products">
-    <div class="container">
-        <section class="hero flex">
-            {% if section.settings.heading_text %}
-            <h1>{{ section.settings.heading_text }}</h1>
-            {% endif %}
-            {% if section.settings.heading_text %}
-            <p>{{ section.settings.body_text }}</p>
-            {% endif %}
-        </section>
+  <div class="container">
+    <section class="hero flex">
+      {% if section.settings.heading_text %}
+        <h1>{{ section.settings.heading_text }}</h1>
+      {% endif %}
+      `
+      {% if section.settings.heading_text %}
+        <p>{{ section.settings.body_text }}</p>
+      {% endif %}
+    </section>
+    `
+    {% assign featured_collection = collections.shop %}
 
-        {% assign featured_collection = collections['shop'] %}
-         
-        {% if featured_collection and featured_collection.products.size > 0 %}
+    {% if featured_collection and featured_collection.products.size > 0 %}
+      <div id="swiper-fade-wrapper" class="swiper-fade-wrapper">
         <div class="swiper">
-            <div class="swiper-wrapper">
-                {% for product in featured_collection.products %}
-                {%- comment %}<locksmith:563c>{% endcomment -%}
-                  {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: product, subject_parent: featured_collection, variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% else %}{% continue %}{% endif -%}
-                {%- comment %}</locksmith:563c>{% endcomment -%}
-                <div class="swiper-slide">
-                    <div class="product-card {% if product.title == 'Stress Test' %}min-height{% endif %}">
-                        <img alt="" width="" height="" src="{{ product.featured_image | img_url: '800x' }}" alt="{{ product.title }}" class="product-image">
-                        <div class="product-info">
-                            <h2 class="product-title">{{ product.title }}</h2>
-                            <a href="{{ product.url }}" class="view-product">View product</a>
-                        </div>
-                    </div>
+          <div class="swiper-wrapper">
+            {% for product in featured_collection.products %}
+              {%- comment %}<locksmith:563c>{%- endcomment %}
+              {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: product, subject_parent: featured_collection, variable: 'transparent' %}{% endcapture -%}
+              {%- if var == 'true' %}{% else %}{% continue %}{% endif -%}
+              {%- comment %}</locksmith:563c>{%- endcomment %}
+              <div class="swiper-slide">
+                <div class="product-card {% if product.title == 'Stress Test' %}min-height{% endif %}">
+                  <img
+                    alt=""
+                    width=""
+                    height=""
+                    src="{{ product.featured_image | img_url: '800x' }}"
+                    alt="{{ product.title }}"
+                    class="product-image"
+                  >
+                  <div class="product-info">
+                    <h2 class="product-title">{{ product.title }}</h2>
+                    <a href="{{ product.url }}" class="view-product">View product</a>
+                  </div>
                 </div>
-                {% endfor %}
-            </div>
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
+              </div>
+            {% endfor %}
+          </div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
         </div>
-        {% else %}
-            <p>No featured products available.</p>
-        {% endif %}
+      </div>
+    {% else %}
+      <p>No featured products available.</p>
+    {% endif %}
 
-        {% if section.settings.button_text %}
-        <a href="/collections/all" class="view-all-button">{{ section.settings.button_text }}</a>
-        {% endif %}
-    </div>
+    {% if section.settings.button_text %}
+      <a href="/collections/all" class="view-all-button">{{ section.settings.button_text }}</a>
+    {% endif %}
+  </div>
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.2.0/swiper-bundle.min.js" defer></script>
 <script>
-    const swiper = new Swiper('.swiper', {
-        slidesPerView: 1.5,
-        spaceBetween: 20,
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true
-        },
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-        breakpoints: {
-            768: {
-                slidesPerView: 1.5,
-            },
-            1024: {
-                slidesPerView: 3.2
-            }
+  document.addEventListener('DOMContentLoaded', function () {
+    const isMobile = window.matchMedia('(max-width: 768px)').matches;
+
+    if (isMobile) {
+      document.querySelectorAll('.product-card').forEach((card) => {
+        const link = card.querySelector('.view-product');
+        if (link) {
+          card.style.cursor = 'pointer';
+          card.addEventListener('click', () => {
+            window.location.href = link.getAttribute('href');
+          });
         }
+      });
+    }
+
+    const fadeWrapper = document.getElementById('swiper-fade-wrapper');
+
+    const swiper = new Swiper('.swiper', {
+      slidesPerView: 1.5,
+      spaceBetween: 20,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      breakpoints: {
+        768: {
+          slidesPerView: 1.5,
+        },
+        1024: {
+          slidesPerView: 3.2,
+        },
+      },
+      on: {
+        slideChange: function () {
+          const totalSlides = swiper.slides.length;
+          const currentIndex = swiper.realIndex; // use realIndex, more accurate
+          const visibleSlides = Math.ceil(swiper.params.slidesPerView); // round UP
+
+          const isLastSlide = currentIndex + visibleSlides >= totalSlides;
+
+          if (isLastSlide) {
+            fadeWrapper.classList.add('hide-gradient'); // hide right
+            fadeWrapper.classList.add('show-left-gradient'); // show left
+          } else {
+            fadeWrapper.classList.remove('hide-gradient');
+            fadeWrapper.classList.remove('show-left-gradient');
+          }
+        },
+      },
     });
+  });
 </script>
 
 {% schema %}
@@ -304,18 +403,18 @@
     {
       "type": "textarea",
       "id": "body_text",
-      "label": "Body Text"    
+      "label": "Body Text"
     },
     {
       "type": "text",
       "id": "button_text",
       "label": "Button Text",
       "default": "View all"
-    },
+    }
   ],
   "presets": [
     {
-      "name": "IPL featured products"    
+      "name": "IPL featured products"
     }
   ]
 }

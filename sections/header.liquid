@@ -26,52 +26,69 @@
 
   {%- comment -%}theme-check-enable NestedSnippet {%- endcomment -%}
   <style>
-              @media (min-width: 992px) {
-            .top-header.header_1 .container-fluid {
-              max-width: 100%;
-            }
-          }
-         #shopify-section-{{ section.id }}{
-          --header-form-border: {{ section.settings.catalog_text_border }};
-          --search-icon-bg: {{ section.settings.searchbar_icon_bg }};
-           --search-icon-color:{{ section.settings.searchbar_icon_color }};
-           --mobile-menu-border:{{ section.settings.mobile_menu_border_color }};
-        }
-        body {
-          --search-icon-bg: {{ section.settings.searchbar_icon_bg }};
-           --search-icon-color:{{ section.settings.searchbar_icon_color }};
-        }
-        #nav_style_3 .navbar-nav.list-menu--inline{
-          justify-content: {{ section.settings.menu_position }};
-        }
-        .nav-item .nav-link {
-           font-size: 16px;
-        }
-        .side-menu .inner-side ul li .list-menu__item,
-        .side-menu .inner-side ul li .toggle-level,
-        .side-menu .social-links ul li a {
-           font-size: {{ section.settings.type_font_size }}px;
-        }
-        .side-menu .nav-item.dropdown .inner.child li .toggle-level,
-        .side-menu .nav-item.dropdown .inner.child li a:not(.yv-megamenu-collection){
-          opacity: 1;
-        }
-        .header_2 .nav-item .nav-link ,.header_4 .nav-item .nav-link {
-          font-size: {{ section.settings.type_font_size }}px;
-        }
-        .navigation__header{
-          justify-content: {{ section.settings.logo_position }};
-        }
-        {%- if section.settings.enable_sticky_header -%}
-        .shopify-section-main-header {
-          position: sticky;
-          top: 0;
-        }
-        {%- endif -%}
-      {% unless section.settings.full_width_bgcolor contains 'rgba(0,0,0,0)' or section.settings.full_width_bgcolor == blank %}
-        .header_2 .nav__header, .header_4 .nav__header{
-          background:{{ section.settings.full_width_bgcolor }}
-        }
+    body.sticky-header .shopify-section-main-header {
+        position: fixed !important;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 999;
+    }
+
+    @media (min-width: 992px) {
+      .top-header.header_1 .container-fluid {
+        max-width: 100%;
+      }
+    }
+
+    #shopify-section-{{ section.id }}{
+      --header-form-border: {{ section.settings.catalog_text_border }};
+      --search-icon-bg: {{ section.settings.searchbar_icon_bg }};
+        --search-icon-color:{{ section.settings.searchbar_icon_color }};
+        --mobile-menu-border:{{ section.settings.mobile_menu_border_color }};
+    }
+
+    body {
+      --search-icon-bg: {{ section.settings.searchbar_icon_bg }};
+      --search-icon-color:{{ section.settings.searchbar_icon_color }};
+    }
+
+    #nav_style_3 .navbar-nav.list-menu--inline{
+      justify-content: {{ section.settings.menu_position }};
+    }
+
+    .nav-item .nav-link {
+        font-size: 16px;
+    }
+
+    .side-menu .inner-side ul li .list-menu__item,
+    .side-menu .inner-side ul li .toggle-level,
+    .side-menu .social-links ul li a {
+        font-size: {{ section.settings.type_font_size }}px;
+    }
+
+    .side-menu .nav-item.dropdown .inner.child li .toggle-level,
+    .side-menu .nav-item.dropdown .inner.child li a:not(.yv-megamenu-collection){
+      opacity: 1;
+    }
+
+    .header_2 .nav-item .nav-link ,.header_4 .nav-item .nav-link {
+      font-size: {{ section.settings.type_font_size }}px;
+    }
+
+    .navigation__header{
+      justify-content: {{ section.settings.logo_position }};
+    }
+
+    {%- if section.settings.enable_sticky_header -%}
+      .shopify-section-main-header {
+        position: sticky;
+        top: 0;
+      }
+    {%- endif -%}
+    {% unless section.settings.full_width_bgcolor contains 'rgba(0,0,0,0)' or section.settings.full_width_bgcolor == blank %}
+      .header_2 .nav__header, .header_4 .nav__header{
+        background:{{ section.settings.full_width_bgcolor }}
+      }
     {% endunless %}
     {% unless section.settings.full_width_textcolor contains 'rgba(0,0,0,0)' or section.settings.full_width_textcolor == blank %}
       .header_2 .nav__header .nav-item .nav-link, .header_4 .nav__header .nav-item  .nav-link {
@@ -83,193 +100,193 @@
           color: {{ section.settings.full_width_textcolor_hover }} !important;
       }
     {% endunless %}
-        .shopify-section-main-header {
-          z-index:4;
-          transition: transform .4s ease;
-        }
-        .shopify-section-main-header header,
-        .shopify-section-main-header .wrapper-top-cart.cart-fixed{
-          background-color:{{ section.settings.header_bgcolor }};
-        }
-        body:not(.sticky-header, .header2) .shopify-section-main-header header[header-transparent=true]:not(:hover) .header__heading-link,
-        body:not(.sticky-header, .header2) .shopify-section-main-header header[header-transparent=true]:not(:hover) .header__icons a,
-        body:not(.sticky-header, .header2) .shopify-section-main-header header[header-transparent=true]:not(:hover) .nav-item .nav-link{
-          color: {{ section.settings.transparent_text_color }};
-        }
-          body:not(.sticky-header, .header2) .shopify-section-main-header header[header-transparent=true]:not(:hover) .navbar-toggler-icon,
-          body:not(.sticky-header, .header2) .shopify-section-main-header header[header-transparent=true]:not(:hover) .navbar-toggler-icon:before,
-          body:not(.sticky-header, .header2) .shopify-section-main-header header[header-transparent=true]:not(:hover) .navbar-toggler-icon:after,
-          body:not(.sticky-header, .header2) .shopify-section-main-header header[header-transparent=true]:not(:hover)  .hamburger-line{
-          background: {{ section.settings.transparent_text_color }};
-        }
-        header a:not(.searchPage_link,.all_results_link,.dropdown-item, .drawer-login-btn,.hamburger-menu-item, .menu-category-title, .yv-dropdown-item-link, .yv-product-title, .dropdown-hamburger-menu-item-title, .back-to-menu,.yv-dropdown-item-link,.yv-megamenu-item-link, .category-menu-bar ul .category-menu-item a),
-        header .list-menu__item,
-        header .nav-link,
-        .header_3 .nav__btn .menu_title,
-        .header_3 .category_title h2,
-        .shopify-section-main-header .wrapper-top-cart.cart-fixed .cart-icon{
-          color:{{ section.settings.header_textcolor }};
-        }
-      .shopify-section-main-header .wrapper-top-cart.cart-fixed .cart-icon svg{
-        fill:currentColor;
-      }
-
-        header .navbar-toggler span.navbar-toggler-icon,
-        header .navbar-toggler span.navbar-toggler-icon:before,
-        header .navbar-toggler span.navbar-toggler-icon:after,
-        header .hamburger-line{
-          background-color:{{ section.settings.header_textcolor }};
-        }
-        header a::after{
-          border-color:{{ section.settings.header_textcolor }} !important;
-        }
-        .menuLinks-wrapper {
-          width: 100%;
-        }
-        #headerSection .wrapper-top-cart .cartCount {
-          border-color:{{ section.settings.header_bgcolor }};
-        }
-          
-          .header_3 .nav__btn:hover button.navbar-toggler span.navbar-toggler-icon,
-          .header_3 .nav__btn:hover button.navbar-toggler span.navbar-toggler-icon:after,
-          .header_3 .nav__btn:hover button.navbar-toggler span.navbar-toggler-icon:before,
-          .hamburger::after {
-            background-color:{{ section.settings.header_textcolor_hover }};
-          }
-          header a:hover::after{
-              border-color:{{ section.settings.header_textcolor_hover }} !important;
-          }
-          header a:not(.drawer-login-btn, .dropdown-hamburger-menu-item-title, .yv-dropdown-item-link, .menu-category-title, .yv-product-title, .yv-listing-megamenu-title, .yv-megamenu-item-link):hover,
-          header .nav-link:hover,
-            .header_3 .nav__btn:hover .menu_title{
-              color:{{ section.settings.header_textcolor_hover }} !important;
-            }
-           header .category-menu-bar ul .category-menu-item a:hover,
-           header .yv-megamenu-product-detail a:hover,
-           header .yv-dropdown-item-link:hover,
-           header .menu-category-title:hover,
-           header .yv-dropdown-menus .yv-product-title:hover,
-           header .yv-listing-megamenu-title:hover,
-           header .yv-megamenu-item-link:hover {
-            background-color: #e1f3f6;
-            opacity: 1;
-            }
-         }
-
-      /*  side drawer setting  */
-        header .side-menu,
-        header .side-menu .child,
-        header .side-menu .grandchild,
-        header .side-menu .side-menu-header{
-          background-color: {{ section.settings.mobile_menu_bg_color }};
-        }
-
-        header .side-menu .back-btn,
-        header .side-menu .close-btn,
-        header .side-menu a {
-          color: #fff ;
-        }
-        header .side-menu .inner-side ul li .list-menu__item,
-        header .side-menu .inner-side .lang-dropdown{
-          color: #26286E;
-          font-size: 20px;
-          font-weight: 600;
-        }
-
-        header .navbar-nav-sidebar > .nav-item {
-          border-bottom: 1px solid rgb(255 255 255 / 5%);
-        }
-        header .side-menu .nav-item.dropdown .inner.child li a,
-        header .side-menu .nav-item.dropdown .inner.child li .toggle-level,
-        header .side-menu .yv-product-information .yv-prizebox a,
-        header .side-menu .yv-product-information .yv-prizebox .yv-product-price,
-        header .side-menu .yv-product-information .yv-product-title,
-        header .side-menu .yv-product-information .yv-prizebox .yv-product-compare-price {
-          color: #26286E !important;
-          font-size: 20px;
-          font-weight: 600;
-        }
-        .drawer-login-btn,
-        #shopify-section-{{ section.id }} .side-menu .country-select-box .detail-summary span,
-        #shopify-section-{{ section.id }} .side-menu .country-select-box .detail-summary:after {
-          color: {{ section.settings.mobile_menu_text_color }} !important;
-        }
-
-        .side-menu .close-btn svg {
-          {% comment %} color: {{ section.settings.mobile_menu_text_color }} !important; {% endcomment %}
-        }
-        .side-menu .social-links ul li svg {
-          color: {{ section.settings.mobile_menu_text_color }} !important;
-        }
-        .yv-browse-category-link, .mobile-tabs-wrapper li{
-          background: {{ section.settings.catalog_bg }};
-          color: {{ section.settings.catalog_text }} !important;
-        }
-        .yv-header-searchbar input,.yv-header-searchbar-content{
-          background: {{ section.settings.catalog_bg }};
-        }
-        .yv-header-searchbar-box input,
-        .yv-header-searchbar-content *{
-          color: {{ section.settings.searchbar_text }};
-        }
-        .yv-header-searchbar-box input::placeholder {
-          color: {{ section.settings.searchbar_text }};
-          opacity: 0.50;
-        }
-        .mobile-tabs-wrapper li.active {
-          background-color: {{ section.settings.catalog_text }};
-          color: {{ section.settings.catalog_bg }} !important;
-        }
-
-        header .category-menu-bar ul .category-menu-item a,
-        header .yv-megamenu-product-detail a,
-        header .menu-category-title,
-        header .yv-dropdown-item-link,
-        header .yv-dropdown-menus .yv-product-title,
-        header .yv-listing-megamenu-title,
-        header .yv-megamenu-item-link,
-        header .search-bar-container .yv-prizebox span{
-           color: {{ section.settings.catologtext_color }} !important;
-        }
-        {% liquid
-        assign menucolorBrightness = section.settings.catalogmenu_bg | color_brightness
-      %}
-      header{
-      --headerlogoWidth:{{ section.settings.logo_width }}px;
-      {%- if menucolorBrightness < 130 -%}
-        --menuAlternateBg:{{ section.settings.catalogmenu_bg | color_lighten: 10 }};
-        {%- else -%}
-        --menuAlternateBg:{{ section.settings.catalogmenu_bg | color_darken: 5 }};
-      {%- endif -%}
-      }
-      .category-megamenu-wrapper .yv-listing-megamenus,
-      .category-megamenu-wrapper, .category-menu, .yv-listing-megamenu-container, .yv-dropdown-menus{
-           background-color: {{ section.settings.catalogmenu_bg }} !important;
-        }
-
-      .yv-listing-megamenu-container:nth-child(even) {
-           background-color: var(--menuAlternateBg) !important;
-      }
-
-     {%  for block in section.blocks %}
-        {% if block.type == 'menu-badge' %}
-          #menu-badge-{{ block.id }}{
-           color:{{ block.settings.badge_text_color }};
-           background:{{ block.settings.badge_background }};
-          }
-          #menu-badge-{{ block.id }}:before{
-            border-bottom-color:{{ block.settings.badge_background }};
-          }
-        {% endif %}
-    {% endfor %}
-    {% unless section.settings.show_cart_count %}
-    [data-cart-count]{
-      font-size:0px !important;
+    .shopify-section-main-header {
+      z-index:4;
+      transition: transform .4s ease;
     }
-  {% endunless %}
+    .shopify-section-main-header header,
+    .shopify-section-main-header .wrapper-top-cart.cart-fixed{
+      background-color:{{ section.settings.header_bgcolor }};
+    }
+    body:not(.sticky-header, .header2) .shopify-section-main-header header[header-transparent=true]:not(:hover) .header__heading-link,
+    body:not(.sticky-header, .header2) .shopify-section-main-header header[header-transparent=true]:not(:hover) .header__icons a,
+    body:not(.sticky-header, .header2) .shopify-section-main-header header[header-transparent=true]:not(:hover) .nav-item .nav-link{
+      color: {{ section.settings.transparent_text_color }};
+    }
+    body:not(.sticky-header, .header2) .shopify-section-main-header header[header-transparent=true]:not(:hover) .navbar-toggler-icon,
+    body:not(.sticky-header, .header2) .shopify-section-main-header header[header-transparent=true]:not(:hover) .navbar-toggler-icon:before,
+    body:not(.sticky-header, .header2) .shopify-section-main-header header[header-transparent=true]:not(:hover) .navbar-toggler-icon:after,
+    body:not(.sticky-header, .header2) .shopify-section-main-header header[header-transparent=true]:not(:hover)  .hamburger-line{
+      background: {{ section.settings.transparent_text_color }};
+    }
+    header a:not(.searchPage_link,.all_results_link,.dropdown-item, .drawer-login-btn,.hamburger-menu-item, .menu-category-title, .yv-dropdown-item-link, .yv-product-title, .dropdown-hamburger-menu-item-title, .back-to-menu,.yv-dropdown-item-link,.yv-megamenu-item-link, .category-menu-bar ul .category-menu-item a),
+    header .list-menu__item,
+    header .nav-link,
+    .header_3 .nav__btn .menu_title,
+    .header_3 .category_title h2,
+    .shopify-section-main-header .wrapper-top-cart.cart-fixed .cart-icon{
+      color:{{ section.settings.header_textcolor }};
+    }
+    .shopify-section-main-header .wrapper-top-cart.cart-fixed .cart-icon svg{
+      fill:currentColor;
+    }
+
+    header .navbar-toggler span.navbar-toggler-icon,
+    header .navbar-toggler span.navbar-toggler-icon:before,
+    header .navbar-toggler span.navbar-toggler-icon:after,
+    header .hamburger-line{
+      background-color:{{ section.settings.header_textcolor }};
+    }
+    header a::after{
+      border-color:{{ section.settings.header_textcolor }} !important;
+    }
+    .menuLinks-wrapper {
+      width: 100%;
+    }
+    #headerSection .wrapper-top-cart .cartCount {
+      border-color:{{ section.settings.header_bgcolor }};
+    }
+
+    .header_3 .nav__btn:hover button.navbar-toggler span.navbar-toggler-icon,
+    .header_3 .nav__btn:hover button.navbar-toggler span.navbar-toggler-icon:after,
+    .header_3 .nav__btn:hover button.navbar-toggler span.navbar-toggler-icon:before,
+    .hamburger::after {
+      background-color:{{ section.settings.header_textcolor_hover }};
+    }
+    header a:hover::after{
+        border-color:{{ section.settings.header_textcolor_hover }} !important;
+    }
+    header a:not(.drawer-login-btn, .dropdown-hamburger-menu-item-title, .yv-dropdown-item-link, .menu-category-title, .yv-product-title, .yv-listing-megamenu-title, .yv-megamenu-item-link):hover,
+    header .nav-link:hover,
+    .header_3 .nav__btn:hover .menu_title{
+      color:{{ section.settings.header_textcolor_hover }} !important;
+    }
+    header .category-menu-bar ul .category-menu-item a:hover,
+    header .yv-megamenu-product-detail a:hover,
+    header .yv-dropdown-item-link:hover,
+    header .menu-category-title:hover,
+    header .yv-dropdown-menus .yv-product-title:hover,
+    header .yv-listing-megamenu-title:hover,
+    header .yv-megamenu-item-link:hover {
+      background-color: #e1f3f6;
+      opacity: 1;
+      }
+    }
+
+            /*  side drawer setting  */
+              header .side-menu,
+              header .side-menu .child,
+              header .side-menu .grandchild,
+              header .side-menu .side-menu-header{
+                background-color: {{ section.settings.mobile_menu_bg_color }};
+              }
+
+              header .side-menu .back-btn,
+              header .side-menu .close-btn,
+              header .side-menu a {
+                color: #fff ;
+              }
+              header .side-menu .inner-side ul li .list-menu__item,
+              header .side-menu .inner-side .lang-dropdown{
+                color: #26286E;
+                font-size: 20px;
+                font-weight: 600;
+              }
+
+              header .navbar-nav-sidebar > .nav-item {
+                border-bottom: 1px solid rgb(255 255 255 / 5%);
+              }
+              header .side-menu .nav-item.dropdown .inner.child li a,
+              header .side-menu .nav-item.dropdown .inner.child li .toggle-level,
+              header .side-menu .yv-product-information .yv-prizebox a,
+              header .side-menu .yv-product-information .yv-prizebox .yv-product-price,
+              header .side-menu .yv-product-information .yv-product-title,
+              header .side-menu .yv-product-information .yv-prizebox .yv-product-compare-price {
+                color: #26286E !important;
+                font-size: 20px;
+                font-weight: 600;
+              }
+              .drawer-login-btn,
+              #shopify-section-{{ section.id }} .side-menu .country-select-box .detail-summary span,
+              #shopify-section-{{ section.id }} .side-menu .country-select-box .detail-summary:after {
+                color: {{ section.settings.mobile_menu_text_color }} !important;
+              }
+
+              .side-menu .close-btn svg {
+                {% comment %} color: {{ section.settings.mobile_menu_text_color }} !important; {% endcomment %}
+              }
+              .side-menu .social-links ul li svg {
+                color: {{ section.settings.mobile_menu_text_color }} !important;
+              }
+              .yv-browse-category-link, .mobile-tabs-wrapper li{
+                background: {{ section.settings.catalog_bg }};
+                color: {{ section.settings.catalog_text }} !important;
+              }
+              .yv-header-searchbar input,.yv-header-searchbar-content{
+                background: {{ section.settings.catalog_bg }};
+              }
+              .yv-header-searchbar-box input,
+              .yv-header-searchbar-content *{
+                color: {{ section.settings.searchbar_text }};
+              }
+              .yv-header-searchbar-box input::placeholder {
+                color: {{ section.settings.searchbar_text }};
+                opacity: 0.50;
+              }
+              .mobile-tabs-wrapper li.active {
+                background-color: {{ section.settings.catalog_text }};
+                color: {{ section.settings.catalog_bg }} !important;
+              }
+
+              header .category-menu-bar ul .category-menu-item a,
+              header .yv-megamenu-product-detail a,
+              header .menu-category-title,
+              header .yv-dropdown-item-link,
+              header .yv-dropdown-menus .yv-product-title,
+              header .yv-listing-megamenu-title,
+              header .yv-megamenu-item-link,
+              header .search-bar-container .yv-prizebox span{
+                 color: {{ section.settings.catologtext_color }} !important;
+              }
+              {% liquid
+              assign menucolorBrightness = section.settings.catalogmenu_bg | color_brightness
+            %}
+            header{
+            --headerlogoWidth:{{ section.settings.logo_width }}px;
+            {%- if menucolorBrightness < 130 -%}
+              --menuAlternateBg:{{ section.settings.catalogmenu_bg | color_lighten: 10 }};
+              {%- else -%}
+              --menuAlternateBg:{{ section.settings.catalogmenu_bg | color_darken: 5 }};
+            {%- endif -%}
+            }
+            .category-megamenu-wrapper .yv-listing-megamenus,
+            .category-megamenu-wrapper, .category-menu, .yv-listing-megamenu-container, .yv-dropdown-menus{
+                 background-color: {{ section.settings.catalogmenu_bg }} !important;
+              }
+
+            .yv-listing-megamenu-container:nth-child(even) {
+                 background-color: var(--menuAlternateBg) !important;
+            }
+
+           {%  for block in section.blocks %}
+              {% if block.type == 'menu-badge' %}
+                #menu-badge-{{ block.id }}{
+                 color:{{ block.settings.badge_text_color }};
+                 background:{{ block.settings.badge_background }};
+                }
+                #menu-badge-{{ block.id }}:before{
+                  border-bottom-color:{{ block.settings.badge_background }};
+                }
+              {% endif %}
+          {% endfor %}
+          {% unless section.settings.show_cart_count %}
+          [data-cart-count]{
+            font-size:0px !important;
+          }
+        {% endunless %}
   </style>
   {% if request.page_type == 'index' %}
-  <script>
+    <script>
     function stickyHeaderInit() {
       // Opened once class
       document.body.classList.add('opened-once');
@@ -349,51 +366,51 @@
     // Initialize on page load and Shopify section reload
     document.addEventListener('DOMContentLoaded', stickyHeaderInit);
     document.addEventListener('shopify:section:load', stickyHeaderInit);
-  </script>
-{% else %}
-  <script>
-    // Get the body element
-  const body = document.body;
+    </script>
+  {% else %}
+    <script>
+      // Get the body element
+      const body = document.body;
 
-  // Set the scroll position threshold
-  const scrollThreshold = 100; 
+      // Set the scroll position threshold
+      const scrollThreshold = 100;
 
-  // Function to toggle the sticky header class
-  function toggleStickyHeader() {
-    const mainHeaderWrap = document.querySelector('.shopify-section-main-header');
-    if (window.scrollY > scrollThreshold) {
-      mainHeaderWrap.classList.add('sticky-header-main');
-    } else {
-      mainHeaderWrap.classList.remove('sticky-header-main');
-    }
-  }
+      // Function to toggle the sticky header class
+      function toggleStickyHeader() {
+        const mainHeaderWrap = document.querySelector('.shopify-section-main-header');
+        if (window.scrollY > scrollThreshold) {
+          mainHeaderWrap.classList.add('sticky-header-main');
+        } else {
+          mainHeaderWrap.classList.remove('sticky-header-main');
+        }
+      }
 
-  window.addEventListener('scroll', toggleStickyHeader);
-  </script>
-{% endif %}
+      window.addEventListener('scroll', toggleStickyHeader);
+    </script>
+  {% endif %}
 
-{% comment %} {% if request.page_type != 'product' %}
-  <script>
-    // Get the body element
-  const body = document.body;
+  {% comment %}
+    {% if request.page_type != 'product' %}
+      <script>
+        // Get the body element
+      const body = document.body;
 
-  // Set the scroll position threshold
-  const scrollThreshold = 100; 
+      // Set the scroll position threshold
+      const scrollThreshold = 100;
 
-  // Function to toggle the sticky header class
-  function toggleStickyHeader() {
-    if (window.scrollY > scrollThreshold) {
-      body.classList.add('sticky-header-product');
-    } else {
-      body.classList.remove('sticky-header-product');
-    }
-  }
+      // Function to toggle the sticky header class
+      function toggleStickyHeader() {
+        if (window.scrollY > scrollThreshold) {
+          body.classList.add('sticky-header-product');
+        } else {
+          body.classList.remove('sticky-header-product');
+        }
+      }
 
-  window.addEventListener('scroll', toggleStickyHeader);
-  </script>
-{% endif %} {% endcomment %}
-
-
+      window.addEventListener('scroll', toggleStickyHeader);
+      </script>
+    {% endif %}
+  {% endcomment %}
 </header>
 {% unless request.page_type contains 'customers' or customer %}
   {% if section.settings.account_type == 'popup' %}
@@ -433,7 +450,8 @@
         {% if cart.item_count == 0 %}
           style="display:none"
         {% endif %}
-      >{%- if cart.item_count < 100 -%}{{- cart.item_count -}}{%- endif -%}
+      >
+        {%- if cart.item_count < 100 -%}{{- cart.item_count -}}{%- endif -%}
       </span>
     </a>
   </div>
