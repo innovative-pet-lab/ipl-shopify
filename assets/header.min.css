@@ -392,7 +392,6 @@ header {
   text-align: center;
   line-height: 14px;
   border-radius: 100%;
-  border: 2px solid #fff;
   color: var(--colorTextBody);
   animation: 1.6s infinite pulse;
   padding: 0 2px;

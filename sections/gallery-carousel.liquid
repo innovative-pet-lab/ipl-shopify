@@ -31,6 +31,7 @@
                 href="{{ block.settings.link }}"
                 class="yv-gallery-img {% if block.settings.heading == blank and block.settings.subheading == blank %}no-content{% endif %} image-background-{{ section.settings.image_background }}"
                 aria-label="{{ block.settings.heading | default : shop.name }}"
+                target="_blank"
               >
                 {% if block.settings.image != blank %}
                   {% render 'lazy-image', image: block.settings.image, sizes: '[375]' %}
