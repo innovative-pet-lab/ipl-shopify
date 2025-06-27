@@ -81,8 +81,11 @@
 
     {%- if section.settings.enable_sticky_header -%}
       .shopify-section-main-header {
-        position: sticky;
+        position: fixed !important;
         top: 0;
+        left: 0;
+        right: 0;
+        z-index: 999;
       }
     {%- endif -%}
     {% unless section.settings.full_width_bgcolor contains 'rgba(0,0,0,0)' or section.settings.full_width_bgcolor == blank %}
