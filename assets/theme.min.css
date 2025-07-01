@@ -4293,12 +4293,13 @@ noscript .yv-filter-name {
 }
 
 .yv-accordion-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 0 20px;
-    width: 100%;
-    cursor: pointer
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 0 20px;
+  width: 100%;
+  cursor: pointer;
+  -webkit-user-select: none;
 }
 
 .yv-accordion-header.active h5 {
@@ -4306,8 +4307,7 @@ noscript .yv-filter-name {
 }
 
 .yv-accordion-content {
-    display: none;
-    margin-bottom: 20px
+  margin-bottom: 20px;
 }
 
 .yv-accordion-header svg {

@@ -125,7 +125,7 @@
 }
 @media (min-width: 750px) {
     .sticky-header .header__heading-link img {
-        max-width: 60px;
+        max-width: 90px;
     }
     .header__icons {
         min-width: 25rem;
@@ -259,11 +259,9 @@
 
 /* Product page styling **/
 .shopify-section-main-header.sticky-header-main {
-    min-height: 130px;
+  min-height: 180px;
 }
-.shopify-section-main-header.sticky-header-main header {
-    height: 80px;
-}
+
 @media (max-width: 500px) {
     .shopify-section-main-header.sticky-header-main header {
         height: 60px;

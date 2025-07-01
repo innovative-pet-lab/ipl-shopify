@@ -54,9 +54,6 @@
         <div
           id="accordion-content-description"
           class="yv-accordion-content"
-          {% if section.settings.open_description_accordion %}
-            style="display:block"
-          {% endif %}
         >
           <div class="yv-content-body rich-editor-text-content">
             {{
@@ -175,3 +172,20 @@
     {% endif %}
   </div>
 {% endif %}
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const accordions = document.querySelectorAll('.yv-accordion-card');
+
+    accordions.forEach((accordion) => {
+      accordion.addEventListener('toggle', () => {
+        const header = accordion.querySelector('.yv-accordion-header');
+        if (accordion.open) {
+          header?.classList.add('active');
+        } else {
+          header?.classList.remove('active');
+        }
+      });
+    });
+  });
+</script>
