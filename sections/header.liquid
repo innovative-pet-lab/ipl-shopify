@@ -26,14 +26,6 @@
 
   {%- comment -%}theme-check-enable NestedSnippet {%- endcomment -%}
   <style>
-    body.sticky-header .shopify-section-main-header {
-        position: fixed !important;
-        top: 0;
-        left: 0;
-        right: 0;
-        z-index: 999;
-    }
-
     @media (min-width: 992px) {
       .top-header.header_1 .container-fluid {
         max-width: 100%;
@@ -81,11 +73,8 @@
 
     {%- if section.settings.enable_sticky_header -%}
       .shopify-section-main-header {
-        position: fixed !important;
+        position: sticky !important;
         top: 0;
-        left: 0;
-        right: 0;
-        z-index: 999;
       }
     {%- endif -%}
     {% unless section.settings.full_width_bgcolor contains 'rgba(0,0,0,0)' or section.settings.full_width_bgcolor == blank %}

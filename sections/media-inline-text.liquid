@@ -8,7 +8,7 @@
     text-align: center;
     font-size: 48px;
     font-weight: 600;
-    margin-top: 40px;
+    margin-top: 80px;
     margin-bottom: 40px;
   }
 
@@ -118,10 +118,42 @@
       margin-left: 30px;
       margin-bottom: 20px;
     }
+
+    .page-title-with-button {
+      display: flex;
+      flex-direction: row;
+      margin: 0 5% 20px 5%;
+      align-items: center;
+    }
+
+    .page-title-with-button button {
+      margin: 0;
+      display: flex;
+      align-items: center;
+      padding: 20px 10px 20px 0;
+    }
+
+    .page-title-with-button h2 {
+      margin: 0 5px;
+      line-height: 100%;
+    }
+  }
+
+  .page-title-with-button {
+    display: none;
   }
 </style>
 
 <div style="height: 80px; margin-top: -80px;" id="{{ section.settings.page_section_id }}"></div>
+<div class="page-title-with-button">
+  <button onclick="window.history.back()">
+    <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M19 8H1.5" stroke="#26286E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+      <path d="M8 15L1 8L8 1" stroke="#26286E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+    </svg>
+  </button>
+  <h2 class="team-heading">About</h2>
+</div>
 <section class="inline-media-section">
   <h2 class="inline-media-heading">{{ section.settings.title }}</h2>
 
@@ -148,7 +180,8 @@
             controls
             poster="{{ section.settings.thumbnail | image_url }}"
             width="100%"
-            style="border-radius: 12px;">
+            style="border-radius: 12px;"
+          >
             <source src="{{ mp4_source }}" type="video/mp4">
             Your browser does not support the video tag.
           </video>

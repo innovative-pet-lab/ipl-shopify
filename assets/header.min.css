@@ -708,6 +708,7 @@ body:not(.sticky-header, .header2)
   background-color: #e6f7f6;
   color: #03b0a7 !important;
   text-decoration: none;
+  font-weight: bold;
 }
 
 .side-menu .close-btn {

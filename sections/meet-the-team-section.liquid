@@ -1,10 +1,5 @@
 <style>
-  .page-title-with-button {
-    display: none;
-  }
-
   .team-container {
-    display: flex;
     flex-wrap: wrap;
     justify-content: center;
     margin: 0 auto;
@@ -17,6 +12,7 @@
     font-size: 48px;
     font-weight: 600;
     margin-bottom: 40px;
+    margin-top: 40px;
   }
 
   .profile-card {
@@ -91,10 +87,22 @@
   }
 
   @media screen and (max-width: 540px) {
-    .page-title {
-      display: none;
+    .row {
+      gap: 40px !important;
     }
-
+    .profile-card {
+      padding: 10px;
+    }
+    .team-container {
+      display: flex;
+      gap: 40px;
+      justify-content: left;
+    }
+    .team-heading {
+      text-align: left !important;
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
     .page-title-with-button {
       display: flex;
       flex-direction: row;
@@ -114,13 +122,6 @@
       line-height: 100%;
     }
 
-    .team-heading {
-      color: #26286e;
-      font-size: 20px;
-      text-align: left;
-      margin-left: 30px;
-    }
-
     .profile-name {
       font-size: 20px;
     }
@@ -136,18 +137,9 @@
   }
 </style>
 
-<div class="page-title-with-button">
-  <button onclick="window.history.back()">
-    <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M19 8H1.5" stroke="#26286E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-      <path d="M8 15L1 8L8 1" stroke="#26286E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-    </svg>
-  </button>
+<div style="height: 80px; margin-top: -100px;" id="{{ section.settings.page_section_id }}"></div>
+<section class="team-container container-fluid">
   <h2 class="team-heading">{{ section.settings.meet_the_team_title }}</h2>
-</div>
-
-<div class="team-container container-fluid" id="{{ section.settings.page_section_id }}">
-  <h2 class="page-title team-heading">{{ section.settings.meet_the_team_title }}</h2>
   <div class="row">
     {% for block in section.blocks %}
       <div class="profile-card col-md-6">
@@ -179,7 +171,7 @@
       </div>
     {% endfor %}
   </div>
-</div>
+</section>
 
 {% schema %}
 {

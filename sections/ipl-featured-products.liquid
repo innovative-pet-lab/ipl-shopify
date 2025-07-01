@@ -237,43 +237,6 @@
       transition: opacity 0.3s ease;
     }
   }
-  .swiper-fade-wrapper::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 100px;
-    height: 100%;
-    background: linear-gradient(to left, #F0F6F4, transparent);
-    pointer-events: none;
-    z-index: 2;
-    transition: opacity 0.3s ease;
-    opacity: 1;
-  }
-  .swiper-fade-wrapper.hide-gradient::after {
-    opacity: 0;
-  }
-  .swiper-fade-wrapper {
-    position: relative;
-  }
-
-  .swiper-fade-wrapper::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100px;
-    height: 100%;
-    background: linear-gradient(to right, #F0F6F4, transparent);
-    pointer-events: none;
-    z-index: 2;
-    transition: opacity 0.3s ease;
-    opacity: 0; /* hidden by default */
-  }
-
-  .swiper-fade-wrapper.show-left-gradient::before {
-    opacity: 1;
-  }
 </style>
 
 <div class="ipl-featured-products">
@@ -348,8 +311,6 @@
       });
     }
 
-    const fadeWrapper = document.getElementById('swiper-fade-wrapper');
-
     const swiper = new Swiper('.swiper', {
       slidesPerView: 1.5,
       spaceBetween: 20,
@@ -362,28 +323,14 @@
         prevEl: '.swiper-button-prev',
       },
       breakpoints: {
+        320: {
+          slidesPerView: 1.1,
+        },
         768: {
-          slidesPerView: 1.5,
+          slidesPerView: 1.1,
         },
         1024: {
           slidesPerView: 3.2,
-        },
-      },
-      on: {
-        slideChange: function () {
-          const totalSlides = swiper.slides.length;
-          const currentIndex = swiper.realIndex; // use realIndex, more accurate
-          const visibleSlides = Math.ceil(swiper.params.slidesPerView); // round UP
-
-          const isLastSlide = currentIndex + visibleSlides >= totalSlides;
-
-          if (isLastSlide) {
-            fadeWrapper.classList.add('hide-gradient'); // hide right
-            fadeWrapper.classList.add('show-left-gradient'); // show left
-          } else {
-            fadeWrapper.classList.remove('hide-gradient');
-            fadeWrapper.classList.remove('show-left-gradient');
-          }
         },
       },
     });
