@@ -342,6 +342,23 @@ function browserTabNotification() {
   }
 }
 
+function updateCartCount() {
+  fetch("/cart.js")
+    .then((response) => response.json())
+    .then((cart) => {
+      const cartCountEl = document.getElementById("CartCount");
+      if (cartCountEl) {
+        const totalItems = cart.items.reduce(
+          (sum, item) => sum + item.quantity,
+          0
+        );
+        cartCountEl.textContent = totalItems;
+        cartCountEl.style.display = totalItems > 0 ? "flex" : "none";
+      }
+    })
+    .catch((error) => console.error("Error updating cart count:", error));
+}
+
 $(document).ready(function () {
   browserTabNotification();
   if (favicon) {
@@ -478,7 +495,7 @@ if (window.location.pathname.indexOf("/cart") > -1) {
         success: function (result) {
           if (result.item_count > 0) {
             freeShippingBar(result);
-            upsellCartProducts(result)
+            upsellCartProducts(result);
           }
         },
       });
@@ -633,6 +650,7 @@ if (window.location.pathname.indexOf("/cart") > -1) {
             ).val(item.quantity);
           }
           callback(cart);
+          updateCartCount();
         },
         error: function (XMLHttpRequest, textStatus) {
           jQuery.getJSON(cartUrl, function (cart, textStatus) {
@@ -720,6 +738,7 @@ if (window.location.pathname.indexOf("/cart") > -1) {
               submit.removeClass("is-loading");
             }, 1000);
           });
+          updateCartCount();
         },
         error: function (XMLHttpRequest, textStatus) {
           focusElement = "";

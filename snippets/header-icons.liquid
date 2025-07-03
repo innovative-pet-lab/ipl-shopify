@@ -1,3 +1,19 @@
+<style>
+  .right-menu a.bold-menu-item {
+    font-weight: bold !important;
+  }
+
+  .cartCount {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 22px;
+  font-size: 14px !important; /* increase this value as needed */
+  font-weight: bold;
+}
+
+</style>
+
 <div class="header__icons {{ section.settings.icon_weight }}-icon">
   <div class="right-menu">
     {%- for link in linklists['right-menu'].links -%}
@@ -297,7 +313,9 @@
           {% endif %}
         </details-disclousre>
         {%- else -%} 
-        <a class="nav-link list-menu__item" href="{{ link.url }}">{{ link.title | escape   }}
+          <a class="nav-link list-menu__item{% if link.title == 'Register Kit' %} bold-menu-item{% endif %}" href="{{ link.url }}">
+            {{ link.title | escape }}
+          </a>
           {% if menubadge != blank %}
             {{ menubadge }}
           {% endif  %}
@@ -356,7 +374,11 @@
             </svg>
               
         {% endif %}
-        <span class="cartCount" data-cart-count="" {% if cart.item_count == 0 %}style="display:none"{% endif %}>{% if cart.item_count < 100 %}{{cart.item_count}}{% endif %}</span>
+        {% if cart %}
+          <span id="CartCount" class="cartCount" {% if cart.item_count == 0 %}style="display:none"{% endif %}>
+            {{ cart.items | map: 'quantity' | sum }}
+          </span>
+        {% endif %}   
       </a>
     </div>
 
@@ -403,7 +425,6 @@
             {% endif %}
           </div>
       {% endunless %}
-   </div>
   {%- endif -%}
 
 </div>
