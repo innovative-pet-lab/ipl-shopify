@@ -25,14 +25,15 @@
   {% liquid
     assign aspectRatio = 100
     if section.settings.video != blank
-      assign aspectRatio = 1 | divided_by:section.settings.video.preview_image.aspect_ratio | times:100
+      assign aspectRatio = 1 | divided_by: section.settings.video.preview_image.aspect_ratio | times: 100
     elsif section.settings.image != blank
-      assign aspectRatio = 1 | divided_by:section.settings.image.aspect_ratio | times:100
+      assign aspectRatio = 1 | divided_by: section.settings.image.aspect_ratio | times: 100
     endif
   %}
-  {% if section.settings.enable_parallax %}    
+  {% if section.settings.enable_parallax %}
     <div
-      class="yv-image-banner-parallax yv-parallax" data-media="{% if section.settings.video != blank %}video{% else %}image{% endif %}"
+      class="yv-image-banner-parallax yv-parallax"
+      data-media="{% if section.settings.video != blank %}video{% else %}image{% endif %}"
     >
       {% if section.settings.video != blank %}
         <deferred-media
@@ -40,8 +41,11 @@
           style="padding-bottom:{{ aspectRatio }}%;position:relative"
         >
           <template style="display:none">
-            {{ section.settings.video | video_tag:  image_size: '1100x',
-                class: 'videoBackgroundFile', 
+            {{
+              section.settings.video
+              | video_tag:
+                image_size: '1100x',
+                class: 'videoBackgroundFile',
                 autoplay: true,
                 loop: true,
                 controls: false,
@@ -58,11 +62,11 @@
             >
           </noscript>
         </deferred-media>
-        {% else %}
+      {% else %}
         <div
           class="image-wrapper"
           style="padding-bottom:{{ aspectRatio }}%"
-          >
+        >
           {% liquid
             if section.settings.image != blank
               render 'lazy-image', image: section.settings.image
@@ -70,38 +74,41 @@
               echo 'lifestyle-1' | placeholder_svg_tag: 'placeholder-svg'
             endif
           %}
-        </div>       
-        {% endif %}
+        </div>
+      {% endif %}
     </div>
   {% else %}
-  {% if section.settings.video != blank %}
-    <deferred-media
-      class="image-wrapper"
-      style="padding-bottom:{{ aspectRatio }}%;position:relative"
-    >
-      <template style="display:none">
-        {{ section.settings.video | video_tag:  image_size: '1100x',
-            class: 'videoBackgroundFile',
-            autoplay: true,
-            loop: true,
-            controls: false,
-            muted: true
-        }}
-      </template>
-    </deferred-media>
-    {% else %}
-    <div
-      class="image-wrapper"
-      style="padding-bottom:{{ aspectRatio }}%;"
+    {% if section.settings.video != blank %}
+      <deferred-media
+        class="image-wrapper"
+        style="padding-bottom:{{ aspectRatio }}%;position:relative"
       >
-      {% liquid
-        if section.settings.image != blank
-          render 'lazy-image', image: section.settings.image
-        else
-          echo 'lifestyle-1' | placeholder_svg_tag: 'placeholder-svg'
-        endif
-      %}
-    </div>       
+        <template style="display:none">
+          {{
+            section.settings.video
+            | video_tag:
+              image_size: '1100x',
+              class: 'videoBackgroundFile',
+              autoplay: true,
+              loop: true,
+              controls: false,
+              muted: true
+          }}
+        </template>
+      </deferred-media>
+    {% else %}
+      <div
+        class="image-wrapper"
+        style="padding-bottom:{{ aspectRatio }}%;"
+      >
+        {% liquid
+          if section.settings.image != blank
+            render 'lazy-image', image: section.settings.image
+          else
+            echo 'lifestyle-1' | placeholder_svg_tag: 'placeholder-svg'
+          endif
+        %}
+      </div>
     {% endif %}
   {% endif %}
 </div>
@@ -121,9 +128,11 @@
   }
     #shopify-section-{{ section.id }} .yv-image-banner-heading{
       color:{{ section.settings.title_color }};
+      font-size: 48px !important;
     }
     #shopify-section-{{ section.id }} .yv-image-banner-desc p{
       color:{{ section.settings.desc_color }};
+      font-size: 24px !important;
     }
 
     @media screen and (max-width:1020px){
@@ -156,8 +165,8 @@
         transform: translate(-50%, -50%);
         background: radial-gradient(
           circle,
-          rgba(163, 242, 255, 0.6) 0%, 
-          rgba(163, 242, 255, 0.2) 40%, 
+          rgba(163, 242, 255, 0.6) 0%,
+          rgba(163, 242, 255, 0.2) 40%,
           transparent 70%
         );
         filter: blur(60px);
@@ -244,7 +253,7 @@
       "label": "t:sections.image_banner.settings.image.label"
     },
     {
-      "type": "video", 
+      "type": "video",
       "id": "video",
       "label": "t:sections.image_banner.settings.video.label"
     },
