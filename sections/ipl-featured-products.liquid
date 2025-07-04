@@ -1,6 +1,42 @@
 <style>
+  .product-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    max-height: 430px;
+    min-height: 304px;
+    padding: 40px 32px;
+    background: white;
+    transition: transform 0.3s ease;
+    border: 1px solid #73c7ad;
+    overflow: hidden;
+    border-radius: 16px;
+  }
+
+  .product-info {
+    padding: 1rem;
+    text-align: center;
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 100%;
+  }
+
+  .product-title {
+    min-height: 3em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 20px;
+    color: #1a1a1a;
+    font-weight: 700;
+  }
+
   .ipl-featured-products {
-    background-color: #F0F6F4;
+    background-color: #f0f6f4;
   }
   .ipl-featured-products h1 {
     text-align: left;
@@ -33,7 +69,7 @@
       padding: 0 1rem;
     }
     .hero {
-      margin-bottom: 2rem!important;
+      margin-bottom: 2rem !important;
       text-align: center;
     }
   }
@@ -70,24 +106,7 @@
     margin-bottom: 1rem;
     position: relative;
   }
-  .product-card {
-    background: white;
-    border-radius: 12px;
-    transition: transform 0.3s ease;
-    height: 100%;
-    border: 1px solid #73C7AD;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    {% comment %} max-height: 33vw;
-    min-height: 35vw;   {% endcomment %}
-  }
-  {% comment %} @media (max-width: 1024px) {
-    .product-card.min-height img {
-      min-height: 194px;
-      max-height: 194px!important;
-    }
-  } {% endcomment %}
+
   .product-card.min-height img {
     max-height: 357px;
   }
@@ -101,25 +120,14 @@
       min-height: 80vw;
     }
   }
-  @media (min-width: 1400px) {
-    .product-card {
-      max-height: 28vw;
-      min-height: 29vw;
-    }
-    .product-card.min-height img {
-      padding: 1rem;
-    }
-  }
+
   .product-card .product-info {
     padding: 1rem;
     text-align: center;
   }
-  .product-card .product-info h2 {
-    font-size: 18px;
-    font-weight: 700;
-  }
+
   .product-card:hover {
-    background-color: #F0F6F4;
+    background-color: #f0f6f4;
   }
   .product-card:hover img {
     transform: rotate(-10deg) scale(1.1);
@@ -127,22 +135,21 @@
   }
   .product-card:hover .product-info .view-product {
     padding: 5px 28px;
-    border: 2px solid #03B0A7;
+    border: 2px solid #03b0a7;
     border-radius: 80px;
     background-color: #e6f7f6;
     color: #03b0a7;
   }
   .product-image {
-    padding: 3rem 1rem 1rem 1rem;
-    max-height: unset;
-    display: flex;
-    margin: auto;
+    height: 220px; /* Consistent height */
+    width: auto;
+    max-width: 100%; /* Prevent overflow */
+    object-fit: contain; /* Keep image proportional */
+    margin: 0 auto; /* Center horizontally */
+    padding: 2rem 1rem 1rem; /* Same padding as before */
+    display: block;
   }
-  .product-title {
-    font-size: 1.25rem;
-    color: #1a1a1a;
-    margin-bottom: 1rem;
-  }
+
   .product-card:hover .view-product {
     color: white;
   }
@@ -152,10 +159,9 @@
     text-decoration: none;
     font-weight: 700;
     transition: color 0.2s ease;
-    margin-bottom: 1rem;
-    margin-top: 1rem;
     padding: 5px 28px;
     border: 2px solid transparent;
+    font-size: 18px;
   }
   .view-product:hover {
     color: #1a8f80;
@@ -176,7 +182,8 @@
   .view-all-button:hover {
     background-color: #1f1c4d;
   }
-  .swiper-button-next.swiper-button-disabled, .swiper-button-prev.swiper-button-disabled {
+  .swiper-button-next.swiper-button-disabled,
+  .swiper-button-prev.swiper-button-disabled {
     opacity: 0;
   }
   .swiper-button-next,
@@ -193,9 +200,10 @@
   .swiper:hover .swiper-button-prev {
     opacity: 1;
   }
-  .swiper-button-next:after, .swiper-button-prev:after {
+  .swiper-button-next:after,
+  .swiper-button-prev:after {
     font-size: 24px;
-    color: #03B0A7;
+    color: #03b0a7;
   }
   @media (max-width: 768px) {
     .hero h1 {
@@ -214,7 +222,7 @@
       padding: 2rem 0rem 1rem 0rem;
     }
     .swiper {
-      padding: 24px!important;
+      padding: 24px !important;
     }
     .view-all-button {
       padding: 0.5rem 1rem;
@@ -224,7 +232,7 @@
   }
   @media (min-width: 1800px) {
     .hero.flex {
-        gap: 2rem;
+      gap: 2rem;
     }
   }
 
@@ -235,6 +243,9 @@
       visibility: hidden;
       pointer-events: none;
       transition: opacity 0.3s ease;
+    }
+    .hero.flex h1 {
+      font-size: 40px;
     }
   }
 </style>
@@ -254,35 +265,30 @@
     {% assign featured_collection = collections.shop %}
 
     {% if featured_collection and featured_collection.products.size > 0 %}
-      <div id="swiper-fade-wrapper" class="swiper-fade-wrapper">
-        <div class="swiper">
-          <div class="swiper-wrapper">
-            {% for product in featured_collection.products %}
-              {%- comment %}<locksmith:563c>{%- endcomment %}
-              {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: product, subject_parent: featured_collection, variable: 'transparent' %}{% endcapture -%}
-              {%- if var == 'true' %}{% else %}{% continue %}{% endif -%}
-              {%- comment %}</locksmith:563c>{%- endcomment %}
-              <div class="swiper-slide">
-                <div class="product-card {% if product.title == 'Stress Test' %}min-height{% endif %}">
-                  <img
-                    alt=""
-                    width=""
-                    height=""
-                    src="{{ product.featured_image | img_url: '800x' }}"
-                    alt="{{ product.title }}"
-                    class="product-image"
-                  >
-                  <div class="product-info">
-                    <h2 class="product-title">{{ product.title }}</h2>
-                    <a href="{{ product.url }}" class="view-product">View product</a>
-                  </div>
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          {% for product in featured_collection.products %}
+            {%- comment %}<locksmith:563c>{%- endcomment %}
+            {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: product, subject_parent: featured_collection, variable: 'transparent' %}{% endcapture -%}
+            {%- if var == 'true' %}{% else %}{% continue %}{% endif -%}
+            {%- comment %}</locksmith:563c>{%- endcomment %}
+            <div class="swiper-slide">
+              <div class="product-card {% if product.title == 'Stress Test' %}min-height{% endif %}">
+                <img
+                  src="{{ product.featured_image | img_url: '800x' }}"
+                  alt="{{ product.title }}"
+                  class="product-image"
+                >
+                <div class="product-info">
+                  <span class="product-title">{{ product.title }}</span>
+                  <a href="{{ product.url }}" class="view-product">View product</a>
                 </div>
               </div>
-            {% endfor %}
-          </div>
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-button-next"></div>
+            </div>
+          {% endfor %}
         </div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
       </div>
     {% else %}
       <p>No featured products available.</p>
@@ -327,10 +333,13 @@
           slidesPerView: 1.1,
         },
         768: {
-          slidesPerView: 1.1,
+          slidesPerView: 2.3,
         },
         1024: {
-          slidesPerView: 3.2,
+          slidesPerView: 2.5,
+        },
+        1440: {
+          slidesPerView: 3.5,
         },
       },
     });
