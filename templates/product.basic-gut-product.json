@@ -674,8 +674,8 @@
         "5f2a17c3-6834-4f30-ac33-dd871134b6c4": {
           "type": "column",
           "settings": {
-            "icon": "quick-results",
-            "heading": "Quick Results",
+            "icon": "online-registration",
+            "heading": "Online Registration",
             "seo_heading": "h2",
             "subtext": ""
           }
@@ -683,8 +683,8 @@
         "1619ab47-2031-4339-961b-21ca08f7f33e": {
           "type": "column",
           "settings": {
-            "icon": "satisfaction-guarantee",
-            "heading": "Satisfaction Guaranteed",
+            "icon": "easy-collection",
+            "heading": "Easy Collection",
             "seo_heading": "h2",
             "subtext": ""
           }
@@ -692,8 +692,8 @@
         "f37730b5-14aa-462c-bbfe-db24fa287e5b": {
           "type": "column",
           "settings": {
-            "icon": "vet-recommended",
-            "heading": "Vet Recommended",
+            "icon": "desktop",
+            "heading": "Digital Results",
             "seo_heading": "h2",
             "subtext": ""
           }
