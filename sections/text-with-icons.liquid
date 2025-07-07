@@ -3,14 +3,19 @@
     <div class="yv-services-box">
       <div class="row">
         {%- for block in section.blocks -%}
-          <div class="col-{% if section.settings.mobile_column_count == '1' %}12{% else %}6{% endif %} col-sm-6 col-md-3 text-with-icon-column{% if section.settings.column_background %} column-bg{% endif %}" {{ block.shopify_attributes }}>
+          <div
+            class="col-{% if section.settings.mobile_column_count == '1' %}12{% else %}6{% endif %} col-sm-6 col-md-3 text-with-icon-column{% if section.settings.column_background %} column-bg{% endif %}"
+            {{ block.shopify_attributes }}
+          >
             <div class="yv-service-item column-background-{{ section.settings.column_background }} column-icon-position-{{ section.settings.icon_position }}{% if section.settings.icon_background %} icon-bg{% endif %}">
               <span class="column-icon">
                 {%- render 'icons', icon: block.settings.icon -%}
               </span>
               <div class="column-content">
                 {%- if block.settings.heading != blank -%}
-                  <{{ block.settings.seo_heading }} class="text-medium">{{ block.settings.heading }}</{{ block.settings.seo_heading }}>
+                  <{{ block.settings.seo_heading }} class="text-medium">
+                    {{- block.settings.heading -}}
+                  </{{ block.settings.seo_heading }}>
                 {%- endif -%}
                 {%- if block.settings.subtext != blank -%}
                   <p>{{ block.settings.subtext }}</p>
@@ -72,17 +77,17 @@
   "max_blocks": 4,
   "disabled_on": {
     "groups": ["header"]
-   },
+  },
   "settings": [
     {
       "type": "header",
       "content": "t:sections.text-with-icons.settings.column.heading"
     },
     {
-      "type":"checkbox",
-      "id":"column_background",
-      "label":"t:sections.text-with-icons.settings.show_background.label",
-      "default":false
+      "type": "checkbox",
+      "id": "column_background",
+      "label": "t:sections.text-with-icons.settings.show_background.label",
+      "default": false
     },
     {
       "type": "select",
@@ -105,24 +110,24 @@
       "content": "t:sections.text-with-icons.settings.icon.heading"
     },
     {
-      "type":"checkbox",
-      "id":"icon_background",
-      "label":"t:sections.text-with-icons.settings.show_background.label",
-      "default":false
+      "type": "checkbox",
+      "id": "icon_background",
+      "label": "t:sections.text-with-icons.settings.show_background.label",
+      "default": false
     },
     {
       "type": "select",
       "id": "icon_position",
-      "label":"t:sections.text-with-icons.settings.icon_position.label",
+      "label": "t:sections.text-with-icons.settings.icon_position.label",
       "default": "top",
       "options": [
         {
           "value": "left",
-          "label":"t:sections.text-with-icons.settings.icon_position.options.left.label"
+          "label": "t:sections.text-with-icons.settings.icon_position.options.left.label"
         },
         {
           "value": "top",
-          "label":"t:sections.text-with-icons.settings.icon_position.options.top.label"
+          "label": "t:sections.text-with-icons.settings.icon_position.options.top.label"
         }
       ]
     },
@@ -159,14 +164,14 @@
       ]
     },
     {
-      "type":"color",
-      "id":"column_background_color",
-      "label":"t:sections.text-with-icons.settings.column_background_color.label"
+      "type": "color",
+      "id": "column_background_color",
+      "label": "t:sections.text-with-icons.settings.column_background_color.label"
     },
     {
-      "type":"color",
-      "id":"icon_background_color",
-      "label":"t:sections.text-with-icons.settings.icon_background_color.label"
+      "type": "color",
+      "id": "icon_background_color",
+      "label": "t:sections.text-with-icons.settings.icon_background_color.label"
     },
     {
       "type": "select",
@@ -341,8 +346,16 @@
               "value": "quick-shipping"
             },
             {
-              "label": "Easy collection",
+              "label": "Online Registration",
+              "value": "online-registration"
+            },
+            {
+              "label": "Easy Collection",
               "value": "easy-collection"
+            },
+            {
+              "label": "Digital Results",
+              "value": "desktop"
             }
           ]
         },
