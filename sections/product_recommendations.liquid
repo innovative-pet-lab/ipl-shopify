@@ -49,10 +49,13 @@
     display: none;
   }
   .product-card {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
     min-width: 100%;
     border: 1px solid #73C7AD;
     border-radius: 10px;
-    padding: 15px;
+    padding: 40px 32px;
     text-align: left;
     position: relative;
   }
@@ -88,8 +91,6 @@
     color: #A5A5A5;
     font-size: 20px;
     font-weight: 700;
-    margin-bottom: 10px;
-    margin-top: 0.4rem;
   }
   .product-card img {
     width: 100%;
@@ -114,7 +115,6 @@
     transition: all 0.3sease;
     min-width: 40%;
     margin: auto;
-    margin-bottom: 1rem;
     font-size: 18px;
     border: 1px solid transparent;
   }
@@ -139,9 +139,10 @@
     background-color: #26286E;
   }
   .product-price {
-    margin-bottom: 1.6rem;
+    font-weight: 700;
+    font-size: 20px;
   }
-  @media (min-width: 768px) {
+  @media (min-width: 769px) {
     .product-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -153,15 +154,16 @@
 </style>
 
 <div class="related-products-container">
-  <div class="product-recommendations related_products"
+  <div
+    class="product-recommendations related_products"
     data-url="{{ routes.product_recommendations_url }}?section_id={{ section.id }}&product_id={{ product.id }}&limit=3&intent=related"
-    product-recommendations>
-    
+    product-recommendations
+  >
     {%- if recommendations.performed and recommendations.products_count > 0 -%}
       <div class="section-heading">
-        <div class="section-heading-title h2">Related Products</div >
+        <div class="section-heading-title h2">Related Products</div>
       </div>
-      
+
       <div id="product-recommendations-{{ section.id }}" class="yv-recent-product-grid recommend data-desktop-only">
         <div class="product-grid-wrapper">
           <div class="product-grid">
@@ -171,41 +173,51 @@
                   <div class="best-seller">Best Seller</div>
                 {% endif %}
                 <div class="img-wrap">
-                  <img width="" height="" src="{{ product.featured_image | image_url }}" alt="{{ product.title }}" class="product-image">
+                  <img
+                    width=""
+                    height=""
+                    src="{{ product.featured_image | image_url }}"
+                    alt="{{ product.title }}"
+                    class="product-image"
+                  >
                 </div>
-                <h2 class="product-title">{{ product.title }}</h2>
-                <p class="reco-tags">
-                  {% assign allowed_tags = "Cats,Dogs" | split: "," %}
-                  {% assign product_tags = product.tags | uniq %}
+                <div style="display: flex; flex-direction: column; gap:8px;">
+                  <h2 class="product-title">{{ product.title }}</h2>
+                  <p class="reco-tags">
+                    {% assign allowed_tags = 'Cats,Dogs' | split: ',' %}
+                    {% assign product_tags = product.tags | uniq %}
 
-                  {% assign filtered_tags = "" %}
-                  {% for tag in product_tags %}
-                    {% if tag != "Best Seller" and allowed_tags contains tag %}
-                      {% if filtered_tags == "" %}
-                        {% assign filtered_tags = tag %}
-                      {% else %}
-                        {% assign filtered_tags = filtered_tags | append: " and " | append: tag %}
+                    {% assign filtered_tags = '' %}
+                    {% for tag in product_tags %}
+                      {% if tag != 'Best Seller' and allowed_tags contains tag %}
+                        {% if filtered_tags == '' %}
+                          {% assign filtered_tags = tag %}
+                        {% else %}
+                          {% assign filtered_tags = filtered_tags | append: ' and ' | append: tag %}
+                        {% endif %}
                       {% endif %}
-                    {% endif %}
-                  {% endfor %}
+                    {% endfor %}
 
-                  {% if filtered_tags != "" %}
-                    For {{ filtered_tags }}
-                  {% endif %}
-                  
-                </p>
-              <p class="product-price" bss-b2b-product-id="{{ product.id }}" bss-b2b-product-price>{{ product.price | money }}</p>
-              <form class="product-form" method="post" action="/cart/add">
-                <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
-                <input type="hidden" name="quantity" value="1">
-                <button type="submit" class="add-to-cart">
-                  <span class="cart-icon">
-                    <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M10.5 8H12.5V5H15.5V3H12.5V0H10.5V3H7.5V5H10.5M6.5 17C5.4 17 4.5 17.9 4.5 19C4.5 20.1 5.4 21 6.5 21C7.6 21 8.5 20.1 8.5 19C8.5 17.9 7.6 17 6.5 17ZM16.5 17C15.4 17 14.5 17.9 14.5 19C14.5 20.1 15.4 21 16.5 21C17.6 21 18.5 20.1 18.5 19C18.5 17.9 17.6 17 16.5 17ZM6.7 13.8V13.7L7.6 12H15C15.7 12 16.4 11.6 16.7 11L20.6 4L18.9 3L15 10H8L3.8 1H0.5V3H2.5L6.1 10.6L4.7 13C4.6 13.3 4.5 13.6 4.5 14C4.5 15.1 5.4 16 6.5 16H18.5V14H6.9C6.8 14 6.7 13.9 6.7 13.8Z" fill="#03B0A7"/>
-                    </svg>
-                  </span>
-                  Add to cart</button>
-              </form>
+                    {% if filtered_tags != '' %}
+                      For {{ filtered_tags }}
+                    {% endif %}
+                  </p>
+                  <p class="product-price" bss-b2b-product-id="{{ product.id }}" bss-b2b-product-price>
+                    {{ product.price | money }}
+                  </p>
+                  <form class="product-form" method="post" action="/cart/add">
+                    <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
+                    <input type="hidden" name="quantity" value="1">
+                    <button type="submit" class="add-to-cart">
+                      <span class="cart-icon">
+                        <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M10.5 8H12.5V5H15.5V3H12.5V0H10.5V3H7.5V5H10.5M6.5 17C5.4 17 4.5 17.9 4.5 19C4.5 20.1 5.4 21 6.5 21C7.6 21 8.5 20.1 8.5 19C8.5 17.9 7.6 17 6.5 17ZM16.5 17C15.4 17 14.5 17.9 14.5 19C14.5 20.1 15.4 21 16.5 21C17.6 21 18.5 20.1 18.5 19C18.5 17.9 17.6 17 16.5 17ZM6.7 13.8V13.7L7.6 12H15C15.7 12 16.4 11.6 16.7 11L20.6 4L18.9 3L15 10H8L3.8 1H0.5V3H2.5L6.1 10.6L4.7 13C4.6 13.3 4.5 13.6 4.5 14C4.5 15.1 5.4 16 6.5 16H18.5V14H6.9C6.8 14 6.7 13.9 6.7 13.8Z" fill="#03B0A7"/>
+                        </svg>
+                      </span>
+                      Add to cart
+                    </button>
+                  </form>
+                </div>
               </div>
             {%- endfor -%}
           </div>
@@ -217,10 +229,10 @@
 </div>
 
 <script>
-  document.addEventListener("DOMContentLoaded", function () {
+  document.addEventListener('DOMContentLoaded', function () {
     function initSlider() {
-      const slider = document.querySelector(".product-grid");
-      const dotsContainer = document.querySelector(".dots-container");
+      const slider = document.querySelector('.product-grid');
+      const dotsContainer = document.querySelector('.dots-container');
 
       if (!slider || !dotsContainer) return;
 
@@ -228,13 +240,13 @@
       let currentIndex = 0;
 
       function createDots() {
-        dotsContainer.innerHTML = "";
+        dotsContainer.innerHTML = '';
         for (let i = 0; i < slides.length; i++) {
-          const dot = document.createElement("span");
-          dot.classList.add("dot");
-          if (i === 0) dot.classList.add("active");
+          const dot = document.createElement('span');
+          dot.classList.add('dot');
+          if (i === 0) dot.classList.add('active');
           dot.dataset.index = i;
-          dot.addEventListener("click", function () {
+          dot.addEventListener('click', function () {
             currentIndex = parseInt(this.dataset.index);
             updateSlider();
           });
@@ -244,12 +256,12 @@
 
       function updateSlider() {
         slider.scrollLeft = slides[currentIndex].offsetLeft;
-        document.querySelectorAll(".dot").forEach((dot, index) => {
-          dot.classList.toggle("active", index === currentIndex);
+        document.querySelectorAll('.dot').forEach((dot, index) => {
+          dot.classList.toggle('active', index === currentIndex);
         });
       }
 
-      slider.addEventListener("scroll", function () {
+      slider.addEventListener('scroll', function () {
         let newIndex = Math.round(slider.scrollLeft / slides[0].offsetWidth);
         if (newIndex !== currentIndex) {
           currentIndex = newIndex;
@@ -261,14 +273,14 @@
     }
 
     function checkMobileAndInit() {
-      if (window.innerWidth < 768) {
+      if (window.innerWidth < 769) {
         initSlider();
       }
     }
 
     // Shopify may load recommendations dynamically, so wait for it
     const observer = new MutationObserver(() => {
-      if (document.querySelector(".product-grid")) {
+      if (document.querySelector('.product-grid')) {
         checkMobileAndInit();
         observer.disconnect();
       }
@@ -277,114 +289,114 @@
     observer.observe(document.body, { childList: true, subtree: true });
 
     // If already present, initialize
-    if (document.querySelector(".product-grid")) {
+    if (document.querySelector('.product-grid')) {
       checkMobileAndInit();
     }
 
-    window.addEventListener("resize", checkMobileAndInit);
+    window.addEventListener('resize', checkMobileAndInit);
   });
 </script>
 
 <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    document.body.addEventListener("submit", function (event) {
-      const form = event.target.closest(".product-form");
+  document.addEventListener('DOMContentLoaded', function () {
+    document.body.addEventListener('submit', function (event) {
+      const form = event.target.closest('.product-form');
       if (!form) return;
 
       event.preventDefault();
 
       const formData = new FormData(form);
 
-      const button = form.querySelector("button");
+      const button = form.querySelector('button');
       if (button) {
         button.disabled = true;
-        button.classList.add("loading");
+        button.classList.add('loading');
       }
 
-      fetch("/cart/add.js", {
-        method: "POST",
-        body: formData
+      fetch('/cart/add.js', {
+        method: 'POST',
+        body: formData,
       })
-      .then(response => response.json())
-      .then(() => fetch("/cart?view=jsonData"))
-      .then(response => response.text())
-      .then(cartHtml => {
-        const drawerBody = document.querySelector("[data-drawer-body]");
-        if (drawerBody) {
-          drawerBody.innerHTML = cartHtml;
-        }
+        .then((response) => response.json())
+        .then(() => fetch('/cart?view=jsonData'))
+        .then((response) => response.text())
+        .then((cartHtml) => {
+          const drawerBody = document.querySelector('[data-drawer-body]');
+          if (drawerBody) {
+            drawerBody.innerHTML = cartHtml;
+          }
 
-        document.body.classList.add("side_Drawer_open", "yv_side_Drawer_open");
-        const overlay = document.querySelector(".wrapper-overlay");
-            if (overlay) overlay.style.display = "block";
-        const sideDrawer = document.querySelector("[data-side-drawer]");
-        if (sideDrawer) {
-          sideDrawer.focus();
-        }
-      })
-      .catch((error) => console.error("Error adding to cart:", error))
-      .finally(() => {
-        if (button) {
-          button.disabled = false;
-          button.classList.remove("loading");
-        }
-      });
+          document.body.classList.add('side_Drawer_open', 'yv_side_Drawer_open');
+          const overlay = document.querySelector('.wrapper-overlay');
+          if (overlay) overlay.style.display = 'block';
+          const sideDrawer = document.querySelector('[data-side-drawer]');
+          if (sideDrawer) {
+            sideDrawer.focus();
+          }
+        })
+        .catch((error) => console.error('Error adding to cart:', error))
+        .finally(() => {
+          if (button) {
+            button.disabled = false;
+            button.classList.remove('loading');
+          }
+        });
     });
   });
 </script>
 
 <script>
-  document.addEventListener("DOMContentLoaded", function () {
-      document.addEventListener("mouseover", function (event) {
-          const card = event.target.closest(".product-card");
-          if (card) {
-              console.log('logged this hover');
-              card.style.cursor = "pointer"; // Indicate it's clickable
-          }
-      });
+  document.addEventListener('DOMContentLoaded', function () {
+    document.addEventListener('mouseover', function (event) {
+      const card = event.target.closest('.product-card');
+      if (card) {
+        console.log('logged this hover');
+        card.style.cursor = 'pointer'; // Indicate it's clickable
+      }
+    });
 
-      document.addEventListener("click", function (event) {
-        const card = event.target.closest(".product-card");
-    
-        // Avoid redirect if a form or button inside card was clicked
-        if (card && !event.target.closest("form") && event.target.tagName !== "BUTTON") {
-            console.log('logged this click');
-            const productUrl = card.getAttribute("data-product-url");
-            if (productUrl) {
-                window.location.assign(productUrl);
-            }
+    document.addEventListener('click', function (event) {
+      const card = event.target.closest('.product-card');
+
+      // Avoid redirect if a form or button inside card was clicked
+      if (card && !event.target.closest('form') && event.target.tagName !== 'BUTTON') {
+        console.log('logged this click');
+        const productUrl = card.getAttribute('data-product-url');
+        if (productUrl) {
+          window.location.assign(productUrl);
         }
+      }
     });
   });
-</script> 
+</script>
 
 {% schema %}
-  {
-    "name": "IPL related products",
-    "settings": [
-      {
-        "type": "text",
-        "id": "heading_text",
-        "label": "Heading Text",
-        "default": "Welcome to Our Store!"
-      },
-      {
-        "type": "textarea",
-        "id": "body_text",
-        "label": "Body Text",
-        "default": "This is a customizable page for displaying your content."
-      },
-      {
-        "type": "color",
-        "id": "background_color",
-        "label": "Background Color",
-        "default": "#ffffff"
-      }
-    ],
-    "presets": [
-      {
-        "name": "IPL related products"    
-      }
-    ]
-  }
+{
+  "name": "IPL related products",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading_text",
+      "label": "Heading Text",
+      "default": "Welcome to Our Store!"
+    },
+    {
+      "type": "textarea",
+      "id": "body_text",
+      "label": "Body Text",
+      "default": "This is a customizable page for displaying your content."
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background Color",
+      "default": "#ffffff"
+    }
+  ],
+  "presets": [
+    {
+      "name": "IPL related products"
+    }
+  ]
+}
 {% endschema %}
