@@ -248,6 +248,28 @@
       font-size: 40px;
     }
   }
+
+  @media (max-width: 768px) {
+    .product-card:hover {
+      background-color: white !important;
+    }
+
+    .product-card:hover img {
+      transform: none !important;
+      transition: none !important;
+    }
+
+    .product-card:hover .product-info .view-product {
+      background-color: transparent !important;
+      border: none !important;
+      color: #2bb7a4 !important;
+    }
+
+    .product-card .view-product {
+      color: #2bb7a4 !important;
+      transition: none !important;
+    }
+  }
 </style>
 
 <div class="ipl-featured-products">
@@ -273,17 +295,19 @@
             {%- if var == 'true' %}{% else %}{% continue %}{% endif -%}
             {%- comment %}</locksmith:563c>{%- endcomment %}
             <div class="swiper-slide">
-              <div class="product-card {% if product.title == 'Stress Test' %}min-height{% endif %}">
-                <img
-                  src="{{ product.featured_image | img_url: '800x' }}"
-                  alt="{{ product.title }}"
-                  class="product-image"
-                >
-                <div class="product-info">
-                  <span class="product-title">{{ product.title }}</span>
-                  <a href="{{ product.url }}" class="view-product">View product</a>
+              <a href="{{ product.url }}" class="product-card-link">
+                <div class="product-card {% if product.title == 'Stress Test' %}min-height{% endif %}">
+                  <img
+                    src="{{ product.featured_image | img_url: '800x' }}"
+                    alt="{{ product.title }}"
+                    class="product-image"
+                  >
+                  <div class="product-info">
+                    <span class="product-title">{{ product.title }}</span>
+                    <span class="view-product">View product</span>
+                  </div>
                 </div>
-              </div>
+              </a>
             </div>
           {% endfor %}
         </div>
@@ -303,20 +327,6 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.2.0/swiper-bundle.min.js" defer></script>
 <script>
   document.addEventListener('DOMContentLoaded', function () {
-    const isMobile = window.matchMedia('(max-width: 768px)').matches;
-
-    if (isMobile) {
-      document.querySelectorAll('.product-card').forEach((card) => {
-        const link = card.querySelector('.view-product');
-        if (link) {
-          card.style.cursor = 'pointer';
-          card.addEventListener('click', () => {
-            window.location.href = link.getAttribute('href');
-          });
-        }
-      });
-    }
-
     const swiper = new Swiper('.swiper', {
       slidesPerView: 1.5,
       spaceBetween: 20,
