@@ -246,17 +246,28 @@
                     {% endif  %}
                   </a>
                 {%- else -%}
-                  <button class="list-menu__item {% if dropDown  or menuDropdown != '' %}toggle {% endif %}" href="{{ link.url }}" >
-                    {{ link.title | split: '{badge' | first | escape }}
-                    {% if menubadge != blank %}
-                      {{ menubadge }}
-                    {% endif  %}
-
-                  <svg width="7" height="15" viewBox="0 0 7 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M6.73276 6.74365C6.90387 6.94084 7 7.20825 7 7.48708C7 7.76591 6.90387 8.03332 6.73276 8.23051L1.56929 14.179C1.48509 14.2794 1.38438 14.3595 1.27302 14.4146C1.16166 14.4697 1.04188 14.4987 0.920688 14.5C0.799493 14.5012 0.679302 14.4746 0.567127 14.4217C0.454953 14.3688 0.353041 14.2907 0.26734 14.192C0.181639 14.0933 0.113864 13.9759 0.0679696 13.8467C0.0220754 13.7174 -0.00101869 13.579 3.4463e-05 13.4393C0.00108762 13.2997 0.0262672 13.1617 0.0741039 13.0334C0.121941 12.9052 0.191476 12.7891 0.278654 12.6921L4.7968 7.48708L0.278654 2.28203C0.112388 2.08371 0.0203869 1.81809 0.0224665 1.54239C0.0245462 1.26668 0.12054 1.00295 0.289772 0.807984C0.459005 0.613023 0.687936 0.502436 0.927258 0.50004C1.16658 0.497644 1.39714 0.603632 1.56929 0.795175L6.73276 6.74365Z" fill="#26286E"/>
-                  </svg>
-  
-                  </button>
+                  {% assign clean_title = link.title | strip | downcase %}
+                  {% if clean_title == "shop" %}
+                    <a class="list-menu__item" href="{{ link.url }}" >
+                      {{ link.title | split: '{badge' | first | escape }}
+                      {% if menubadge != blank %}
+                        {{ menubadge }}
+                      {% endif  %}
+                      <svg width="7" height="15" viewBox="0 0 7 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M6.73276 6.74365C6.90387 6.94084 7 7.20825 7 7.48708C7 7.76591 6.90387 8.03332 6.73276 8.23051L1.56929 14.179C1.48509 14.2794 1.38438 14.3595 1.27302 14.4146C1.16166 14.4697 1.04188 14.4987 0.920688 14.5C0.799493 14.5012 0.679302 14.4746 0.567127 14.4217C0.454953 14.3688 0.353041 14.2907 0.26734 14.192C0.181639 14.0933 0.113864 13.9759 0.0679696 13.8467C0.0220754 13.7174 -0.00101869 13.579 3.4463e-05 13.4393C0.00108762 13.2997 0.0262672 13.1617 0.0741039 13.0334C0.121941 12.9052 0.191476 12.7891 0.278654 12.6921L4.7968 7.48708L0.278654 2.28203C0.112388 2.08371 0.0203869 1.81809 0.0224665 1.54239C0.0245462 1.26668 0.12054 1.00295 0.289772 0.807984C0.459005 0.613023 0.687936 0.502436 0.927258 0.50004C1.16658 0.497644 1.39714 0.603632 1.56929 0.795175L6.73276 6.74365Z" fill="#26286E"/>
+                      </svg>
+                    </a>
+                  {%  else  %}
+                    <button class="list-menu__item {% if dropDown  or menuDropdown != '' %}toggle {% endif %}" href="{{ link.url }}" >
+                      {{ link.title | split: '{badge' | first | escape }}
+                      {% if menubadge != blank %}
+                        {{ menubadge }}
+                      {% endif %}
+                      <svg width="7" height="15" viewBox="0 0 7 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M6.73276 6.74365C6.90387 6.94084 7 7.20825 7 7.48708C7 7.76591 6.90387 8.03332 6.73276 8.23051L1.56929 14.179C1.48509 14.2794 1.38438 14.3595 1.27302 14.4146C1.16166 14.4697 1.04188 14.4987 0.920688 14.5C0.799493 14.5012 0.679302 14.4746 0.567127 14.4217C0.454953 14.3688 0.353041 14.2907 0.26734 14.192C0.181639 14.0933 0.113864 13.9759 0.0679696 13.8467C0.0220754 13.7174 -0.00101869 13.579 3.4463e-05 13.4393C0.00108762 13.2997 0.0262672 13.1617 0.0741039 13.0334C0.121941 12.9052 0.191476 12.7891 0.278654 12.6921L4.7968 7.48708L0.278654 2.28203C0.112388 2.08371 0.0203869 1.81809 0.0224665 1.54239C0.0245462 1.26668 0.12054 1.00295 0.289772 0.807984C0.459005 0.613023 0.687936 0.502436 0.927258 0.50004C1.16658 0.497644 1.39714 0.603632 1.56929 0.795175L6.73276 6.74365Z" fill="#26286E"/>
+                      </svg>
+                    </button>
+                  {%  endif  %}
                 {% endunless %}
                 {%- if dropDown or menuDropdown != '' -%}
                   <div class="inner child">
@@ -431,3 +442,41 @@
 </div>
 
 </div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  function openShopDropdown() {
+    const menu = document.querySelector("#mobileMenu");
+
+    const dropdownButtons = menu.querySelectorAll(".list-menu__item");
+
+    dropdownButtons.forEach(btn => {
+      const label = btn.textContent.trim().toLowerCase();
+      if (label === "shop") {
+        const $btn = $(btn);
+        const $content = $btn.next(".inner.child");
+
+        if (!$btn.hasClass("open-menu-drop")) {
+          $btn.addClass("open-menu-drop");
+          $content.stop(true, true).addClass("is-open").show();
+        }
+      }
+    });
+  }
+
+  function watchHashChangeForMobileMenu() {
+    if (window.location.hash === "#mobileMenu") {
+      setTimeout(openShopDropdown, 300);
+    }
+  }
+
+  watchHashChangeForMobileMenu();
+
+  window.addEventListener("hashchange", watchHashChangeForMobileMenu);
+
+  document.querySelector("#nav-menu-btn a")?.addEventListener("click", () => {
+    setTimeout(openShopDropdown, 500);
+  });
+});
+</script>
+
