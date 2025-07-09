@@ -1,15 +1,49 @@
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    function showToast(message, duration = 6000) {
+      const container = document.getElementById('toast-container');
+      container.innerHTML = '';
+      const toast = document.createElement('div');
+      toast.className = 'toast';
+      toast.innerHTML = `<span>${message}</span>`;
+      toast.setAttribute('role', 'alert');
+      container.appendChild(toast);
+
+      setTimeout(() => {
+        toast.remove();
+      }, duration);
+    }
+
+    const form = document.querySelector('.newsletter-form');
+
+    if (form) {
+      form.addEventListener('submit', function () {
+        localStorage.setItem('showNewsletterToast', 'true');
+      });
+    }
+
+    if (localStorage.getItem('showNewsletterToast') === 'true') {
+      showToast("{{ 'newsletter.success' | t }}");
+      localStorage.removeItem('showNewsletterToast');
+    }
+  });
+</script>
+
 <div class="container sm-container">
+  <div id="toast-container"></div>
   <div class="section-heading center-heading">
-    <{{ section.settings.seo_heading }} class="section-heading-title h2" >{{ section.settings.heading }}</{{ section.settings.seo_heading }}>
+    <{{ section.settings.seo_heading }} class="section-heading-title h2">
+      {{- section.settings.heading -}}
+    </{{ section.settings.seo_heading }}>
     <p>{{ section.settings.description }}</p>
   </div>
   <div
     class="newsletter-content text_center"
     style="--layoutRadius:{% if settings.layout_style == 'rounded' %}10px{% else %}0px{% endif %}"
   >
-  {% assign form_context = 'newsletter_'| append :section.id %}
+    {% assign form_context = 'newsletter_' | append: section.id %}
     {%- form 'customer', class: 'newsletter-form' -%}
-    <input type="hidden" name="contact[context]" value="{{ form_context }}">
+      <input type="hidden" name="contact[context]" value="{{ form_context }}">
       {%- if form.posted_successfully? and form.context == form_context -%}
         <span
           class="newsletter-form__message newsletter-form__message--success form__message success-text d-block"
@@ -18,6 +52,11 @@
         >
           {{- 'newsletter.success' | t -}}
         </span>
+        <script>
+          document.addEventListener('DOMContentLoaded', function () {
+            showToast('Almost there! Check your inbox to confirm your subscription.');
+          });
+        </script>
       {%- endif -%}
       <div class="yv-newsletter-input">
         <input type="hidden" name="contact[tags]" value="newsletter">
@@ -58,6 +97,42 @@
   </div>
 </div>
 <style>
+  #toast-container {
+      position: fixed;
+      top: 7rem;
+      right: 1rem;
+      z-index: 9999;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+  }
+
+  .toast {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background-color: #ECFDF5;
+    padding: 16px 12px;
+    border-radius: 10px;
+    border-left: 4px solid #34D399;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    font-size: 14px;
+    animation: fadeInOut 4s forwards;
+    min-width: 264px;
+    max-width: 264px;
+  }
+
+  .toast span {
+    color: #065F46;
+    font-weight: 500;
+  }
+
+  @keyframes fadeInOut {
+    0% { opacity: 0; transform: translateY(-10px); }
+    10%, 90% { opacity: 1; transform: translateY(0); }
+    100% { opacity: 0; transform: translateY(-10px); }
+  }
+
   #shopify-section-{{section.id}}.shopify-section {
     background:var(--{{- section.settings.bgcolor -}}ColorBody);
     padding-top:{{ section.settings.top_space_desktop }}px;
@@ -107,39 +182,39 @@
       "default": "Join Our Newsletter",
       "label": "t:sections.newsletter.settings.heading.label"
     },
-       {
-          "type": "select",
-          "id": "seo_heading",
-          "label": "t:common.header.heading_tag.label",
-          "info": "t:common.header.heading_tag.info",
-          "default": "h2",
-          "options": [
-            {
-              "value": "h1",
-              "label": "t:common.header.heading_tag.options.h1.label"
-            },
-            {
-              "value": "h2",
-              "label": "t:common.header.heading_tag.options.h2.label"
-            },
-            {
-              "value": "h3",
-              "label": "t:common.header.heading_tag.options.h3.label"
-            },
-            {
-              "value": "h4",
-              "label": "t:common.header.heading_tag.options.h4.label"
-            },
-            {
-              "value": "h5",
-              "label": "t:common.header.heading_tag.options.h5.label"
-            },
-            {
-              "value": "h6",
-              "label": "t:common.header.heading_tag.options.h6.label"
-            }
-          ]
-      },
+    {
+      "type": "select",
+      "id": "seo_heading",
+      "label": "t:common.header.heading_tag.label",
+      "info": "t:common.header.heading_tag.info",
+      "default": "h2",
+      "options": [
+        {
+          "value": "h1",
+          "label": "t:common.header.heading_tag.options.h1.label"
+        },
+        {
+          "value": "h2",
+          "label": "t:common.header.heading_tag.options.h2.label"
+        },
+        {
+          "value": "h3",
+          "label": "t:common.header.heading_tag.options.h3.label"
+        },
+        {
+          "value": "h4",
+          "label": "t:common.header.heading_tag.options.h4.label"
+        },
+        {
+          "value": "h5",
+          "label": "t:common.header.heading_tag.options.h5.label"
+        },
+        {
+          "value": "h6",
+          "label": "t:common.header.heading_tag.options.h6.label"
+        }
+      ]
+    },
     {
       "type": "text",
       "id": "description",
