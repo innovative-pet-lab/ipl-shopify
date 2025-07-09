@@ -734,7 +734,6 @@ body:not(.sticky-header, .header2)
 
 .side-menu .inner-side .navbar-nav > .nav-item {
   width: 100%;
-  border-bottom: 1px solid var(--mobile-menu-border);
 }
 
 .side-menu .inner-footer {
