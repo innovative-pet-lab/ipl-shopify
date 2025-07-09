@@ -56,6 +56,12 @@
   {% endfor %}
 </div>
 <style>
+  @media (max-width: 600px) {
+    .ada-cc-drawer-background {
+      max-width: 88%
+    }
+  }
+
     #shopify-section-{{ section.id }}.shopify-section {
       padding-top:{{ section.settings.top_space_desktop }}px;
       padding-bottom:{{ section.settings.bottom_space_desktop }}px;
