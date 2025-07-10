@@ -282,6 +282,17 @@
     .banner {
       grid-column: span 1;
     }
+    .content-heading {
+      font-size: 24px !important;
+    }
+
+    .filter-btn {
+      font-size: 14px !important;
+    }
+
+    .container {
+      margin-top: 5px;
+    }
   }
   @media (max-width: 576px) {
     .banner {
@@ -295,6 +306,26 @@
       max-width: 100%;
     }
   }
+
+  .header-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .shop-header {
+    align-items: center;
+    text-align: center;
+    color: black;
+    font-size: 48px;
+    font-weight: 700;
+  }
+
+  @media (max-width: 768px) {
+    .shop-header {
+      font-size: 24px;
+    }
+  }
 </style>
 
 {%- liquid
@@ -303,12 +334,14 @@
 -%}
 <section>
   <div class="container">
-    <div class="filter-container">
-      <button class="filter-btn" data-filter="all">All</button>
-      <button class="filter-btn" data-filter="dogs">For Dogs</button>
-      <button class="filter-btn" data-filter="cats">For Cats</button>
+    <div class="header-container">
+      <h2 class="shop-header">Shop</h2>
+      <div class="filter-container">
+        <button class="filter-btn" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="dogs">For Dogs</button>
+        <button class="filter-btn" data-filter="cats">For Cats</button>
+      </div>
     </div>
-
     <div class="products-grid">
       {% for product in collections.shop.products %}
         {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: product, subject_parent: collection, variable: 'transparent' %}{% endcapture -%}
