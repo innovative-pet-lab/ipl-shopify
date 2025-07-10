@@ -1,5 +1,14 @@
+<style>
+  .shop-caret-toggle svg {
+    transition: transform 0.3s ease;
+  }
+  .nav-item.open-menu-drop .shop-caret-toggle svg {
+    transform: rotate(90deg);
+  }
+</style>
+
 <div id="mobileMenu" class="side-menu">
-  <div class="side-menu-header"> 
+  <div class="side-menu-header">
 
     <div class="side-menu-logo">{% render 'header-logo' %}</div>
 
@@ -26,10 +35,10 @@
   {% endunless %}
 
   <div class="inner-side">
-    {% liquid 
+    {% liquid
       if catalogDesktop
         render 'catalog-sidemenu'
-      endif 
+      endif
     %}
       <div class="side-menu-wrapper tabcontent{% if catalogDesktop %} d-lg-none{% endif %} {% if section.settings.header_style == "header3" %}hidden{% endif %}" id="menu-view">
         <div class="collapse navbar-collapse navbar-collapse-sidebar">
@@ -50,13 +59,13 @@
                 endfor
               -%}
               {%- capture menuDropdown -%}
-    
+
             {%- case blockData.type -%}
-    
+
             {%-comment-%}Mega Menu Style 1{%-endcomment-%}
-    
+
             {%-when 'style-1' -%}
-    
+
             {%- if blockData.settings.show_submenu -%}
             {%- for childlink in link.links -%}
             <li class="nav-item {% if childlink.links != blank %}dropdown{% endif %} ">
@@ -79,7 +88,7 @@
               </div>
               {% endif %}
             </li>
-            {%- endfor -%}	
+            {%- endfor -%}
             {%- endif -%}
             {%- capture megaMenuProducts -%}
             {%- for i in (1..6) -%}
@@ -90,7 +99,7 @@
                 {%- render 'product-grid' product: blockData.settings[productIndex], productClasses: 'xsmall-product-card', hideRelated: true, hide_options: true , hideHoverImage: true -%}
               </div>
             </div>
-            {%- endif -%}        		
+            {%- endif -%}
             {%- endfor -%}
             {%- endcapture -%}
             {%- if megaMenuProducts != blank -%}
@@ -98,27 +107,27 @@
               {{- megaMenuProducts -}}
             </div>
             {%- endif -%}
-    
-    
+
+
             {%- comment -%}Mega Menu Style 2{%- endcomment -%}
-    
-            {%-when 'style-2' -%}  
-    
+
+            {%-when 'style-2' -%}
+
             {%- for i in (1..2) -%}
             {%- assign collectionIndex = 'collection' | append: i -%}
             {%- assign collection = blockData.settings[collectionIndex] -%}
             {%- if collection != blank -%}
             <li class="nav-item dropdown">
-    
+
               <button class="toggle-level 2">{{ collection.title }}</button>
-    
-              <div class="inner grandchild">        
+
+              <div class="inner grandchild">
                 <div class="inner-child-menu">
                   <ul class="list-unstyled yv-megamenu-product-list ">
-                    {%- for product in collection.products limit: 4 -%} 
-                    {%- assign current_variant = product.selected_or_first_available_variant -%}       
+                    {%- for product in collection.products limit: 4 -%}
+                    {%- assign current_variant = product.selected_or_first_available_variant -%}
                     <li class="yv-megamenu-product-box">
-                      <div class="yv-megamenu-product-img">                 
+                      <div class="yv-megamenu-product-img">
                         {%- if product.featured_media != blank -%}
                         <div class="image-wrapper" style="padding-bottom:{{ 1 | divided_by : product.featured_media.preview_image.aspect_ratio | times: 100 }}%">
                         {%- render 'lazy-image' image: product.featured_media.preview_image, class : 'lazypreload', width: '110x' -%}
@@ -128,7 +137,7 @@
                         {%- endif -%}
                       </div>
                       <div class="yv-megamenu-product-detail yv-product-information">
-                        <a href="{{ product.url }}" class="">{{ product.title | strip_html }}</a>            
+                        <a href="{{ product.url }}" class="">{{ product.title | strip_html }}</a>
                         <div class="yv-prizebox">
                           <span class="yv-product-price">{{ current_variant.price | money }}</span>
                           {%- if current_variant.compare_at_price > current_variant.price -%}
@@ -146,7 +155,7 @@
             {%- endfor -%}
             {%- capture imageContent -%}
             {%- for i in (1..2) -%}
-            {%- liquid 
+            {%- liquid
               assign imageIndex = 'image' | append: i
               assign headingIndex = 'heading' | append: i
               assign subheadingIndex = 'subheading' | append: i
@@ -154,7 +163,7 @@
               assign image = blockData.settings[imageIndex]
               assign heading = blockData.settings[headingIndex]
               assign subheading = blockData.settings[subheadingIndex]
-              assign imageLink = blockData.settings[linkIndex] 
+              assign imageLink = blockData.settings[linkIndex]
             -%}
             {%- if image != blank or heading != blank or subheading != blank -%}
             <div class="col-12">
@@ -187,17 +196,17 @@
             </li>
             {%- endif -%}
             {%- comment -%}Mega Menu Style 3{%- endcomment -%}
-    
-            {%-when 'style-3' -%}  
-    
+
+            {%-when 'style-3' -%}
+
             {%- for i in (1..12) -%}
             {% assign collectionIndex = 'collection' | append: i %}
             {% assign collection = blockData.settings[collectionIndex] %}
-            {%- if collection != blank and collection.all_products_count > 0 -%} 
+            {%- if collection != blank and collection.all_products_count > 0 -%}
             <li class="nav-item dropdown">
               <button href="{{ collection.url }}" class="toggle-level 3">{{ collection.title }}</button>
-    
-              <div class="inner grandchild">        
+
+              <div class="inner grandchild">
                 <div class="inner-child-menu">
                   <ul class="list-unstyled">
                     {%- for product in collection.products limit: blockData.settings.products_count -%}
@@ -211,8 +220,8 @@
             </li>
             {%- endif -%}
             {%- endfor -%}
-    
-    
+
+
             {%- endcase -%}
             {%- endcapture -%}
               {% liquid
@@ -234,9 +243,9 @@
                       <span class="navPages-label new-label" id="menu-badge-{{ block.id }}">{{ block.settings.menu_badge }}</span>
                     {% endif %}
                   {% endif %}
-                {% endfor  %} 
-                
-              {% endcapture %} 
+                {% endfor  %}
+
+              {% endcapture %}
               <li class="nav-item {% if dropDown or menuDropdown != '' %}dropdown{% endif %} {% if link.current %}active{% endif %}">
                 {%- unless dropDown or menuDropdown != '' -%}
                   <a href="{{ link.url }}" class="list-menu__item {% if dropDown  or menuDropdown != '' %}toggle {% endif %}" >
@@ -248,15 +257,20 @@
                 {%- else -%}
                   {% assign clean_title = link.title | strip | downcase %}
                   {% if clean_title == "shop" %}
-                    <a class="list-menu__item" href="{{ link.url }}" >
-                      {{ link.title | split: '{badge' | first | escape }}
-                      {% if menubadge != blank %}
-                        {{ menubadge }}
-                      {% endif  %}
-                      <svg width="7" height="15" viewBox="0 0 7 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M6.73276 6.74365C6.90387 6.94084 7 7.20825 7 7.48708C7 7.76591 6.90387 8.03332 6.73276 8.23051L1.56929 14.179C1.48509 14.2794 1.38438 14.3595 1.27302 14.4146C1.16166 14.4697 1.04188 14.4987 0.920688 14.5C0.799493 14.5012 0.679302 14.4746 0.567127 14.4217C0.454953 14.3688 0.353041 14.2907 0.26734 14.192C0.181639 14.0933 0.113864 13.9759 0.0679696 13.8467C0.0220754 13.7174 -0.00101869 13.579 3.4463e-05 13.4393C0.00108762 13.2997 0.0262672 13.1617 0.0741039 13.0334C0.121941 12.9052 0.191476 12.7891 0.278654 12.6921L4.7968 7.48708L0.278654 2.28203C0.112388 2.08371 0.0203869 1.81809 0.0224665 1.54239C0.0245462 1.26668 0.12054 1.00295 0.289772 0.807984C0.459005 0.613023 0.687936 0.502436 0.927258 0.50004C1.16658 0.497644 1.39714 0.603632 1.56929 0.795175L6.73276 6.74365Z" fill="#26286E"/>
-                      </svg>
-                    </a>
+                    <div style="display: flex; flex-direction: row">
+                      <a class="list-menu__item" href="{{ link.url }}" >
+                        {{ link.title | split: '{badge' | first | escape }}
+                        {% if menubadge != blank %}
+                          {{ menubadge }}
+                        {% endif  %}
+                      </a>
+                      <button class="shop-caret-toggle" aria-label="Toggle Shop Menu">
+                        <svg width="7" height="15" viewBox="0 0 7 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M6.73276 6.74365C6.90387 6.94084 7 7.20825 7 7.48708C7 7.76591 6.90387 8.03332 6.73276 8.23051L1.56929 14.179C1.48509 14.2794 1.38438 14.3595 1.27302 14.4146C1.16166 14.4697 1.04188 14.4987 0.920688 14.5C0.799493 14.5012 0.679302 14.4746 0.567127 14.4217C0.454953 14.3688 0.353041 14.2907 0.26734 14.192C0.181639 14.0933 0.113864 13.9759 0.0679696 13.8467C0.0220754 13.7174 -0.00101869 13.579 3.4463e-05 13.4393C0.00108762 13.2997 0.0262672 13.1617 0.0741039 13.0334C0.121941 12.9052 0.191476 12.7891 0.278654 12.6921L4.7968 7.48708L0.278654 2.28203C0.112388 2.08371 0.0203869 1.81809 0.0224665 1.54239C0.0245462 1.26668 0.12054 1.00295 0.289772 0.807984C0.459005 0.613023 0.687936 0.502436 0.927258 0.50004C1.16658 0.497644 1.39714 0.603632 1.56929 0.795175L6.73276 6.74365Z" fill="#26286E"/>
+                        </svg>
+                      </button>
+                    </div>
+
                   {%  else  %}
                     <button class="list-menu__item {% if dropDown  or menuDropdown != '' %}toggle {% endif %}" href="{{ link.url }}" >
                       {{ link.title | split: '{badge' | first | escape }}
@@ -333,7 +347,7 @@
       >
         <ul class="list-unstyled navbar-nav navbar-nav-sidebar">
           {%- for link in linklists[section.settings.catalog_menu].links -%}
-          {% assign menuTitle = link.title | handleize  %} 
+          {% assign menuTitle = link.title | handleize  %}
           {% capture menubadge %}
             {%  for block in section.blocks %}
               {% if block.type == 'menu-badge' %}
@@ -342,8 +356,8 @@
                   <span class="navPages-label new-label" id="menu-badge-{{ block.id }}">{{ block.settings.menu_badge }}</span>
                 {% endif %}
               {% endif %}
-            {% endfor  %} 
-          {% endcapture %} 
+            {% endfor  %}
+          {% endcapture %}
             <li class="nav-item{% if link.links != blank %}dropdown{% endif %} {% if link.current %}active{% endif %}">
               {%- unless link.links != blank -%}
                 <a class="list-menu__item" href="{{ link.url }}">
@@ -427,7 +441,7 @@
       {% if customer %}
         <a href="{{ shop.url }}/apps/sso/moas/broker/login/shopify/slo/logout">Logout</a>
       {% else %}
-      <a class="acc-links text-hover acc-sign-in" 
+      <a class="acc-links text-hover acc-sign-in"
         id="customer_login_link" href="{%- if customer -%}{{- routes.account_url -}}{%-else-%}{{ routes.account_login_url }}{%- endif -%}"
         {% unless section.settings.account_type == 'page' or request.page_type contains 'customers' %} onClick=toggleAccountPopup(event,'{{- accountPageType -}}'){% endunless %}
         title="{%- if customer -%}{{ 'customer.account_fallback' | t }}{%-else-%}{{ 'customer.log_in' | t }}{%- endif -%}">
@@ -444,39 +458,86 @@
 </div>
 
 <script>
-document.addEventListener("DOMContentLoaded", function () {
-  function openShopDropdown() {
+  document.addEventListener("DOMContentLoaded", function () {
+    // Function to automatically trigger dropdown for the Shop navbar.
     const menu = document.querySelector("#mobileMenu");
 
-    const dropdownButtons = menu.querySelectorAll(".list-menu__item");
+    function toggleDropdown(navItem) {
+      console.log(navItem)
+      if (!navItem) return;
+      const content = navItem.querySelector(".inner.child");
+      if (!content) return;
 
-    dropdownButtons.forEach(btn => {
-      const label = btn.textContent.trim().toLowerCase();
-      if (label === "shop") {
-        const $btn = $(btn);
-        const $content = $btn.next(".inner.child");
+      const isOpen = navItem.classList.contains("open-menu-drop");
 
-        if (!$btn.hasClass("open-menu-drop")) {
-          $btn.addClass("open-menu-drop");
-          $content.stop(true, true).addClass("is-open").show();
-        }
+      if (isOpen) {
+        $(content).stop(true, true).slideUp(200).removeClass("is-open");
+        navItem.classList.remove("open-menu-drop");
+      } else {
+        $(content).stop(true, true).slideDown(200).addClass("is-open");
+        navItem.classList.add("open-menu-drop");
       }
-    });
-  }
-
-  function watchHashChangeForMobileMenu() {
-    if (window.location.hash === "#mobileMenu") {
-      setTimeout(openShopDropdown, 300);
     }
-  }
 
-  watchHashChangeForMobileMenu();
+    menu.addEventListener("click", function (e) {
+      const caretBtn = e.target.closest(".shop-caret-toggle");
+      if (!caretBtn) return;
 
-  window.addEventListener("hashchange", watchHashChangeForMobileMenu);
+      const navItem = caretBtn.closest(".nav-item");
+      toggleDropdown(navItem);
+    });
 
-  document.querySelector("#nav-menu-btn a")?.addEventListener("click", () => {
-    setTimeout(openShopDropdown, 500);
+    function waitForShopToBeReady(callback, tries = 0) {
+      const shopNavItem = Array.from(menu.querySelectorAll(".nav-item")).find((navItem) => {
+        const linkText = navItem.querySelector(".list-menu__item")?.textContent?.toLowerCase().trim();
+        return linkText === "shop";
+      });
+
+      const isVisible = shopNavItem && shopNavItem.offsetParent !== null;
+
+      if (shopNavItem && isVisible) {
+        callback();
+      } else if (tries < 20) {
+        setTimeout(() => waitForShopToBeReady(callback, tries + 1), 150);
+      }
+    }
+
+    function watchHashChangeForMobileMenu() {
+      if (window.location.hash === "#mobileMenu") {
+        waitForShopToBeReady(() => {
+          const shopNavItem = Array.from(menu.querySelectorAll(".nav-item")).find((navItem) => {
+            const linkText = navItem.querySelector(".list-menu__item")?.textContent?.toLowerCase().trim();
+            return linkText === "shop";
+          });
+
+          if (shopNavItem) {
+            toggleDropdown(shopNavItem);
+          }
+        });
+      }
+    }
+
+    watchHashChangeForMobileMenu();
+
+    window.addEventListener("hashchange", watchHashChangeForMobileMenu);
+
+    const navMenuBtn = document.querySelector("#nav-menu-btn a");
+
+    if (navMenuBtn) {
+      navMenuBtn.addEventListener("click", () => {
+        setTimeout(() => {
+          waitForShopToBeReady(() => {
+            const shopNavItem = Array.from(menu.querySelectorAll(".nav-item")).find((navItem) => {
+              const linkText = navItem.querySelector(".list-menu__item")?.textContent?.toLowerCase().trim();
+              return linkText === "shop";
+            });
+
+            if (shopNavItem && !shopNavItem.classList.contains("open-menu-drop")) {
+              toggleDropdown(shopNavItem);
+            }
+          });
+        }, 300);
+      });
+    }
   });
-});
 </script>
-
