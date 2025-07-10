@@ -34,7 +34,7 @@
     font-size: min(1.5rem, 4vw);
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 991px) {
   .side-menu {
     background-color: #f9f9f9 !important;
     color: #010101;
@@ -627,7 +627,7 @@
 .image-wrapper img {
   transition: transform 0.3s ease;
 }
-@media (max-width: 1020px) {
+@media (max-width: 1230px) {
   .image-wrapper img {
     object-fit: contain !important;
     top: 17vw !important;

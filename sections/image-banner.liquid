@@ -135,7 +135,22 @@
       font-size: 24px !important;
     }
 
-    @media screen and (max-width:1020px){
+    @media screen and (max-width: 768px) {
+      #shopify-section-{{ section.id }} .yv-image-banner-heading{
+        font-size: 24px !important;
+      }
+      #shopify-section-{{ section.id }} .yv-image-banner-desc p{
+        font-size: 14px !important;
+      }
+      .button.m-small-btn {
+        font-size: 14px !important;
+        padding: 8px 24px !important;
+        border-radius: 80px !important;
+        font-weight: 900 !important;
+      }
+    }
+
+    @media screen and (max-width:1230px){
       #shopify-section-{{ section.id }}{
         --bannerHeight: 82vw;
       }

@@ -1,118 +1,119 @@
 <style>
-  {% if section.settings.gallery_style == 'slider' %}
-    #shopify-section-{{ section.id }}{
-      --productSliderHeight:{{ section.settings.carousel_height_desktop }};
-    }
-    {% unless section.settings.carousel_height_desktop == 'adapt' %}
-      #shopify-section-{{ section.id }} .thumbnail-position-left .yv-product-small-slider,
-      #shopify-section-{{ section.id }} .thumbnail-position-right .yv-product-small-slider{
-        width:{{ section.settings.carousel_height_desktop }};
-      }
-    {% endunless %}
-    @media screen and (max-width:767px){
+    {% if section.settings.gallery_style == 'slider' %}
       #shopify-section-{{ section.id }}{
-        --productSliderHeight:{{ section.settings.carousel_height_mobile }};
+        --productSliderHeight:{{ section.settings.carousel_height_desktop }};
       }
-      {% unless section.settings.carousel_height_mobile == 'adapt' %}
+      {% unless section.settings.carousel_height_desktop == 'adapt' %}
         #shopify-section-{{ section.id }} .thumbnail-position-left .yv-product-small-slider,
         #shopify-section-{{ section.id }} .thumbnail-position-right .yv-product-small-slider{
-          width:{{ section.settings.carousel_height_mobile }};
+          width:{{ section.settings.carousel_height_desktop }};
         }
       {% endunless %}
-    }
-  {% endif %}
-    {% assign color_brightness = settings.color_body_bg | color_brightness %}
-    {%- if color_brightness < 130 -%}
+      @media screen and (max-width:767px){
+        #shopify-section-{{ section.id }}{
+          --productSliderHeight:{{ section.settings.carousel_height_mobile }};
+        }
+        {% unless section.settings.carousel_height_mobile == 'adapt' %}
+          #shopify-section-{{ section.id }} .thumbnail-position-left .yv-product-small-slider,
+          #shopify-section-{{ section.id }} .thumbnail-position-right .yv-product-small-slider{
+            width:{{ section.settings.carousel_height_mobile }};
+          }
+        {% endunless %}
+      }
+    {% endif %}
+      {% assign color_brightness = settings.color_body_bg | color_brightness %}
+      {%- if color_brightness < 130 -%}
+        #shopify-section-{{ section.id }}.product-section select{
+          background: url({{ 'select-arrow-white.png' | asset_url }}) no-repeat 97% 50% /10px transparent;
+        }
+        #shopify-section-{{ section.id }} .product-view-dropdown select {
+          background: url({{ 'select-arrow-white.png' | asset_url }}) no-repeat 94% 50% /9px transparent;
+        }
+        #shopify-section-{{ section.id }} .selling_plan select {
+          background: url({{ 'select-arrow-white.png' | asset_url }}) no-repeat 97% 50% /10px var(--primaryAlternateBg);
+        }
+      {%- else -%}
       #shopify-section-{{ section.id }}.product-section select{
-        background: url({{ 'select-arrow-white.png' | asset_url }}) no-repeat 97% 50% /10px transparent;
+        background:url({{ 'lang-dropdown-arrow.svg' | asset_url }}) no-repeat 97% 50% /10px transparent;
       }
       #shopify-section-{{ section.id }} .product-view-dropdown select {
-        background: url({{ 'select-arrow-white.png' | asset_url }}) no-repeat 94% 50% /9px transparent;
+        background: url({{ 'lang-dropdown-arrow.svg' | asset_url }}) no-repeat 94% 50% /9px transparent ;
       }
       #shopify-section-{{ section.id }} .selling_plan select {
-        background: url({{ 'select-arrow-white.png' | asset_url }}) no-repeat 97% 50% /10px var(--primaryAlternateBg);
+        background:url({{ 'lang-dropdown-arrow.svg' | asset_url }}) no-repeat 97% 50% /10px var(--primaryAlternateBg);
       }
-    {%- else -%}
-    #shopify-section-{{ section.id }}.product-section select{
-      background:url({{ 'lang-dropdown-arrow.svg' | asset_url }}) no-repeat 97% 50% /10px transparent;
-    }
-    #shopify-section-{{ section.id }} .product-view-dropdown select {
-      background: url({{ 'lang-dropdown-arrow.svg' | asset_url }}) no-repeat 94% 50% /9px transparent ;
-    }
-    #shopify-section-{{ section.id }} .selling_plan select {
-      background:url({{ 'lang-dropdown-arrow.svg' | asset_url }}) no-repeat 97% 50% /10px var(--primaryAlternateBg);
-    }
-    {%- endif -%}
+      {%- endif -%}
 
-/* custom styling update */
-.breadcrumb-list, .yv-blog-tags {
-  display: none;
-}
-.single__product {
-  margin-top: 1rem;
-  background-color: #fafafa;
-}
-@media (max-width: 500px) {
+  /* custom styling update */
+  .breadcrumb-list, .yv-blog-tags {
+    display: none;
+  }
   .single__product {
-    margin-top: 0;
+    margin-top: 1rem;
+    background-color: #fafafa;
   }
-}
-.single__flex {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  width: 7rem;
-  color: #03B0A7;
-  font-weight: 700;
-}
-.above-container {
-  margin-bottom: 1rem;
-  padding-left: 1rem;
-}
-.single__product .product-gallery__viewer {
-  background-color: white;
-  min-height: 500px;
-  max-height: 500px;
-  min-width: 100%;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.single__product .product-gallery__viewer .product-gallery__image-wrapper {
-  border: none;
-}
-.shopify-section-main-header header {
-  background-color: transparent;
-}
-.shopify-section-main-header header .top-header {
-  box-shadow: none;
-  min-height: 80px;
-}
-@media (max-width: 750px) {
+  @media (max-width: 500px) {
+    .single__product {
+      margin-top: 0;
+    }
+  }
+  .single__flex {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    width: 7rem;
+    color: #03B0A7;
+    font-weight: 700;
+    font-size: 18px;
+  }
+  .above-container {
+    margin-bottom: 1rem;
+    padding-left: 1rem;
+  }
+  .single__product .product-gallery__viewer {
+    background-color: white;
+    min-height: 500px;
+    max-height: 500px;
+    min-width: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .single__product .product-gallery__viewer .product-gallery__image-wrapper {
+    border: none;
+  }
+  .shopify-section-main-header header {
+    background-color: transparent;
+  }
   .shopify-section-main-header header .top-header {
-    min-height: 50px;
+    box-shadow: none;
+    min-height: 80px;
   }
-}
-.shopify-section-main-header.sticky-header-main header {
-  background-color: #ffffff;
-  box-shadow: 0 2px 2px #0000000d;
-  min-height: 80px;
-}
-@media (max-width: 750px) {
+  @media (max-width: 750px) {
+    .shopify-section-main-header header .top-header {
+      min-height: 50px;
+    }
+  }
   .shopify-section-main-header.sticky-header-main header {
-    min-height: 50px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 2px #0000000d;
+    min-height: 80px;
   }
-}
-.shopify-section-main-header.sticky-header-main header .container-fluid {
-  margin-top: 0;
-  padding-top: 0;
-}
-@media (min-width: 750px) {
-  .sticky-header .header__heading-link img {
-      max-width: 60px;
+  @media (max-width: 750px) {
+    .shopify-section-main-header.sticky-header-main header {
+      min-height: 50px;
+    }
   }
-}
+  .shopify-section-main-header.sticky-header-main header .container-fluid {
+    margin-top: 0;
+    padding-top: 0;
+  }
+  @media (min-width: 750px) {
+    .sticky-header .header__heading-link img {
+        max-width: 60px;
+    }
+  }
 </style>
 <div
   id=""
@@ -129,17 +130,19 @@
         </svg>
         Back
       </a>
-      
     </div>
     <div class="row no-gutters">
       <div class="col-12 col-sm-12 col-md-6{% if section.settings.gallery_style == 'slider' %} col-lg-8 yv-product-slider-wrapper{% else %} col-lg-6{% endif %}">
         <a class="skip-to-content-link button yv-visually-hidden focus-inside" href="#ProductData-{{ section.id }}">
           {{ 'accessibility.skip_to_product_info' | t }}
         </a>
-          {% render 'product-page-images-thumbs', section: section, product: product %}
+        {% render 'product-page-images-thumbs', section: section, product: product %}
       </div>
       <div class="col-12 col-sm-12 col-md-6{% if section.settings.gallery_style == 'slider' %} col-lg-4{% else %} col-lg-6{% endif %}">
-        <div id="ProductData-{{ section.id }}" class="sticky-item content-divider-mobile-{{ section.settings.content_divider_mobile}}">
+        <div
+          id="ProductData-{{ section.id }}"
+          class="sticky-item content-divider-mobile-{{ section.settings.content_divider_mobile}}"
+        >
           {%- render 'product-form',
             product: product,
             section: section,
@@ -147,10 +150,10 @@
             sliderClass: 'slider-product-detail'
           -%}
           {%- if section.settings.gallery_style == 'slider' -%}
-            <div class="d-block d-md-none">              
+            <div class="d-block d-md-none">
               {%- liquid
                 if section.settings.style == 'accordion'
-                  render 'product-accordion-content',product: product,section: section,position: 'belowProductGalllery'
+                  render 'product-accordion-content', product: product, section: section, position: 'belowProductGalllery'
                 else
                   render 'product-tabs-content', product: product, section: section, contentWidth: 'belowProductGalllery'
                 endif
@@ -184,12 +187,12 @@
   endfor
   render 'product-form', product: product, section: section, sizeChartContent: true
 -%}
-{% liquid 
+{% liquid
   for block in section.blocks
-  if block.type == 'query-form' and block.settings.heading != blank
-    render 'product-query-form', block: block
-  endif
-  endfor 
+    if block.type == 'query-form' and block.settings.heading != blank
+      render 'product-query-form', block: block
+    endif
+  endfor
 %}
 <script type="application/json" id="product3DModel-{{ product.id }}">
   {{ product.media | where: 'media_type', 'model' | json }}
@@ -211,12 +214,12 @@
 </script>
 <script>
   function goBack() {
-      if (document.referrer) {
-          window.history.back();
-      } else {
-          window.location.href = '/';
-      }
-  } 
+    if (document.referrer) {
+      window.history.back();
+    } else {
+      window.location.href = '/';
+    }
+  }
 </script>
 
 {% schema %}
@@ -477,7 +480,7 @@
       "type": "title",
       "name": "t:sections.main-product.blocks.title.name",
       "limit": 1,
-      "settings":[
+      "settings": [
         {
           "type": "select",
           "id": "seo_heading",
@@ -510,8 +513,8 @@
               "label": "t:common.header.heading_tag.options.h6.label"
             }
           ]
-      }
-    ]
+        }
+      ]
     },
     {
       "type": "sku",
@@ -629,7 +632,7 @@
           "info": "t:sections.main-product.blocks.product_variations.settings.variation_products.info"
         },
         {
-          "type": "checkbox", 
+          "type": "checkbox",
           "id": "show_image",
           "default": true,
           "label": "t:sections.main-product.blocks.product_variations.settings.show_image.label",
@@ -700,25 +703,25 @@
         }
       ]
     },
-     {
+    {
       "type": "product-meta",
       "name": "t:sections.main-product.blocks.product-meta.name",
       "limit": 1,
-       "settings":[
-         {
+      "settings": [
+        {
           "type": "checkbox",
           "id": "show_as_tab",
           "label": "t:sections.main-product.blocks.product-meta.settings.show_as_tab.label",
-           "default":false
+          "default": false
         },
-         {
+        {
           "type": "text",
           "id": "heading",
           "label": "t:sections.main-product.blocks.product-meta.settings.heading.label",
           "info": "t:sections.main-product.blocks.product-meta.settings.heading.info",
-           "default":"Specifications"
+          "default": "Specifications"
         },
-         {
+        {
           "type": "checkbox",
           "id": "show_availability",
           "label": "t:sections.main-product.blocks.product-meta.settings.show_availability.label"
@@ -759,8 +762,8 @@
       "type": "product-countdown",
       "name": "t:sections.main-product.blocks.product-countdown.name",
       "limit": 1,
-      "settings":[
-         {
+      "settings": [
+        {
           "type": "text",
           "id": "countdown_time",
           "label": "t:sections.main-product.blocks.product-countdown.settings.countdown_time.label",
@@ -867,7 +870,7 @@
           "label": "t:sections.main-product.blocks.button.settings.show_subscriptions_plan.label",
           "info": "t:sections.main-product.blocks.button.settings.show_subscriptions_plan.info"
         },
-        {  
+        {
           "type": "checkbox",
           "id": "show_recipient_form",
           "default": false,
@@ -897,7 +900,7 @@
           ]
         }
       ]
-    }, 
+    },
     {
       "type": "reels",
       "name": "t:sections.main-product.blocks.short_video.name",
@@ -935,8 +938,8 @@
       "name": "t:sections.main-product.blocks.icons.name",
       "settings": [
         {
-          "type":"header",
-          "content":"t:sections.main-product.blocks.icons.settings.header1.content"
+          "type": "header",
+          "content": "t:sections.main-product.blocks.icons.settings.header1.content"
         },
         {
           "type": "select",
@@ -1038,8 +1041,8 @@
           "label": "t:sections.main-product.blocks.icons.settings.heading.label"
         },
         {
-          "type":"header",
-          "content":"t:sections.main-product.blocks.icons.settings.header2.content"
+          "type": "header",
+          "content": "t:sections.main-product.blocks.icons.settings.header2.content"
         },
         {
           "type": "select",
@@ -1141,8 +1144,8 @@
           "label": "t:sections.main-product.blocks.icons.settings.heading.label"
         },
         {
-          "type":"header",
-          "content":"t:sections.main-product.blocks.icons.settings.header3.content"
+          "type": "header",
+          "content": "t:sections.main-product.blocks.icons.settings.header3.content"
         },
         {
           "type": "select",

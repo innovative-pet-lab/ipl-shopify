@@ -13,7 +13,7 @@
       <div class="main-article" style="flex: 1 1 65%;">
         {% if article.image %}
           <div class="blog-feature-image">
-            <img width="" height="" src="{{ article.image | image_url }}" alt="{{ article.title }}" />
+            <img width="" height="" src="{{ article.image | image_url }}" alt="{{ article.title }}">
           </div>
         {% endif %}
 
@@ -25,83 +25,78 @@
         </div>
       </div>
 
-    <aside class="related-posts" style="flex: 1 1 30%;">
-      <h2>Related Posts</h2>
-      <ul>
-        {% for related in blog.articles limit: 4 %}
-          {% unless related.id == article.id %}
-            <li>
-
-              {% if related.image %}
-                <a href="{{ related.url }}">
-                  <img width="" height="" src="{{ related.image | image_url: width: 392 }}" alt="{{ related.title }}"/>
-                </a>
-              {% endif %}
-              
-              <div class="related-details" style="flex: 1;">
-                <a href="{{ related.url }}">
-                  {{ related.title }}
-                </a>
-                {% if related.content %}
-                  <p class="content">{{ related.content | strip_html | truncatewords: 11 }}</p>
+      <aside class="related-posts" style="flex: 1 1 30%;">
+        <h2>Related Posts</h2>
+        <ul>
+          {% for related in blog.articles limit: 4 %}
+            {% unless related.id == article.id %}
+              <li>
+                {% if related.image %}
+                  <a href="{{ related.url }}">
+                    <img width="" height="" src="{{ related.image | image_url: width: 392 }}" alt="{{ related.title }}">
+                  </a>
                 {% endif %}
-              </div>
-            </li>
-          {% endunless %}
-        {% endfor %}
-      </ul>
-    </aside>
 
+                <div class="related-details" style="flex: 1;">
+                  <a href="{{ related.url }}">
+                    {{ related.title }}
+                  </a>
+                  {% if related.content %}
+                    <p class="content">{{ related.content | strip_html | truncatewords: 11 }}</p>
+                  {% endif %}
+                </div>
+              </li>
+            {% endunless %}
+          {% endfor %}
+        </ul>
+      </aside>
     </div>
   </div>
 {% else %}
-<div class="single-blog-container">
-  <a href="{{ shop.url }}/pages/{{ blog.handle }}" class="back-link">
-    <svg width="28" height="18" viewBox="0 0 28 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path fill-rule="evenodd" clip-rule="evenodd" d="M28 9.00002C28 9.26524 27.8946 9.51959 27.7071 9.70712C27.5196 9.89466 27.2652 10 27 10L3.414 10L9.708 16.292C9.89577 16.4798 10.0013 16.7345 10.0013 17C10.0013 17.2656 9.89577 17.5202 9.708 17.708C9.52023 17.8958 9.26555 18.0013 9 18.0013C8.73445 18.0013 8.47977 17.8958 8.292 17.708L0.291997 9.70802C0.19887 9.61513 0.124985 9.50477 0.0745724 9.38328C0.0241592 9.26179 -0.00179022 9.13155 -0.00179021 9.00002C-0.0017902 8.86848 0.0241593 8.73824 0.0745724 8.61675C0.124986 8.49526 0.198871 8.38491 0.291997 8.29202L8.292 0.292017C8.47977 0.104244 8.73445 -0.00124528 9 -0.00124525C9.26555 -0.00124523 9.52023 0.104245 9.708 0.292017C9.89577 0.47979 10.0013 0.734467 10.0013 1.00002C10.0013 1.26557 9.89577 1.52024 9.708 1.70802L3.414 8.00002L27 8.00002C27.2652 8.00002 27.5196 8.10538 27.7071 8.29291C27.8946 8.48045 28 8.7348 28 9.00002Z" fill="#03B0A7"/>
-    </svg>
-    <span>Back</span>
-  </a>
+  <div class="single-blog-container">
+    <a href="{{ shop.url }}/pages/{{ blog.handle }}" class="back-link">
+      <svg width="28" height="18" viewBox="0 0 28 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M28 9.00002C28 9.26524 27.8946 9.51959 27.7071 9.70712C27.5196 9.89466 27.2652 10 27 10L3.414 10L9.708 16.292C9.89577 16.4798 10.0013 16.7345 10.0013 17C10.0013 17.2656 9.89577 17.5202 9.708 17.708C9.52023 17.8958 9.26555 18.0013 9 18.0013C8.73445 18.0013 8.47977 17.8958 8.292 17.708L0.291997 9.70802C0.19887 9.61513 0.124985 9.50477 0.0745724 9.38328C0.0241592 9.26179 -0.00179022 9.13155 -0.00179021 9.00002C-0.0017902 8.86848 0.0241593 8.73824 0.0745724 8.61675C0.124986 8.49526 0.198871 8.38491 0.291997 8.29202L8.292 0.292017C8.47977 0.104244 8.73445 -0.00124528 9 -0.00124525C9.26555 -0.00124523 9.52023 0.104245 9.708 0.292017C9.89577 0.47979 10.0013 0.734467 10.0013 1.00002C10.0013 1.26557 9.89577 1.52024 9.708 1.70802L3.414 8.00002L27 8.00002C27.2652 8.00002 27.5196 8.10538 27.7071 8.29291C27.8946 8.48045 28 8.7348 28 9.00002Z" fill="#03B0A7"/>
+      </svg>
+      <span>Back</span>
+    </a>
 
-  {% if article.image %}
-    <div class="blog-feature-image">
-      <img width="" height="" src="{{ article.image | image_url }}" alt="{{ article.title }}" />
-    </div>
-  {% endif %}
+    {% if article.image %}
+      <div class="blog-feature-image">
+        <img width="" height="" src="{{ article.image | image_url }}" alt="{{ article.title }}">
+      </div>
+    {% endif %}
 
-  <div class="blog-content-wrapper">
-    <h1 class="blog-title">{{ article.title }}</h1>
-    {% if blog.handle contains 'gut' %}
-    {% assign author_tag = '' %}
-    {% for tag in article.tags %}
-    {% if tag contains 'author:' %}
-    {% assign author_tag = tag | remove: 'author:' | strip %}
-    {% break %}
-    {% endif %}
-    {% endfor %}
-
-    {% if author_tag != '' %}
-    <p class="blog-author">{{ author_tag }}</p>
-    {% endif %}
-    {% endif %}
-    {% if article.tags.size > 0 %}
-      <ul class="blog-tags">
+    <div class="blog-content-wrapper">
+      <h1 class="blog-title">{{ article.title }}</h1>
+      {% if blog.handle contains 'gut' %}
+        {% assign author_tag = '' %}
         {% for tag in article.tags %}
-          {% unless tag contains 'author:' %}
-            <li class="blog-tag">{{ tag }}</li>
-          {% endunless %}
+          {% if tag contains 'author:' %}
+            {% assign author_tag = tag | remove: 'author:' | strip %}
+            {% break %}
+          {% endif %}
         {% endfor %}
-      </ul>
-    {% endif %}
-    <div class="blog-content">
-      {{ article.content }}
+
+        {% if author_tag != '' %}
+          <p class="blog-author">{{ author_tag }}</p>
+        {% endif %}
+      {% endif %}
+      {% if article.tags.size > 0 %}
+        <ul class="blog-tags">
+          {% for tag in article.tags %}
+            {% unless tag contains 'author:' %}
+              <li class="blog-tag">{{ tag }}</li>
+            {% endunless %}
+          {% endfor %}
+        </ul>
+      {% endif %}
+      <div class="blog-content">
+        {{ article.content }}
+      </div>
     </div>
   </div>
-</div>
 {% endif %}
-
-
-
 
 <style>
   .single-blog-container {
@@ -112,14 +107,14 @@
   }
 
   .back-link {
-      color: #00b3a4;
-      text-decoration: none;
-      font-weight: 600;
-      display: inline-block;
-      margin-bottom: 3rem;
-      display: flex;
-      align-items: center;
-      gap: 8px;
+    color: #00b3a4;
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-block;
+    margin-bottom: 3rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
   }
 
   .blog-feature-image {
@@ -138,18 +133,19 @@
     margin-top: 24px;
   }
 
-  .blog-content-wrapper h3, .blog-content-wrapper h5 {
+  .blog-content-wrapper h3,
+  .blog-content-wrapper h5 {
     font-size: 26px;
     font-weight: 500;
     margin-bottom: 1rem;
   }
 
   .blog-title {
-    font-size: 40px;
+    font-size: 32px;
     font-weight: 700;
     margin-top: 1rem;
     margin-bottom: 1rem;
-    color: #1C1D31;
+    color: #1c1d31;
   }
 
   .blog-author {
@@ -193,33 +189,33 @@
   }
 
   .related-posts h2 {
-    font-size: 24px; 
-    font-weight: 700; 
-    color: #1C1D31; 
+    font-size: 24px;
+    font-weight: 700;
+    color: #1c1d31;
     margin-bottom: 24px;
   }
 
   .related-posts ul {
-    list-style: none; 
-    padding: 0; 
+    list-style: none;
+    padding: 0;
     margin: 0;
   }
 
   .related-posts ul li a img {
-    object-fit:cover;
-    border-radius:8px;
+    object-fit: cover;
+    border-radius: 8px;
     width: 392px;
     height: 270px;
   }
 
   .related-posts ul li .related-details a {
-    font-weight: 700; 
-    font-size: 18px; 
-    color: #1C1D31; 
-    text-decoration: none; 
-    display: inline-block; 
+    font-weight: 700;
+    font-size: 18px;
+    color: #1c1d31;
+    text-decoration: none;
+    display: inline-block;
     margin-bottom: 4px;
-    text-transform:unset
+    text-transform: unset;
   }
 
   .related-posts ul li .related-details .content {
@@ -234,9 +230,9 @@
   }
 
   .related-posts ul li .related-details .published-date {
-    font-size: 16px; 
-    color: #999; 
-    margin-bottom:2.5rem;
+    font-size: 16px;
+    color: #999;
+    margin-bottom: 2.5rem;
   }
 
   .blog-tags {
@@ -245,16 +241,16 @@
     gap: 6px;
     margin-top: 6px;
     margin-bottom: 1rem;
-    padding: 0!important;
+    padding: 0 !important;
     list-style: none;
   }
 
   .blog-tag {
-    background-color: #99D5E099;
+    background-color: #99d5e099;
     font-size: 16px;
     padding: 0.3rem 1rem;
     border-radius: 50px;
-    color: #26286E;
+    color: #26286e;
   }
 
   @media (max-width: 639px) {
@@ -292,7 +288,5 @@
     .related-posts ul li .related-details .published-date {
       font-size: 14px;
     }
-
   }
-
 </style>
