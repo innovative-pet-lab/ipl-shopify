@@ -1,12 +1,12 @@
 <div class="top-header header_1">
   <div class="{% if settings.layout_width == 'boxed' %}container{% else %}container-fluid{% endif %}">
     <div class="navbar navbar-expand-md">
-        {% liquid
-          assign catalogDesktop = false
-          if section.settings.enable_catalog and section.settings.enable_catalog_drawer and section.settings.catalog_menu != blank 
+      {% liquid
+        assign catalogDesktop = false
+        if section.settings.enable_catalog and section.settings.enable_catalog_drawer and section.settings.catalog_menu != blank
           assign catalogDesktop = true
-          endif
-        %}
+        endif
+      %}
       {%- if section.settings.menu != blank or catalogDesktop -%}
         <div id="nav-menu-btn" class="nav-menu-btn{% if catalogDesktop %} catalog_drawer_menu d-lg-block{% endif %}">
           <div class="nav__btn {{ section.settings.icon_weight }}-icon">
@@ -21,12 +21,12 @@
               aria-label="Toggle navigation"
             >
               {% comment %} <span class="navbar-toggler-icon"></span> {% endcomment %}
-            <svg width="18" height="12" viewBox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0.75C0 0.335786 0.335786 0 0.75 0H17.25C17.6642 0 18 0.335786 18 0.75C18 1.16421 17.6642 1.5 17.25 1.5H0.75C0.335786 1.5 0 1.16421 0 0.75ZM0 6C0 5.58579 0.335786 5.25 0.75 5.25H17.25C17.6642 5.25 18 5.58579 18 6C18 6.41421 17.6642 6.75 17.25 6.75H0.75C0.335786 6.75 0 6.41421 0 6ZM0 11.25C0 10.8358 0.335786 10.5 0.75 10.5H17.25C17.6642 10.5 18 10.8358 18 11.25C18 11.6642 17.6642 12 17.25 12H0.75C0.335786 12 0 11.6642 0 11.25Z" fill="#26286E"/>
-            </svg>
+              <svg width="18" height="12" viewBox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0.75C0 0.335786 0.335786 0 0.75 0H17.25C17.6642 0 18 0.335786 18 0.75C18 1.16421 17.6642 1.5 17.25 1.5H0.75C0.335786 1.5 0 1.16421 0 0.75ZM0 6C0 5.58579 0.335786 5.25 0.75 5.25H17.25C17.6642 5.25 18 5.58579 18 6C18 6.41421 17.6642 6.75 17.25 6.75H0.75C0.335786 6.75 0 6.41421 0 6ZM0 11.25C0 10.8358 0.335786 10.5 0.75 10.5H17.25C17.6642 10.5 18 10.8358 18 11.25C18 11.6642 17.6642 12 17.25 12H0.75C0.335786 12 0 11.6642 0 11.25Z" fill="#26286E"/>
+              </svg>
             </a>
           </div>
-          {% render 'side-menu', section: section, mobileMenu: true,catalogDesktop:catalogDesktop %}
+          {% render 'side-menu', section: section, mobileMenu: true, catalogDesktop: catalogDesktop %}
         </div>
       {%- endif -%}
       <a
@@ -36,15 +36,15 @@
       >
         {%- render 'header-logo', section: section -%}
       </a>
-        {% if section.settings.enable_catalog and section.settings.enable_catalog_drawer == false %}
-            {% render 'header-category' %}
-        {% endif %}
+      {% if section.settings.enable_catalog and section.settings.enable_catalog_drawer == false %}
+        {% render 'header-category' %}
+      {% endif %}
       {%- if section.settings.menu != blank -%}
-        <ul class="list-unstyled navbar-nav {% if section.settings.trust_badge_logo != blank %} trust-badge-enabled{% endif %}">
+        <ul class="list-unstyled navbar-nav ms-4 {% if section.settings.trust_badge_logo != blank %} trust-badge-enabled{% endif %}">
           {% render 'nav-item', section: section %}
         </ul>
       {%- endif -%}
-      <div class="form-inline">
+      <div class="form-inline" style="margin-left: auto;">
         {% render 'header-icons', section: section %}
       </div>
     </div>

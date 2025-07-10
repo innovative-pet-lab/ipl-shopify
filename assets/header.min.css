@@ -299,8 +299,6 @@ header {
 .navbar-nav {
   display: flex;
   flex-wrap: wrap;
-  width: 100%;
-  max-width: 80%;
   justify-content: center;
   line-height: initial;
 }
