@@ -35,6 +35,15 @@
     font-weight: 700;
   }
 
+  @media (max-width: 768px) {
+    .product-title {
+      font-size: 16px !important;
+    }
+    .view-product {
+      font-size: 14px !important;
+    }
+  }
+
   .ipl-featured-products {
     background-color: #f0f6f4;
   }
@@ -278,12 +287,10 @@
       {% if section.settings.heading_text %}
         <h1>{{ section.settings.heading_text }}</h1>
       {% endif %}
-      `
       {% if section.settings.heading_text %}
         <p>{{ section.settings.body_text }}</p>
       {% endif %}
     </section>
-    `
     {% assign featured_collection = collections.shop %}
 
     {% if featured_collection and featured_collection.products.size > 0 %}

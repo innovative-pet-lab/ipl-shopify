@@ -23,7 +23,7 @@
     }
 
     if (localStorage.getItem('showNewsletterToast') === 'true') {
-      showToast("{{ 'newsletter.success' | t }}");
+      showToast('Almost there! Check your inbox to confirm your subscription.');
       localStorage.removeItem('showNewsletterToast');
     }
   });
@@ -166,6 +166,17 @@
         }
       }
   {% endif %}
+
+  .newsletter-btn span {
+    font-size: 18px;
+    font-weight: 700;
+  }
+
+  @media (max-width: 768px) {
+    .newsletter-btn span {
+      font-size: 14px;
+    }
+  }
 </style>
 {% schema %}
 {
